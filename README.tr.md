@@ -8,8 +8,6 @@
 - [Dosyalar](#dosyalar)
 - [Hızlı Başlangıç](#hızlı-başlangıç)
 
-# GEM — Kur'an Temelli Stratejik Analiz Çerçevevesi
-
 # GEM — Kur'an Temelli Stratejik Analiz Çerçevesi
 
 > **Bu proje dini otorite iddia etmez.** Çıktılar yorumdur, hüküm değildir.
