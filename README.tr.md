@@ -28,13 +28,29 @@ inceleyen, **26 adımlı** bir düşünce ve denetim çerçevesidir.
 
 ---
 
+## İçindekiler
+
+- [Metodoloji (Türkçe)](YONTEM.md)
+- [Methodology (English)](METHOD.md)
+- [Örnek 004 — Tevbe 9:5 (Türkçe)](docs/tr/01-ornek-004-tevbe-95.md)
+- [Example 004 — Tawbah 9:5 (English)](docs/en/example-004-tawbah-95.md)
+- [Örnek 005 — Nisâ 4:34 (Türkçe)](docs/tr/02-ornek-005-nisa-434.md)
+- [Example 005 — Nisā 4:34 (English)](docs/en/example-005-nisa-434.md)
+- [Örnek 006 — Mâide 5:38 (Türkçe)](docs/tr/03-ornek-006-maide-538.md)
+- [Example 006 — Māʾida 5:38 (English)](docs/en/example-006-maide-538.md)
+- [Rapor Şablonu (Türkçe)](docs/tr/04-ornek-rapor.md)
+- [Report Template (English)](docs/en/example-report-template.md)
+- [gem_lint.py](src/gem_lint.py)
+
+---
+
 ## Dosyalar
 
 | Dosya | Ne işe yarar |
 |---|---|
 | `YONTEM.md` | 26 adımlı yöntemin özeti |
-| `gem_lint.py` | Dil güvenliği denetçisi (Python) |
-| `ornek-rapor.md` | Rapor şablonu |
+| `src/gem_lint.py` | Dil güvenliği denetçisi (Python) |
+| `docs/tr/04-ornek-rapor.md` | Rapor şablonu |
 
 ---
 
@@ -42,4 +58,5 @@ inceleyen, **26 adımlı** bir düşünce ve denetim çerçevesidir.
 
 ```bash
 # Dil denetçisini çalıştır
-python gem_lint.py ornek-rapor.md
+python src/gem_lint.py docs/tr/04-ornek-rapor.md
+```
