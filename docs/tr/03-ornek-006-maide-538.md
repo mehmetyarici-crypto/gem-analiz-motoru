@@ -1,3 +1,5 @@
+[English](../en/example-006-maide-538.md) | **Türkçe**
+
 # Kur'an Temelli Gelecek Vizyonu GEM — v5.1.3
 
 ## STRATEJİK ANALİZ VE İLERİ GÖRÜŞ RAPORU

@@ -1,3 +1,5 @@
+[English](METHOD.md) | **Türkçe**
+
 # GEM — 26 Adımlı Analiz Yöntemi
 
 > Bu belge yöntemin özetidir. Raporlar bu adımlara uygun olarak hazırlanır.

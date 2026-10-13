@@ -1,3 +1,5 @@
+[English](../en/example-report-template.md) | **Türkçe**
+
 # [SURE ADI] — STRATEJİK ANALİZ VE İLERİ GÖRÜŞ RAPORU
 
 > **Bu rapor dini otorite iddia etmez. Kehanet, fetva veya kesin tarih iddiası taşımaz.**
