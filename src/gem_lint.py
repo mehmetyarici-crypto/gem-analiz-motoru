@@ -151,8 +151,11 @@ def tara(dosya_adi):
     with open(dosya_adi, "r", encoding="utf-8") as f:
         satirlar = f.readlines()
 
-    # Tüm metni normalize et
+        # Tüm metni normalize et
     metin_birlesik = normalize("".join(satirlar))
+
+    # Öz-denetim işaretlerini de normalize et
+    oz_denetim_norm = [normalize(i) for i in OZ_DENETIM_ISARETLERI]
 
     bulgular = []
     yasak_sayisi = 0
