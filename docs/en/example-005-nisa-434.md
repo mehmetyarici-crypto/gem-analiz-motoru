@@ -1,3 +1,5 @@
+**English** | [Türkçe](../tr/02-ornek-005-nisa-434.md)
+
 # Quran-Based Future Vision GEM — v5.1.3
 ## STRATEGIC FORESIGHT AND ANALYSIS REPORT
 
