@@ -1,6 +1,16 @@
 [English](README.md) | **Türkçe**
 
+## İçindekiler
+
+- [Bu proje nedir?](#bu-proje-nedir)
+- [Ne yapar?](#ne-yapar)
+- [Ne yapmaz?](#ne-yapmaz)
+- [Dosyalar](#dosyalar)
+- [Hızlı Başlangıç](#hızlı-başlangıç)
+
 # GEM — Kur'an Temelli Stratejik Analiz Çerçevevesi
+
+# GEM — Kur'an Temelli Stratejik Analiz Çerçevesi
 
 > **Bu proje dini otorite iddia etmez.** Çıktılar yorumdur, hüküm değildir.
 > Kehanet, fetva veya kesin tarih iddiası taşımaz.
