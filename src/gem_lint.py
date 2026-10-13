@@ -269,7 +269,7 @@ def tara(dosya_adi):
     # --- Nihai karar ---
     print("=" * 60)
     # Karar sadece hard fail'lere bakar; uyarılar karara etki etmez
-    toplam_sorun = yasak_sayisi + yazim_hata_sayisi + len(eksik_bolumler)
+    toplam_sorun = yasak_sayisi + yazim_hata_sayisi
 
     if yasak_sayisi > 0:
         karar = "🔴 DÜŞTÜ"
