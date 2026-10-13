@@ -1,11 +1,16 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-GEM Linter — Dil Güvenliği Denetçisi (İki Dilli v5.1.5)
+GEM Linter — Dil Güvenliği Denetçisi (İki Dilli v5.1.6)
 GEM v5.1.3 Bölüm 18.1 kurallarına göre rapor dosyalarını tarar.
 
 Kullanım:
     python gem_lint.py dosya_adi.md
+
+Çıktı:
+    - Yasaklı kelimeler varsa SATIR NUMARASI ile uyarır
+    - Zorunlu bölümler eksikse bildirir
+    - Sonuç: GEÇTİ / ŞARTLI / DÜŞTÜ
 """
 
 import sys
@@ -20,7 +25,8 @@ NORMALIZE_HARITA = {
     "ā": "a", "ṣ": "s", "ḍ": "d", "ṭ": "t", "ẓ": "z", "ḥ": "h",
     "â": "a", "î": "i", "û": "u", "é": "e", "è": "e",
     "ʿ": "", "ʾ": "", "ʼ": "",
-    "'": "", "'": "", "`": "", "´": "", """: "", """: "",
+    "'": "", "\u2019": "", "`": "", "´": "",
+    "\u201c": "", "\u201d": "",
 }
 
 
@@ -38,7 +44,7 @@ def normalize(metin):
 # YASAKLI KELİMELER — Hard Fail (Bölüm 18.1)
 # ============================================
 YASAKLI_KELIMELER = {
-    # Türkçe
+    # --- Türkçe ---
     "mükemmel": "Mutlak başarı iddiası — Sıfır İlke 3 ihlali",
     "%100": "Sayısal kesinlik iddiası — Bölüm 9 ihlali",
     "kesinlikle": "Mutlak kesinlik iddiası — Bölüm 18.1 ihlali",
@@ -48,7 +54,7 @@ YASAKLI_KELIMELER = {
     "ispatlanmıştır": "Kanıt kesinliği iddiası — Bölüm 18.1 ihlali",
     "onaylandı (tam uyum)": "Kendi kendine tam puan — Bölüm 18.1 ihlali",
     "tam uyum": "Kendi kendine tam puan — Bölüm 18.1 ihlali",
-    # İngilizce
+    # --- İngilizce ---
     "flawless": "Mutlak başarı iddiası — Sıfır İlke 3 ihlali",
     "100%": "Sayısal kesinlik iddiası — Bölüm 9 ihlali",
     "absolutely": "Mutlak kesinlik iddiası — Bölüm 18.1 ihlali",
@@ -57,23 +63,26 @@ YASAKLI_KELIMELER = {
     "proven": "Kanıt kesinliği iddiası — Bölüm 18.1 ihlali",
 }
 
+
 # ============================================
-# KOŞULLU YASAKLI — Uyarı Verir, İstisna Varsa Sessiz
+# KOŞULLU YASAKLI — Uyarı Verir (Hard Fail Değil)
 # ============================================
 KOSULLU_YASAKLI = {
-    "mutlak": "Naṣṣ bağlamı dışındaki mutlaklık iddiası — istisna listesinde değil",
-    "absolute": "Naṣṣ bağlamı dışındaki mutlaklık iddiası — istisna listesinde değil",
+    "mutlak": "Naṣṣ bağlamı dışındaki mutlaklık iddiası olabilir — bağlamı kontrol et",
+    "absolute": "Naṣṣ bağlamı dışındaki mutlaklık iddiası olabilir — bağlamı kontrol et",
 }
+
 
 # ============================================
 # İSTİSNALAR — Bu İfadeler Geçiyorsa Uyarı Vermez
 # ============================================
 ISTISNA_IFADELERI = [
-    # Türkçe
+    # --- Türkçe bağlamlar ---
     "mutlak mülkiyet", "mutlak sahip", "mutlak egemenlik",
     "mutlak caydırıcılık", "mutlak adalet", "mutlak otorite",
     "mutlak koruma", "mutlak güvenlik", "mutlak bağlılık",
-    # İngilizce
+    "mutlak yokluk", "mutlak varlık",
+    # --- İngilizce bağlamlar ---
     "absolute ownership", "absolute sovereign", "absolute sovereignty",
     "absolute divine", "absolute god", "absolute deterrence",
     "absolute destruction", "absolute justice", "absolute authority",
@@ -83,6 +92,7 @@ ISTISNA_IFADELERI = [
     "absolute labor", "absolute static", "absolute boundary",
     "absolute absence", "absolute deterrent",
 ]
+
 
 # ============================================
 # ÖZ-DENETİM SATIRLARI — Atlanacak
@@ -95,10 +105,10 @@ OZ_DENETIM_ISARETLERI = [
     "strictly avoided",
 ]
 
+
 # ============================================
-# ZORUNLU BÖLÜMLER — İki Dilli (Normalize Edilmiş)
+# ZORUNLU BÖLÜMLER — İki Dilli
 # ============================================
-# Not: Her bölüm için bir Türkçe, bir İngilizce karşılık. Normalize edilmiş hali.
 ZORUNLU_BOLUMLER = [
     ["yorumcu konumu", "interpreter position", "interpreters position"],
     ["zemahşerî", "zamakhshari", "zamahşeri"],
@@ -113,9 +123,10 @@ ZORUNLU_BOLUMLER = [
     ["dil güvenliği", "language safety"],
     ["karar kolu", "decision branch"],
     ["aktör", "actor"],
-    ["retrodiction", "retrodiction", "retroadiction"],
+    ["retrodiction", "retroadiction"],
     ["karşıt ilke", "counter-principle", "counter principle"],
 ]
+
 
 # ============================================
 # UYARI KELİMELERİ — Dikkat Gerektirir
@@ -125,6 +136,7 @@ UYARI_KELIMELERI = {
     "sabit": "Bilgi tabanı — katmanlı mı (İlke/Uygulama) kontrol et",
     ">%": "Sayısal olasılık — Bölüm 9 kapsamına giriyor mu kontrol et",
 }
+
 
 # ============================================
 # YAZIM HATALARI
@@ -151,7 +163,7 @@ def tara(dosya_adi):
     with open(dosya_adi, "r", encoding="utf-8") as f:
         satirlar = f.readlines()
 
-        # Tüm metni normalize et
+    # Tüm metni normalize et
     metin_birlesik = normalize("".join(satirlar))
 
     # Öz-denetim işaretlerini de normalize et
@@ -171,7 +183,7 @@ def tara(dosya_adi):
         satir_norm = normalize(satir)
 
         # Öz-denetim satırı mı?
-        if any(isaret in satir_norm for isaret in OZ_DENETIM_ISARETLERI):
+        if any(isaret in satir_norm for isaret in oz_denetim_norm):
             continue
 
         for yasakli, aciklama in YASAKLI_KELIMELER.items():
@@ -189,14 +201,12 @@ def tara(dosya_adi):
     for satir_no, satir in enumerate(satirlar, 1):
         satir_norm = normalize(satir)
 
-        # Öz-denetim satırı mı?
-        if any(isaret in satir_norm for isaret in OZ_DENETIM_ISARETLERI):
+        if any(isaret in satir_norm for isaret in oz_denetim_norm):
             continue
 
         for kosullu, aciklama in KOSULLU_YASAKLI.items():
             kosullu_norm = normalize(kosullu)
             if kosullu_norm in satir_norm:
-                # İstisna var mı?
                 istisna_var = any(ist in satir_norm for ist in istisna_norm)
                 if istisna_var:
                     continue
@@ -236,7 +246,6 @@ def tara(dosya_adi):
 
     # --- 5. Zorunlu bölüm kontrolü (iki dilli) ---
     for bolum_cift in ZORUNLU_BOLUMLER:
-        # Herhangi bir dildeki karşılık bulundu mu?
         bulundu = any(normalize(bolum) in metin_birlesik for bolum in bolum_cift)
         if not bulundu:
             eksik_bolumler.append(bolum_cift[0])
@@ -271,7 +280,7 @@ def tara(dosya_adi):
 
     # --- Nihai karar ---
     print("=" * 60)
-    # Karar sadece hard fail'lere bakar; uyarılar karara etki etmez
+    # Karar sadece hard fail'lere bakar; uyarılar ve eksik bölümler karara etki etmez
     toplam_sorun = yasak_sayisi + yazim_hata_sayisi
 
     if yasak_sayisi > 0:
