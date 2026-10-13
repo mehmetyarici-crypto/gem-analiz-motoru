@@ -2,17 +2,11 @@
 
 ## İçindekiler
 
-- <a>Metodoloji (Türkçe)</a>
-- <a>Methodology (English)</a>
-- <a>Örnek 004 — Tevbe 9:5 (Türkçe)</a>
-- <a>Example 004 — Tawbah 9:5 (English)</a>
-- <a>Örnek 005 — Nisâ 4:34 (Türkçe)</a>
-- <a>Example 005 — Nisā 4:34 (English)</a>
-- <a>Örnek 006 — Mâide 5:38 (Türkçe)</a>
-- <a>Example 006 — Māʾida 5:38 (English)</a>
-- <a>Rapor Şablonu (Türkçe)</a>
-- <a>Report Template (English)</a>
-- <a>gem_lint.py</a>
+- <a>Bu proje nedir?</a>
+- <a>Ne yapar?</a>
+- <a>Ne yapmaz?</a>
+- <a>Dosyalar</a>
+- <a>Hızlı Başlangıç</a>
 
 # GEM — Kur'an Temelli Stratejik Analiz Çerçevevesi
 
