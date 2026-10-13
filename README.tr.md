@@ -41,8 +41,8 @@ inceleyen, **26 adımlı** bir düşünce ve denetim çerçevesidir.
 | Dosya | Ne işe yarar |
 |---|---|
 | `YONTEM.md` | 26 adımlı yöntemin özeti |
-| `gem_lint.py` | Dil güvenliği denetçisi (Python) |
-| `ornek-rapor.md` | Rapor şablonu |
+| `src/gem_lint.py` | Dil güvenliği denetçisi (Python) |
+| `docs/tr/04-ornek-rapor.md` | Rapor şablonu |
 
 ---
 
