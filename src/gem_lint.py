@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-GEM Linter — Dil Güvenliği Denetçisi
+GEM Linter — Dil Güvenliği Denetçisi (İki Dilli v5.1.4)
 GEM v5.1.3 Bölüm 18.1 kurallarına göre rapor dosyalarını tarar.
 
 Kullanım:
@@ -14,12 +14,11 @@ Kullanım:
 """
 
 import sys
-import re
 import os
 
 
 # ============================================
-# YASAKLI KELİMELER (Bölüm 18.1)
+# YASAKLI KELİMELER (Bölüm 18.1 — İki Dilli)
 # ============================================
 YASAKLI_KELIMELER = {
     # --- Türkçe yasaklı kelimeler ---
@@ -44,35 +43,46 @@ YASAKLI_KELIMELER = {
     "absolute": "Naṣṣ bağlamı dışındaki mutlaklık iddiası — Bölüm 18.1 ihlali",
 }
 
-# "mutlak" / "absolute" istisnası: naṣṣ bağlamında kullanılırsa serbest
+# "mutlak" / "absolute" istisnası: teknik ve dini bağlamlarda serbest
 MUTLAK_ISTISNA_KELIMELERI = [
     # Türkçe bağlamlar
     "mutlak mülkiyet", "mutlak sahip", "mutlak egemenlik",
+    "mutlak caydırıcılık", "mutlak adalet", "mutlak otorite",
     # İngilizce bağlamlar
     "absolute ownership", "absolute sovereign", "absolute sovereignty",
-    "absolute divine", "absolute god",
+    "absolute divine", "absolute god", "absolute deterrence",
+    "absolute destruction", "absolute justice", "absolute authority",
+]
+
+# Öz-denetim satırlarını atlamak için (raporun kendi denetim cümlesi)
+OZ_DENETIM_ISARETLERI = [
+    "yasaklı kelime",
+    "forbidden word",
+    "kullanılmamıştır",
+    "not been used",
 ]
 
 
 # ============================================
-# ZORUNLU BÖLÜMLER (Katman 3 rapor için)
+# ZORUNLU BÖLÜMLER (İki Dilli — Katman 3 rapor için)
 # ============================================
 ZORUNLU_BOLUMLER = [
-    "yorumcu konumu",
-    "zemahşerî",
-    "falsifiabilite",
-    "tipping point",
-    "n4",
-    "s7",
-    "zayıflık",
-    "geliştirme",
-    "geliştirme önerisi",
-    "öz-denetim",
-    "dil güvenliği",
-    "karar kolu",
-    "aktör",
-    "retroadiction",
-    "karşıt ilke",
+    # Türkçe karşılıklar
+    ["yorumcu konumu", "interpreter's position"],
+    ["zemahşerî", "zamakhsharī"],
+    ["falsifiabilite", "falsifiability"],
+    ["tipping point", "tipping point"],
+    ["n4", "n4"],
+    ["s7", "s7"],
+    ["zayıflık", "weakness"],
+    ["geliştirme", "development"],
+    ["geliştirme önerisi", "development suggestion"],
+    ["öz-denetim", "self-audit"],
+    ["dil güvenliği", "language safety"],
+    ["karar kolu", "decision branch"],
+    ["aktör", "actor"],
+    ["retrodiction", "retrodiction"],
+    ["karşıt ilke", "counter-principle"],
 ]
 
 
@@ -80,7 +90,7 @@ ZORUNLU_BOLUMLER = [
 # UYARI KELİMELERİ (Dikkat gerektirir ama yasak değildir)
 # ============================================
 UYARI_KELIMELERERI = {
-    "doğrulandı": "Retroadiction sonucu — 'Kısmen' ile birlikte kullanıldı mı kontrol et",
+    "doğrulandı": "Retrodiction sonucu — 'Kısmen' ile birlikte kullanıldı mı kontrol et",
     "sabit": "Bilgi tabanı — katmanlı mı (İlke/Uygulama) kontrol et",
     ">%": "Sayısal olasılık — Bölüm 9 kapsamına giriyor mu kontrol et",
 }
@@ -97,6 +107,7 @@ YAZIM_DUZELTMELERI = {
     "zamahşeri": "zemahşerî",
     "zamahşerî": "zemahşerî",
     "ragıb": "râgıb",
+    "retroadiction": "retrodiction",
 }
 
 
@@ -120,6 +131,11 @@ def tara(dosya_adi):
     # --- 1. Yasaklı kelime taraması ---
     for satir_no, satir in enumerate(satirlar, 1):
         satir_lower = satir.lower()
+
+        # Öz-denetim satırlarını atla (raporun kendi "0 yasaklı kelime" cümlesi)
+        oz_denetim_satiri = any(isaret in satir_lower for isaret in OZ_DENETIM_ISARETLERI)
+        if oz_denetim_satiri:
+            continue
 
         for yasakli, aciklama in YASAKLI_KELIMELER.items():
             if yasakli in satir_lower:
@@ -160,10 +176,13 @@ def tara(dosya_adi):
                     "aciklama": aciklama,
                 })
 
-    # --- 4. Zorunlu bölüm kontrolü ---
-    for bolum in ZORUNLU_BOLUMLER:
-        if bolum not in metin_birlesik:
-            eksik_bolumler.append(bolum)
+    # --- 4. Zorunlu bölüm kontrolü (iki dilli) ---
+    for bolum_cift in ZORUNLU_BOLUMLER:
+        # Bölümlerden herhangi biri varsa geçerli say
+        bulundu = any(bolum in metin_birlesik for bolum in bolum_cift)
+        if not bulundu:
+            # Eksik olarak ilk (Türkçe) adı raporla
+            eksik_bolumler.append(bolum_cift[0])
 
     # ============================================
     # SONUÇ RAPORU
