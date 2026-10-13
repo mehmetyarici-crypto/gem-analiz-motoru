@@ -1,3 +1,5 @@
+[English](README.md) | **Türkçe**
+
 # GEM — Kur'an Temelli Stratejik Analiz Çerçevevesi
 
 > **Bu proje dini otorite iddia etmez.** Çıktılar yorumdur, hüküm değildir.
