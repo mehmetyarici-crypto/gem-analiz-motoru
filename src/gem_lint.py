@@ -22,6 +22,7 @@ import os
 # YASAKLI KELİMELER (Bölüm 18.1)
 # ============================================
 YASAKLI_KELIMELER = {
+    # --- Türkçe yasaklı kelimeler ---
     "mükemmel": "Mutlak başarı iddiası — Sıfır İlke 3 ihlali",
     "%100": "Sayısal kesinlik iddiası — Bölüm 9 ihlali",
     "kesinlikle": "Mutlak kesinlik iddiası — Bölüm 18.1 ihlali",
@@ -31,10 +32,26 @@ YASAKLI_KELIMELER = {
     "ispatlanmıştır": "Kanıt kesinliği iddiası — Bölüm 18.1 ihlali",
     "onaylandı (tam uyum)": "Kendi kendine tam puan — Bölüm 18.1 ihlali",
     "tam uyum": "Kendi kendine tam puan — Bölüm 18.1 ihlali",
+    "mutlak": "Naṣṣ bağlamı dışındaki mutlaklık iddiası — Bölüm 18.1 ihlali",
+
+    # --- İngilizce yasaklı kelimeler ---
+    "flawless": "Mutlak başarı iddiası — Sıfır İlke 3 ihlali",
+    "100%": "Sayısal kesinlik iddiası — Bölüm 9 ihlali",
+    "absolutely": "Mutlak kesinlik iddiası — Bölüm 18.1 ihlali",
+    "indisputably": "Tartışma reddi — Bölüm 18.1 ihlali",
+    "zero vulnerability": "Kusursuzluk iddiası — Bölüm 18.1 ihlali",
+    "proven": "Kanıt kesinliği iddiası — Bölüm 18.1 ihlali",
+    "absolute": "Naṣṣ bağlamı dışındaki mutlaklık iddiası — Bölüm 18.1 ihlali",
 }
 
-# "mutlak" istisnası: nass bağlamında kullanılırsa serbest
-MUTLAK_ISTISNA_KELIMELERI = ["mutlak mülkiyet", "mutlak sahip", "mutlak egemenlik"]
+# "mutlak" / "absolute" istisnası: naṣṣ bağlamında kullanılırsa serbest
+MUTLAK_ISTISNA_KELIMELERI = [
+    # Türkçe bağlamlar
+    "mutlak mülkiyet", "mutlak sahip", "mutlak egemenlik",
+    # İngilizce bağlamlar
+    "absolute ownership", "absolute sovereign", "absolute sovereignty",
+    "absolute divine", "absolute god",
+]
 
 
 # ============================================
@@ -106,8 +123,8 @@ def tara(dosya_adi):
 
         for yasakli, aciklama in YASAKLI_KELIMELER.items():
             if yasakli in satir_lower:
-                # "mutlak" istisna kontrolü
-                if yasakli == "mutlak":
+                # "mutlak" / "absolute" istisna kontrolü
+                if yasakli in ("mutlak", "absolute"):
                     istisna_var = any(i in satir_lower for i in MUTLAK_ISTISNA_KELIMELERI)
                     if istisna_var:
                         continue
