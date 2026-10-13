@@ -31,6 +31,13 @@ YASAKLI_KELIMELER = {
     "ispatlanmıştır": "Kanıt kesinliği iddiası — Bölüm 18.1 ihlali",
     "onaylandı (tam uyum)": "Kendi kendine tam puan — Bölüm 18.1 ihlali",
     "tam uyum": "Kendi kendine tam puan — Bölüm 18.1 ihlali",
+    "flawless": "Mutlak başarı iddiası — Sıfır İlke 3 ihlali",
+    "100%": "Sayısal kesinlik iddiası — Bölüm 9 ihlali",
+    "absolutely": "Mutlak kesinlik iddiası — Bölüm 18.1 ihlali",
+    "indisputably": "Tartışma reddi — Bölüm 18.1 ihlali",
+    "zero vulnerability": "Kusursuzluk iddiası — Bölüm 18.1 ihlali",
+    "proven": "Kanıt kesinliği iddiası — Bölüm 18.1 ihlali",
+    "absolute": "Naṣṣ bağlamı dışındaki mutlaklık iddiası — Bölüm 18.1 ihlali",
 }
 
 # "mutlak" istisnası: nass bağlamında kullanılırsa serbest
