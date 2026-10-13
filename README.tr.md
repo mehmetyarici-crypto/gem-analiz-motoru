@@ -1,5 +1,13 @@
 [English](README.md) | **Türkçe**
 
+## İçindekiler
+
+- <a>Bu proje nedir?</a>
+- <a>Ne yapar?</a>
+- <a>Ne yapmaz?</a>
+- <a>Dosyalar</a>
+- <a>Hızlı Başlangıç</a>
+
 # GEM — Kur'an Temelli Stratejik Analiz Çerçevevesi
 
 > **Bu proje dini otorite iddia etmez.** Çıktılar yorumdur, hüküm değildir.
@@ -33,8 +41,8 @@ inceleyen, **26 adımlı** bir düşünce ve denetim çerçevesidir.
 | Dosya | Ne işe yarar |
 |---|---|
 | `YONTEM.md` | 26 adımlı yöntemin özeti |
-| `gem_lint.py` | Dil güvenliği denetçisi (Python) |
-| `ornek-rapor.md` | Rapor şablonu |
+| `src/gem_lint.py` | Dil güvenliği denetçisi (Python) |
+| `docs/tr/04-ornek-rapor.md` | Rapor şablonu |
 
 ---
 
@@ -42,4 +50,4 @@ inceleyen, **26 adımlı** bir düşünce ve denetim çerçevesidir.
 
 ```bash
 # Dil denetçisini çalıştır
-python gem_lint.py ornek-rapor.md
+python src/gem_lint.py docs/tr/04-ornek-rapor.md
