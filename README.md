@@ -1,21 +1,55 @@
 **English** | [Türkçe](README.tr.md)
 
-# Quran-Based Future Vision GEM — v5.1.3
+# GEM — Quran-Based Strategic Analysis Framework
 
-## Strategic Analysis and Foresight Framework
+> **This project does not claim religious authority.** Outputs are interpretation, not ruling. It does not claim prophecy, fatwa, or definitive historical prediction.
 
-<!-- Content to be added by author. -->
+---
 
 ## Table of Contents
 
-- [Methodology (English)](METHOD.md)
-- [Metodoloji (Türkçe)](YONTEM.md)
-- [Example 004 — Tawbah 9:5 (English)](docs/en/example-004-tawbah-95.md)
-- [Örnek 004 — Tevbe 9:5 (Türkçe)](docs/tr/01-ornek-004-tevbe-95.md)
-- [Example 005 — Nisā 4:34 (English)](docs/en/example-005-nisa-434.md)
-- [Örnek 005 — Nisâ 4:34 (Türkçe)](docs/tr/02-ornek-005-nisa-434.md)
-- [Example 006 — Māʾida 5:38 (English)](docs/en/example-006-maide-538.md)
-- [Örnek 006 — Mâide 5:38 (Türkçe)](docs/tr/03-ornek-006-maide-538.md)
-- [Report Template (English)](docs/en/example-report-template.md)
-- [Rapor Şablonu (Türkçe)](docs/tr/04-ornek-rapor.md)
-- [gem_lint.py](src/gem_lint.py)
+- [What is this project?](#what-is-this-project)
+- [What does it do?](#what-does-it-do)
+- [What does it not do?](#what-does-it-not-do)
+- [Files](#files)
+- [Quick Start](#quick-start)
+
+---
+
+## What is this project?
+
+GEM (Future-Oriented Reasoning) is a 26-step framework of thought and audit that examines Quranic verses through **strategic analysis** methods.
+
+### What does it do?
+
+- Analyzes the verse text **linguistically** (siyāq-sibāq, nuzūl, address)
+- Derives **maqāṣid** (objectives)
+- Matches it with contemporary issues
+- Produces **scenarios** (4 possibilities)
+- Suggests **decision branches** (10 domains)
+- Critiques its own analysis (Red Team, falsifiability, self-audit)
+
+### What does it not do?
+
+- Does not issue fatwa
+- Does not claim religious authority
+- Does not predict the future
+- Does not give definitive rulings
+
+---
+
+## Files
+
+| File | Purpose |
+|---|---|
+| `YONTEM.md` | Summary of the 26-step method |
+| `src/gem_lint.py` | Language safety auditor (Python) |
+| `docs/tr/04-ornek-rapor.md` | Report template |
+
+---
+
+## Quick Start
+
+```bash
+# Run the language auditor
+python src/gem_lint.py docs/tr/04-ornek-rapor.md
