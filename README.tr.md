@@ -52,6 +52,7 @@ Aşağıdaki raporlar, GEM v6.1.1 standardına tam uyumlu olarak hazırlanmış 
 | **04** | **Bakara 2:256** | İnanç ve Vicdan Özgürlüğü, İkrâh Yasağı ve Çoğulculuk | [`docs/tr/09-rapor-bakara-2256-v6.1.1.md`](docs/tr/09-rapor-bakara-2256-v6.1.1.md) | `PRE-RELEASE` |
 | **05** | **Nisâ 4:58** | Kamu Yönetişimi, Liyakat, Yargı Bağımsızlığı ve Adalet | [`docs/tr/10-rapor-nisa-458-v6.1.1.md`](docs/tr/10-rapor-nisa-458-v6.1.1.md) | `PRE-RELEASE` |
 | **06** | **Âl-i İmrân 3:159** | Kriz Yönetişiminde İstişare (Şûrâ), Liderlik ve Azim | [`docs/tr/11-rapor-ali-imran-3159-v6.1.1.md`](docs/tr/11-rapor-ali-imran-3159-v6.1.1.md) | `PRE-RELEASE` |
+| **07** | **Hucurât 49:9–10** | Çatışma Çözümü, Uluslararası Tahkim, Bağy Hukuku ve Barış Gücü | [`docs/tr/12-rapor-hucurat-49910-v6.1.1.md`](docs/tr/12-rapor-hucurat-49910-v6.1.1.md) | `PRE-RELEASE` |
 
 ---
 

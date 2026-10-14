@@ -52,6 +52,7 @@ The following reports are fully compliant with the GEM v6.1.1 standard and verif
 | **04** | **Al-Baqarah 2:256** | Freedom of Faith and Conscience, Prohibition of Coercion, and Pluralism | [`docs/tr/09-rapor-bakara-2256-v6.1.1.md`](docs/tr/09-rapor-bakara-2256-v6.1.1.md) | `PRE-RELEASE` |
 | **05** | **An-Nisa 4:58** | Public Governance, Meritocracy, Judicial Independence, and Justice | [`docs/tr/10-rapor-nisa-458-v6.1.1.md`](docs/tr/10-rapor-nisa-458-v6.1.1.md) | `PRE-RELEASE` |
 | **06** | **Ali 'Imran 3:159** | Consultation (Shūrā) in Crisis Governance, Leadership, and Determination | [`docs/tr/11-rapor-ali-imran-3159-v6.1.1.md`](docs/tr/11-rapor-ali-imran-3159-v6.1.1.md) | `PRE-RELEASE` |
+| **07** | **Al-Hujurat 49:9–10** | Conflict Resolution, International Arbitration, Law of Baghy, and Peacekeeping | [`docs/tr/12-rapor-hucurat-49910-v6.1.1.md`](docs/tr/12-rapor-hucurat-49910-v6.1.1.md) | `PRE-RELEASE` |
 
 ---
 
