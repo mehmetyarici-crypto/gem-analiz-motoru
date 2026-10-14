@@ -56,6 +56,7 @@ The following reports are fully compliant with the GEM v6.1.1 standard and verif
 | **08** | **Al-Isra 17:36** | Epistemic Responsibility, Verification, Cognitive Security, and AI Era | [`docs/tr/13-rapor-isra-1736-v6.1.1.md`](docs/tr/13-rapor-isra-1736-v6.1.1.md) | `PRE-RELEASE` |
 | **09** | **Al-Hashr 59:7** | Wealth Concentration, Economic Circulation, and Anti-Oligarchy Doctrine | [`docs/tr/14-rapor-hasr-597-v6.1.1.md`](docs/tr/14-rapor-hasr-597-v6.1.1.md) | `PRE-RELEASE` |
 | **10** | **Ar-Rum 30:22** | Ontological Pluralism, Linguistic/Ethnic Diversity, and Peaceful Coexistence | [`docs/tr/15-rapor-rum-3022-v6.1.1.md`](docs/tr/15-rapor-rum-3022-v6.1.1.md) | `PRE-RELEASE` |
+| **11** | **Al-An'am 6:151–152** | Universal Moral Decalogue, Fundamental Rights, Market Integrity, and Justice | [`docs/tr/16-rapor-enam-6151152-v6.1.1.md`](docs/tr/16-rapor-enam-6151152-v6.1.1.md) | `PRE-RELEASE` |
 
 ---
 
