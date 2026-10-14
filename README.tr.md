@@ -1,13 +1,5 @@
 [English](README.md) | **Türkçe**
 
-## İçindekiler
-
-- [Bu proje nedir?](#bu-proje-nedir)
-- [Ne yapar?](#ne-yapar)
-- [Ne yapmaz?](#ne-yapmaz)
-- [Dosyalar](#dosyalar)
-- [Hızlı Başlangıç](#hızlı-başlangıç)
-
 # GEM — Kur'an Temelli Stratejik Analiz Çerçevesi
 
 > **Bu proje dini otorite iddia etmez.** Çıktılar yorumdur, hüküm değildir.
@@ -15,24 +7,44 @@
 
 ---
 
+## İçindekiler
+
+- [Bu proje nedir?](#bu-proje-nedir)
+- [Ne yapar?](#ne-yapar)
+- [Ne yapmaz?](#ne-yapmaz)
+- [Sürümler ve Belgeler](#sürümler-ve-belgeler)
+- [Dosyalar](#dosyalar)
+- [Hızlı Başlangıç](#hızlı-başlangıç)
+
+---
+
 ## Bu proje nedir?
 
 GEM (Gelecek Eksenli Muhakeme), Kur'an ayetlerini **stratejik analiz** yöntemleriyle
-inceleyen, **26 adımlı** bir düşünce ve denetim çerçevesidir.
+inceleyen, **26 adımlı** ve **5 makro fazlı** bir düşünce ve denetim çerçevesidir.
 
 ### Ne yapar?
-- Ayet metnini **dilbilimsel** olarak analiz eder (siyak-sibak, nüzul, hitap)
-- **Makasıd** (amaçlar) çıkarır
-- Çağdaş sorunlarla **eşleştirir**
-- **Senaryo** üretir (4 olasılık)
-- **Karar kolu** önerir (10 alanlı)
-- Kendi analizini **eleştirir** (Red Team, falsifiabilite, öz-denetim)
+- Âyet metnini **dilbilimsel** olarak analiz eder (siyak-sibak, nüzul, hitap, lügat matrisi).
+- **Makasıd** (yüksek amaçlar) çıkarır.
+- Çağdaş kriz ve meselelerle **eşleştirir**.
+- **Senaryo** üretir (4 olasılık).
+- **Karar kolları** önerir (uygulanabilir politika ve kaldıraç noktaları).
+- Kendi analizini **eleştirir** (Red Team, ampirik falsifiabilite, öz-denetim, önyargı filtreleri).
 
 ### Ne yapmaz?
-- Fetva vermez
-- Dini otorite iddia etmez
-- Geleceği tahmin etmez
-- Kesin hüküm vermez
+- Fetva vermez.
+- Dini otorite veya nihai hakikat iddiası taşımaz.
+- Gaybı veya geleceği mutlak olarak tahmin etmez.
+- Kesin kazi hüküm üretmez.
+
+---
+
+## Sürümler ve Belgeler
+
+- **v6.1.1 (Güncel Taslak):** [docs/tr/GEM-v6.1.1-taslak.md](docs/tr/GEM-v6.1.1-taslak.md) — 26 adım, 5 makro faz, Enfüs-Âfâk ve Kalp Fıkhı merceği, kaynak tahkiki ve sınır beyanı.
+- **Yol Haritası:** [docs/tr/GEM-v6.1.1-yol-haritasi.md](docs/tr/GEM-v6.1.1-yol-haritasi.md) — GitHub geçiş ve test planı.
+- **Değişiklik Kütüğü:** [CHANGELOG.md](CHANGELOG.md) — Sürüm tarihçesi.
+- **v5.2.0 (Arşiv):** [GEM-V520-TALIMAT.md](GEM-V520-TALIMAT.md) — Tarihsel sürüm kaydı.
 
 ---
 
@@ -40,14 +52,17 @@ inceleyen, **26 adımlı** bir düşünce ve denetim çerçevesidir.
 
 | Dosya | Ne işe yarar |
 |---|---|
-| `YONTEM.md` | 26 adımlı yöntemin özeti |
-| `src/gem_lint.py` | Dil güvenliği denetçisi (Python) |
-| `docs/tr/04-ornek-rapor.md` | Rapor şablonu |
+| `YONTEM.md` | 26 adımlı yöntemin özeti ve faz yapısı |
+| `src/gem_lint.py` | Biçimsel dil ve şablon denetçisi (Python) |
+| `docs/tr/04-ornek-rapor.md` | Tarihsel rapor şablonu (v5.2.0) |
+| `docs/tr/GEM-v6.1.1-taslak.md` | Güncel v6.1.1 metodoloji standardı |
+| `docs/tr/GEM-v6.1.1-yol-haritasi.md` | Uygulama ve entegrasyon yol haritası |
 
 ---
 
 ## Hızlı Başlangıç
 
 ```bash
-# Dil denetçisini çalıştır
-python gem_lint.py ornek-rapor.md
+# Biçimsel denetçiyi çalıştır
+python src/gem_lint.py docs/tr/04-ornek-rapor.md
+```

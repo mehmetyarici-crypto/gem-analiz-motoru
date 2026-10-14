@@ -1,104 +1,58 @@
 [English](METHOD.md) | **Türkçe**
 
-# GEM — 26 Adımlı Analiz Yöntemi
+# GEM — 26 Adımlı Analiz Yöntemi ve 5 Makro Faz
 
-> Bu belge yöntemin özetidir. Raporlar bu adımlara uygun olarak hazırlanır.
-
----
-
-## Katman 1 — Hızlı Bakış (5 adım)
-
-| Adım | Adı | Ne yapar? |
-|---|---|---|
-| 00 | Kaynak Rejimi | Hangi kaynaklar kullanılır? (Tefsir, Usûl, Felsefe) |
-| 01 | Metin → Bağlam → Tefsir | Ayetin lafzı, siyak-sibak, çift okuma |
-| 02 | Tematik İlke + Karşıt İlke | Ana ilke ve ona karşı çıkan güç |
-| 03 | Makasıd + İs-Ought | Amaçlar çıkarımı + Hume köprüsü |
-| 04 | Çağdaş Mesele Eşleştirme | Bugünkü sorunla bağlantı |
+> **Not:** Bu belge yöntemin genel mimarisini ve adım dizinini özetler. Ayrıntılı metodolojik kurallar, epistemik sınır şartları ve V1–V11 doğrulama modülleri için güncel standart belgesine bakınız:  
+> 🔗 **[GEM v6.1.1 Standart Taslağı](docs/tr/GEM-v6.1.1-taslak.md)**
 
 ---
 
-## Katman 2 — Derin Analiz (12 adım)
+## Makro Fazlar ve Analiz Adımları (Katman 3)
 
-Katman 1'e ek olarak:
+GEM v6.1.1 mimarisi, 26 analiz adımını bilişsel bütünlüğü korumak amacıyla **5 Makro Faz** altında düzenler:
 
-| Adım | Adı | Ne yapar? |
-|---|---|---|
-| 04b | Karşı Örnek Taraması | Tezi gerçekten çürütecek delil arar |
-| 05 | Horizon Scanning | Toplumsal/teknolojik/ekonomik sinyaller |
-| 06 | Sünnetullah Örüntü Eşleştirme | Tarihsel/dinsel kalıp eşleşmesi |
-| 07 | Sistem Haritası | Döngüler, tipping point, kaldıraç noktası |
-| 08 | Dört Senaryo | Koruyucu / Bozuluş / Denge / İhya |
-| 09 | Zaman Ufku Bandı | H1 (0-3) → H4 (30+ yıl) |
-| 10b | Belirsizlik + Karar Stratejisi | Belirsizlik türü + karar yaklaşımı |
-| 11 | İstatistiksel Güvenlik Freni | 8 test (5a-5g + 8 gerekçe) |
+### Faz I — Kimlik, Metin ve Bağlam
+- **Adım 00 — Künye ve Giriş Bilgileri:** Vaka kodu, âyet, konu, tarih, katman, H6, güven düzeyi.
+- **Adım 00-5 — Dil ve Semantik Matrisi (H6 Zorunlu):** Kök anlam (*İbn Fâris* / *Râgıb*), Kur'an semantiği, nahiv/belâğat (*Zemahşerî*) ve klasik lisan (*İbn Manzûr*). `[NAKİL]` ve `[YORUM]` ayrımı zorunludur.
+- **Adım 01 — Lafzî Tahlil:** Arapça metin, gramer ve mealler.
+- **Adım 02 — Mantıksal Semantik ve Karşıt İlke:** Önerme yapısı, maslahat tartımı ve sınır tayini.
+- **Adım 03 — Üçlü Çerçeve (Ethos / Logos / Pathos) ve Olgu-Değer Köprüsü:** Hume Giyotini denetimi.
+- **Adım 04 — Makasıd Analizi:** Zarûriyyât, hâciyyât, tahsîniyyât (Şâtıbî ve İbn Âşûr çerçevesi).
+- **Adım 04b — Yorumcu Konumu (Gadamer Hermenötiği):** Usûl tercihi, önkabuller ve alternatif ekollerin muhtemel sonuçları.
+- **Adım 05 — Siyak-Sibak Analizi (S1–S7):** S1 (Önceki âyet), S2 (Sonraki âyet), S3 (Pasaj konumu), S4 (Sûre bütünlüğü), S5 (Nüzul teması), S6 (Tarihsel bağlam), S7 (Kırpma riski emniyeti).
+- **Adım 06 — Çapraz Âyet Analizi:** Metin içi tahsis, takyid ve paralellikler.
 
----
+### Faz II — Sistem ve Gelecek Modellemesi
+- **Adım 07 — Sistem Haritası (CLD):** Causal Loop Diagramı, pekiştirici (R) ve dengeleyici (B) döngüler, gecikmeler.
+- **Adım 08 — Dört Senaryo:** Koruyucu, Yozlaşma, Denge/Çözülme ve İhya/Dönüşüm senaryoları.
+- **Adım 09 — Zaman Ufku Bandı:** H1 (0–3 yıl), H2 (3–10 yıl), H3 (10–30 yıl), H4 (30+ yıl medeniyet ufku).
+- **Adım 10 — Morfolojik Gözlem:** Dilbilimsel/morfolojik frekans özellikleri (Ebced ve numeroloji yasaktır).
+- **Adım 10b — Belirsizlik ve Karar Stratejisi:** Knightian belirsizlik, robust ve koruyucu stratejiler.
 
-## Katman 3 — Tam Analiz Motoru (26 adım)
+### Faz III — Sınama, Karşı Okuma ve Ahlakî Değerlendirme
+- **Adım 11 — Sekiz İç Denetim Testi:** Algoritmik iç tutarlılık denetimleri.
+- **Adım 12 — Red Team ve Sınanabilirlik Protokolü:** Karşıt okumalar ve Popperci ampirik politika testi ($P(E|H)$).
+- **Adım 13 — Enfüs-Âfâk ve Kalp Fıkhı:** İçsel-ahlakî yöneliş (enfüs) ile dış şartlar (âfâk) ilişkisi; niyet ve vicdan muhasebesi; fıkhî hükümle karıştırılmayan işârî derinlik.
 
-Katman 2'ye ek olarak:
+### Faz IV — Bayes, Karar ve Etik Denetim
+- **Adım 14 — Erken Uyarı Sinyalleri ve Bayes Güncellemesi:** `EU-01..EU-n` sinyalleri, doğrulanmış/öznel prior ayrımı ve likelihood hesaplaması.
+- **Adım 15 — Karar Kolları ve Kaldıraç Bağlantısı:** CLD döngülerine bağlı politika araçları, Meadows kaldıraç noktaları ve trade-off analizi.
+- **Adım 16 — Önyargı ve Taraflılık Denetimi:** Doğrulama yanlılığı, anakronizm ve apologetik savunma filtreleri.
 
-| Adım | Adı | Ne yapar? |
-|---|---|---|
-| 01-D | Siyak-Sibak (S1-S7) | Metin içi bağlam + kırpma riski |
-| 01-E | Nüzul ve Hitap (N1-N7) | Tarihsel bağlam + kapsam ilişkisi (N4) |
-| 10 | Sayısal/Morfolojik Lab | Kök analizi (opsiyonel, sayma YASAK) |
-| 12 | Karşı Okuma + Red Team + Falsifiabilite | Tezi yıkacak şart + ölçülebilir koşul |
-| 13 | Mısrî Katmanı | İçsel derinlik / niyazı |
-| 14 | Erken Uyarı Haritası | If-Then kartları + sayısal eşik |
-| 15 | Karar Kolu Matrisi | 10 alanlı kart (K1, K2, K3) |
-| 16 | Etik ve Önyargı Denetimi | 6 filtre + sonuç tablosu |
-| 17 | Güven Düzeyi + Aktör Haritası | A/B/C + A1-A7 aktörler |
-| 17b | Aktör ve Güç Haritası | Kim güçlü, kim sessiz? |
-| 18 | Bilgi Tabanı + Zayıflık Listesi | SABİT / ARAŞTIRMA NOTU + eksikler |
-| 19 | İzleme + Retroadiction | KPI + tarihsel test (5 satır format) |
-| 20 | Açık Sorular + Varsayım | Ne bilmiyoruz? Ne varsayıyoruz? |
-
----
-
-## Ara Kapılar (Gates)
-
-| Kapı | Ne kontrol eder? |
-|---|---|
-| QC Kapısı | Tüm adımlar tamam mı? |
-| Retroadiction | Tarihsel test geçti mi? |
-| Dil Güvenliği (18.1) | Yasaklı kelime var mı? |
-| Bağımsız Denetim (G3.1) | Dış okuyucu onayı var mı? |
+### Faz V — Güven, Sorumluluk ve İzleme Kaydı
+- **Adım 17 — Güven Düzeyi:** A / B / C nitel güven derecelendirmesi.
+- **Adım 17b — Aktör Haritası:** Güç odakları, karar vericiler, etkilenenler ve gelecek nesiller.
+- **Adım 18 — Bilgi Tabanı ve Zayıflıklar:** İddia statüleri ve yöntemin sınırları.
+- **Adım 18.1 — Dil Güvenliği:** Kesinlik ve sahte-onay iddialarından arındırma.
+- **Adım 19 — İzleme ve Geriye Dönük Sınama (Retrodiction):** Tarihsel vaka doğrulama ve KPI takibi.
+- **Adım 20 — Açık Sorular ve Varsayımlar:** Çözülmemiş sorular listesi.
 
 ---
 
-## Yasaklı Kelimeler (Dil Güvenliği)
+## Koşullu Ekler (Z-1 — Z-5)
 
-Şu kelimeler raporlarda **KULLANILAMAZ:**
-
-- mükemmel
-- %100
-- kesinlikle
-- tartışmasız
-- sıfır zafiyet
-- ispatlanmıştır
-- mutlak (nass bağlamı dışında)
-
-**Ceza:** Rapor derlenemez, QC'den geçemez.
-
----
-
-## Etiket Tavanı
-
-| N4 Kapsamı | En yüksek etiket |
-|---|---|
-| (a) Doğrudan Geçerli | DOĞRUDAN |
-| (c) Şartlı Geçerli | ANOLOJİK veya UYGULAMA YORUMU |
-| (d) Döneme Özgü | YORUM |
-
-**Test 7 sonucu** etiketi düşürebilir ama yükseltemez.
-
----
-
-## Sıfır İlkeler
-
-1. **Otorite Reddi:** Bu sistem dini otorite iddia etmez.
-2. **Determinizm Reddi:** Mekanik kadercilik yok; irade ve ıslah mümkündür.
-3. **Propaganda Yasağı:** Manipülatif spekülasyon yapılamaz.
-4. **İnsan Onayı:** Kararlar insan onayından geçmeden uygulanamaz.
+- **Z-1 — Özgün Problematik (Aporia):** Âyetin analitik şablona sığmayan derin teolojik ve felsefî açmazı.
+- **Z-2 — Görüş İhtilafı Cetveli:** En az 3 farklı klasik mezhep ve çağdaş ekolün karşılaştırmalı matrisi.
+- **Z-3 — Zayıflık ve Geliştirme Önerileri:** Analizin açıkça ilan edilen eksiklikleri.
+- **Z-4 — Standart Sınır Beyanı:** Raporun fetva veya ilahî muradın tek tefsiri olmadığını bildiren zorunlu şerh.
+- **Z-5 — Hakem ve Akran Değerlendirme Kaydı:** Dış bağımsız akademik değerlendirme kütüğü (`DRAFT`, `PRE-RELEASE`, `EXTERNALLY-REVIEWED`).

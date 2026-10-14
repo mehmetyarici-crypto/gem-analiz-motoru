@@ -1,104 +1,58 @@
 **English** | [Türkçe](YONTEM.md)
 
-# GEM — 26-Step Analysis Method
+# GEM — 26-Step Analytical Method and 5 Macro Phases
 
-> This document is a summary of the method. Reports are prepared according to these steps.
-
----
-
-## Layer 1 — Quick Overview (5 steps)
-
-| Step | Name | What does it do? |
-|---|---|---|
-| 00 | Source Regime | Which sources are used? (Tafsīr, Uṣūl, Philosophy) |
-| 01 | Text → Context → Tafsīr | The verse's wording, *siyāq-sibāq*, dual reading |
-| 02 | Thematic Principle + Counter-Principle | The main principle and the force opposing it |
-| 03 | *Maqāṣid* + Is-Ought | Derivation of objectives + Hume's bridge |
-| 04 | Contemporary Issue Matching | Connection with today's problem |
+> **Note:** This document provides a structural summary of the 26-step method and macro phases. For detailed methodological criteria, epistemic disclaimer standards, and V1–V11 validation modules, please see the current specification draft:  
+> 🔗 **[GEM v6.1.1 Specification Draft (Turkish)](docs/tr/GEM-v6.1.1-taslak.md)**
 
 ---
 
-## Layer 2 — Deep Analysis (12 steps)
+## Macro Phases and Analytical Steps (Layer 3)
 
-In addition to Layer 1:
+The GEM v6.1.1 architecture organizes the 26 analysis steps under **5 Macro Phases** to preserve cognitive and epistemological coherence:
 
-| Step | Name | What does it do? |
-|---|---|---|
-| 04b | Counter-Example Scan | Seeks evidence that would genuinely refute the thesis |
-| 05 | Horizon Scanning | Social / technological / economic signals |
-| 06 | *Sunnat Allāh* Pattern Matching | Historical / religious pattern match |
-| 07 | System Map | Loops, tipping points, leverage points |
-| 08 | Four Scenarios | Protective / Decay / Balance / Revival |
-| 09 | Time Horizon Band | H1 (0–3) → H4 (30+ years) |
-| 10b | Uncertainty + Decision Strategy | Type of uncertainty + decision approach |
-| 11 | Statistical Safety Brake | 8 tests (5a–5g + 8 justifications) |
+### Phase I — Identity, Text, and Context
+- **Step 00 — Metadata and Header Info:** Case code, verse, topic, date, layer, H6 flag, confidence grade.
+- **Step 00-5 — Linguistic and Semantic Matrix (H6 Mandatory):** Root semantics (*Ibn Fāris* / *Rāghib*), Quranic usage, syntax/rhetoric (*Zamakhsharī*), and classical lexicography (*Ibn Manẓūr*). Strict `[NAKİL]` and `[YORUM]` demarcation.
+- **Step 01 — Literal Analysis:** Arabic text, grammatical structure, and translations.
+- **Step 02 — Logical Semantics and Counter-Principle:** Propositional structure and maqāṣid boundary testing.
+- **Step 03 — Tripartite Framework (Ethos / Logos / Pathos) and Is-Ought Bridge:** Hume's Guillotine audit.
+- **Step 04 — Maqāṣid Analysis:** Essential, complementary, and luxury tiers (al-Shāṭibī & Ibn ʿĀshūr).
+- **Step 04b — Interpreter Positionality (Gadamerian Hermeneutics):** Usūl school, philosophical priors, and alternative interpretations.
+- **Step 05 — Siyāq-Sibāq Contextual Analysis (S1–S7):** S1 (Preceding verse), S2 (Subsequent verse), S3 (Passage context), S4 (Surah integrity), S5 (Nuzūl theme), S6 (Historical context), S7 (Quotation safety lock).
+- **Step 06 — Cross-Verse Comparative Analysis:** Scriptural cross-referencing and specification (*takhṣīṣ*).
 
----
+### Phase II — System Dynamics and Future Modeling
+- **Step 07 — System Map (CLD):** Causal Loop Diagram, reinforcing (R) and balancing (B) loops, system delays.
+- **Step 08 — Four Scenarios:** Protective, Degenerative, Equilibrium/Dissolution, and Transformative Reform scenarios.
+- **Step 09 — Time Horizon Band:** H1 (0–3 yrs), H2 (3–10 yrs), H3 (10–30 yrs), H4 (30+ yrs civilizational horizon).
+- **Step 10 — Morphological Observation:** Computational linguistics frequency patterns (Gematria/numerology strictly prohibited).
+- **Step 10b — Deep Uncertainty and Decision Strategy:** Knightian uncertainty, robust and protective strategies.
 
-## Layer 3 — Full Analysis Engine (26 steps)
+### Phase III — Testing, Counter-Reading, and Moral Dimension
+- **Step 11 — Eight Algorithmic Internal Audits:** Syntactic and logical consistency checks.
+- **Step 12 — Red Team and Falsifiability Protocol:** Counter-arguments and empirical worldly policy testing ($P(E|H)$).
+- **Step 13 — Enfüs-Âfâk & Fiqh of the Heart:** Inward spiritual orientation (*enfüs*) vs outward societal realities (*āfāq*); conscience and ethical reckoning; spiritual depth distinguished from legal rulings.
 
-In addition to Layer 2:
+### Phase IV — Bayesian Updating, Decision, and Ethical Audit
+- **Step 14 — Early Warning Signals and Bayesian Update:** `EU-01..EU-n` indicators, empirical vs subjective priors, and likelihood ratios.
+- **Step 15 — Decision Branches and Leverage Points:** Concrete policy instruments linked to CLD loops and Meadows leverage tiers.
+- **Step 16 — Cognitive Bias and Partiality Audit:** Confirmation bias, anachronism, and apologetic filters.
 
-| Step | Name | What does it do? |
-|---|---|---|
-| 01-D | *Siyāq-Sibāq* (S1–S7) | In-text context + risk of truncation |
-| 01-E | *Nuzūl* and Address (N1–N7) | Historical context + scope relation (N4) |
-| 10 | Numerical / Morphological Lab | Root analysis (optional, counting FORBIDDEN) |
-| 12 | Counter-Reading + Red Team + Falsifiability | Refuting condition + measurable criterion |
-| 13 | *Miṣrī* Layer | Inner depth / supplication |
-| 14 | Early Warning Map | If-Then cards + numerical threshold |
-| 15 | Decision Branch Matrix | 10-domain card (K1, K2, K3) |
-| 16 | Ethics and Bias Audit | 6 filters + results table |
-| 17 | Confidence Level + Actor Map | A/B/C + A1–A7 actors |
-| 17b | Actor and Power Map | Who is strong, who is silent? |
-| 18 | Knowledge Base + Weakness List | FIXED / RESEARCH NOTE + gaps |
-| 19 | Monitoring + Retrodiction | KPI + historical test (5-line format) |
-| 20 | Open Questions + Assumption | What do we not know? What do we assume? |
-
----
-
-## Intermediate Gates
-
-| Gate | What does it check? |
-|---|---|
-| QC Gate | Are all steps complete? |
-| Retrodiction | Did the historical test pass? |
-| Language Safety (18.1) | Are there any forbidden words? |
-| Independent Audit (G3.1) | Is there external reader approval? |
+### Phase V — Confidence, Accountability, and Tracking Record
+- **Step 17 — Confidence Grade:** Qualitative A / B / C grading.
+- **Step 17b — Stakeholder & Actor Mapping:** Decision-makers, institutional actors, affected groups, and future generations.
+- **Step 18 — Knowledge Base and Limitations:** Claim statuses and analytical vulnerabilities.
+- **Step 18.1 — Language Safety:** Elimination of unwarranted absolute claims and self-approvals.
+- **Step 19 — Monitoring and Retrodiction:** KPI metrics and historical precedent falsification.
+- **Step 20 — Open Research Questions and Assumptions:** Unresolved questions catalogue.
 
 ---
 
-## Forbidden Words (Language Safety)
+## Conditional Appendices (Z-1 — Z-5)
 
-The following words CANNOT be used in reports:
-
-- flawless
-- 100%
-- absolutely
-- indisputably
-- zero vulnerability
-- proven
-- absolute (outside the context of *naṣṣ*)
-
-**Penalty:** The report cannot be compiled; it cannot pass QC.
-
----
-
-## Tag Ceiling
-
-| N4 Scope | Highest tag |
-|---|---|
-| (a) Directly Valid | DIRECT |
-| (c) Conditionally Valid | ANALOGICAL or APPLICATION INTERPRETATION |
-| (d) Period-Specific | INTERPRETATION |
-
-Test 7 may lower the tag but may not raise it.
-
----
-
-## Zero Principles
-
-1. **Rejection of Authority:** This system does not claim religious authority.
-2. **Rejection of Determinism:** No mechanical fatalism; will and reform are possible.
-3. **Prohibition of Propaganda:** Manipulative speculation is not permitted.
-4. **Human Approval:** Decisions cannot be implemented without human approval.
+- **Z-1 — Unresolved Aporia:** Verses with acute hermeneutic tensions beyond the 26-step format.
+- **Z-2 — Dispute & Juristic Matrix:** Comparative cross-school table of classical and modern positions.
+- **Z-3 — Weaknesses and Methodological Limitations:** Explicitly acknowledged constraints.
+- **Z-4 — Standard Epistemic Disclaimer:** Mandatory statement affirming the interpretative and non-fatwa nature of the report.
+- **Z-5 — Peer Review Record:** Independent external scholarly assessment log (`DRAFT`, `PRE-RELEASE`, `EXTERNALLY-REVIEWED`).
