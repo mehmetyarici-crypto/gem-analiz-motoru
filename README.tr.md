@@ -54,6 +54,7 @@ Aşağıdaki raporlar, GEM v6.1.1 standardına tam uyumlu olarak hazırlanmış 
 | **06** | **Âl-i İmrân 3:159** | Kriz Yönetişiminde İstişare (Şûrâ), Liderlik ve Azim | [`docs/tr/11-rapor-ali-imran-3159-v6.1.1.md`](docs/tr/11-rapor-ali-imran-3159-v6.1.1.md) | `PRE-RELEASE` |
 | **07** | **Hucurât 49:9–10** | Çatışma Çözümü, Uluslararası Tahkim, Bağy Hukuku ve Barış Gücü | [`docs/tr/12-rapor-hucurat-49910-v6.1.1.md`](docs/tr/12-rapor-hucurat-49910-v6.1.1.md) | `PRE-RELEASE` |
 | **08** | **İsrâ 17:36** | Epistemik Sorumluluk, Bilgi Doğrulama, Bilişsel Güvenlik ve Yapay Zekâ | [`docs/tr/13-rapor-isra-1736-v6.1.1.md`](docs/tr/13-rapor-isra-1736-v6.1.1.md) | `PRE-RELEASE` |
+| **09** | **Haşr 59:7** | Servet Konsantrasyonu, İktisadi Sirkülasyon ve Anti-Oligarşi | [`docs/tr/14-rapor-hasr-597-v6.1.1.md`](docs/tr/14-rapor-hasr-597-v6.1.1.md) | `PRE-RELEASE` |
 
 ---
 
