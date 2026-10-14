@@ -377,7 +377,7 @@ class GemLinterV6:
         if not self.is_v6:
             return
 
-        actual_sha256 = hashlib.sha256(self.raw_text.encode("utf-8")).hexdigest()
+        actual_sha256 = hashlib.sha256(self.path.read_bytes()).hexdigest()
 
         # 1. Harici Manifest Kontrolü (v6.1.1 Öncelikli Standart)
         manifest_file = self.manifest_path
