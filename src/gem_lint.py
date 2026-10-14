@@ -1,57 +1,70 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-GEM Linter v5.2.2 — Dil Güvenliği Denetçisi (İki Dilli + v5.2.0 Kuralları + False Positive Düzeltmeleri)
-GEM v5.2.0 Bölüm 18.1 + 18.1-B muafiyet kurallarına göre rapor dosyalarını tarar.
+GEM Linter v6.1.1 — Akademik Standart, Doğrulama ve Dil Güvenliği Denetçisi
+Kur'an Temelli Gelecek Vizyonu (GEM) v6.1.1 Metodoloji Mimarisi ve Doğrulama Şartnamesi.
+
+Temel Yetenekler:
+    - YAML Frontmatter Ayrıştırma ve Şema Doğrulama (V1, V4, V5, V6, V11)
+    - KESİCİ (BLOCK) vs UYARI (WARN) Hiyerarşisi
+    - V1: Kaynak Tahkiki ve Künye Kartı Kontrolü
+    - V2: [NAKİL] ve [YORUM] Ayrımı Denetimi
+    - V3: Görüş İhtilafı Cetveli ve Mutlakiyet İddiası Yasağı
+    - V4: Kriptografik Bütünlük (64-hex SHA256 ve Harici .sha256 Manifest Desteği)
+    - V5: Gerekçeli Senaryo Skorları
+    - V6: Türetilmiş Eşikler ve [TAHMİNÎ EŞİK] Etiketi
+    - V7: Ampirik Veri ve Doğrulanabilir Referans Kontrolü
+    - V8: Falsifiabilite Ayrımı ve Hume Giyotini Sınırı
+    - V9: Z-1 Şablona Sığmayan Özgün Problematik (Aporia) Kontrolü
+    - V10: Z-4 Standart Sınır İfadesi ve Sahte Otorite Yasağı
+    - V11: Bağımsız Dış Hakem Kaydı ve Katmanlı Statü (DRAFT / PRE-RELEASE / EXTERNALLY-REVIEWED)
+    - Çift Dilli Dil Güvenliği (Türkçe & İngilizce yasaklı kelimeler, 18.1-B tırnak muafiyeti, bağlam istisnaları)
+    - Adım 13 Enfüs-Âfâk ve Kalp Fıkhı Desteği
+    - Çoklu Rapor Benzerlik Denetimi (Cross-Similarity)
 
 Kullanım:
-    python gem_lint.py dosya_adi.md
-    python gem_lint.py dosya_adi.md --katman 3
-    python gem_lint.py dosya_adi.md --katman 3 --h6
-
-Çıktı:
-    - Yasaklı kelimeler varsa SATIR NUMARASI ile uyarır
-    - Tırnak içindeki yasaklı kelimeler MUAF sayılır (18.1-B)
-    - Zorunlu bölümler eksikse bildirir
-    - Falsifiabilite standardı (zaman + endeks + eşik) kontrolü
-    - Bayes alanı kontrolü (Katman 3)
-    - 3'lü Dil Matrisi kontrolü (H6)
-    - Sonuç: GEÇTİ / ŞARTLI / DÜŞTÜ
-
-v5.2.0 Değişiklikleri:
-    - 18.1-B Muafiyet: tırnak içindeki yasaklı kelimeler ihlal sayılmaz
-    - Yeni yasaklı kelimeler eklendi (TR + EN)
-    - Yeni uyarı kelimeleri eklendi
-    - Falsifiabilite standardı kontrolü eklendi (Değişiklik 2)
-    - Bayes alanı kontrolü eklendi (Değişiklik 3)
-    - 3'lü Dil Matrisi kontrolü eklendi (Değişiklik 4)
-    - --katman ve --h6 komut satırı seçenekleri eklendi
-    - Yazım düzeltmeleri genişletildi
-    - Mevcut v5.1.6 normalizasyon sistemi korundu
-
-v5.2.1 Düzeltmeleri (False Positive):
-    - "is-ought" arama kelimeleri genişletildi
-    - "künye" arama kelimeleri genişletildi
-    - "hume" arama kelimeleri genişletildi
-    - Türkçe büyük İ sorunu çözüldü (\\u0307 normalizasyonu)
-
-v5.2.2 Düzeltmeleri (Yazım False Positive):
-    - Yazım hataları artık RAW (ham) metinde aranıyor
-    - "İbn Âşûr" / "İbnü'l-Kayyim" gibi doğru yazılmış isimler
-      normalize edildikten sonra "ibn asur" / "ibnu'l-kayyim"
-      diye eşleşip yanlış uyarı vermeyecek
-    - Beccaria / De Soto / Şâtıbî özel kontrol blokları kaldırıldı
-      (raw text çözümü zaten çözüyor)
+    python src/gem_lint.py <dosya_adi.md>
+    python src/gem_lint.py <dosya_adi.md> --katman 3 --h6
+    python src/gem_lint.py <dosya_adi.md> --manifest checksums.sha256
+    python src/gem_lint.py <dosya_adi.md> --generate-manifest
+    python src/gem_lint.py rapor1.md rapor2.md --similarity
 """
 
 import sys
 import re
 import os
+import hashlib
+import difflib
+from pathlib import Path
+
+# Windows terminal UTF-8 desteği
+if sys.stdout and hasattr(sys.stdout, "reconfigure"):
+    try:
+        sys.stdout.reconfigure(encoding="utf-8")
+    except Exception:
+        pass
+if sys.stderr and hasattr(sys.stderr, "reconfigure"):
+    try:
+        sys.stderr.reconfigure(encoding="utf-8")
+    except Exception:
+        pass
+
+try:
+    import yaml
+    YAML_AVAILABLE = True
+except ImportError:
+    YAML_AVAILABLE = False
+
+
+# ============================================
+# SEVİYE TANIMLARI
+# ============================================
+BLOCK = "KESİCİ"
+WARN = "UYARI"
 
 
 # ============================================
 # NORMALİZASYON — Unicode, apostrof, Türkçe karakterler
-# (v5.1.6'dan korundu + v5.2.1 Türkçe İ düzeltmesi)
 # ============================================
 NORMALIZE_HARITA = {
     "\u0307": "", "İ": "i",
@@ -60,7 +73,7 @@ NORMALIZE_HARITA = {
     "â": "a", "î": "i", "û": "u", "é": "e", "è": "e",
     "ʿ": "", "ʾ": "", "ʼ": "",
     "'": "", "\u2019": "", "`": "", "´": "",
-    "\u201c": "", "\u201d": "",
+    "\u201c": "", "\u201d": "", "«": "", "»": "",
 }
 
 
@@ -75,16 +88,13 @@ def normalize(metin):
 
 
 # ============================================
-# v5.2.0 — 18.1-B MUAFİYET: TIRNAK İÇİ KONTROL
+# 18.1-B MUAFİYET: TIRNAK VE KOD BLOKLARI KONTROLÜ
 # ============================================
-CITIRNAK_MUAFIYET_REGEX = re.compile(r'"[^"]*"|\'[^\']*\'|«[^»]*»')
+CITIRNAK_MUAFIYET_REGEX = re.compile(r'"[^"]*"|\'[^\']*\'|«[^»]*»|“[^”]*”|`[^`]*`')
 
 
 def citirnak_muaf_mi(satir, kelime):
-    """
-    18.1-B muafiyet kontrolü:
-    Kelime tırnak içinde mi? Öyleyse muaf.
-    """
+    """Kelime tırnak içinde veya satır içi kod bloğunda geçiyorsa 18.1-B gereği muaf sayılır."""
     citirnaklar = CITIRNAK_MUAFIYET_REGEX.findall(satir)
     for c in citirnaklar:
         if normalize(kelime) in normalize(c):
@@ -93,8 +103,7 @@ def citirnak_muaf_mi(satir, kelime):
 
 
 # ============================================
-# YASAKLI KELİMELER — Hard Fail (Bölüm 18.1)
-# v5.2.0: 3 yeni TR + 3 yeni EN eklendi
+# YASAKLI KELİMELER — KESİCİ / Hard Fail (Bölüm 18.1)
 # ============================================
 YASAKLI_KELIMELER = {
     # --- Türkçe ---
@@ -107,18 +116,17 @@ YASAKLI_KELIMELER = {
     "ispatlanmıştır": "Kanıt kesinliği iddiası — Bölüm 18.1 ihlali",
     "onaylandı (tam uyum)": "Kendi kendine tam puan — Bölüm 18.1 ihlali",
     "tam uyum": "Kendi kendine tam puan — Bölüm 18.1 ihlali",
-    # --- v5.2.0 Yeni Türkçe ---
     "kanıtlanmıştır": "Kanıt kesinliği iddiası — Bölüm 18.1 ihlali",
     "herkesçe bilinmektedir": "Kanıt kesinliği iddiası — Bölüm 18.1 ihlali",
     "tartışmaya kapalı": "Tartışma reddi — Bölüm 18.1 ihlali",
-    # --- İngilizce ---
+
+    # --- İngilizce (PR #3 ve İki Dilli Genişletme) ---
     "flawless": "Mutlak başarı iddiası — Sıfır İlke 3 ihlali",
     "100%": "Sayısal kesinlik iddiası — Bölüm 9 ihlali",
     "absolutely": "Mutlak kesinlik iddiası — Bölüm 18.1 ihlali",
     "indisputably": "Tartışma reddi — Bölüm 18.1 ihlali",
     "zero vulnerability": "Kusursuzluk iddiası — Bölüm 18.1 ihlali",
     "proven": "Kanıt kesinliği iddiası — Bölüm 18.1 ihlali",
-    # --- v5.2.0 Yeni İngilizce ---
     "universally known": "Kanıt kesinliği iddiası — Bölüm 18.1 ihlali",
     "beyond dispute": "Tartışma reddi — Bölüm 18.1 ihlali",
     "definitively proven": "Kanıt kesinliği iddiası — Bölüm 18.1 ihlali",
@@ -127,27 +135,21 @@ YASAKLI_KELIMELER = {
 
 # ============================================
 # KOŞULLU YASAKLI — Uyarı Verir (Hard Fail Değil)
-# (v5.1.6'dan korundu)
 # ============================================
 KOSULLU_YASAKLI = {
     "mutlak": "Naṣṣ bağlamı dışındaki mutlaklık iddiası olabilir — bağlamı kontrol et",
     "absolute": "Naṣṣ bağlamı dışındaki mutlaklık iddiası olabilir — bağlamı kontrol et",
 }
 
-
-# ============================================
-# İSTİSNALAR — Bu İfadeler Geçiyorsa Uyarı Vermez
-# (v5.1.6'dan korundu)
-# ============================================
 ISTISNA_IFADELERI = [
-    # --- Türkçe bağlamlar ---
+    # Teolojik / Nass İstisnaları
     "mutlak mülkiyet", "mutlak sahip", "mutlak egemenlik",
     "mutlak caydırıcılık", "mutlak adalet", "mutlak otorite",
     "mutlak koruma", "mutlak güvenlik", "mutlak bağlılık",
     "mutlak yokluk", "mutlak varlık",
     "mutlak kurulduğu", "mutlak kılmak",
-    "mutlak dokunulmazlık",
-    # --- İngilizce bağlamlar ---
+    "mutlak dokunulmazlık", "mutlakiyet", "mutlakiyet yasağı",
+    "mutlak lafız", "mutlak lafzı", "mutlak nas", "mutlak nass",
     "absolute ownership", "absolute sovereign", "absolute sovereignty",
     "absolute divine", "absolute god", "absolute deterrence",
     "absolute destruction", "absolute justice", "absolute authority",
@@ -156,13 +158,11 @@ ISTISNA_IFADELERI = [
     "absolute ritualized", "absolute obligation", "absolute market",
     "absolute labor", "absolute static", "absolute boundary",
     "absolute absence", "absolute deterrent",
+    # Teknik / Yazılım / Dosya İstisnaları
+    "absolute path", "absolute import", "absolute url", "absolute threshold",
+    "mutlak yol", "mutlak eşik",
 ]
 
-
-# ============================================
-# ÖZ-DENETİM SATIRLARI — Atlanacak
-# (v5.1.6'dan korundu)
-# ============================================
 OZ_DENETIM_ISARETLERI = [
     "yasaklı kelime",
     "forbidden word",
@@ -171,10 +171,8 @@ OZ_DENETIM_ISARETLERI = [
     "strictly avoided",
 ]
 
-
 # ============================================
-# ZORUNLU BÖLÜMLER — İki Dilli
-# (v5.1.6 + v5.2.0 + v5.2.1 genişletmeleri)
+# ZORUNLU BÖLÜMLER (v6.1.1 — 26 Adım + Z-Ekleri)
 # ============================================
 ZORUNLU_BOLUMLER = [
     ["yorumcu konumu", "interpreter position", "interpreters position",
@@ -182,11 +180,10 @@ ZORUNLU_BOLUMLER = [
     ["zemahşerî", "zamakhshari", "zamahşeri", "keşşaf", "kashshaf"],
     ["falsifiabilite", "falsifiability", "yanlışlanabilirlik"],
     ["tipping point", "tipping point", "kırılma noktası"],
-    ["n4", "n4"],
-    ["s7", "s7"],
+    ["n4", "n4", "eu-", "erken uyarı"],
+    ["s7", "s7", "kırpma riski"],
     ["zayıflık", "weakness"],
     ["geliştirme", "development"],
-    ["geliştirme önerisi", "development suggestion"],
     ["öz-denetim", "self-audit", "self audit", "oz-denetim"],
     ["dil güvenliği", "language safety", "dil guvenligi"],
     ["karar kolu", "decision branch", "karar kol"],
@@ -194,88 +191,38 @@ ZORUNLU_BOLUMLER = [
     ["retrodiction", "retroadiction", "retrodiksiyon", "geriye dönük"],
     ["karşıt ilke", "counter-principle", "counter principle",
      "karsit ilke", "muhalif ilke", "çapraz ilke"],
-    # --- v5.2.0 Yeni + v5.2.1 genişletmeleri ---
     ["is-ought", "is ought", "is–ought", "is-ought köprüsü",
-     "is ought köprüsü", "mevcut-olması gereken", "descriptive-normative",
-     "is-ought bridge", "is ought bridge",
-     "olduğu gibi-olması gereken", "var olan-olması gereken",
-     "olan-olması gereken", "vekalet", "geçiş köprüsü"],
-    ["hume", "hume", "hume giyotini", "humes guillotine",
-     "hume guillotine", "hume's guillotine",
-     "olgu-değer ayrımı", "descriptive-normative gap",
-     "olgu ve değer ayrımı", "değer yargısı ayrımı"],
-    ["künye", "rapor künyesi", "rapor kimliği", "rapor başlığı",
-     "identification", "metadata", "report id", "report metadata",
-     "rapor no", "rapor numarası", "girdi kaydı", "kaynak sayfası",
-     "rapor bilgileri", "bilgi kutusu", "info box", "rapor künyesi",
-     "rapor tanıtım", "adım 00", "adim 00", "step 00", "giriş bilgileri"],
-    ["güven düzeyi", "confidence level", "guven duzeyi"],
-    ["bilgi düzeyi", "knowledge level", "bilgi duzeyi"],
+     "is-ought bridge", "olgu-değer", "olgu ve değer ayrımı"],
+    ["hume", "hume giyotini", "humes guillotine", "hume's guillotine"],
+    ["künye", "rapor künyesi", "rapor kimliği", "adım 00", "step 00"],
+    ["güven düzeyi", "confidence level", "guven duzeyi", "confidence grade"],
+    ["enfüs", "enfus", "kalp fıkhı", "kalp fikhi", "mısrî", "misri", "irfanî", "irfani"],
 ]
 
-# v5.2.0 — Katman 3 ek zorunlu bölümler
 KATMAN3_EK_ZORUNLU = [
-    ["zaman aralığı", "zaman araligi", "time range", "time window",
-     "time period", "zaman penceresi", "yıllık pencere", "yillik pencere"],
-    ["endeks", "index", "veri kaynağı", "veri kaynagi", "data source",
-     "veri tabanı", "veri tabani", "database", "dünya bankası",
-     "dunya bankasi", "world bank", "tüik", "undp", "gini", "transparency",
-     "hukukun üstünlüğü", "rule of law"],
-    ["sayısal eşik", "sayisal esik", "numerical threshold",
-     "quantitative threshold", "eşiği", "esigi", "threshold",
-     "eşik değeri", "esik degeri"],
-    ["prior", "prior", "önsel", "öncül", "oncul", "önceki olasılık",
-     "onceki olasilik", "başlangıç olasılığı", "baslangic olasiligi"],
-    ["posterior", "posterior", "sonsal", "güncellenmiş olasılık",
-     "guncellenmis olasilik", "güncel olasılık", "sonraki olasılık"],
-    ["bayes", "bayes", "bayesian", "bayesyen", "bayesçi", "bayesci",
-     "olasılık güncelleme", "olasilik guncelleme"],
+    ["zaman aralığı", "zaman penceresi", "time range", "time window", "yıllık pencere"],
+    ["endeks", "index", "veri kaynağı", "data source", "veri tabanı", "dünya bankası", "tüik", "undp"],
+    ["sayısal eşik", "sayisal esik", "numerical threshold", "eşik", "threshold"],
+    ["prior", "önsel", "öncül", "başlangıç olasılığı"],
+    ["posterior", "sonsal", "güncellenmiş olasılık"],
+    ["bayes", "bayesian", "bayesyen", "bayes güncellemesi"],
 ]
 
-# v5.2.0 — H6 Zorlu Âyet raporları için ek zorunlu
 H6_EK_ZORUNLU = [
-    ["3'lü dil matrisi", "3-lu dil matrisi", "triple linguistic matrix",
-     "üçlü dil matrisi", "uc lu dil matrisi", "üclü dil matrisi",
-     "3 lu dil matrisi", "uc'lü dil matrisi"],
-    ["ibn fâris", "ibn faris", "ibn fāris", "maqayis", "makayis",
-     "makayisu'l-luga", "makayisul luga", "maqāyīs", "mufradat",
-     "müfredat", "mufredat", "isfahani", "isfahâni"],
-    ["ibn manzûr", "ibn manzur", "lisanu'l-arab", "lisanul arab",
-     "lisan al-arab", "lisanül-arab", "lisânü'l-arab", "lisān",
-     "ibn menzur"],
+    ["dil matrisi", "linguistic matrix", "3'lü dil matrisi", "4'lü dil matrisi"],
+    ["ibn fâris", "ibn faris", "makayis", "maqayis", "râgıb", "ragib", "müfredat", "mufradat"],
+    ["ibn manzûr", "ibn manzur", "lisanu'l-arab", "lisanul arab", "lisânü'l-arab"],
 ]
 
-
-# ============================================
-# UYARI KELİMELERİ — Dikkat Gerektirir
-# (v5.1.6 + v5.2.0 yenileri)
-# ============================================
-UYARI_KELIMELERI = {
-    "doğrulandı": "Retrodiction sonucu — 'Kısmen' ile birlikte kullanıldı mı kontrol et",
-    "sabit": "Bilgi tabanı — katmanlı mı (İlke/Uygulama) kontrol et",
-    ">%": "Sayısal olasılık — Bölüm 9 kapsamına giriyor mu kontrol et",
-    # --- v5.2.0 Yeni ---
-    "ampirik olarak sabit": "Somut veri kaynağı belirtilmeli (v5.2.0 Test 7b)",
-    "genel olarak bilinmektedir": "Somut veri kaynağı belirtilmeli (v5.2.0 Test 7b)",
-    "empirically established": "Somut veri kaynağı belirtilmeli (v5.2.0 Test 7b)",
-    "well established": "Somut veri kaynağı belirtilmeli (v5.2.0 Test 7b)",
-}
-
-
-# ============================================
-# YAZIM HATALARI
-# (v5.2.2: raw text case-sensitive kontrol ile aranacak)
-# ============================================
 YAZIM_DUZELTMELERI = {
-    "casser auda": "jasser auda",
-    "cassar auda": "jasser auda",
-    "ibn aşür": "ibn âşûr",
-    "ibn asur": "ibn âşûr",
-    "zamahşeri": "zemahşerî",
-    "zamahşerî": "zemahşerî",
-    "ragıb": "râgıb",
+    "casser auda": "Jasser Auda",
+    "cassar auda": "Jasser Auda",
+    "ibn aşür": "İbn Âşûr",
+    "ibn asur": "İbn Âşûr",
+    "zamahşeri": "Zemahşerî",
+    "zamahşerî": "Zemahşerî",
+    "ragıb": "Râgıb",
     "retroadiction": "retrodiction",
-    # --- v5.2.0 Yeni ---
     "ibn fâris": "İbn Fâris (büyük harfle başlamalı)",
     "ibn manzur": "İbn Manzûr (büyük harfle başlamalı)",
     "ibn manzûr": "İbn Manzûr (büyük harfle başlamalı)",
@@ -287,281 +234,575 @@ YAZIM_DUZELTMELERI = {
     "ibn kayyim": "İbnü'l-Kayyim",
 }
 
+MUTLAK_IDDIALAR = [
+    "tek sonuç",
+    "başka yorum yok",
+    "başka bir yorum kabul edilemez",
+    "mutlak hakikat",
+    "tartışmaya tamamen kapalıdır",
+]
 
-# ============================================
-# FALSIFİABİLİTE STANDARDI KONTROLÜ (v5.2.0 Değişiklik 2)
-# ============================================
-FALSIF_KRITERLERI = {
-    "zaman aralığı": ["zaman aralığı", "zaman penceresi", "yıl", "yıllık",
-                       "time range", "time window", "year", "annual",
-                       "pencere", "window", "dönem", "period"],
-    "endeks/kaynak": ["endeks", "index", "veri kaynağı", "data source",
-                       "veri tabanı", "database", "dünya bankası", "world bank",
-                       "tüik", "undp", "gini", "transparency",
-                       "hukukun üstünlüğü", "rule of law"],
-    "sayısal eşik": ["≥ %", ">= %", "eşik", "threshold", "eşiği",
-                      "≥ 0", ">= 0", "puan", "score", "oran", "rate"],
-}
+SAHTE_OTORITE_IFADELERI = [
+    "akademik olarak tescillenmiş",
+    "bilimsel olarak kanıtlanmış bir karar motoru",
+    "kusursuz analiz motoru",
+]
 
-
-def falsifiabilite_kontrol(metin_norm):
-    """Falsifiabilite standardı kontrolü (v5.2.0)."""
-    eksikler = []
-    for kriter, ifadeler in FALSIF_KRITERLERI.items():
-        bulundu = any(normalize(i) in metin_norm for i in ifadeler)
-        if not bulundu:
-            eksikler.append(kriter)
-    return eksikler
+STANDARD_SINIR_ANAHTARLARI = [
+    "iç tutarlılık",
+    "fetva",
+]
 
 
-# ============================================
-# ANA TARAMA FONKSİYONU
-# ============================================
-def tara(dosya_adi, katman=3, h6=False):
-    """Rapor dosyasını tarar ve sonuç üretir."""
+class GemLinterV6:
+    def __init__(self, path: Path, katman=3, h6=True, manifest_path: Path = None):
+        self.path = Path(path)
+        self.katman = katman
+        self.h6 = h6
+        self.manifest_path = Path(manifest_path) if manifest_path else None
+        self.findings = []
+        self.frontmatter = {}
+        self.raw_text = ""
+        self.body_text = ""
+        self.is_v6 = False
+        self.gem_version = "5.2.0"
 
-    if not os.path.exists(dosya_adi):
-        print(f"❌ HATA: '{dosya_adi}' dosyası bulunamadı.")
-        sys.exit(1)
+    def report(self, rule_id, level, message, loc=""):
+        self.findings.append({
+            "rule": rule_id,
+            "level": level,
+            "message": message,
+            "loc": str(loc) if loc else "-"
+        })
 
-    with open(dosya_adi, "r", encoding="utf-8") as f:
-        satirlar = f.readlines()
+    def load_file(self):
+        if not self.path.exists():
+            self.report("L-0001", BLOCK, f"Dosya bulunamadı: {self.path}")
+            return False
 
-    # Tüm metni normalize et
-    metin_birlesik = normalize("".join(satirlar))
+        with open(self.path, "r", encoding="utf-8") as f:
+            self.raw_text = f.read()
 
-    # v5.2.2 — Raw (ham) metin (yazım kontrolü için)
-    metin_raw = "".join(satirlar)
+        # Frontmatter kontrolü
+        fm_match = re.match(r"^---\r?\n(.*?)\r?\n---\r?\n(.*)$", self.raw_text, re.DOTALL)
+        if fm_match:
+            yaml_part = fm_match.group(1)
+            self.body_text = fm_match.group(2)
+            if YAML_AVAILABLE:
+                try:
+                    self.frontmatter = yaml.safe_load(yaml_part) or {}
+                    self.gem_version = str(self.frontmatter.get("gem_version", "6.0.0"))
+                    self.is_v6 = self.gem_version.startswith("6.")
+                except Exception as e:
+                    self.report("L-0002", BLOCK, f"YAML frontmatter parse hatası: {e}")
+            else:
+                self.report("L-0003", WARN, "PyYAML modülü bulunamadı, YAML denetimi yapılamadı.")
+        else:
+            self.body_text = self.raw_text
+            if any(v in self.raw_text.lower() for v in ["v6.0", "v6.0.0", "v6.1", "v6.1.1"]):
+                self.report("L-0000", BLOCK, "v6.x raporlarında YAML frontmatter zorunludur!")
+                self.is_v6 = True
+            else:
+                self.is_v6 = False
 
-    # Öz-denetim işaretlerini de normalize et
-    oz_denetim_norm = [normalize(i) for i in OZ_DENETIM_ISARETLERI]
+        return True
 
-    bulgular = []
-    yasak_sayisi = 0
-    uyari_sayisi = 0
-    yazim_hata_sayisi = 0
-    muaf_sayisi = 0
-    eksik_bolumler = []
+    # ----------------------------------------------------
+    # V1: Kaynak Tahkiki ve Künye Kartı Kontrolü
+    # ----------------------------------------------------
+    def check_v1_sources(self):
+        sources = self.frontmatter.get("sources", [])
+        if self.is_v6:
+            if not sources:
+                self.report("L-0100", BLOCK, "Frontmatter içinde 'sources' listesi boş veya tanımlanmamış!")
+                return
 
-    # Normalize edilmiş istisna listesi
-    istisna_norm = [normalize(i) for i in ISTISNA_IFADELERI]
+            for idx, s in enumerate(sources, 1):
+                sid = s.get("id", f"kaynak-{idx}")
+                author = s.get("author") or s.get("muellif")
+                work = s.get("work") or s.get("eser")
+                if not author or not work:
+                    self.report("L-0101", BLOCK, f"Kaynak '{sid}' eksik: Müellif ve Eser adı zorunludur!")
 
-    # --- 1. Yasaklı kelime taraması (hard fail + 18.1-B muafiyet) ---
-    for satir_no, satir in enumerate(satirlar, 1):
-        satir_norm = normalize(satir)
+                vol = s.get("volume") or s.get("cilt")
+                pages = s.get("pages") or s.get("sayfa")
+                if not vol or not pages:
+                    self.report("L-0102", WARN, f"Kaynak '{sid}': Cilt ve Sayfa bilgisi eksik (tahkik zaafı).")
 
-        # Öz-denetim satırı mı?
-        if any(isaret in satir_norm for isaret in oz_denetim_norm):
-            continue
+                link = s.get("verification_link") or s.get("url")
+                if not link or "..." in str(link):
+                    self.report("L-0103", WARN, f"Kaynak '{sid}': Dijital tahkik linki eksik veya yer tutucu.")
 
-        for yasakli, aciklama in YASAKLI_KELIMELER.items():
-            yasakli_norm = normalize(yasakli)
-            if yasakli_norm in satir_norm:
-                # v5.2.0 — 18.1-B Muafiyet: tırnak içinde mi?
-                if citirnak_muaf_mi(satir, yasakli):
-                    muaf_sayisi += 1
-                    continue
+    # ----------------------------------------------------
+    # V2: [NAKİL] ve [YORUM] Ayrımı Denetimi
+    # ----------------------------------------------------
+    def check_v2_nakil_yorum(self):
+        if not self.is_v6:
+            return
 
-                yasak_sayisi += 1
-                bulgular.append({
-                    "tur": "YASAKLI",
-                    "satir": satir_no,
-                    "kelime": yasakli,
-                    "aciklama": aciklama,
-                })
+        nakil_count = len(re.findall(r"\[NAK[Iİ]L\]", self.body_text, re.IGNORECASE))
+        yorum_count = len(re.findall(r"\[YORUM\]", self.body_text, re.IGNORECASE))
 
-    # --- 2. Koşullu yasaklı (mutlak/absolute) + tırnak muafiyeti ---
-    for satir_no, satir in enumerate(satirlar, 1):
-        satir_norm = normalize(satir)
+        if nakil_count == 0:
+            self.report("L-0201", BLOCK, "V2 İhlali: Metinde hiçbir [NAKİL] etiketi bulunamadı! Klasik ibareler ayrılmamış.")
+        if yorum_count == 0:
+            self.report("L-0202", BLOCK, "V2 İhlali: Metinde hiçbir [YORUM] etiketi bulunamadı! Analist çıkarımları etiketlenmemiş.")
 
-        if any(isaret in satir_norm for isaret in oz_denetim_norm):
-            continue
+        if nakil_count < 3:
+            self.report("L-0203", WARN, f"Metinde yalnızca {nakil_count} adet [NAKİL] bulundu; klasik metin nakli yetersiz olabilir.")
 
-        for kosullu, aciklama in KOSULLU_YASAKLI.items():
-            kosullu_norm = normalize(kosullu)
-            if kosullu_norm in satir_norm:
-                # v5.2.0 — Tırnak muafiyeti
-                if citirnak_muaf_mi(satir, kosullu):
-                    muaf_sayisi += 1
-                    continue
+    # ----------------------------------------------------
+    # V3: Görüş İhtilafı Cetveli ve Çoğulculuk
+    # ----------------------------------------------------
+    def check_v3_disputes(self):
+        if not self.is_v6:
+            return
 
-                istisna_var = any(ist in satir_norm for ist in istisna_norm)
-                if istisna_var:
-                    continue
-                uyari_sayisi += 1
-                bulgular.append({
-                    "tur": "UYARI",
-                    "satir": satir_no,
-                    "kelime": kosullu,
-                    "aciklama": aciklama,
-                })
+        norm_body = normalize(self.body_text)
+        has_z2 = "z-2" in norm_body or "gorus ihtilafi cetveli" in norm_body or "dispute matrix" in norm_body
 
-    # --- 3. Yazım hataları (v5.2.2 — RAW text case-sensitive kontrol) ---
-    # Raw metinde yanlış form VAR MI? (case-sensitive, normalize edilmemiş)
-    # Böylece "İbn Âşûr" → normalize → "ibn asur" gibi false positive'ler önlenir.
-    for yanlis, dogru in YAZIM_DUZELTMELERI.items():
-        if yanlis in metin_raw:
-            # Retroadiction özel kontrolü
-            if yanlis == "retroadiction" and "retrodiction" in metin_raw:
+        if not has_z2:
+            self.report("L-0301", BLOCK, "V3 İhlali: 'Z-2 Görüş İhtilafı Cetveli' eksik! Alternatif mezhep görüşleri listelenmelidir.")
+
+        for mutlak in MUTLAK_IDDIALAR:
+            if normalize(mutlak) in norm_body:
+                self.report("L-0302", BLOCK, f"V3 İhlali: Yorum mutlaklaştırma ifadesi tespit edildi: '{mutlak}'")
+
+    # ----------------------------------------------------
+    # V4: Kriptografik Bütünlük ve Manifest Kontrolü
+    # ----------------------------------------------------
+    def check_v4_hash(self):
+        if not self.is_v6:
+            return
+
+        actual_sha256 = hashlib.sha256(self.raw_text.encode("utf-8")).hexdigest()
+
+        # 1. Harici Manifest Kontrolü (v6.1.1 Öncelikli Standart)
+        manifest_file = self.manifest_path
+        if not manifest_file:
+            cand1 = self.path.with_suffix(self.path.suffix + ".sha256")
+            cand2 = self.path.parent / "checksums.sha256"
+            if cand1.exists():
+                manifest_file = cand1
+            elif cand2.exists():
+                manifest_file = cand2
+
+        if manifest_file and manifest_file.exists():
+            m_content = manifest_file.read_text(encoding="utf-8")
+            if actual_sha256.lower() in m_content.lower():
+                # Manifestte doğrulandı
+                return
+            else:
+                self.report("L-0404", BLOCK, f"Harici manifest ({manifest_file.name}) hash uyuşmazlığı! Dosya değiştirilmiş.")
+                return
+
+        # 2. Frontmatter İçi Hash Kontrolü (Geriye Dönük v6.0.0 Uyumu)
+        sha_field = self.frontmatter.get("sha256_hash")
+        status = str(self.frontmatter.get("status") or self.frontmatter.get("release_status", "DRAFT")).upper()
+
+        if sha_field is None:
+            # v6.1.1'de harici manifest tercih edilir; yoksa UYARI verir
+            self.report("L-0400", WARN, "Raporun SHA-256 hash'i ne frontmatter içinde ne de harici bir .sha256 manifestinde tanımlanmamış.")
+            return
+
+        sha_str = str(sha_field).strip()
+
+        if sha_str.startswith("0" * 32):
+            if status in ["DRAFT", "PRE-RELEASE"]:
+                self.report("L-0401", WARN, "SHA-256 hash'i sıfırlardan oluşuyor (yer tutucu). Ön sürüm için kabul edildi.")
+            else:
+                self.report("L-0402", BLOCK, f"Yayınlanmış ({status}) raporda SHA-256 hash'i yer tutucu bırakılamaz!")
+            return
+
+        if len(sha_str) != 64 or not re.match(r"^[0-9a-fA-F]{64}$", sha_str):
+            self.report("L-0403", BLOCK, f"Geçersiz SHA-256 formatı: '{sha_str}' (Tam 64 onaltılık karakter olmalıdır)!")
+
+    # ----------------------------------------------------
+    # V5: Senaryo Puan Gerekçelendirmesi
+    # ----------------------------------------------------
+    def check_v5_scores(self):
+        if not self.is_v6:
+            return
+
+        scenarios = self.frontmatter.get("scenarios", [])
+        if not scenarios:
+            self.report("L-0501", WARN, "Frontmatter içinde 'scenarios' listesi tanımlanmamış.")
+            return
+
+        for sc in scenarios:
+            sid = sc.get("id", "S?")
+            just = sc.get("score_justification")
+            if not just or len(just.strip()) < 10:
+                self.report("L-0502", BLOCK, f"Senaryo '{sid}': Puanlama gerekçesi (score_justification) eksik veya yetersiz!")
+
+    # ----------------------------------------------------
+    # V6: Eşik Sınıflandırması ([TAHMİNÎ EŞİK])
+    # ----------------------------------------------------
+    def check_v6_thresholds(self):
+        if not self.is_v6:
+            return
+
+        th_list = self.frontmatter.get("thresholds", [])
+        if not th_list:
+            self.report("L-0601", WARN, "Frontmatter içinde 'thresholds' listesi boş.")
+            return
+
+        for th in th_list:
+            tid = th.get("id", "TH?")
+            basis = th.get("derivation_basis", "")
+            is_emp = th.get("is_empirical", False)
+            if not is_emp and "[TAHMİNÎ EŞİK" not in basis and "[TAHMINI ESIK" not in normalize(basis):
+                self.report("L-0602", BLOCK, f"Eşik '{tid}': Ampirik olmayan eşikler '[TAHMİNÎ EŞİK]' etiketi içermelidir!")
+
+    # ----------------------------------------------------
+    # V7: Ampirik Veri İzlenebilirliği
+    # ----------------------------------------------------
+    def check_v7_empirical(self):
+        if not self.is_v6:
+            return
+
+        norm_body = normalize(self.body_text)
+        has_empirical_terms = any(t in norm_body for t in ["dunya bankasi", "world bank", "tuik", "undp", "tuik", "endeks", "veritabani"])
+        if has_empirical_terms:
+            has_doi_or_url = any(u in norm_body for u in ["http://", "https://", "doi.org", "urn:"])
+            if not has_doi_or_url:
+                self.report("L-0701", WARN, "Ampirik veri kurumlarına atıf yapılmış fakat izlenebilir URL/DOI linki bulunamadı.")
+
+    # ----------------------------------------------------
+    # V8: Falsifiabilite Ayrımı ve Hume Giyotini
+    # ----------------------------------------------------
+    def check_v8_falsifiability(self):
+        if not self.is_v6:
+            return
+
+        norm_body = normalize(self.body_text)
+        has_hume = "hume" in norm_body or "is-ought" in norm_body or "olgu-deger" in norm_body
+
+        if not has_hume:
+            self.report("L-0801", BLOCK, "V8 İhlali: Hume Giyotini (is-ought) ve olgu-değer ayrımı metinde bulunamadı!")
+
+        has_fals = "falsifiabilite" in norm_body or "yanlislanabilirlik" in norm_body
+        if not has_fals:
+            self.report("L-0802", BLOCK, "V8 İhlali: Ampirik politika kararları için falsifiabilite protokolü eksik!")
+
+    # ----------------------------------------------------
+    # V9: Z-1 Özgün Problematik (Aporia)
+    # ----------------------------------------------------
+    def check_v9_originality(self):
+        if not self.is_v6:
+            return
+
+        norm_body = normalize(self.body_text)
+        has_z1 = "z-1" in norm_body or "ozgun problematik" in norm_body or "aporia" in norm_body
+        if not has_z1:
+            self.report("L-0901", BLOCK, "V9 İhlali: 'Z-1 Şablona Sığmayan Özgün Problematik' bölümü eksik!")
+
+    # ----------------------------------------------------
+    # V10: Z-4 Sınır Beyanı ve Sahte Otorite Yasağı
+    # ----------------------------------------------------
+    def check_v10_disclaimer(self):
+        norm_body = normalize(self.body_text)
+
+        for sahte in SAHTE_OTORITE_IFADELERI:
+            if normalize(sahte) in norm_body:
+                self.report("L-1001", BLOCK, f"V10 İhlali: Sahte otorite/onay ifadesi tespit edildi: '{sahte}'")
+
+        if self.is_v6:
+            has_z4 = "z-4" in norm_body or "sinir beyani" in norm_body or "epistemik sinir" in norm_body
+            if not has_z4:
+                self.report("L-1002", BLOCK, "V10 İhlali: 'Z-4 Standart Sınır Beyanı' bölümü eksik!")
+
+            for k in STANDARD_SINIR_ANAHTARLARI:
+                if k not in norm_body:
+                    self.report("L-1003", WARN, f"Z-4 Sınır beyanında zorunlu anahtar kavram eksik: '{k}'")
+
+    # ----------------------------------------------------
+    # V11: Dış Hakem Kaydı ve Statü Yönetimi
+    # ----------------------------------------------------
+    def check_v11_peer_review(self):
+        if not self.is_v6:
+            return
+
+        pr = self.frontmatter.get("peer_review") or self.frontmatter.get("review") or {}
+        status = str(pr.get("status") or self.frontmatter.get("release_status", "DRAFT")).upper()
+
+        if status in ["PEER-REVIEWED", "EXTERNALLY-REVIEWED"]:
+            reviewer = pr.get("reviewer_name") or pr.get("reviewer")
+            orcid = pr.get("reviewer_orcid")
+            notes = pr.get("review_notes") or pr.get("review_record")
+
+            if not reviewer or str(reviewer).strip().lower() in ["null", "none", "—", "henüz atanmadı", ""]:
+                self.report("L-1101", BLOCK, f"{status} statüsü için geçerli Hakem Adı zorunludur!")
+
+            if not orcid or "0000" in str(orcid):
+                self.report("L-1102", WARN, f"{status} statüsü için geçerli hakem ORCID kimliği önerilir.")
+
+            if not notes or len(str(notes).strip()) < 15:
+                self.report("L-1103", BLOCK, f"{status} statüsü için Hakem Değerlendirme Raporu özeti zorunludur!")
+        else:
+            self.report("L-1104", WARN, f"Rapor durumu '{status}'. Henüz bağımsız dış akademik hakem tescili yapılmamış.")
+
+    # ----------------------------------------------------
+    # Dil Güvenliği (Prohibited Words)
+    # ----------------------------------------------------
+    def check_language_safety(self):
+        satirlar = self.body_text.splitlines()
+
+        in_code_block = False
+        in_table = False
+
+        for satir_no, satir in enumerate(satirlar, 1):
+            s_stripped = satir.strip()
+
+            if s_stripped.startswith("```"):
+                in_code_block = not in_code_block
+                continue
+            if in_code_block:
                 continue
 
-            yazim_hata_sayisi += 1
-            bulgular.append({
-                "tur": "YAZIM",
-                "satir": "-",
-                "kelime": yanlis,
-                "aciklama": f"Olması gereken: '{dogru}'",
-            })
+            if s_stripped.startswith("|"):
+                in_table = True
+            else:
+                in_table = False
 
-    # --- 4. Diğer uyarı kelimeleri + tırnak muafiyeti ---
-    for satir_no, satir in enumerate(satirlar, 1):
-        satir_norm = normalize(satir)
-        for uyari, aciklama in UYARI_KELIMELERI.items():
-            uyari_norm = normalize(uyari)
-            if uyari_norm in satir_norm:
-                # v5.2.0 — Tırnak muafiyeti
-                if citirnak_muaf_mi(satir, uyari):
+            # Alıntı satırları (>) muaf sayılır
+            if s_stripped.startswith(">"):
+                continue
+
+            # [NAKİL] satırları klasik metin alıntısı olduğu için muaf sayılır
+            if "[nakil]" in s_stripped.lower():
+                continue
+
+            # Öz-denetim satırları muaf
+            if any(oz in normalize(satir) for oz in OZ_DENETIM_ISARETLERI):
+                continue
+
+            # 1. Yasaklı Kelimeler (Hard Fail / BLOCK)
+            for kelime, gerekce in YASAKLI_KELIMELER.items():
+                if kelime in ["tam uyum", "onaylandı (tam uyum)"] and in_table:
                     continue
-                uyari_sayisi += 1
-                bulgular.append({
-                    "tur": "UYARI",
-                    "satir": satir_no,
-                    "kelime": uyari,
-                    "aciklama": aciklama,
-                })
 
-    # --- 5. Zorunlu bölüm kontrolü (iki dilli + v5.2.1 genişletmeleri) ---
-    for bolum_cift in ZORUNLU_BOLUMLER:
-        bulundu = any(normalize(bolum) in metin_birlesik for bolum in bolum_cift)
-        if not bulundu:
-            eksik_bolumler.append(bolum_cift[0])
+                if normalize(kelime) in normalize(satir):
+                    if citirnak_muaf_mi(satir, kelime):
+                        continue
+                    self.report("L-1801", BLOCK, f"Yasaklı ifade tespit edildi: '{kelime}' ({gerekce})", loc=f"Satır {satir_no}")
 
-    # --- 6. Katman 3 ek zorunlu bölümler (v5.2.0 + v5.2.1) ---
-    if katman >= 3:
-        for bolum_cift in KATMAN3_EK_ZORUNLU:
-            bulundu = any(normalize(b) in metin_birlesik for b in bolum_cift)
-            if not bulundu:
-                eksik_bolumler.append(f"[K3] {bolum_cift[0]}")
+            # 2. Koşullu Yasaklılar (WARN)
+            for kelime, gerekce in KOSULLU_YASAKLI.items():
+                if normalize(kelime) in normalize(satir):
+                    if citirnak_muaf_mi(satir, kelime):
+                        continue
+                    if any(normalize(ist) in normalize(satir) for ist in ISTISNA_IFADELERI):
+                        continue
+                    self.report("L-1802", WARN, f"Koşullu ifade tespiti: '{kelime}' ({gerekce})", loc=f"Satır {satir_no}")
 
-    # --- 7. H6 ek zorunlu bölümler (v5.2.0 + v5.2.1) ---
-    if h6:
-        for bolum_cift in H6_EK_ZORUNLU:
-            bulundu = any(normalize(b) in metin_birlesik for b in bolum_cift)
-            if not bulundu:
-                eksik_bolumler.append(f"[H6] {bolum_cift[0]}")
+    # ----------------------------------------------------
+    # Bölüm ve Adım Tamlığı Kontrolü
+    # ----------------------------------------------------
+    def check_sections(self):
+        norm_body = normalize(self.body_text)
 
-    # --- 8. Falsifiabilite standardı kontrolü (v5.2.0) ---
-    fals_eksikler = falsifiabilite_kontrol(metin_birlesik)
+        for b_list in ZORUNLU_BOLUMLER:
+            if not any(normalize(b) in norm_body for b in b_list):
+                self.report("L-2001", BLOCK, f"Zorunlu analiz bölümü eksik: '{b_list[0]}'")
 
-    # ============================================
-    # SONUÇ RAPORU
-    # ============================================
-    print("=" * 60)
-    print("   GEM LINTER v5.2.2 — Dil Güvenliği Denetim Raporu")
-    print(f"   Dosya: {dosya_adi}")
-    print(f"   Katman: {katman} | H6: {'Evet' if h6 else 'Hayır'}")
-    print("=" * 60)
-    print()
+        if self.katman >= 3:
+            for b_list in KATMAN3_EK_ZORUNLU:
+                if not any(normalize(b) in norm_body for b in b_list):
+                    self.report("L-2002", BLOCK, f"Katman 3 zorunlu adımı eksik: '{b_list[0]}'")
 
-    if bulgular:
-        print("📋 BULGULAR:")
-        print("-" * 60)
-        for b in bulgular:
-            ikon = {"YASAKLI": "🚫", "YAZIM": "✏️", "UYARI": "⚠️"}[b["tur"]]
-            print(f"  {ikon} [{b['tur']}] Satır {b['satir']}: '{b['kelime']}'")
-            print(f"     → {b['aciklama']}")
+        if self.h6:
+            for b_list in H6_EK_ZORUNLU:
+                if not any(normalize(b) in norm_body for b in b_list):
+                    self.report("L-2003", BLOCK, f"H6 zorlu âyet zorunlu adımı eksik: '{b_list[0]}'")
+
+    # ----------------------------------------------------
+    # Ana Tarama Yürütücüsü
+    # ----------------------------------------------------
+    def run_all(self):
+        if not self.load_file():
+            return 2
+
+        self.check_language_safety()
+        self.check_sections()
+
+        # v6.x Doğrulama Modülleri
+        self.check_v1_sources()
+        self.check_v2_nakil_yorum()
+        self.check_v3_disputes()
+        self.check_v4_hash()
+        self.check_v5_scores()
+        self.check_v6_thresholds()
+        self.check_v7_empirical()
+        self.check_v8_falsifiability()
+        self.check_v9_originality()
+        self.check_v10_disclaimer()
+        self.check_v11_peer_review()
+
+        return self.print_summary()
+
+    def print_summary(self):
+        n_block = sum(1 for f in self.findings if f["level"] == BLOCK)
+        n_warn = sum(1 for f in self.findings if f["level"] == WARN)
+
+        print("\n" + "=" * 70)
+        print(f"   GEM LINTER v6.1.1 — AKADEMİK DOĞRULAMA VE GÜVENLİK RAPORU")
+        print(f"   Dosya : {self.path.name}")
+        print(f"   Mod   : {'v6.1.1 (Akademik Standart)' if self.is_v6 else 'v5.2 (Geriye Dönük)'} | Katman: {self.katman} | H6: {'Evet' if self.h6 else 'Hayır'}")
+        print("=" * 70 + "\n")
+
+        if self.findings:
+            print("📋 TESPİT EDİLEN BULGULAR:")
+            print("-" * 70)
+            for f in self.findings:
+                icon = "🚫" if f["level"] == BLOCK else "⚠️"
+                loc_info = f" [@ {f['loc']}]" if f["loc"] != "-" else ""
+                print(f"  {icon} [{f['level']}] {f['rule']}: {f['message']}{loc_info}")
+            print()
+        else:
+            print("✅ Tebrikler! Rapor tüm kurallardan sıfır hata ve sıfır uyarıyla geçti.\n")
+
+        print("=" * 70)
+        if n_block > 0:
+            sonuc = "🔴 DÜŞTÜ / YAYINLANAMAZ"
+            aciklama = f"{n_block} KESİCİ (BLOCK) kural ihlali var. Rapor akademik veya metodolojik olarak onaylanamaz."
+            code = 2
+        elif n_warn > 0:
+            sonuc = "🟡 ÖN SÜRÜM / TAHKİK BEKLİYOR"
+            aciklama = f"Kesici hata yok, ancak {n_warn} UYARI var. Ön sürüm (PRE-RELEASE) olarak yayınlanabilir."
+            code = 1
+        else:
+            sonuc = "🟢 GEÇTİ / YAYINLANABİLİR"
+            aciklama = "Metin iç tutarlılık denetiminden başarıyla geçti. Hakem değerlendirmesine hazırdır."
+            code = 0
+
+        print(f"  NİHAİ SONUÇ    : {sonuc}")
+        print(f"  AÇIKLAMA       : {aciklama}")
+        print(f"  KESİCİ (BLOCK) : {n_block}")
+        print(f"  UYARI (WARN)   : {n_warn}")
+        print("=" * 70 + "\n")
+
+        return code
+
+
+def check_cross_similarity(file1: Path, file2: Path):
+    """İki rapor arasındaki şablon/metin benzerlik oranını hesaplar."""
+    try:
+        t1 = file1.read_text(encoding="utf-8").splitlines()
+        t2 = file2.read_text(encoding="utf-8").splitlines()
+        matcher = difflib.SequenceMatcher(None, t1, t2)
+        ratio = matcher.ratio()
+        print(f"🔍 Çapraz Benzerlik Analizi: {file1.name} <---> {file2.name}")
+        print(f"   Benzerlik Oranı: %{ratio * 100:.1f}")
+        if ratio > 0.45:
+            print(f"   ⚠️ [UYARI] Benzerlik oranı çok yüksek! Raporların kalıp şablona hapsedilme riski var (V9/V10).")
+        else:
+            print(f"   ✅ Benzerlik oranı sağlıklı seviyede (özerk içerik korunmuş).")
         print()
-    else:
-        print("✅ Yasaklı kelime, yazım hatası veya uyarı bulunamadı.")
-        print()
-
-    if muaf_sayisi > 0:
-        print(f"📋 MUAFİYET (18.1-B): {muaf_sayisi} tırnak içi kullanım muaf sayıldı.")
-        print()
-
-    if eksik_bolumler:
-        print("📋 EKSİK ZORUNLU BÖLÜMLER:")
-        print("-" * 60)
-        for e in eksik_bolumler:
-            print(f"  ❌ '{e}' bölümü bulunamadı.")
-        print()
-
-    if fals_eksikler:
-        print("📋 FALSIFİABİLİTE STANDARDI (v5.2.0 Değişiklik 2):")
-        print("-" * 60)
-        for f_item in fals_eksikler:
-            print(f"  ⚠️ '{f_item}' unsuru eksik.")
-        print()
-
-    # --- Nihai karar ---
-    print("=" * 60)
-    # Karar hard fail'lere bakar; uyarılar ve eksik bölümler karara etki etmez
-    toplam_sorun = yasak_sayisi + yazim_hata_sayisi
-
-    if yasak_sayisi > 0:
-        karar = "🔴 DÜŞTÜ"
-        gerekce = f"{yasak_sayisi} yasaklı kelime bulundu. Rapor derlenemez."
-    elif toplam_sorun > 3:
-        karar = "🟡 ŞARTLI"
-        gerekce = f"{toplam_sorun} sorun bulundu. Düzeltilmeden yayınlanmamalı."
-    elif toplam_sorun > 0:
-        karar = "🟡 GEÇTİ (Şartlı)"
-        gerekce = f"{toplam_sorun} küçük sorun var. Düzeltilmesi önerilir."
-    elif fals_eksikler:
-        karar = "🟡 GEÇTİ (Şartlı)"
-        gerekce = "Falsifiabilite standardı eksik. v5.2.0 Değişiklik 2 gereği tamamlanmalı."
-    else:
-        karar = "🟢 GEÇTİ"
-        gerekce = "Temel kontroller geçti. Red Team incelemesi önerilir."
-
-    print(f"  SONUÇ: {karar}")
-    print(f"  Gerekçe: {gerekce}")
-    print(f"  Yasaklı kelime: {yasak_sayisi}")
-    print(f"  Muaf (18.1-B): {muaf_sayisi}")
-    print(f"  Yazım hatası: {yazim_hata_sayisi}")
-    print(f"  Uyarı: {uyari_sayisi}")
-    print(f"  Eksik bölüm: {len(eksik_bolumler)}")
-    print(f"  Falsifiabilite eksik: {len(fals_eksikler)}")
-    print("=" * 60)
-
-    # Çıkış kodu
-    if yasak_sayisi > 0:
-        sys.exit(2)   # DÜŞTÜ
-    elif toplam_sorun > 0 or fals_eksikler:
-        sys.exit(1)   # ŞARTLI
-    else:
-        sys.exit(0)   # GEÇTİ
+    except Exception as e:
+        print(f"Çapraz analiz hatası: {e}")
 
 
-# ============================================
-# ANA GİRİŞ
-# ============================================
-if __name__ == "__main__":
-    if len(sys.argv) < 2:
-        print("Kullanım: python gem_lint.py dosya_adi.md")
-        print("Örnek:   python gem_lint.py ornek-rapor.md")
-        print()
-        print("Seçenekler:")
-        print("  --katman 3    Katman 3 ek zorunlu bölümler (Bayes, Falsifiabilite)")
-        print("  --h6          Zorlu Âyet (H6) ek zorunlu bölümler (3'lü Dil Matrisi)")
-        print()
-        print("Örnek:   python gem_lint.py ornek-006-maide-538.md --katman 3 --h6")
-        sys.exit(1)
+def generate_manifest(target_file: Path):
+    """Hedef dosya için .sha256 manifest dosyası üretir."""
+    if not target_file.exists():
+        print(f"Hata: Dosya bulunamadı: {target_file}")
+        return 1
 
-    dosya = sys.argv[1]
+    content = target_file.read_bytes()
+    digest = hashlib.sha256(content).hexdigest()
+    manifest_name = target_file.with_suffix(target_file.suffix + ".sha256")
+    manifest_name.write_text(f"{digest}  {target_file.name}\n", encoding="utf-8")
+    print(f"✅ Manifest üretildi: {manifest_name}")
+    print(f"   SHA-256: {digest}")
+    return 0
+
+
+def main():
+    if len(sys.argv) < 2 or "--help" in sys.argv or "-h" in sys.argv:
+        print("Kullanım: python src/gem_lint.py <dosya_adi.md> [seçenekler]")
+        print("\nSeçenekler:")
+        print("  --katman <1|2|3>          Analiz katmanı (Varsayılan: 3)")
+        print("  --h6                      Zorlu Âyet (H6) ek kontrollerini uygula (Varsayılan)")
+        print("  --no-h6                   H6 kontrollerini atla")
+        print("  --manifest <dosya.sha256> Harici SHA-256 manifest doğrulaması")
+        print("  --generate-manifest       Hedef dosya için .sha256 manifesti üret")
+        print("  --similarity <dosya2.md>  İki rapor arası benzerlik denetimi")
+        print("  --version                 Linter sürüm bilgisi")
+        print("\nÖrnekler:")
+        print("  python src/gem_lint.py docs/tr/04-ornek-rapor.md")
+        print("  python src/gem_lint.py docs/tr/05-ornek-rapor-v6.1.1.md --katman 3 --h6")
+        print("  python src/gem_lint.py rapor.md --generate-manifest")
+        sys.exit(0)
+
+    if "--version" in sys.argv:
+        print("GEM Linter v6.1.1 (Python 3)")
+        sys.exit(0)
+
+    target_files = []
     katman = 3
-    h6 = False
+    h6 = True
+    manifest_path = None
+    gen_manifest = False
+    similarity_target = None
 
-    # Argümanları işle
-    if "--katman" in sys.argv:
-        idx = sys.argv.index("--katman")
-        if idx + 1 < len(sys.argv):
+    idx = 1
+    while idx < len(sys.argv):
+        arg = sys.argv[idx]
+        if arg == "--katman" and idx + 1 < len(sys.argv):
             try:
                 katman = int(sys.argv[idx + 1])
             except ValueError:
                 katman = 3
+            idx += 2
+        elif arg == "--h6":
+            h6 = True
+            idx += 1
+        elif arg == "--no-h6":
+            h6 = False
+            idx += 1
+        elif arg == "--manifest" and idx + 1 < len(sys.argv):
+            manifest_path = Path(sys.argv[idx + 1])
+            idx += 2
+        elif arg == "--generate-manifest":
+            gen_manifest = True
+            idx += 1
+        elif arg == "--similarity" and idx + 1 < len(sys.argv):
+            similarity_target = Path(sys.argv[idx + 1])
+            idx += 2
+        elif not arg.startswith("--"):
+            target_files.append(Path(arg))
+            idx += 1
+        else:
+            idx += 1
 
-    if "--h6" in sys.argv:
-        h6 = True
+    if not target_files:
+        print("Hata: Taranacak dosya belirtilmedi. Yardım için: python src/gem_lint.py --help")
+        sys.exit(1)
 
-    tara(dosya, katman=katman, h6=h6)
+    if gen_manifest:
+        overall_exit = 0
+        for p in target_files:
+            code = generate_manifest(p)
+            if code > overall_exit:
+                overall_exit = code
+        sys.exit(overall_exit)
+
+    overall_exit = 0
+    for p in target_files:
+        linter = GemLinterV6(p, katman=katman, h6=h6, manifest_path=manifest_path)
+        exit_code = linter.run_all()
+        if exit_code > overall_exit:
+            overall_exit = exit_code
+
+    if similarity_target and target_files:
+        check_cross_similarity(target_files[0], similarity_target)
+    elif len(target_files) > 1:
+        for i in range(len(target_files) - 1):
+            check_cross_similarity(target_files[i], target_files[i + 1])
+
+    sys.exit(overall_exit)
+
+
+if __name__ == "__main__":
+    main()
