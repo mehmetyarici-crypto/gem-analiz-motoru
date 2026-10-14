@@ -209,7 +209,9 @@ KATMAN3_EK_ZORUNLU = [
 ]
 
 H6_EK_ZORUNLU = [
-    ["dil matrisi", "linguistic matrix", "3'lü dil matrisi", "4'lü dil matrisi"],
+    ["dil matrisi", "dil ve semantik matrisi", "linguistic matrix",
+     "3'lü dil matrisi", "4'lü dil matrisi", "üçlü dil matrisi", "dörtlü dil matrisi",
+     "semantik matris", "3-lu dil matrisi", "4-lu dil matrisi"],
     ["ibn fâris", "ibn faris", "makayis", "maqayis", "râgıb", "ragib", "müfredat", "mufradat"],
     ["ibn manzûr", "ibn manzur", "lisanu'l-arab", "lisanul arab", "lisânü'l-arab"],
 ]
@@ -513,7 +515,7 @@ class GemLinterV6:
                 self.report("L-1002", BLOCK, "V10 İhlali: 'Z-4 Standart Sınır Beyanı' bölümü eksik!")
 
             for k in STANDARD_SINIR_ANAHTARLARI:
-                if k not in norm_body:
+                if normalize(k) not in norm_body:
                     self.report("L-1003", WARN, f"Z-4 Sınır beyanında zorunlu anahtar kavram eksik: '{k}'")
 
     # ----------------------------------------------------
