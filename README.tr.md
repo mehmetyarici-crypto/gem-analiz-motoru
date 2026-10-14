@@ -55,6 +55,7 @@ Aşağıdaki raporlar, GEM v6.1.1 standardına tam uyumlu olarak hazırlanmış 
 | **07** | **Hucurât 49:9–10** | Çatışma Çözümü, Uluslararası Tahkim, Bağy Hukuku ve Barış Gücü | [`docs/tr/12-rapor-hucurat-49910-v6.1.1.md`](docs/tr/12-rapor-hucurat-49910-v6.1.1.md) | `PRE-RELEASE` |
 | **08** | **İsrâ 17:36** | Epistemik Sorumluluk, Bilgi Doğrulama, Bilişsel Güvenlik ve Yapay Zekâ | [`docs/tr/13-rapor-isra-1736-v6.1.1.md`](docs/tr/13-rapor-isra-1736-v6.1.1.md) | `PRE-RELEASE` |
 | **09** | **Haşr 59:7** | Servet Konsantrasyonu, İktisadi Sirkülasyon ve Anti-Oligarşi | [`docs/tr/14-rapor-hasr-597-v6.1.1.md`](docs/tr/14-rapor-hasr-597-v6.1.1.md) | `PRE-RELEASE` |
+| **10** | **Rûm 30:22** | Ontolojik Çoğulculuk, Dilsel/Etnik Çeşitlilik ve Birlikte Yaşama | [`docs/tr/15-rapor-rum-3022-v6.1.1.md`](docs/tr/15-rapor-rum-3022-v6.1.1.md) | `PRE-RELEASE` |
 
 ---
 
