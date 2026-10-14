@@ -1,0 +1,138 @@
+---
+gem_version: "6.1.1"
+case_id: "GEM-RAPOR-TEST-001"
+surah: "Fâtiha"
+verse: "1:1"
+topic: "Test Raporu"
+date: "2026-10-15"
+layer: 3
+h6: true
+confidence_grade: "B"
+status: "PRE-RELEASE"
+sha256_hash: "0000000000000000000000000000000000000000000000000000000000000000"
+
+sources:
+  - id: "src-zemahseri"
+    author: "Zemahşerî"
+    work: "el-Keşşâf"
+    volume: "1"
+    pages: "10-15"
+    verification_link: "https://archive.org/test"
+
+thresholds:
+  - id: "th-01"
+    name: "Örnek Eşik"
+    value: "<= %15"
+    derivation_basis: "[TAHMİNÎ EŞİK] Test modelleme hipotezi"
+    is_empirical: false
+
+scenarios:
+  - id: "S1"
+    title: "Baz Senaryo"
+    score_justification: "Gerekçelendirilmiş metodolojik simülasyon puanı."
+
+peer_review:
+  status: "PENDING_EXTERNAL_REVIEW"
+  review_notes: "Ön sürüm inceleme kaydı."
+---
+
+# GEM TEST RAPORU
+
+## ADIM 00 — KÜNYE
+- **Vaka Kodu:** GEM-RAPOR-TEST-001
+- **Güven Düzeyi:** B
+
+## ADIM 00-5 — DİL MATRİSİ
+1. İbn Fâris:
+   - `[NAKİL]`: el-Müfredât ve Makâyîs ibaresi.
+   - `[YORUM]`: Kök anlam analizi.
+2. Zemahşerî:
+   - `[NAKİL]`: Keşşâf ibaresi.
+   - `[YORUM]`: Belâğat nüktesi.
+3. İbn Manzûr:
+   - `[NAKİL]`: Lisânü'l-Arab ibaresi.
+   - `[YORUM]`: Lisan tahlili.
+
+## ADIM 01 — LAFZÎ TAHLİL
+- Metin çözümlemesi.
+- `[NAKİL]`: Zemahşerî tefsir aktarımı.
+- `[YORUM]`: Anlamsal çıkarım.
+
+## ADIM 02 — MANTIKSAL SEMANTİK VE KARŞIT İLKE
+- Karşıt ilke dengesi.
+
+## ADIM 03 — ETHOS, LOGOS, PATHOS VE OLGU-DEĞER
+- Hume giyotini ve is-ought köprüsü denetimi.
+
+## ADIM 04 — MAKASID ANALİZİ
+- Zarûriyyât koruması.
+
+## ADIM 04b — YORUMCU KONUMU
+- Çoğulcu usûl yaklaşımı.
+
+## ADIM 05 — SİYAK-SİBAK VE S7
+- S1, S2 bağlamı ve S7 kırpma riski denetimi.
+
+## ADIM 06 — ÇAPRAZ ÂYET VE N4
+- N4 hitap ilişkisi ve EU-01 erken uyarı sinyali.
+
+## ADIM 07 — SİSTEM HARİTASI VE CLD
+- Tipping point ve döngüler.
+
+## ADIM 08 — DÖRT SENARYO
+- Koruyucu ve çözülme senaryoları.
+
+## ADIM 09 — ZAMAN UFKU
+- H1 ve H4 zaman aralığı ve yıllık pencere.
+
+## ADIM 10 — MORFOLOJİK GÖZLEM
+- Dilbilimsel gözlem.
+
+## ADIM 10b — BELİRSİZLİK VE KARAR STRATEJİSİ
+- Minimax stratejisi.
+
+## ADIM 11 — SEKİZ İÇ DENETİM TESTİ
+- Algoritmik iç tutarlılık testleri.
+
+## ADIM 12 — RED TEAM VE FALSIFIABILITE
+- Falsifiabilite protokolü.
+- Endeks ve veri kaynağı: Dünya Bankası veritabanı. Sayısal eşik değeri belirlenmiştir.
+
+## ADIM 13 — ENFÜS-ÂFÂK VE KALP FIKHI
+- Enfüs ve âfâk ahlakî boyut incelemesi.
+
+## ADIM 14 — ERKEN UYARI VE BAYES
+- Prior ve posterior güncellenmiş olasılık değerleri. Bayes güncellemesi.
+
+## ADIM 15 — KARAR VE POLİTİKA KOLLARI
+- Karar kolu ve aktör sorumlulukları.
+
+## ADIM 16 — ÖNYARGI VE DİL GÜVENLİĞİ
+- Öz-denetim ve dil güvenliği filtreleri. Yasaklı kelime kullanılmamıştır.
+
+## ADIM 17 — GÜVEN DÜZEYİ VE AKTÖR HARİTASI
+- Aktör güç haritası.
+
+## ADIM 18 — BİLGİ TABANI VE ZAYIFLIK LİSTESİ
+- Zayıflık ve geliştirme önerileri listesi.
+
+## ADIM 19 — İZLEME VE RETRODICTION
+- Retrodiction tarihsel doğrulaması.
+
+## ADIM 20 — AÇIK SORULAR VE VARSAYIMLAR
+- Açık araştırma soruları.
+
+## Z-1 · ŞABLONA SIĞMAYAN ÖZGÜN PROBLEMATİK
+- Âyetin analitik aporia tartışması.
+
+## Z-2 · GÖRÜŞ İHTİLAFI CETVELİ
+- Farklı fıkhî mezheplerin ihtilaf tablosu.
+
+## Z-3 · ZAYIFLIK VE GELİŞTİRME ÖNERİLERİ
+- Metodolojik sınırlılıklar.
+
+## Z-4 · STANDART VE DÜRÜST EPİSTEMİK SINIR BEYANI
+> Bu rapor iç tutarlılık denetiminden geçmiş olup bir fetva niteliği taşımaz.
+
+## Z-5 · HAKEM VE AKRAN DEĞERLENDİRME KAYDI
+- Ön sürüm hakem kütüğü.
