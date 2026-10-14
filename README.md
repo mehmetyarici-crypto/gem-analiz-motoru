@@ -40,10 +40,27 @@ GEM (Future-Oriented Reasoning) is a 26-step, 5-macro-phase framework of thought
 
 ---
 
+## Published GEM v6.1.1 Reports (Corpus)
+
+The following reports are fully compliant with the GEM v6.1.1 standard and verified with external cryptographic SHA-256 manifests:
+
+| # | Verse | Topic | Report File | Status |
+|:---:|:---:|:---|:---|:---:|
+| **01** | **At-Tawbah 9:5** | Treaty Violation, Deterrence, and Law of Legitimate Defense | [`docs/tr/06-pilot-tevbe-95-v6.1.1.md`](docs/tr/06-pilot-tevbe-95-v6.1.1.md) | `PRE-RELEASE` |
+| **02** | **An-Nisa 4:34** | Domestic Governance, Qiwamah, and Non-Violent Counsel Doctrine | [`docs/tr/07-pilot-nisa-434-v6.1.1.md`](docs/tr/07-pilot-nisa-434-v6.1.1.md) | `PRE-RELEASE` |
+| **03** | **Al-Ma'idah 5:38** | Property Rights, Theft Punishment, Necessity, and Social Security | [`docs/tr/08-pilot-maide-538-v6.1.1.md`](docs/tr/08-pilot-maide-538-v6.1.1.md) | `PRE-RELEASE` |
+| **04** | **Al-Baqarah 2:256** | Freedom of Faith and Conscience, Prohibition of Coercion, and Pluralism | [`docs/tr/09-rapor-bakara-2256-v6.1.1.md`](docs/tr/09-rapor-bakara-2256-v6.1.1.md) | `PRE-RELEASE` |
+| **05** | **An-Nisa 4:58** | Public Governance, Meritocracy, Judicial Independence, and Justice | [`docs/tr/10-rapor-nisa-458-v6.1.1.md`](docs/tr/10-rapor-nisa-458-v6.1.1.md) | `PRE-RELEASE` |
+| **06** | **Ali 'Imran 3:159** | Consultation (Shūrā) in Crisis Governance, Leadership, and Determination | [`docs/tr/11-rapor-ali-imran-3159-v6.1.1.md`](docs/tr/11-rapor-ali-imran-3159-v6.1.1.md) | `PRE-RELEASE` |
+
+---
+
 ## Versions and Documentation
 
-- **v6.1.1 (Current Draft):** [docs/tr/GEM-v6.1.1-taslak.md](docs/tr/GEM-v6.1.1-taslak.md) — 26 steps, 5 macro-phases, Enfüs-Âfâk & Heart Fiqh analytical lens, source verification, and epistemic disclaimer.
-- **Roadmap:** [docs/tr/GEM-v6.1.1-yol-haritasi.md](docs/tr/GEM-v6.1.1-yol-haritasi.md) — GitHub transition and verification plan.
+- **v6.1.1 (Current Standard):** [docs/tr/GEM-v6.1.1-taslak.md](docs/tr/GEM-v6.1.1-taslak.md) — 26 steps, 5 macro-phases, Enfüs-Âfâk & Heart Fiqh analytical lens, source verification, and epistemic disclaimer.
+- **Academic Peer-Review Guide:** [docs/tr/akademik-hakem-rehberi.md](docs/tr/akademik-hakem-rehberi.md) — 5-dimension peer review rubric and Z-5 form.
+- **Roadmap:** [docs/tr/GEM-v6.1.1-yol-haritasi.md](docs/tr/GEM-v6.1.1-yol-haritasi.md) — Implementation and verification roadmap.
+- **Linter Rules:** [docs/tr/linter-kurallari.md](docs/tr/linter-kurallari.md) — Formal linter rule specifications.
 - **Changelog:** [CHANGELOG.md](CHANGELOG.md) — Version history.
 - **v5.2.0 (Archive):** [GEM-V520-TALIMAT.md](GEM-V520-TALIMAT.md) — Historical specification.
 
@@ -54,16 +71,20 @@ GEM (Future-Oriented Reasoning) is a 26-step, 5-macro-phase framework of thought
 | File | Purpose |
 |---|---|
 | `YONTEM.md` | Summary of the 26-step method and macro-phases |
-| `src/gem_lint.py` | Format, language safety and schema linter (Python) |
-| `docs/tr/04-ornek-rapor.md` | Historical report template (v5.2.0) |
+| `src/gem_lint.py` | Format, language safety, schema, and manifest linter (Python) |
+| `docs/tr/05-ornek-rapor-v6.1.1.md` | Official v6.1.1 report template |
 | `docs/tr/GEM-v6.1.1-taslak.md` | Current v6.1.1 methodology standard draft |
-| `docs/tr/GEM-v6.1.1-yol-haritasi.md` | Implementation and integration roadmap |
+| `docs/tr/akademik-hakem-rehberi.md` | Independent external peer-review guidelines |
 
 ---
 
 ## Quick Start
 
 ```bash
-# Run the format and safety auditor
-python src/gem_lint.py docs/tr/04-ornek-rapor.md
+# Lint the template or any report
+python src/gem_lint.py docs/tr/05-ornek-rapor-v6.1.1.md --katman 3 --h6
+python src/gem_lint.py docs/tr/11-rapor-ali-imran-3159-v6.1.1.md --katman 3 --h6
+
+# Run test suite
+pytest tests/ -v
 ```

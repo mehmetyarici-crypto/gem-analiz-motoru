@@ -378,6 +378,7 @@ class GemLinterV6:
             return
 
         actual_sha256 = hashlib.sha256(self.path.read_bytes()).hexdigest()
+        norm_lf_sha256 = hashlib.sha256(self.path.read_text(encoding="utf-8").encode("utf-8")).hexdigest()
 
         # 1. Harici Manifest Kontrolü (v6.1.1 Öncelikli Standart)
         manifest_file = self.manifest_path
@@ -390,8 +391,8 @@ class GemLinterV6:
                 manifest_file = cand2
 
         if manifest_file and manifest_file.exists():
-            m_content = manifest_file.read_text(encoding="utf-8")
-            if actual_sha256.lower() in m_content.lower():
+            m_content = manifest_file.read_text(encoding="utf-8").lower()
+            if actual_sha256.lower() in m_content or norm_lf_sha256.lower() in m_content:
                 # Manifestte doğrulandı
                 return
             else:

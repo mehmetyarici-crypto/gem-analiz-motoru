@@ -12,7 +12,8 @@
 - [Bu proje nedir?](#bu-proje-nedir)
 - [Ne yapar?](#ne-yapar)
 - [Ne yapmaz?](#ne-yapmaz)
-- [Sürümler ve Belgeler](#sürümler-ve-belgeler)
+- [Yayımlanan GEM v6.1.1 Raporları (Külliyat)](#yayımlanan-gem-v611-raporları-külliyat)
+- [Sürümler ve Rehberler](#sürümler-ve-rehberler)
 - [Dosyalar](#dosyalar)
 - [Hızlı Başlangıç](#hızlı-başlangıç)
 
@@ -24,10 +25,10 @@ GEM (Gelecek Eksenli Muhakeme), Kur'an ayetlerini **stratejik analiz** yöntemle
 inceleyen, **26 adımlı** ve **5 makro fazlı** bir düşünce ve denetim çerçevesidir.
 
 ### Ne yapar?
-- Âyet metnini **dilbilimsel** olarak analiz eder (siyak-sibak, nüzul, hitap, lügat matrisi).
+- Âyet metnini **dilbilimsel** olarak analiz eder (siyak-sibak, nüzul, hitap, 4'lü lügat matrisi).
 - **Makasıd** (yüksek amaçlar) çıkarır.
 - Çağdaş kriz ve meselelerle **eşleştirir**.
-- **Senaryo** üretir (4 olasılık).
+- **Senaryo** üretir (4 yapısal olasılık).
 - **Karar kolları** önerir (uygulanabilir politika ve kaldıraç noktaları).
 - Kendi analizini **eleştirir** (Red Team, ampirik falsifiabilite, öz-denetim, önyargı filtreleri).
 
@@ -39,10 +40,27 @@ inceleyen, **26 adımlı** ve **5 makro fazlı** bir düşünce ve denetim çer�
 
 ---
 
-## Sürümler ve Belgeler
+## Yayımlanan GEM v6.1.1 Raporları (Külliyat)
 
-- **v6.1.1 (Güncel Taslak):** [docs/tr/GEM-v6.1.1-taslak.md](docs/tr/GEM-v6.1.1-taslak.md) — 26 adım, 5 makro faz, Enfüs-Âfâk ve Kalp Fıkhı merceği, kaynak tahkiki ve sınır beyanı.
+Aşağıdaki raporlar, GEM v6.1.1 standardına tam uyumlu olarak hazırlanmış ve kriptografik harici manifestlerle doğrulanmıştır:
+
+| No | Âyet | Konu Başlığı | Rapor Dosyası | Durum |
+|:---:|:---:|:---|:---|:---:|
+| **01** | **Tevbe 9:5** | Ahit İhlali, Caydırıcılık ve Meşru Savunma Hukuku | [`docs/tr/06-pilot-tevbe-95-v6.1.1.md`](docs/tr/06-pilot-tevbe-95-v6.1.1.md) | `PRE-RELEASE` |
+| **02** | **Nisâ 4:34** | Aile İçi Yönetişim, Kavamiyyet ve Şiddetsiz Nasihat Doktrini | [`docs/tr/07-pilot-nisa-434-v6.1.1.md`](docs/tr/07-pilot-nisa-434-v6.1.1.md) | `PRE-RELEASE` |
+| **03** | **Mâide 5:38** | Mülkiyet, Hırsızlık Cezası, Zaruret ve Sosyal Güvenlik | [`docs/tr/08-pilot-maide-538-v6.1.1.md`](docs/tr/08-pilot-maide-538-v6.1.1.md) | `PRE-RELEASE` |
+| **04** | **Bakara 2:256** | İnanç ve Vicdan Özgürlüğü, İkrâh Yasağı ve Çoğulculuk | [`docs/tr/09-rapor-bakara-2256-v6.1.1.md`](docs/tr/09-rapor-bakara-2256-v6.1.1.md) | `PRE-RELEASE` |
+| **05** | **Nisâ 4:58** | Kamu Yönetişimi, Liyakat, Yargı Bağımsızlığı ve Adalet | [`docs/tr/10-rapor-nisa-458-v6.1.1.md`](docs/tr/10-rapor-nisa-458-v6.1.1.md) | `PRE-RELEASE` |
+| **06** | **Âl-i İmrân 3:159** | Kriz Yönetişiminde İstişare (Şûrâ), Liderlik ve Azim | [`docs/tr/11-rapor-ali-imran-3159-v6.1.1.md`](docs/tr/11-rapor-ali-imran-3159-v6.1.1.md) | `PRE-RELEASE` |
+
+---
+
+## Sürümler ve Rehberler
+
+- **v6.1.1 (Güncel Standart):** [docs/tr/GEM-v6.1.1-taslak.md](docs/tr/GEM-v6.1.1-taslak.md) — 26 adım, 5 makro faz, Enfüs-Âfâk ve Kalp Fıkhı merceği, kaynak tahkiki ve sınır beyanı.
+- **Akademik Hakem Rehberi:** [docs/tr/akademik-hakem-rehberi.md](docs/tr/akademik-hakem-rehberi.md) — 5 boyutlu hakemlik inceleme rubriği ve Z-5 formu.
 - **Yol Haritası:** [docs/tr/GEM-v6.1.1-yol-haritasi.md](docs/tr/GEM-v6.1.1-yol-haritasi.md) — GitHub geçiş ve test planı.
+- **Linter Kuralları:** [docs/tr/linter-kurallari.md](docs/tr/linter-kurallari.md) — Biçimsel denetim kural rehberi.
 - **Değişiklik Kütüğü:** [CHANGELOG.md](CHANGELOG.md) — Sürüm tarihçesi.
 - **v5.2.0 (Arşiv):** [GEM-V520-TALIMAT.md](GEM-V520-TALIMAT.md) — Tarihsel sürüm kaydı.
 
@@ -52,17 +70,21 @@ inceleyen, **26 adımlı** ve **5 makro fazlı** bir düşünce ve denetim çer�
 
 | Dosya | Ne işe yarar |
 |---|---|
-| `YONTEM.md` | 26 adımlı yöntemin özeti ve faz yapısı |
-| `src/gem_lint.py` | Biçimsel dil ve şablon denetçisi (Python) |
-| `docs/tr/04-ornek-rapor.md` | Tarihsel rapor şablonu (v5.2.0) |
+| `YONTEM.md` | 26 adımlı yöntemin özeti ve 5 makro faz yapısı |
+| `src/gem_lint.py` | Biçimsel dil, şema ve manifest denetçisi (Python) |
+| `docs/tr/05-ornek-rapor-v6.1.1.md` | Resmi v6.1.1 rapor şablonu |
 | `docs/tr/GEM-v6.1.1-taslak.md` | Güncel v6.1.1 metodoloji standardı |
-| `docs/tr/GEM-v6.1.1-yol-haritasi.md` | Uygulama ve entegrasyon yol haritası |
+| `docs/tr/akademik-hakem-rehberi.md` | Bağımsız dış hakemlik değerlendirme kılavuzu |
 
 ---
 
 ## Hızlı Başlangıç
 
 ```bash
-# Biçimsel denetçiyi çalıştır
-python src/gem_lint.py docs/tr/04-ornek-rapor.md
+# Şablonu veya raporları denetle
+python src/gem_lint.py docs/tr/05-ornek-rapor-v6.1.1.md --katman 3 --h6
+python src/gem_lint.py docs/tr/11-rapor-ali-imran-3159-v6.1.1.md --katman 3 --h6
+
+# Test paketini çalıştır
+pytest tests/ -v
 ```
