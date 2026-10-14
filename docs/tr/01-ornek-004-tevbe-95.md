@@ -199,7 +199,7 @@
 3. **Test 3 (Texas Sharpshooter Riski):** GEÇTİ. (Herhangi bir yapay sayısal örüntü aranmamıştır).
 4. **Test 4 (Permütasyon/Sağlamlık):** GEÇTİ. (Metodolojik çıkarım tarihsel ve fıkhi usûl zeminindedir).
 5. **Test 5 (Bağlam ve Tefsir Uyumu — 5a–5g):**
-   - *5a (Sibak):* GEÇTİ. (9:4 istisnasıyla tam uyumludur).
+   - *5a (Sibak):* GEÇTİ. (9:4 istisnasıyla uyumludur).
    - *5b (Siyak):* GEÇTİ. (9:6 eman hakkıyla sınırlandırılmıştır).
    - *5c (Sûre Bütünlüğü):* GEÇTİ. (Tevbe suresinin güvenlik krizini çözme hedefiyle örtüşmektedir).
    - *5d (Nüzul):* GEÇTİ. (Tarihsel kronoloji ve ahit ihlalleriyle uyumludur).
