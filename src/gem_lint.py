@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-GEM Linter v5.2.1 — Dil Güvenliği Denetçisi (İki Dilli + v5.2.0 Kuralları + False Positive Düzeltmeleri)
+GEM Linter v5.2.2 — Dil Güvenliği Denetçisi (İki Dilli + v5.2.0 Kuralları + False Positive Düzeltmeleri)
 GEM v5.2.0 Bölüm 18.1 + 18.1-B muafiyet kurallarına göre rapor dosyalarını tarar.
 
 Kullanım:
@@ -30,11 +30,18 @@ v5.2.0 Değişiklikleri:
     - Mevcut v5.1.6 normalizasyon sistemi korundu
 
 v5.2.1 Düzeltmeleri (False Positive):
-    - "is-ought" arama kelimeleri genişletildi (raporlarda farklı başlıkla geçiyor)
-    - "künye" arama kelimeleri genişletildi (raporlarda farklı başlıkla geçiyor)
-    - "hume" arama kelimeleri genişletildi (raporlarda farklı başlıkla geçiyor)
-    - Yazım kontrolü düzeltmesi: normalize edilmiş "beccaria", "de soto", "şatibî"
-      kontrolü daha hassas yapıldı
+    - "is-ought" arama kelimeleri genişletildi
+    - "künye" arama kelimeleri genişletildi
+    - "hume" arama kelimeleri genişletildi
+    - Türkçe büyük İ sorunu çözüldü (\\u0307 normalizasyonu)
+
+v5.2.2 Düzeltmeleri (Yazım False Positive):
+    - Yazım hataları artık RAW (ham) metinde aranıyor
+    - "İbn Âşûr" / "İbnü'l-Kayyim" gibi doğru yazılmış isimler
+      normalize edildikten sonra "ibn asur" / "ibnu'l-kayyim"
+      diye eşleşip yanlış uyarı vermeyecek
+    - Beccaria / De Soto / Şâtıbî özel kontrol blokları kaldırıldı
+      (raw text çözümü zaten çözüyor)
 """
 
 import sys
@@ -44,7 +51,7 @@ import os
 
 # ============================================
 # NORMALİZASYON — Unicode, apostrof, Türkçe karakterler
-# (v5.1.6'dan korundu)
+# (v5.1.6'dan korundu + v5.2.1 Türkçe İ düzeltmesi)
 # ============================================
 NORMALIZE_HARITA = {
     "\u0307": "", "İ": "i",
@@ -235,7 +242,7 @@ H6_EK_ZORUNLU = [
      "müfredat", "mufredat", "isfahani", "isfahâni"],
     ["ibn manzûr", "ibn manzur", "lisanu'l-arab", "lisanul arab",
      "lisan al-arab", "lisanül-arab", "lisânü'l-arab", "lisān",
-     "ibn manzur", "ibn menzur", "ibn manzûr"],
+     "ibn menzur"],
 ]
 
 
@@ -257,7 +264,7 @@ UYARI_KELIMELERI = {
 
 # ============================================
 # YAZIM HATALARI
-# (v5.1.6 + v5.2.0 genişletmeleri)
+# (v5.2.2: raw text case-sensitive kontrol ile aranacak)
 # ============================================
 YAZIM_DUZELTMELERI = {
     "casser auda": "jasser auda",
@@ -323,6 +330,9 @@ def tara(dosya_adi, katman=3, h6=False):
     # Tüm metni normalize et
     metin_birlesik = normalize("".join(satirlar))
 
+    # v5.2.2 — Raw (ham) metin (yazım kontrolü için)
+    metin_raw = "".join(satirlar)
+
     # Öz-denetim işaretlerini de normalize et
     oz_denetim_norm = [normalize(i) for i in OZ_DENETIM_ISARETLERI]
 
@@ -386,33 +396,14 @@ def tara(dosya_adi, katman=3, h6=False):
                     "aciklama": aciklama,
                 })
 
-    # --- 3. Yazım hataları ---
+    # --- 3. Yazım hataları (v5.2.2 — RAW text case-sensitive kontrol) ---
+    # Raw metinde yanlış form VAR MI? (case-sensitive, normalize edilmemiş)
+    # Böylece "İbn Âşûr" → normalize → "ibn asur" gibi false positive'ler önlenir.
     for yanlis, dogru in YAZIM_DUZELTMELERI.items():
-        yanlis_norm = normalize(yanlis)
-        if yanlis_norm in metin_birlesik:
-            # "retroadiction" kontrolü: retroadiction geçerli olabilir
-            if yanlis == "retroadiction" and "retrodiction" in metin_birlesik:
+        if yanlis in metin_raw:
+            # Retroadiction özel kontrolü
+            if yanlis == "retroadiction" and "retrodiction" in metin_raw:
                 continue
-            # v5.2.1 — "beccaria" / "de soto" / "şatibî" kontrolü:
-            # Raporda zaten doğru yazılıp yazılmadığını kontrol et
-            if yanlis == "beccaria":
-                # "Beccaria" (büyük harfle) zaten varsa uyarı verme
-                if re.search(r'[Bb]eccaria', "".join(satirlar)):
-                    # Büyük harfle başlıyor mu kontrol et
-                    for s in satirlar:
-                        if "Beccaria" in s:
-                            continue_flag = True
-                            break
-                    else:
-                        continue_flag = False
-                    if continue_flag:
-                        continue
-            if yanlis == "de soto":
-                if "De Soto" in "".join(satirlar):
-                    continue
-            if yanlis == "şatibî":
-                if "Şâtıbî" in "".join(satirlar):
-                    continue
 
             yazim_hata_sayisi += 1
             bulgular.append({
@@ -466,7 +457,7 @@ def tara(dosya_adi, katman=3, h6=False):
     # SONUÇ RAPORU
     # ============================================
     print("=" * 60)
-    print("   GEM LINTER v5.2.1 — Dil Güvenliği Denetim Raporu")
+    print("   GEM LINTER v5.2.2 — Dil Güvenliği Denetim Raporu")
     print(f"   Dosya: {dosya_adi}")
     print(f"   Katman: {katman} | H6: {'Evet' if h6 else 'Hayır'}")
     print("=" * 60)
