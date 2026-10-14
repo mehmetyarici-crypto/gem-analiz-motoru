@@ -68,3 +68,24 @@ Hakemler, raporu aşağıdaki 5 ana boyut ve alt kriterler üzerinden değerlend
   > "Bu çalışma; GEM v6.1.1 metodolojisi çerçevesinde incelenmiş olup, klasik tefsir nakillerinin tahkiki matbu nüshalarla karşılaştırılmıştır. [NAKİL] ve [YORUM] ayrımı titizlikle korunmuş; Z-2 Görüş İhtilafı Cetveli'nde klasik ve çağdaş ekoller dengeli biçimde temsil edilmiştir. Âyetin normatif ilkesi ile ampirik politika hipotezleri Hume Giyotini kuralına uygun olarak ayrılmıştır. Rapor, bağımsız akademik usûl standartlarını karşılamaktadır."
 - **Kriptografik İmza (İsteğe Bağlı):** GPG Key Fingerprint / Git Signed Commit
 ```
+
+---
+
+## 5. GEM Akademik Atıf ve Kaynakça Standardı (İSNAD 2 + Veri Bilimi Hibriti)
+
+GEM raporlarının hem geleneksel ilahiyat fakültelerinde (İSNAD Atıf Sistemi) hem de uluslararası hakemli indekslerde (Scopus / WoS / Chicago) en üst düzey meşruiyet kazanması için aşağıdaki iki katmanlı kaynakça mimarisi uygulanır:
+
+### 5.1. Klasik İslami Kaynaklar (İSNAD 2 Standardı)
+Klasik tefsir, hadis, fıkıh ve lügat kaynakları için müellifin vefat tarihi (hicrî ve miladî olarak `ö. H/M`), muhakkiki, matbu neşir künyesi, cilt/sayfa numarası ve orijinal Arapça nakil (`[NAKİL]`) zorunludur:
+- **Format:** Müellif Soyadı, Adı (ö. Vefat Yılı). *Eser Adı*. thk. Muhakkik Adı. Basım Yeri: Yayınevi, Basım Yılı, Cilt/Sayfa.
+- *Örnek (İSNAD):* Zemahşerî, Mahmûd b. Ömer (ö. 538/1144). *el-Keşşâf 'an Hakâ'ikı Gavâmizi't-Tenzîl*. thk. Âdil Ahmed Abdülmevcûd - Ali Muhammed Muavvaz. Riyad: Mektebetü'l-Ubeykân, 1998, 2/488-494.
+
+### 5.2. Çağdaş Literatür ve Ampirik Veri Kaynakları (DOI / URL Standartlı)
+Metinde atıf yapılan uluslararası endeksler, iktisat ve sosyoloji raporları ile bilimsel yayınlar müstakil bir modern kaynak kimliğiyle kaydedilir:
+- **Format:** Yazar/Kurum Adı. *Rapor/Eser Başlığı*. Yayıncı/Organizasyon, Yayın Yılı, URL / DOI.
+- *Örnek:* World Justice Project (WJP). *Rule of Law Index 2025-2026*. Washington, D.C.: WJP Publications, 2025, https://worldjusticeproject.org.
+
+### 5.3. Metin İçi Dipnotlama ve Rapor Sonu Kaynakçası
+1. **Metin İçi Dipnotlar (`[^1]`, `[^2]`):** Kritik nassî nakiller ve ampirik veri iddiaları standart Markdown dipnotlarıyla metne işlenir.
+2. **Akademik Kaynakça Bölümü:** Her raporun Z-4 Sınır Beyanı sonrasında, kaynakların tam bibliyografik künyelerini içeren alfabetik "Akademik Kaynakça / Bibliography" tablosu yer alır.
+

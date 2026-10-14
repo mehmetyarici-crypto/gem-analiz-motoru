@@ -150,6 +150,7 @@ ISTISNA_IFADELERI = [
     "mutlak kurulduğu", "mutlak kılmak",
     "mutlak dokunulmazlık", "mutlakiyet", "mutlakiyet yasağı",
     "mutlak lafız", "mutlak lafzı", "mutlak nas", "mutlak nass",
+    "mutlaklaştırılamaz", "mutlaklaştırılamaz.", "mutlaklaştırma",
     "absolute ownership", "absolute sovereign", "absolute sovereignty",
     "absolute divine", "absolute god", "absolute deterrence",
     "absolute destruction", "absolute justice", "absolute authority",
@@ -313,13 +314,20 @@ class GemLinterV6:
     # V1: Kaynak Tahkiki ve Künye Kartı Kontrolü
     # ----------------------------------------------------
     def check_v1_sources(self):
-        sources = self.frontmatter.get("sources", [])
+        # Klasik tek liste 'sources' veya iki katmanlı 'classical_sources' + 'modern_sources'
+        sources = self.frontmatter.get("sources") or []
+        classical_sources = self.frontmatter.get("classical_sources") or []
+        modern_sources = self.frontmatter.get("modern_sources") or []
+
+        all_sources = list(sources) + list(classical_sources)
+
         if self.is_v6:
-            if not sources:
-                self.report("L-0100", BLOCK, "Frontmatter içinde 'sources' listesi boş veya tanımlanmamış!")
+            if not all_sources and not modern_sources:
+                self.report("L-0100", BLOCK, "Frontmatter içinde 'sources' veya 'classical_sources' listesi boş veya tanımlanmamış!")
                 return
 
-            for idx, s in enumerate(sources, 1):
+            # Klasik kaynaklar kontrolü
+            for idx, s in enumerate(all_sources, 1):
                 sid = s.get("id", f"kaynak-{idx}")
                 author = s.get("author") or s.get("muellif")
                 work = s.get("work") or s.get("eser")
@@ -334,6 +342,17 @@ class GemLinterV6:
                 link = s.get("verification_link") or s.get("url")
                 if not link or "..." in str(link):
                     self.report("L-0103", WARN, f"Kaynak '{sid}': Dijital tahkik linki eksik veya yer tutucu.")
+
+            # Modern kaynaklar kontrolü (varsa)
+            for idx, ms in enumerate(modern_sources, 1):
+                ms_id = ms.get("id", f"modern-{idx}")
+                m_author = ms.get("author") or ms.get("institution") or ms.get("kurum")
+                m_title = ms.get("title") or ms.get("work") or ms.get("baslik")
+                if not m_author or not m_title:
+                    self.report("L-0104", BLOCK, f"Modern kaynak '{ms_id}' eksik: Yazar/Kurum ve Başlık zorunludur!")
+                m_link = ms.get("doi") or ms.get("url")
+                if not m_link:
+                    self.report("L-0105", WARN, f"Modern kaynak '{ms_id}': İzlenebilir DOI veya URL bağlantısı önerilir.")
 
     # ----------------------------------------------------
     # V2: [NAKİL] ve [YORUM] Ayrımı Denetimi
@@ -465,10 +484,12 @@ class GemLinterV6:
             return
 
         norm_body = normalize(self.body_text)
-        has_empirical_terms = any(t in norm_body for t in ["dunya bankasi", "world bank", "tuik", "undp", "tuik", "endeks", "veritabani"])
+        has_empirical_terms = any(t in norm_body for t in ["dunya bankasi", "world bank", "tuik", "undp", "tuik", "endeks", "veritabani", "wjp", "ucdp", "unesco"])
         if has_empirical_terms:
             has_doi_or_url = any(u in norm_body for u in ["http://", "https://", "doi.org", "urn:"])
-            if not has_doi_or_url:
+            modern_sources = self.frontmatter.get("modern_sources") or []
+            has_modern_link = any(bool(ms.get("doi") or ms.get("url")) for ms in modern_sources)
+            if not has_doi_or_url and not has_modern_link:
                 self.report("L-0701", WARN, "Ampirik veri kurumlarına atıf yapılmış fakat izlenebilir URL/DOI linki bulunamadı.")
 
     # ----------------------------------------------------
