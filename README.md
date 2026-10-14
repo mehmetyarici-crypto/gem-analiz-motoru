@@ -53,6 +53,7 @@ The following reports are fully compliant with the GEM v6.1.1 standard and verif
 | **05** | **An-Nisa 4:58** | Public Governance, Meritocracy, Judicial Independence, and Justice | [`docs/tr/10-rapor-nisa-458-v6.1.1.md`](docs/tr/10-rapor-nisa-458-v6.1.1.md) | `PRE-RELEASE` |
 | **06** | **Ali 'Imran 3:159** | Consultation (Shūrā) in Crisis Governance, Leadership, and Determination | [`docs/tr/11-rapor-ali-imran-3159-v6.1.1.md`](docs/tr/11-rapor-ali-imran-3159-v6.1.1.md) | `PRE-RELEASE` |
 | **07** | **Al-Hujurat 49:9–10** | Conflict Resolution, International Arbitration, Law of Baghy, and Peacekeeping | [`docs/tr/12-rapor-hucurat-49910-v6.1.1.md`](docs/tr/12-rapor-hucurat-49910-v6.1.1.md) | `PRE-RELEASE` |
+| **08** | **Al-Isra 17:36** | Epistemic Responsibility, Verification, Cognitive Security, and AI Era | [`docs/tr/13-rapor-isra-1736-v6.1.1.md`](docs/tr/13-rapor-isra-1736-v6.1.1.md) | `PRE-RELEASE` |
 
 ---
 
