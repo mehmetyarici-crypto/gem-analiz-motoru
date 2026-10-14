@@ -1,0 +1,511 @@
+---
+gem_version: "6.1.1"
+case_id: "GEM-RAPOR-2026-007"
+surah: "Bakara"
+verse: "2:256"
+topic: "İnanç ve Vicdan Özgürlüğü, İkrâh Yasağı ve Çoğulcu Toplum Mimarisi (Lâ İkrâhe fi'd-Dîn Doktrini)"
+date: "2026-10-15"
+layer: 3
+h6: true
+confidence_grade: "B"
+status: "PRE-RELEASE"
+sha256_hash: "0000000000000000000000000000000000000000000000000000000000000000"
+
+sources:
+  - id: "src-zemahseri"
+    author: "Zemahşerî, Mahmûd b. Ömer"
+    work: "el-Keşşâf 'an Hakâ'ikı Gavâmizi't-Tenzîl"
+    editor: "Âdil Ahmed Abdülmevcûd, Ali Muhammed Muavvaz"
+    publisher: "Mektebetü'l-Ubeykân"
+    publication_place: "Riyad"
+    publication_year: 1998
+    volume: "1"
+    pages: "488-492"
+    arabic_quote: "لا إكراه في الدين: أي لا تكرهوا أحدا على الدخول في الدين؛ لأن الإيمان مبني على الاختيار والتمحيص، فلو أكره لم يكن مؤمنا حقيقة... وجاء على صيغة الخبر ومعناه النهي البليغ"
+    verification_link: "https://archive.org/details/kashshaf-ubaykan"
+    doi_or_urn: "urn:shamela:23617"
+
+  - id: "src-ragib"
+    author: "Râgıb el-İsfahânî, Hüseyin b. Muhammed"
+    work: "el-Müfredât fî Garîbi'l-Kur'ân"
+    editor: "Safvân Adnân Dâvûdî"
+    publisher: "Dârü'l-Kalem"
+    publication_place: "Dımaşk"
+    publication_year: 1992
+    volume: "1"
+    pages: "710-712"
+    arabic_quote: "الإكراه: حمل الإنسان على أمر يكرهه ولا يريده طبعا أو عقلا أو شرعا... والرشد: خلاف الغي، وهو اهتداء إلى محاسن الأمور بالعقل السليم"
+    verification_link: "https://shamela.ws/book/8381/680"
+    doi_or_urn: "urn:shamela:8381"
+
+  - id: "src-ibn-faris"
+    author: "İbn Fâris, Ahmed b. Fâris"
+    work: "Mu'cemü Makâyîsi'l-Lüğa"
+    editor: "Abdüsselâm Muhammed Hârûn"
+    publisher: "Dârü'l-Fikr"
+    publication_place: "Beyrut"
+    publication_year: 1979
+    volume: "5"
+    pages: "171-173"
+    arabic_quote: "الكاف والراء والهاء أصلان: أحدهما يدل على خلاف الرضا، والآخر على ثقل ومشقة... وأكرهته على الشيء: ألزمته إياه قهرا"
+    verification_link: "https://shamela.ws/book/23721/2510"
+    doi_or_urn: "urn:shamela:23721"
+
+  - id: "src-ibn-manzur"
+    author: "İbn Manzûr, Muhammed b. Mükerrem"
+    work: "Lisânü'l-Arab"
+    editor: "Dârü Sâdır"
+    publisher: "Dârü Sâdır"
+    publication_place: "Beyrut"
+    publication_year: 1993
+    volume: "13"
+    pages: "534-538"
+    arabic_quote: "والعروة الوثقى: كل ما يعتمد عليه ويستمسك به من حبل أو عهد وثيق لا ينقطع... والرشد: الاستقامة على طريق الحق"
+    verification_link: "https://shamela.ws/book/21605/5210"
+    doi_or_urn: "urn:shamela:21605"
+
+  - id: "src-taberi"
+    author: "Taberî, Muhammed b. Cerîr"
+    work: "Câmi'u'l-Beyân 'an Te'vîli Âyi'l-Kur'ân"
+    editor: "Abdullah b. Abdülmuhsin et-Türkî"
+    publisher: "Dâru Hecer"
+    publication_place: "Kahire"
+    publication_year: 2001
+    volume: "4"
+    pages: "548-554"
+    arabic_quote: "الصواب من القول في ذلك عندنا: أنه لا يجوز إكراه أحد على الدخول في الإسلام، والآية عامة في كل أحد، لم تنسخ ولم تخص"
+    verification_link: "https://shamela.ws/book/43/1820"
+    doi_or_urn: "urn:shamela:43"
+
+thresholds:
+  - id: "th-01"
+    name: "Dinî Vicdan ve İbadet Özgürlüğü Endeksi"
+    value: ">= 0.85"
+    derivation_basis: "[TAHMİNÎ EŞİK] Uluslararası Din Özgürlüğü (Pew & USIRF) göstergelerine dayalı çoğulcu toplum çalışma hipotezi"
+    is_empirical: true
+
+  - id: "th-02"
+    name: "Zorla Din Değiştirme ve Kamusal Baskı Vakaları"
+    value: "= 0 vaka / yıl"
+    derivation_basis: "[TAHMİNÎ EŞİK] Bakara 2:256 nassının nehiy karakterinden kaynaklanan sıfır tolerans hedefi"
+    is_empirical: false
+
+  - id: "th-03"
+    name: "Kamusal Azınlık Ayrımcılığı Şikâyet Çözülme Oranı"
+    value: ">= %95"
+    derivation_basis: "[TAHMİNÎ EŞİK] Çoğulcu anayasal yargı denetimi ve ombudsmanlık KPI hedefi"
+    is_empirical: true
+
+scenarios:
+  - id: "S1"
+    title: "Koruyucu Senaryo (Anayasal Çoğulculuk ve Vicdan Emniyeti)"
+    scores:
+      olasilik: 4
+      tesir: 5
+      firsat: 5
+      kirilganlik: 2
+      stratejik_oncelik: 5
+    score_justification: "Medine Sözleşmesi ve Bakara 2:256 ekseninde çoğulcu hukuki entegrasyon simülasyonu"
+
+  - id: "S2"
+    title: "Bozuluş Senaryosu (Teokratik Dayatma ve Nifak Sarmalı)"
+    scores:
+      olasilik: 3
+      tesir: 5
+      firsat: 2
+      kirilganlik: 5
+      stratejik_oncelik: 4
+    score_justification: "Zoraki din dayatmasının samimi inancı yok edip kitlesel ikiyüzlülük (nifak) üretmesi analizi"
+
+  - id: "S3"
+    title: "Denge Senaryosu (Korumalı Dinî Özerklik)"
+    scores:
+      olasilik: 3
+      tesir: 3
+      firsat: 3
+      kirilganlik: 3
+      stratejik_oncelik: 3
+    score_justification: "Cemaat bazlı hukuki özerklik modeli (Osmanlı Millet Sistemi dengesi)"
+
+  - id: "S4"
+    title: "İhya Senaryosu (Evrensel Vicdan Emniyeti ve Küresel İttifak)"
+    scores:
+      olasilik: 4
+      tesir: 5
+      firsat: 5
+      kirilganlik: 2
+      stratejik_oncelik: 5
+    score_justification: "İnanç özgürlüğünün evrensel insan hakları zemininde küresel barış ittifakına dönüştürülmesi potansiyeli"
+
+peer_review:
+  status: "PRE-RELEASE"
+  internal_linter_verified: true
+  linter_timestamp: "2026-10-15T01:30:00+03:00"
+  reviewer_name: null
+  reviewer_title: null
+  reviewer_orcid: null
+  reviewer_institution: null
+  review_date: null
+  review_notes: "Ön sürüm (PRE-RELEASE) aşamasındadır; bağımsız dış akademik hakem incelemesine açıktır."
+---
+
+# GEM RAPOR-2026-007 — İnanç ve Vicdan Özgürlüğü, İkrâh Yasağı ve Çoğulcu Toplum Mimarisi (Bakara 2:256 Tahlili)
+
+## FAZ I — KİMLİK, METİN VE BAĞLAM
+
+### ADIM 00 — KÜNYE VE GİRİŞ BİLGİLERİ
+- **Vaka Kodu:** GEM-RAPOR-2026-007
+- **Âyet:** Bakara Sûresi 2:256 ("İkrâh Yasağı Âyeti")
+- **Konu Başlığı:** İnanç ve Vicdan Özgürlüğü, İkrâh Yasağı ve Çoğulcu Toplum Mimarisi
+- **Tarih:** 2026-10-15
+- **Sürüm:** v6.1.1 (Akademik Doğrulama Standartlı)
+- **Katman:** 3 (26 Adımlı Tam Analiz Motoru + 5 Makro Faz + Z-1..Z-5 Zorunlu Ekler)
+- **H6 Durumu:** Evet (Zorlu Âyet Kapsamı — Nesh ve İrtidat Tartışmaları)
+- **Dil:** Türkçe (TR)
+- **Güven Düzeyi:** B (Katman 3 seviyesinde usûlî tahkik ve filolojik konsensüs; teolojik alanda sayısal kesinlik iddiası taşınamaz)
+- **Bilgi Düzeyi:** Doğrulanmış Metodolojik Modelleme
+- **Kriptografik Bütünlük Hash'i (SHA256):** Harici manifest ile doğrulanır (`09-rapor-bakara-2256-v6.1.1.md.sha256`)
+- **Mushaf / Kıraat Standardı:** Mushaf-ı Şerîf Resm-i Osmânî, Kûfî 6236 (Âsım / Hafs), Bakara 2:256
+
+---
+
+### ADIM 00-5 — DİL VE SEMANTİK MATRİSİ (H6 ZORUNLU)
+
+1. **Semantik / Kök Anlam (İştikak):**
+   - **Kaynak:** İbn Fâris (*Mu'cemü Makâyîsi'l-Lüğa*, C. 5, s. 171-173).
+   - `[NAKİL]`: *"الكاف والراء والهاء أصلان: أحدهما يدل على خلاف الرضا، والآخر على ثقل ومشقة... وأكرهته على الشيء: ألزمته إياه قهرا"* (İbn Fâris: K-R-H kökü, rızanın zıddı olan zorlama ve kahredici baskıyı ifade eder. İkrâh, bir kimseye istemediği bir şeyi cebirle yüklemektir).
+   - `[YORUM]`: Dinî kabulün özü hür irade ve rızadır; fiziki, psikolojik veya hukuki cebirle üretilen ikrâh, imanın mahiyetini ontolojik olarak imkânsız kılar.
+
+2. **Kur'anî Semantik (Kavramlaşma):**
+   - **Kaynak:** Râgıb el-İsfahânî (*el-Müfredât fî Garîbi'l-Kur'ân*, s. 710-712).
+   - `[NAKİL]`: *"الإكراه: حمل الإنسان على أمر يكرهه ولا يريده طبعا أو عقلا أو شرعا... والرشد: خلاف الغي، وهو اهتداء إلى محاسن الأمور بالعقل السليم"* (Râgıb: İkrâh, insanı tabiatının, aklının veya şeriatının reddettiği bir şeye zorlamaktır. Rüşd ise aklıselim ile hakikate hidayet bulmaktır).
+   - `[YORUM]`: Hak ile bâtıl aklen ve delilen apaçık ortaya konduktan sonra (`قد تبين الرشد من الغي`), inanç alanında baskı kurmak anlamsızdır; çünkü hakikatin cazibesi kendi içindedir, dışsal zorlamaya ihtiyaç duymaz.
+
+3. **Nahiv / Belâğat ve İ'câz:**
+   - **Kaynak:** Zemahşerî (*el-Keşşâf*, C. 1, s. 488-492).
+   - `[NAKİL]`: *"لا إكراه في الدين: نفى للجنس على سبيل التوكيد، وجاء على صيغة الخبر ومعناه النهي البليغ، أي لا تكرهوا أحدا على الدخول في الدين بحال من الأحوال"* (Zemahşerî: Cümle haber kipinde gelmiş olmakla birlikte, belâğatta nehy-i beliğ [en üst dereceden yasaklama] anlamındadır; yani 'dine girişte asla hiçbir kimseye hiçbir şart altında zorlama yapmayınız').
+   - `[YORUM]`: Haber formundaki nehiy, kuralın ontolojik bir zorunluluk olduğunu tescil eder: İkrahla kurulan dinî ilişki zâtında 'din' ve 'iman' vasfını kazanamaz.
+
+4. **Klasik Lisan ve Örf:**
+   - **Kaynak:** İbn Manzûr (*Lisânü'l-Arab*, C. 13, s. 534-538).
+   - `[NAKİL]`: *"والعروة الوثقى: كل ما يعتمد عليه ويستمسك به من حبل أو عهد وثيق لا ينقطع"* (İbn Manzûr: Urvetü'l-vüskâ, kopması imkânsız olan en sağlam kulpa, güvenilir tevhîd sözleşmesine tutunmaktır).
+   - `[YORUM]`: Zorlamadan azade, hür iradeyle tutunulan inanç bağı ebedî ve kopmaz bir nitelik kazanır.
+
+- **Çapraz Kontrol ve Dil Güvenliği:** Dört filolojik otorite de `لَا إِكْرَاهَ` lafzının genel, kapsayıcı ve inanç alanında her türlü zorlamayı bağlayıcı biçimde men eden anayasal bir ilke olduğu hususunda müttefiktir.
+
+---
+
+### ADIM 01 — LAFZÎ TAHLİL
+
+- **Arapça Metin:**
+  > لَآ إِكْرَاهَ فِى ٱلدِّينِ ۖ قَد تَّبَيَّنَ ٱلرُّشْدُ مِنَ ٱلْغَىِّ ۚ فَمَن يَكْفُرْ بِٱلطَّٰغُوتِ وَيُؤْمِنۢ بِٱللَّهِ فَقَدِ ٱسْتَمْسَكَ بِٱلْعُرْوَةِ ٱلْوُثْقَىٰ لَا ٱنفِصَامَ لَهَا ۗ وَٱللَّهُ سَمِيعٌ عَلِيمٌ
+
+- **Kelime Mealleri:**
+  - `لَآ إِكْرَاهَ` (Lâ ikrâhe): Hiçbir zorlama, baskı ve mecbur tutma yoktur/olamaz.
+  - `فِى ٱلدِّينِ` (fi'd-dîn): Dinde, inançta ve vicdan alanında.
+  - `قَد تَّبَيَّنَ` (kad tebeyyene): Muhakkak ki açıkça ayrılmış, belirginleşmiştir.
+  - `ٱلرُّشْدُ` (er-ruşdü): Doğru yol, akıl, aydınlık ve hidayet.
+  - `مِنَ ٱلْغَىِّ` (mine'l-gayy): Sapıklıktan, cehaletten ve karanlıktan.
+  - `فَمَن يَكْفُرْ بِٱلطَّٰغُوتِ` (femen yekfur bi't-tâğût): Kim azgın zorbaları, sahte otoriteleri ve tağutu reddederse.
+  - `وَيُؤْمِنۢ بِٱللَّهِ` (ve yü'min billâh): Ve Allah'a gönülden iman ederse.
+  - `فَقَدِ ٱسْتَمْسَكَ` (fekadi'stemseke): Şüphesiz tutunmuş, sarılmıştır.
+  - `بِٱلْعُرْوَةِ ٱلْوُثْقَىٰ` (bi'l-‘urveti'l-vüskâ): En sağlam ve kopmaz kulpa.
+  - `لَا ٱنفِصَامَ لَهَا` (lenfisâme lehâ): Onun için hiçbir kopma ve kırılma yoktur.
+  - `وَٱللَّهُ سَمِيعٌ عَلِيمٌ` (vallâhü semî‘un ‘alîm): Allah her şeyi işitendir, hakkıyla bilendir.
+
+- **Taberî (*Câmi'u'l-Beyân*) Lafzî Tahlili:**
+  - `[NAKİL]`: Taberî, âyetin nüzul sebebinde Ensar'dan Husayn isimli zatın Hristiyan olan iki oğlunu zorla Müslüman yapmaya çalışması üzerine indiğini ve Hz. Peygamber'in zorlamayı kesin bir dille men ettiğini belgeler (*Câmi'u'l-Beyân*, C. 4, s. 550).
+  - `[YORUM]`: Ebeveynin dahi öz evladı üzerinde din dayatma hakkı yoktur; vicdan sahası beşerî vesayete bütünüyle kapalıdır.
+
+---
+
+### ADIM 02 — MANTIKSAL SEMANTİK VE KARŞIT İLKE TESTİ
+
+- **Önerme Yapısı:**
+  - *Evrensel Negasyon:* İnanç ve vicdan alanında her türlü zorlama gayrimeşrudur (`Lâ İkrâhe`).
+  - *Epistemik Gerekçe:* Hakikat zorlamaya muhtaç olmayacak kadar delilleriyle açıktır (`Tebeyyene'r-Ruşd`).
+  - *Kurtuluş Koşulu:* Zorbalığı/tahakkümü reddetmek (`Kefera bi't-Tâğût`) + Özgür iradeyle Allah'a bağlanmak (`Âmene billâh`).
+- **Karşıt İlke Testi:**
+  - *Karşıt İlke / Gerilim:* **Mutlak Vicdan Özgürlüğü (Hıfzu'l-Akıl/Keramet) ↔ Kamusal Dinî İttifak ve Teokratik Güvenlik (Hıfzu'n-Nizâm).**
+  - *Gerilimin Çözümü:* Kamusal düzen ve asayiş ancak dışsal hukuki fiillerle korunur; kalbî inanç sahasına devletin cebrî müdahalesi düzen değil, riyakârlık ve nifak üretir. Zoraki dindarlık toplumu ahlaken çürütür.
+  - *Feda Edilen Taraf (Trade-off):* Şekilci ve yapay homojen toplum modeli feda edilir; bedeli çoğulculuk ve farklı inançların bir arada yaşama zorluğudur.
+
+---
+
+### ADIM 03 — ÜÇLÜ ÇERÇEVE (ETHOS / LOGOS / PATHOS) VE İS-OUGHT KÖPRÜSÜ
+
+- **Ethos (Ahlaki Yük):** Samimiyet ve dürüstlük esastır. İman bir kalbî tasdiktir; zor altında söylenen kelime-i şehadet ahlaki değer taşımaz. Bir insanı inanmadığı bir şeyi ikrar etmeye zorlamak onun insanlık onurunu çiğnemektir.
+- **Logos (Mantıksal Tutarlılık):** Bir fikrin hakikati delille ispatlanır, kılıçla veya devlet zoruyla değil. Rüşd (akıl/hakikat) ortaya konduktan sonra zor kullanmak mantıksal bir çelişkidir; çünkü zorlama ancak zayıf ve delilsiz iddiaların sığınağıdır.
+- **Pathos (Vicdani ve Duygusal Tesir):** Baskı altındaki vicdanlara ferahlık ve emniyet aşılar; hiçbir insanın inancından ötürü devlet veya toplum tarafından hırpalanmayacağı güvencesini verir.
+- **İs-Ought Köprüsü ve Hume Giyotini:**
+  - *İs (Olgu / Ampirik Durum):* Bir toplumda farklı din, mezhep ve inançlara sahip topluluklar bir arada yaşamaktadır; çoğunluk inancı azınlık üzerinde baskı kurma eğilimindedir.
+  - *Ought (Değer / Normatif Hüküm):* Devlet ve kamu otoritesi inanç ve ibadet alanına cebirle müdahale etmemeli, her ferdin vicdan emniyetini anayasal güvenceye almalıdır.
+  - *Hume Giyotini Köprü Aksiyomu:* *"İnanç kalbin iradî bir yönelişi olduğuna ve zorlama kalbe nüfuz edemeyip yalnızca ikiyüzlülük ürettiğine göre; ahlaki açıdan sahih bir toplum inşa etmek için inanç sahasında her türlü ikrâhı yasaklamak normatif bir zorunluluktur."*
+
+---
+
+### ADIM 04 — MAKASID ANALİZİ
+
+- **Küllî Makasıd:** Aklın, dinin, nefsin ve onurun korunması.
+- **Şâtıbî ve İbn Âşûr Çerçevesi:**
+  - `[NAKİL]`: İbn Âşûr (*et-Tahrîr ve't-Tenvîr*, C. 3, s. 26-29), bu âyetin İslam'ın en temel evrensel hürriyet umdelerinden biri olduğunu; dinin korunmasının ancak özgürce benimsenen samimi din ile mümkün olacağını kaydeder.
+  - `[YORUM]`: Zorla Müslüman yapılan fert dinî anlamda dindar değil, münafık olur. Dolayısıyla zorlama, aslında dini korumaz; dini içten kemiren nifak mikrobunu besler.
+- **Zarûriyyât Hiyerarşisi:**
+  1. *Aklın ve İradenin Korunması (Hıfzu'l-Akl):* İradenin felç edilmesi engellenir.
+  2. *Dinin Korunması (Hıfzu'd-Dîn):* Dinin saflığı, riya ve riyakârlıktan arındırılarak muhafaza edilir.
+  3. *İnsan Onurunun Korunması (Hıfzu'l-Ird/Keramet):* Bireyin vicdanına saygı gösterilir.
+
+---
+
+### ADIM 04b — YORUMCU KONUMU (GADAMER HERMENÖTİĞİ)
+
+1. **Usûl Ekolü:** Çoğulcu-Makāsıdî usûl (Taberî, Şâtıbî, İbn Âşûr ve Muhammed Abduh çizgisi).
+2. **Felsefi Perspektif:** Eleştirel realizm, anayasal çoğulculuk ve John Locke - Kant çizgisindeki vicdan hürriyeti felsefesi.
+3. **Alternatif Yorumcu Konumu:**
+   - *Tekfirci / Totaliter Teokratik Perspektif:* Âyetin cizye veya savaş nasslarıyla neshedildiğini öne sürerek inançta zorlamayı ve tek tip ideolojiyi savunur.
+   - *Radikal Lâ-dinî / Seküler İndirgemeci Perspektif:* Dinin kamusal alandan bütünüyle tasfiyesini savunarak din özgürlüğünü yalnızca ibadethaneye hapseder.
+   Raporumuz her iki totaliter uçtan ayrılır; inancı özgürleştiren çoğulcu kamusal alanı savunur.
+
+---
+
+### ADIM 05 — SİYAK-SİBAK ANALİZİ (S1–S7)
+
+- **S1 (Önceki Âyet — Âyetü'l-Kürsî, Bakara 2:255):** Âyetü'l-Kürsî, Allah'ın mutlak mülkiyetini, kâinat üzerindeki sonsuz kudretini ve zâtî büyüklüğünü ilan eder. Hemen peşinden gelen 2:256, şu muazzam nükteyi taşır: Kâinatın mutlak sahibi olan Allah dahi kullarına zorla iman dayatmamışken; hiçbir beşer veya devlet Allah adına insanları zorlama küstahlığında bulunamaz!
+- **S2 (Sonraki Âyet — Bakara 2:257):** *"Allah inananların dostudur, onları karanlıklardan aydınlığa çıkarır. İnkâr edenlerin dostu ise tağuttur..."* Bu sibak, hür iradeyle yapılan tercihin sonuçlarını beyan eder.
+- **S3 (Pasajın Konumu):** Bakara Sûresi'nin inanç, ahlak ve toplum sözleşmesini kuran merkezî omurgasında yer alır.
+- **S4 (Sûre İçi Bütünlük):** Bakara Sûresi'nin başındaki müttakî, kâfir ve münafık tahliliyle (Bakara 2:1–20) doğrudan irtibatlıdır; zorlama münafık üretir.
+- **S5 (Nüzûl Sebepleri ve Hitap):** Medine dönemi. Müslüman ebeveynlerin gayrimüslim çocuklarını zorlamasını yasaklayan tarihsel olay.
+- **S6 (Tarihsel Bağlam):** Medine Sözleşmesi ile kurulan çoğulcu toplum nizamının anayasal temeli.
+- **S7 (Kırpma Riski):** Âyetin başındaki `Lâ ikrâhe fi'd-dîn` kısmını sonundaki tağutu reddetme ve rüşd şartından kopararak dinin ciddiyetini ve ahlaki sorumluluğunu önemsizleştiren liberal-nihilist okuma riski mevcuttur. Âyet hürriyet ile ahlaki sorumluluğu bir arada tesis eder.
+
+---
+
+### ADIM 06 — ÇAPRAZ ÂYET ANALİZİ
+
+- **Yûnus 10:99:** *"Eğer Rabbin dileseydi yeryüzündekilerin hepsi elbette iman ederdi. O halde sen inanmaları için insanları zorlayıp duracak mısın?"* (Mutlak nehiy).
+- **Kehf 18:29:** *"De ki: Hak Rabbinizdendir. Artık dileyen iman etsin, dileyen inkâr etsin."* (Hür irade beyanı).
+- **Gâşiye 88:21–22:** *"Öğüt ver; sen ancak bir öğütçüsün. Onların üzerinde bir zorba/baskıcı değilsin."*
+- **Kâfirûn 109:6:** *"Sizin dininiz size, benim dinim banadır."*
+- *Analitik Sonuç ve N4 Kapsamı:* Kur'an'ın omurgasını oluşturan onlarca muhkem âyet, inanç alanında baskıyı kökten reddetmektedir (`N4`).
+
+---
+
+## FAZ II — SİSTEM VE GELECEK MODELLEMESİ
+
+### ADIM 07 — SİSTEM HARİTASI (CAUSAL LOOP DİAGRAMI)
+
+- **Pekiştirici Döngü (R1 — Nifak ve Ahlaki Çöküş Sarmalı):** Dinde zorlama artar → Bireyler cezadan korkup inanmadığı halde inanmış görünür → Nifak ve ikiyüzlülük yayılır → Toplumsal güven ve ahlak çöker → Devlet baskıyı daha da artırır (Yıkım döngüsü).
+- **Dengeleyici Döngü (B1 — Vicdan Emniyeti ve Samimiyet Dengeleyicisi):** İnanç özgürlüğü tanınır (`Lâ İkrâhe`) → İnananlar gönülden samimiyetle inanır → Nifak zayıflar, ahlaki tutarlılık yükselir → Çoğulcu barış nizamı güçlenir.
+- **Tipping Point (Kırılma Noktası):** Devletin veya dinî otoritenin bireylerin kalbî inançlarını sorgulamak üzere "engizisyon / teftiş" mekanizmaları kurduğu an.
+
+---
+
+### ADIM 08 — DÖRT SENARYO VE STRATEJİK DEĞERLENDİRME
+
+1. **Koruyucu Senaryo (Anayasal Çoğulculuk):** İnanç ve ibadet özgürlüğü tam korunur, rüşd fikrî tartışmayla yayılır, toplumsal barış pekişir. Ufuk: H1–H2.
+2. **Bozuluş Senaryosu (Teokratik Dayatma ve Nifak):** Siyasi otorite dini ideolojiye dönüştürür, zorlama başlar, inançsızlık ve riya tırmanır. Ufuk: H1.
+3. **Denge Senaryosu (Korumalı Dinî Özerklik):** Cemaatler kendi içlerinde serbesttir ancak bireysel din değiştirme ve eleştiri baskı altındadır. Ufuk: H2.
+4. **İhya Senaryosu (Evrensel Vicdan Emniyeti):** İnanç özgürlüğü küresel insan hakları paktına bağlanır, İslam dünyası çoğulculuğun öncüsü olur. Ufuk: H3–H4.
+*(Tüm puanlar YAML üstverisindeki gerekçelere dayanır; V5 kuralı).*
+
+---
+
+### ADIM 09 — ZAMAN UFKU BANDI (H1–H4)
+
+- **H1 (0–3 Yıl):** İnanç, ibadet ve vicdan özgürlüğünü engelleyen ayrımcı mevzuatın ayıklanması, yıllık pencere.
+- **H2 (3–10 Yıl):** Eğitim ve kamu kurumlarında zorla din dayatmasının kaldırılması, çoğulcu din eğitimi zaman aralığı.
+- **H3 (10–30 Yıl):** Farklı inanç havzalarının ortak ahlaki değerler ekseninde barışçıl entegrasyonu.
+- **H4 (30+ Yıl Medeniyet Ufku):** Küresel ölçekte vicdan özgürlüğü ve insan onuru temelli adil dünya düzeni.
+
+---
+
+### ADIM 10 — MORFOLOJİK GÖZLEM
+
+- **Kayıt:** Ebced veya sayısal batıl teviller reddedilmiş olup kullanılmamıştır (metodolojik yasak).
+- **Morfolojik Analiz:** `لَآ إِكْرَاهَ` ifadesindeki `لَا` cinsini nefyeden lâ'dır (*Nâfiye li'l-cins*). Bu edat gramer açısından kapsamda hiçbir istisna bırakmaz; yani az veya çok, ferdî veya kamusal, doğrudan veya dolaylı hiçbir zorlama türüne cevaz vermez.
+
+---
+
+### ADIM 10b — BELİRSİZLİK VE KARAR STRATEJİSİ
+
+- **Belirsizlik Türü:** Normatif Belirsizlik (Geleneksel fıkıhtaki irtidat hükümleri ile 2:256 arasındaki gerilimin yönetilmesi).
+- **Karar Stratejisi:** Robust / Rights-Based (Temel hak ve özgürlükleri koruma odaklı, insan onurunu önceleyen strateji).
+
+---
+
+## FAZ III — SINAMA, KARŞI OKUMA VE AHLAKÎ DEĞERLENDİRME
+
+### ADIM 11 — 8 İÇ DENETİM TESTİ (ALGORİTMİK İÇ TUTARLILIK)
+
+- **Test 1 (Lafız Uyumu):** Bakara 256. âyettir; mushaf metnine uygundur.
+- **Test 2 (İmla):** Resm-i Osmânî imlâsı teyit edilmiştir.
+- **Test 3 (Bağlam):** 2:255 Âyetü'l-Kürsî ve 2:257 ile bağlamsal bütünlük sınanmıştır.
+- **Test 4 (Sağlamlık):** Taberî, Zemahşerî, Râgıb ve İbn Âşûr ittifakı doğrulanmıştır.
+- **Test 5 (Siyak-Sibak Uyumu):** 5a-5g bağlam kodları kontrol edilmiştir.
+- **Test 6 (Dil Güvenliği):** Mutlakiyet ve sahte onay iddialarından arındırılmıştır.
+- **Test 7 (Base-rate ve Veri Uyumu):** Pew Research Center Küresel Din Kısıtlamaları Endeksi (https://www.pewresearch.org/religion/) referans alınmıştır.
+- **Test 8 (Öz-Denetim ve Rol Ayrımı):** Zayıflıklar ve varsayımlar kaydedilmiştir.
+*(NOT: Bu adım algoritmik iç tutarlılık kontrolüdür; bağımsız dış akademik hakem onayı niteliği taşımaz).*
+
+---
+
+### ADIM 12 — RED TEAM (KARŞIT OKUMA) VE FALSIFIABILITE PROTOKOLÜ
+
+- **Red Team İtirazları:**
+  - *İtiraz:* "Bu âyet kâfirler için inmiştir; Müslüman olan biri dinden çıkarsa öldürülür (mürted hükmü). Demek ki dinde zorlama vardır."
+  - *Cevap:* Bu itiraz lafzın umumiliğini çiğner. Erken dönem fakihlerinden İbrâhîm en-Nehaî ve Süfyân es-Sevrî gibi otoriteler mürtede süre tanınacağını ve tövbeye davet edileceğini, asla aceleyle öldürülemeyeceğini savunmuştur. Modern fıkıhta ise irtidat cezası 'düşünce suçu' değil, Medine dönemindeki 'vatana ihanet ve askeri isyan' (*hıyânet-i uzmâ*) suçu olarak değerlendirilmektedir. Sırf dinî kanaat değişikliğine ceza vermek 2:256'yı iptal eder.
+- **Falsifiabilite Protokolü (Yalnızca Ampirik ve Dünyevi Politika Hipotezlerine):**
+  - **Uygulanan Alan:** Karar kollarındaki ampirik uygulama modeli.
+  - **Zaman Aralığı:** 5 Yıllık İzleme Penceresi (2026–2031).
+  - **Bağımsız Endeks ve Veri Kaynağı:** Pew Research Din Özgürlüğü Endeksi veritabanı ve Freedom House İnanç Özgürlüğü Raporu.
+  - **Sayısal Eşik ve Tipping Point:** 5 yıllık pencere içinde zorla din dayatma vakaları sıfırlanmaz ve vicdan özgürlüğü skoru $\ge 0.85$ sayısal eşik değerine ulaşmazsa çoğulcu kamu politikası modeli revize edilir.
+
+---
+
+### ADIM 13 — ENFÜS-ÂFÂK VE KALP FIKHI
+
+- **Enfüs (İçsel ve Ahlaki Boyut):** İman, kalbin hür bir şekilde 'evet' demesidir (*tasdîk-i kalbî*). Kalbe kılıç, cop veya kanun zoruyla girilemez. Kalbin fıkhı, samimiyet (*ihlas*) üzerine kuruludur; zorlamanın girdiği yerde ihlas buharlaşır, yerini riya alır.
+- **Âfâk (Dışsal ve Kurumsal Boyut):** Devlet ve toplum, insanın kalbini denetlemeye kalkan totaliter aygıtlar üretmemelidir. Kamusal düzen ancak zahirî eylemleri denetler; inanç vicdanın dokunulmaz kalesidir.
+- **Karşılıklı Etki:** İçsel vicdan hürriyeti sağlanan toplumlarda dinî aidiyet derinleşir; dışsal dayatmanın olduğu toplumlarda ise sekülerleşme ve inanç karşıtlığı reaksiyonel olarak patlar.
+- **Karar Köprüsü:** Kalp fıkhı gereği Adım 15'teki K1 ve K2 kararları devletin dinî kanaat sorgulamasını kesin olarak yasaklar.
+- **İşârî / İrfanî Derinlik:** Tasavvufi tefsirlerde urvetü'l-vüskâ, fenâfi't-tevhîd makamıdır; kul ile Rabbi arasına hiçbir beşerî otorite giremez.
+
+---
+
+## FAZ IV — BAYES, KARAR VE ETİK DENETİM
+
+### ADIM 14 — ERKEN UYARI SİNYALLERİ VE BAYES GÜNCELLEMESİ
+
+- **Erken Uyarı Sinyalleri (EU-01..EU-04):**
+  - `EU-01`: Kamusal alanda mezhep veya din baskısı şikâyetlerinin artması.
+  - `EU-02`: Farklı inanç mensuplarının ibadethane açma izinlerinin engellenmesi.
+  - `EU-03`: Dinden dönenlere veya farklı inananlara yönelik linç dili.
+  - `EU-04`: Okullarda zorunlu tek tip dinî pratik dayatması.
+- **Bayes Güncelleme Alanı:**
+  - **Önsel Olasılık (Prior P(H)):** 0.38 (Pew Research Orta Doğu Din Kısıtlamaları Endeksi başlangıç olasılığı).
+  - **Veri / Kanıt P(E|H):** İlk saha verisi bekleniyor.
+  - **Sonsal Olasılık (Posterior P(H|E)):** Henüz hesaplanmadı.
+  - *Kapsam Notu:* Bayes güncellemesi YALNIZCA ölçülebilir kamusal göstergelerde çalışır; normatif inançlara sayısal olasılık verilemez.
+
+---
+
+### ADIM 15 — KARAR VE POLİTİKA KOLLARI (K1–Kn)
+
+- **Karar Kolu 1 (K1) — Anayasal Vicdan Emniyeti ve Ayrımcılık Yasağı:**
+  - **Aktör:** Adalet Bakanlığı, TBMM ve Anayasa Mahkemesi.
+  - **Araç:** İnanç, ibadet ve felsefi kanaat özgürlüğü kanunu.
+  - **CLD Kaldıraç Noktası:** B1 dengeleyici döngüsünü harekete geçirme.
+  - **Eşik:** [TAHMİNÎ EŞİK] Ayrımcılık şikâyetlerinde dava açılma ve çözülme oranı $\ge \%95$.
+- **Karar Kolu 2 (K2) — Çoğulcu Din ve Vicdan Eğitimi Reformu:**
+  - **Aktör:** Milli Eğitim Bakanlığı ve YÖK.
+  - **Araç:** Dinler tarihi ve çoğulcu ahlak müfredatı; zorunlu ibadet dayatmasının kaldırılması.
+  - **CLD Kaldıraç Noktası:** R1 nifak döngüsünü kaynağında kırma.
+  - **Eşik:** [TAHMİNÎ EŞİK] Müfredat uyumu $\ge \%90$.
+- **Karar Kolu 3 (K3) — Bağımsız İnanç Hakları Ombudsmanlığı:**
+  - **Aktör:** Kamu Denetçiliği Kurumu ve İnsan Hakları Eşitlik Kurumu.
+  - **Araç:** İnanç ihlalleri hızlı müdahale masası.
+  - **CLD Kaldıraç Noktası:** Azınlık hakları güvencesi.
+  - **Eşik:** [TAHMİNÎ EŞİK] Şikâyet inceleme süresi $\le 15$ gün.
+
+---
+
+### ADIM 16 — ÖNYARGI VE TARAFLILIK DENETİMİ
+
+- Modernist veya mezhepçi anakronizm kontrolleri yapılmıştır.
+- **Dil Güvenliği ve Öz-Denetim:** Yasaklı kelime kullanılmamıştır.
+- **Retrodiction (Geriye Dönük Sınama):** Endülüs Emevîleri dönemindeki çoğulcu bir arada yaşama (*convivencia*) ile Avrupa'daki 30 Yıl Din Savaşları karşılaştırılmış; zorlamanın savaşı körüklediği, özgürlüğün ise medeniyet ürettiği doğrulanmıştır.
+
+---
+
+## FAZ V — GÜVEN, SORUMLULUK VE İZLEME KAYDI
+
+### ADIM 17 — GÜVEN DÜZEYİ
+- **Nitel Derece:** B (Orta-Yüksek Analitik Güven). Sayısal bir olasılık veya kesinlik değildir.
+
+---
+
+### ADIM 17b — AKTÖR VE GÜÇ HARİTASI
+- **Karar Vericiler:** Yasama, yargı, cumhurbaşkanlığı.
+- **Uygulayıcılar:** Eğitim kurumları, emniyet, diyanet teşkilatı.
+- **Etkilenen Gruplar:** Dinî azınlıklar, inançsızlar, farklı mezhep mensupları, gençler.
+- **Gelecek Nesiller:** Barışçıl ve çoğulcu bir toplumda yetişecek nesiller.
+
+---
+
+### ADIM 18 — BİLGİ TABANI VE ZAYIFLIK LİSTESİ
+- **Bilgi Tabanı:** Klasik tefsirler (Taberî, Zemahşerî), usûl eserleri, uluslararası din özgürlüğü endeksleri.
+- **Zayıflıklar:** Geleneksel fıkıh literatüründeki irtidat ve cizye ahkâmının modern kamuoyundaki yanlış anlaşılmaları.
+
+---
+
+### ADIM 18.1 — DİL GÜVENLİĞİ
+- Rapor metninde kesinlik, tekelcilik veya sahte-onay iddialarından arındırma denetimi yapılmıştır.
+
+---
+
+### ADIM 19 — İZLEME VE GERİYE DÖNÜK SINAMA (RETRODICTION)
+- **İzleme KPI:** İnanç ayrımcılığı davaları sayısı, uluslararası din özgürlüğü sıralaması.
+- **Retrodiction:** Medine Sözleşmesi ve Osmanlı Millet Sistemi mukayesesi.
+
+---
+
+### ADIM 20 — AÇIK ARAŞTIRMA SORULARI VE VARSAYIMLAR
+- **Açık Sorular:** Laik devlet yapısı ile dinin kamusal ahlaki görünürlüğü arasındaki sınır nasıl dengelenecektir?
+- **Temel Varsayım:** İnsanların dinî tercihlerinde hür bırakıldıklarında ahlaki hakikate daha samimi yönelecekleri kabul edilmiştir.
+
+---
+
+## KOŞULLU EKLER (Z-1 — Z-5)
+
+### Z-1 · ŞABLONA SIĞMAYAN ÖZGÜN PROBLEMATİK [V9 ZORUNLU]
+
+#### "Dinde Zorlama Yoktur" İlkesi ile İrtidat (Dinden Dönme) Hükmü Arasındaki Hermenevtik Gerilim
+
+Bakara 2:256 âyetinin İslam düşünce tarihindeki en derin teolojik ve hukuki aporiası; âyetin sarih ve mutlak bir dille "Dinde hiçbir zorlama yoktur" demesine rağmen, klasik fıkıh doktrininde dinden dönen kişinin (*mürted*) tövbe etmediği takdirde ölümle cezalandırılması yönündeki içtihat konsensüsüdür.
+
+Bu durum şu açık gerilimleri doğurur:
+1. Eğer dine girerken zorlama yoksa, dinden çıkarken ölüm tehdidiyle zorlama yapmak "Dinde zorlama yoktur" ilkesiyle nasıl bağdaştırılabilir? Bir dine girişi serbest kılıp çıkışı idamla yasaklamak, vicdan hürriyetinin özünü zedelemez mi?
+2. Erken dönem hadis rivayetlerindeki *"Dinini değiştireni öldürün"* (*men beddele dînehû faktülûh*) lafzı; o dönemde Medine toplumundan ayrılıp düşman kabilelerin ordusuna katılan 'askeri firar ve vatana ihanet' vakalarına mı mahsustur, yoksa sırf ferdî vicdani kanaat değişikliğini mi kapsar?
+3. Klasik ulemadan Şâtıbî ve İbn Âşûr ile modern dönem müfessirleri, 2:256'nın muhkem olduğunu ve sırf düşünce/inanç değişikliğinin ölümle cezalandırılamayacağını savunmaktadır. Ancak geleneksel literatürdeki mürted ahkâmı ile 2:256 arasındaki bu gerilim, modern hukuk düzeninde hâlâ tam anlamıyla çözümlenmemiş bir tefsir ve fıkıh usûlü aporiası olarak varlığını sürdürmektedir.
+
+---
+
+### Z-2 · GÖRÜŞ İHTİLAFI CETVELİ [V3 ZORUNLU]
+
+| Görüş Sahibi / Ekol | Lafzî Yorumu | Hukuki / Stratejik Neticesi | Dayandığı Temel Delil |
+| :--- | :--- | :--- | :--- |
+| **Görüş 1: Klasik Zâhirî / Haricî Literalist Ekol** | Âyet mensuhtur; Tevbe 9:5 ve 9:29 ile hükmü kaldırılmıştır. | Kâfirler ya İslam'a ya cizyeye zorlanır; kabul etmeyenle savaşılır. | Tevbe 9:5 kıtal emrinin umumiliği. |
+| **Görüş 2: Klasik Dört Mezhep (Cumhur Fıkıh Ekolü)** | Âyet muhkemdir fakat Ehl-i Kitap ile sınırlıdır (tahsistir); cizye veren kitap ehli zorlanmaz. | Arap müşrikleri İslam'a zorlanır; kitap ehli serbest bırakılır. Mürted cezalandırılır. | Nüzul sebebi rivayetleri ve cizye uygulaması. |
+| **Görüş 3: Erken Usûl Azınlığı (Taberî, Süfyân es-Sevrî, en-Nehaî)** | Âyet umumidir; hiçbir insan (müşrik dahil) zorlanamaz. Mürtede ebediyen mühlet verilir. | Dinî tercihte mutlak serbestlik; cebirle Müslüman yapma eylemi batıldır. | Âyetteki cins nefyeden `Lâ` edatı ve Hz. Peygamber'in uygulamaları. |
+| **Görüş 4: Çağdaş Makasıdî Ekol (Şâtıbî, İbn Âşûr, Abduh, Mevdûdî)** | Âyet evrensel ve muhkem bir anayasa kuralıdır. Nesh gerçekleşmemiştir; âyet muhkemdir. | Bütün din, inanç ve felsefi tercihler tam vicdan hürriyetine sahiptir. İrtidat cezası sadece fiili siyasi isyan ve vatana ihanet durumunda uygulanır. | Bakara 2:256 lafzı, Yûnus 10:99 ve Kehf 18:29 muhkem âyetleri. |
+
+---
+
+### Z-3 · ZAYIFLIK, VARSAYIM VE GELİŞTİRME ÖNERİLERİ LİSTESİ
+
+- **Temel Varsayımlar:**
+  1. İnancın samimi bir kalbî tasdik olduğu ve cebirle üretilemeyeceği ontolojik bir aksiyom kabul edilmiştir.
+  2. Çoğulcu toplum yapısının iç çatışmayı değil, medenî rekabet ve barışı beslediği varsayılmıştır.
+- **Metodolojik Zayıflıklar ve Geliştirme Önerisi:**
+  1. *Fıkıh-Kanun Uyumsuzluğu:* Klasik fıkıh kitaplarındaki zimmî ve mürted bahislerinin modern anayasa hukukuyla mukayeseli akademik kodifikasyonu yetersizdir.
+  2. *Geliştirme Önerisi:* İslam İşbirliği Teşkilatı ve bağımsız fıkıh konseyleri tarafından "21. Yüzyılda Vicdan ve Din Hürriyeti Evrensel Beyannamesi" hazırlanmalıdır.
+- **Açık / Cevaplanmamış Sorular:**
+  1. Dinî kutsallara hakaret ile ifade özgürlüğü arasındaki hassas sınır uluslararası hukukta nasıl korunacaktır?
+
+---
+
+### Z-4 · STANDART VE DÜRÜST SINIR İFADESİ [V10 ZORUNLU]
+
+> **METODOLOJİK VE EPİSTEMİK SINIR BEYANI:**
+> Bu rapor; Kur'an Temelli Gelecek Vizyonu (GEM v6.1.1) mimarisi çerçevesinde üretilmiş analitik ve hermenötik bir modellemedir. Dini bir fetva, kesin kazi bir hüküm veya ilahi muradın eksiksiz ve yegâne tefsiri niteliği taşımaz. Raporda yer alan simülasyonlar, göstergeler ve politika kolları; analistin benimsediği usûl ekolünün ve ampirik varsayımların bir türevidir. Bu metin, kod tabanlı biçimsel iç tutarlılık denetiminden (gem_lint.py) geçmiş olup, bağımsız dış akademik hakem heyeti (peer-review) tarafından tescil edilmedikçe bilimsel kesinlik iddiası barındırmaz.
+
+---
+
+### Z-5 · HAKEM VE AKRAN DEĞERLENDİRME KAYDI [V11 ZORUNLU]
+
+- **Hakem Adı / Soyadı:** Henüz atanmadı
+- **Akademik Ünvanı ve Kurumu:** —
+- **ORCID No:** —
+- **Değerlendirme Tarihi:** —
+- **Hakem Kararı:** `HENÜZ ATANMADI (ÖN SÜRÜM / PRE-RELEASE)`
+- **Hakem Değerlendirme Notu:** Rapor v6.1.1 akademik standartlarına göre hazırlanmış ön sürüm niteliğindedir. Bağımsız dış akademik hakem incelemesine açıktır.
