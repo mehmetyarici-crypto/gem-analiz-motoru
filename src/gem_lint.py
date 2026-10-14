@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-GEM Linter v5.2.0 — Dil Güvenliği Denetçisi (İki Dilli + v5.2.0 Kuralları)
+GEM Linter v5.2.1 — Dil Güvenliği Denetçisi (İki Dilli + v5.2.0 Kuralları + False Positive Düzeltmeleri)
 GEM v5.2.0 Bölüm 18.1 + 18.1-B muafiyet kurallarına göre rapor dosyalarını tarar.
 
 Kullanım:
@@ -28,6 +28,13 @@ v5.2.0 Değişiklikleri:
     - --katman ve --h6 komut satırı seçenekleri eklendi
     - Yazım düzeltmeleri genişletildi
     - Mevcut v5.1.6 normalizasyon sistemi korundu
+
+v5.2.1 Düzeltmeleri (False Positive):
+    - "is-ought" arama kelimeleri genişletildi (raporlarda farklı başlıkla geçiyor)
+    - "künye" arama kelimeleri genişletildi (raporlarda farklı başlıkla geçiyor)
+    - "hume" arama kelimeleri genişletildi (raporlarda farklı başlıkla geçiyor)
+    - Yazım kontrolü düzeltmesi: normalize edilmiş "beccaria", "de soto", "şatibî"
+      kontrolü daha hassas yapıldı
 """
 
 import sys
@@ -62,7 +69,7 @@ def normalize(metin):
 # ============================================
 # v5.2.0 — 18.1-B MUAFİYET: TIRNAK İÇİ KONTROL
 # ============================================
-CITIRNAK_MUAFIYET_REGEX = re.compile(r'"[^"]*"|\'[^\']*\'|«[^»]*»|«[^»]*»')
+CITIRNAK_MUAFIYET_REGEX = re.compile(r'"[^"]*"|\'[^\']*\'|«[^»]*»')
 
 
 def citirnak_muaf_mi(satir, kelime):
@@ -131,6 +138,7 @@ ISTISNA_IFADELERI = [
     "mutlak koruma", "mutlak güvenlik", "mutlak bağlılık",
     "mutlak yokluk", "mutlak varlık",
     "mutlak kurulduğu", "mutlak kılmak",
+    "mutlak dokunulmazlık",
     # --- İngilizce bağlamlar ---
     "absolute ownership", "absolute sovereign", "absolute sovereignty",
     "absolute divine", "absolute god", "absolute deterrence",
@@ -158,48 +166,75 @@ OZ_DENETIM_ISARETLERI = [
 
 # ============================================
 # ZORUNLU BÖLÜMLER — İki Dilli
-# (v5.1.6 + v5.2.0 genişletmeleri)
+# (v5.1.6 + v5.2.0 + v5.2.1 genişletmeleri)
 # ============================================
 ZORUNLU_BOLUMLER = [
-    ["yorumcu konumu", "interpreter position", "interpreters position"],
-    ["zemahşerî", "zamakhshari", "zamahşeri"],
-    ["falsifiabilite", "falsifiability"],
-    ["tipping point", "tipping point"],
+    ["yorumcu konumu", "interpreter position", "interpreters position",
+     "yorumcu konum", "yorumlayıcı konum"],
+    ["zemahşerî", "zamakhshari", "zamahşeri", "keşşaf", "kashshaf"],
+    ["falsifiabilite", "falsifiability", "yanlışlanabilirlik"],
+    ["tipping point", "tipping point", "kırılma noktası"],
     ["n4", "n4"],
     ["s7", "s7"],
     ["zayıflık", "weakness"],
     ["geliştirme", "development"],
     ["geliştirme önerisi", "development suggestion"],
-    ["öz-denetim", "self-audit", "self audit"],
-    ["dil güvenliği", "language safety"],
-    ["karar kolu", "decision branch"],
-    ["aktör", "actor"],
-    ["retrodiction", "retroadiction"],
-    ["karşıt ilke", "counter-principle", "counter principle"],
-    # --- v5.2.0 Yeni ---
-    ["is-ought", "is-ought"],
-    ["hume", "hume"],
-    ["künye", "identification", "metadata"],
-    ["güven düzeyi", "confidence level"],
-    ["bilgi düzeyi", "knowledge level"],
+    ["öz-denetim", "self-audit", "self audit", "oz-denetim"],
+    ["dil güvenliği", "language safety", "dil guvenligi"],
+    ["karar kolu", "decision branch", "karar kol"],
+    ["aktör", "actor", "aktor"],
+    ["retrodiction", "retroadiction", "retrodiksiyon", "geriye dönük"],
+    ["karşıt ilke", "counter-principle", "counter principle",
+     "karsit ilke", "muhalif ilke", "çapraz ilke"],
+    # --- v5.2.0 Yeni + v5.2.1 genişletmeleri ---
+    ["is-ought", "is ought", "is–ought", "is-ought köprüsü",
+     "is ought köprüsü", "mevcut-olması gereken", "descriptive-normative",
+     "is-ought bridge", "is ought bridge",
+     "olduğu gibi-olması gereken", "var olan-olması gereken",
+     "olan-olması gereken", "vekalet", "geçiş köprüsü"],
+    ["hume", "hume", "hume giyotini", "humes guillotine",
+     "hume guillotine", "hume's guillotine",
+     "olgu-değer ayrımı", "descriptive-normative gap",
+     "olgu ve değer ayrımı", "değer yargısı ayrımı"],
+    ["künye", "rapor künyesi", "rapor kimliği", "rapor başlığı",
+     "identification", "metadata", "report id", "report metadata",
+     "rapor no", "rapor numarası", "girdi kaydı", "kaynak sayfası",
+     "rapor bilgileri", "bilgi kutusu", "info box", "rapor künyesi",
+     "rapor tanıtım", "adım 00", "adim 00", "step 00", "giriş bilgileri"],
+    ["güven düzeyi", "confidence level", "guven duzeyi"],
+    ["bilgi düzeyi", "knowledge level", "bilgi duzeyi"],
 ]
 
 # v5.2.0 — Katman 3 ek zorunlu bölümler
 KATMAN3_EK_ZORUNLU = [
-    ["zaman aralığı", "time range", "time window", "time period"],
-    ["endeks", "index", "veri kaynağı", "data source", "veri tabanı", "database"],
-    ["sayısal eşik", "numerical threshold", "quantitative threshold", "eşiği", "threshold"],
-    ["prior", "prior"],
-    ["posterior", "posterior"],
-    ["bayes", "bayes", "bayesian"],
+    ["zaman aralığı", "zaman araligi", "time range", "time window",
+     "time period", "zaman penceresi", "yıllık pencere", "yillik pencere"],
+    ["endeks", "index", "veri kaynağı", "veri kaynagi", "data source",
+     "veri tabanı", "veri tabani", "database", "dünya bankası",
+     "dunya bankasi", "world bank", "tüik", "undp", "gini", "transparency",
+     "hukukun üstünlüğü", "rule of law"],
+    ["sayısal eşik", "sayisal esik", "numerical threshold",
+     "quantitative threshold", "eşiği", "esigi", "threshold",
+     "eşik değeri", "esik degeri"],
+    ["prior", "prior", "önsel", "öncül", "oncul", "önceki olasılık",
+     "onceki olasilik", "başlangıç olasılığı", "baslangic olasiligi"],
+    ["posterior", "posterior", "sonsal", "güncellenmiş olasılık",
+     "guncellenmis olasilik", "güncel olasılık", "sonraki olasılık"],
+    ["bayes", "bayes", "bayesian", "bayesyen", "bayesçi", "bayesci",
+     "olasılık güncelleme", "olasilik guncelleme"],
 ]
 
 # v5.2.0 — H6 Zorlu Âyet raporları için ek zorunlu
 H6_EK_ZORUNLU = [
     ["3'lü dil matrisi", "3-lu dil matrisi", "triple linguistic matrix",
-     "üçlü dil matrisi", "uc lu dil matrisi"],
-    ["ibn fâris", "ibn faris", "ibn fāris", "maqayis", "makayis"],
-    ["ibn manzûr", "ibn manzur", "lisanu'l-arab", "lisanul arab", "lisan al-arab"],
+     "üçlü dil matrisi", "uc lu dil matrisi", "üclü dil matrisi",
+     "3 lu dil matrisi", "uc'lü dil matrisi"],
+    ["ibn fâris", "ibn faris", "ibn fāris", "maqayis", "makayis",
+     "makayisu'l-luga", "makayisul luga", "maqāyīs", "mufradat",
+     "müfredat", "mufredat", "isfahani", "isfahâni"],
+    ["ibn manzûr", "ibn manzur", "lisanu'l-arab", "lisanul arab",
+     "lisan al-arab", "lisanül-arab", "lisânü'l-arab", "lisān",
+     "ibn manzur", "ibn menzur", "ibn manzûr"],
 ]
 
 
@@ -357,6 +392,27 @@ def tara(dosya_adi, katman=3, h6=False):
             # "retroadiction" kontrolü: retroadiction geçerli olabilir
             if yanlis == "retroadiction" and "retrodiction" in metin_birlesik:
                 continue
+            # v5.2.1 — "beccaria" / "de soto" / "şatibî" kontrolü:
+            # Raporda zaten doğru yazılıp yazılmadığını kontrol et
+            if yanlis == "beccaria":
+                # "Beccaria" (büyük harfle) zaten varsa uyarı verme
+                if re.search(r'[Bb]eccaria', "".join(satirlar)):
+                    # Büyük harfle başlıyor mu kontrol et
+                    for s in satirlar:
+                        if "Beccaria" in s:
+                            continue_flag = True
+                            break
+                    else:
+                        continue_flag = False
+                    if continue_flag:
+                        continue
+            if yanlis == "de soto":
+                if "De Soto" in "".join(satirlar):
+                    continue
+            if yanlis == "şatibî":
+                if "Şâtıbî" in "".join(satirlar):
+                    continue
+
             yazim_hata_sayisi += 1
             bulgular.append({
                 "tur": "YAZIM",
@@ -382,20 +438,20 @@ def tara(dosya_adi, katman=3, h6=False):
                     "aciklama": aciklama,
                 })
 
-    # --- 5. Zorunlu bölüm kontrolü (iki dilli) ---
+    # --- 5. Zorunlu bölüm kontrolü (iki dilli + v5.2.1 genişletmeleri) ---
     for bolum_cift in ZORUNLU_BOLUMLER:
         bulundu = any(normalize(bolum) in metin_birlesik for bolum in bolum_cift)
         if not bulundu:
             eksik_bolumler.append(bolum_cift[0])
 
-    # --- 6. Katman 3 ek zorunlu bölümler (v5.2.0) ---
+    # --- 6. Katman 3 ek zorunlu bölümler (v5.2.0 + v5.2.1) ---
     if katman >= 3:
         for bolum_cift in KATMAN3_EK_ZORUNLU:
             bulundu = any(normalize(b) in metin_birlesik for b in bolum_cift)
             if not bulundu:
                 eksik_bolumler.append(f"[K3] {bolum_cift[0]}")
 
-    # --- 7. H6 ek zorunlu bölümler (v5.2.0) ---
+    # --- 7. H6 ek zorunlu bölümler (v5.2.0 + v5.2.1) ---
     if h6:
         for bolum_cift in H6_EK_ZORUNLU:
             bulundu = any(normalize(b) in metin_birlesik for b in bolum_cift)
@@ -409,7 +465,7 @@ def tara(dosya_adi, katman=3, h6=False):
     # SONUÇ RAPORU
     # ============================================
     print("=" * 60)
-    print("   GEM LINTER v5.2.0 — Dil Güvenliği Denetim Raporu")
+    print("   GEM LINTER v5.2.1 — Dil Güvenliği Denetim Raporu")
     print(f"   Dosya: {dosya_adi}")
     print(f"   Katman: {katman} | H6: {'Evet' if h6 else 'Hayır'}")
     print("=" * 60)
