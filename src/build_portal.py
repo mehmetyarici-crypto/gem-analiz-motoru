@@ -338,6 +338,10 @@ def build_single_report_print_html(r: dict, idx: int) -> str:
           <span>VAKA KODU: <strong>{html_lib.escape(r['case_id'])}</strong></span>
         </div>
         <h1 class="pdf-main-title">{idx}. {html_lib.escape(r['surah'])} Sûresi {html_lib.escape(r['verse'])} — {html_lib.escape(r['topic'])}</h1>
+        <div class="pdf-submeta" style="color:#064e3b; background:#eef5f2; padding:5px 8px; border-radius:4px; border-left:3px solid #856404; margin-bottom:6px; line-height:1.45;">
+          🎓 <strong>Mehmet Yarıcı</strong> — <em>Uludağ Üniversitesi İlahiyat Fakültesi (1989) • T.C. MEB İstanbul Bahçelievler Dede Korkut Anadolu Lisesi</em> (ORCID: 0009-0003-0356-8582)<br>
+          🏛️ <strong>Mehmet Emin Koç</strong> — <em>Azerbaycan Milli İlimler Akademisi (AMEA), Felsefe ve Sosyoloji Enstitüsü</em>
+        </div>
         <div class="pdf-submeta">
           Katman: 3 (Akademik-Derin) &nbsp;|&nbsp; H6 Zorlu Âyet &nbsp;|&nbsp; Güven Derecesi: {html_lib.escape(r['confidence'])} &nbsp;|&nbsp;
           Prior P(S1): %{int(round(r['prior']*100))} → Posterior P(S1|E): %{int(round(r['posterior']*100))}
@@ -649,6 +653,10 @@ def build_single_report_print_html_en(r: dict, idx: int) -> str:
           <span>CASE ID: <strong>{html_lib.escape(r['case_id'])}</strong></span>
         </div>
         <h1 class="pdf-main-title">{idx}. Surah {html_lib.escape(r.get('surah_en', r['surah']))} {html_lib.escape(r['verse'])} — {html_lib.escape(r.get('topic_en', r['topic']))}</h1>
+        <div class="pdf-submeta" style="color:#064e3b; background:#eef5f2; padding:5px 8px; border-radius:4px; border-left:3px solid #856404; margin-bottom:6px; line-height:1.45;">
+          🎓 <strong>Mehmet Yarıcı</strong> — <em>Uludağ University Faculty of Theology (1989) • Republic of Türkiye Ministry of National Education (MEB), Bahçelievler Dede Korkut Anatolian High School</em> (ORCID: 0009-0003-0356-8582)<br>
+          🏛️ <strong>Mehmet Emin Koç</strong> — <em>Azerbaijan National Academy of Sciences (ANAS), Institute of Philosophy and Sociology</em>
+        </div>
         <div class="pdf-submeta">
           Layer: 3 (Academic-Deep) &nbsp;|&nbsp; H6 Complex Verse &nbsp;|&nbsp; Confidence Grade: {html_lib.escape(r['confidence'])} &nbsp;|&nbsp;
           Prior P(S1): {int(round(r['prior']*100))}% → Posterior P(S1|E): {int(round(r['posterior']*100))}%
@@ -689,7 +697,7 @@ def generate_all_pdfs(reports: list):
 
     all_articles = []
     all_articles_en = []
-    rebuild_all = "--rebuild-all" in sys.argv
+    rebuild_all = "--rebuild-all" in sys.argv or "--force-pdf" in sys.argv
     for idx, r in enumerate(reports, start=1):
         # 1. Turkish Report HTML & PDF
         art_html = build_single_report_print_html(r, idx)
@@ -733,26 +741,31 @@ def generate_all_pdfs(reports: list):
             shutil.copy2(out_pdf_en, DESKTOP_PDF_DIR / r["pdf_filename_en"])
             shutil.copy2(out_pdf_en, parent_pdf_dir / r["pdf_filename_en"])
 
-    last_code = reports[-1]["case_id"] if reports else "QV-2026-014"
+    last_code = reports[-1]["case_id"] if reports else "QV-2026-015"
     # Full Turkish Corpus Book PDF
     cover_html = f"""
-    <div style="page-break-after: always; padding: 60px 30px; text-align: center; border: 3px double #0f5132; border-radius: 12px; margin-top: 40px;">
-      <div style="font-size: 12pt; font-weight: 700; color: #856404; letter-spacing: 1.5px; margin-bottom: 16px;">
-        QURAN VISION (v6.2.1) • İSNAD 2 + VERİ BİLİMİ HİBRİT AKADEMİK STANDARDI
+    <div style="page-break-after: always; padding: 48px 28px; text-align: center; border: 3px double #0f5132; border-radius: 12px; margin-top: 24px;">
+      <div style="font-size: 11.5pt; font-weight: 700; color: #856404; letter-spacing: 1.4px; margin-bottom: 14px;">
+        QURAN VISION (v6.2.1) • DOI: 10.5281/zenodo.23391192 • İSNAD 2 + VERİ BİLİMİ AKADEMİK STANDARDI
       </div>
-      <h1 style="font-size: 26pt; color: #091310; font-weight: 800; line-height: 1.25; margin-bottom: 18px;">
+      <h1 style="font-size: 24pt; color: #091310; font-weight: 800; line-height: 1.25; margin-bottom: 14px;">
         Kur'an Vizyonu (Quran Vision)<br>Stratejik Tefsir, Makâsıd ve Medeniyet Öngörü Külliyatı
       </h1>
-      <p style="font-size: 12pt; color: #374151; max-width: 540px; margin: 0 auto 30px;">
+      <div style="text-align: left; max-width: 560px; margin: 0 auto 18px; padding: 12px 16px; background: #eef5f2; border: 1.5px solid #0f5132; border-left: 5px solid #856404; border-radius: 8px; font-size: 9.5pt; line-height: 1.55;">
+        <div style="font-weight: 800; color: #0f5132; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 0.5px;">🎓 AKADEMİK HEYET VE KURUMSAL KÜNYE (AUTHORS & INSTITUTIONAL AFFILIATIONS):</div>
+        <div style="margin-bottom: 4px;">• <strong>Mehmet Yarıcı</strong> — <em>Uludağ Üniversitesi İlahiyat Fakültesi (1989) • T.C. Millî Eğitim Bakanlığı, İstanbul Bahçelievler Dede Korkut Anadolu Lisesi</em> (ORCID: <code>0009-0003-0356-8582</code>)</div>
+        <div>• <strong>Mehmet Emin Koç</strong> — <em>Azerbaycan Milli İlimler Akademisi (AMEA), Felsefe ve Sosyoloji Enstitüsü</em></div>
+      </div>
+      <p style="font-size: 11pt; color: #374151; max-width: 560px; margin: 0 auto 18px;">
         26 Adımlı Analitik Çerçeve, İSNAD 2 Klasik Tefsir Tahkiki, Çağdaş Ampirik (DOI) Göstergeler ve
         Bayesyen Politika Simülasyonlarıyla Hazırlanmış {len(reports)} Tam Rapor (QV-2026-001 – {last_code})
       </p>
-      <div style="text-align: left; max-width: 560px; margin: 25px auto; padding: 16px 20px; background: #f8faf9; border: 1px solid #d1d5db; border-radius: 8px; font-size: 9.5pt;">
-        <strong style="color:#0f5132; display:block; margin-bottom:8px;">İÇİNDEKİLER ({len(reports)} STRATEJİK VAKA RAPORU):</strong>
-        {''.join(f'<div style="margin-bottom:4px;"><b>{i}. {r["case_id"]}</b> — {r["surah"]} {r["verse"]}: {r["topic"]}</div>' for i, r in enumerate(reports, 1))}
+      <div style="text-align: left; max-width: 560px; margin: 16px auto; padding: 14px 18px; background: #f8faf9; border: 1px solid #d1d5db; border-radius: 8px; font-size: 9pt;">
+        <strong style="color:#0f5132; display:block; margin-bottom:6px;">İÇİNDEKİLER ({len(reports)} STRATEJİK VAKA RAPORU):</strong>
+        {''.join(f'<div style="margin-bottom:3px;"><b>{i}. {r["case_id"]}</b> — {r["surah"]} {r["verse"]}: {r["topic"]}</div>' for i, r in enumerate(reports, 1))}
       </div>
-      <div style="font-size: 9pt; color: #6b7280; margin-top: 30px;">
-        Linter Doğrulaması: 0 BLOCK (Kesici Hata) &nbsp;|&nbsp; Kriptografik Bütünlük: Harici .sha256 Manifest
+      <div style="font-size: 8.5pt; color: #6b7280; margin-top: 18px;">
+        Linter Doğrulaması: 0 BLOCK (Kesici Hata) &nbsp;|&nbsp; Kriptografik Bütünlük: Harici .sha256 Manifest &nbsp;|&nbsp; CERN/Zenodo DOI: 10.5281/zenodo.23391192
       </div>
     </div>
     """
@@ -774,23 +787,28 @@ def generate_all_pdfs(reports: list):
 
     # Full English Corpus Book PDF
     cover_en_html = f"""
-    <div style="page-break-after: always; padding: 60px 30px; text-align: center; border: 3px double #0f5132; border-radius: 12px; margin-top: 40px;">
-      <div style="font-size: 12pt; font-weight: 700; color: #856404; letter-spacing: 1.5px; margin-bottom: 16px;">
-        QURAN VISION INSTITUTE (v6.2.1) • ISNAD 2 + EMPIRICAL DATA SCIENCE STANDARD
+    <div style="page-break-after: always; padding: 48px 28px; text-align: center; border: 3px double #0f5132; border-radius: 12px; margin-top: 24px;">
+      <div style="font-size: 11.5pt; font-weight: 700; color: #856404; letter-spacing: 1.4px; margin-bottom: 14px;">
+        QURAN VISION INSTITUTE (v6.2.1) • DOI: 10.5281/zenodo.23391192 • ISNAD 2 + EMPIRICAL DATA SCIENCE STANDARD
       </div>
-      <h1 style="font-size: 26pt; color: #091310; font-weight: 800; line-height: 1.25; margin-bottom: 18px;">
+      <h1 style="font-size: 24pt; color: #091310; font-weight: 800; line-height: 1.25; margin-bottom: 14px;">
         QURAN VISION CORPUS<br>Strategic Tafsir, Maqasid & Civilization Foresight
       </h1>
-      <p style="font-size: 12pt; color: #374151; max-width: 540px; margin: 0 auto 30px;">
+      <div style="text-align: left; max-width: 560px; margin: 0 auto 18px; padding: 12px 16px; background: #eef5f2; border: 1.5px solid #0f5132; border-left: 5px solid #856404; border-radius: 8px; font-size: 9.5pt; line-height: 1.55;">
+        <div style="font-weight: 800; color: #0f5132; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 0.5px;">🎓 ACADEMIC AUTHORS & INSTITUTIONAL AFFILIATIONS:</div>
+        <div style="margin-bottom: 4px;">• <strong>Mehmet Yarıcı</strong> — <em>Uludağ University Faculty of Theology (1989) • Republic of Türkiye Ministry of National Education (MEB), Bahçelievler Dede Korkut Anatolian High School</em> (ORCID: <code>0009-0003-0356-8582</code>)</div>
+        <div>• <strong>Mehmet Emin Koç</strong> — <em>Azerbaijan National Academy of Sciences (ANAS), Institute of Philosophy and Sociology</em></div>
+      </div>
+      <p style="font-size: 11pt; color: #374151; max-width: 560px; margin: 0 auto 18px;">
         26-Step Analytical Framework, ISNAD 2 Classical Tafsir Verification, Contemporary Empirical (DOI) Indicators, and
         Bayesian Policy Simulations Across {len(reports)} Complete Reports (QV-2026-001 – {last_code})
       </p>
-      <div style="text-align: left; max-width: 560px; margin: 25px auto; padding: 16px 20px; background: #f8faf9; border: 1px solid #d1d5db; border-radius: 8px; font-size: 9.5pt;">
-        <strong style="color:#0f5132; display:block; margin-bottom:8px;">TABLE OF CONTENTS ({len(reports)} STRATEGIC CASE REPORTS):</strong>
-        {''.join(f'<div style="margin-bottom:4px;"><b>{i}. {r["case_id"]}</b> — Surah {r.get("surah_en", r["surah"])} {r["verse"]}: {r.get("topic_en", r["topic"])}</div>' for i, r in enumerate(reports, 1))}
+      <div style="text-align: left; max-width: 560px; margin: 16px auto; padding: 14px 18px; background: #f8faf9; border: 1px solid #d1d5db; border-radius: 8px; font-size: 9pt;">
+        <strong style="color:#0f5132; display:block; margin-bottom:6px;">TABLE OF CONTENTS ({len(reports)} STRATEGIC CASE REPORTS):</strong>
+        {''.join(f'<div style="margin-bottom:3px;"><b>{i}. {r["case_id"]}</b> — Surah {r.get("surah_en", r["surah"])} {r["verse"]}: {r.get("topic_en", r["topic"])}</div>' for i, r in enumerate(reports, 1))}
       </div>
-      <div style="font-size: 9pt; color: #6b7280; margin-top: 30px;">
-        Linter Verification: 0 BLOCK Errors &nbsp;|&nbsp; Cryptographic Integrity: External .sha256 Manifest
+      <div style="font-size: 8.5pt; color: #6b7280; margin-top: 18px;">
+        Linter Verification: 0 BLOCK Errors &nbsp;|&nbsp; Cryptographic Integrity: External .sha256 Manifest &nbsp;|&nbsp; CERN/Zenodo DOI: 10.5281/zenodo.23391192
       </div>
     </div>
     """
@@ -844,6 +862,10 @@ def build_html(reports):
 <!-- Google Scholar / Highwire Press Academic Indexing Meta Tags -->
 <meta name="citation_title" content="Quran Vision Corpus (Kur'ân Vizyonu Külliyatı): 26-Step Evidence-Based Strategic Tafsir, Maqasid and Civilization Foresight Corpus (v6.2.1)">
 <meta name="citation_author" content="Yarıcı, Mehmet">
+<meta name="citation_author_institution" content="Uludağ Üniversitesi İlahiyat Fakültesi (1989) • T.C. Millî Eğitim Bakanlığı, İstanbul Bahçelievler Dede Korkut Anadolu Lisesi">
+<meta name="citation_author_orcid" content="0009-0003-0356-8582">
+<meta name="citation_author" content="Koç, Mehmet Emin">
+<meta name="citation_author_institution" content="Azerbaycan Milli İlimler Akademisi (AMEA / ANAS), Felsefe ve Sosyoloji Enstitüsü">
 <meta name="citation_publication_date" content="2026/10/15">
 <meta name="citation_publisher" content="Zenodo / Quran Vision Institute">
 <meta name="citation_doi" content="10.5281/zenodo.23391192">
@@ -868,12 +890,20 @@ def build_html(reports):
   ],
   "inLanguage": ["tr", "en", "ar"],
   "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-  "creator": {{
-    "@type": "Person",
-    "name": "Mehmet Yarıcı",
-    "identifier": "https://orcid.org/0009-0003-0356-8582",
-    "sameAs": "https://orcid.org/0009-0003-0356-8582"
-  }},
+  "creator": [
+    {{
+      "@type": "Person",
+      "name": "Mehmet Yarıcı",
+      "affiliation": "Uludağ Üniversitesi İlahiyat Fakültesi (1989) • T.C. Millî Eğitim Bakanlığı, İstanbul Bahçelievler Dede Korkut Anadolu Lisesi",
+      "identifier": "https://orcid.org/0009-0003-0356-8582",
+      "sameAs": "https://orcid.org/0009-0003-0356-8582"
+    }},
+    {{
+      "@type": "Person",
+      "name": "Mehmet Emin Koç",
+      "affiliation": "Azerbaycan Milli İlimler Akademisi (AMEA / ANAS), Felsefe ve Sosyoloji Enstitüsü"
+    }}
+  ],
   "distribution": [
     {{
       "@type": "DataDownload",
@@ -1897,7 +1927,16 @@ function selectReport(idx) {{
       </div>
     </div>
     <div class="hero-title">${{topicDisp}}</div>
-    <div class="sha-bar">🔒 <strong>${{isEn ? 'External Cryptographic Manifest (SHA-256):' : 'Harici Kriptografik Manifest (SHA-256):'}}</strong> ${{r.sha256}} &nbsp;|&nbsp; 📄 <code>${{activeMdPath}}</code></div>
+    <div style="background:var(--bg-surface); border:1px solid rgba(212,175,55,0.4); border-left:4px solid var(--accent-gold); border-radius:8px; padding:10px 14px; margin-bottom:10px; font-size:12.5px; line-height:1.6;">
+      <div style="font-size:11px; font-weight:700; color:var(--accent-gold); text-transform:uppercase; letter-spacing:0.6px; margin-bottom:4px;">
+        🏛️ ${{isEn ? 'Academic Authors & Institutional Affiliations' : 'Akademik Heyet & Kurumsal Künye'}}
+      </div>
+      <div style="display:flex; flex-direction:column; gap:3px; color:var(--text-primary);">
+        <div>🎓 <strong>Mehmet Yarıcı</strong> — <span style="color:var(--text-secondary);">${{isEn ? 'Uludağ University Faculty of Theology (1989) • Republic of Türkiye Ministry of National Education (MEB), Bahçelievler Dede Korkut Anatolian High School' : 'Uludağ Üniversitesi İlahiyat Fakültesi (1989) • T.C. Millî Eğitim Bakanlığı, İstanbul Bahçelievler Dede Korkut Anadolu Lisesi'}}</span> &nbsp;<a href="https://orcid.org/0009-0003-0356-8582" target="_blank" rel="noopener" style="color:var(--accent-emerald); font-family:'JetBrains Mono',monospace; font-size:11.5px; text-decoration:none;">[ORCID: 0009-0003-0356-8582]</a></div>
+        <div>🏛️ <strong>Mehmet Emin Koç</strong> — <span style="color:var(--text-secondary);">${{isEn ? 'Azerbaijan National Academy of Sciences (ANAS), Institute of Philosophy and Sociology' : 'Azerbaycan Milli İlimler Akademisi (AMEA), Felsefe ve Sosyoloji Enstitüsü'}}</span></div>
+      </div>
+    </div>
+    <div class="sha-bar">🔒 <strong>${{isEn ? 'External Cryptographic Manifest (SHA-256):' : 'Harici Kriptografik Manifest (SHA-256):'}}</strong> ${{r.sha256}} &nbsp;|&nbsp; 📄 <code>${{activeMdPath}}</code> &nbsp;|&nbsp; 🏛️ <strong>DOI:</strong> <a href="https://doi.org/10.5281/zenodo.23391192" target="_blank" rel="noopener" style="color:var(--accent-gold);">10.5281/zenodo.23391192</a></div>
   `;
 
   // Tab 1: Dashboard

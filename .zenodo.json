@@ -1,5 +1,5 @@
 {
-  "title": "Quran Vision Corpus (Kur'ân Vizyonu Külliyatı) v6.2.1: Bilingual 26-Step Strategic Tafsir, Maqasid & Civilization Foresight Corpus (14 Foundational Reports)",
+  "title": "Quran Vision Corpus (Kur'ân Vizyonu Külliyatı) v6.2.1: Bilingual 26-Step Strategic Tafsir, Maqasid & Civilization Foresight Corpus (15 Foundational Reports)",
   "upload_type": "publication",
   "publication_type": "book",
   "publication_date": "2026-10-15",
@@ -11,10 +11,14 @@
     {
       "name": "Yarıcı, Mehmet",
       "orcid": "0009-0003-0356-8582",
-      "affiliation": "Quran Vision Institute / Kur'ân Vizyonu Stratejik Tefsir Külliyatı"
+      "affiliation": "Uludağ Üniversitesi İlahiyat Fakültesi (1989) • T.C. Millî Eğitim Bakanlığı, İstanbul Bahçelievler Dede Korkut Anadolu Lisesi"
+    },
+    {
+      "name": "Koç, Mehmet Emin",
+      "affiliation": "Azerbaycan Milli İlimler Akademisi (AMEA / ANAS), Felsefe ve Sosyoloji Enstitüsü"
     }
   ],
-  "description": "<p><strong>Quran Vision Corpus (v6.2.1)</strong> is an open-access bilingual (Turkish / English) academic corpus and interactive foresight cockpit featuring <strong>14 foundational Quranic verse reports (QV-2026-001 to QV-2026-014)</strong>. Every monograph integrates <strong>71 primary classical Arabic tafsir citations (ISNAD 2nd Edition verified)</strong> with <strong>42 contemporary empirical datasets (APA 7 / DOI: World Bank, UNDP, WJP, UNESCO, SIPRI, OECD)</strong>, 10-year Bayesian policy simulations (2026–2036), falsifiable early-warning thresholds, and 40-minute competency-based seminar/classroom debate lesson plans.</p>",
+  "description": "<p><strong>Quran Vision Corpus (v6.2.1)</strong> is an open-access bilingual (Turkish / English) academic corpus and interactive foresight cockpit featuring <strong>15 foundational Quranic verse reports (QV-2026-001 to QV-2026-015)</strong>. Every monograph integrates <strong>76 primary classical Arabic tafsir citations (ISNAD 2nd Edition verified)</strong> with <strong>45 contemporary empirical datasets (APA 7 / DOI: World Bank, UNDP, WJP, UNESCO, SIPRI, OECD, WHO)</strong>, 10-year Bayesian policy simulations (2026–2036), falsifiable early-warning thresholds, and 40-minute competency-based seminar/classroom debate lesson plans.</p>",
   "keywords": [
     "Quranic Studies",
     "Tafsir",
