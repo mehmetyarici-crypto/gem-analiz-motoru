@@ -55,4 +55,5 @@ The GEM v6.1.1 architecture organizes the 26 analysis steps under **5 Macro Phas
 - **Z-2 — Dispute & Juristic Matrix:** Comparative cross-school table of classical and modern positions.
 - **Z-3 — Weaknesses and Methodological Limitations:** Explicitly acknowledged constraints.
 - **Z-4 — Standard Epistemic Disclaimer:** Mandatory statement affirming the interpretative and non-fatwa nature of the report.
+- **Z-4.5 — Academic Bibliography (ISNAD 2 & APA / DOI Standard):** Dual-layer alphabetical bibliography listing classical Islamic sources under ISNAD 2nd Edition conventions (including death year `d. AH/CE`, editor, publisher) and modern empirical/institutional sources with DOIs/URLs, alongside in-text Markdown footnotes (`[^1]`, `[^2]`).
 - **Z-5 — Peer Review Record:** Independent external scholarly assessment log (`DRAFT`, `PRE-RELEASE`, `EXTERNALLY-REVIEWED`).

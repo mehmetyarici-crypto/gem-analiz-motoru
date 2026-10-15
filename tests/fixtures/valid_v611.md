@@ -11,13 +11,21 @@ confidence_grade: "B"
 status: "PRE-RELEASE"
 sha256_hash: "0000000000000000000000000000000000000000000000000000000000000000"
 
-sources:
+classical_sources:
   - id: "src-zemahseri"
-    author: "Zemahşerî"
+    author: "Zemahşerî, Mahmûd b. Ömer"
+    death_year: "ö. 538/1144"
     work: "el-Keşşâf"
     volume: "1"
     pages: "10-15"
     verification_link: "https://archive.org/test"
+
+modern_sources:
+  - id: "mod-wb"
+    institution: "World Bank"
+    title: "Worldwide Governance Indicators"
+    publication_year: 2025
+    url: "https://databank.worldbank.org"
 
 thresholds:
   - id: "th-01"
@@ -133,6 +141,10 @@ peer_review:
 
 ## Z-4 · STANDART VE DÜRÜST EPİSTEMİK SINIR BEYANI
 > Bu rapor iç tutarlılık denetiminden geçmiş olup bir fetva niteliği taşımaz.
+
+## Z-4.5 · AKADEMİK KAYNAKÇA (İSNAD 2 VE APA / DOI BİBLİYOGRAFYASI)
+- **Zemahşerî, Mahmûd b. Ömer (ö. 538/1144).** *el-Keşşâf*.
+- **World Bank (2025).** *Worldwide Governance Indicators*. https://databank.worldbank.org
 
 ## Z-5 · HAKEM VE AKRAN DEĞERLENDİRME KAYDI
 - Ön sürüm hakem kütüğü.

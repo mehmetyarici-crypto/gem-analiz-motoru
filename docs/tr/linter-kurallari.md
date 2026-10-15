@@ -21,10 +21,13 @@ Bu belge, `src/gem_lint.py` tarafından uygulanan biçimsel denetim kuralların�
 - **L-1802 (UYARI):** Koşullu ifade tespiti (`mutlak`, `absolute`). Nass veya teknik bağlam dışında uyarı verir.
 - **L-1001 (KESİCİ):** Sahte otorite/onay ifadeleri (`akademik olarak tescillenmiş`, `kusursuz analiz motoru`).
 
-### V1–V11 Metodoloji Doğrulama Modülleri
+### V1–V11 Metodoloji ve İSNAD 2 Kaynakça Doğrulama Modülleri
 - **L-0000 / L-0002 (KESİCİ):** v6.x raporlarında YAML frontmatter eksikliği veya YAML sözdizimi parse hatası.
-- **L-0100 / L-0101 (KESİCİ):** V1 Kaynak Kartı eksikliği; müellif ve eser adı zorunludur.
-- **L-0102 / L-0103 (UYARI):** Cilt/sayfa veya dijital tahkik linki eksikliği.
+- **L-0100 / L-0101 (KESİCİ):** V1 Kaynak Kartı eksikliği; klasik kaynaklarda (`classical_sources` / `sources`) müellif ve eser adı zorunludur.
+- **L-0102 / L-0103 (UYARI):** Klasik kaynaklarda cilt/sayfa veya dijital tahkik linki eksikliği.
+- **L-0104 (KESİCİ):** Çağdaş kaynaklarda (`modern_sources`) yazar/kurum veya eser/rapor başlığı eksikliği.
+- **L-0105 (UYARI):** Çağdaş kaynaklarda (`modern_sources`) izlenebilir DOI veya resmi URL bağlantısı eksikliği.
+- **L-0106 (UYARI):** Klasik kaynaklarda (`classical_sources`) İSNAD 2 standardı gereği müellif vefat tarihi (`death_year: "ö. H/M"`) eksikliği.
 - **L-0201 / L-0202 (KESİCİ):** V2 İhlali; metinde `[NAKİL]` ve `[YORUM]` etiketlerinin bulunmaması.
 - **L-0301 (KESİCİ):** V3 İhlali; `Z-2 Görüş İhtilafı Cetveli` eksikliği.
 - **L-0302 (KESİCİ):** Yorumu mutlaklaştıran ifadeler (`tek sonuç`, `başka yorum yok`).
@@ -33,10 +36,11 @@ Bu belge, `src/gem_lint.py` tarafından uygulanan biçimsel denetim kuralların�
 - **L-0404 (KESİCİ):** Harici `.sha256` manifest dosyasındaki özet ile rapor baytlarının uyuşmaması.
 - **L-0502 (KESİCİ):** V5 İhlali; senaryolar için puan gerekçelendirmesinin (`score_justification`) eksik veya yetersiz olması.
 - **L-0602 (KESİCİ):** V6 İhlali; ampirik olmayan eşiklerin `[TAHMİNÎ EŞİK]` etiketi taşımaması.
+- **L-0701 (UYARI):** V7 İhlali; metinde ampirik veri kurumlarına (Dünya Bankası, WJP, UNESCO, TÜİK, SIPRI vb.) atıf yapıldığı halde izlenebilir URL/DOI veya `modern_sources` kaydının bulunmaması.
 - **L-0801 / L-0802 (KESİCİ):** V8 İhlali; Hume Giyotini (is-ought) ve falsifiabilite protokolünün bulunmaması.
 - **L-0901 (KESİCİ):** V9 İhlali; `Z-1 Şablona Sığmayan Özgün Problematik` (Aporia) bölümünün bulunmaması.
 - **L-1002 (KESİCİ):** V10 İhlali; `Z-4 Standart Sınır Beyanı` bölümünün eksikliği.
-- **L-1101 / L-1103 (KESİCİ):** V11 İhlali; `PEER-REVIEWED` statüsünde hakem adı veya hakem değerlendirme raporunun bulunmaması.
+- **L-1101 / L-1103 (KESİCİ):** V11 İhlali; `PEER-REVIEWED` / `EXTERNALLY-REVIEWED` statüsünde hakem adı veya hakem değerlendirme raporunun bulunmaması.
 - **L-2001 / L-2002 / L-2003 (KESİCİ):** 26 zorunlu analiz adımının, Katman 3 ve H6 bölümlerinin eksikliği.
 
 ---
@@ -47,7 +51,7 @@ Bu belge, `src/gem_lint.py` tarafından uygulanan biçimsel denetim kuralların�
 2. **Blok Alıntı ve Kaynak Nakli:** `>` ile başlayan blok alıntılar ve `[NAKİL]` satırları klasik metin aktarımı sayıldığından dil filtresinden muaftır.
 3. **Öz-Denetim Muafiyeti:** Raporun kendi iç denetiminde geçen `"yasaklı kelime kullanılmamıştır"` gibi negatif bildirimler muaf tutulur.
 4. **Bağlamsal İstisnalar:**
-   - **Teolojik Bağlam:** `mutlak mülkiyet`, `mutlak adalet`, `mutlak nass`, `absolute divine` vb.
+   - **Teolojik ve Epistemik Sınır Bağlamı:** `mutlak mülkiyet`, `mutlak adalet`, `mutlak nass`, `mutlaklaştırılamaz`, `mutlaklaştırma`, `absolute divine` vb.
    - **Teknik Bağlam:** `absolute path`, `absolute threshold`, `absolute import`, `mutlak yol`.
 
 ---

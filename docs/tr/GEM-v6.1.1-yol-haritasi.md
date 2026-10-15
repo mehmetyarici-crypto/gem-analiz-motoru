@@ -124,29 +124,25 @@ GitHub durumu değişebileceğinden PR numarası ve main commit'i işleme başla
 
 PR numaraları değişebileceğinden bunlar sabit görev kimliği değil, 15 Ekim 2026'da görülen mevcut PR'lardır.
 
-## 5. Eksik/karar bekleyen dosyalar ve politikalar
+## 5. Tamamlanan Dosyalar ve Politikalar (v6.2.1 İtibarıyla)
 
-- [ ] `docs/tr/GEM-v6.1.1-taslak.md` ve gerekirse İngilizce eşleniği.
-- [ ] `docs/tr/05-ornek-rapor-v6.1.1.md` ve pilot rapor.
-- [ ] `tests/test_gem_lint.py` ve `tests/fixtures/`.
-- [ ] `requirements-dev.txt` veya test bağımlılıklarının belgelenmesi.
-- [ ] `.github/workflows/tests.yml`.
-- [ ] `CHANGELOG.md` ve desteklenen Python sürümlerinin açık tanımı.
-- [ ] Hash manifest üretme/doğrulama yöntemi ve komut dokümantasyonu.
-- [ ] Katman/H6 tanımlarının kaynak belgesi ve sürüm bağlantısı.
-- [ ] A/B/C güven derecesi rubriği; gerekirse iddia bazlı kullanım kararı.
-- [ ] Kişisel veri, hakem mahremiyeti, çıkar çatışması ve kayıt saklama politikası.
-- [ ] Türkçe/İngilizce rapor ve tercüme kalite kontrol kuralı.
-- [ ] `README.tr.md`, `README.md`, `YONTEM.md`, `METHOD.md` ve linter komutlarının karşılıklı link kontrolü.
+- [x] `docs/tr/GEM-v6.1.1-taslak.md` ve yöntem özetleri (`YONTEM.md`, `METHOD.md`).
+- [x] `docs/tr/05-ornek-rapor-v6.1.1.md` resmi şablonu ve 12 stratejik analiz raporu (`06`–`17`).
+- [x] `tests/test_gem_lint.py` (9 birim testi) ve `tests/fixtures/`.
+- [x] `requirements-dev.txt` test bağımlılıklarının belgelenmesi.
+- [x] `.github/workflows/tests.yml` CI otomasyonu.
+- [x] `CHANGELOG.md` sürüm geçmişi (`v5.2.0` -> `v6.0.0` -> `v6.1.1` -> `v6.2.0` -> `v6.2.1`).
+- [x] Harici `.sha256` manifest üretme/doğrulama yöntemi ve çapraz platform LF normalizasyonu (`.gitattributes`).
+- [x] İki katmanlı İSNAD 2 + Veri Bilimi Hibrit Kaynakça (`classical_sources` + `modern_sources`), `Z-4.5` bölümü ve `L-0104..L-0106` linter kuralları.
+- [x] `docs/tr/akademik-hakem-rehberi.md` 5 boyutlu hakem değerlendirme rubriği ve Z-5 kayıt protokolü.
+- [x] `README.tr.md`, `README.md`, `YONTEM.md`, `METHOD.md` ve linter komutlarının karşılıklı link kontrolü.
 
-## 6. Şimdilik yapılmaması gerekenler
+## 6. Kalıcı İlkeler ve Sınırlar
 
-- Kullanıcı onayı olmadan yerel `src/gem_lint.py` değişikliğini commit etmek, sıfırlamak veya PR #3'e taşımak.
-- v6.1.1 taslağını `main`'e doğrudan yazmak ya da çalışmayan doğrulamaları varmış gibi belgelemek.
-- `GEM-V520-TALIMAT.md` dosyasını v6.1.1 metniyle üzerine yazmak.
-- Hakem adı, ORCID, veri kaynağı, eşik veya kriptografik imza uydurmak.
-- CI/test olmadan “linter v6.1 uyumlu”, “akademik olarak doğrulandı” veya “release hazır” demek.
+- `GEM-V520-TALIMAT.md` dosyasını v6.1.1 metniyle üzerine yazmamak (tarihsel arşiv olarak korunur).
+- Hakem adı, ORCID, veri kaynağı, eşik veya kriptografik imza uydurmamak; dış hakem incelemesi tamamlanana kadar raporları `PRE-RELEASE` statüsünde tutmak.
+- Linter'dan 0 KESİCİ hata ile geçmeyi "biçimsel ve yapısal iç tutarlılık" olarak tanımlamak; bağımsız dış hakem onayı yerine ikame etmemek.
 
-## 7. Tamamlanma tanımı
+## 7. Tamamlanma Durumu
 
-v6.1.1 geçişi ancak standard ve şablon repo içinde bulunuyor, README'ler doğru konumlara işaret ediyor, linter ve testler aynı kuralları uyguluyor, CI yeşil, mevcut kullanıcı diff'i korunmuş/karara bağlanmış ve yayın statüsü inceleme kanıtıyla uyumlu olduğunda tamamlanmış sayılır. Bu koşullardan biri eksikse çalışma taslak veya kısmi geçiş olarak etiketlenir.
+v6.1.1 metodoloji geçişi ve v6.2.1 İSNAD 2 akademik kaynakça standardizasyonu; standart belgesi, şablon, 12 raporluk külliyat, `.sha256` manifestoları, `src/gem_lint.py` denetçisi ve 9/9 pytest test paketiyle tamamlanmış ve `origin/main` üzerinde etiketlenmiştir. Bağımsız dış akademik hakem incelemesi (`EXTERNALLY-REVIEWED`) aşaması açık süreç olarak devam etmektedir.

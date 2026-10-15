@@ -1,11 +1,11 @@
 # KUR'AN TEMELLİ GELECEK VİZYONU (GEM) — v6.1.1
 ## Metodoloji, Analiz Mimarisi ve Doğrulama Standardı
 
-- **Sürüm:** `v6.1.1`
+- **Sürüm:** `v6.1.1` (Akademik Atıf & İSNAD 2 Genişletmesi: `v6.2.1`)
 - **Tarih:** 15 Ekim 2026
 - **Önceki sürüm:** `v6.0.0`
-- **Kapsam:** Katman 3; 26 analiz adımı, beş makro faz ve koşullu Z-1..Z-5 ekleri
-- **Durum:** Standart taslağı. v6.1.1 uyumlu linter ve uygulama testleri tamamlanana kadar v6.1.1 uyumlu rapor yayımlanmış sayılmaz.
+- **Kapsam:** Katman 3; 26 analiz adımı, beş makro faz ve Z-1..Z-5 (Z-4.5 Kaynakça dahil) ekleri
+- **Durum:** Aktif Standart (`PRE-RELEASE` Külliyat). `src/gem_lint.py` v6.1.1 denetçisi, 9 otomatik birim testi ve 12 stratejik analiz raporu tamamlanmıştır.
 - **Geçiş notu:** v6.0.0 korunur; bu belge onun yerine geriye dönük olarak uygulanmaz.
 
 ---
@@ -31,7 +31,7 @@ Bu modüller tasarım gereklilikleridir. Herhangi birinin listelenmesi, modülü
 
 | Kod | Gereklilik | Uygulama sınırı |
 |---|---|---|
-| **V1** | Kaynak künyesi ve izlenebilir atıf | Müellif, eser, baskı/muhakkik, cilt-sayfa veya eşdeğer konum ve kullanılan nakil belirtilir. Bağlantı varsa erişim tarihi eklenir. Künye varlığı doğruluk garantisi değildir. |
+| **V1** | Kaynak künyesi ve izlenebilir atıf | İki katmanlı kaynakça (`classical_sources` + `modern_sources`). Klasik kaynaklarda İSNAD 2 vefat tarihi (`death_year: "ö. H/M"`), eser, muhakkik, cilt-sayfa ve Arapça nakil; çağdaş kaynaklarda kurum/yazar, başlık, yıl ve DOI/URL belirtilir. Künye varlığı doğruluk garantisi değildir. |
 | **V2** | Nakil, tercüme ve yorum ayrımı | Doğrudan alıntı `[NAKİL]`, tercüme `[TERCÜME]`, analistin çıkarımı `[YORUM]` etiketiyle ayrılır. Alıntı kaynağa bağlanır. |
 | **V3** | İhtilaf ve alternatif okumalar | H6 veya yorumu anlamlı biçimde etkileyen ihtilaflarda ilgili görüşler ve delilleri gösterilir. İlgisiz görüş türü sırf sayı tamamlamak için eklenmez; kapsam dışı bırakma gerekçelendirilir. |
 | **V4** | Dosya bütünlüğü | SHA-256 yalnızca belirli dosya baytlarının değişmediğini, güvenilir bir referans özetiyle karşılaştırıldığında gösterir. Kaynak doğruluğunu veya yazar kimliğini kanıtlamaz. Özet, kendi içinde değişen rapor alanına yazılmaz; ayrı manifestte veya sürüm kaydında tutulur. |
@@ -60,31 +60,36 @@ date: "YYYY-MM-DD"
 layer: 3
 h6: true
 confidence_grade: "B" # A, B veya C; sayısal olasılık değildir
-release_status: "DRAFT" # DRAFT, PRE-RELEASE, EXTERNALLY-REVIEWED
+status: "PRE-RELEASE" # DRAFT, PRE-RELEASE, EXTERNALLY-REVIEWED
 
-sources: []
+classical_sources: [] # İSNAD 2: id, author, death_year ("ö. H/M"), work, editor, publisher, volume, pages, arabic_quote, verification_link
+modern_sources: []    # APA 7 / DOI: id, institution/author, title, publication_year, url, doi
 thresholds: []
 scenarios: []
 
-review:
-  status: "NOT_REVIEWED"
-  reviewer: null
-  institution: null
+peer_review:
+  status: "PRE-RELEASE"
+  internal_linter_verified: true
+  reviewer_name: null
+  reviewer_institution: null
   review_date: null
-  review_record: null
+  review_notes: null
 ---
 ```
 
 ### Hash kaydı
 
-- Hash, frontmatter içindeki kendisini değiştiren alana yazılmaz.
+- Hash, frontmatter içindeki kendisini değiştiren alana yazılmaz (`0000...` yer tutucu olarak bırakılır).
 - Raporun sabitlenmiş sürümü için SHA-256 ayrı bir `.sha256` manifestinde veya sürüm kontrolü release kaydında saklanır.
-- Üretim ve doğrulama aynı dosya baytları, satır sonu ve kapsam tanımını kullanır. Örnek PowerShell komutu: `Get-FileHash .\report.md -Algorithm SHA256`.
+- Üretim ve doğrulama aynı dosya baytları, satır sonu (LF normalizasyonu) ve kapsam tanımını kullanır.
 - İmzalı commit veya imzalı manifest ek provenance sağlayabilir. İmza anahtarının güven zinciri ayrıca doğrulanmadıkça imza tek başına akademik onay sayılmaz.
 
-### Kaynak kaydı
+### Kaynak kaydı (İSNAD 2 + Veri Bilimi Hibriti)
 
-Her kaynak için uygun olduğu ölçüde `id`, müellif, eser, baskı/muhakkik, yayın bilgisi, cilt-sayfa veya eşdeğer konum, nakil/tercüme ve kalıcı erişim bilgisi tutulur. Her rapor iddiası ilgili kaynak kimliğine bağlanır. Arapça alıntı yalnızca gerçekten kontrol edildiyse eklenir; linter, alıntının asıl eserde bulunduğunu teyit edemez.
+Kaynaklar iki katmanlı olarak tutulur:
+1. **`classical_sources`**: Klasik İslami kaynaklar için `id`, `author`, İSNAD 2 standardında vefat tarihi (`death_year: "ö. H/M"`), `work`, `editor` (tahkik), `publisher`, `publication_place`, `publication_year`, `volume`, `pages`, `arabic_quote` ve `verification_link` / `doi_or_urn` kaydedilir.
+2. **`modern_sources`**: Çağdaş kurumsal ve ampirik kaynaklar için `id`, `institution` / `author`, `title`, `publication_year`, `url` ve `doi` kaydedilir.
+Metin içindeki nakiller ve ampirik iddialar standart Markdown dipnotlarıyla (`[^1]`, `[^2]`) `Z-4.5: AKADEMİK KAYNAKÇA` bölümüne bağlanır. Arapça alıntı yalnızca gerçekten kontrol edildiyse eklenir; linter, alıntının asıl eserde bulunduğunu teyit edemez.
 
 ---
 
@@ -181,14 +186,15 @@ Yayıma geçmeden önce: adımların uygulanabilirliği ve gerekçeleri kontrol 
 
 ---
 
-## 5. Beş ek (Z-1–Z-5)
+## 5. Zorunlu ve koşullu ekler (Z-1–Z-5 ve Z-4.5)
 
-Z ekleri, analiz adımlarına eklenen beş otomatik onay testi değildir. İlgili olduklarında raporun sonunda yer alırlar; uygulanabilir olmadıkları durumda kısa gerekçe verilir.
+Z ekleri, analiz adımlarına eklenen otomatik onay testleri değildir. İlgili olduklarında raporun sonunda yer alırlar; uygulanabilir olmadıkları durumda kısa gerekçe verilir.
 
 - **Z-1 — Özgün problematik:** Adım 02/04 ile bağlantılı, âyete özgü gerilim ve sınırlar.
 - **Z-2 — Görüş ihtilafı:** Adım 04b/06 ile bağlantılı, gerçekten ilgili alternatif görüşler ve dayanakları.
 - **Z-3 — Varsayım, zayıflık ve geliştirme:** Önemli sınırlılıklar, açık sorular ve somut geliştirme adımları.
 - **Z-4 — Sınır beyanı:** Raporun analitik niteliği, fetva olmadığı, çıkarım/varsayım sınırları ve denetim statüsü. Linter sonucu veya hakem incelemesi yapılmadıysa yapılmış gibi yazılmaz.
+- **Z-4.5 — Akademik kaynakça (İSNAD 2 ve APA / DOI bibliyografyası):** Klasik İslami kaynakların İSNAD 2. Edisyon kurallarına göre (müellif, vefat yılı `ö. H/M`, eser, tahkik, cilt, basım yeri/yayınevi/yılı), çağdaş kurumsal ve ampirik kaynakların ise APA 7 / DOI standardına göre alfabetik listelendiği ve metin içi dipnotların (`[^1]`, `[^2]`) yer aldığı bibliyografya bölümü.
 - **Z-5 — İnceleme kaydı:** İnceleyen kişi/kurum (paylaşımı uygunsa), rapor sürümü/hash'i, tarih, karar, kapsam ve inceleme kaydı. PR bağlantısı denetlenebilir iz sağlar ama tek başına hakemlik niteliğini kanıtlamaz. GPG/PGP imzası ek güvence olarak isteğe bağlıdır; kullanılan anahtar ve doğrulama yöntemi açıklanır.
 
 ### Yayın statüleri
@@ -203,16 +209,16 @@ Statü, linter tarafından tek başına yükseltilmez. İnceleme yapan kişinin 
 
 ## 6. Linter ve doğrulama beyanı
 
-Linter yalnızca uygulandığı ve test edildiği kuralları denetler. Anahtar sözcük bulunması bir bölümün bilimsel içeriğini, Arapça alıntının doğruluğunu, nedensel diyagramın geçerliliğini veya hakem bağımsızlığını kanıtlamaz. “Akademik olarak doğrulandı” gibi genel sonuç üretmemelidir.
+Linter (`src/gem_lint.py` v6.1.1) yalnızca uygulandığı ve test edildiği kuralları denetler. Anahtar sözcük bulunması bir bölümün bilimsel içeriğini, Arapça alıntının doğruluğunu, nedensel diyagramın geçerliliğini veya hakem bağımsızlığını kanıtlamaz. “Akademik olarak doğrulandı” gibi genel sonuç üretmez.
 
-Mevcut `gem_lint.py v6.0.0`, bu v6.1.0 standardının uyum aracı olarak kabul edilmez. v6.1 uyumlu sürüm yayımlanana kadar rapor metaverisinde linter sonucu `NOT_VERIFIED` olarak tutulur veya açıkça “v6.1 linter doğrulaması bekleniyor” denir. Uyumlu linter için en az şu kontroller ve testler gerekir:
+Uygulanan kontroller ve testler şunları kapsar:
 
-1. Sürüm kontrollü YAML şema doğrulaması ve tür/enum kontrolleri.
-2. Hash'i belirtilen kapsamda gerçekten hesaplayıp ayrı manifestle karşılaştırma.
+1. Sürüm kontrollü YAML şema doğrulaması ve iki katmanlı kaynakça (`classical_sources` + `modern_sources`, `L-0101..L-0106`) kontrolleri.
+2. Hash'i belirtilen kapsamda hesaplayıp ayrı `.sha256` manifestiyle karşılaştırma (`L-0404`).
 3. Eşik, Bayes ve falsifiabilite alanlarının yapısal tutarlılığını kontrol etme; semantik doğrulama iddiasında bulunmama.
 4. Alıntı muafiyetleri ve dil güvenliği için yanlış pozitif/negatif testleri.
-5. Rapor statüsü ile inceleme kanıtının ayrılması.
-6. Kuralları kapsayan otomatik testler; linter sürümü ve çalıştırma kaydının raporlanan sürüme bağlanması.
+5. Rapor statüsü ile inceleme kanıtının ayrılması (`L-1101..L-1104`).
+6. Kuralları kapsayan otomatik birim testleri (`tests/test_gem_lint.py`).
 
 ---
 
@@ -237,8 +243,14 @@ Mevcut `gem_lint.py v6.0.0`, bu v6.1.0 standardının uyum aracı olarak kabul e
 2. İçsel-ahlakî boyutun her raporda ele alınması; belirli tasavvufî/işârî tevilin ise kaynak ve yöntem bulunduğunda kullanılması ayrıştırıldı.
 3. İçsel değerlendirmeden karar koluna geçişin gerekçelendirilmesi, otomatik normatif veya ampirik çıkarım sayılmaması şartı eklendi.
 
+### v6.2.0 ve v6.2.1 (Külliyat ve Akademik Atıf Standardizasyonu)
+
+1. 12 stratejik analiz raporu (`06`–`17`) v6.1.1 Katman 3 + H6 standardında üretildi ve harici `.sha256` manifestolarıyla doğrulandı.
+2. İSNAD 2 + Veri Bilimi Hibriti iki katmanlı kaynakça (`classical_sources` + `modern_sources`), metin içi dipnotlar (`[^1]`) ve `Z-4.5: AKADEMİK KAYNAKÇA` bölümü sisteme entegre edildi.
+3. `src/gem_lint.py` içine `L-0104`, `L-0105` ve `L-0106` (`death_year`) denetim kuralları eklendi.
+
 ---
 
 ## 8. Uygulama ve sürümleme notu
 
-Bu belge metodolojik standardın v6.1.1 taslağıdır. `gem_lint.py` uyarlaması, testleri, rapor şablonu ve hash manifest aracı tamamlanıp doğrulanmadan linter uyumu veya tam operasyonel geçiş ilan edilmemelidir. Bu uygulama işleri ayrı sürümlenip kaydedilir; v6.0.0 ve v6.1.0 raporları yeni kurallara geriye dönük olarak uyumlu sayılmaz.
+Bu belge metodolojik standardın v6.1.1 / v6.2.1 referans metnidir. `src/gem_lint.py`, test paketi (`tests/test_gem_lint.py`), rapor şablonu (`docs/tr/05-ornek-rapor-v6.1.1.md`) ve 12 raporluk külliyat bu standartla tam hizalanmıştır; v5.2.0 ve v6.0.0 raporları tarihsel arşiv olarak korunur.

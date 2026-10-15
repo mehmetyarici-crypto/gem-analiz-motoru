@@ -55,4 +55,5 @@ GEM v6.1.1 mimarisi, 26 analiz adımını bilişsel bütünlüğü korumak amac�
 - **Z-2 — Görüş İhtilafı Cetveli:** En az 3 farklı klasik mezhep ve çağdaş ekolün karşılaştırmalı matrisi.
 - **Z-3 — Zayıflık ve Geliştirme Önerileri:** Analizin açıkça ilan edilen eksiklikleri.
 - **Z-4 — Standart Sınır Beyanı:** Raporun fetva veya ilahî muradın tek tefsiri olmadığını bildiren zorunlu şerh.
+- **Z-4.5 — Akademik Kaynakça (İSNAD 2 ve APA / DOI Bibliyografyası):** Klasik İslami kaynakların İSNAD 2. Edisyon kurallarıyla (vefat yılı `ö. H/M`, muhakkik, neşir yeri/yılı), çağdaş ampirik kaynakların ise APA 7 / DOI standardıyla alfabetik listelendiği ve metin içi dipnotların (`[^1]`, `[^2]`) çözümlendiği kaynakça bölümü.
 - **Z-5 — Hakem ve Akran Değerlendirme Kaydı:** Dış bağımsız akademik değerlendirme kütüğü (`DRAFT`, `PRE-RELEASE`, `EXTERNALLY-REVIEWED`).
