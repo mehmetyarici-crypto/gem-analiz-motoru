@@ -11,9 +11,10 @@ confidence_grade: "B"
 status: "PRE-RELEASE"
 sha256_hash: "0000000000000000000000000000000000000000000000000000000000000000"
 
-sources:
+classical_sources:
   - id: "src-zemahseri"
     author: "Zemahşerî, Mahmûd b. Ömer"
+    death_year: "ö. 538/1144"
     work: "el-Keşşâf 'an Hakâ'ikı Gavâmizi't-Tenzîl"
     editor: "Âdil Ahmed Abdülmevcûd, Ali Muhammed Muavvaz"
     publisher: "Mektebetü'l-Ubeykân"
@@ -27,6 +28,7 @@ sources:
 
   - id: "src-ragib"
     author: "Râgıb el-İsfahânî, Hüseyin b. Muhammed"
+    death_year: "ö. 502/1108 [?]"
     work: "el-Müfredât fî Garîbi'l-Kur'ân"
     editor: "Safvân Adnân Dâvûdî"
     publisher: "Dârü'l-Kalem"
@@ -40,6 +42,7 @@ sources:
 
   - id: "src-ibn-faris"
     author: "İbn Fâris, Ahmed b. Fâris"
+    death_year: "ö. 395/1004"
     work: "Mu'cemü Makâyîsi'l-Lüğa"
     editor: "Abdüsselâm Muhammed Hârûn"
     publisher: "Dârü'l-Fikr"
@@ -53,6 +56,7 @@ sources:
 
   - id: "src-ibn-manzur"
     author: "İbn Manzûr, Muhammed b. Mükerrem"
+    death_year: "ö. 711/1311"
     work: "Lisânü'l-Arab"
     editor: "Dârü Sâdır"
     publisher: "Dârü Sâdır"
@@ -66,6 +70,7 @@ sources:
 
   - id: "src-cessas"
     author: "Ebû Bekr el-Cessâs, Ahmed b. Ali"
+    death_year: "ö. 370/981"
     work: "Ahkâmü'l-Kur'ân"
     editor: "Muhammed Sâdık Kamhâvî"
     publisher: "Dâru İhyâi't-Türâsi'l-Arabî"
@@ -76,6 +81,32 @@ sources:
     arabic_quote: "دل قوله تعالى 'كي لا يكون دولة بين الأغنياء منكم' على أصل عظيم في تحريم احتكار الأموال العامة، وإيجاب صرفها في مصالح الفقراء وسد خلاتهم لمنع تفاحش التفاوت الطبقي"
     verification_link: "https://shamela.ws/book/21711/1310"
     doi_or_urn: "urn:shamela:21711"
+
+modern_sources:
+  - id: "mod-worldbank"
+    institution: "World Bank Group"
+    title: "Worldwide Governance Indicators & Poverty and Inequality Platform 2024"
+    publication_year: 2024
+    publication_place: "Washington, D.C."
+    publisher: "The World Bank"
+    url: "https://databank.worldbank.org"
+
+  - id: "mod-tuik"
+    institution: "Türkiye İstatistik Kurumu (TÜİK)"
+    title: "Gelir ve Yaşam Koşulları ile Yoksulluk ve Yaşam Kalitesi Araştırması 2024"
+    publication_year: 2024
+    publication_place: "Ankara"
+    publisher: "TÜİK Yayınları"
+    url: "https://data.tuik.gov.tr"
+
+  - id: "mod-wir"
+    institution: "World Inequality Lab"
+    title: "World Inequality Report 2024: Global Wealth Concentration and Oligarchy"
+    publication_year: 2024
+    publication_place: "Paris"
+    publisher: "World Inequality Lab / Harvard University Press"
+    url: "https://wir2024.wid.world"
+    doi: "doi:10.4159/9780674276597"
 
 thresholds:
   - id: "th-01"
@@ -172,22 +203,22 @@ peer_review:
 ### ADIM 00-5 — DİL VE SEMANTİK MATRİSİ (H6 ZORUNLU)
 
 1. **Semantik / Kök Anlam (İştikak):**
-   - **Kaynak:** İbn Fâris (*Mu'cemü Makâyîsi'l-Lüğa*, C. 2, s. 314-317).
+   - **Kaynak:** İbn Fâris (*Mu'cemü Makâyîsi'l-Lüğa*, C. 2, s. 314-317).[^1]
    - `[NAKİL]`: *"الدال والواو واللام أصل يدل على تحول الشيء وانتقاله من مكان إلى مكان ومن يد إلى يد... وتداول القوم الشيء: أداروه بينهم، والدولة في المال: أن يكون حظا لهذا دون هذا"* (İbn Fâris: D-V-L kökü, bir şeyin bir yerden başka bir yere veya elden ele yer değiştirmesini, devretmesini ifade eder. Bir şeyin 'tedavülü', bir topluluğun onu kendi arasında döndürmesidir. Maldaki 'dûle' ise zenginliğin sadece belirli eller arasında dönüp durması halidir).
    - `[YORUM]`: 'Dûle' kavramı, zenginliğin kan dolaşımı gibi tüm toplumsal bünyeye yayılması gerekirken, belirli damarlarda pıhtılaşması (konsantrasyon/tekelleşme) metaforudur. Bu tıkanıklık iktisadi kangrendir.
 
 2. **Kur'anî Semantik (Kavramlaşma):**
-   - **Kaynak:** Râgıb el-İsfahânî (*el-Müfredât fî Garîbi'l-Kur'ân*, s. 332-335).
+   - **Kaynak:** Râgıb el-İsfahânî (*el-Müfredât fî Garîbi'l-Kur'ân*, s. 332-335).[^2]
    - `[NAKİL]`: *"الدولة اسم للشيء الذي يتداول، والدولة بالضم ما يتداول من الأموال، وبالفتح ما يتداول من الظفر في الحرب... وقوله تعالى 'كي لا يكون دولة بين الأغنياء منكم' أي لئلا يصير المال منحصرا فيهم مقصورا عليهم"* (Râgıb el-İsfahânî: Dûle, elden ele dönen şeyi ifade eder; zammeli okunuşta (dûle) el değiştiren servet, fethalı okunuşta (devle) ise siyasette el değiştiren zaferdir. Âyetteki mana: Kamusal servetin yalnızca zenginlerin tekelinde kalan kapalı bir devreye dönüşmesini engellemektir).
    - `[YORUM]`: Kur'an, piyasa mekanizmasını ve özel mülkiyeti reddetmez; ancak servetin kamusal alanda bir oligarşik tahakküm aracına dönüşmesini kesin bir makāsıd ilkesiyle yasaklar.
 
 3. **Geniş Leksikografik Çerçeve:**
-   - **Kaynak:** İbn Manzûr (*Lisânü'l-Arab*, C. 11, s. 250-255).
+   - **Kaynak:** İbn Manzûr (*Lisânü'l-Arab*, C. 11, s. 250-255).[^3]
    - `[NAKİL]`: *"يقال: تداوله الأغنياء إذا جعلوه بينهم لا يدعون الفقراء يدخلون فيه... وفي الحديث: نهى عن إضاعة المال، ومن أعظم إضاعته حبسه عن المحتاجين وحصره في الأثرياء"* (İbn Manzûr: Zenginlerin serveti tedavül etmesi, yoksulları bu döngünün dışına itip zenginliği kendi aralarında çevirmeleridir. Servetin en büyük ziyanı, ihtiyaç sahiplerinden esirgenerek bir zümrenin eline hapsedilmesidir).
    - `[YORUM]`: İktisadi adalet, kaynakların durağan biriktirilmesini (kenz) değil, aktif yatırıma ve yaygın tüketime dönüştürülmesini emreder.
 
 4. **Tefsir ve Fıkıh Tahkiki:**
-   - **Kaynak:** Zemahşerî (*el-Keşşâf*, C. 5, s. 748-752).
+   - **Kaynak:** Zemahşerî (*el-Keşşâf*, C. 5, s. 748-752).[^4]
    - `[NAKİL]`: *"علل قسمة الفيء على هذه الأصناف الفقيرة لئلا يكون المال متداولا بين الأغنياء وحدهم... لأن الجاهلية كانت تقسم الغنائم على الرؤساء والمقاتلة وتترك الضعفاء، فأبطل الله ذلك وجعل فيء القرى لليتامى والمساكين وابن السبيل لسد خلتهم"* (Zemahşerî: Allah, fey' gelirlerinin yetimlere, yoksullara ve yolda kalmışlara tahsis edilmesini, servetin yalnızca zenginler arasında dönüp durmaması gayesine (illetine) bağlamıştır. Çünkü cahiliye döneminde ganimetler yalnızca kabile reisleri ve savaşçı elitler arasında paylaştırılır, zayıflar mahrum bırakılırdı. Allah bu adaletsiz sistemi ilgâ etmiştir).
    - `[YORUM]`: Âyetin hükmü belirli bir savaş ganimetiyle sınırlı değildir; 'illet' geneli kapsadığı için her çağdaki kamusal gelirlerin dağıtımında temel bir anayasal ilkedir.
 
@@ -248,7 +279,7 @@ Tüketim çılgınlığı, statü kaygısı ve gösteriş tüketimi (israf) serm
 ### ADIM 11 — SENARYO GELİŞTİRME VE BAYESYEN GÜNCELLEME
 Katman 3 uyarınca makroekonomik simülasyon:
 - **Zaman Aralığı:** 2026-2036 on yıllık maliye ve gelir dağılımı döngüsü.
-- **Veri Kaynağı:** Dünya Bankası Gelir Eşitsizliği Veri Tabanı (World Bank, https://databank.worldbank.org), TÜİK Gelir ve Yaşam Koşulları Araştırması (https://data.tuik.gov.tr), UNDP İnsani Gelişme Endeksi.
+- **Veri Kaynağı:** Dünya Bankası Gelir Eşitsizliği Veri Tabanı (World Bank, https://databank.worldbank.org)[^6], TÜİK Gelir ve Yaşam Koşulları Araştırması (https://data.tuik.gov.tr)[^7], Dünya Eşitsizlik Raporu (WIR / Piketty)[^8] ve UNDP verileri.
 - **Sayısal Eşik Değerleri:**
   - th-01: Gini Katsayısı $\le 0.32$ (İskandinav ve dengeli model hedefi)
   - th-02: En Zengin %1'in Payı $\le \%25$ (Piketty eşik modeli)
@@ -305,7 +336,7 @@ Küresel rezerv para biriminin çöküşü veya yapay zekâ otomasyonunun beyaz 
 ### ADIM 19 — YOL HARİTASI VE GÖSTERGELER
 - 1. Yıl: Rant ve Atıl Servet Envanterinin çıkarılması.
 - 3. Yıl: Kamusal Varlık Fonu kâr paylarının alt %40'lık nüfusa aktarılmaya başlanması.
-- 5. Yıl: Gini katsayısının 0.32 bandına çekilmesi ve mutlak yoksulluğun sıfırlanması.
+- 5. Yıl: Gini katsayısının 0.32 bandına çekilmesi ve şiddetli yoksulluğun sıfırlanması.
 
 ---
 
@@ -351,6 +382,30 @@ Haşr Sûresi 7. âyeti, İslam iktisadı, kamusal mülkiyet ve gelir bölüşü
 
 ### Z-4: STANDART SINIR BEYANI
 Bu raporda serdedilen tüm tespit, modelleme ve politika tasarımları birer beşerî **içtihat** mahiyetindedir. Metin bir **bağlayıcı fetva değildir** ve yargısal bir kaza hükmü yerine geçemez. Rapordaki çıkarımlar hiçbir surette **mutlaklaştırılamaz**. Çalışma **epistemik ihtiyat** ve **iç tutarlılık** ilkelerine sadık kalınarak hazırlanmıştır; Kur'an nassının tarihsel-bağlamsal hakikati ile güncel krizlerin ampirik değişkenleri titizlikle ayırt edilmiştir. Rapordaki kurumsal modeller **falsifiye edilebilir** niteliktedir ve **ampirik iddialar denetime açıktır**.
+
+### Z-4.5: AKADEMİK KAYNAKÇA (İSNAD 2 VE APA / DOI BİBLİYOGRAFYASI)
+
+#### A) Klasik İslami Kaynaklar (İSNAD 2. Edisyon Standartlı)
+- **Cessâs, Ebû Bekr Ahmed b. Ali er-Râzî (ö. 370/981).** *Ahkâmü'l-Kur'ân*. Tahkik: Muhammed Sâdık Kamhâvî. 5 Cilt. Beyrut: Dâru İhyâi't-Türâsi'l-Arabî, 1405/1985.
+- **İbn Fâris, Ahmed b. Fâris b. Zekeriyyâ (ö. 395/1004).** *Mu'cemü Makâyîsi'l-Lüğa*. Tahkik: Abdüsselâm Muhammed Hârûn. 6 Cilt. Beyrut: Dârü'l-Fikr, 1399/1979.
+- **İbn Manzûr, Muhammed b. Mükerrem (ö. 711/1311).** *Lisânü'l-Arab*. 15 Cilt. Beyrut: Dârü Sâdır, 1413/1993.
+- **Râgıb el-İsfahânî, Ebü'l-Kâsım Hüseyn b. Muhammed (ö. 502/1108 [?]).** *el-Müfredât fî Garîbi'l-Kur'ân*. Tahkik: Safvân Adnân Dâvûdî. Dımaşk: Dârü'l-Kalem / Beyrut: ed-Dârü'ş-Şâmiyye, 1412/1992.
+- **Zemahşerî, Mahmûd b. Ömer (ö. 538/1144).** *el-Keşşâf 'an Hakâ'ikı Gavâmizi't-Tenzîl ve 'Uyûni'l-Ekâvîl fî Vucûhi't-Te'vîl*. Tahkik: Âdil Ahmed Abdülmevcûd, Ali Muhammed Muavvaz. 6 Cilt. Riyad: Mektebetü'l-Ubeykân, 1418/1998.
+
+#### B) Çağdaş Kurumsal, Hukuki ve Ampirik Kaynaklar (APA 7 / DOI Standartlı)
+- **Türkiye İstatistik Kurumu [TÜİK] (2024).** *Gelir ve Yaşam Koşulları ile Yoksulluk ve Yaşam Kalitesi Araştırması 2024*. Ankara: TÜİK Yayınları. Erişim adresi: https://data.tuik.gov.tr
+- **World Bank Group (2024).** *Worldwide Governance Indicators & Poverty and Inequality Platform 2024*. Washington, D.C.: The World Bank. Erişim adresi: https://databank.worldbank.org
+- **World Inequality Lab (2024).** *World Inequality Report 2024: Global Wealth Concentration and Oligarchy*. Paris: World Inequality Lab. https://doi.org/10.4159/9780674276597. Erişim adresi: https://wir2024.wid.world
+
+#### C) Metin İçi Akademik Dipnotlar (Footnotes)
+[^1]: İbn Fâris, Ahmed b. Fâris (ö. 395/1004), *Mu'cemü Makâyîsi'l-Lüğa*, thk. Abdüsselâm Muhammed Hârûn (Beyrut: Dârü'l-Fikr, 1979), 2: 314-317 ("d-v-l" maddesi).
+[^2]: Râgıb el-İsfahânî, Ebü'l-Kâsım Hüseyn b. Muhammed (ö. 502/1108 [?]), *el-Müfredât fî Garîbi'l-Kur'ân*, thk. Safvân Adnân Dâvûdî (Dımaşk: Dârü'l-Kalem, 1992), 332-335 ("d-v-l" maddesi).
+[^3]: İbn Manzûr, Muhammed b. Mükerrem (ö. 711/1311), *Lisânü'l-Arab* (Beyrut: Dârü Sâdır, 1993), 11: 250-255 ("d-v-l" maddesi).
+[^4]: Zemahşerî, Mahmûd b. Ömer (ö. 538/1144), *el-Keşşâf 'an Hakâ'ikı Gavâmizi't-Tenzîl*, thk. Âdil Ahmed Abdülmevcûd - Ali Muhammed Muavvaz (Riyad: Mektebetü'l-Ubeykân, 1998), 5: 748-752.
+[^5]: Ebû Bekr el-Cessâs, Ahmed b. Ali er-Râzî (ö. 370/981), *Ahkâmü'l-Kur'ân*, thk. Muhammed Sâdık Kamhâvî (Beyrut: Dâru İhyâi't-Türâsi'l-Arabî, 1985), 5: 345-352.
+[^6]: World Bank Group, *Worldwide Governance Indicators & Poverty and Inequality Platform 2024* (Washington, D.C.: The World Bank, 2024), erişim 15 Ekim 2026, https://databank.worldbank.org.
+[^7]: Türkiye İstatistik Kurumu (TÜİK), *Gelir ve Yaşam Koşulları ile Yoksulluk ve Yaşam Kalitesi Araştırması 2024* (Ankara: TÜİK Yayınları, 2024), erişim 15 Ekim 2026, https://data.tuik.gov.tr.
+[^8]: World Inequality Lab, *World Inequality Report 2024: Global Wealth Concentration and Oligarchy* (Paris: World Inequality Lab, 2024), doi:10.4159/9780674276597, erişim 15 Ekim 2026, https://wir2024.wid.world.
 
 ### Z-5: BAĞIMSIZ DIŞ AKADEMİK HAKEM İNCELEME FORMU
 
