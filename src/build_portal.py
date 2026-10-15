@@ -147,23 +147,99 @@ def format_inline_md_py(text: str) -> str:
     return s
 
 
+def format_z5_yaml_py(yaml_text: str) -> str:
+    data = {}
+    for line in yaml_text.splitlines():
+        if ":" in line:
+            k, v = line.split(":", 1)
+            k = k.strip()
+            v = v.strip().strip('"').strip("'")
+            if v:
+                data[k] = v
+    rapor_id = html_lib.escape(data.get("rapor_id", "—"))
+    sure_ayet = html_lib.escape(data.get("sure_ayet", "—"))
+    tarih = html_lib.escape(data.get("tarih", "2026-10-15"))
+    uzmanlik = html_lib.escape(data.get("uzmanlik_alani", "Tefsir / İslam Hukuku / Sosyal Bilimler"))
+    notu = html_lib.escape(data.get(
+        "derkenar_notu",
+        "Rapor Quran Vision v6.1.1 ve v6.2.1 İSNAD 2 akademik atıf standartlarına tam uyumlu teknik ön sürüm olarak üretilmiş olup, bağımsız dış akademik hakem incelemesine hazır durumdadır."
+    ))
+    return f"""
+    <table>
+      <thead>
+        <tr>
+          <th style="width:38%;">Akademik Hakem Değerlendirme Boyutu</th>
+          <th style="width:42%;">Kapsam ve Denetim Ölçütü</th>
+          <th style="width:20%;">Rubrik Puanı</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Künye & Durum</strong></td>
+          <td>Rapor: <strong>{rapor_id} ({sure_ayet})</strong> • Tarih: {tarih} • Uzmanlık: {uzmanlik}</td>
+          <td><strong>ÖN SÜRÜM (Açık Hakemlik)</strong></td>
+        </tr>
+        <tr>
+          <td><strong>1. Metin ve Klasik Tahkik (İSNAD 2)</strong></td>
+          <td>Arapça ibare doğruluğu, cilt/sayfa tahkiki ve <code>[NAKİL]</code> / <code>[YORUM]</code> ayrımı</td>
+          <td>— / 20</td>
+        </tr>
+        <tr>
+          <td><strong>2. Sosyo-Politik ve Kriz Analizi</strong></td>
+          <td>Aktör haritası, kırılma noktası (N4) ve tarihsel retrodiction tutarlılığı</td>
+          <td>— / 20</td>
+        </tr>
+        <tr>
+          <td><strong>3. Dil Güvenliği ve Tarafsızlık</strong></td>
+          <td>Mezhebî/ideolojik indirgemecilikten uzak, kapsayıcı ve akademik üslup</td>
+          <td>— / 20</td>
+        </tr>
+        <tr>
+          <td><strong>4. Falsifiabilite ve Hume Giyotini</strong></td>
+          <td>Olgu-değer ayrımı, yanlışlanabilir eşikler (th-01..03) ve DOI veri uyumu</td>
+          <td>— / 20</td>
+        </tr>
+        <tr>
+          <td><strong>5. Kurumsal Tasarım ve Özgünlük</strong></td>
+          <td>Uygulanabilir politika kolları, TYMM pedagojik uyumu ve Z-1 Aporia derinliği</td>
+          <td>— / 20</td>
+        </tr>
+        <tr>
+          <td><strong>TOPLAM AKADEMİK SKOR</strong></td>
+          <td><strong>Dış Hakem Kararı:</strong> Bağımsız Akademik Hakem Değerlendirmesine Açık</td>
+          <td><strong>— / 100</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Editoryal Derkenar Notu</strong></td>
+          <td colspan="2">{notu}</td>
+        </tr>
+      </tbody>
+    </table>
+    """
+
+
 def render_markdown_py(md: str) -> str:
     lines = md.split("\n")
     out = []
     in_code = False
+    code_buf = []
     in_table = False
 
     for line in lines:
         if line.strip().startswith("```"):
             if not in_code:
                 in_code = True
-                out.append("<pre><code>")
+                code_buf = []
             else:
                 in_code = False
-                out.append("</code></pre>")
+                raw_code = "\n".join(code_buf)
+                if "hakem_degerlendirme_protokolu:" in raw_code:
+                    out.append(format_z5_yaml_py(raw_code))
+                else:
+                    out.append("<pre><code>" + html_lib.escape(raw_code) + "</code></pre>")
             continue
         if in_code:
-            out.append(html_lib.escape(line) + "\n")
+            code_buf.append(line)
             continue
 
         if line.strip().startswith("|"):
@@ -1236,6 +1312,8 @@ body {{
   padding: 14px 18px;
   border-radius: 10px;
   overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
   font-family: 'JetBrains Mono', monospace;
   font-size: 12.5px;
   margin: 14px 0;
@@ -2460,10 +2538,89 @@ function formatInlineMd(str) {{
     .replace(/\\[\\^(\\d+)\\]/g, '<sup style="color:var(--accent-gold); font-weight:700;">[$1]</sup>');
 }}
 
+function formatZ5YamlJs(rawYaml) {{
+  const data = {{}};
+  rawYaml.split('\\n').forEach(line => {{
+    const idx = line.indexOf(':');
+    if (idx > -1) {{
+      const k = line.slice(0, idx).trim();
+      const v = line.slice(idx + 1).trim().replace(/^["']|["']$/g, '');
+      if (v) data[k] = v;
+    }}
+  }});
+  const raporId = data.rapor_id || '—';
+  const sureAyet = data.sure_ayet || '—';
+  const tarih = data.tarih || '2026-10-15';
+  const uzmanlik = data.uzmanlik_alani || 'Tefsir / İslam Hukuku / Sosyal Bilimler';
+  const notu = data.derkenar_notu || 'Rapor Quran Vision v6.1.1 ve v6.2.1 İSNAD 2 akademik atıf standartlarına tam uyumlu teknik ön sürüm olarak üretilmiş olup, bağımsız dış akademik hakem incelemesine hazır durumdadır.';
+  return `
+    <div style="border:1px solid var(--border); background:var(--bg-surface); border-radius:12px; padding:16px 18px; margin:14px 0;">
+      <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-bottom:12px;">
+        <div>
+          <span class="badge badge-gold">🏛️ AKADEMİK DÜRÜSTLÜK & AÇIK HAKEMLİK PROTOKOLÜ (Z-5)</span>
+          <span class="badge badge-emerald" style="margin-left:6px;">${{raporId}} • ${{sureAyet}}</span>
+        </div>
+        <button class="btn btn-gold" style="padding:5px 12px; font-size:12px;" onclick="openFeedbackTab()">✍️ Bu Rapor İçin Hakem Şerhi / Değerlendirme Gönder</button>
+      </div>
+      <table style="margin:8px 0;">
+        <thead>
+          <tr>
+            <th style="width:36%;">Akademik Değerlendirme Boyutu</th>
+            <th style="width:46%;">Denetim Kapsamı ve Metodolojik Ölçüt</th>
+            <th style="width:18%;">Rubrik Puanı</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Künye & Hakemlik Statüsü</strong></td>
+            <td>Tarih: <strong>${{tarih}}</strong> • Uzmanlık Alanı: <em>${{uzmanlik}}</em></td>
+            <td><span class="badge badge-gold">AÇIK HAKEMLİK</span></td>
+          </tr>
+          <tr>
+            <td><strong>1. Metin ve Klasik Tahkik (İSNAD 2)</strong></td>
+            <td>Arapça ibare doğruluğu, cilt/sayfa tahkiki ve <code>[NAKİL]</code> / <code>[YORUM]</code> ayrımı</td>
+            <td><strong>— / 20</strong></td>
+          </tr>
+          <tr>
+            <td><strong>2. Sosyo-Politik ve Kriz Analizi</strong></td>
+            <td>Aktör haritası, kırılma noktası (N4) ve tarihsel retrodiction tutarlılığı</td>
+            <td><strong>— / 20</strong></td>
+          </tr>
+          <tr>
+            <td><strong>3. Dil Güvenliği ve Tarafsızlık</strong></td>
+            <td>Mezhebî/ideolojik indirgemecilikten uzak, kapsayıcı ve akademik üslup</td>
+            <td><strong>— / 20</strong></td>
+          </tr>
+          <tr>
+            <td><strong>4. Falsifiabilite ve Hume Giyotini</strong></td>
+            <td>Olgu-değer ayrımı, yanlışlanabilir eşikler (th-01..03) ve DOI veri uyumu</td>
+            <td><strong>— / 20</strong></td>
+          </tr>
+          <tr>
+            <td><strong>5. Kurumsal Tasarım ve Özgünlük</strong></td>
+            <td>Uygulanabilir politika kolları, TYMM pedagojik uyumu ve Z-1 Aporia derinliği</td>
+            <td><strong>— / 20</strong></td>
+          </tr>
+          <tr>
+            <td><strong>TOPLAM AKADEMİK SKOR</strong></td>
+            <td><strong>Dış Hakem Kararı:</strong> Bağımsız Akademik Hakem Değerlendirmesine Açık</td>
+            <td><strong style="color:var(--accent-gold);">— / 100</strong></td>
+          </tr>
+          <tr>
+            <td><strong>Editoryal Derkenar Notu</strong></td>
+            <td colspan="2" style="color:var(--text-secondary); line-height:1.6;">${{notu}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  `;
+}}
+
 function renderMarkdown(md) {{
   const lines = md.split('\\n');
   let html = '';
   let inCode = false;
+  let codeBuf = [];
   let inTable = false;
 
   for (let i = 0; i < lines.length; i++) {{
@@ -2472,15 +2629,21 @@ function renderMarkdown(md) {{
     if (line.trim().startsWith('```')) {{
       if (!inCode) {{
         inCode = true;
-        html += '<pre><code>';
+        codeBuf = [];
       }} else {{
         inCode = false;
-        html += '</code></pre>';
+        const rawCode = codeBuf.join('\\n');
+        if (rawCode.includes('hakem_degerlendirme_protokolu:')) {{
+          html += formatZ5YamlJs(rawCode);
+        }} else {{
+          const escaped = rawCode.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+          html += `<pre><code>${{escaped}}</code></pre>`;
+        }}
       }}
       continue;
     }}
     if (inCode) {{
-      html += line.replace(/</g, '&lt;').replace(/>/g, '&gt;') + '\\n';
+      codeBuf.push(line);
       continue;
     }}
 
