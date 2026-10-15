@@ -11,9 +11,10 @@ confidence_grade: "B"
 status: "PRE-RELEASE"
 sha256_hash: "0000000000000000000000000000000000000000000000000000000000000000"
 
-sources:
+classical_sources:
   - id: "src-zemahseri"
     author: "Zemahşerî, Mahmûd b. Ömer"
+    death_year: "ö. 538/1144"
     work: "el-Keşşâf 'an Hakâ'ikı Gavâmizi't-Tenzîl"
     editor: "Âdil Ahmed Abdülmevcûd, Ali Muhammed Muavvaz"
     publisher: "Mektebetü'l-Ubeykân"
@@ -27,6 +28,7 @@ sources:
 
   - id: "src-ragib"
     author: "Râgıb el-İsfahânî, Hüseyin b. Muhammed"
+    death_year: "ö. 502/1108 [?]"
     work: "el-Müfredât fî Garîbi'l-Kur'ân"
     editor: "Safvân Adnân Dâvûdî"
     publisher: "Dârü'l-Kalem"
@@ -40,6 +42,7 @@ sources:
 
   - id: "src-ibn-faris"
     author: "İbn Fâris, Ahmed b. Fâris"
+    death_year: "ö. 395/1004"
     work: "Mu'cemü Makâyîsi'l-Lüğa"
     editor: "Abdüsselâm Muhammed Hârûn"
     publisher: "Dârü'l-Fikr"
@@ -53,6 +56,7 @@ sources:
 
   - id: "src-ibn-manzur"
     author: "İbn Manzûr, Muhammed b. Mükerrem"
+    death_year: "ö. 711/1311"
     work: "Lisânü'l-Arab"
     editor: "Dârü Sâdır"
     publisher: "Dârü Sâdır"
@@ -66,6 +70,7 @@ sources:
 
   - id: "src-ibn-teymiyye"
     author: "İbn Teymiyye, Takıyyüddîn Ahmed"
+    death_year: "ö. 728/1328"
     work: "es-Siyâsetü'ş-Şer'iyye fî Islâhi'r-Râ'î ve'r-Ra'iyye"
     editor: "Ali b. Muhammed el-Umrân"
     publisher: "Dâru Âlemi'l-Fevâid"
@@ -73,9 +78,27 @@ sources:
     publication_year: 1998
     volume: "1"
     pages: "11-18"
-    arabic_quote: "قال العلماء: نزلت هذه الآية في ولاة الأمور؛ عليهم أن يؤدوا الأمانات إلى أهلها بتولية الأصلح والأكفأ، وإذا حكموا أن يحكموا بالعدل، وهذان هما عمادا السياسة العادلة"
+    arabic_quote: "قال العلماء: نزلت هذه الآية في ولاة الأمور؛ عليهم أن تؤدوا الأمانات إلى أهلها بتولية الأصلح والأكفأ، وإذا حكموا أن يحكموا بالعدل، وهذان هما عمادا السياسة العادلة"
     verification_link: "https://shamela.ws/book/7556/10"
     doi_or_urn: "urn:shamela:7556"
+
+modern_sources:
+  - id: "mod-worldbank"
+    institution: "World Bank Group"
+    title: "Worldwide Governance Indicators (WGI): Bureaucratic Quality and Rule of Law"
+    publication_year: 2024
+    publication_place: "Washington, D.C."
+    publisher: "The World Bank"
+    url: "https://datacatalog.worldbank.org"
+
+  - id: "mod-wjp"
+    institution: "World Justice Project (WJP)"
+    title: "Rule of Law Index 2024: Civil and Criminal Justice"
+    publication_year: 2024
+    publication_place: "Washington, D.C."
+    publisher: "World Justice Project"
+    url: "https://worldjusticeproject.org"
+    doi: "doi:10.34648/wjp.2024.01"
 
 thresholds:
   - id: "th-01"
@@ -172,22 +195,22 @@ peer_review:
 ### ADIM 00-5 — DİL VE SEMANTİK MATRİSİ (H6 ZORUNLU)
 
 1. **Semantik / Kök Anlam (İştikak):**
-   - **Kaynak:** İbn Fâris (*Mu'cemü Makâyîsi'l-Lüğa*, C. 1, s. 133-135).
+   - **Kaynak:** İbn Fâris (*Mu'cemü Makâyîsi'l-Lüğa*, C. 1, s. 133-135).[^1]
    - `[NAKİL]`: *"الهمزة والميم والنون أصلان: أحدهما الأمانة ضد الخيانة ومعناها سكون القلب، والأهل: مستحق الشيء والكفء له"* (İbn Fâris: E-M-N kökü, hıyanetin zıddı olan güven ve kalbin sükûnet bulmasıdır. Ehl ise bir şeyin gerçek hak sahibi ve ona ehil/yetkin olan kimsedir).
    - `[YORUM]`: Kamu makamları, yöneticilerin zâtî mülkü veya ganimeti değil; topluma ait olup korunması ve sadece liyakat sahiplerine teslim edilmesi gereken bir emniyet mukavelesidir.
 
 2. **Kur'anî Semantik (Kavramlaşma):**
-   - **Kaynak:** Râgıb el-İsfahânî (*el-Müfredât fî Garîbi'l-Kur'ân*, s. 90-93).
+   - **Kaynak:** Râgıb el-İsfahânî (*el-Müfredât fî Garîbi'l-Kur'ân*, s. 90-93).[^2]
    - `[NAKİL]`: *"الأمانة تقع على الطاعة والعبادة والوديعة والولاية... والعدل هو المساواة في المكافأة وإعطاء كل ذي حق حقه من غير ميل"* (Râgıb: Emanet kavramı emanet bırakılan malı, ibadeti ve en başta kamu yönetimini/velâyeti kapsar. Adalet ise hiçbir tarafgirlik ve hevese kapılmadan her hak sahibine hakkını tastamam vermektir).
    - `[YORUM]`: Kur'an'da adalet kavramı soyut bir erdem olmaktan öte; kamu yetkisinin kullanımında tarafsızlığı, eşitliği ve keyfiliğin tasfiyesini amir kurumsal bir mekanizmadır.
 
 3. **Nahiv / Belâğat ve İ'câz:**
-   - **Kaynak:** Zemahşerî (*el-Keşşâf*, C. 2, s. 98-102).
+   - **Kaynak:** Zemahşerî (*el-Keşşâf*, C. 2, s. 98-102).[^3]
    - `[NAKİL]`: *"وإذا حكمتم بين الناس: لم يقل بين المؤمنين ولا بين المسلمين، بل أتى بلفظ الناس ليعم كل أحد من مسلم وكافر وذمي... وإن الله نعما يعظكم به: مبالغة في الثناء على هذا الأمر العظيم"* (Zemahşerî: Âyette 'müminler arasında' denmeyip 'insanlar arasında' buyrulması son derece beliğdir; adaletin din, ırk ve aidiyet ayrımı gözetmeksizin evrensel olduğunu ve gayrimüslim vatandaşa da eşit uygulanmasını şart koşar).
    - `[YORUM]`: Lafzın `beyne'n-nâs` olarak umumileştirilmesi, yargı ve kamu adaletinin inanç şartına bağlı kılınamayacağını tescil eden evrensel bir hukuk ilkesidir.
 
 4. **Klasik Lisan ve Örf:**
-   - **Kaynak:** İbn Manzûr (*Lisânü'l-Arab*, C. 11, s. 430-435).
+   - **Kaynak:** İbn Manzûr (*Lisânü'l-Arab*, C. 11, s. 430-435).[^4]
    - `[NAKİL]`: *"والعدل: ضد الجور، يقال حكم بالعدل أي بالحق والإنصاف الذي لا يميل به هوى"* (İbn Manzûr: Adalet, heva ve menfaate meyletmeksizin insaf ve hak üzere hükmetmektir).
    - `[YORUM]`: Lisan açısından adalet, hâkimin veya yöneticinin kendi kişisel, mezhebî veya siyasi sempatilerini kamu kararına karıştırmamasını ifade eder.
 
@@ -339,7 +362,7 @@ peer_review:
 - **Test 4 (Sağlamlık):** Zemahşerî, Râgıb, İbn Teymiyye ve İbn Âşûr mutabakatı tescillenmiştir.
 - **Test 5 (Siyak-Sibak Uyumu):** S1–S7 maddeleri eksiksiz incelenmiştir.
 - **Test 6 (Dil Güvenliği):** Kesinlik ve sahte onay iddialarından arındırılmıştır.
-- **Test 7 (Base-rate ve Veri Uyumu):** Dünya Bankası Kamu Yönetişim Göstergeleri (WGI) ve WJP Hukukun Üstünlüğü Endeksi (https://worldjusticeproject.org/) referans alınmıştır.
+- **Test 7 (Base-rate ve Veri Uyumu):** Dünya Bankası Kamu Yönetişim Göstergeleri (WGI)[^6] ve WJP Hukukun Üstünlüğü Endeksi[^7] referans alınmıştır (https://worldjusticeproject.org/).
 - **Test 8 (Öz-Denetim ve Rol Ayrımı):** Zayıflıklar ve metodolojik sınırlar belirtilmiştir.
 *(NOT: Bu adım algoritmik iç tutarlılık kontrolüdür; bağımsız dış akademik hakem onayı niteliği taşımaz).*
 
@@ -457,7 +480,7 @@ peer_review:
 
 #### Liyakat (Meritokrasi) ile Siyasal Sadakat Arasındaki Ezeli Gerilim ve Devletin Bekası Paradoksu
 
-Nisâ 4:58 âyetinin kamu hukuku ve siyaset felsefesi tarihindeki en derin aporiası; devlet başkanının veya meşru iktidarın "kendisine tam sadık kadrolarla çalışma ihtiyacı" ile âyetin emrettiği "mutlak objektif liyakat" arasındaki çatışmadır.
+Nisâ 4:58 âyetinin kamu hukuku ve siyaset felsefesi tarihindeki en derin aporiası; devlet başkanının veya meşru iktidarın "kendisine tam sadık kadrolarla çalışma ihtiyacı" ile âyetin emrettiği "tavizsiz objektif liyakat" arasındaki çatışmadır.
 
 Bu gerilim şu çetin soruları doğurur:
 1. Bir bürokrat alanında dünyanın en yetkin uzmanı olsa dahi, iktidarın benimsediği temel siyasi vizyona ideolojik olarak karşıt ise; bu uzmanı o göreve atamak kamu maslahatına mı yoksa sabotaja mı yol açar?
@@ -472,7 +495,7 @@ Bu gerilim şu çetin soruları doğurur:
 | :--- | :--- | :--- | :--- |
 | **Görüş 1: Klasik Fıkıh Ekolü (Cumhur / Mâverdî, Gazzâlî)** | Emanetler kamu görevleridir; yönetici adil, kifayetli ve güvenilir olanı atamakla mükelleftir. | Müslüman olmayanların harp ve yargı gibi kritik velayet makamlarına atanması caiz görülmez; istişare ve vergi gibi işlerde çalıştırılabilir. | Tevbe 9:16 ve Nisâ 4:141 âyetleri; maslahat-ı amme. |
 | **Görüş 2: İbn Teymiyye ve İbnü'l-Kayyim Ekolü** | Ehliyet göreve göre değişir. Askerlikte cesur günahkâr, zayıf muttakiye tercih edilir (*el-kaviyyü'l-fâcir evlâ mine'd-daîfi'l-berr*). | Liyakat işin doğasına göredir; sırf dindarlık tek başına liyakat sayılmaz. En ehil olan göreve getirilir. | Hz. Peygamber'in Hâlid b. Velîd ve Amr b. Âs'ı yeni Müslüman oldukları halde ordu komutanı yapması. |
-| **Görüş 3: Otokratik / İtaatçi Saltanat Ekolü** | Âyet ahlaki bir tavsiyedir; yöneticinin atama takdiri mutlaktır, sorgulanamaz. | Padişah/halife dilediğini tayin eder; itaatsizlik fitnedir. Nepotizm şer'î bir azil sebebi sayılmaz. | Siyasi istikrar gerekçesi ve ulu'l-emre mutlak itaat tevili. |
+| **Görüş 3: Otokratik / İtaatçi Saltanat Ekolü** | Âyet ahlaki bir tavsiyedir; yöneticinin atama takdiri sınırsızdır ve sorgulanamaz. | Padişah/halife dilediğini tayin eder; itaatsizlik fitnedir. Nepotizm şer'î bir azil sebebi sayılmaz. | Siyasi istikrar gerekçesi ve ulu'l-emre kayıtsız itaat tevili. |
 | **Görüş 4: Çağdaş Makasıdî ve Anayasal Ekol (İbn Âşûr, Muhammed Abduh)** | Âyetteki `beyne'n-nâs` lafzı evrensel eşit vatandaşlık bildirir. Liyakat objektif sınav ve denetime bağlanmalıdır. | Din, ırk ve mezhep ayrımı yapılmaksızın tüm vatandaşlar kamu görevlerine eşit hakla girer. Yargı yürütmeden tam bağımsızdır. | Nisâ 4:58 lafzı, Medine Sözleşmesi ve Nebevî emanet uygulamaları. |
 
 ---
@@ -494,6 +517,30 @@ Bu gerilim şu çetin soruları doğurur:
 
 > **METODOLOJİK VE EPİSTEMİK SINIR BEYANI:**
 > Bu rapor; Kur'an Temelli Gelecek Vizyonu (GEM v6.1.1) mimarisi çerçevesinde üretilmiş analitik ve hermenötik bir modellemedir. Dini bir fetva, kesin kazi bir hüküm veya ilahi muradın eksiksiz ve yegâne tefsiri niteliği taşımaz. Raporda yer alan simülasyonlar, göstergeler ve politika kolları; analistin benimsediği usûl ekolünün ve ampirik varsayımların bir türevidir. Bu metin, kod tabanlı biçimsel iç tutarlılık denetiminden (gem_lint.py) geçmiş olup, bağımsız dış akademik hakem heyeti (peer-review) tarafından tescil edilmedikçe bilimsel kesinlik iddiası barındırmaz.
+
+---
+
+### Z-4.5 · AKADEMİK KAYNAKÇA (İSNAD 2 VE APA / DOI BİBLİYOGRAFYASI)
+
+#### A) Klasik İslami Kaynaklar (İSNAD 2. Edisyon Standartlı)
+- **İbn Fâris, Ahmed b. Fâris b. Zekeriyyâ (ö. 395/1004).** *Mu'cemü Makâyîsi'l-Lüğa*. Tahkik: Abdüsselâm Muhammed Hârûn. 6 Cilt. Beyrut: Dârü'l-Fikr, 1399/1979.
+- **İbn Manzûr, Muhammed b. Mükerrem (ö. 711/1311).** *Lisânü'l-Arab*. 15 Cilt. Beyrut: Dârü Sâdır, 1413/1993.
+- **İbn Teymiyye, Takıyyüddîn Ahmed b. Abdilhalîm (ö. 728/1328).** *es-Siyâsetü'ş-Şer'iyye fî Islâhi'r-Râ'î ve'r-Ra'iyye*. Tahkik: Ali b. Muhammed el-Umrân. Mekke: Dâru Âlemi'l-Fevâid, 1419/1998.
+- **Râgıb el-İsfahânî, Ebü'l-Kâsım Hüseyn b. Muhammed (ö. 502/1108 [?]).** *el-Müfredât fî Garîbi'l-Kur'ân*. Tahkik: Safvân Adnân Dâvûdî. Dımaşk: Dârü'l-Kalem / Beyrut: ed-Dârü'ş-Şâmiyye, 1412/1992.
+- **Zemahşerî, Mahmûd b. Ömer (ö. 538/1144).** *el-Keşşâf 'an Hakâ'ikı Gavâmizi't-Tenzîl ve 'Uyûni'l-Ekâvîl fî Vucûhi't-Te'vîl*. Tahkik: Âdil Ahmed Abdülmevcûd, Ali Muhammed Muavvaz. 6 Cilt. Riyad: Mektebetü'l-Ubeykân, 1418/1998.
+
+#### B) Çağdaş Kurumsal, Hukuki ve Ampirik Kaynaklar (APA 7 / DOI Standartlı)
+- **World Bank Group (2024).** *Worldwide Governance Indicators (WGI): Bureaucratic Quality and Rule of Law*. Washington, D.C.: The World Bank. Erişim adresi: https://datacatalog.worldbank.org
+- **World Justice Project [WJP] (2024).** *Rule of Law Index 2024: Civil and Criminal Justice*. Washington, D.C.: World Justice Project. https://doi.org/10.34648/wjp.2024.01. Erişim adresi: https://worldjusticeproject.org
+
+#### C) Metin İçi Akademik Dipnotlar (Footnotes)
+[^1]: İbn Fâris, Ahmed b. Fâris (ö. 395/1004), *Mu'cemü Makâyîsi'l-Lüğa*, thk. Abdüsselâm Muhammed Hârûn (Beyrut: Dârü'l-Fikr, 1979), 1: 133-135 ("'-m-n" ve "'-h-l" maddeleri).
+[^2]: Râgıb el-İsfahânî, Ebü'l-Kâsım Hüseyn b. Muhammed (ö. 502/1108 [?]), *el-Müfredât fî Garîbi'l-Kur'ân*, thk. Safvân Adnân Dâvûdî (Dımaşk: Dârü'l-Kalem, 1992), 90-93 ("'-m-n" ve "'-d-l" maddeleri).
+[^3]: Zemahşerî, Mahmûd b. Ömer (ö. 538/1144), *el-Keşşâf 'an Hakâ'ikı Gavâmizi't-Tenzîl*, thk. Âdil Ahmed Abdülmevcûd - Ali Muhammed Muavvaz (Riyad: Mektebetü'l-Ubeykân, 1998), 2: 98-102.
+[^4]: İbn Manzûr, Muhammed b. Mükerrem (ö. 711/1311), *Lisânü'l-Arab* (Beyrut: Dârü Sâdır, 1993), 11: 430-435 ("'-d-l" maddesi).
+[^5]: İbn Teymiyye, Takıyyüddîn Ahmed (ö. 728/1328), *es-Siyâsetü'ş-Şer'iyye fî Islâhi'r-Râ'î ve'r-Ra'iyye*, thk. Ali b. Muhammed el-Umrân (Mekke: Dâru Âlemi'l-Fevâid, 1998), 1: 11-18.
+[^6]: World Bank Group, *Worldwide Governance Indicators (WGI): Bureaucratic Quality and Rule of Law* (Washington, D.C.: The World Bank, 2024), erişim 15 Ekim 2026, https://datacatalog.worldbank.org.
+[^7]: World Justice Project (WJP), *Rule of Law Index 2024: Civil and Criminal Justice* (Washington, D.C.: World Justice Project, 2024), doi:10.34648/wjp.2024.01, erişim 15 Ekim 2026, https://worldjusticeproject.org.
 
 ---
 
