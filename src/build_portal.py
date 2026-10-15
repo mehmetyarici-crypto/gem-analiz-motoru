@@ -1163,13 +1163,17 @@ body {{
     <div class="tabs">
       <button id="tabBtn-dashboard" class="tab-btn active" onclick="setTab('dashboard', this)">📊 1. Stratejik Kokpit & Aporia</button>
       <button id="tabBtn-sources" class="tab-btn" onclick="setTab('sources', this)">🏛️ 2. İSNAD 2 Klasik & Modern Kaynakça</button>
-      <button id="tabBtn-fulltext" class="tab-btn" onclick="setTab('fulltext', this)">📖 3. Tam Akademik Metin (26 Adım + Dipnotlar)</button>
-      <button id="tabBtn-feedback" class="tab-btn" onclick="setTab('feedback', this)">💬 4. Akademik Şerh, Katkı & Müzakere</button>
+      <button id="tabBtn-fulltext" class="tab-btn" onclick="setTab('fulltext', this)">📖 3. Tam Akademik Metin (26 Adım)</button>
+      <button id="tabBtn-pedagogy" class="tab-btn" onclick="setTab('pedagogy', this)">🎓 4. Pedagojik Ders & Zümre Kiti (TYMM)</button>
+      <button id="tabBtn-synthesis" class="tab-btn" onclick="setTab('synthesis', this)">🕸️ 5. Külliyat Sentez & Müfessir Matrisi</button>
+      <button id="tabBtn-feedback" class="tab-btn" onclick="setTab('feedback', this)">💬 6. Akademik Şerh & Katkı</button>
     </div>
 
     <div id="tab-dashboard"></div>
     <div id="tab-sources" style="display:none;"></div>
     <div id="tab-fulltext" style="display:none;"></div>
+    <div id="tab-pedagogy" style="display:none;"></div>
+    <div id="tab-synthesis" style="display:none;"></div>
     <div id="tab-feedback" style="display:none;"></div>
   </section>
 </main>
@@ -1194,7 +1198,8 @@ function renderSidebar(filter = '') {{
   listEl.innerHTML = '';
 
   REPORTS.forEach((r, idx) => {{
-    const searchable = (r.surah + ' ' + r.verse + ' ' + r.topic + ' ' + r.case_id + ' ' + r.body).toLowerCase();
+    const classicalNames = (r.classical_sources || []).map(cs => cs.author + ' ' + cs.work).join(' ');
+    const searchable = (r.surah + ' ' + r.verse + ' ' + r.topic + ' ' + r.case_id + ' ' + classicalNames + ' ' + r.body).toLowerCase();
     if (q && !searchable.includes(q)) return;
 
     const item = document.createElement('div');
@@ -1234,7 +1239,8 @@ function selectReport(idx) {{
       <span class="badge badge-mono">Güven Derecesi: ${{r.confidence}}</span>
       <span class="badge badge-mono">Statü: ${{r.status}}</span>
       <div class="no-print" style="margin-left:auto; display:flex; gap:8px; flex-wrap:wrap;">
-        <button class="btn btn-gold" style="padding:4px 10px; font-size:11.5px;" onclick="openFeedbackTab()">💬 Bu Rapora Şerh / Katkı Yaz</button>
+        <button class="btn" style="padding:4px 10px; font-size:11.5px;" onclick="setTab('pedagogy', document.getElementById('tabBtn-pedagogy'))">🎓 Ders & Münazara Planı</button>
+        <button class="btn btn-gold" style="padding:4px 10px; font-size:11.5px;" onclick="openFeedbackTab()">💬 Şerh / Katkı Yaz</button>
         <a class="btn btn-primary" style="padding:4px 10px; font-size:11.5px;" href="pdf/${{r.pdf_filename}}" download="${{r.case_id}}_${{r.surah}}_Raporu.pdf">📥 A4 PDF İndir (${{r.case_id}}.pdf)</a>
       </div>
     </div>
@@ -1354,8 +1360,274 @@ function selectReport(idx) {{
   // Tab 3: Full Markdown
   document.getElementById('tab-fulltext').innerHTML = `<div class="md-body">${{renderMarkdown(r.body)}}</div>`;
 
-  // Tab 4: Interactive Academic Feedback & Peer Review
+  // Tab 4: Pedagogy & Lesson Plan Kit (TYMM)
+  renderPedagogyTab(r);
+
+  // Tab 5: Corpus Synthesis & Classical Scholar Matrix
+  renderSynthesisTab();
+
+  // Tab 6: Interactive Academic Feedback & Peer Review
   renderFeedbackTab(r);
+}}
+
+function renderPedagogyTab(r) {{
+  const scholarsList = (r.classical_sources || []).map(cs => `${{cs.author}} (${{cs.work}})`).join(', ');
+  const firstArabic = (r.classical_sources && r.classical_sources[0]) ? r.classical_sources[0].arabic_quote : '';
+  const firstScholar = (r.classical_sources && r.classical_sources[0]) ? `${{r.classical_sources[0].author}} (${{r.classical_sources[0].death_year}})` : '';
+  const s1Title = (r.scenarios && r.scenarios[0]) ? r.scenarios[0].title : 'Kurumsal Reform ve Adalet Senaryosu';
+  const s3Title = (r.scenarios && r.scenarios[2]) ? r.scenarios[2].title : 'Kriz ve Kurumsal Çözülme Senaryosu';
+  const firstThreshold = (r.thresholds && r.thresholds[0]) ? `${{r.thresholds[0].name}} (${{r.thresholds[0].value}})` : 'Kurumsal Güven Göstergesi';
+
+  document.getElementById('tab-pedagogy').innerHTML = `
+    <div class="panel" style="margin-bottom:20px; border-color:var(--accent-gold);">
+      <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; margin-bottom:12px;">
+        <div>
+          <span class="badge badge-gold">🇹🇷 TÜRKİYE YÜZYILI MAARİF MODELİ (TYMM) UYUMLU</span>
+          <span class="badge badge-emerald" style="margin-left:6px;">DKAB & İHL Meslek Dersleri Zümre Kiti</span>
+        </div>
+        <div style="display:flex; gap:8px;">
+          <button class="btn btn-primary" onclick="shareLessonPlanWhatsApp()">🟢 Ders Planını WhatsApp'ta Zümremle Paylaş</button>
+          <button class="btn btn-gold" onclick="copyLessonPlan()">📋 Ders Planını Kopyala</button>
+        </div>
+      </div>
+      <h2 style="font-size:19px; color:var(--text-primary); margin-bottom:6px;">
+        🎓 ${{r.surah}} Sûresi ${{r.verse}} — 40 Dakikalık Sınıf İçi Münazara ve Vaka Analizi Ders Planı
+      </h2>
+      <p style="font-size:13.5px; color:var(--text-secondary);">
+        <strong>Odak Konu:</strong> ${{r.topic}} &nbsp;|&nbsp; <strong>Referans Rapor:</strong> <code>${{r.case_id}}</code>
+      </p>
+      <div id="pedagogyToast" class="toast-msg"></div>
+    </div>
+
+    <div class="grid-2">
+      <div class="panel">
+        <h3><span>⏱️ 1. Aşama (00–08. Dk): Merak Uyandırma & Vaka Sunumu</span><span>Giriş / Z-1</span></h3>
+        <div class="source-card" style="border-left:3px solid var(--accent-gold);">
+          <div class="source-author" style="margin-bottom:6px;">🔥 Öğrencilere Sorulacak Derse Giriş Sorusu (Aporia):</div>
+          <div style="font-size:13.5px; color:var(--text-secondary); line-height:1.65;">
+            ${{formatInlineMd(r.aporia)}}
+          </div>
+        </div>
+        <div class="source-card">
+          <div class="source-author" style="margin-bottom:4px;">🎯 TYMM Erdem-Değer-Eylem Çerçevesi:</div>
+          <div class="source-meta">
+            <strong>Kök Değerler:</strong> Adalet, Hikmet, Sorumluluk, Merhamet, Dürüstlük<br>
+            <strong>Üst Düzey Beceriler:</strong> Bağlamsal Tefsir Okuryazarlığı, Kanıta Dayalı Karar Alma, Münazara ve Müzakere Ahlakı
+          </div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h3><span>🏛️ 2. Aşama (08–20. Dk): Klasik Tefsir Halkası</span><span>İSNAD 2 Köprüsü</span></h3>
+        <div class="source-card">
+          <div class="source-author" style="margin-bottom:6px;">🕌 Müfessirlerin Kavramsal Çerçevesi:</div>
+          <div class="source-meta">
+            Derste öğrencilere âyetin lafzî ve tarihsel bağlamı <strong>${{scholarsList}}</strong> üzerinden aktarılır.
+          </div>
+          <div class="arabic-box" style="font-size:17px;">${{firstArabic}}</div>
+          <div style="font-size:12px; color:var(--accent-gold);">— ${{firstScholar}}</div>
+        </div>
+        <div class="source-card">
+          <div class="source-author" style="margin-bottom:4px;">💡 Pedagojik Vurgu (`[NAKİL]` vs `[YORUM]`):</div>
+          <div class="source-meta">
+            Öğrencilere âyetin değişmez ilahi metni ve klasik tefsir nakli (<code>[NAKİL]</code>) ile bugünün dünyasına yönelik stratejik çıkarımların (<code>[YORUM]</code>) birbirinden nasıl ayırt edileceği uygulamalı olarak gösterilir.
+          </div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h3><span>⚖️ 3. Aşama (20–33. Dk): Sınıf İçi Münazara Atölyesi</span><span>Senaryo & Z-3</span></h3>
+        <div class="source-card" style="border-left:3px solid var(--accent-emerald);">
+          <div class="source-author" style="margin-bottom:6px;">🗣️ Münazara İkilemi (Z-3 Açık Uçlu Soru):</div>
+          <div style="font-size:13.5px; color:var(--text-secondary); line-height:1.65;">
+            ${{formatInlineMd(r.z3_question)}}
+          </div>
+        </div>
+        <div class="source-card">
+          <div class="source-author" style="margin-bottom:4px;">🧭 İki Grup Senaryo Karşılaştırması:</div>
+          <div class="source-meta">
+            • <strong>1. Grup (Reform Masası — S1):</strong> <em>"${{s1Title}}"</em> gerçekleşirse toplumda başarı olasılığı neden <strong>%${{Math.round(r.prior*100)}}'dan %${{Math.round(r.posterior*100)}}'a</strong> yükselir?<br>
+            • <strong>2. Grup (Kriz Analizi — S3):</strong> <em>"${{s3Title}}"</em> yaşanırsa hangi toplumsal maliyetler ortaya çıkar?
+          </div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h3><span>📋 4. Aşama (33–40. Dk): Değerlendirme & Çıkış Kartı</span><span>Eylem & Ölçüt</span></h3>
+        <div class="source-card">
+          <div class="source-author" style="margin-bottom:6px;">📊 Somut Hayat Ölçütü (Threshold):</div>
+          <div class="source-meta">
+            Öğrencilere <strong>${{firstThreshold}}</strong> göstergesi örnek verilerek şu kapanış sorusu yöneltilir:<br><br>
+            <em>"Bugün ${{r.surah}} ${{r.verse}} âyetinin ortaya koyduğu ilkeyi kendi okul ortamımızda, ailemizde ve dijital dünyamızda hayata geçirmek için hangi 1 somut kuralı uygulamalıyız?"</em>
+          </div>
+        </div>
+        <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+          <button class="btn btn-gold" onclick="openFeedbackTab(); selectCategoryAndFocus('Sınıf İçi / Zümre Pedagojik Uygulama Deneyimi');">
+            ✍️ Bu Dersi İşledikten Sonra Zümre Deneyimini Buraya Kaydet
+          </button>
+        </div>
+      </div>
+    </div>
+  `;
+}}
+
+function buildLessonPlanText() {{
+  const r = REPORTS[currentIndex];
+  const scholarsList = (r.classical_sources || []).map(cs => cs.author).join(', ');
+  return `*QURAN VISION (v6.2.1) — TYMM UYUMLU 40 DK DERS & MÜNAZARA PLANI*\\n` +
+    `━━━━━━━━━━━━━━━━━━━━\\n` +
+    `📖 *Ders Konusu:* ${{r.surah}} Sûresi ${{r.verse}} (${{r.case_id}})\\n` +
+    `🎯 *Stratejik Tema:* ${{r.topic}}\\n` +
+    `━━━━━━━━━━━━━━━━━━━━\\n` +
+    `⏱️ *1. Aşama (00-08 Dk - Merak & Vaka):* ${{r.aporia.slice(0, 220)}}...\\n\\n` +
+    `🕌 *2. Aşama (08-20 Dk - Klasik Tefsir Köprüsü):* ${{scholarsList}} nakilleriyle âyetin tarihsel ve lafzî tahkiki.\\n\\n` +
+    `⚖️ *3. Aşama (20-33 Dk - Sınıf İçi Münazara Sorusu):* ${{r.z3_question.slice(0, 240)}}...\\n\\n` +
+    `📋 *4. Aşama (33-40 Dk - Değerlendirme):* Kurumsal reformla başarı olasılığının %${{Math.round(r.prior*100)}} -> %${{Math.round(r.posterior*100)}} düzeyine çıkışı ve günlük hayat uygulaması.\\n` +
+    `🔗 *Tam Rapor ve PDF:* https://mehmetyarici-crypto.github.io/quran-vision/`;
+}}
+
+function shareLessonPlanWhatsApp() {{
+  const txt = buildLessonPlanText();
+  window.open(`https://wa.me/?text=${{encodeURIComponent(txt)}}`, '_blank');
+}}
+
+function copyLessonPlan() {{
+  const txt = buildLessonPlanText();
+  if (navigator.clipboard) navigator.clipboard.writeText(txt);
+  const el = document.getElementById('pedagogyToast');
+  if (el) {{
+    el.textContent = "✅ 40 Dakikalık TYMM Ders & Münazara Planı panoya kopyalandı!";
+    el.style.display = 'block';
+    setTimeout(() => {{ el.style.display = 'none'; }}, 4000);
+  }}
+}}
+
+function renderSynthesisTab() {{
+  const avgPrior = Math.round((REPORTS.reduce((a, b) => a + b.prior, 0) / REPORTS.length) * 100);
+  const avgPost = Math.round((REPORTS.reduce((a, b) => a + b.posterior, 0) / REPORTS.length) * 100);
+  const netGain = avgPost - avgPrior;
+
+  // Aggregate Classical Scholars across all 13 reports
+  const scholarMap = {{}};
+  REPORTS.forEach((rep, rIdx) => {{
+    (rep.classical_sources || []).forEach(cs => {{
+      const shortName = cs.author.split('(')[0].trim();
+      if (!scholarMap[shortName]) {{
+        scholarMap[shortName] = {{ count: 0, work: cs.work, death: cs.death_year, reports: [] }};
+      }}
+      scholarMap[shortName].count += 1;
+      if (!scholarMap[shortName].reports.includes(rep.case_id)) {{
+        scholarMap[shortName].reports.push(rep.case_id);
+      }}
+    }});
+  }});
+
+  const sortedScholars = Object.entries(scholarMap).sort((a, b) => b[1].count - a[1].count);
+  const scholarsGridHtml = sortedScholars.map(([name, info]) => `
+    <div class="candidate-card" style="cursor:pointer;" onclick="filterByScholar('${{name.replace(/'/g, "\\'")}}')">
+      <div>
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
+          <strong style="color:var(--accent-gold); font-size:13.5px;">🕌 ${{name}}</strong>
+          <span class="badge badge-emerald">${{info.count}} Rapor</span>
+        </div>
+        <div style="font-size:12px; color:var(--text-secondary);"><em>${{info.work}}</em> (${{info.death || ''}})</div>
+      </div>
+      <div style="font-size:11px; color:var(--text-muted); font-family:'JetBrains Mono',monospace;">
+        🔍 Tıkla & Filtrele: ${{info.reports.join(', ')}}
+      </div>
+    </div>
+  `).join('');
+
+  const matrixRowsHtml = REPORTS.map((rep, idx) => {{
+    const p1 = Math.round(rep.prior * 100);
+    const p2 = Math.round(rep.posterior * 100);
+    const diff = p2 - p1;
+    return `
+      <tr style="cursor:pointer; transition:background 0.15s;" onclick="selectReport(${{idx}}); setTab('dashboard', document.getElementById('tabBtn-dashboard'));" onmouseover="this.style.background='var(--bg-card-hover)'" onmouseout="this.style.background='transparent'">
+        <td style="font-family:'JetBrains Mono',monospace; font-weight:700; color:var(--accent-gold);">${{rep.case_id}}</td>
+        <td><strong>${{rep.surah}} ${{rep.verse}}</strong></td>
+        <td style="font-size:12.5px; color:var(--text-secondary);">${{rep.topic}}</td>
+        <td>%${{p1}} → <strong style="color:var(--accent-emerald);">%${{p2}}</strong> <span class="badge badge-emerald">+%${{diff}}</span></td>
+        <td>${{(rep.classical_sources||[]).length}} Klasik / ${{(rep.modern_sources||[]).length}} DOI</td>
+        <td><span class="badge badge-mono">${{rep.confidence}}</span></td>
+      </tr>
+    `;
+  }}).join('');
+
+  document.getElementById('tab-synthesis').innerHTML = `
+    <div class="grid-2">
+      <div class="panel">
+        <h3><span>📈 Külliyat Makro-Bayesyen Sentezi (13 Rapor Ortalaması)</span><span>2026–2036</span></h3>
+        <div class="bayes-row">
+          <div class="bayes-label">
+            <span>Külliyat Ortalama Önsel Olasılık — Prior P(S1) (Mevcut Kurumsal Atalet)</span>
+            <strong>%${{avgPrior}}</strong>
+          </div>
+          <div class="progress-track">
+            <div class="progress-fill" style="width:${{avgPrior}}%; background:var(--accent-gold);"></div>
+          </div>
+        </div>
+        <div class="bayes-row">
+          <div class="bayes-label">
+            <span>Külliyat Ortalama Sonsal Olasılık — Posterior P(S1|E) (Kur'ani İlkeler & Reformla)</span>
+            <strong style="color:var(--accent-emerald);">%${{avgPost}} (+%${{netGain}} Net Stratejik Sıçrama)</strong>
+          </div>
+          <div class="progress-track">
+            <div class="progress-fill" style="width:${{avgPost}}%; background:var(--accent-emerald);"></div>
+          </div>
+        </div>
+        <p style="font-size:13px; color:var(--text-secondary); margin-top:10px;">
+          13 kurucu âyetin tamamında yapılan nicel simülasyonlar; ahit vefası, liyakat, şûrâ, bilgi doğrulama (tebeyyün), servet dolaşımı ve mîzân ilkeleri kurumsallaştırıldığında toplumsal istikrar olasılığının ortalama <strong>+%${{netGain}} puan</strong> arttığını kanıtlamaktadır.
+        </p>
+      </div>
+
+      <div class="panel">
+        <h3><span>🏛️ Metodolojik Mimari Özeti</span><span>v6.2.1 Standardı</span></h3>
+        <div class="source-card">
+          <div class="source-author">1. İSNAD 2 Klasik Tefsir Tahkiki (71 Arapça Nakil)</div>
+          <div class="source-meta">Erken dönem rivayet, dirayet, fıkhî ahkâm ve makâsıd tefsirlerinden hicrî/milâdî vefat yılı, tahkik ve cilt/sayfa doğrulamalı birincil kaynak ağı.</div>
+        </div>
+        <div class="source-card">
+          <div class="source-author">2. Çağdaş Ampirik Veri & DOI Ağı (65 Kurumsal Veri Kaynağı)</div>
+          <div class="source-meta">Dünya Bankası, UNDP, WJP, SIPRI, OECD ve UNESCO göstergeleriyle kalibre edilmiş yanlışlanabilir eşik değerler (Thresholds).</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel" style="margin-bottom:22px;">
+      <h3><span>🕌 Külliyat Çapraz Müfessir İndeksi (Filtrelemek İçin Müfessire Tıklayın)</span><span>İSNAD 2 Haritası</span></h3>
+      <div class="candidate-grid">
+        ${{scholarsGridHtml}}
+      </div>
+    </div>
+
+    <div class="panel md-body" style="padding:22px;">
+      <h3 style="margin-top:0;"><span>📊 13 Stratejik Raporun Bütüncül Karşılaştırma Matrisi (Rapora Gitmek İçin Satıra Tıklayın)</span></h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Vaka Kodu</th>
+            <th>Sûre / Âyet</th>
+            <th>Stratejik Doktrin & Yönetişim Başlığı</th>
+            <th>Bayesyen Sıçrama (Prior → Posterior)</th>
+            <th>Kaynak Ağı</th>
+            <th>Güven</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${{matrixRowsHtml}}
+        </tbody>
+      </table>
+    </div>
+  `;
+}}
+
+function filterByScholar(scholarName) {{
+  const input = document.getElementById('searchInput');
+  if (input) {{
+    input.value = scholarName;
+    renderSidebar(scholarName);
+  }}
 }}
 
 function renderFeedbackTab(r) {{
@@ -1709,6 +1981,8 @@ function setTab(tabName, btn) {{
   document.getElementById('tab-dashboard').style.display = tabName === 'dashboard' ? 'block' : 'none';
   document.getElementById('tab-sources').style.display = tabName === 'sources' ? 'block' : 'none';
   document.getElementById('tab-fulltext').style.display = tabName === 'fulltext' ? 'block' : 'none';
+  document.getElementById('tab-pedagogy').style.display = tabName === 'pedagogy' ? 'block' : 'none';
+  document.getElementById('tab-synthesis').style.display = tabName === 'synthesis' ? 'block' : 'none';
   document.getElementById('tab-feedback').style.display = tabName === 'feedback' ? 'block' : 'none';
 }}
 
