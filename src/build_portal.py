@@ -119,7 +119,11 @@ def parse_report(md_path: Path):
         base_report["filename_en"] = en_md_name
         en_fm_raw = m.group(1).strip()
         en_full_md = f"---\n{en_fm_raw}\n---\n\n{base_report['body_en']}"
-        (DOCS_EN / en_md_name).write_text(en_full_md, encoding="utf-8")
+        en_path = DOCS_EN / en_md_name
+        en_path.write_text(en_full_md, encoding="utf-8")
+        import hashlib as _hl
+        en_sha = _hl.sha256(en_path.read_bytes()).hexdigest()
+        (DOCS_EN / f"{en_md_name}.sha256").write_text(f"{en_sha}  {en_md_name}\n", encoding="utf-8")
     else:
         base_report["surah_en"] = surah
         base_report["topic_en"] = base_report["topic"]

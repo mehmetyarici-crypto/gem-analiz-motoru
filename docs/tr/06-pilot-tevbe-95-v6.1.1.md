@@ -326,12 +326,13 @@ Tevbe Sûresi 9:1–15 pasajı bir bütün olarak okunduğunda, 5. âyetin hemen
 
 ## FAZ II — SİSTEM VE GELECEK MODELLEMESİ
 
-### ADIM 07 — SİSTEM HARİTASI (CAUSAL LOOP DİAGRAMI)
+### ADIM 07 — SİSTEM HARİTASI (CAUSAL LOOP DİAGRAMI — CLD), GECİKME VE KIRILMA NOKTASI (N4)
 
-- **Pekiştirici Döngü (R1 — Cezasızlık Sarmalı):** Ahit ihlali artar → Caydırıcı mukabele yapılmazsa → Saldırganın cüretkârlığı artar → Yeni ihlaller tetiklenir (Kaos döngüsü).
-- **Dengeleyici Döngü (B1 — Tevbe 9:5 Caydırıcılık Freni):** Ahit ihlali artar → Diplomatik mühlet verilir → Süre bitiminde kararlı askeri mukabele uygulanır → Saldırganın hareket alanı daralır → İhlal durur, sulh ve hukuk nizamı yeniden kurulur.
-- **Tipping Point (Kırılma Noktası):** Düşmanın diplomasiyi oyalama taktiği olarak kullanıp fiili saldırı hazırlıklarını tamamladığı an (mühletin bitişi).
-
+- **Temel Sistem Değişkenleri (Stok & Akış Değişkenleri):** `[YORUM]` **Stok Değişkenler:** Antlaşma Güvenilirliği Stoku (*Ahde Vefa Sermayesi*), Sınır ve Kamu Güvenliği Stoku, Caydırıcı Savunma Kapasitesi. **Akış Değişkenler:** Ahit İhlali Hızı (*Nakz-ı Ahd Oranı*), Diplomatik Mühlet ve İhtar Akışı (4 Aylık Haram Aylar), Orantılı Caydırıcı Mukabele Hızı ve Eman/Diplomatik Koridor Açılma Oranı (Tevbe 9:4–6).
+- **Pekiştirici Döngü (R1 — Cezasızlık ve Güvenlik Çöküşü Kısır Döngüsü / Vicious Cycle):** `[YORUM]` Ahit İhlali ve Saldırganlık (`+`) → Cezasızlık ve Pasif Taviz (`+`) → Mütecaviz Aktörün Stratejik Cüretkârlığı (`+`) → Sınır İhlalleri ve Sivil Güvenlik Kaybı (`+`) → Caydırıcılık İtibarının Erozyonu (`-`) → Ahit İhlali ve Saldırganlık (`+`). *(Hukuki müeyyideden yoksun tek taraflı pasifizm, saldırganlığı ödüllendirerek bölgesel kaos sarmalını kendi kendine besler).*
+- **Dengeleyici Döngü (B1 — Tevbe 9:5–6 Müeyyideli Barış ve Eman Freni / Balancing Loop):** `[YORUM]` Ahit İhlali ve Güvenlik Tehdidi (`+`) → 4 Aylık Resmi Diplomatik Ültimatom ve İhtar (`+`) → Kademeli Gözetleme, Muhasara ve Meşru Savunma Mukabelesi (`+`) → Saldırganın Askeri Maliyetinin Artması ve İhlal Kapasitesinin Daralması (`+`) → Tevbe/Sulh veya Eman Koridoru (9:6) ile Hukuk Nizamına Dönüş (`+`) → Ahit İhlali ve Güvenlik Tehdidi (`-`). *(Kararlı caydırıcılık ve açık diplomasi kapısı sistemi yeniden sulh dengesine çeker).*
+- **Sistemik Gecikme (Delay) ve Kaldıraç Noktası (Leverage Point):** `[YORUM]` **Sistemik Gecikme (Delay):** Tevbe 9:2 ve 9:5'te vaz'edilen **4 aylık (120 günlük) haram aylar mühleti**, ani askeri tırmanmayı önleyen bilinçli bir kurumsal soğutma ve diplomatik doğrulama gecikmesidir. **Kaldıraç Noktası (Leverage Point):** Tevbe 9:4'teki *"Ahdine sadık kalanları koruma"* ilkesi ile 9:6'daki *"Eman dileyene güvenli geçiş sağlama"* kuralının birlikte işletilmesi, çatışmayı topyekûn savaşa dönüşmeden çözen en yüksek kaldıraç noktasıdır.
+- **Kırılma Noktası (Tipping Point) ve Erken Uyarı Sinyali (N4 / EU):** `[YORUM]` **Tipping Point (Kırılma Noktası):** Dört aylık diplomatik mühletin karşı tarafça barış arayışı yerine fiilî saldırı tahkimatı için kötüye kullanılması ve aylık sınır/ateşkes ihlallerinin kritik eşiği (`> 3 ihlal/ay`) aşması. **Erken Uyarı Sinyali (N4 / EU-01):** Sadık müttefiklere yönelik vekâlet saldırılarının başlaması, diplomatik iletişim kanallarının tek taraflı kapatılması ve sınır hatlarında olağandışı lojistik yığınak tespiti.
 ---
 
 ### ADIM 08 — DÖRT SENARYO VE STRATEJİK DEĞERLENDİRME

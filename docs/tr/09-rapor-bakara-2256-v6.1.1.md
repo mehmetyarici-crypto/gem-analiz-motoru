@@ -320,12 +320,13 @@ Bakara 2:256, Kur'ân'ın tevhid zirvesi olan **Âyetü'l-Kürsî (2:255)**'nin 
 
 ## FAZ II — SİSTEM VE GELECEK MODELLEMESİ
 
-### ADIM 07 — SİSTEM HARİTASI (CAUSAL LOOP DİAGRAMI)
+### ADIM 07 — SİSTEM HARİTASI (CAUSAL LOOP DİAGRAMI — CLD), GECİKME VE KIRILMA NOKTASI (N4)
 
-- **Pekiştirici Döngü (R1 — Nifak ve Ahlaki Çöküş Sarmalı):** Dinde zorlama artar → Bireyler cezadan korkup inanmadığı halde inanmış görünür → Nifak ve ikiyüzlülük yayılır → Toplumsal güven ve ahlak çöker → Devlet baskıyı daha da artırır (Yıkım döngüsü).
-- **Dengeleyici Döngü (B1 — Vicdan Emniyeti ve Samimiyet Dengeleyicisi):** İnanç özgürlüğü tanınır (`Lâ İkrâhe`) → İnananlar gönülden samimiyetle inanır → Nifak zayıflar, ahlaki tutarlılık yükselir → Çoğulcu barış nizamı güçlenir.
-- **Tipping Point (Kırılma Noktası):** Devletin veya dinî otoritenin bireylerin kalbî inançlarını sorgulamak üzere "engizisyon / teftiş" mekanizmaları kurduğu an.
-
+- **Temel Sistem Değişkenleri (Stok & Akış Değişkenleri):** `[YORUM]` **Stok Değişkenler:** Vicdan ve İnanç Özgürlüğü Stoku (*Lâ İkrâhe fi'd-Dîn*), Samimi İman ve Ahlaki Bütünlük Sermayesi (*Urvetü'l-Vüskâ*), Toplumsal Barış ve Çoğulcu Hukuk Güveni. **Akış Değişkenler:** İdeolojik/Dinî Zorlama ve Baskı Yoğunluğu (*İkrâh*), Rüşd ile Gayy'ın Akli/İlmi Beyan Akışı (*Tebeyyün*) ve Kurumsal Nifak/Yabancılaşma Oranı.
+- **Pekiştirici Döngü (R1 — İkrâh, Nifak ve Özgürlük Kaybı Kısır Döngüsü / Vicious Cycle):** `[YORUM]` Dinî veya İdeolojik Zorlama (`İkrâh`) (`+`) → Bireylerin Cezadan Korkarak Dışsal Takiyye ve Nifaka Yönelmesi (`+`) → Kalbî Samimiyetin ve Ahlaki Güvenin Çöküşü (`-`) → Genç Kuşaklarda Dine ve Kurumlara Karşı Tepkisel Yabancılaşma (`+`) → Otoritenin Kontrol Kaybı Korkusuyla Baskıyı Daha da Artırması (`+`) → Dinî veya İdeolojik Zorlama (`İkrâh`) (`+`). *(Zorlama iman üretmez; yalnızca münafıklık ve toplumsal çözülme üretir).*
+- **Dengeleyici Döngü (B1 — Bakara 2:256 Rüşdün Beyanı ve Vicdan Dokunulmazlığı Dengeleyicisi / Balancing Loop):** `[YORUM]` Toplumsal İnanç Gerilimi ve Kutuplaşma (`+`) → `Lâ İkrâhe fi'd-Dîn` Anayasal Vicdan Güvencesinin Tesisi (`+`) → Akli Delil, Hikmetli Beyan ve Açık Tartışma Ortamı (`qad tabayyana'r-rushdu mina'l-ghayy`) (`+`) → Özgür İradeyle İçselleştirilen Samimi Ahlak (`al-‘urwati'l-wuthqā`) ve Çoğulcu Toplumsal Sözleşme (`+`) → Toplumsal İnanç Gerilimi ve Kutuplaşma (`-`).
+- **Sistemik Gecikme (Delay) ve Kaldıraç Noktası (Leverage Point):** `[YORUM]` **Sistemik Gecikme (Delay):** Baskıcı politikaların yol açtığı içsel yabancılaşma ve güven erozyonu **1–2 kuşak (10–20 yıl)** gecikmeyle toplumsal kırılma olarak yüzeye çıkar; özgürlükçü eğitim reformlarının meyvesi de benzer bir kültürel olgunlaşma süresi gerektirir. **Kaldıraç Noktası (Leverage Point):** Kamu hukukunda ve eğitimde **zorlama (`ikrâh`) ile ikna/beyan (`tebeyyün`) arasındaki sınırın** anayasal güvenceye bağlanması ve hiçbir vatandaşın vicdani kanaati nedeniyle ayrımcılığa uğramamasıdır.
+- **Kırılma Noktası (Tipping Point) ve Erken Uyarı Sinyali (N4 / EU):** `[YORUM]` **Tipping Point (Kırılma Noktası):** Devlet veya toplumsal güç odaklarının bireylerin içsel inanç ve kanaatlerini sadakat testi haline getirerek kamusal hakları buna bağlaması. **Erken Uyarı Sinyali (N4 / EU-01):** Düşünce ve vicdan özgürlüğü endekslerinde düşüş, kamusal alanda riyakârlık/çifte standart söyleminin yaygınlaşması ve farklı inanç/düşünce gruplarına yönelik ötekileştirici dil artışı.
 ---
 
 ### ADIM 08 — DÖRT SENARYO VE STRATEJİK DEĞERLENDİRME

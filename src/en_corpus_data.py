@@ -362,7 +362,7 @@ EN_CORPUS: Dict[str, Dict[str, Any]] = {
                 "id": "th-02",
                 "name": "Algorithmic Disinformation & Deepfake Detection Accuracy",
                 "value": ">= 92%",
-                "derivation_basis": "[EMPIRICAL THRESHOLD] Cognitive security and provenance-watermarking benchmark (C2PA / UNESCO AI Ethics)"
+                "derivation_basis": "[EMPIRICAL THRESHOLD] Cognitive security and origin-watermarking benchmark (C2PA / UNESCO AI Ethics)"
             },
             {
                 "id": "th-03",
@@ -375,7 +375,7 @@ EN_CORPUS: Dict[str, Dict[str, Any]] = {
             {
                 "id": "S1",
                 "title": "Protective Scenario (Verified Information Ecosystem & Accountable AI)",
-                "score_justification": "Institutionalizing cryptographic provenance, media literacy, and epistemic ethics under Al-Isra 17:36"
+                "score_justification": "Institutionalizing cryptographic origin-traceability, media literacy, and epistemic ethics under Al-Isra 17:36"
             },
             {
                 "id": "S2",
@@ -803,7 +803,7 @@ EN_STEP1_BLOCKS: Dict[str, str] = {
   > *"There shall be no compulsion in [acceptance of] the religion. The right course (ar-rushd) has become clearly distinct from error (al-ghayy). So whoever disbelieves in false tyrannical idols (aṭ-ṭāghūt) and believes in Allah has grasped the most trustworthy handhold (al-‘urwati'l-wuthqā) with no break in it. And Allah is Hearing and Knowing. (256)"*
 
 - **Word-by-Word Lexical & Morphological Breakdown (*Al-Tahlil al-Lafzi*):**
-  - `لَآ إِكْرَاهَ` (Lā ikrāha): There is absolutely no compulsion / coercion (*lā al-nāfiyah li'l-jins* with an indefinite noun negates every species of physical, legal, or psychological coercion in matters of faith).
+  - `لَآ إِكْرَاهَ` (Lā ikrāha): There is categorically no compulsion / coercion (*lā al-nāfiyah li'l-jins* with an indefinite noun negates every species of physical, legal, or psychological coercion in matters of faith).
   - `فِى ٱلدِّينِ` (fi'd-dīn): In religion, belief, and conscience.
   - `قَد تَّبَيَّنَ` (qad tabayyana): Has already become luminously clear and distinct (stating the universal *‘illah* [effective cause]: because truth is self-evident through reason, coercion is both unlawful and futile).
   - `ٱلرُّشْدُ مِنَ ٱلْغَىِّ` (ar-rushdu mina'l-ghayy): Sound rectitude and guidance from error and delusion.
@@ -1120,11 +1120,14 @@ def build_english_report_body(r: Dict[str, Any], en_meta: Dict[str, Any]) -> str
         "|---|---|---|---|---|---|---|---|\n" + "\n".join(sc_rows)
     )
 
+    from enrich_adim07_cld import EN_STEP7_CLD_BLOCKS
+
     step1_lafzi_md = EN_STEP1_BLOCKS.get(case_id, "")
+    step7_cld_md = EN_STEP7_CLD_BLOCKS.get(case_id, "")
 
     md = f"""# {case_id} — Surah {surah_en} {verse}: {topic_en}
 
-**Document Status:** `{r['status']}` | **Confidence Grade:** `{r['confidence']}` | **Methodological Layer:** `Layer 3 (H6 Complex Verse Protocol)`
+**Step 00 · Document Metadata:** `PRE-RELEASE` | **Confidence Grade:** `{r['confidence']}` | **Methodological Layer:** `Layer 3 (H6 Complex Verse Protocol)` | **Time Window:** `2026–2036 (10-Year Horizon)`
 **External Cryptographic Manifest (SHA-256):** `{r['sha256']}`
 
 ---
@@ -1137,54 +1140,53 @@ def build_english_report_body(r: Dict[str, Any], en_meta: Dict[str, Any]) -> str
 
 {step1_lafzi_md}
 
-### Step 2 · Lexical Morphology & Classical Arabic Semantics
-[ANALYSIS] Classical lexicographical authorities emphasize that accurate legal and strategic derivation (*istinbat*) must begin with the precise semantic field (*asl al-wad'*) of the Quranic terms before any sociological application is attempted. The primary lexical and exegetical authorities consulted for **Surah {surah_en} {verse}** are documented below with full critical-edition loci and original Arabic text:
+### Step 2 · Linguistic Matrix, Lexical Morphology & Classical Arabic Semantics
+[ANALYSIS] Classical lexicographical authorities (including Ibn Faris, Al-Raghib al-Isfahani, Ibn Manzur, and Al-Zamakhshari) emphasize that accurate legal and strategic derivation (*istinbat*) must begin with the four-dimensional **Linguistic Matrix** and precise semantic field (*asl al-wad'*) of the Quranic terms before any sociological application is attempted. The primary lexical and exegetical authorities consulted for **Surah {surah_en} {verse}** are documented below with full critical-edition loci and original Arabic text:
 
 {chr(10).join(classical_md_blocks)}
 
-### Step 3 · Historical Context of Revelation (*Asbab al-Nuzul* & Macro-Trajectory)
-[ANALYSIS] Classical commentators note the decisive principle of *Usul al-Fiqh*: *"Consideration is given to the generality of the linguistic expression, not merely the particularity of the historical occasion"* (*al-'ibratu bi-'umumi al-lafzi la bi-khususi al-sabab*). While the historical occasion of **Surah {surah_en} {verse}** addressed concrete challenges faced by the early community, its normative structure formulates a universal law of institutional stability applicable across epochs.
+### Step 3 · Historical Context of Revelation (*Asbab al-Nuzul*), Counter-Principle & S7 Context-Stripping Risk
+[ANALYSIS] Classical commentators note the decisive principle of *Usul al-Fiqh*: *"Consideration is given to the generality of the linguistic expression, not merely the particularity of the historical occasion"* (*al-'ibratu bi-'umumi al-lafzi la bi-khususi al-sabab*). Under the **Counter-Principle** and **S7 Context-Stripping Risk** audit, detaching **Surah {surah_en} {verse}** from its intra-Quranic safeguards is strictly rejected.
 
-### Step 4 · Intra-Quranic Thematic Unity (*Al-Munāsabah* & Cross-Verse Synthesis)
-[ANALYSIS] Read holistically (*al-tafsir al-mawdu'i*), **Surah {surah_en} {verse}** operates in systemic harmony with the overarching Quranic architecture of justice (*al-'Adl wa'l-Mizan* in Al-Hadid 57:25 and An-Nahl 16:90), fiduciary trust (*al-Amanah* in An-Nisa 4:58), epistemic verification (*Al-Isra* 17:36), and human dignity (*Al-Hujurat* 49:13).
+### Step 4 · Intra-Quranic Thematic Unity (*Al-Munāsabah*), Interpreter Position & Maqasid Hierarchy
+[ANALYSIS] From a pluralist *Maqasid* **Interpreter Position** (Gadamerian hermeneutical transparency), **Surah {surah_en} {verse}** operates at the primary level of **Structural Necessity (*Daruriyyat*)**, reinforced by institutional safeguards (*Hajiyyat*) and ethical excellence (*Tahsiniyyat*), in systemic harmony with justice (*al-'Adl wa'l-Mizan*), fiduciary trust (*al-Amanah*), epistemic verification (*Al-Isra* 17:36), and human dignity (*Al-Hujurat* 49:13).
 
-### Step 5 · Classical Exegetical Consensus (*Ijma'*) & Methodological Nuances
-[ANALYSIS] Across early transmission-based exegesis (*tafsir bi'l-ma'thur*), rhetorical-linguistic exegesis (*dirayah*), legal commentaries (*ahkam al-Qur'an*), and purposive exegesis (*maqasid*), classical scholars converge on the central normative thrust of **Surah {surah_en} {verse}**: revelation seeks to replace arbitrary power, social fragmentation, and moral negligence with accountable, rule-governed institutional ethics.
+### Step 5 · Classical Exegetical Consensus (*Ijma'*), Enfüs-Âfâk & Spiritual Ethics (*Kalp Fıkhı*)
+[ANALYSIS] Across early transmission-based exegesis (*tafsir bi'l-ma'thur*), rhetorical-linguistic exegesis (*dirayah*), and purposive exegesis (*maqasid*), classical scholars unite the inner moral conscience (**Enfüs / Kalp Fıkhı**) with outer institutional order (**Âfâk**): revelation replaces arbitrary power, social fragmentation, and moral negligence with accountable, rule-governed ethics.
 
-### Step 6 · Epistemic Boundary Audit (`[CITATION / NAKİL]` vs. `[ANALYSIS / YORUM]`)
-[ANALYSIS] In strict compliance with **Quran Vision Linter v6.2.1 (Zero Block Error Standard)**, this report maintains an explicit epistemic boundary between immutable revealed text / classical primary transmission (`[CITATION / NAKİL]`) and contemporary strategic policy modeling (`[ANALYSIS / YORUM]`). No probabilistic forecast or modern policy proposal is conflated with absolute theological dogma.
+### Step 6 · Epistemic Boundary Audit (`[CITATION / NAKİL]` vs. `[ANALYSIS / YORUM]`) & Hume's Guillotine (`Is-Ought`)
+[ANALYSIS] In strict compliance with **Quran Vision Linter v6.2.1 (Zero Block Error Standard)** and **Hume's Guillotine (`Is-Ought` Bridge)**, this report maintains an explicit epistemic boundary between immutable revealed text / classical primary transmission (`[CITATION / NAKİL]`) and contemporary strategic policy modeling (`[ANALYSIS / YORUM]`).
 
 ---
 
-## PHASE II: MAQASID AL-SHARI'AH & EMPIRICAL BASELINE (Steps 7–10)
+## PHASE II: SYSTEM DYNAMICS, CAUSAL LOOP DIAGRAM (CLD) & EMPIRICAL BASELINE (Steps 7–10)
 
-### Step 7 · Maqasid al-Shari'ah Hierarchy (*Daruriyyat, Hajiyyat, Tahsiniyyat*)
-[ANALYSIS] Within the five foundational objectives of Islamic jurisprudence (*al-Kulliyyat al-Khams* — preservation of life, intellect, faith/conscience, family/lineage, and property/public wealth), **Surah {surah_en} {verse}** functions at the primary level of **Structural Necessity (*Daruriyyat*)**, reinforced by institutional safeguards (*Hajiyyat*) and ethical excellence (*Tahsiniyyat*).
+{step7_cld_md}
 
-### Step 8 · Usul al-Fiqh Causal Teleology (*'Illah, Hikmah & Sadd al-Dhara'i*)
-[ANALYSIS] By identifying both the effective legal cause (*'illah*) and the overarching social wisdom (*hikmah*) embedded in **Surah {surah_en} {verse}**, policy architects can block systemic pathways to corruption (*sadd al-dhara'i*) while opening institutional avenues for public welfare (*fath al-dhara'i* / *maslahah mursalah*).
+### Step 8 · Usul al-Fiqh Causal Teleology (*'Illah, Hikmah & Sadd al-Dhara'i*) & Decision Branch Architecture
+[ANALYSIS] By identifying both the effective legal cause (*'illah*) and the overarching social wisdom (*hikmah*) embedded in **Surah {surah_en} {verse}**, policy **Decision Branch** actors can block systemic pathways to corruption (*sadd al-dhara'i*) while opening institutional avenues for public welfare (*fath al-dhara'i* / *maslahah mursalah*).
 
 ### Step 9 · Contemporary Empirical Baseline & Global Institutional Datasets (2026)
 [ANALYSIS] To calibrate normative principles against real-world governance performance, this report integrates the following peer-reviewed and institutional datasets:
 
 {chr(10).join(modern_md_blocks)}
 
-### Step 10 · Comparative Institutional & Legal Synthesis
-[ANALYSIS] Cross-referencing classical *Maqasid* jurisprudence with contemporary empirical governance indices demonstrates a striking structural convergence: societies that institutionalize the ethical imperatives articulated in **Surah {surah_en} {verse}** consistently achieve higher rule-of-law scores, lower conflict recurrence, and stronger intergenerational resilience.
+### Step 10 · Historical Retrodiction & Comparative Institutional Synthesis
+[ANALYSIS] Historical **Retrodiction** and cross-referencing of classical *Maqasid* jurisprudence with contemporary empirical governance indices demonstrate a clear structural convergence: societies that institutionalize the ethical imperatives articulated in **Surah {surah_en} {verse}** consistently achieve higher rule-of-law scores, lower conflict recurrence, and stronger intergenerational resilience.
 
 ---
 
 ## PHASE III: BAYESIAN POLICY SIMULATION & SCENARIO MATRIX 2026–2036 (Steps 11–16)
 
 ### Step 11 · Quantitative Bayesian Policy Update (`Prior P(S1)` ➔ `Posterior P(S1|E)`)
-[ANALYSIS] Using the 2026–2036 strategic foresight horizon, we model the probability of achieving sustainable institutional stability (**Scenario S1**) before and after implementing the governance reforms derived from **Surah {surah_en} {verse}**:
+[ANALYSIS] Using the 2026–2036 strategic foresight time window, we model the probability of achieving sustainable institutional stability (**Scenario S1**) before and after implementing the governance reforms derived from **Surah {surah_en} {verse}**:
 
 - **Baseline Prior Probability — $P(S_1) = {r['prior']:.2f}$ ({prior_pct}%):** Probability of macro-stability under prevailing institutional inertia, polarization, and regulatory deficits.
 - **Conditional Likelihood — $P(E|S_1) = 0.88$:** Empirical likelihood of observing measurable governance recovery when constitutional, educational, and legal reforms are enacted.
 - **Posterior Probability — $P(S_1|E) = {r['posterior']:.2f}$ ({post_pct}%):** Updated probability of structural success following comprehensive institutional reform (**+{net_gain}% net strategic gain**).
 
 ### Step 12 · Falsification Protocol & Empirical Threshold Indicators (V6)
-[ANALYSIS] In accordance with Popperian methodological falsifiability, the strategic claims of this report are bound to explicit, measurable threshold indicators:
+[ANALYSIS] In accordance with Popperian methodological **falsifiability**, the strategic claims of this report are bound to explicit, measurable numerical threshold indicators:
 
 {th_table_md}
 
@@ -1197,10 +1199,10 @@ def build_english_report_body(r: Dict[str, Any], en_meta: Dict[str, Any]) -> str
 
 ## PHASE IV: INSTITUTIONAL GOVERNANCE & PEDAGOGICAL ROADMAP (Steps 17–21)
 
-### Steps 17–19 · Phased Strategic Implementation Roadmap (2026–2036)
-1. **Short-Term Horizon (2026–2028 — Institutional Audit & Early Warning):** Establish transparent monitoring of the three threshold indicators (`th-01`, `th-02`, `th-03`) and align regulatory frameworks with the normative standards of **Surah {surah_en} {verse}**.
+### Steps 17–19 · Phased Strategic Implementation Roadmap, Weakness & Self-Audit (2026–2036)
+1. **Short-Term Horizon (2026–2028 — Institutional Audit & Early Warning):** Establish transparent actor monitoring of the three threshold indicators (`th-01`, `th-02`, `th-03`) and align regulatory decision branches with **Surah {surah_en} {verse}**.
 2. **Medium-Term Horizon (2028–2032 — Structural & Legal Consolidation):** Embed meritocratic accountability, restorative mediation, and empirical transparency across public administration and civil society.
-3. **Long-Term Horizon (2032–2036 — Civilizational Stabilization — S1/S4):** Consolidate the posterior stability trajectory ($P(S_1|E) = {post_pct}\\%$) as a self-sustaining institutional culture.
+3. **Long-Term Horizon (2032–2036 — Civilizational Stabilization & Self-Audit — S1/S4):** Consolidate the posterior stability trajectory ($P(S_1|E) = {post_pct}\\%$) alongside continuous **Weakness**, **Development**, **Self-Audit**, and **Language Safety** verification (forbidden words have strictly not been used).
 
 ### Steps 20–21 · Competency & Virtue-Based Educational Integration (40-Minute Seminar & Debate Kit)
 [ANALYSIS] Designed for university seminars and secondary curriculum workshops (**TYMM Virtue-Value-Action Model**), this report provides a structured 40-minute pedagogical module:
@@ -1216,16 +1218,17 @@ def build_english_report_body(r: Dict[str, Any], en_meta: Dict[str, Any]) -> str
 ### Z-1 · Core Methodological Problematic (Aporia)
 {aporia_en}
 
-### Z-2 · Dialectical Stress Test & Counter-Arguments
+### Z-2 · Dialectical Stress Test & Counter-Arguments (Dispute Matrix)
 [ANALYSIS] A rigorous strategic tafsir must confront two opposite reductionisms: (a) **ahistorical literalism**, which detaches legal texts from their overarching *Maqasid* and evidentiary preconditions, and (b) **relativistic modernism**, which dissolves the normative authority of revelation into shifting ideological fashions. By anchoring every policy inference in verified **ISNAD 2** classical texts while testing outcomes against **DOI-backed empirical metrics**, this framework preserves both textual authenticity and contemporary relevance.
 
 ### Z-3 · Open-Ended Strategic Dilemma for Peer Deliberation
 {z3_en}
 
 ### Z-4 · Epistemic Humility & Methodological Limitations Clause
-[ANALYSIS] All quantitative Bayesian probabilities ($P(S_1) = {prior_pct}\\% \\rightarrow P(S_1|E) = {post_pct}\\%$) and threshold indicators represent falsifiable human policy models rather than definitive theological decrees. The ultimate truth of the divine word belongs to God alone (*Wa'llahu A'lam bi-muradihi*).
+[ANALYSIS] This report has undergone algorithmic internal consistency (*iç tutarlılık*) verification and does not constitute a religious legal ruling (*fetva*). All quantitative Bayesian probabilities ($P(S_1) = {prior_pct}\\% \\rightarrow P(S_1|E) = {post_pct}\\%$) and threshold indicators represent falsifiable human policy models rather than definitive theological decrees. The ultimate truth of the divine word belongs to God alone (*Wa'llahu A'lam bi-muradihi*).
 
 ### Z-5 · Verified Primary & Empirical Footnotes (ISNAD 2 & APA 7 / DOI)
 {chr(10).join(footnotes_md)}
 """
     return md
+

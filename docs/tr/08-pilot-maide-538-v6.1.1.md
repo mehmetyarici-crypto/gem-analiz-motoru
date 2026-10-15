@@ -310,12 +310,13 @@ Mâide Sûresi 5:38'in hemen ardından gelen **5:39 âyeti** (*"Kim bu zulmünde
 
 ## FAZ II — SİSTEM VE GELECEK MODELLEMESİ
 
-### ADIM 07 — SİSTEM HARİTASI (CAUSAL LOOP DİAGRAMI)
+### ADIM 07 — SİSTEM HARİTASI (CAUSAL LOOP DİAGRAMI — CLD), GECİKME VE KIRILMA NOKTASI (N4)
 
-- **Pekiştirici Döngü (R1 — Cezasızlık ve Çöküş Sarmalı):** Yolsuzluk/hırsızlık artar → Caydırıcı müeyyide uygulanmazsa → Suç karlı bir sektör haline gelir → Mülkiyet güvenliği çöker → Yatırım durur, yoksulluk derinleşir.
-- **Dengeleyici Döngü (B1 — Adil İktisat ve Nekâl Freni):** Hırsızlık artar → Sosyal güvenlik açığı kapatılır → Açlık şüphesi elendikten sonra organize faillere nekâl uygulanır → Suçun karlılığı sıfırlanır → Mülkiyet düzeni dengelenir.
-- **Tipping Point (Kırılma Noktası):** Toplumda "çalanın yanına kar kaldığı" ve yargının sadece yoksulları cezalandırıp büyük hortumcuları koruduğu kanaatinin yerleştiği an.
-
+- **Temel Sistem Değişkenleri (Stok & Akış Değişkenleri):** `[YORUM]` **Stok Değişkenler:** Kamusal Mülkiyet ve Emniyet Stoku (*Hıfzu'l-Mâl*), Sosyal Adalet ve Asgari Geçim Güvencesi Stoku, Yargısal Caydırıcılık İtibarı. **Akış Değişkenler:** İhtiyaç/Açlık Kaynaklı Suç Eğilimi, Kasıtlı ve Organize Hırsızlık Hızı (*Sirkat*), Şüphelerle Cezayı Düşürme Filtresi (*İdrâü'l-Hudûd bi'ş-Şübühât*) ve Tevbe/Islah Rehabilitasyon Akışı (Mâide 5:39).
+- **Pekiştirici Döngü (R1 — Sosyal Adaletsizlik ve Cezasızlık Kısır Döngüsü / Vicious Cycle):** `[YORUM]` Gelir Dağılımı Bozukluğu ve Yoksulluk (`+`) → Mülkiyet Suçları ve Kurumsal Yolsuzluk (`+`) → Seçici/Sınıfsal Cezalandırma (Güçlülerin Korunup Yoksulların Ezilmesi) (`+`) → Hukuka Güvenin ve Meşruiyetin Çöküşü (`-`) → Kayıt Dışı Ekonomi ve Mülkiyet Güvensizliği (`+`) → Gelir Dağılımı Bozukluğu ve Yoksulluk (`+`). *(Hz. Peygamber'in uyardığı üzere, üst tabaka çaldığında cezasız bırakıp zayıflara ceza uygulamak medeniyeti helâke sürükler).*
+- **Dengeleyici Döngü (B1 — Hz. Ömer'in Sosyal Güvence Önkoşulu ve Mâide 5:38–39 Dengeleyicisi / Balancing Loop):** `[YORUM]` Mülkiyet İhlali ve Hırsızlık Riski (`+`) → 1. Öncelik: Sosyal Devletin Asgari Geçim ve İkrah/Zaruret Kalkanını Sağlaması (`+`) → 2. Öncelik: Tam İrade (`bimā kasabā`) ile İşlenen Organize Suçlara Bağımsız Yargısal Caydırıcılık (`nakālan`) ve Mâide 5:39 Tevbe/Islah Rehabilitasyonu (`+`) → Mülkiyet Emniyetinin ve Toplumsal Güvencenin Artması (`+`) → Mülkiyet İhlali ve Hırsızlık Riski (`-`).
+- **Sistemik Gecikme (Delay) ve Kaldıraç Noktası (Leverage Point):** `[YORUM]` **Sistemik Gecikme (Delay):** Sosyal transfer ve istihdam politikalarının suç oranlarını düşürmesi **12–24 aylık** bir sosyo-ekonomik gecikme içerirken; yargısal tahkikte nisap, hırz ve şüphe incelemesi hatalı infazı önleyen usûlî bir emniyet gecikmesidir. **Kaldıraç Noktası (Leverage Point):** Ceza hukukundan önce **asgari refah ve sosyal güvenlik ağının (Hz. Ömer'in Âmü'r-Ramâde içtihadı)** eksiksiz kurulması ve Mâide 5:39'daki onarıcı adalet/ıslah kapısının açık tutulmasıdır.
+- **Kırılma Noktası (Tipping Point) ve Erken Uyarı Sinyali (N4 / EU):** `[YORUM]` **Tipping Point (Kırılma Noktası):** Temel gıda ve barınma enflasyonunun hane halkı gelirini aşmasıyla zaruret kaynaklı suçların patlaması ve yargının beyaz yakalı kamu yolsuzluklarına karşı felç olması. **Erken Uyarı Sinyali (N4 / EU-01):** Yoksulluk sınırının altındaki nüfus oranının `%15` eşiğini aşması, genç işsizliğinde sıçrama ve mülkiyet davalarında ortalama yargılama süresinin uzaması.
 ---
 
 ### ADIM 08 — DÖRT SENARYO VE STRATEJİK DEĞERLENDİRME

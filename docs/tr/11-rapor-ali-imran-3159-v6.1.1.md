@@ -320,12 +320,13 @@ peer_review:
 
 ## FAZ II — SİSTEM VE GELECEK MODELLEMESİ
 
-### ADIM 07 — SİSTEM HARİTASI (CAUSAL LOOP DİAGRAMI)
+### ADIM 07 — SİSTEM HARİTASI (CAUSAL LOOP DİAGRAMI — CLD), GECİKME VE KIRILMA NOKTASI (N4)
 
-- **Pekiştirici Döngü (R1 — Otokratik Tecrit ve Çöküş Sarmalı):** Lider sertleşir → İstişareyi terk eder → Etrafındaki liyakatli kadrolar dağılır (`lenfaddû`) → Çevresinde yalnızca dalkavuklar kalır → Yanlış kararlar artar → Başarısızlık derinleşir (Yıkım döngüsü).
-- **Dengeleyici Döngü (B1 — Katılımcı Karar ve Ortak Akıl Dengesi):** Merhametli liderlik sergilenir → İstişare meclisleri kurulur → Farklı fikirler tartışılır → En isabetli karar azimle uygulanır → Toplumsal sahiplenme ve başarı yükselir.
-- **Tipping Point (Kırılma Noktası):** Liderin eleştirel sesleri susturup istişare meclisini sadece kendi kararlarını alkışlayan bir noter heyetine dönüştürdüğü an.
-
+- **Temel Sistem Değişkenleri (Stok & Akış Değişkenleri):** `[YORUM]` **Stok Değişkenler:** Liderlik Merhamet ve Psikolojik Güven Stoku (*Lîn ve Rahmet*), Kurumsal Şûrâ (Ortak Akıl) Kapasitesi, Toplumsal Kenetlenme Sermayesi. **Akış Değişkenler:** Kriz Anında Sertlik ve Kalp Katılığı Eğilimi (`faẓẓan ghalīẓa'l-qalb`), Af ve Onarıcı Kucaklama Akışı (`fa-‘fu ‘anhum`), İstişare Katılım Oranı (`wa shāwirhum fi'l-amr`) ve Kararlı İcra Hızı (`fa-idhā ‘azamta`).
+- **Pekiştirici Döngü (R1 — Otokratik Sertlik, Dağılma ve Körleşme Kısır Döngüsü / Vicious Cycle):** `[YORUM]` Kriz ve Hata Sonrası Liderlik Sertliği (`faẓẓan ghalīẓa'l-qalb`) (`+`) → Psikolojik Güvenin Yıkılması ve Nitelikli Paydaşların Dağılması (`la-nfaḍḍū min ḥawlika`) (`+`) → Eleştirel Geri Bildirim Kanallarının Kapanması ve Yankı Odası Oluşumu (`+`) → Stratejik Karar Hatalarının Katlanması (`+`) → Suçlu Arama ve Baskının Artması (`+`) → Kriz ve Hata Sonrası Liderlik Sertliği (`+`). *(Uhud gibi ağır krizlerde sertlik ve istişareyi terk etmek, örgütü içeriden dağıtır).*
+- **Dengeleyici Döngü (B1 — Âl-i İmrân 3:159 Merhamet, Şûrâ ve Azim Dengeleyicisi / Balancing Loop):** `[YORUM]` Kurumsal Kriz ve Taktiksel Başarısızlık (`+`) → İlahi Rahmetle Yumuşak Huyluluk (`linta lahum`) ve Onarıcı Af (`fa-‘fu ‘anhum`) (`+`) → Bağlayıcı ve Kapsayıcı İstişare Meclisinin İşletilmesi (`wa shāwirhum fi'l-amr`) (`+`) → Ortak Akılla Olgunlaşan Kararlı İcra (`‘azamta`) ve Tevekkül (`+`) → Kurumsal Kriz ve Taktiksel Başarısızlık (`-`).
+- **Sistemik Gecikme (Delay) ve Kaldıraç Noktası (Leverage Point):** `[YORUM]` **Sistemik Gecikme (Delay):** Katılımcı şûrâ süreci karar alma aşamasında kısa vadeli (**günler/haftalar düzeyinde**) bir müzakere gecikmesi yaratsa da, uygulama aşamasında toplumsal sahiplenmeyi sağlayarak uzun vadeli icra krizlerini önler. **Kaldıraç Noktası (Leverage Point):** Tam da hata ve yenilgi anlarında (Uhud sonrasında olduğu gibi) **suçlama yerine af (`afv`) ve istişareyi (`şûrâ`)** devreye sokarak kurumsal öğrenme döngüsünü açık tutmaktır.
+- **Kırılma Noktası (Tipping Point) ve Erken Uyarı Sinyali (N4 / EU):** `[YORUM]` **Tipping Point (Kırılma Noktası):** Yönetimin uzman görüşlerini ve yapıcı eleştirileri "sadakatsizlik" sayarak istişare kurullarını sembolik onay makamına dönüştürmesi (`la-nfaḍḍū` eşiği). **Erken Uyarı Sinyali (N4 / EU-01):** Kurum içi uzman istifalarının artması, karar süreçlerinde tek seslilik, kriz sonrası günah keçisi ilan etme pratiklerinin yaygınlaşması.
 ---
 
 ### ADIM 08 — DÖRT SENARYO VE STRATEJİK DEĞERLENDİRME

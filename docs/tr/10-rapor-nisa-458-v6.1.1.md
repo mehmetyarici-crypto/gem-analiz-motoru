@@ -316,12 +316,13 @@ Nisâ 4:58, Mekke fethi günü Hz. Peygamber'in Kâbe anahtarını Kureyş'in il
 
 ## FAZ II — SİSTEM VE GELECEK MODELLEMESİ
 
-### ADIM 07 — SİSTEM HARİTASI (CAUSAL LOOP DİAGRAMI)
+### ADIM 07 — SİSTEM HARİTASI (CAUSAL LOOP DİAGRAMI — CLD), GECİKME VE KIRILMA NOKTASI (N4)
 
-- **Pekiştirici Döngü (R1 — Çürüme ve Yozlaşma Sarmalı):** Nepotizm artar → Liyakatsiz kadrolar atanır → Kurumsal kapasite ve adalet çöker → Yolsuzluk yayılır → Rejim ayakta kalmak için daha çok sadık yandaşa muhtaç olur (Çöküş döngüsü).
-- **Dengeleyici Döngü (B1 — Liyakat ve Adalet Dengeleyicisi):** Liyakat esas alınır (`Emaneti ehline ver`) → Kurumsal performans artar → Yargı bağımsızlaşır → Toplumsal güven ve refah yükselir → Kayırmacılık alanı daralır.
-- **Tipping Point (Kırılma Noktası):** Yargıçların ve bürokratların mesleki liyakatle değil, iktidar partisinin sadakat referansıyla atanmaya başladığı an.
-
+- **Temel Sistem Değişkenleri (Stok & Akış Değişkenleri):** `[YORUM]` **Stok Değişkenler:** Kamu Kurumları Liyakat Stoku (*Ehlü'l-Emâne*), Yargı Bağımsızlığı ve Adalet Sermayesi (*el-Hükm bi'l-Adl*), Vatandaşın Devlete Güven Stoku. **Akış Değişkenler:** Liyakatli Atama Oranı (`tu’addū'l-amānāti ilā ahlihā`), Nepotizm/Kayırmacılık Akışı, Tarafsız Yargı Kararı Hızı (`bayna'n-nās bi'l-‘adl`) ve Beyin Göçü / Kurumsal Çürüme Hızı.
+- **Pekiştirici Döngü (R1 — Nepotizm, Yargısal Aşınma ve Kurumsal Çöküş Kısır Döngüsü / Vicious Cycle):** `[YORUM]` Kamu Atamalarında Nepotizm ve Sadakat Kayırmacılığı (`+`) → Ehliyetsiz Kadroların Kritik Makamlara Yerleşmesi (`+`) → Kamu Hizmeti Kalitesinin ve Yargı Tarafsızlığının Düşmesi (`-`) → Nitelikli İnsan Kaynağının Sistemden Dışlanması ve Beyin Göçü (`+`) → Kurumsal Denetim Mekanizmalarının Körelmesi (`+`) → Kamu Atamalarında Nepotizm ve Sadakat Kayırmacılığı (`+`). *(Emanetin ehlinden alınması, İbn Teymiyye ve Râzî'nin vurguladığı üzere devlet nizamını içeriden çökertir).*
+- **Dengeleyici Döngü (B1 — Nisâ 4:58 Emanet-Liyakat ve Evrensel Adalet Dengeleyicisi / Balancing Loop):** `[YORUM]` Kurumsal Yozlaşma ve Adalet Açığı (`+`) → Nesnel Liyakat Sınavları ve Şeffaf Atama Denetimi (`ilā ahlihā`) (`+`) → Kimlik Ayrımı Gözetmeksizin Tüm İnsanlar Arasında Adil Yargılama (`bayna'n-nās bi'l-‘adl`) (`+`) → Hukuk Güvenliği, Yatırım İklimi ve Toplumsal Meşruiyetin Güçlenmesi (`+`) → Kurumsal Yozlaşma ve Adalet Açığı (`-`).
+- **Sistemik Gecikme (Delay) ve Kaldıraç Noktası (Leverage Point):** `[YORUM]` **Sistemik Gecikme (Delay):** Liyakatsiz atamaların yol açtığı kurumsal hafıza kaybı ve mühendislik/yargı hataları genellikle **3–5 yıllık** bir gecikmeyle ağır ekonomik veya toplumsal krizlerde ortaya çıkar. **Kaldıraç Noktası (Leverage Point):** Kamu görevine giriş ve terfilerde **bağımsız, denetlenebilir liyakat ölçütlerinin** (`ilā ahlihā`) tavizsiz uygulanması ve yargı kararlarının kimlikten bağımsız (`bayna'n-nās`) şeffaf denetimidir.
+- **Kırılma Noktası (Tipping Point) ve Erken Uyarı Sinyali (N4 / EU):** `[YORUM]` **Tipping Point (Kırılma Noktası):** Yargı ve üst düzey bürokrasi atamalarında mesleki ehliyet yerine siyasi/zümrevi sadakatin belirleyici kural haline gelmesi ve mahkemelere güvenin `%40`'ın altına inmesi. **Erken Uyarı Sinyali (N4 / EU-01):** Mülakat-yazılı sınav sapmalarının büyümesi, WJP Hukukun Üstünlüğü Endeksi (*Factor 1 & 2*) puanlarında gerileme ve nitelikli genç uzmanların yurt dışına göç hızında artış.
 ---
 
 ### ADIM 08 — DÖRT SENARYO VE STRATEJİK DEĞERLENDİRME

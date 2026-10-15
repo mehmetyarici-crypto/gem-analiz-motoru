@@ -326,12 +326,13 @@ Nisâ Sûresi 4:32–35 pasajında önce kadınların ve erkeklerin kendi kazan�
 
 ## FAZ II — SİSTEM VE GELECEK MODELLEMESİ
 
-### ADIM 07 — SİSTEM HARİTASI (CAUSAL LOOP DİAGRAMI)
+### ADIM 07 — SİSTEM HARİTASI (CAUSAL LOOP DİAGRAMI — CLD), GECİKME VE KIRILMA NOKTASI (N4)
 
-- **Pekiştirici Döngü (R1 — Şiddet ve Yıkım Sarmalı):** Ataerkil tahakküm artar → Şiddet ve baskı uygulanır → Güven ve sevgi çöker → Nüşûz ve karşı isyan derinleşir → Aile kurumu parçalanır.
-- **Dengeleyici Döngü (B1 — Şûra ve Hakem Freni):** Anlaşmazlık başlar → Nasihat ve iletişim işletilir → Çözülmezse tarafsız hakem heyeti (4:35) devreye girer → Haklar adilane dağıtılır → Ailede sükûnet yeniden tesis edilir.
-- **Tipping Point (Kırılma Noktası):** Sözlü iletişimin kopup taraflardan birinin fiziksel veya psikolojik şiddete başvurduğu an.
-
+- **Temel Sistem Değişkenleri (Stok & Akış Değişkenleri):** `[YORUM]` **Stok Değişkenler:** Aile İçi Meveddet ve Rahmet Stoku (Rûm 30:21), Karşılıklı Güven ve Mahremiyet Emniyeti (*Hıfzu'l-Gayb*), Aile Birliği Dayanıklılığı. **Akış Değişkenler:** Nüşûz (Aile İçi Başkaldırı/Geçimsizlik) Artış Hızı, Kavamet ve Nafaka Sorumluluğu Akışı, Kademeli Islah İletişimi (Vaaz → Hicr → Sembolik Uyarı) ve Hakemeyn (Çift Taraflı Aile Tahkimi — Nisâ 4:35) Müdahale Hızı.
+- **Pekiştirici Döngü (R1 — Otoriter Tahakküm ve Aile İçi Şiddet Kısır Döngüsü / Vicious Cycle):** `[YORUM]` Aile İçi İletişim Kopukluğu ve Nüşûz (`+`) → Kavametin Despotik Tahakküm Olarak İstismarı ve Şiddet/Baskı (`+`) → Duygusal Yabancılaşma ve Travma (`+`) → Meveddet ve Güven Stokunun Çöküşü (`-`) → Karşılıklı Husumet ve Aile İçi Kriz (`+`) → Aile İçi İletişim Kopukluğu ve Nüşûz (`+`). *(Nebevi sünnetin şiddet yasağını çiğneyen otoriter tepki, krizi çözmek yerine boşanma ve nesil travmasını hızlandırır).*
+- **Dengeleyici Döngü (B1 — Nisâ 4:34–35 Kademeli Islah ve Hakemeyn Dengeleyicisi / Balancing Loop):** `[YORUM]` Nüşûz ve Aile İçi Kriz Sinyali (`+`) → 1. Kademe Hikmetli Nasihat ve Psikolojik Diyalog (`fa-‘iẓūhunna`) (`+`) → 2. Kademe Ev İçi Soğutma Süreci (`wa-hjurūhunna`) ve 3. Kademe Nisâ 4:35 Çift Taraflı Hakem Heyeti (`ḥakamayn`) Devreye Girişi (`+`) → Adil Uzlaşı ve Ma'rûf Ölçüsünde Hakların Tesisi (`+`) → Nüşûz ve Aile İçi Kriz Sinyali (`-`). *(Şiddetsiz kademeli soğutma ve kurumsal hakemlik aileyi yıkımdan korur).*
+- **Sistemik Gecikme (Delay) ve Kaldıraç Noktası (Leverage Point):** `[YORUM]` **Sistemik Gecikme (Delay):** Âyetteki üç aşamalı sıralama (`fa-‘iẓūhunna` → `wa-hjurūhunna` → `wa-ḍribūhunna` → `ḥakamayn`), öfke anında ani boşanmayı veya şiddeti engelleyen zorunlu bir **duygusal ve hukuki gecikme (de-escalation buffer)** mekanizmasıdır. **Kaldıraç Noktası (Leverage Point):** Krizin üçüncü haftasını aşması halinde (4:35) her iki aileden eğitimli uzlaştırıcı hakemlerin (`ḥakamayn`) sürece dahil edilmesi ve `fa-lā tabghū ‘alayhinna sabīlā` (zulüm/bahane arama yasağı) denetiminin işletilmesidir.
+- **Kırılma Noktası (Tipping Point) ve Erken Uyarı Sinyali (N4 / EU):** `[YORUM]` **Tipping Point (Kırılma Noktası):** Sözlü iletişimin tamamen kesilerek psikolojik veya fiziksel şiddete yönelinmesi ve ev içi güvenliğinin sıfır tolerans sınırını ihlal etmesi. **Erken Uyarı Sinyali (N4 / EU-01):** Üç haftayı (`> 3 hafta`) aşan küsme ve duygusal kopukluk, nafaka/bakım yükümlülüklerinin kasıtlı ihmali ve aile mahremiyetinin (`hıfzu'l-gayb`) üçüncü kişilere ifşa edilmesi.
 ---
 
 ### ADIM 08 — DÖRT SENARYO VE STRATEJİK DEĞERLENDİRME

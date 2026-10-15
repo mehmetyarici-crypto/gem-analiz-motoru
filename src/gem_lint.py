@@ -294,7 +294,12 @@ class GemLinterV6:
             if YAML_AVAILABLE:
                 try:
                     self.frontmatter = yaml.safe_load(yaml_part) or {}
-                    self.gem_version = str(self.frontmatter.get("gem_version", "6.0.0"))
+                    self.gem_version = str(
+                        self.frontmatter.get("gem_version")
+                        or self.frontmatter.get("schema_version")
+                        or self.frontmatter.get("lint_version")
+                        or "6.0.0"
+                    )
                     self.is_v6 = self.gem_version.startswith("6.")
                 except Exception as e:
                     self.report("L-0002", BLOCK, f"YAML frontmatter parse hatası: {e}")
@@ -302,7 +307,7 @@ class GemLinterV6:
                 self.report("L-0003", WARN, "PyYAML modülü bulunamadı, YAML denetimi yapılamadı.")
         else:
             self.body_text = self.raw_text
-            if any(v in self.raw_text.lower() for v in ["v6.0", "v6.0.0", "v6.1", "v6.1.1"]):
+            if any(v in self.raw_text.lower() for v in ["v6.0", "v6.0.0", "v6.1", "v6.1.1", "v6.2.1"]):
                 self.report("L-0000", BLOCK, "v6.x raporlarında YAML frontmatter zorunludur!")
                 self.is_v6 = True
             else:
@@ -367,8 +372,8 @@ class GemLinterV6:
         if not self.is_v6:
             return
 
-        nakil_count = len(re.findall(r"\[NAK[Iİ]L\]", self.body_text, re.IGNORECASE))
-        yorum_count = len(re.findall(r"\[YORUM\]", self.body_text, re.IGNORECASE))
+        nakil_count = len(re.findall(r"\[NAK[Iİ]L\]|\[CITATION(?:\s*/\s*NAK[Iİ]L)?\]", self.body_text, re.IGNORECASE))
+        yorum_count = len(re.findall(r"\[YORUM\]|\[ANALYSIS(?:\s*/\s*YORUM)?\]", self.body_text, re.IGNORECASE))
 
         if nakil_count == 0:
             self.report("L-0201", BLOCK, "V2 İhlali: Metinde hiçbir [NAKİL] etiketi bulunamadı! Klasik ibareler ayrılmamış.")
@@ -511,7 +516,7 @@ class GemLinterV6:
         if not has_hume:
             self.report("L-0801", BLOCK, "V8 İhlali: Hume Giyotini (is-ought) ve olgu-değer ayrımı metinde bulunamadı!")
 
-        has_fals = "falsifiabilite" in norm_body or "yanlislanabilirlik" in norm_body
+        has_fals = any(t in norm_body for t in ["falsifiabilite", "falsifiability", "falsifiable", "yanlislanabilirlik"])
         if not has_fals:
             self.report("L-0802", BLOCK, "V8 İhlali: Ampirik politika kararları için falsifiabilite protokolü eksik!")
 
@@ -741,6 +746,78 @@ class GemLinterV6:
                 )
 
     # ----------------------------------------------------
+    # V13: ADIM 07 / STEP 07 Sistem Haritası (CLD) Doğrulaması
+    # ----------------------------------------------------
+    def check_v13_step07_cld(self):
+        if not self.is_v6:
+            return
+
+        step07_match = re.search(
+            r"(#{2,3}\s+(?:ADIM|STEP)\s+0?7\b[^\n]*\n)(.*?)(?=\n#{2,3}\s+(?:ADIM|STEP)\s+0?8\b|\Z)",
+            self.body_text,
+            re.DOTALL | re.IGNORECASE,
+        )
+        if not step07_match:
+            self.report("L-2201", BLOCK, "V13 İhlali: 'ADIM 07 / STEP 07' (Sistem Haritası / CLD) bölümü bulunamadı!")
+            return
+
+        s07_body = step07_match.group(2).strip()
+        s07_words = len(s07_body.split())
+
+        case_id = str(self.frontmatter.get("case_id") or self.frontmatter.get("vaka_kodu") or "")
+        if case_id.startswith("QV-2026-"):
+            if s07_words < 100:
+                self.report(
+                    "L-2202",
+                    BLOCK,
+                    f"V13 İhlali: ADIM 07 / Step 7 (CLD) içerik yoğunluğu çok düşük ({s07_words} kelime < asgari 100 kelime)!",
+                )
+            elif s07_words < 150:
+                self.report(
+                    "L-2203",
+                    WARN,
+                    f"ADIM 07 / Step 7 içerik hacmi ({s07_words} kelime) v6.2.1 ideal eşiğinin (150+ kelime) altında.",
+                )
+
+            has_r1 = bool(re.search(r"\bR1\b|Pekiştirici\s+Döngü|Reinforcing\s+Loop", s07_body, re.IGNORECASE))
+            has_b1 = bool(re.search(r"\bB1\b|Dengeleyici\s+Döngü|Balancing\s+Loop", s07_body, re.IGNORECASE))
+            if not (has_r1 and has_b1):
+                self.report(
+                    "L-2204",
+                    BLOCK,
+                    f"V13 İhlali: ADIM 07 / Step 7 içinde Pekiştirici Döngü (R1={has_r1}) ve Dengeleyici Döngü (B1={has_b1}) eksiksiz tanımlanmalıdır!",
+                )
+
+            arrow_lines = [
+                line for line in s07_body.splitlines()
+                if ("→" in line or "->" in line)
+            ]
+            if len(arrow_lines) < 2:
+                self.report(
+                    "L-2205",
+                    BLOCK,
+                    f"V13 İhlali: ADIM 07 / Step 7 içinde '→' oklarıyla kurulan kapalı nedensel döngü zincirleri eksik (bulunan: {len(arrow_lines)}, en az 2 zorunlu)!",
+                )
+
+            has_delay = bool(re.search(r"Gecikme|Delay", s07_body, re.IGNORECASE))
+            has_leverage = bool(re.search(r"Kaldıraç|Leverage\s+Point", s07_body, re.IGNORECASE))
+            if not (has_delay and has_leverage):
+                self.report(
+                    "L-2206",
+                    BLOCK,
+                    f"V13 İhlali: ADIM 07 / Step 7 içinde Sistemik Gecikme (Delay={has_delay}) veya Kaldıraç Noktası (Leverage={has_leverage}) eksik!",
+                )
+
+            has_tp = bool(re.search(r"Tipping\s+Point|Kırılma\s+Noktası", s07_body, re.IGNORECASE))
+            has_n4 = bool(re.search(r"\bN4\b|Erken\s+Uyarı|Early\s+Warning", s07_body, re.IGNORECASE))
+            if not (has_tp and has_n4):
+                self.report(
+                    "L-2207",
+                    BLOCK,
+                    f"V13 İhlali: ADIM 07 / Step 7 içinde Kırılma Noktası (Tipping Point={has_tp}) veya Erken Uyarı Sinyali (N4={has_n4}) eksik!",
+                )
+
+    # ----------------------------------------------------
     # Ana Tarama Yürütücüsü
     # ----------------------------------------------------
     def run_all(self):
@@ -763,6 +840,7 @@ class GemLinterV6:
         self.check_v10_disclaimer()
         self.check_v11_peer_review()
         self.check_v12_step01_depth()
+        self.check_v13_step07_cld()
 
         return self.print_summary()
 

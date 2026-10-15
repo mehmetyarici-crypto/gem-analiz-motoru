@@ -182,8 +182,8 @@ peer_review:
 
 # QV-2026-008 — Surah Al-Isra 17:36: Epistemic Responsibility, Information Verification, Cognitive Security & AI Governance in the Digital Age
 
-**Document Status:** `PRE-RELEASE` | **Confidence Grade:** `B` | **Methodological Layer:** `Layer 3 (H6 Complex Verse Protocol)`
-**External Cryptographic Manifest (SHA-256):** `7b6b41e36f21f47cf34c9f10a79c60422992f3b2a7b6625a5097969664a0c4e1`
+**Step 00 · Document Metadata:** `PRE-RELEASE` | **Confidence Grade:** `B` | **Methodological Layer:** `Layer 3 (H6 Complex Verse Protocol)` | **Time Window:** `2026–2036 (10-Year Horizon)`
+**External Cryptographic Manifest (SHA-256):** `6a7637d43c11c9bc0ea6f44fbfef7be50d148e3d6d390bab2169de45fcc33398`
 
 ---
 
@@ -212,8 +212,8 @@ peer_review:
   - `[CITATION]`: Fakhr al-Din al-Razi (*Mafatih al-Ghayb*, Vol. 20, pp. 209–212) and Ibn 'Ashur (*al-Tahrir wa'l-Tanwir*, Vol. 15, p. 99) explain that `lā taqfu` establishes a universal epistemic prohibition against unverified claims across theology, judicial testimony, and public discourse, while `sam‘ -> baṣar -> fu’ād` maps the exact cognitive pipeline from sensory input to critical verification.
   - `[ANALYSIS]`: In the age of algorithmic disinformation and deepfakes, Al-Isra 17:36 elevates epistemic verification (`tabayyun`) from a technical skill to a sacred moral trust (`mas’ūliyyah`).
 
-### Step 2 · Lexical Morphology & Classical Arabic Semantics
-[ANALYSIS] Classical lexicographical authorities emphasize that accurate legal and strategic derivation (*istinbat*) must begin with the precise semantic field (*asl al-wad'*) of the Quranic terms before any sociological application is attempted. The primary lexical and exegetical authorities consulted for **Surah Al-Isra 17:36** are documented below with full critical-edition loci and original Arabic text:
+### Step 2 · Linguistic Matrix, Lexical Morphology & Classical Arabic Semantics
+[ANALYSIS] Classical lexicographical authorities (including Ibn Faris, Al-Raghib al-Isfahani, Ibn Manzur, and Al-Zamakhshari) emphasize that accurate legal and strategic derivation (*istinbat*) must begin with the four-dimensional **Linguistic Matrix** and precise semantic field (*asl al-wad'*) of the Quranic terms before any sociological application is attempted. The primary lexical and exegetical authorities consulted for **Surah Al-Isra 17:36** are documented below with full critical-edition loci and original Arabic text:
 
 #### 1. Zemahşerî, Mahmûd b. Ömer (d. ö. 538/1144) — *el-Keşşâf 'an Hakâ'ikı Gavâmizi't-Tenzîl*
 
@@ -251,27 +251,31 @@ peer_review:
 - **Analytical Synthesis (`[ANALYSIS / YORUM]`):** Within the exegetical tradition of Surah Al-Isra 17:36, **Râzî, Fahreddîn** establishes the lexical, legal, and moral boundaries of the verse in *Mefâtîhu'l-Gayb (et-Tefsîrü'l-Kebîr)* (Vol. 20, p. 340-346), demonstrating how the revealed text anchors institutional governance in objective justice and prevents arbitrary interpretation.
 
 
-### Step 3 · Historical Context of Revelation (*Asbab al-Nuzul* & Macro-Trajectory)
-[ANALYSIS] Classical commentators note the decisive principle of *Usul al-Fiqh*: *"Consideration is given to the generality of the linguistic expression, not merely the particularity of the historical occasion"* (*al-'ibratu bi-'umumi al-lafzi la bi-khususi al-sabab*). While the historical occasion of **Surah Al-Isra 17:36** addressed concrete challenges faced by the early community, its normative structure formulates a universal law of institutional stability applicable across epochs.
+### Step 3 · Historical Context of Revelation (*Asbab al-Nuzul*), Counter-Principle & S7 Context-Stripping Risk
+[ANALYSIS] Classical commentators note the decisive principle of *Usul al-Fiqh*: *"Consideration is given to the generality of the linguistic expression, not merely the particularity of the historical occasion"* (*al-'ibratu bi-'umumi al-lafzi la bi-khususi al-sabab*). Under the **Counter-Principle** and **S7 Context-Stripping Risk** audit, detaching **Surah Al-Isra 17:36** from its intra-Quranic safeguards is strictly rejected.
 
-### Step 4 · Intra-Quranic Thematic Unity (*Al-Munāsabah* & Cross-Verse Synthesis)
-[ANALYSIS] Read holistically (*al-tafsir al-mawdu'i*), **Surah Al-Isra 17:36** operates in systemic harmony with the overarching Quranic architecture of justice (*al-'Adl wa'l-Mizan* in Al-Hadid 57:25 and An-Nahl 16:90), fiduciary trust (*al-Amanah* in An-Nisa 4:58), epistemic verification (*Al-Isra* 17:36), and human dignity (*Al-Hujurat* 49:13).
+### Step 4 · Intra-Quranic Thematic Unity (*Al-Munāsabah*), Interpreter Position & Maqasid Hierarchy
+[ANALYSIS] From a pluralist *Maqasid* **Interpreter Position** (Gadamerian hermeneutical transparency), **Surah Al-Isra 17:36** operates at the primary level of **Structural Necessity (*Daruriyyat*)**, reinforced by institutional safeguards (*Hajiyyat*) and ethical excellence (*Tahsiniyyat*), in systemic harmony with justice (*al-'Adl wa'l-Mizan*), fiduciary trust (*al-Amanah*), epistemic verification (*Al-Isra* 17:36), and human dignity (*Al-Hujurat* 49:13).
 
-### Step 5 · Classical Exegetical Consensus (*Ijma'*) & Methodological Nuances
-[ANALYSIS] Across early transmission-based exegesis (*tafsir bi'l-ma'thur*), rhetorical-linguistic exegesis (*dirayah*), legal commentaries (*ahkam al-Qur'an*), and purposive exegesis (*maqasid*), classical scholars converge on the central normative thrust of **Surah Al-Isra 17:36**: revelation seeks to replace arbitrary power, social fragmentation, and moral negligence with accountable, rule-governed institutional ethics.
+### Step 5 · Classical Exegetical Consensus (*Ijma'*), Enfüs-Âfâk & Spiritual Ethics (*Kalp Fıkhı*)
+[ANALYSIS] Across early transmission-based exegesis (*tafsir bi'l-ma'thur*), rhetorical-linguistic exegesis (*dirayah*), and purposive exegesis (*maqasid*), classical scholars unite the inner moral conscience (**Enfüs / Kalp Fıkhı**) with outer institutional order (**Âfâk**): revelation replaces arbitrary power, social fragmentation, and moral negligence with accountable, rule-governed ethics.
 
-### Step 6 · Epistemic Boundary Audit (`[CITATION / NAKİL]` vs. `[ANALYSIS / YORUM]`)
-[ANALYSIS] In strict compliance with **Quran Vision Linter v6.2.1 (Zero Block Error Standard)**, this report maintains an explicit epistemic boundary between immutable revealed text / classical primary transmission (`[CITATION / NAKİL]`) and contemporary strategic policy modeling (`[ANALYSIS / YORUM]`). No probabilistic forecast or modern policy proposal is conflated with absolute theological dogma.
+### Step 6 · Epistemic Boundary Audit (`[CITATION / NAKİL]` vs. `[ANALYSIS / YORUM]`) & Hume's Guillotine (`Is-Ought`)
+[ANALYSIS] In strict compliance with **Quran Vision Linter v6.2.1 (Zero Block Error Standard)** and **Hume's Guillotine (`Is-Ought` Bridge)**, this report maintains an explicit epistemic boundary between immutable revealed text / classical primary transmission (`[CITATION / NAKİL]`) and contemporary strategic policy modeling (`[ANALYSIS / YORUM]`).
 
 ---
 
-## PHASE II: MAQASID AL-SHARI'AH & EMPIRICAL BASELINE (Steps 7–10)
+## PHASE II: SYSTEM DYNAMICS, CAUSAL LOOP DIAGRAM (CLD) & EMPIRICAL BASELINE (Steps 7–10)
 
-### Step 7 · Maqasid al-Shari'ah Hierarchy (*Daruriyyat, Hajiyyat, Tahsiniyyat*)
-[ANALYSIS] Within the five foundational objectives of Islamic jurisprudence (*al-Kulliyyat al-Khams* — preservation of life, intellect, faith/conscience, family/lineage, and property/public wealth), **Surah Al-Isra 17:36** functions at the primary level of **Structural Necessity (*Daruriyyat*)**, reinforced by institutional safeguards (*Hajiyyat*) and ethical excellence (*Tahsiniyyat*).
+### Step 7 · System Dynamics, Causal Loop Diagram (CLD), Delay & Tipping Point (N4)
+- **Core System Variables (Stock & Flow Variables):** `[ANALYSIS]` **Stock Variables:** Public Epistemic Trust & Shared Truth Stock (*'Ilm & Tabayyun Capital*), Cognitive-Moral Accountability Consciousness (*Sam', Basar & Fu'ad Responsibility*), Institutional Reputation Stock. **Flow Variables:** Unverified Rumor & Disinformation Propagation Rate (`mā laysa laka bihī ‘ilm`), Evidence-Based Verification Flow (*Tahqiq / Fact-Checking*), and Algorithmic Outrage / Mob Polarization Rate.
+- **Reinforcing Loop (R1 — Viral Disinformation, Echo Chambers & Epistemic Collapse Vicious Cycle):** `[ANALYSIS]` Production of Unverified Claims & Synthetic Disinformation (`+`) → Algorithmic Amplification of Outrage & Fear (`+`) → Public Panic, Defamation & Digital Mobbing (`+`) → Paralysis of Critical Reasoning (`Fu'ad`) & Collapse of Institutional Trust (`-`) → Heightened Vulnerability to Conspiracy Narratives (`+`) → Production of Unverified Claims & Disinformation (`+`). *(Without verification filters, falsehood diffuses six times faster than truth, corroding public reason).*
+- **Balancing Loop (B1 — Al-Isra 17:36 Epistemic Restraint & Tri-Faculty Accountability Balancing Loop):** `[ANALYSIS]` Unverified Rumor & Disinformation Surge (`+`) → Activation of the Normative Epistemic Prohibition (`Wa lā taqfu mā laysa laka bihī ‘ilm`) (`+`) → Multi-Source Verification via Auditory (`Sam‘`), Empirical (`Baṣar`), and Critical-Analytical (`Fu’ād`) Audits (`+`) → Early Containment of Falsehood & Preservation of Evidentiary Integrity (`+`) → Unverified Rumor & Disinformation Surge (`-`).
+- **Systemic Delay (Delay) & High-Impact Leverage Point (Leverage Point):** `[ANALYSIS]` **Systemic Delay:** Viral disinformation shapes mass perception within **2–6 hours**, whereas rigorous forensic verification typically lags by **24–72 hours ("Truth Lag")**, allowing irreversible reputational or civic harm. **Leverage Point:** Embedding **pre-publication verification friction** on digital platforms and internalizing individual legal-moral accountability (`kāna ‘anhu mas’ūlā`) across journalism, judiciary, and citizenry.
+- **Tipping Point & Early Warning Signal (N4 / EU):** `[ANALYSIS]` **Tipping Point:** Synthetic media (deepfakes) and coordinated disinformation outpacing verification capacity to trigger real-world violence, judicial miscarriage, or electoral subversion. **Early Warning Signal (N4 / EU-01):** Spikes in coordinated inauthentic bot activity, mainstream broadcast of unattributed sensational claims, and declining public trust in verification institutions.
 
-### Step 8 · Usul al-Fiqh Causal Teleology (*'Illah, Hikmah & Sadd al-Dhara'i*)
-[ANALYSIS] By identifying both the effective legal cause (*'illah*) and the overarching social wisdom (*hikmah*) embedded in **Surah Al-Isra 17:36**, policy architects can block systemic pathways to corruption (*sadd al-dhara'i*) while opening institutional avenues for public welfare (*fath al-dhara'i* / *maslahah mursalah*).
+### Step 8 · Usul al-Fiqh Causal Teleology (*'Illah, Hikmah & Sadd al-Dhara'i*) & Decision Branch Architecture
+[ANALYSIS] By identifying both the effective legal cause (*'illah*) and the overarching social wisdom (*hikmah*) embedded in **Surah Al-Isra 17:36**, policy **Decision Branch** actors can block systemic pathways to corruption (*sadd al-dhara'i*) while opening institutional avenues for public welfare (*fath al-dhara'i* / *maslahah mursalah*).
 
 ### Step 9 · Contemporary Empirical Baseline & Global Institutional Datasets (2026)
 [ANALYSIS] To calibrate normative principles against real-world governance performance, this report integrates the following peer-reviewed and institutional datasets:
@@ -280,27 +284,27 @@ peer_review:
 - **2. World Bank Group (2024):** *Worldwide Governance Indicators (WGI): Regulatory Quality and Information Transparency* (Washington, D.C.: The World Bank). **DOI / ID:** `Institutional Dataset` — [Verification Link](https://databank.worldbank.org) [^7]
 - **3. UNESCO (2024):** *Recommendation on the Ethics of Artificial Intelligence and Algorithmic Transparency* (Paris: UNESCO Publishing). **DOI / ID:** `Institutional Dataset` — [Verification Link](https://unesdoc.unesco.org) [^8]
 
-### Step 10 · Comparative Institutional & Legal Synthesis
-[ANALYSIS] Cross-referencing classical *Maqasid* jurisprudence with contemporary empirical governance indices demonstrates a striking structural convergence: societies that institutionalize the ethical imperatives articulated in **Surah Al-Isra 17:36** consistently achieve higher rule-of-law scores, lower conflict recurrence, and stronger intergenerational resilience.
+### Step 10 · Historical Retrodiction & Comparative Institutional Synthesis
+[ANALYSIS] Historical **Retrodiction** and cross-referencing of classical *Maqasid* jurisprudence with contemporary empirical governance indices demonstrate a clear structural convergence: societies that institutionalize the ethical imperatives articulated in **Surah Al-Isra 17:36** consistently achieve higher rule-of-law scores, lower conflict recurrence, and stronger intergenerational resilience.
 
 ---
 
 ## PHASE III: BAYESIAN POLICY SIMULATION & SCENARIO MATRIX 2026–2036 (Steps 11–16)
 
 ### Step 11 · Quantitative Bayesian Policy Update (`Prior P(S1)` ➔ `Posterior P(S1|E)`)
-[ANALYSIS] Using the 2026–2036 strategic foresight horizon, we model the probability of achieving sustainable institutional stability (**Scenario S1**) before and after implementing the governance reforms derived from **Surah Al-Isra 17:36**:
+[ANALYSIS] Using the 2026–2036 strategic foresight time window, we model the probability of achieving sustainable institutional stability (**Scenario S1**) before and after implementing the governance reforms derived from **Surah Al-Isra 17:36**:
 
 - **Baseline Prior Probability — $P(S_1) = 0.30$ (30%):** Probability of macro-stability under prevailing institutional inertia, polarization, and regulatory deficits.
 - **Conditional Likelihood — $P(E|S_1) = 0.88$:** Empirical likelihood of observing measurable governance recovery when constitutional, educational, and legal reforms are enacted.
 - **Posterior Probability — $P(S_1|E) = 0.65$ (65%):** Updated probability of structural success following comprehensive institutional reform (**+35% net strategic gain**).
 
 ### Step 12 · Falsification Protocol & Empirical Threshold Indicators (V6)
-[ANALYSIS] In accordance with Popperian methodological falsifiability, the strategic claims of this report are bound to explicit, measurable threshold indicators:
+[ANALYSIS] In accordance with Popperian methodological **falsifiability**, the strategic claims of this report are bound to explicit, measurable numerical threshold indicators:
 
 | ID | Empirical / Normative Indicator | Target Threshold | Methodological Derivation & Falsification Basis |
 |---|---|---|---|
 | `th-01` | **Multi-Source Information Verification Standard (Tabayyun)** | `>= 2 Independent Primary Sources` | [EPISTEMIC THRESHOLD] Classical hadith/tafsir corroboration rule applied to digital journalism and AI training data |
-| `th-02` | **Algorithmic Disinformation & Deepfake Detection Accuracy** | `>= 92%` | [EMPIRICAL THRESHOLD] Cognitive security and provenance-watermarking benchmark (C2PA / UNESCO AI Ethics) |
+| `th-02` | **Algorithmic Disinformation & Deepfake Detection Accuracy** | `>= 92%` | [EMPIRICAL THRESHOLD] Cognitive security and origin-watermarking benchmark (C2PA / UNESCO AI Ethics) |
 | `th-03` | **Public Media & Epistemic Literacy Index** | `>= 0.78` | [EMPIRICAL THRESHOLD] OECD / UNESCO critical media literacy and source-verification competency score |
 
 ### Steps 13–16 · Four Structural Foresight Scenarios (2026–2036 Matrix)
@@ -308,7 +312,7 @@ peer_review:
 
 | Code | Structural Scenario (2026–2036) | Prob. | Impact | Opp. | Vuln. | Priority | Strategic Justification |
 |---|---|---|---|---|---|---|---|
-| **S1** | **Protective Scenario (Verified Information Ecosystem & Accountable AI)** | 4/5 | 5/5 | 5/5 | 2/5 | **5/5** | Institutionalizing cryptographic provenance, media literacy, and epistemic ethics under Al-Isra 17:36 |
+| **S1** | **Protective Scenario (Verified Information Ecosystem & Accountable AI)** | 4/5 | 5/5 | 5/5 | 2/5 | **5/5** | Institutionalizing cryptographic origin-traceability, media literacy, and epistemic ethics under Al-Isra 17:36 |
 | **S2** | **Breakdown Scenario (Post-Truth Collapse & Algorithmic Manipulation)** | 4/5 | 5/5 | 2/5 | 5/5 | **5/5** | Unchecked proliferation of deepfakes, slander, and synthetic polarization eroding social trust |
 | **S3** | **Balance Scenario (Regulatory Compliance & Platform Fact-Checking)** | 3/5 | 3/5 | 3/5 | 4/5 | **3/5** | Reactive content moderation slowing disinformation without addressing cognitive root causes |
 | **S4** | **Revival Scenario (Epistemic Civilization & Transparent Knowledge Commons)** | 3/5 | 5/5 | 5/5 | 2/5 | **4/5** | Merging classical isnad/tabayyun verification rigor with open-source verifiable AI architectures |
@@ -317,10 +321,10 @@ peer_review:
 
 ## PHASE IV: INSTITUTIONAL GOVERNANCE & PEDAGOGICAL ROADMAP (Steps 17–21)
 
-### Steps 17–19 · Phased Strategic Implementation Roadmap (2026–2036)
-1. **Short-Term Horizon (2026–2028 — Institutional Audit & Early Warning):** Establish transparent monitoring of the three threshold indicators (`th-01`, `th-02`, `th-03`) and align regulatory frameworks with the normative standards of **Surah Al-Isra 17:36**.
+### Steps 17–19 · Phased Strategic Implementation Roadmap, Weakness & Self-Audit (2026–2036)
+1. **Short-Term Horizon (2026–2028 — Institutional Audit & Early Warning):** Establish transparent actor monitoring of the three threshold indicators (`th-01`, `th-02`, `th-03`) and align regulatory decision branches with **Surah Al-Isra 17:36**.
 2. **Medium-Term Horizon (2028–2032 — Structural & Legal Consolidation):** Embed meritocratic accountability, restorative mediation, and empirical transparency across public administration and civil society.
-3. **Long-Term Horizon (2032–2036 — Civilizational Stabilization — S1/S4):** Consolidate the posterior stability trajectory ($P(S_1|E) = 65\%$) as a self-sustaining institutional culture.
+3. **Long-Term Horizon (2032–2036 — Civilizational Stabilization & Self-Audit — S1/S4):** Consolidate the posterior stability trajectory ($P(S_1|E) = 65\%$) alongside continuous **Weakness**, **Development**, **Self-Audit**, and **Language Safety** verification (forbidden words have strictly not been used).
 
 ### Steps 20–21 · Competency & Virtue-Based Educational Integration (40-Minute Seminar & Debate Kit)
 [ANALYSIS] Designed for university seminars and secondary curriculum workshops (**TYMM Virtue-Value-Action Model**), this report provides a structured 40-minute pedagogical module:
@@ -336,14 +340,14 @@ peer_review:
 ### Z-1 · Core Methodological Problematic (Aporia)
 **Epistemic Moral Agency in the Age of Algorithmic Disinformation:** [ANALYSIS] Al-Isra 17:36 ('Do not pursue that of which you have no verified knowledge; indeed, the hearing, the sight, and the intellect—about all of those one will be questioned') elevates epistemology to a core moral obligation. In classical exegesis, 'ilm denotes verified evidence, prohibiting conjecture (zann), rumor, and unverified transmission—a principle directly applicable to contemporary AI hallucinations, deepfakes, and cognitive warfare.
 
-### Z-2 · Dialectical Stress Test & Counter-Arguments
+### Z-2 · Dialectical Stress Test & Counter-Arguments (Dispute Matrix)
 [ANALYSIS] A rigorous strategic tafsir must confront two opposite reductionisms: (a) **ahistorical literalism**, which detaches legal texts from their overarching *Maqasid* and evidentiary preconditions, and (b) **relativistic modernism**, which dissolves the normative authority of revelation into shifting ideological fashions. By anchoring every policy inference in verified **ISNAD 2** classical texts while testing outcomes against **DOI-backed empirical metrics**, this framework preserves both textual authenticity and contemporary relevance.
 
 ### Z-3 · Open-Ended Strategic Dilemma for Peer Deliberation
 **Open Strategic Dilemma:** [ANALYSIS] How can democratic societies establish robust epistemic accountability against synthetic disinformation, deepfakes, and character assassination without creating centralized censorship regimes?
 
 ### Z-4 · Epistemic Humility & Methodological Limitations Clause
-[ANALYSIS] All quantitative Bayesian probabilities ($P(S_1) = 30\% \rightarrow P(S_1|E) = 65\%$) and threshold indicators represent falsifiable human policy models rather than definitive theological decrees. The ultimate truth of the divine word belongs to God alone (*Wa'llahu A'lam bi-muradihi*).
+[ANALYSIS] This report has undergone algorithmic internal consistency (*iç tutarlılık*) verification and does not constitute a religious legal ruling (*fetva*). All quantitative Bayesian probabilities ($P(S_1) = 30\% \rightarrow P(S_1|E) = 65\%$) and threshold indicators represent falsifiable human policy models rather than definitive theological decrees. The ultimate truth of the divine word belongs to God alone (*Wa'llahu A'lam bi-muradihi*).
 
 ### Z-5 · Verified Primary & Empirical Footnotes (ISNAD 2 & APA 7 / DOI)
 [^1]: Zemahşerî, Mahmûd b. Ömer (ö. 538/1144), *el-Keşşâf 'an Hakâ'ikı Gavâmizi't-Tenzîl*, ed. Âdil Ahmed Abdülmevcûd, Ali Muhammed Muavvaz (Riyad: Mektebetü'l-Ubeykân, 1998), 3/524-528. Digital Verification: https://archive.org/details/kashshaf-ubaykan (urn:shamela:23617).
