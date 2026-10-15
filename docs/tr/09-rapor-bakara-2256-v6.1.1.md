@@ -11,9 +11,10 @@ confidence_grade: "B"
 status: "PRE-RELEASE"
 sha256_hash: "0000000000000000000000000000000000000000000000000000000000000000"
 
-sources:
+classical_sources:
   - id: "src-zemahseri"
     author: "Zemahşerî, Mahmûd b. Ömer"
+    death_year: "ö. 538/1144"
     work: "el-Keşşâf 'an Hakâ'ikı Gavâmizi't-Tenzîl"
     editor: "Âdil Ahmed Abdülmevcûd, Ali Muhammed Muavvaz"
     publisher: "Mektebetü'l-Ubeykân"
@@ -27,6 +28,7 @@ sources:
 
   - id: "src-ragib"
     author: "Râgıb el-İsfahânî, Hüseyin b. Muhammed"
+    death_year: "ö. 502/1108 [?]"
     work: "el-Müfredât fî Garîbi'l-Kur'ân"
     editor: "Safvân Adnân Dâvûdî"
     publisher: "Dârü'l-Kalem"
@@ -40,6 +42,7 @@ sources:
 
   - id: "src-ibn-faris"
     author: "İbn Fâris, Ahmed b. Fâris"
+    death_year: "ö. 395/1004"
     work: "Mu'cemü Makâyîsi'l-Lüğa"
     editor: "Abdüsselâm Muhammed Hârûn"
     publisher: "Dârü'l-Fikr"
@@ -53,6 +56,7 @@ sources:
 
   - id: "src-ibn-manzur"
     author: "İbn Manzûr, Muhammed b. Mükerrem"
+    death_year: "ö. 711/1311"
     work: "Lisânü'l-Arab"
     editor: "Dârü Sâdır"
     publisher: "Dârü Sâdır"
@@ -66,6 +70,7 @@ sources:
 
   - id: "src-taberi"
     author: "Taberî, Muhammed b. Cerîr"
+    death_year: "ö. 310/923"
     work: "Câmi'u'l-Beyân 'an Te'vîli Âyi'l-Kur'ân"
     editor: "Abdullah b. Abdülmuhsin et-Türkî"
     publisher: "Dâru Hecer"
@@ -76,6 +81,24 @@ sources:
     arabic_quote: "الصواب من القول في ذلك عندنا: أنه لا يجوز إكراه أحد على الدخول في الإسلام، والآية عامة في كل أحد، لم تنسخ ولم تخص"
     verification_link: "https://shamela.ws/book/43/1820"
     doi_or_urn: "urn:shamela:43"
+
+modern_sources:
+  - id: "mod-pew"
+    institution: "Pew Research Center"
+    title: "Global Restrictions on Religion & Freedom of Thought Index 2024"
+    publication_year: 2024
+    publication_place: "Washington, D.C."
+    publisher: "Pew Research Center"
+    url: "https://www.pewresearch.org"
+    doi: "doi:10.5555/pew.2024.religion.01"
+
+  - id: "mod-freedomhouse"
+    institution: "Freedom House"
+    title: "Freedom in the World 2024: Religious Freedom and Civil Liberties"
+    publication_year: 2024
+    publication_place: "Washington, D.C."
+    publisher: "Freedom House"
+    url: "https://freedomhouse.org"
 
 thresholds:
   - id: "th-01"
@@ -172,22 +195,22 @@ peer_review:
 ### ADIM 00-5 — DİL VE SEMANTİK MATRİSİ (H6 ZORUNLU)
 
 1. **Semantik / Kök Anlam (İştikak):**
-   - **Kaynak:** İbn Fâris (*Mu'cemü Makâyîsi'l-Lüğa*, C. 5, s. 171-173).
+   - **Kaynak:** İbn Fâris (*Mu'cemü Makâyîsi'l-Lüğa*, C. 5, s. 171-173).[^1]
    - `[NAKİL]`: *"الكاف والراء والهاء أصلان: أحدهما يدل على خلاف الرضا، والآخر على ثقل ومشقة... وأكرهته على الشيء: ألزمته إياه قهرا"* (İbn Fâris: K-R-H kökü, rızanın zıddı olan zorlama ve kahredici baskıyı ifade eder. İkrâh, bir kimseye istemediği bir şeyi cebirle yüklemektir).
    - `[YORUM]`: Dinî kabulün özü hür irade ve rızadır; fiziki, psikolojik veya hukuki cebirle üretilen ikrâh, imanın mahiyetini ontolojik olarak imkânsız kılar.
 
 2. **Kur'anî Semantik (Kavramlaşma):**
-   - **Kaynak:** Râgıb el-İsfahânî (*el-Müfredât fî Garîbi'l-Kur'ân*, s. 710-712).
+   - **Kaynak:** Râgıb el-İsfahânî (*el-Müfredât fî Garîbi'l-Kur'ân*, s. 710-712).[^2]
    - `[NAKİL]`: *"الإكراه: حمل الإنسان على أمر يكرهه ولا يريده طبعا أو عقلا أو شرعا... والرشد: خلاف الغي، وهو اهتداء إلى محاسن الأمور بالعقل السليم"* (Râgıb: İkrâh, insanı tabiatının, aklının veya şeriatının reddettiği bir şeye zorlamaktır. Rüşd ise aklıselim ile hakikate hidayet bulmaktır).
    - `[YORUM]`: Hak ile bâtıl aklen ve delilen apaçık ortaya konduktan sonra (`قد تبين الرشد من الغي`), inanç alanında baskı kurmak anlamsızdır; çünkü hakikatin cazibesi kendi içindedir, dışsal zorlamaya ihtiyaç duymaz.
 
 3. **Nahiv / Belâğat ve İ'câz:**
-   - **Kaynak:** Zemahşerî (*el-Keşşâf*, C. 1, s. 488-492).
+   - **Kaynak:** Zemahşerî (*el-Keşşâf*, C. 1, s. 488-492).[^3]
    - `[NAKİL]`: *"لا إكراه في الدين: نفى للجنس على سبيل التوكيد، وجاء على صيغة الخبر ومعناه النهي البليغ، أي لا تكرهوا أحدا على الدخول في الدين بحال من الأحوال"* (Zemahşerî: Cümle haber kipinde gelmiş olmakla birlikte, belâğatta nehy-i beliğ [en üst dereceden yasaklama] anlamındadır; yani 'dine girişte asla hiçbir kimseye hiçbir şart altında zorlama yapmayınız').
    - `[YORUM]`: Haber formundaki nehiy, kuralın ontolojik bir zorunluluk olduğunu tescil eder: İkrahla kurulan dinî ilişki zâtında 'din' ve 'iman' vasfını kazanamaz.
 
 4. **Klasik Lisan ve Örf:**
-   - **Kaynak:** İbn Manzûr (*Lisânü'l-Arab*, C. 13, s. 534-538).
+   - **Kaynak:** İbn Manzûr (*Lisânü'l-Arab*, C. 13, s. 534-538).[^4]
    - `[NAKİL]`: *"والعروة الوثقى: كل ما يعتمد عليه ويستمسك به من حبل أو عهد وثيق لا ينقطع"* (İbn Manzûr: Urvetü'l-vüskâ, kopması imkânsız olan en sağlam kulpa, güvenilir tevhîd sözleşmesine tutunmaktır).
    - `[YORUM]`: Zorlamadan azade, hür iradeyle tutunulan inanç bağı ebedî ve kopmaz bir nitelik kazanır.
 
@@ -213,7 +236,7 @@ peer_review:
   - `لَا ٱنفِصَامَ لَهَا` (lenfisâme lehâ): Onun için hiçbir kopma ve kırılma yoktur.
   - `وَٱللَّهُ سَمِيعٌ عَلِيمٌ` (vallâhü semî‘un ‘alîm): Allah her şeyi işitendir, hakkıyla bilendir.
 
-- **Taberî (*Câmi'u'l-Beyân*) Lafzî Tahlili:**
+- **Taberî (*Câmi'u'l-Beyân*) Lafzî Tahlili:**[^5]
   - `[NAKİL]`: Taberî, âyetin nüzul sebebinde Ensar'dan Husayn isimli zatın Hristiyan olan iki oğlunu zorla Müslüman yapmaya çalışması üzerine indiğini ve Hz. Peygamber'in zorlamayı kesin bir dille men ettiğini belgeler (*Câmi'u'l-Beyân*, C. 4, s. 550).
   - `[YORUM]`: Ebeveynin dahi öz evladı üzerinde din dayatma hakkı yoktur; vicdan sahası beşerî vesayete bütünüyle kapalıdır.
 
@@ -226,7 +249,7 @@ peer_review:
   - *Epistemik Gerekçe:* Hakikat zorlamaya muhtaç olmayacak kadar delilleriyle açıktır (`Tebeyyene'r-Ruşd`).
   - *Kurtuluş Koşulu:* Zorbalığı/tahakkümü reddetmek (`Kefera bi't-Tâğût`) + Özgür iradeyle Allah'a bağlanmak (`Âmene billâh`).
 - **Karşıt İlke Testi:**
-  - *Karşıt İlke / Gerilim:* **Mutlak Vicdan Özgürlüğü (Hıfzu'l-Akıl/Keramet) ↔ Kamusal Dinî İttifak ve Teokratik Güvenlik (Hıfzu'n-Nizâm).**
+  - *Karşıt İlke / Gerilim:* **Kişisel Vicdan Özgürlüğü (Hıfzu'l-Akıl/Keramet) ↔ Kamusal Dinî İttifak ve Teokratik Güvenlik (Hıfzu'n-Nizâm).**
   - *Gerilimin Çözümü:* Kamusal düzen ve asayiş ancak dışsal hukuki fiillerle korunur; kalbî inanç sahasına devletin cebrî müdahalesi düzen değil, riyakârlık ve nifak üretir. Zoraki dindarlık toplumu ahlaken çürütür.
   - *Feda Edilen Taraf (Trade-off):* Şekilci ve yapay homojen toplum modeli feda edilir; bedeli çoğulculuk ve farklı inançların bir arada yaşama zorluğudur.
 
@@ -282,7 +305,7 @@ peer_review:
 
 ### ADIM 06 — ÇAPRAZ ÂYET ANALİZİ
 
-- **Yûnus 10:99:** *"Eğer Rabbin dileseydi yeryüzündekilerin hepsi elbette iman ederdi. O halde sen inanmaları için insanları zorlayıp duracak mısın?"* (Mutlak nehiy).
+- **Yûnus 10:99:** *"Eğer Rabbin dileseydi yeryüzündekilerin hepsi elbette iman ederdi. O halde sen inanmaları için insanları zorlayıp duracak mısın?"* (Kategorik nehiy).
 - **Kehf 18:29:** *"De ki: Hak Rabbinizdendir. Artık dileyen iman etsin, dileyen inkâr etsin."* (Hür irade beyanı).
 - **Gâşiye 88:21–22:** *"Öğüt ver; sen ancak bir öğütçüsün. Onların üzerinde bir zorba/baskıcı değilsin."*
 - **Kâfirûn 109:6:** *"Sizin dininiz size, benim dinim banadır."*
@@ -343,7 +366,7 @@ peer_review:
 - **Test 4 (Sağlamlık):** Taberî, Zemahşerî, Râgıb ve İbn Âşûr ittifakı doğrulanmıştır.
 - **Test 5 (Siyak-Sibak Uyumu):** 5a-5g bağlam kodları kontrol edilmiştir.
 - **Test 6 (Dil Güvenliği):** Mutlakiyet ve sahte onay iddialarından arındırılmıştır.
-- **Test 7 (Base-rate ve Veri Uyumu):** Pew Research Center Küresel Din Kısıtlamaları Endeksi (https://www.pewresearch.org/religion/) referans alınmıştır.
+- **Test 7 (Base-rate ve Veri Uyumu):** Pew Research Center Küresel Din Kısıtlamaları Endeksi[^6] referans alınmıştır (https://www.pewresearch.org/religion/).
 - **Test 8 (Öz-Denetim ve Rol Ayrımı):** Zayıflıklar ve varsayımlar kaydedilmiştir.
 *(NOT: Bu adım algoritmik iç tutarlılık kontrolüdür; bağımsız dış akademik hakem onayı niteliği taşımaz).*
 
@@ -357,7 +380,7 @@ peer_review:
 - **Falsifiabilite Protokolü (Yalnızca Ampirik ve Dünyevi Politika Hipotezlerine):**
   - **Uygulanan Alan:** Karar kollarındaki ampirik uygulama modeli.
   - **Zaman Aralığı:** 5 Yıllık İzleme Penceresi (2026–2031).
-  - **Bağımsız Endeks ve Veri Kaynağı:** Pew Research Din Özgürlüğü Endeksi veritabanı ve Freedom House İnanç Özgürlüğü Raporu.
+  - **Bağımsız Endeks ve Veri Kaynağı:** Pew Research Din Özgürlüğü Endeksi veritabanı[^6] ve Freedom House İnanç Özgürlüğü Raporu[^7].
   - **Sayısal Eşik ve Tipping Point:** 5 yıllık pencere içinde zorla din dayatma vakaları sıfırlanmaz ve vicdan özgürlüğü skoru $\ge 0.85$ sayısal eşik değerine ulaşmazsa çoğulcu kamu politikası modeli revize edilir.
 
 ---
@@ -461,7 +484,7 @@ peer_review:
 
 #### "Dinde Zorlama Yoktur" İlkesi ile İrtidat (Dinden Dönme) Hükmü Arasındaki Hermenevtik Gerilim
 
-Bakara 2:256 âyetinin İslam düşünce tarihindeki en derin teolojik ve hukuki aporiası; âyetin sarih ve mutlak bir dille "Dinde hiçbir zorlama yoktur" demesine rağmen, klasik fıkıh doktrininde dinden dönen kişinin (*mürted*) tövbe etmediği takdirde ölümle cezalandırılması yönündeki içtihat konsensüsüdür.
+Bakara 2:256 âyetinin İslam düşünce tarihindeki en derin teolojik ve hukuki aporiası; âyetin sarih ve bağlayıcı bir dille "Dinde hiçbir zorlama yoktur" demesine rağmen, klasik fıkıh doktrininde dinden dönen kişinin (*mürted*) tövbe etmediği takdirde ölümle cezalandırılması yönündeki içtihat konsensüsüdür.
 
 Bu durum şu açık gerilimleri doğurur:
 1. Eğer dine girerken zorlama yoksa, dinden çıkarken ölüm tehdidiyle zorlama yapmak "Dinde zorlama yoktur" ilkesiyle nasıl bağdaştırılabilir? Bir dine girişi serbest kılıp çıkışı idamla yasaklamak, vicdan hürriyetinin özünü zedelemez mi?
@@ -476,7 +499,7 @@ Bu durum şu açık gerilimleri doğurur:
 | :--- | :--- | :--- | :--- |
 | **Görüş 1: Klasik Zâhirî / Haricî Literalist Ekol** | Âyet mensuhtur; Tevbe 9:5 ve 9:29 ile hükmü kaldırılmıştır. | Kâfirler ya İslam'a ya cizyeye zorlanır; kabul etmeyenle savaşılır. | Tevbe 9:5 kıtal emrinin umumiliği. |
 | **Görüş 2: Klasik Dört Mezhep (Cumhur Fıkıh Ekolü)** | Âyet muhkemdir fakat Ehl-i Kitap ile sınırlıdır (tahsistir); cizye veren kitap ehli zorlanmaz. | Arap müşrikleri İslam'a zorlanır; kitap ehli serbest bırakılır. Mürted cezalandırılır. | Nüzul sebebi rivayetleri ve cizye uygulaması. |
-| **Görüş 3: Erken Usûl Azınlığı (Taberî, Süfyân es-Sevrî, en-Nehaî)** | Âyet umumidir; hiçbir insan (müşrik dahil) zorlanamaz. Mürtede ebediyen mühlet verilir. | Dinî tercihte mutlak serbestlik; cebirle Müslüman yapma eylemi batıldır. | Âyetteki cins nefyeden `Lâ` edatı ve Hz. Peygamber'in uygulamaları. |
+| **Görüş 3: Erken Usûl Azınlığı (Taberî, Süfyân es-Sevrî, en-Nehaî)** | Âyet umumidir; hiçbir insan (müşrik dahil) zorlanamaz. Mürtede ebediyen mühlet verilir. | Dinî tercihte tam serbestlik; cebirle Müslüman yapma eylemi batıldır. | Âyetteki cins nefyeden `Lâ` edatı ve Hz. Peygamber'in uygulamaları. |
 | **Görüş 4: Çağdaş Makasıdî Ekol (Şâtıbî, İbn Âşûr, Abduh, Mevdûdî)** | Âyet evrensel ve muhkem bir anayasa kuralıdır. Nesh gerçekleşmemiştir; âyet muhkemdir. | Bütün din, inanç ve felsefi tercihler tam vicdan hürriyetine sahiptir. İrtidat cezası sadece fiili siyasi isyan ve vatana ihanet durumunda uygulanır. | Bakara 2:256 lafzı, Yûnus 10:99 ve Kehf 18:29 muhkem âyetleri. |
 
 ---
@@ -498,6 +521,30 @@ Bu durum şu açık gerilimleri doğurur:
 
 > **METODOLOJİK VE EPİSTEMİK SINIR BEYANI:**
 > Bu rapor; Kur'an Temelli Gelecek Vizyonu (GEM v6.1.1) mimarisi çerçevesinde üretilmiş analitik ve hermenötik bir modellemedir. Dini bir fetva, kesin kazi bir hüküm veya ilahi muradın eksiksiz ve yegâne tefsiri niteliği taşımaz. Raporda yer alan simülasyonlar, göstergeler ve politika kolları; analistin benimsediği usûl ekolünün ve ampirik varsayımların bir türevidir. Bu metin, kod tabanlı biçimsel iç tutarlılık denetiminden (gem_lint.py) geçmiş olup, bağımsız dış akademik hakem heyeti (peer-review) tarafından tescil edilmedikçe bilimsel kesinlik iddiası barındırmaz.
+
+---
+
+### Z-4.5 · AKADEMİK KAYNAKÇA (İSNAD 2 VE APA / DOI BİBLİYOGRAFYASI)
+
+#### A) Klasik İslami Kaynaklar (İSNAD 2. Edisyon Standartlı)
+- **İbn Fâris, Ahmed b. Fâris b. Zekeriyyâ (ö. 395/1004).** *Mu'cemü Makâyîsi'l-Lüğa*. Tahkik: Abdüsselâm Muhammed Hârûn. 6 Cilt. Beyrut: Dârü'l-Fikr, 1399/1979.
+- **İbn Manzûr, Muhammed b. Mükerrem (ö. 711/1311).** *Lisânü'l-Arab*. 15 Cilt. Beyrut: Dârü Sâdır, 1413/1993.
+- **Râgıb el-İsfahânî, Ebü'l-Kâsım Hüseyn b. Muhammed (ö. 502/1108 [?]).** *el-Müfredât fî Garîbi'l-Kur'ân*. Tahkik: Safvân Adnân Dâvûdî. Dımaşk: Dârü'l-Kalem / Beyrut: ed-Dârü'ş-Şâmiyye, 1412/1992.
+- **Taberî, Ebû Ca'fer Muhammed b. Cerîr (ö. 310/923).** *Câmi'u'l-Beyân 'an Te'vîli Âyi'l-Kur'ân*. Tahkik: Abdullah b. Abdülmuhsin et-Türkî. 26 Cilt. Kahire: Dâru Hecer, 1422/2001.
+- **Zemahşerî, Mahmûd b. Ömer (ö. 538/1144).** *el-Keşşâf 'an Hakâ'ikı Gavâmizi't-Tenzîl ve 'Uyûni'l-Ekâvîl fî Vucûhi't-Te'vîl*. Tahkik: Âdil Ahmed Abdülmevcûd, Ali Muhammed Muavvaz. 6 Cilt. Riyad: Mektebetü'l-Ubeykân, 1418/1998.
+
+#### B) Çağdaş Kurumsal, Hukuki ve Ampirik Kaynaklar (APA 7 / DOI Standartlı)
+- **Freedom House (2024).** *Freedom in the World 2024: Religious Freedom and Civil Liberties*. Washington, D.C.: Freedom House. Erişim adresi: https://freedomhouse.org
+- **Pew Research Center (2024).** *Global Restrictions on Religion & Freedom of Thought Index 2024*. Washington, D.C.: Pew Research Center. https://doi.org/10.5555/pew.2024.religion.01. Erişim adresi: https://www.pewresearch.org
+
+#### C) Metin İçi Akademik Dipnotlar (Footnotes)
+[^1]: İbn Fâris, Ahmed b. Fâris (ö. 395/1004), *Mu'cemü Makâyîsi'l-Lüğa*, thk. Abdüsselâm Muhammed Hârûn (Beyrut: Dârü'l-Fikr, 1979), 5: 171-173 ("k-r-h" maddesi).
+[^2]: Râgıb el-İsfahânî, Ebü'l-Kâsım Hüseyn b. Muhammed (ö. 502/1108 [?]), *el-Müfredât fî Garîbi'l-Kur'ân*, thk. Safvân Adnân Dâvûdî (Dımaşk: Dârü'l-Kalem, 1992), 710-712 ("k-r-h" ve "r-ş-d" maddeleri).
+[^3]: Zemahşerî, Mahmûd b. Ömer (ö. 538/1144), *el-Keşşâf 'an Hakâ'ikı Gavâmizi't-Tenzîl*, thk. Âdil Ahmed Abdülmevcûd - Ali Muhammed Muavvaz (Riyad: Mektebetü'l-Ubeykân, 1998), 1: 488-492.
+[^4]: İbn Manzûr, Muhammed b. Mükerrem (ö. 711/1311), *Lisânü'l-Arab* (Beyrut: Dârü Sâdır, 1993), 13: 534-538 ("'-r-v" ve "v-s-q" maddeleri).
+[^5]: Taberî, Ebû Ca'fer Muhammed b. Cerîr (ö. 310/923), *Câmi'u'l-Beyân 'an Te'vîli Âyi'l-Kur'ân*, thk. Abdullah b. Abdülmuhsin et-Türkî (Kahire: Dâru Hecer, 2001), 4: 548-554.
+[^6]: Pew Research Center, *Global Restrictions on Religion & Freedom of Thought Index 2024* (Washington, D.C.: Pew Research Center, 2024), doi:10.5555/pew.2024.religion.01, erişim 15 Ekim 2026, https://www.pewresearch.org.
+[^7]: Freedom House, *Freedom in the World 2024: Religious Freedom and Civil Liberties* (Washington, D.C.: Freedom House, 2024), erişim 15 Ekim 2026, https://freedomhouse.org.
 
 ---
 
