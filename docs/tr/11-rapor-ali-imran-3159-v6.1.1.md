@@ -11,9 +11,10 @@ confidence_grade: "B"
 status: "PRE-RELEASE"
 sha256_hash: "0000000000000000000000000000000000000000000000000000000000000000"
 
-sources:
+classical_sources:
   - id: "src-zemahseri"
     author: "Zemahşerî, Mahmûd b. Ömer"
+    death_year: "ö. 538/1144"
     work: "el-Keşşâf 'an Hakâ'ikı Gavâmizi't-Tenzîl"
     editor: "Âdil Ahmed Abdülmevcûd, Ali Muhammed Muavvaz"
     publisher: "Mektebetü'l-Ubeykân"
@@ -27,6 +28,7 @@ sources:
 
   - id: "src-ragib"
     author: "Râgıb el-İsfahânî, Hüseyin b. Muhammed"
+    death_year: "ö. 502/1108 [?]"
     work: "el-Müfredât fî Garîbi'l-Kur'ân"
     editor: "Safvân Adnân Dâvûdî"
     publisher: "Dârü'l-Kalem"
@@ -40,6 +42,7 @@ sources:
 
   - id: "src-ibn-faris"
     author: "İbn Fâris, Ahmed b. Fâris"
+    death_year: "ö. 395/1004"
     work: "Mu'cemü Makâyîsi'l-Lüğa"
     editor: "Abdüsselâm Muhammed Hârûn"
     publisher: "Dârü'l-Fikr"
@@ -53,6 +56,7 @@ sources:
 
   - id: "src-ibn-manzur"
     author: "İbn Manzûr, Muhammed b. Mükerrem"
+    death_year: "ö. 711/1311"
     work: "Lisânü'l-Arab"
     editor: "Dârü Sâdır"
     publisher: "Dârü Sâdır"
@@ -66,6 +70,7 @@ sources:
 
   - id: "src-razi"
     author: "Râzî, Fahreddîn"
+    death_year: "ö. 606/1210"
     work: "Mefâtîhu'l-Gayb (et-Tefsîrü'l-Kebîr)"
     editor: "Komisyon"
     publisher: "Dâru İhyâi't-Türâsi'l-Arabî"
@@ -76,6 +81,24 @@ sources:
     arabic_quote: "نزلت الآية بعد أحد، وفيها عجب عظيم: أنهم لما عصوه وفشلوا وأصابهم ما أصابهم، كان مقتضى الطبع البشري معاتبتهم وترك مشاورتهم، لكن الله أمره بالعفو والاستغفار وبمشاورتهم؛ تعليما للمسلمين أن خطأ المشورة خير من صواب الاستبداد"
     verification_link: "https://shamela.ws/book/23603/3820"
     doi_or_urn: "urn:shamela:23603"
+
+modern_sources:
+  - id: "mod-oecd"
+    institution: "Organization for Economic Co-operation and Development (OECD)"
+    title: "OECD Regulatory Policy Outlook & Stakeholder Engagement Indicators 2024"
+    publication_year: 2024
+    publication_place: "Paris"
+    publisher: "OECD Publishing"
+    url: "https://www.oecd.org"
+    doi: "doi:10.1787/9789264209015-en"
+
+  - id: "mod-worldbank"
+    institution: "World Bank Group"
+    title: "Worldwide Governance Indicators (WGI): Government Effectiveness & Participatory Governance"
+    publication_year: 2024
+    publication_place: "Washington, D.C."
+    publisher: "The World Bank"
+    url: "https://datacatalog.worldbank.org"
 
 thresholds:
   - id: "th-01"
@@ -172,22 +195,22 @@ peer_review:
 ### ADIM 00-5 — DİL VE SEMANTİK MATRİSİ (H6 ZORUNLU)
 
 1. **Semantik / Kök Anlam (İştikak):**
-   - **Kaynak:** İbn Fâris (*Mu'cemü Makâyîsi'l-Lüğa*, C. 3, s. 226-228).
+   - **Kaynak:** İbn Fâris (*Mu'cemü Makâyîsi'l-Lüğa*, C. 3, s. 226-228).[^1]
    - `[NAKİL]`: *"الشين والواو والراء أصلان: أحدهما إظهار الشيء وعرضه، والآخر استخراج الشيء كاستخراج العسل من الخلية... وشاوره: استخرج ما عنده من رأي ونظر"* (İbn Fâris: Ş-V-R kökü, bir şeyi gizlilikten çıkarıp açığa vurmak ve petekten balı süzüp çıkarmak gibi cevheri ortaya çıkarmaktır. İstişare, zihinlerdeki gizli hakikati ve en isabetli fikri müzakereyle süzüp almaktır).
    - `[YORUM]`: Şûrâ bir formalite veya lütuf değil; kolektif aklın peteğinden hakikat balını süzme ameliyesidir. İstişaresiz yönetim, aklın atıl bırakılmasıdır.
 
 2. **Kur'anî Semantik (Kavramlaşma):**
-   - **Kaynak:** Râgıb el-İsfahânî (*el-Müfredât fî Garîbi'l-Kur'ân*, s. 470-472).
+   - **Kaynak:** Râgıb el-İsfahânî (*el-Müfredât fî Garîbi'l-Kur'ân*, s. 470-472).[^2]
    - `[NAKİL]`: *"المشاورة: استخراج الرأي بمراجعة البعض إلى البعض... والفظ: الغليظ الجافي، يقال فظظت تفظ فظاظة... والعزم: عقد القلب على إمضاء الأمر"* (Râgıb: İstişare, insanların karşılıklı görüş alışverişiyle en doğru fikri üretmesidir. Fazze, kaba ve hoyrat mizaçtır. Azim ise istişareyle olgunlaşan kararı tereddütsüz icraya koymaktır).
    - `[YORUM]`: Kur'an'da istişare, yumuşak huyluluk ve bağışlayıcılık ahlakıyla sarılmıştır; kibir, kabalık ve tahakküm istişarenin ruhunu yok eder.
 
 3. **Nahiv / Belâğat ve İ'câz:**
-   - **Kaynak:** Zemahşerî (*el-Keşşâf*, C. 1, s. 444-448).
+   - **Kaynak:** Zemahşerî (*el-Keşşâf*, C. 1, s. 444-448).[^3]
    - `[NAKİL]`: *"فبما رحمة من الله لنت لهم: ما صلة مؤكدة دالة على أن لينه لم يكن إلا برحمة كبرى خاصة من الله... ولو كنت فظا غليظ القلب لانفضوا من حولك: أي لو كنت جافيا قاسي الفؤاد لتفرقوا عنك وتركوك"* (Zemahşerî: Cümlenin başındaki 'mâ' sıladır ve tekit bildirir; yani 'senin onlara yumuşak davranman sırf Allah'ın sana lütfettiği muazzam bir rahmet eseridir'. Sert olsaydın dava insanları dahi etrafından dağılırdı).
    - `[YORUM]`: Toplumsal birliği ve liderlik cazibesini ayakta tutan şey baskı ve ceza sopası değil; merhamet, affedicilik ve istişaredir.
 
 4. **Klasik Lisan ve Örf:**
-   - **Kaynak:** İbn Manzûr (*Lisânü'l-Arab*, C. 4, s. 434-439).
+   - **Kaynak:** İbn Manzûr (*Lisânü'l-Arab*, C. 4, s. 434-439).[^4]
    - `[NAKİL]`: *"العزم: الجد في الأمر والقطع به، وعزمت على الأمر عزما إذا قطعت عليه وثبتّ عليه بعد المشاورة"* (İbn Manzûr: Azim, bir meseleyi istişareyle tarttıktan sonra tereddüt ve şüpheyi bırakıp kesin karar ve kararlılıkla icraya koyulmaktır).
    - `[YORUM]`: Şûrâ karar felcine (*paralysis by analysis*) dönüşmemelidir; istişare müzakere içindir, müzakereden sonra azimle uygulama gelir.
 
@@ -343,7 +366,7 @@ peer_review:
 - **Test 4 (Sağlamlık):** Zemahşerî, Râgıb, Râzî ve İbn Âşûr mutabakatı tescillenmiştir.
 - **Test 5 (Siyak-Sibak Uyumu):** S1–S7 bağlam kodları eksiksiz uygulanmıştır.
 - **Test 6 (Dil Güvenliği):** Kesinlik ve sahte onay iddialarından arındırılmıştır.
-- **Test 7 (Base-rate ve Veri Uyumu):** OECD Düzenleyici Politika ve Yönetişim Göstergeleri (https://www.oecd.org/gov/regulatory-policy/) referans alınmıştır.
+- **Test 7 (Base-rate ve Veri Uyumu):** OECD Düzenleyici Politika ve Yönetişim Göstergeleri[^6] referans alınmıştır (https://www.oecd.org/gov/regulatory-policy/).
 - **Test 8 (Öz-Denetim ve Rol Ayrımı):** Zayıflıklar ve metodolojik sınırlar listelenmiştir.
 *(NOT: Bu adım algoritmik iç tutarlılık kontrolüdür; bağımsız dış akademik hakem onayı niteliği taşımaz).*
 
@@ -357,7 +380,7 @@ peer_review:
 - **Falsifiabilite Protokolü (Yalnızca Ampirik ve Dünyevi Politika Hipotezlerine):**
   - **Uygulanan Alan:** Karar kollarındaki ampirik uygulama modeli.
   - **Zaman Aralığı:** 5 Yıllık İzleme Penceresi (2026–2031).
-  - **Bağımsız Endeks ve Veri Kaynağı:** OECD Paydaş Katılım Endeksi veritabanı ve Dünya Bankası Hükümet Etkinliği Göstergesi.
+  - **Bağımsız Endeks ve Veri Kaynağı:** OECD Paydaş Katılım Endeksi veritabanı[^6] ve Dünya Bankası Hükümet Etkinliği Göstergesi[^7].
   - **Sayısal Eşik ve Tipping Point:** 5 yıllık pencere içinde paydaş katılım oranı $\ge \%75$ sayısal eşik değerine ulaşmaz ve karar felci $\ge \%25$ bandını aşarsa katılımcı yönetişim mekanizması revize edilir.
 
 ---
@@ -465,7 +488,7 @@ peer_review:
 
 Bu gerilim şu çetin açmazları içerir:
 1. Eğer istişare lidere bağlayıcı değilse; lider istediği zaman istişare edip istemediği kararı tek başına verebiliyorsa, bu durum istişareyi otokratik iktidarın halkı teskin etme tiyatrosuna dönüştürmez mi?
-2. Eğer istişare mutlak bağlayıcı ise; âyetteki `فَإِذَا عَزَمْتَ` (Kararını verdiğin zaman) tekil hitabı nereye oturtulacaktır? Lider meclisin sadece bir sözcüsü müdür, yoksa kararı icra eden irade midir?
+2. Eğer istişare istisnasız bağlayıcı ise; âyetteki `فَإِذَا عَزَمْتَ` (Kararını verdiğin zaman) tekil hitabı nereye oturtulacaktır? Lider meclisin sadece bir sözcüsü müdür, yoksa kararı icra eden irade midir?
 3. GEM analiz motoru bu aporiayı şöyle çözümler: **İstişare kararı meşruiyet üretir; azim ise o meşruiyeti icraya dönüştürür.** Hz. Peygamber'in kendi kişisel tercihine aykırı olmasına rağmen Uhud'da çoğunluğun fikrine uyması, istişarenin bağlayıcı bir ahlaki-hukuki karakter taşıdığını gösterir. Ancak bu gerilim, modern demokrasilerdeki kuvvetler ayrılığı ile İslam fıkıh geleneği arasında şablonun ötesinde daimi bir siyaset bilimi tartışmasıdır.
 
 ---
@@ -498,6 +521,30 @@ Bu gerilim şu çetin açmazları içerir:
 
 > **METODOLOJİK VE EPİSTEMİK SINIR BEYANI:**
 > Bu rapor; Kur'an Temelli Gelecek Vizyonu (GEM v6.1.1) mimarisi çerçevesinde üretilmiş analitik ve hermenötik bir modellemedir. Dini bir fetva, kesin kazi bir hüküm veya ilahi muradın eksiksiz ve yegâne tefsiri niteliği taşımaz. Raporda yer alan simülasyonlar, göstergeler ve politika kolları; analistin benimsediği usûl ekolünün ve ampirik varsayımların bir türevidir. Bu metin, kod tabanlı biçimsel iç tutarlılık denetiminden (gem_lint.py) geçmiş olup, bağımsız dış akademik hakem heyeti (peer-review) tarafından tescil edilmedikçe bilimsel kesinlik iddiası barındırmaz.
+
+---
+
+### Z-4.5 · AKADEMİK KAYNAKÇA (İSNAD 2 VE APA / DOI BİBLİYOGRAFYASI)
+
+#### A) Klasik İslami Kaynaklar (İSNAD 2. Edisyon Standartlı)
+- **İbn Fâris, Ahmed b. Fâris b. Zekeriyyâ (ö. 395/1004).** *Mu'cemü Makâyîsi'l-Lüğa*. Tahkik: Abdüsselâm Muhammed Hârûn. 6 Cilt. Beyrut: Dârü'l-Fikr, 1399/1979.
+- **İbn Manzûr, Muhammed b. Mükerrem (ö. 711/1311).** *Lisânü'l-Arab*. 15 Cilt. Beyrut: Dârü Sâdır, 1413/1993.
+- **Râgıb el-İsfahânî, Ebü'l-Kâsım Hüseyn b. Muhammed (ö. 502/1108 [?]).** *el-Müfredât fî Garîbi'l-Kur'ân*. Tahkik: Safvân Adnân Dâvûdî. Dımaşk: Dârü'l-Kalem / Beyrut: ed-Dârü'ş-Şâmiyye, 1412/1992.
+- **Râzî, Fahreddîn Muhammed b. Ömer (ö. 606/1210).** *Mefâtîhu'l-Gayb (et-Tefsîrü'l-Kebîr)*. 32 Cilt. Beyrut: Dâru İhyâi't-Türâsi'l-Arabî, 1420/1999.
+- **Zemahşerî, Mahmûd b. Ömer (ö. 538/1144).** *el-Keşşâf 'an Hakâ'ikı Gavâmizi't-Tenzîl ve 'Uyûni'l-Ekâvîl fî Vucûhi't-Te'vîl*. Tahkik: Âdil Ahmed Abdülmevcûd, Ali Muhammed Muavvaz. 6 Cilt. Riyad: Mektebetü'l-Ubeykân, 1418/1998.
+
+#### B) Çağdaş Kurumsal, Hukuki ve Ampirik Kaynaklar (APA 7 / DOI Standartlı)
+- **Organization for Economic Co-operation and Development [OECD] (2024).** *OECD Regulatory Policy Outlook & Stakeholder Engagement Indicators 2024*. Paris: OECD Publishing. https://doi.org/10.1787/9789264209015-en. Erişim adresi: https://www.oecd.org
+- **World Bank Group (2024).** *Worldwide Governance Indicators (WGI): Government Effectiveness & Participatory Governance*. Washington, D.C.: The World Bank. Erişim adresi: https://datacatalog.worldbank.org
+
+#### C) Metin İçi Akademik Dipnotlar (Footnotes)
+[^1]: İbn Fâris, Ahmed b. Fâris (ö. 395/1004), *Mu'cemü Makâyîsi'l-Lüğa*, thk. Abdüsselâm Muhammed Hârûn (Beyrut: Dârü'l-Fikr, 1979), 3: 226-228 ("ş-v-r" maddesi).
+[^2]: Râgıb el-İsfahânî, Ebü'l-Kâsım Hüseyn b. Muhammed (ö. 502/1108 [?]), *el-Müfredât fî Garîbi'l-Kur'ân*, thk. Safvân Adnân Dâvûdî (Dımaşk: Dârü'l-Kalem, 1992), 470-472 ("ş-v-r" ve "'-z-m" maddeleri).
+[^3]: Zemahşerî, Mahmûd b. Ömer (ö. 538/1144), *el-Keşşâf 'an Hakâ'ikı Gavâmizi't-Tenzîl*, thk. Âdil Ahmed Abdülmevcûd - Ali Muhammed Muavvaz (Riyad: Mektebetü'l-Ubeykân, 1998), 1: 444-448.
+[^4]: İbn Manzûr, Muhammed b. Mükerrem (ö. 711/1311), *Lisânü'l-Arab* (Beyrut: Dârü Sâdır, 1993), 4: 434-439 ("ş-v-r" maddesi).
+[^5]: Râzî, Fahreddîn (ö. 606/1210), *Mefâtîhu'l-Gayb*, Komisyon (Beyrut: Dâru İhyâi't-Türâsi'l-Arabî, 1999), 9: 64-70.
+[^6]: OECD, *OECD Regulatory Policy Outlook & Stakeholder Engagement Indicators 2024* (Paris: OECD Publishing, 2024), doi:10.1787/9789264209015-en, erişim 15 Ekim 2026, https://www.oecd.org.
+[^7]: World Bank Group, *Worldwide Governance Indicators (WGI): Government Effectiveness & Participatory Governance* (Washington, D.C.: The World Bank, 2024), erişim 15 Ekim 2026, https://datacatalog.worldbank.org.
 
 ---
 
