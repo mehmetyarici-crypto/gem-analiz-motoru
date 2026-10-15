@@ -379,7 +379,7 @@ Metin belirli bir ideolojik veya siyasi grubun bilgi anlayışını tekelleştir
 | 04 | Felsefî | İnsan zihni zaten algı filtreleriyle sınırlıdır, tam nesnellik imkânsızdır | Sorumluluk kusursuz nesnellik değil, eldeki veriyi dürüstçe tahkik etmektir |
 
 ### Z-3: H6 ÂYET ÖZEL DENETİM BEYANI
-İsrâ Sûresi 36. âyeti, klasik kelâm, usûl-i fıkıh ve modern bilgi felsefesinin kesişiminde yer alması hasebiyle GEM kapsamında H6 (Zorlu Âyet) statüsündedir. Bu raporda:
+İsrâ Sûresi 36. âyeti, klasik kelâm, usûl-i fıkıh ve modern bilgi felsefesinin kesişiminde yer alması hasebiyle Quran Vision kapsamında H6 (Zorlu Âyet) statüsündedir. Bu raporda:
 - Zan ve tahmin ile meşru bilimsel metodoloji arasındaki sınır ayrılmıştır.
 - Kişisel düşünce özgürlüğü ile yalan ve teyitsiz bilginin yayılmasının kamusal zararları dengelenmiştir.
 - Bilişsel melekelerin ahlaki ve hukuki sorumluluk boyutu derinlemesine tahkik edilmiştir.

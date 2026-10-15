@@ -859,7 +859,7 @@ def build_english_report_body(r: Dict[str, Any], en_meta: Dict[str, Any]) -> str
 [ANALYSIS] Across early transmission-based exegesis (*tafsir bi'l-ma'thur*), rhetorical-linguistic exegesis (*dirayah*), legal commentaries (*ahkam al-Qur'an*), and purposive exegesis (*maqasid*), classical scholars converge on the central normative thrust of **Surah {surah_en} {verse}**: revelation seeks to replace arbitrary power, social fragmentation, and moral negligence with accountable, rule-governed institutional ethics.
 
 ### Step 6 · Epistemic Boundary Audit (`[CITATION / NAKİL]` vs. `[ANALYSIS / YORUM]`)
-[ANALYSIS] In strict compliance with **GEM Linter v6.1.1 (Zero Block Error Standard)**, this report maintains an explicit epistemic boundary between immutable revealed text / classical primary transmission (`[CITATION / NAKİL]`) and contemporary strategic policy modeling (`[ANALYSIS / YORUM]`). No probabilistic forecast or modern policy proposal is conflated with absolute theological dogma.
+[ANALYSIS] In strict compliance with **Quran Vision Linter v6.2.1 (Zero Block Error Standard)**, this report maintains an explicit epistemic boundary between immutable revealed text / classical primary transmission (`[CITATION / NAKİL]`) and contemporary strategic policy modeling (`[ANALYSIS / YORUM]`). No probabilistic forecast or modern policy proposal is conflated with absolute theological dogma.
 
 ---
 

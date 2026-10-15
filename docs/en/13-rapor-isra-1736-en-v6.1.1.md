@@ -1,7 +1,7 @@
 # QV-2026-008 — Surah Al-Isra 17:36: Epistemic Responsibility, Information Verification, Cognitive Security & AI Governance in the Digital Age
 
 **Document Status:** `PRE-RELEASE` | **Confidence Grade:** `B` | **Methodological Layer:** `Layer 3 (H6 Complex Verse Protocol)`
-**External Cryptographic Manifest (SHA-256):** `00e2c63d7da231a23f0200cd5e4bc92702a9c735d5d9d3cbb0a5f31ecb6bef4b`
+**External Cryptographic Manifest (SHA-256):** `84df2adae5774cf259a1ad7f22af7700fb8741f5671120bf973addc2a11db2d0`
 
 ---
 
@@ -60,7 +60,7 @@
 [ANALYSIS] Across early transmission-based exegesis (*tafsir bi'l-ma'thur*), rhetorical-linguistic exegesis (*dirayah*), legal commentaries (*ahkam al-Qur'an*), and purposive exegesis (*maqasid*), classical scholars converge on the central normative thrust of **Surah Al-Isra 17:36**: revelation seeks to replace arbitrary power, social fragmentation, and moral negligence with accountable, rule-governed institutional ethics.
 
 ### Step 6 · Epistemic Boundary Audit (`[CITATION / NAKİL]` vs. `[ANALYSIS / YORUM]`)
-[ANALYSIS] In strict compliance with **GEM Linter v6.1.1 (Zero Block Error Standard)**, this report maintains an explicit epistemic boundary between immutable revealed text / classical primary transmission (`[CITATION / NAKİL]`) and contemporary strategic policy modeling (`[ANALYSIS / YORUM]`). No probabilistic forecast or modern policy proposal is conflated with absolute theological dogma.
+[ANALYSIS] In strict compliance with **Quran Vision Linter v6.2.1 (Zero Block Error Standard)**, this report maintains an explicit epistemic boundary between immutable revealed text / classical primary transmission (`[CITATION / NAKİL]`) and contemporary strategic policy modeling (`[ANALYSIS / YORUM]`). No probabilistic forecast or modern policy proposal is conflated with absolute theological dogma.
 
 ---
 
