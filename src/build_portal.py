@@ -618,8 +618,8 @@ body {{
 }}
 /* Sidebar */
 .sidebar {{
-  width: 340px;
-  min-width: 340px;
+  width: 365px;
+  min-width: 365px;
   background: var(--bg-sidebar);
   border-right: 1px solid var(--border);
   display: flex;
@@ -627,34 +627,110 @@ body {{
   height: 100vh;
 }}
 .brand {{
-  padding: 20px 22px;
-  border-bottom: 1px solid var(--border);
-  background: linear-gradient(135deg, rgba(16,185,129,0.08), rgba(212,175,55,0.08));
+  padding: 22px 22px 18px;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.28);
+  background: linear-gradient(145deg, rgba(16,185,129,0.12) 0%, rgba(212,175,55,0.14) 55%, rgba(9,19,16,0.4) 100%);
+  position: relative;
+}}
+.brand-top-row {{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
 }}
 .brand-badge {{
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-size: 11px;
+  font-size: 10.5px;
   font-weight: 700;
-  letter-spacing: 0.8px;
+  letter-spacing: 0.9px;
   text-transform: uppercase;
   color: var(--accent-gold);
   background: var(--accent-gold-soft);
+  border: 1px solid rgba(212, 175, 55, 0.38);
   padding: 4px 10px;
   border-radius: 99px;
-  margin-bottom: 8px;
+}}
+.lang-switch {{
+  display: inline-flex;
+  align-items: center;
+  background: var(--bg-surface);
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  border-radius: 99px;
+  padding: 2px;
+  gap: 2px;
+}}
+.lang-btn {{
+  border: none;
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 99px;
+  cursor: pointer;
+  transition: all 0.15s;
+}}
+.lang-btn.active {{
+  background: var(--accent-gold);
+  color: #091310;
+}}
+.brand-identity {{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 10px;
+}}
+.brand-crest {{
+  width: 52px;
+  height: 52px;
+  min-width: 52px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(212,175,55,0.22), rgba(16,185,129,0.22));
+  border: 1.5px solid var(--accent-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+}}
+.brand-titles {{
+  display: flex;
+  flex-direction: column;
 }}
 .brand h1 {{
-  font-size: 17px;
-  font-weight: 700;
+  font-size: 20px;
+  font-weight: 800;
   color: var(--text-primary);
-  letter-spacing: -0.3px;
+  letter-spacing: 0.4px;
+  line-height: 1.18;
+  text-transform: uppercase;
+}}
+.brand-sub-en {{
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--accent-gold);
+  letter-spacing: 0.7px;
+  margin-top: 2px;
 }}
 .brand p {{
-  font-size: 12px;
+  font-size: 12.5px;
+  font-weight: 500;
   color: var(--text-secondary);
-  margin-top: 4px;
+  line-height: 1.45;
+  margin-top: 6px;
+}}
+.brand-meta-bar {{
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px dashed rgba(212, 175, 55, 0.25);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
+  color: var(--accent-emerald);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }}
 .search-box {{
   padding: 14px 18px;
@@ -1136,9 +1212,32 @@ body {{
 
 <aside class="sidebar">
   <div class="brand">
-    <div class="brand-badge">⚖️ QURAN VISION v6.2.1 • İSNAD 2 + DOI</div>
-    <h1>Quran Vision — Gelecek Vizyonu</h1>
-    <p>26 Adımlı Stratejik Tefsir & Akademik Külliyat Kokpiti</p>
+    <div class="brand-top-row">
+      <div class="brand-badge" id="brandBadge">🏛️ QURAN VISION ENSTİTÜSÜ • v6.2.1</div>
+      <div class="lang-switch" title="Dil Seçimi / Language Switcher">
+        <button id="langBtnTr" class="lang-btn active" onclick="setLanguage('tr')">🇹🇷 TR</button>
+        <button id="langBtnEn" class="lang-btn" onclick="setLanguage('en')">🇬🇧 EN</button>
+      </div>
+    </div>
+    <div class="brand-identity">
+      <div class="brand-crest" title="Mîzân ve Mushaf Kurumsal Mührü">
+        <svg width="32" height="32" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18 3L21.5 9.5L29 10.5L23.5 15.5L25 23L18 19.5L11 23L12.5 15.5L7 10.5L14.5 9.5L18 3Z" stroke="#D4AF37" stroke-width="1.4" fill="rgba(212,175,55,0.12)"/>
+          <path d="M8 26C11 24.5 15 24.5 18 26.5C21 24.5 25 24.5 28 26V32C25 30.5 21 30.5 18 32.5C15 30.5 11 30.5 8 32V26Z" stroke="#10B981" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          <line x1="18" y1="6" x2="18" y2="32" stroke="#D4AF37" stroke-width="1.6"/>
+          <line x1="11" y1="14" x2="25" y2="14" stroke="#D4AF37" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="brand-titles">
+        <h1 id="brandTitle">KUR’ÂN VİZYONU</h1>
+        <div class="brand-sub-en" id="brandSubEn">QURAN VISION • STRATEGIC TAFSIR CORPUS</div>
+      </div>
+    </div>
+    <p id="brandDesc">Stratejik Tefsir, Makâsıd ve Medeniyet Öngörü Külliyatı</p>
+    <div class="brand-meta-bar">
+      <span id="brandMetaLeft">⚖️ İSNAD 2 & DOI Tescilli</span>
+      <span id="brandMetaRight">26 Adım • {len(reports)} Rapor</span>
+    </div>
   </div>
   <div class="search-box">
     <input type="text" id="searchInput" class="search-input" placeholder="Sûre, âyet, kavram veya müfessir ara...">
@@ -1148,18 +1247,19 @@ body {{
 
 <main class="main">
   <header class="topbar">
-    <div class="stats-bar">
+    <div class="stats-bar" id="statsBar">
       <div class="stat-pill">📚 Külliyat: <strong>{len(reports)} Rapor</strong></div>
       <div class="stat-pill">🕌 Klasik Tahkik (İSNAD 2): <strong>{total_classical} Nakil</strong></div>
       <div class="stat-pill">🌐 Ampirik Veri (DOI/URL): <strong>{total_modern} Kurum</strong></div>
       <div class="stat-pill">🛡️ Linter & SHA-256: <strong>0 KESİCİ HATA</strong></div>
     </div>
     <div class="top-actions">
-      <button class="btn btn-gold" onclick="openFeedbackTab()">💬 Akademik Katkı & Şerh Yaz</button>
+      <button id="topFeedbackBtn" class="btn btn-gold" onclick="openFeedbackTab()">💬 Akademik Katkı & Şerh Yaz</button>
       <a id="downloadPdfBtn" class="btn btn-primary" href="pdf/QV-2026-001.pdf" download="QV-2026-001.pdf">📥 Raporu PDF İndir</a>
-      <a class="btn btn-gold" href="pdf/Quran_Vision_Kulliyat_v6.2.1.pdf" download="Quran_Vision_Kulliyat_v6.2.1.pdf">📚 Tüm Külliyat PDF ({len(reports)} Rapor)</a>
-      <button class="btn" onclick="printCurrentReport()">🖨️ Yazdır</button>
-      <button class="btn" onclick="toggleTheme()">🌗 Tema</button>
+      <a id="fullBookPdfBtn" class="btn btn-gold" href="pdf/Quran_Vision_Kulliyat_v6.2.1.pdf" download="Quran_Vision_Kulliyat_v6.2.1.pdf">📚 Tüm Külliyat PDF ({len(reports)} Rapor)</a>
+      <button id="printBtn" class="btn" onclick="printCurrentReport()">🖨️ Yazdır</button>
+      <button id="langToggleTopBtn" class="btn" onclick="setLanguage(currentLang === 'tr' ? 'en' : 'tr')">🌐 EN / TR</button>
+      <button id="themeBtn" class="btn" onclick="toggleTheme()">🌗 Tema</button>
     </div>
   </header>
 
@@ -1186,17 +1286,218 @@ body {{
 
 <script>
 const REPORTS = {reports_json};
+const TOTAL_CLASSICAL = {total_classical};
+const TOTAL_MODERN = {total_modern};
 let currentIndex = 0;
 let currentTab = 'dashboard';
+let currentLang = localStorage.getItem('qv_lang_v621') || 'tr';
+
+const EN_REPORTS_META = {{
+  "QV-2026-001": {{
+    surah_en: "At-Tawbah",
+    topic_en: "Breach of Covenant (Nakth al-Ahd), Deterrence & Legitimate Self-Defense Architecture in International Law",
+    aporia_en: "[ANALYSIS] How can states reconcile the strict Quranic prohibition of aggression against treaty-abiding communities (At-Tawbah 9:4 & 9:6) with the necessity of strategic deterrence when systemic treaty violations (nakth al-ahd) threaten collective security?",
+    z3_en: "[ANALYSIS] In an era of hybrid warfare and asymmetric non-state actors, how should international legal frameworks define the threshold of 'breach of covenant' without triggering disproportionate escalation?"
+  }},
+  "QV-2026-002": {{
+    surah_en: "An-Nisa",
+    topic_en: "Intra-Family Governance, Fiduciary Responsibility (Qawwamah) & Graduated De-Escalation in Marital Crisis",
+    aporia_en: "[ANALYSIS] How does classical Maqasid jurisprudence distinguish fiduciary family stewardship (qawwamah bi-ma'ruf) from authoritarian domination, establishing a strictly non-violent, restorative conflict-resolution protocol?",
+    z3_en: "[ANALYSIS] How can modern family law and mediation institutions operationalize the three-stage Quranic reconciliation model (dialogue, reflective space, and family arbitration in 4:34-35) to prevent domestic violence and family breakdown?"
+  }},
+  "QV-2026-003": {{
+    surah_en: "Al-Ma'idah",
+    topic_en: "Property Protection, Stringent Evidentiary Conditions (Hirz & Nisab), State of Necessity & Social Security Architecture",
+    aporia_en: "[ANALYSIS] Why did Caliph 'Umar ibn al-Khattab suspend the statutory penalty during the Year of Famine ('Am al-Ramadah), proving that Quranic penal norms cannot operate independently of distributive justice and social safety nets?",
+    z3_en: "[ANALYSIS] In contemporary economies marked by severe wealth inequality, how does the classical legal doctrine of shubhah (evidentiary doubt) and darurah (economic necessity) prioritize social welfare over punitive maximalism?"
+  }},
+  "QV-2026-004": {{
+    surah_en: "Al-Baqarah",
+    topic_en: "Freedom of Conscience, Prohibition of Coercion (La Ikraha fi'd-Din) & Pluralistic Civil Society Architecture",
+    aporia_en: "[ANALYSIS] Since genuine faith requires uncoerced cognitive and moral assent (tasdiq al-qalb), any political or social compulsion in religion destroys the very moral agency that revelation seeks to cultivate.",
+    z3_en: "[ANALYSIS] How can modern pluralistic societies protect both freedom of conscience (2:256) and public moral cohesion against algorithmic manipulation and ideological polarization?"
+  }},
+  "QV-2026-005": {{
+    surah_en: "An-Nisa",
+    topic_en: "Public Trust (Amanah), Meritocracy, Judicial Independence & Universal Justice Architecture",
+    aporia_en: "[ANALYSIS] Why does An-Nisa 4:58 link the macro-stability of states directly to two non-negotiable pillars: entrusting public office strictly to merit (amanah) and adjudicating with blind impartiality ('adl)?",
+    z3_en: "[ANALYSIS] When nepotism or partisan loyalty conflicts with objective competence in public appointments, what institutional safeguards best enforce the Quranic mandate of returning trusts to their rightful bearers?"
+  }},
+  "QV-2026-006": {{
+    surah_en: "Ali 'Imran",
+    topic_en: "Consultative Governance (Shura) in Crisis, Participatory Decision-Making & Compassionate Leadership Architecture",
+    aporia_en: "[ANALYSIS] Immediately after the setback at Uhud, why did revelation command the Prophet to institutionalize consultation (wa shawirhum fi'l-amr) rather than centralize emergency authoritarian power?",
+    z3_en: "[ANALYSIS] In high-velocity national or organizational crises, how do leaders balance inclusive deliberative consultation (shura) with decisive executive action ('azm)?"
+  }},
+  "QV-2026-007": {{
+    surah_en: "Al-Hujurat",
+    topic_en: "International Conflict Resolution, Anti-Aggression Doctrine (Baghy), Collective Security & Peacekeeping Governance",
+    aporia_en: "[ANALYSIS] How does Al-Hujurat 49:9-10 establish an objective collective-security mechanism that obligates neutral mediation (islah) first, permits collective deterrence against the aggressor (al-fi'ah al-baghiyah), and mandates a just peace (islah bi'l-'adl)?",
+    z3_en: "[ANALYSIS] Why do contemporary international security councils fail when veto privileges override the impartial anti-aggression (baghy) standard articulated in 49:9?"
+  }},
+  "QV-2026-008": {{
+    surah_en: "Al-Isra",
+    topic_en: "Epistemic Responsibility, Information Verification, Cognitive Security & AI Governance in the Digital Age",
+    aporia_en: "[ANALYSIS] By prohibiting humanity from pursuing that of which it has no verified knowledge (wa la taqfu ma laysa laka bihi 'ilm) and holding hearing, sight, and intellect accountable, 17:36 establishes a foundational charter for epistemic ethics.",
+    z3_en: "[ANALYSIS] In an age of deepfakes, synthetic media, and algorithmic echo chambers, how can educational and legal institutions enforce epistemic accountability without curtailing legitimate inquiry?"
+  }},
+  "QV-2026-009": {{
+    surah_en: "Al-Hashr",
+    topic_en: "Wealth Concentration, Economic Circulation (Kay la Yakuna Dulatan), Distributive Justice & Anti-Oligarchy Doctrine",
+    aporia_en: "[ANALYSIS] Al-Hashr 59:7 explicitly states the macro-economic objective (illa/hikmah) of Islamic fiscal policy: 'so that wealth does not become a perpetual monopoly circulating solely among the rich among you.'",
+    z3_en: "[ANALYSIS] Which fiscal, waqf, and productive-investment instruments are most effective in reversing extreme wealth concentration while preserving entrepreneurial dynamism?"
+  }},
+  "QV-2026-010": {{
+    surah_en: "Ar-Rum",
+    topic_en: "Ontological Pluralism, Linguistic & Ethnic Diversity, Anti-Assimilation & Multicultural Coexistence Architecture",
+    aporia_en: "[ANALYSIS] By elevating the diversity of human languages and colors (ikhtilaf alsinatikum wa alwanikum) to the status of cosmic divine signs (ayat) alongside the creation of the heavens and the earth, Ar-Rum 30:22 delegitimizes forced assimilation and racial hierarchy.",
+    z3_en: "[ANALYSIS] How can modern nation-states preserve linguistic and cultural diversity as a source of civilizational enrichment while maintaining shared constitutional citizenship?"
+  }},
+  "QV-2026-011": {{
+    surah_en: "Al-An'am",
+    topic_en: "Universal Moral Decalogue, Fundamental Human Rights Charter, Market Integrity & Judicial Impartiality",
+    aporia_en: "[ANALYSIS] Across all prophetic dispensations, Al-An'am 6:151-152 codifies ten universal moral imperatives—anchored in the sanctity of life, intergenerational care, protection of orphan assets, fair weights (qist), and impartial testimony even against one's own kin.",
+    z3_en: "[ANALYSIS] When familial, tribal, or institutional self-interest clashes with truthful testimony (wa idha qultum fa'dilu wa law kana dha qurba), what ethical training sustains moral courage?"
+  }},
+  "QV-2026-012": {{
+    surah_en: "Al-Hadid",
+    topic_en: "The Triad of Book, Balance (Mizan) & Iron (Hadid): Constitutional Law, Institutional Justice & Deterrent Defense",
+    aporia_en: "[ANALYSIS] Al-Hadid 57:25 reveals the triadic architecture of viable civilization: Revelation/Law (al-Kitab), Objective Justice Metrics (al-Mizan), and Deterrent Material/Technological Power (al-Hadid)—where power without justice becomes tyranny, and justice without deterrence remains defenseless.",
+    z3_en: "[ANALYSIS] In the 21st-century technological race, how can societies develop indigenous strategic deterrence ('Iron') that remains strictly subordinated to ethical and constitutional justice ('Mizan')?"
+  }},
+  "QV-2026-013": {{
+    surah_en: "An-Nahl",
+    topic_en: "Universal Civilizational Covenant: Justice ('Adl), Excellence (Ihsan), Social Solidarity & Anti-Corruption Governance",
+    aporia_en: "[ANALYSIS] Celebrated by Ibn Mas'ud as the most comprehensive verse in the Quran, An-Nahl 16:90 pairs a three-tier constructive architecture ('Adl, Ihsan, Ita' dhi'l-Qurba) with a three-tier barrier against moral, social, and political decay (Fahsha', Munkar, Baghy).",
+    z3_en: "[ANALYSIS] Why does sustainable civilization require moving beyond mere legalistic reciprocity ('Adl) toward proactive moral generosity and restorative empathy (Ihsan)?"
+  }},
+  "QV-2026-014": {{
+    surah_en: "Al-Hujurat",
+    topic_en: "Ontological Equality of Humankind, Doctrine of Mutual Recognition (Ta'aruf), Anti-Racism & Taqwa-Based Universal Merit",
+    aporia_en: "[ANALYSIS] Addressing all of humanity (Ya ayyuha'n-nas), Al-Hujurat 49:13 affirms a single shared human origin, redefines ethnic and national plurality strictly as a vehicle for mutual discovery and cooperation (li-ta'arafu), and replaces hereditary/racial superiority with moral-ethical consciousness (Taqwa).",
+    z3_en: "[ANALYSIS] When demographic migration and geopolitical tensions fuel xenophobia and identity politics, how can educational and civic institutions operationalize the Quranic paradigm of Ta'aruf (active mutual recognition) over conflict?"
+  }}
+}};
 
 const CANDIDATE_VERSES = [
-  {{ surah: "Mâide", verse: "5:32", title: "Yaşam Hakkının Dokunulmazlığı, Küresel İnsani Güvenlik ve Biyoetik Doktrini" }},
-  {{ surah: "Bakara", verse: "2:143", title: "Vasat Ümmet (Denge ve İtidal), Küresel Şahitlik ve Kutuplaşma Karşıtı Jeopolitik" }},
-  {{ surah: "Zümer", verse: "39:18", title: "Sözü Dinleyip En Güzeline Uymak (Ahsenü'l-Kavl): Eleştirel Düşünce ve Açık Müzakere Ahlakı" }},
-  {{ surah: "Alak", verse: "96:1-5", title: "İkra ve Kalem Doktrini: Bilimsel Üretim, Epistemik Medeniyet ve Eğitim Felsefesi" }},
-  {{ surah: "Mülk", verse: "67:3-4", title: "Kozmik Düzen, Kusursuzluk Arayışı, Bilimsel Gözlem ve Ekoloji Mimarisi" }},
-  {{ surah: "Fussilet", verse: "41:34", title: "Kötülüğü En Güzel Olanla Savmak (İhsan Stratejisi): Çatışma Çözümü ve Toplumsal Barış Diplomasisi" }}
+  {{
+    surah: "Mâide", surah_en: "Al-Ma'idah", verse: "5:32",
+    title: "Yaşam Hakkının Dokunulmazlığı, Küresel İnsani Güvenlik ve Biyoetik Doktrini",
+    title_en: "Inviolability of Human Life, Global Human Security & Bioethics Doctrine"
+  }},
+  {{
+    surah: "Bakara", surah_en: "Al-Baqarah", verse: "2:143",
+    title: "Vasat Ümmet (Denge ve İtidal), Küresel Şahitlik ve Kutuplaşma Karşıtı Jeopolitik",
+    title_en: "The Balanced Community (Ummatan Wasatan), Global Moral Witness & Anti-Polarization Geopolitics"
+  }},
+  {{
+    surah: "Zümer", surah_en: "Az-Zumar", verse: "39:18",
+    title: "Sözü Dinleyip En Güzeline Uymak (Ahsenü'l-Kavl): Eleştirel Düşünce ve Açık Müzakere Ahlakı",
+    title_en: "Listening to Discourse and Following the Best of It (Ahsan al-Qawl): Critical Thinking & Deliberative Ethics"
+  }},
+  {{
+    surah: "Alak", surah_en: "Al-'Alaq", verse: "96:1-5",
+    title: "İkra ve Kalem Doktrini: Bilimsel Üretim, Epistemik Medeniyet ve Eğitim Felsefesi",
+    title_en: "The Doctrine of Iqra' and the Pen: Scientific Production, Epistemic Civilization & Philosophy of Education"
+  }},
+  {{
+    surah: "Mülk", surah_en: "Al-Mulk", verse: "67:3-4",
+    title: "Kozmik Düzen, Kusursuzluk Arayışı, Bilimsel Gözlem ve Ekoloji Mimarisi",
+    title_en: "Cosmic Order, Empirical Observation, Scientific Inquiry & Ecological Stewardship"
+  }},
+  {{
+    surah: "Fussilet", surah_en: "Fussilat", verse: "41:34",
+    title: "Kötülüğü En Güzel Olanla Savmak (İhsan Stratejisi): Çatışma Çözümü ve Toplumsal Barış Diplomasisi",
+    title_en: "Repelling Evil with What is Best (Daf' bi'llati hiya Ahsan): Conflict Transformation & Peace Diplomacy"
+  }}
 ];
+
+function getReportSurah(r) {{
+  if (currentLang === 'en' && EN_REPORTS_META[r.case_id]) return EN_REPORTS_META[r.case_id].surah_en;
+  return r.surah;
+}}
+
+function getReportTopic(r) {{
+  if (currentLang === 'en' && EN_REPORTS_META[r.case_id]) return EN_REPORTS_META[r.case_id].topic_en;
+  return r.topic;
+}}
+
+function getReportAporia(r) {{
+  if (currentLang === 'en' && EN_REPORTS_META[r.case_id]) return EN_REPORTS_META[r.case_id].aporia_en;
+  return r.aporia;
+}}
+
+function getReportZ3(r) {{
+  if (currentLang === 'en' && EN_REPORTS_META[r.case_id]) return EN_REPORTS_META[r.case_id].z3_en;
+  return r.z3_question;
+}}
+
+function setLanguage(lang) {{
+  currentLang = lang === 'en' ? 'en' : 'tr';
+  localStorage.setItem('qv_lang_v621', currentLang);
+  document.documentElement.setAttribute('lang', currentLang);
+
+  document.getElementById('langBtnTr')?.classList.toggle('active', currentLang === 'tr');
+  document.getElementById('langBtnEn')?.classList.toggle('active', currentLang === 'en');
+
+  const isEn = currentLang === 'en';
+  document.getElementById('brandBadge').textContent = isEn
+    ? '🏛️ QURAN VISION INSTITUTE • v6.2.1'
+    : '🏛️ QURAN VISION ENSTİTÜSÜ • v6.2.1';
+  document.getElementById('brandTitle').textContent = isEn
+    ? 'QURAN VISION CORPUS'
+    : 'KUR’ÂN VİZYONU';
+  document.getElementById('brandSubEn').textContent = isEn
+    ? 'STRATEGIC TAFSIR & CIVILIZATION FORESIGHT'
+    : 'QURAN VISION • STRATEGIC TAFSIR CORPUS';
+  document.getElementById('brandDesc').textContent = isEn
+    ? 'Evidence-Based Quranic Strategic Foresight, Maqasid & Classical Tafsir Corpus'
+    : 'Stratejik Tefsir, Makâsıd ve Medeniyet Öngörü Külliyatı';
+  document.getElementById('brandMetaLeft').textContent = isEn
+    ? '⚖️ ISNAD 2 & DOI Verified'
+    : '⚖️ İSNAD 2 & DOI Tescilli';
+  document.getElementById('brandMetaRight').textContent = isEn
+    ? `26 Steps • ${{REPORTS.length}} Reports`
+    : `26 Adım • ${{REPORTS.length}} Rapor`;
+
+  const searchInput = document.getElementById('searchInput');
+  if (searchInput) {{
+    searchInput.placeholder = isEn
+      ? 'Search surah, verse, concept, or classical scholar...'
+      : 'Sûre, âyet, kavram veya müfessir ara...';
+  }}
+
+  const statsBar = document.getElementById('statsBar');
+  if (statsBar) {{
+    statsBar.innerHTML = isEn ? `
+      <div class="stat-pill">📚 Corpus: <strong>${{REPORTS.length}} Reports</strong></div>
+      <div class="stat-pill">🕌 Classical Citations (ISNAD 2): <strong>${{TOTAL_CLASSICAL}} Primary Texts</strong></div>
+      <div class="stat-pill">🌐 Empirical Data (DOI/URL): <strong>${{TOTAL_MODERN}} Institutions</strong></div>
+      <div class="stat-pill">🛡️ Linter & SHA-256: <strong>0 BLOCK ERRORS</strong></div>
+    ` : `
+      <div class="stat-pill">📚 Külliyat: <strong>${{REPORTS.length}} Rapor</strong></div>
+      <div class="stat-pill">🕌 Klasik Tahkik (İSNAD 2): <strong>${{TOTAL_CLASSICAL}} Nakil</strong></div>
+      <div class="stat-pill">🌐 Ampirik Veri (DOI/URL): <strong>${{TOTAL_MODERN}} Kurum</strong></div>
+      <div class="stat-pill">🛡️ Linter & SHA-256: <strong>0 KESİCİ HATA</strong></div>
+    `;
+  }}
+
+  document.getElementById('topFeedbackBtn').innerHTML = isEn ? '💬 Peer-Review & Contribute' : '💬 Akademik Katkı & Şerh Yaz';
+  document.getElementById('fullBookPdfBtn').innerHTML = isEn ? `📚 Full Corpus PDF (${{REPORTS.length}} Reports)` : `📚 Tüm Külliyat PDF (${{REPORTS.length}} Rapor)`;
+  document.getElementById('printBtn').innerHTML = isEn ? '🖨️ Print' : '🖨️ Yazdır';
+  document.getElementById('langToggleTopBtn').innerHTML = isEn ? '🌐 Dil: EN ➔ TR' : '🌐 Lang: TR ➔ EN';
+  document.getElementById('themeBtn').innerHTML = isEn ? '🌗 Theme' : '🌗 Tema';
+
+  document.getElementById('tabBtn-dashboard').innerHTML = isEn ? '📊 1. Strategic Dashboard & Aporia' : '📊 1. Stratejik Kokpit & Aporia';
+  document.getElementById('tabBtn-sources').innerHTML = isEn ? '🏛️ 2. ISNAD 2 Classical & Empirical Sources' : '🏛️ 2. İSNAD 2 Klasik & Modern Kaynakça';
+  document.getElementById('tabBtn-fulltext').innerHTML = isEn ? '📖 3. Full Academic Text (26 Steps)' : '📖 3. Tam Akademik Metin (26 Adım)';
+  document.getElementById('tabBtn-pedagogy').innerHTML = isEn ? '🎓 4. Pedagogical Lesson & Debate Kit' : '🎓 4. Pedagojik Ders & Zümre Kiti (TYMM)';
+  document.getElementById('tabBtn-synthesis').innerHTML = isEn ? '🕸️ 5. Corpus Synthesis & Scholar Matrix' : '🕸️ 5. Külliyat Sentez & Müfessir Matrisi';
+  document.getElementById('tabBtn-feedback').innerHTML = isEn ? '💬 6. Academic Peer-Review & Feedback' : '💬 6. Akademik Şerh & Katkı';
+
+  renderSidebar(searchInput ? searchInput.value : '');
+  selectReport(currentIndex);
+}}
 
 function renderSidebar(filter = '') {{
   const listEl = document.getElementById('reportList');
@@ -1204,8 +1505,9 @@ function renderSidebar(filter = '') {{
   listEl.innerHTML = '';
 
   REPORTS.forEach((r, idx) => {{
+    const enMeta = EN_REPORTS_META[r.case_id] || {{}};
     const classicalNames = (r.classical_sources || []).map(cs => cs.author + ' ' + cs.work).join(' ');
-    const searchable = (r.surah + ' ' + r.verse + ' ' + r.topic + ' ' + r.case_id + ' ' + classicalNames + ' ' + r.body).toLowerCase();
+    const searchable = (r.surah + ' ' + (enMeta.surah_en || '') + ' ' + r.verse + ' ' + r.topic + ' ' + (enMeta.topic_en || '') + ' ' + r.case_id + ' ' + classicalNames + ' ' + r.body).toLowerCase();
     if (q && !searchable.includes(q)) return;
 
     const item = document.createElement('div');
@@ -1213,10 +1515,10 @@ function renderSidebar(filter = '') {{
     item.onclick = () => selectReport(idx);
     item.innerHTML = `
       <div class="report-item-top">
-        <span class="report-surah">${{idx + 1}}. ${{r.surah}} ${{r.verse}}</span>
+        <span class="report-surah">${{idx + 1}}. ${{getReportSurah(r)}} ${{r.verse}}</span>
         <span class="report-code">${{r.case_id}}</span>
       </div>
-      <div class="report-topic">${{r.topic}}</div>
+      <div class="report-topic">${{getReportTopic(r)}}</div>
     `;
     listEl.appendChild(item);
   }});
@@ -1226,32 +1528,35 @@ function selectReport(idx) {{
   currentIndex = idx;
   renderSidebar(document.getElementById('searchInput').value);
   const r = REPORTS[idx];
+  const isEn = currentLang === 'en';
+  const surahDisp = getReportSurah(r);
+  const topicDisp = getReportTopic(r);
+  const aporiaDisp = getReportAporia(r);
 
-  // Update clean document title & PDF download button
-  document.title = `${{r.case_id}} - ${{r.surah}} ${{r.verse}} - Quran Vision v6.2.1`;
+  document.title = `${{r.case_id}} - ${{surahDisp}} ${{r.verse}} - Quran Vision v6.2.1`;
   const dlBtn = document.getElementById('downloadPdfBtn');
   if (dlBtn) {{
     dlBtn.href = `pdf/${{r.pdf_filename}}`;
     dlBtn.setAttribute('download', `${{r.case_id}}_${{r.surah}}_Raporu.pdf`);
-    dlBtn.innerHTML = `📥 PDF İndir (${{r.case_id}})`;
+    dlBtn.innerHTML = isEn ? `📥 Download PDF (${{r.case_id}})` : `📥 PDF İndir (${{r.case_id}})`;
   }}
 
   // Hero
   document.getElementById('heroCard').innerHTML = `
     <div class="hero-meta">
-      <span class="badge badge-gold">📖 ${{r.surah}} Sûresi ${{r.verse}}</span>
-      <span class="badge badge-emerald">Katman 3 • H6 Zorlu Âyet</span>
+      <span class="badge badge-gold">📖 ${{isEn ? 'Surah ' + surahDisp : surahDisp + ' Sûresi'}} ${{r.verse}}</span>
+      <span class="badge badge-emerald">${{isEn ? 'Layer 3 • H6 Complex Verse' : 'Katman 3 • H6 Zorlu Âyet'}}</span>
       <span class="badge badge-mono">${{r.case_id}}</span>
-      <span class="badge badge-mono">Güven Derecesi: ${{r.confidence}}</span>
-      <span class="badge badge-mono">Statü: ${{r.status}}</span>
+      <span class="badge badge-mono">${{isEn ? 'Confidence: ' : 'Güven Derecesi: '}}${{r.confidence}}</span>
+      <span class="badge badge-mono">${{isEn ? 'Status: ' : 'Statü: '}}${{r.status}}</span>
       <div class="no-print" style="margin-left:auto; display:flex; gap:8px; flex-wrap:wrap;">
-        <button class="btn" style="padding:4px 10px; font-size:11.5px;" onclick="setTab('pedagogy', document.getElementById('tabBtn-pedagogy'))">🎓 Ders & Münazara Planı</button>
-        <button class="btn btn-gold" style="padding:4px 10px; font-size:11.5px;" onclick="openFeedbackTab()">💬 Şerh / Katkı Yaz</button>
-        <a class="btn btn-primary" style="padding:4px 10px; font-size:11.5px;" href="pdf/${{r.pdf_filename}}" download="${{r.case_id}}_${{r.surah}}_Raporu.pdf">📥 A4 PDF İndir (${{r.case_id}}.pdf)</a>
+        <button class="btn" style="padding:4px 10px; font-size:11.5px;" onclick="setTab('pedagogy', document.getElementById('tabBtn-pedagogy'))">${{isEn ? '🎓 Lesson & Debate Plan' : '🎓 Ders & Münazara Planı'}}</button>
+        <button class="btn btn-gold" style="padding:4px 10px; font-size:11.5px;" onclick="openFeedbackTab()">${{isEn ? '💬 Submit Peer-Review' : '💬 Şerh / Katkı Yaz'}}</button>
+        <a class="btn btn-primary" style="padding:4px 10px; font-size:11.5px;" href="pdf/${{r.pdf_filename}}" download="${{r.case_id}}_${{r.surah}}_Raporu.pdf">${{isEn ? '📥 Download A4 PDF' : '📥 A4 PDF İndir'}} (${{r.case_id}}.pdf)</a>
       </div>
     </div>
-    <div class="hero-title">${{r.topic}}</div>
-    <div class="sha-bar">🔒 <strong>Harici Kriptografik Manifest (SHA-256):</strong> ${{r.sha256}} &nbsp;|&nbsp; 📄 <code>docs/tr/${{r.filename}}</code></div>
+    <div class="hero-title">${{topicDisp}}</div>
+    <div class="sha-bar">🔒 <strong>${{isEn ? 'External Cryptographic Manifest (SHA-256):' : 'Harici Kriptografik Manifest (SHA-256):'}}</strong> ${{r.sha256}} &nbsp;|&nbsp; 📄 <code>docs/tr/${{r.filename}}</code></div>
   `;
 
   // Tab 1: Dashboard
@@ -1264,14 +1569,14 @@ function selectReport(idx) {{
       <div class="source-card">
         <div class="source-header">
           <span class="source-author">${{s.id}} — ${{s.title}}</span>
-          <span class="badge badge-gold">Öncelik: ${{sc.stratejik_oncelik || '-'}}/5</span>
+          <span class="badge badge-gold">${{isEn ? 'Priority' : 'Öncelik'}}: ${{sc.stratejik_oncelik || '-'}}/5</span>
         </div>
         <div class="source-meta">${{s.score_justification || ''}}</div>
         <div style="display:flex; gap:10px; font-size:12px; color:var(--text-muted); flex-wrap:wrap;">
-          <span>Olasılık: <b>${{sc.olasilik || '-'}}/5</b></span>
-          <span>Tesir: <b>${{sc.tesir || '-'}}/5</b></span>
-          <span>Fırsat: <b>${{sc.firsat || '-'}}/5</b></span>
-          <span>Kırılganlık: <b>${{sc.kirilganlik || '-'}}/5</b></span>
+          <span>${{isEn ? 'Probability' : 'Olasılık'}}: <b>${{sc.olasilik || '-'}}/5</b></span>
+          <span>${{isEn ? 'Impact' : 'Tesir'}}: <b>${{sc.tesir || '-'}}/5</b></span>
+          <span>${{isEn ? 'Opportunity' : 'Fırsat'}}: <b>${{sc.firsat || '-'}}/5</b></span>
+          <span>${{isEn ? 'Vulnerability' : 'Kırılganlık'}}: <b>${{sc.kirilganlik || '-'}}/5</b></span>
         </div>
       </div>
     `;
@@ -1290,10 +1595,10 @@ function selectReport(idx) {{
   document.getElementById('tab-dashboard').innerHTML = `
     <div class="grid-2">
       <div class="panel">
-        <h3><span>📈 Bayesyen Politika Güncellemesi (Adım 11)</span><span>2026–2036</span></h3>
+        <h3><span>📈 ${{isEn ? 'Bayesian Policy Update (Step 11)' : 'Bayesyen Politika Güncellemesi (Adım 11)'}}</span><span>2026–2036</span></h3>
         <div class="bayes-row">
           <div class="bayes-label">
-            <span>Önsel Olasılık — Prior P(S1) (Mevcut Ataletle Başarı)</span>
+            <span>${{isEn ? 'Prior Probability — P(S1) (Baseline Institutional Inertia)' : 'Önsel Olasılık — Prior P(S1) (Mevcut Ataletle Başarı)'}}</span>
             <strong>%${{priorPct}} (${{r.prior.toFixed(2)}})</strong>
           </div>
           <div class="progress-track">
@@ -1302,23 +1607,23 @@ function selectReport(idx) {{
         </div>
         <div class="bayes-row">
           <div class="bayes-label">
-            <span>Sonsal Olasılık — Posterior P(S1|E) (Kurumsal Reform Kanıtıyla)</span>
+            <span>${{isEn ? 'Posterior Probability — P(S1|E) (With Quranic Institutional Reform)' : 'Sonsal Olasılık — Posterior P(S1|E) (Kurumsal Reform Kanıtıyla)'}}</span>
             <strong style="color:var(--accent-emerald);">%${{postPct}} (${{r.posterior.toFixed(2)}})</strong>
           </div>
           <div class="progress-track">
             <div class="progress-fill" style="width:${{postPct}}%; background:var(--accent-emerald);"></div>
           </div>
         </div>
-        <h3 style="margin-top:22px;"><span>🎯 Ampirik ve Tahminî Eşik Göstergeleri (V6)</span></h3>
+        <h3 style="margin-top:22px;"><span>🎯 ${{isEn ? 'Empirical & Predictive Threshold Indicators (V6)' : 'Ampirik ve Tahminî Eşik Göstergeleri (V6)'}}</span></h3>
         ${{thresholdsHtml}}
       </div>
 
       <div class="panel">
-        <h3><span>⚡ Z-1: Şablona Sığmayan Özgün Problematik (Aporia)</span><span>V9 Zorunlu</span></h3>
+        <h3><span>⚡ ${{isEn ? 'Z-1: Core Methodological Problematic (Aporia)' : 'Z-1: Şablona Sığmayan Özgün Problematik (Aporia)'}}</span><span>${{isEn ? 'V9 Mandatory' : 'V9 Zorunlu'}}</span></h3>
         <div class="source-card" style="border-left: 3px solid var(--accent-gold); font-size:14px; line-height:1.75;">
-          ${{formatInlineMd(r.aporia)}}
+          ${{formatInlineMd(aporiaDisp)}}
         </div>
-        <h3 style="margin-top:20px;"><span>🧭 Dört Yapısal Senaryo Matrisi (V5)</span></h3>
+        <h3 style="margin-top:20px;"><span>🧭 ${{isEn ? 'Four Structural Foresight Scenarios (V5)' : 'Dört Yapısal Senaryo Matrisi (V5)'}}</span></h3>
         ${{scenariosHtml}}
       </div>
     </div>
@@ -1332,10 +1637,10 @@ function selectReport(idx) {{
         <span class="source-death">${{cs.death_year || ''}}</span>
       </div>
       <div class="source-meta">
-        <em>${{cs.work}}</em> • Tahkik: ${{cs.editor || '—'}} • ${{cs.publication_place || ''}}: ${{cs.publisher || ''}}, ${{cs.publication_year || ''}} • Cilt: ${{cs.volume}}, Sayfa: ${{cs.pages}}
+        <em>${{cs.work}}</em> • ${{isEn ? 'Ed.' : 'Tahkik'}}: ${{cs.editor || '—'}} • ${{cs.publication_place || ''}}: ${{cs.publisher || ''}}, ${{cs.publication_year || ''}} • ${{isEn ? 'Vol.' : 'Cilt'}}: ${{cs.volume}}, ${{isEn ? 'pp.' : 'Sayfa'}}: ${{cs.pages}}
       </div>
       <div class="arabic-box">${{cs.arabic_quote || ''}}</div>
-      <a class="source-link" href="${{cs.verification_link}}" target="_blank" rel="noopener">🔗 Dijital Tahkik Linki: ${{cs.verification_link}} (${{cs.doi_or_urn || ''}})</a>
+      <a class="source-link" href="${{cs.verification_link}}" target="_blank" rel="noopener">🔗 ${{isEn ? 'Digital Verification Link' : 'Dijital Tahkik Linki'}}: ${{cs.verification_link}} (${{cs.doi_or_urn || ''}})</a>
     </div>
   `).join('');
 
@@ -1343,7 +1648,7 @@ function selectReport(idx) {{
     <div class="source-card">
       <div class="source-header">
         <span class="source-author">${{ms.institution || ms.author}} (${{ms.publication_year || ''}})</span>
-        <span class="badge badge-mono">${{ms.doi || 'Kurumsal Veritabanı'}}</span>
+        <span class="badge badge-mono">${{ms.doi || (isEn ? 'Institutional Dataset' : 'Kurumsal Veritabanı')}}</span>
       </div>
       <div class="source-meta"><em>${{ms.title}}</em> • ${{ms.publication_place || ''}}: ${{ms.publisher || ''}}</div>
       <a class="source-link" href="${{ms.url}}" target="_blank" rel="noopener">🌐 ${{ms.url}}</a>
@@ -1353,18 +1658,36 @@ function selectReport(idx) {{
   document.getElementById('tab-sources').innerHTML = `
     <div class="grid-2">
       <div class="panel">
-        <h3><span>🕌 A) Klasik İslami Kaynaklar (İSNAD 2. Edisyon)</span><span>${{(r.classical_sources||[]).length}} Eser</span></h3>
+        <h3><span>🕌 ${{isEn ? 'A) Classical Islamic Sources (ISNAD 2nd Edition)' : 'A) Klasik İslami Kaynaklar (İSNAD 2. Edisyon)'}}</span><span>${{(r.classical_sources||[]).length}} ${{isEn ? 'Works' : 'Eser'}}</span></h3>
         ${{classicalHtml}}
       </div>
       <div class="panel">
-        <h3><span>📊 B) Çağdaş Ampirik ve Kurumsal Kaynaklar (APA 7 / DOI)</span><span>${{(r.modern_sources||[]).length}} Kaynak</span></h3>
+        <h3><span>📊 ${{isEn ? 'B) Contemporary Empirical & Institutional Sources (APA 7 / DOI)' : 'B) Çağdaş Ampirik ve Kurumsal Kaynaklar (APA 7 / DOI)'}}</span><span>${{(r.modern_sources||[]).length}} ${{isEn ? 'Sources' : 'Kaynak'}}</span></h3>
         ${{modernHtml}}
       </div>
     </div>
   `;
 
-  // Tab 3: Full Markdown
-  document.getElementById('tab-fulltext').innerHTML = `<div class="md-body">${{renderMarkdown(r.body)}}</div>`;
+  // Tab 3: Full Markdown (with English Executive Synthesis Banner when in EN mode)
+  const enAbstractHtml = isEn ? `
+    <div class="panel" style="margin-bottom:20px; border-color:var(--accent-gold);">
+      <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:10px;">
+        <span class="badge badge-gold">🇬🇧 ENGLISH EXECUTIVE & METHODOLOGICAL SYNTHESIS</span>
+        <span class="badge badge-mono">${{r.case_id}} • Surah ${{surahDisp}} ${{r.verse}}</span>
+      </div>
+      <h2 style="font-size:18px; color:var(--text-primary); margin-bottom:8px;">${{topicDisp}}</h2>
+      <p style="font-size:13.5px; color:var(--text-secondary); line-height:1.7; margin-bottom:10px;">
+        <strong>1. Core Problematic (Z-1 Aporia):</strong> ${{formatInlineMd(aporiaDisp)}}
+      </p>
+      <p style="font-size:13.5px; color:var(--text-secondary); line-height:1.7; margin-bottom:10px;">
+        <strong>2. Classical Exegetical Network (ISNAD 2) & Empirical Calibration:</strong> This 26-step report integrates <strong>${{(r.classical_sources||[]).length}} primary Arabic classical tafsir & lexicographical sources</strong> (${{(r.classical_sources||[]).map(c => c.author).join('; ')}}) with <strong>${{(r.modern_sources||[]).length}} contemporary empirical datasets</strong> (${{(r.modern_sources||[]).map(m => m.institution || m.author).join('; ')}}). Under Bayesian policy simulation (2026–2036), institutionalizing the Quranic principles of Surah ${{surahDisp}} ${{r.verse}} raises the probability of structural stability from a baseline prior of <strong>P(S1) = ${{priorPct}}%</strong> to a posterior of <strong>P(S1|E) = ${{postPct}}%</strong>.
+      </p>
+      <p style="font-size:13.5px; color:var(--text-secondary); line-height:1.7;">
+        <strong>3. Open Strategic Dilemma (Z-3):</strong> ${{formatInlineMd(getReportZ3(r))}}
+      </p>
+    </div>
+  ` : '';
+  document.getElementById('tab-fulltext').innerHTML = `${{enAbstractHtml}}<div class="md-body">${{renderMarkdown(r.body)}}</div>`;
 
   // Tab 4: Pedagogy & Lesson Plan Kit (TYMM)
   renderPedagogyTab(r);
@@ -1377,99 +1700,111 @@ function selectReport(idx) {{
 }}
 
 function renderPedagogyTab(r) {{
+  const isEn = currentLang === 'en';
+  const surahDisp = getReportSurah(r);
+  const topicDisp = getReportTopic(r);
+  const aporiaDisp = getReportAporia(r);
+  const z3Disp = getReportZ3(r);
   const scholarsList = (r.classical_sources || []).map(cs => `${{cs.author}} (${{cs.work}})`).join(', ');
   const firstArabic = (r.classical_sources && r.classical_sources[0]) ? r.classical_sources[0].arabic_quote : '';
   const firstScholar = (r.classical_sources && r.classical_sources[0]) ? `${{r.classical_sources[0].author}} (${{r.classical_sources[0].death_year}})` : '';
-  const s1Title = (r.scenarios && r.scenarios[0]) ? r.scenarios[0].title : 'Kurumsal Reform ve Adalet Senaryosu';
-  const s3Title = (r.scenarios && r.scenarios[2]) ? r.scenarios[2].title : 'Kriz ve Kurumsal Çözülme Senaryosu';
-  const firstThreshold = (r.thresholds && r.thresholds[0]) ? `${{r.thresholds[0].name}} (${{r.thresholds[0].value}})` : 'Kurumsal Güven Göstergesi';
+  const s1Title = (r.scenarios && r.scenarios[0]) ? r.scenarios[0].title : (isEn ? 'Institutional Reform & Justice Scenario' : 'Kurumsal Reform ve Adalet Senaryosu');
+  const s3Title = (r.scenarios && r.scenarios[2]) ? r.scenarios[2].title : (isEn ? 'Systemic Crisis & Breakdown Scenario' : 'Kriz ve Kurumsal Çözülme Senaryosu');
+  const firstThreshold = (r.thresholds && r.thresholds[0]) ? `${{r.thresholds[0].name}} (${{r.thresholds[0].value}})` : (isEn ? 'Institutional Trust Indicator' : 'Kurumsal Güven Göstergesi');
 
   document.getElementById('tab-pedagogy').innerHTML = `
     <div class="panel" style="margin-bottom:20px; border-color:var(--accent-gold);">
       <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; margin-bottom:12px;">
         <div>
-          <span class="badge badge-gold">🇹🇷 TÜRKİYE YÜZYILI MAARİF MODELİ (TYMM) UYUMLU</span>
-          <span class="badge badge-emerald" style="margin-left:6px;">DKAB & İHL Meslek Dersleri Zümre Kiti</span>
+          <span class="badge badge-gold">${{isEn ? '🎓 COMPETENCY & VIRTUE-BASED CURRICULUM MODEL (TYMM)' : '🇹🇷 TÜRKİYE YÜZYILI MAARİF MODELİ (TYMM) UYUMLU'}}</span>
+          <span class="badge badge-emerald" style="margin-left:6px;">${{isEn ? '40-Min Seminar & Classroom Debate Kit' : 'DKAB & İHL Meslek Dersleri Zümre Kiti'}}</span>
         </div>
         <div style="display:flex; gap:8px;">
-          <button class="btn btn-primary" onclick="shareLessonPlanWhatsApp()">🟢 Ders Planını WhatsApp'ta Zümremle Paylaş</button>
-          <button class="btn btn-gold" onclick="copyLessonPlan()">📋 Ders Planını Kopyala</button>
+          <button class="btn btn-primary" onclick="shareLessonPlanWhatsApp()">${{isEn ? "🟢 Share Lesson Plan via WhatsApp" : "🟢 Ders Planını WhatsApp'ta Zümremle Paylaş"}}</button>
+          <button class="btn btn-gold" onclick="copyLessonPlan()">${{isEn ? "📋 Copy Lesson Plan" : "📋 Ders Planını Kopyala"}}</button>
         </div>
       </div>
       <h2 style="font-size:19px; color:var(--text-primary); margin-bottom:6px;">
-        🎓 ${{r.surah}} Sûresi ${{r.verse}} — 40 Dakikalık Sınıf İçi Münazara ve Vaka Analizi Ders Planı
+        🎓 ${{isEn ? `Surah ${{surahDisp}} ${{r.verse}} — 40-Minute Classroom Debate & Case Analysis Lesson Plan` : `${{r.surah}} Sûresi ${{r.verse}} — 40 Dakikalık Sınıf İçi Münazara ve Vaka Analizi Ders Planı`}}
       </h2>
       <p style="font-size:13.5px; color:var(--text-secondary);">
-        <strong>Odak Konu:</strong> ${{r.topic}} &nbsp;|&nbsp; <strong>Referans Rapor:</strong> <code>${{r.case_id}}</code>
+        <strong>${{isEn ? 'Focus Topic:' : 'Odak Konu:'}}</strong> ${{topicDisp}} &nbsp;|&nbsp; <strong>${{isEn ? 'Reference Report:' : 'Referans Rapor:'}}</strong> <code>${{r.case_id}}</code>
       </p>
       <div id="pedagogyToast" class="toast-msg"></div>
     </div>
 
     <div class="grid-2">
       <div class="panel">
-        <h3><span>⏱️ 1. Aşama (00–08. Dk): Merak Uyandırma & Vaka Sunumu</span><span>Giriş / Z-1</span></h3>
+        <h3><span>⏱️ ${{isEn ? 'Stage 1 (Min 00–08): Inquiry & Case Hook' : '1. Aşama (00–08. Dk): Merak Uyandırma & Vaka Sunumu'}}</span><span>${{isEn ? 'Intro / Z-1' : 'Giriş / Z-1'}}</span></h3>
         <div class="source-card" style="border-left:3px solid var(--accent-gold);">
-          <div class="source-author" style="margin-bottom:6px;">🔥 Öğrencilere Sorulacak Derse Giriş Sorusu (Aporia):</div>
+          <div class="source-author" style="margin-bottom:6px;">🔥 ${{isEn ? 'Opening Inquiry Question for Students (Aporia):' : 'Öğrencilere Sorulacak Derse Giriş Sorusu (Aporia):'}}</div>
           <div style="font-size:13.5px; color:var(--text-secondary); line-height:1.65;">
-            ${{formatInlineMd(r.aporia)}}
+            ${{formatInlineMd(aporiaDisp)}}
           </div>
         </div>
         <div class="source-card">
-          <div class="source-author" style="margin-bottom:4px;">🎯 TYMM Erdem-Değer-Eylem Çerçevesi:</div>
+          <div class="source-author" style="margin-bottom:4px;">🎯 ${{isEn ? 'Virtue-Value-Action Pedagogical Framework:' : 'TYMM Erdem-Değer-Eylem Çerçevesi:'}}</div>
           <div class="source-meta">
-            <strong>Kök Değerler:</strong> Adalet, Hikmet, Sorumluluk, Merhamet, Dürüstlük<br>
-            <strong>Üst Düzey Beceriler:</strong> Bağlamsal Tefsir Okuryazarlığı, Kanıta Dayalı Karar Alma, Münazara ve Müzakere Ahlakı
+            ${{isEn
+              ? '<strong>Core Values:</strong> Justice, Wisdom, Accountability, Compassion, Integrity<br><strong>Higher-Order Skills:</strong> Contextual Tafsir Literacy, Evidence-Based Decision Making, Deliberative Ethics'
+              : '<strong>Kök Değerler:</strong> Adalet, Hikmet, Sorumluluk, Merhamet, Dürüstlük<br><strong>Üst Düzey Beceriler:</strong> Bağlamsal Tefsir Okuryazarlığı, Kanıta Dayalı Karar Alma, Münazara ve Müzakere Ahlakı'}}
           </div>
         </div>
       </div>
 
       <div class="panel">
-        <h3><span>🏛️ 2. Aşama (08–20. Dk): Klasik Tefsir Halkası</span><span>İSNAD 2 Köprüsü</span></h3>
+        <h3><span>🏛️ ${{isEn ? 'Stage 2 (Min 08–20): Classical Tafsir Circle' : '2. Aşama (08–20. Dk): Klasik Tefsir Halkası'}}</span><span>ISNAD 2</span></h3>
         <div class="source-card">
-          <div class="source-author" style="margin-bottom:6px;">🕌 Müfessirlerin Kavramsal Çerçevesi:</div>
+          <div class="source-author" style="margin-bottom:6px;">🕌 ${{isEn ? 'Conceptual Framework of Classical Exegetes:' : 'Müfessirlerin Kavramsal Çerçevesi:'}}</div>
           <div class="source-meta">
-            Derste öğrencilere âyetin lafzî ve tarihsel bağlamı <strong>${{scholarsList}}</strong> üzerinden aktarılır.
+            ${{isEn
+              ? `Students examine the lexical and historical context of the verse through <strong>${{scholarsList}}</strong>.`
+              : `Derste öğrencilere âyetin lafzî ve tarihsel bağlamı <strong>${{scholarsList}}</strong> üzerinden aktarılır.`}}
           </div>
           <div class="arabic-box" style="font-size:17px;">${{firstArabic}}</div>
           <div style="font-size:12px; color:var(--accent-gold);">— ${{firstScholar}}</div>
         </div>
         <div class="source-card">
-          <div class="source-author" style="margin-bottom:4px;">💡 Pedagojik Vurgu (<code>[NAKİL]</code> vs <code>[YORUM]</code>):</div>
+          <div class="source-author" style="margin-bottom:4px;">💡 ${{isEn ? 'Epistemic Distinction (<code>[NAKİL / CITATION]</code> vs <code>[YORUM / ANALYSIS]</code>):' : 'Pedagojik Vurgu (<code>[NAKİL]</code> vs <code>[YORUM]</code>):'}}</div>
           <div class="source-meta">
-            Öğrencilere âyetin değişmez ilahi metni ve klasik tefsir nakli (<code>[NAKİL]</code>) ile bugünün dünyasına yönelik stratejik çıkarımların (<code>[YORUM]</code>) birbirinden nasıl ayırt edileceği uygulamalı olarak gösterilir.
+            ${{isEn
+              ? 'Students practice distinguishing between the immutable revealed text / classical exegetical transmission (<code>[NAKİL]</code>) and contemporary strategic policy inferences (<code>[YORUM]</code>).'
+              : 'Öğrencilere âyetin değişmez ilahi metni ve klasik tefsir nakli (<code>[NAKİL]</code>) ile bugünün dünyasına yönelik stratejik çıkarımların (<code>[YORUM]</code>) birbirinden nasıl ayırt edileceği uygulamalı olarak gösterilir.'}}
           </div>
         </div>
       </div>
 
       <div class="panel">
-        <h3><span>⚖️ 3. Aşama (20–33. Dk): Sınıf İçi Münazara Atölyesi</span><span>Senaryo & Z-3</span></h3>
+        <h3><span>⚖️ ${{isEn ? 'Stage 3 (Min 20–33): Classroom Debate Workshop' : '3. Aşama (20–33. Dk): Sınıf İçi Münazara Atölyesi'}}</span><span>${{isEn ? 'Scenarios & Z-3' : 'Senaryo & Z-3'}}</span></h3>
         <div class="source-card" style="border-left:3px solid var(--accent-emerald);">
-          <div class="source-author" style="margin-bottom:6px;">🗣️ Münazara İkilemi (Z-3 Açık Uçlu Soru):</div>
+          <div class="source-author" style="margin-bottom:6px;">🗣️ ${{isEn ? 'Debate Dilemma (Z-3 Open-Ended Question):' : 'Münazara İkilemi (Z-3 Açık Uçlu Soru):'}}</div>
           <div style="font-size:13.5px; color:var(--text-secondary); line-height:1.65;">
-            ${{formatInlineMd(r.z3_question)}}
+            ${{formatInlineMd(z3Disp)}}
           </div>
         </div>
         <div class="source-card">
-          <div class="source-author" style="margin-bottom:4px;">🧭 İki Grup Senaryo Karşılaştırması:</div>
+          <div class="source-author" style="margin-bottom:4px;">🧭 ${{isEn ? 'Two-Group Scenario Comparison:' : 'İki Grup Senaryo Karşılaştırması:'}}</div>
           <div class="source-meta">
-            • <strong>1. Grup (Reform Masası — S1):</strong> <em>"${{s1Title}}"</em> gerçekleşirse toplumda başarı olasılığı neden <strong>%${{Math.round(r.prior*100)}}'dan %${{Math.round(r.posterior*100)}}'a</strong> yükselir?<br>
-            • <strong>2. Grup (Kriz Analizi — S3):</strong> <em>"${{s3Title}}"</em> yaşanırsa hangi toplumsal maliyetler ortaya çıkar?
+            ${{isEn
+              ? `• <strong>Group 1 (Reform Panel — S1):</strong> Why does implementing <em>"${{s1Title}}"</em> raise societal stability from <strong>${{Math.round(r.prior*100)}}% to ${{Math.round(r.posterior*100)}}%</strong>?<br>• <strong>Group 2 (Crisis Analysis — S3):</strong> What social costs emerge under <em>"${{s3Title}}"</em>?`
+              : `• <strong>1. Grup (Reform Masası — S1):</strong> <em>"${{s1Title}}"</em> gerçekleşirse toplumda başarı olasılığı neden <strong>%${{Math.round(r.prior*100)}}'dan %${{Math.round(r.posterior*100)}}'a</strong> yükselir?<br>• <strong>2. Grup (Kriz Analizi — S3):</strong> <em>"${{s3Title}}"</em> yaşanırsa hangi toplumsal maliyetler ortaya çıkar?`}}
           </div>
         </div>
       </div>
 
       <div class="panel">
-        <h3><span>📋 4. Aşama (33–40. Dk): Değerlendirme & Çıkış Kartı</span><span>Eylem & Ölçüt</span></h3>
+        <h3><span>📋 ${{isEn ? 'Stage 4 (Min 33–40): Reflection & Exit Ticket' : '4. Aşama (33–40. Dk): Değerlendirme & Çıkış Kartı'}}</span><span>${{isEn ? 'Action & Metric' : 'Eylem & Ölçüt'}}</span></h3>
         <div class="source-card">
-          <div class="source-author" style="margin-bottom:6px;">📊 Somut Hayat Ölçütü (Threshold):</div>
+          <div class="source-author" style="margin-bottom:6px;">📊 ${{isEn ? 'Real-Life Benchmark Indicator (Threshold):' : 'Somut Hayat Ölçütü (Threshold):'}}</div>
           <div class="source-meta">
-            Öğrencilere <strong>${{firstThreshold}}</strong> göstergesi örnek verilerek şu kapanış sorusu yöneltilir:<br><br>
-            <em>"Bugün ${{r.surah}} ${{r.verse}} âyetinin ortaya koyduğu ilkeyi kendi okul ortamımızda, ailemizde ve dijital dünyamızda hayata geçirmek için hangi 1 somut kuralı uygulamalıyız?"</em>
+            ${{isEn
+              ? `Citing the indicator <strong>${{firstThreshold}}</strong>, ask students:<br><br><em>"What single concrete rule can we adopt in our school, family, and digital life today to practice the ethic of Surah ${{surahDisp}} ${{r.verse}}?"</em>`
+              : `Öğrencilere <strong>${{firstThreshold}}</strong> göstergesi örnek verilerek şu kapanış sorusu yöneltilir:<br><br><em>"Bugün ${{r.surah}} ${{r.verse}} âyetinin ortaya koyduğu ilkeyi kendi okul ortamımızda, ailemizde ve dijital dünyamızda hayata geçirmek için hangi 1 somut kuralı uygulamalıyız?"</em>`}}
           </div>
         </div>
         <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
           <button class="btn btn-gold" onclick="openFeedbackTab(); selectCategoryAndFocus('Sınıf İçi / Zümre Pedagojik Uygulama Deneyimi');">
-            ✍️ Bu Dersi İşledikten Sonra Zümre Deneyimini Buraya Kaydet
+            ✍️ ${{isEn ? 'Record Classroom / Seminar Reflection Here' : 'Bu Dersi İşledikten Sonra Zümre Deneyimini Buraya Kaydet'}}
           </button>
         </div>
       </div>
@@ -1479,7 +1814,20 @@ function renderPedagogyTab(r) {{
 
 function buildLessonPlanText() {{
   const r = REPORTS[currentIndex];
+  const isEn = currentLang === 'en';
   const scholarsList = (r.classical_sources || []).map(cs => cs.author).join(', ');
+  if (isEn) {{
+    return `*QURAN VISION (v6.2.1) — 40-MIN LESSON & DEBATE PLAN*\\n` +
+      `━━━━━━━━━━━━━━━━━━━━\\n` +
+      `📖 *Verse:* Surah ${{getReportSurah(r)}} ${{r.verse}} (${{r.case_id}})\\n` +
+      `🎯 *Strategic Theme:* ${{getReportTopic(r)}}\\n` +
+      `━━━━━━━━━━━━━━━━━━━━\\n` +
+      `⏱️ *Stage 1 (00-08 Min - Inquiry):* ${{getReportAporia(r).slice(0, 220)}}...\\n\\n` +
+      `🕌 *Stage 2 (08-20 Min - Classical Tafsir):* Contextual analysis via ${{scholarsList}}.\\n\\n` +
+      `⚖️ *Stage 3 (20-33 Min - Classroom Debate):* ${{getReportZ3(r).slice(0, 240)}}...\\n\\n` +
+      `📋 *Stage 4 (33-40 Min - Assessment):* Bayesian shift from ${{Math.round(r.prior*100)}}% -> ${{Math.round(r.posterior*100)}}% and ethical application.\\n` +
+      `🔗 *Full Report & PDF:* https://mehmetyarici-crypto.github.io/quran-vision/`;
+  }}
   return `*QURAN VISION (v6.2.1) — TYMM UYUMLU 40 DK DERS & MÜNAZARA PLANI*\\n` +
     `━━━━━━━━━━━━━━━━━━━━\\n` +
     `📖 *Ders Konusu:* ${{r.surah}} Sûresi ${{r.verse}} (${{r.case_id}})\\n` +
@@ -1502,20 +1850,22 @@ function copyLessonPlan() {{
   if (navigator.clipboard) navigator.clipboard.writeText(txt);
   const el = document.getElementById('pedagogyToast');
   if (el) {{
-    el.textContent = "✅ 40 Dakikalık TYMM Ders & Münazara Planı panoya kopyalandı!";
+    el.textContent = currentLang === 'en'
+      ? "✅ 40-Minute Lesson & Debate Plan copied to clipboard!"
+      : "✅ 40 Dakikalık TYMM Ders & Münazara Planı panoya kopyalandı!";
     el.style.display = 'block';
     setTimeout(() => {{ el.style.display = 'none'; }}, 4000);
   }}
 }}
 
 function renderSynthesisTab() {{
+  const isEn = currentLang === 'en';
   const avgPrior = Math.round((REPORTS.reduce((a, b) => a + b.prior, 0) / REPORTS.length) * 100);
   const avgPost = Math.round((REPORTS.reduce((a, b) => a + b.posterior, 0) / REPORTS.length) * 100);
   const netGain = avgPost - avgPrior;
 
-  // Aggregate Classical Scholars across all 13 reports
   const scholarMap = {{}};
-  REPORTS.forEach((rep, rIdx) => {{
+  REPORTS.forEach((rep) => {{
     (rep.classical_sources || []).forEach(cs => {{
       const shortName = cs.author.split('(')[0].trim();
       if (!scholarMap[shortName]) {{
@@ -1529,17 +1879,17 @@ function renderSynthesisTab() {{
   }});
 
   const sortedScholars = Object.entries(scholarMap).sort((a, b) => b[1].count - a[1].count);
-  const scholarsGridHtml = sortedScholars.map(([name, info], sIdx) => `
+  const scholarsGridHtml = sortedScholars.map(([name, info]) => `
     <div class="candidate-card" style="cursor:pointer;" data-scholar="${{name.replace(/"/g, '&quot;')}}" onclick="filterByScholar(this.getAttribute('data-scholar'))">
       <div>
         <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
           <strong style="color:var(--accent-gold); font-size:13.5px;">🕌 ${{name}}</strong>
-          <span class="badge badge-emerald">${{info.count}} Rapor</span>
+          <span class="badge badge-emerald">${{info.count}} ${{isEn ? 'Reports' : 'Rapor'}}</span>
         </div>
         <div style="font-size:12px; color:var(--text-secondary);"><em>${{info.work}}</em> (${{info.death || ''}})</div>
       </div>
       <div style="font-size:11px; color:var(--text-muted); font-family:'JetBrains Mono',monospace;">
-        🔍 Tıkla & Filtrele: ${{info.reports.join(', ')}}
+        🔍 ${{isEn ? 'Click to Filter' : 'Tıkla & Filtrele'}}: ${{info.reports.join(', ')}}
       </div>
     </div>
   `).join('');
@@ -1551,10 +1901,10 @@ function renderSynthesisTab() {{
     return `
       <tr style="cursor:pointer; transition:background 0.15s;" onclick="selectReport(${{idx}}); setTab('dashboard', document.getElementById('tabBtn-dashboard'));" onmouseover="this.style.background='var(--bg-card-hover)'" onmouseout="this.style.background='transparent'">
         <td style="font-family:'JetBrains Mono',monospace; font-weight:700; color:var(--accent-gold);">${{rep.case_id}}</td>
-        <td><strong>${{rep.surah}} ${{rep.verse}}</strong></td>
-        <td style="font-size:12.5px; color:var(--text-secondary);">${{rep.topic}}</td>
+        <td><strong>${{getReportSurah(rep)}} ${{rep.verse}}</strong></td>
+        <td style="font-size:12.5px; color:var(--text-secondary);">${{getReportTopic(rep)}}</td>
         <td>%${{p1}} → <strong style="color:var(--accent-emerald);">%${{p2}}</strong> <span class="badge badge-emerald">+%${{diff}}</span></td>
-        <td>${{(rep.classical_sources||[]).length}} Klasik / ${{(rep.modern_sources||[]).length}} DOI</td>
+        <td>${{(rep.classical_sources||[]).length}} ${{isEn ? 'Classical' : 'Klasik'}} / ${{(rep.modern_sources||[]).length}} DOI</td>
         <td><span class="badge badge-mono">${{rep.confidence}}</span></td>
       </tr>
     `;
@@ -1563,10 +1913,10 @@ function renderSynthesisTab() {{
   document.getElementById('tab-synthesis').innerHTML = `
     <div class="grid-2">
       <div class="panel">
-        <h3><span>📈 Külliyat Makro-Bayesyen Sentezi (${{REPORTS.length}} Rapor Ortalaması)</span><span>2026–2036</span></h3>
+        <h3><span>📈 ${{isEn ? `Macro-Bayesian Corpus Synthesis (${{REPORTS.length}}-Report Mean)` : `Külliyat Makro-Bayesyen Sentezi (${{REPORTS.length}} Rapor Ortalaması)`}}</span><span>2026–2036</span></h3>
         <div class="bayes-row">
           <div class="bayes-label">
-            <span>Külliyat Ortalama Önsel Olasılık — Prior P(S1) (Mevcut Kurumsal Atalet)</span>
+            <span>${{isEn ? 'Corpus Mean Prior Probability — P(S1) (Institutional Inertia)' : 'Külliyat Ortalama Önsel Olasılık — Prior P(S1) (Mevcut Kurumsal Atalet)'}}</span>
             <strong>%${{avgPrior}}</strong>
           </div>
           <div class="progress-track">
@@ -1575,49 +1925,55 @@ function renderSynthesisTab() {{
         </div>
         <div class="bayes-row">
           <div class="bayes-label">
-            <span>Külliyat Ortalama Sonsal Olasılık — Posterior P(S1|E) (Kur'ani İlkeler & Reformla)</span>
-            <strong style="color:var(--accent-emerald);">%${{avgPost}} (+%${{netGain}} Net Stratejik Sıçrama)</strong>
+            <span>${{isEn ? "Corpus Mean Posterior Probability — P(S1|E) (With Quranic Reform)" : "Külliyat Ortalama Sonsal Olasılık — Posterior P(S1|E) (Kur'ani İlkeler & Reformla)"}}</span>
+            <strong style="color:var(--accent-emerald);">%${{avgPost}} (+%${{netGain}} ${{isEn ? 'Net Strategic Gain' : 'Net Stratejik Sıçrama'}})</strong>
           </div>
           <div class="progress-track">
             <div class="progress-fill" style="width:${{avgPost}}%; background:var(--accent-emerald);"></div>
           </div>
         </div>
         <p style="font-size:13px; color:var(--text-secondary); margin-top:10px;">
-          ${{REPORTS.length}} kurucu âyetin tamamında yapılan nicel simülasyonlar; ahit vefası, liyakat, şûrâ, bilgi doğrulama (tebeyyün), servet dolaşımı, mîzân ve teâruf ilkeleri kurumsallaştırıldığında toplumsal istikrar olasılığının ortalama <strong>+%${{netGain}} puan</strong> arttığını kanıtlamaktadır.
+          ${{isEn
+            ? `Across all ${{REPORTS.length}} foundational verses, quantitative Bayesian simulations demonstrate that institutionalizing covenant fidelity, meritocracy, consultation (shura), epistemic verification, wealth circulation, mizan, and ta'aruf increases long-term societal stability by an average of <strong>+${{netGain}} percentage points</strong>.`
+            : `${{REPORTS.length}} kurucu âyetin tamamında yapılan nicel simülasyonlar; ahit vefası, liyakat, şûrâ, bilgi doğrulama (tebeyyün), servet dolaşımı, mîzân ve teâruf ilkeleri kurumsallaştırıldığında toplumsal istikrar olasılığının ortalama <strong>+%${{netGain}} puan</strong> arttığını kanıtlamaktadır.`}}
         </p>
       </div>
 
       <div class="panel">
-        <h3><span>🏛️ Metodolojik Mimari Özeti</span><span>v6.2.1 Standardı</span></h3>
+        <h3><span>🏛️ ${{isEn ? 'Methodological Architecture Summary' : 'Metodolojik Mimari Özeti'}}</span><span>v6.2.1</span></h3>
         <div class="source-card">
-          <div class="source-author">1. İSNAD 2 Klasik Tefsir Tahkiki ({total_classical} Arapça Nakil)</div>
-          <div class="source-meta">Erken dönem rivayet, dirayet, fıkhî ahkâm ve makâsıd tefsirlerinden hicrî/milâdî vefat yılı, tahkik ve cilt/sayfa doğrulamalı birincil kaynak ağı.</div>
+          <div class="source-author">${{isEn ? `1. ISNAD 2 Classical Tafsir Verification (${{TOTAL_CLASSICAL}} Primary Citations)` : `1. İSNAD 2 Klasik Tefsir Tahkiki (${{TOTAL_CLASSICAL}} Arapça Nakil)`}}</div>
+          <div class="source-meta">${{isEn
+            ? 'Primary classical exegesis (riwayah, dirayah, ahkam, and maqasid) verified with Hijri/Gregorian death dates, critical edition editors, volumes, and page numbers.'
+            : 'Erken dönem rivayet, dirayet, fıkhî ahkâm ve makâsıd tefsirlerinden hicrî/milâdî vefat yılı, tahkik ve cilt/sayfa doğrulamalı birincil kaynak ağı.'}}</div>
         </div>
         <div class="source-card">
-          <div class="source-author">2. Çağdaş Ampirik Veri & DOI Ağı ({total_modern} Kurumsal Veri Kaynağı)</div>
-          <div class="source-meta">Dünya Bankası, UNDP, WJP, SIPRI, OECD ve UNESCO göstergeleriyle kalibre edilmiş yanlışlanabilir eşik değerler (Thresholds).</div>
+          <div class="source-author">${{isEn ? `2. Contemporary Empirical Data & DOI Network (${{TOTAL_MODERN}} Institutional Datasets)` : `2. Çağdaş Ampirik Veri & DOI Ağı (${{TOTAL_MODERN}} Kurumsal Veri Kaynağı)`}}</div>
+          <div class="source-meta">${{isEn
+            ? 'Falsifiable threshold indicators calibrated against World Bank, UNDP, WJP, SIPRI, OECD, and UNESCO empirical datasets.'
+            : 'Dünya Bankası, UNDP, WJP, SIPRI, OECD ve UNESCO göstergeleriyle kalibre edilmiş yanlışlanabilir eşik değerler (Thresholds).'}}</div>
         </div>
       </div>
     </div>
 
     <div class="panel" style="margin-bottom:22px;">
-      <h3><span>🕌 Külliyat Çapraz Müfessir İndeksi (Filtrelemek İçin Müfessire Tıklayın)</span><span>İSNAD 2 Haritası</span></h3>
+      <h3><span>🕌 ${{isEn ? 'Cross-Corpus Classical Exegete Index (Click a Scholar to Filter)' : 'Külliyat Çapraz Müfessir İndeksi (Filtrelemek İçin Müfessire Tıklayın)'}}</span><span>ISNAD 2</span></h3>
       <div class="candidate-grid">
         ${{scholarsGridHtml}}
       </div>
     </div>
 
     <div class="panel md-body" style="padding:22px;">
-      <h3 style="margin-top:0;"><span>📊 ${{REPORTS.length}} Stratejik Raporun Bütüncül Karşılaştırma Matrisi (Rapora Gitmek İçin Satıra Tıklayın)</span></h3>
+      <h3 style="margin-top:0;"><span>📊 ${{isEn ? `Comprehensive Comparison Matrix of All ${{REPORTS.length}} Strategic Reports (Click Row to Open)` : `${{REPORTS.length}} Stratejik Raporun Bütüncül Karşılaştırma Matrisi (Rapora Gitmek İçin Satıra Tıklayın)`}}</span></h3>
       <table>
         <thead>
           <tr>
-            <th>Vaka Kodu</th>
-            <th>Sûre / Âyet</th>
-            <th>Stratejik Doktrin & Yönetişim Başlığı</th>
-            <th>Bayesyen Sıçrama (Prior → Posterior)</th>
-            <th>Kaynak Ağı</th>
-            <th>Güven</th>
+            <th>${{isEn ? 'Case ID' : 'Vaka Kodu'}}</th>
+            <th>${{isEn ? 'Surah / Verse' : 'Sûre / Âyet'}}</th>
+            <th>${{isEn ? 'Strategic Doctrine & Governance Title' : 'Stratejik Doktrin & Yönetişim Başlığı'}}</th>
+            <th>${{isEn ? 'Bayesian Shift (Prior → Posterior)' : 'Bayesyen Sıçrama (Prior → Posterior)'}}</th>
+            <th>${{isEn ? 'Source Network' : 'Kaynak Ağı'}}</th>
+            <th>${{isEn ? 'Confidence' : 'Güven'}}</th>
           </tr>
         </thead>
         <tbody>
@@ -1637,87 +1993,97 @@ function filterByScholar(scholarName) {{
 }}
 
 function renderFeedbackTab(r) {{
+  const isEn = currentLang === 'en';
+  const surahDisp = getReportSurah(r);
   const nextReportNum = REPORTS.length + 1;
   const nextCaseId = 'QV-2026-' + String(nextReportNum).padStart(3, '0');
-  const candidatesHtml = CANDIDATE_VERSES.map((cv, cIdx) => `
-    <div class="candidate-card">
-      <div>
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
-          <strong style="color:var(--accent-gold); font-size:14px;">📖 ${{cv.surah}} ${{cv.verse}}</strong>
-          <span class="badge badge-mono">Aday #${{cIdx + 1}}</span>
+  const candidatesHtml = CANDIDATE_VERSES.map((cv, cIdx) => {{
+    const cvSurah = isEn ? cv.surah_en : cv.surah;
+    const cvTitle = isEn ? cv.title_en : cv.title;
+    return `
+      <div class="candidate-card">
+        <div>
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+            <strong style="color:var(--accent-gold); font-size:14px;">📖 ${{cvSurah}} ${{cv.verse}}</strong>
+            <span class="badge badge-mono">${{isEn ? 'Candidate' : 'Aday'}} #${{cIdx + 1}}</span>
+          </div>
+          <div style="font-size:12.5px; color:var(--text-secondary); line-height:1.5;">${{cvTitle}}</div>
         </div>
-        <div style="font-size:12.5px; color:var(--text-secondary); line-height:1.5;">${{cv.title}}</div>
+        <button class="btn btn-gold" style="width:100%; justify-content:center;" data-vref="${{cvSurah}} ${{cv.verse}}" data-vtitle="${{cvTitle.replace(/"/g, '&quot;')}}" onclick="prefillCandidateVerse(this.getAttribute('data-vref'), this.getAttribute('data-vtitle'))">
+          🗳️ ${{isEn ? 'Nominate This Verse for Next Report' : 'Sıradaki Rapor İçin Bu Âyeti Öner'}}
+        </button>
       </div>
-      <button class="btn btn-gold" style="width:100%; justify-content:center;" onclick="prefillCandidateVerse('${{cv.surah}} ${{cv.verse}}', '${{cv.title}}')">
-        🗳️ Sıradaki Rapor İçin Bu Âyeti Öner
-      </button>
-    </div>
-  `).join('');
+    `;
+  }}).join('');
 
   document.getElementById('tab-feedback').innerHTML = `
     <div class="grid-2">
       <div class="panel">
-        <h3><span>❓ Z-3: Okuyucuya Bırakılan Açık Uçlu Stratejik İkilem</span><span>${{r.case_id}} • ${{r.surah}} ${{r.verse}}</span></h3>
+        <h3><span>❓ ${{isEn ? 'Z-3: Open-Ended Strategic Dilemma for Peer Deliberation' : 'Z-3: Okuyucuya Bırakılan Açık Uçlu Stratejik İkilem'}}</span><span>${{r.case_id}} • ${{surahDisp}} ${{r.verse}}</span></h3>
         <div class="source-card" style="border-left: 3px solid var(--accent-emerald); font-size:14px; line-height:1.75; margin-bottom:16px;">
-          ${{formatInlineMd(r.z3_question || 'Bu raporun açık uçlu müzakere sorusu hakkında görüşünüzü aşağıdan paylaşabilirsiniz.')}}
+          ${{formatInlineMd(getReportZ3(r) || (isEn ? 'Share your scholarly reflection on this report below.' : 'Bu raporun açık uçlu müzakere sorusu hakkında görüşünüzü aşağıdan paylaşabilirsiniz.'))}}
         </div>
         <div style="display:flex; gap:10px; flex-wrap:wrap; margin-bottom:22px;">
-          <button class="btn btn-primary" onclick="selectCategoryAndFocus('Z-3 Açık Uçlu İkileme Çözüm / Yanıt')">✍️ Bu İkileme Cevabımı Yaz</button>
-          <button class="btn" onclick="selectCategoryAndFocus('İSNAD 2 Klasik Tefsir / Arapça Kaynak İlavesi')">🕌 Klasik Tefsir Nakli Ekle</button>
-          <button class="btn" onclick="selectCategoryAndFocus('Sınıf İçi / Zümre Pedagojik Uygulama Deneyimi')">🏫 Zümre / Ders Deneyimi Paylaş</button>
+          <button class="btn btn-primary" onclick="selectCategoryAndFocus('Z-3 Açık Uçlu İkileme Çözüm / Yanıt')">✍️ ${{isEn ? 'Respond to Z-3 Dilemma' : 'Bu İkileme Cevabımı Yaz'}}</button>
+          <button class="btn" onclick="selectCategoryAndFocus('İSNAD 2 Klasik Tefsir / Arapça Kaynak İlavesi')">🕌 ${{isEn ? 'Add Classical Tafsir Citation' : 'Klasik Tefsir Nakli Ekle'}}</button>
+          <button class="btn" onclick="selectCategoryAndFocus('Sınıf İçi / Zümre Pedagojik Uygulama Deneyimi')">🏫 ${{isEn ? 'Share Classroom Experience' : 'Zümre / Ders Deneyimi Paylaş'}}</button>
         </div>
 
-        <h3><span>📌 Bu Rapor İçin Kaydettiğim Şerhler & Ders Notlarım</span><span id="localNotesCount">0 Not</span></h3>
+        <h3><span>📌 ${{isEn ? 'My Saved Annotations & Lesson Notes for This Report' : 'Bu Rapor İçin Kaydettiğim Şerhler & Ders Notlarım'}}</span><span id="localNotesCount">0</span></h3>
         <div id="localNotesList"></div>
       </div>
 
       <div class="panel">
-        <h3><span>✍️ Etkileşimli Akademik Şerh, Hakemlik ve Geri Dönüt Formu</span><span>Açık Müzakere</span></h3>
+        <h3><span>✍️ ${{isEn ? 'Interactive Academic Peer-Review & Feedback Form' : 'Etkileşimli Akademik Şerh, Hakemlik ve Geri Dönüt Formu'}}</span><span>${{isEn ? 'Open Deliberation' : 'Açık Müzakere'}}</span></h3>
         <p style="font-size:12.5px; color:var(--text-secondary); margin-bottom:14px;">
-          <strong>${{r.case_id}} (${{r.surah}} Sûresi ${{r.verse}})</strong> raporu için hazırladığınız katkıyı tek tıkla <strong>WhatsApp</strong> üzerinden paylaşabilir, <strong>Resmi GitHub Akademik Hakemlik (Peer-Review)</strong> kaydı açabilir veya kişisel araştırma notlarınıza kaydedebilirsiniz.
+          ${{isEn
+            ? `Submit your commentary or peer-review on <strong>${{r.case_id}} (Surah ${{surahDisp}} ${{r.verse}})</strong> with one click via <strong>WhatsApp</strong>, open an official <strong>GitHub Academic Peer-Review Issue</strong>, or save it to your browser notes.`
+            : `<strong>${{r.case_id}} (${{r.surah}} Sûresi ${{r.verse}})</strong> raporu için hazırladığınız katkıyı tek tıkla <strong>WhatsApp</strong> üzerinden paylaşabilir, <strong>Resmi GitHub Akademik Hakemlik (Peer-Review)</strong> kaydı açabilir veya kişisel araştırma notlarınıza kaydedebilirsiniz.`}}
         </p>
 
         <div class="form-group">
-          <label class="form-label">👤 Adınız / Unvanınız / Kurum veya Zümreniz</label>
-          <input type="text" id="fbAuthor" class="form-input" placeholder="Örn: Doç. Dr. ... / DKAB Öğretmeni ...">
+          <label class="form-label">👤 ${{isEn ? 'Your Name / Academic Title / Institution' : 'Adınız / Unvanınız / Kurum veya Zümreniz'}}</label>
+          <input type="text" id="fbAuthor" class="form-input" placeholder="${{isEn ? 'e.g., Assoc. Prof. ... / Senior Educator ...' : 'Örn: Doç. Dr. ... / DKAB Öğretmeni ...'}}">
         </div>
 
         <div class="form-group">
-          <label class="form-label">📂 Katkı veya Geri Bildirim Türü</label>
+          <label class="form-label">📂 ${{isEn ? 'Contribution or Peer-Review Category' : 'Katkı veya Geri Bildirim Türü'}}</label>
           <select id="fbCategory" class="form-select">
-            <option value="Z-3 Açık Uçlu İkileme Çözüm / Yanıt">🎓 Z-3 Açık Uçlu İkileme Çözüm / Yanıt</option>
-            <option value="İSNAD 2 Klasik Tefsir / Arapça Kaynak İlavesi">🕌 İSNAD 2 Klasik Tefsir / Arapça Kaynak İlavesi</option>
-            <option value="Çağdaş Ampirik Veri / DOI / Makale Önerisi">📊 Çağdaş Ampirik Veri / DOI / Makale Önerisi</option>
-            <option value="Sınıf İçi / Zümre Pedagojik Uygulama Deneyimi">🏫 Sınıf İçi / Zümre Pedagojik Uygulama Deneyimi</option>
-            <option value="Metodolojik Tenkit / Yanlışlama Kanıtı (Adım 12)">⚖️ Metodolojik Tenkit / Yanlışlama Kanıtı (Adım 12)</option>
-            <option value="Külliyata Yeni Âyet / Rapor Önerisi">💡 Külliyata Yeni Âyet / Rapor Önerisi (${{nextCaseId}}+)</option>
+            <option value="Z-3 Açık Uçlu İkileme Çözüm / Yanıt">🎓 ${{isEn ? 'Response to Z-3 Strategic Dilemma' : 'Z-3 Açık Uçlu İkileme Çözüm / Yanıt'}}</option>
+            <option value="İSNAD 2 Klasik Tefsir / Arapça Kaynak İlavesi">🕌 ${{isEn ? 'ISNAD 2 Classical Tafsir / Arabic Source Addition' : 'İSNAD 2 Klasik Tefsir / Arapça Kaynak İlavesi'}}</option>
+            <option value="Çağdaş Ampirik Veri / DOI / Makale Önerisi">📊 ${{isEn ? 'Empirical Dataset / DOI / Literature Suggestion' : 'Çağdaş Ampirik Veri / DOI / Makale Önerisi'}}</option>
+            <option value="Sınıf İçi / Zümre Pedagojik Uygulama Deneyimi">🏫 ${{isEn ? 'Classroom / Seminar Pedagogical Application' : 'Sınıf İçi / Zümre Pedagojik Uygulama Deneyimi'}}</option>
+            <option value="Metodolojik Tenkit / Yanlışlama Kanıtı (Adım 12)">⚖️ ${{isEn ? 'Methodological Critique / Falsification Evidence (Step 12)' : 'Metodolojik Tenkit / Yanlışlama Kanıtı (Adım 12)'}}</option>
+            <option value="Külliyata Yeni Âyet / Rapor Önerisi">💡 ${{isEn ? `Nominate New Verse for Corpus (${{nextCaseId}}+)` : `Külliyata Yeni Âyet / Rapor Önerisi (${{nextCaseId}}+)`}}</option>
           </select>
         </div>
 
         <div class="form-group">
-          <label class="form-label">📝 Şerh, Analiz, Eleştiri veya Sınıf İçi Gözlem Metniniz</label>
-          <textarea id="fbContent" class="form-textarea" placeholder="Bu raporun analitik çerçevesine, klasik tefsir nakillerine, Z-3 sorusuna veya sınıf içi uygulanabilirliğine dair görüş ve katkınızı buraya yazınız..."></textarea>
+          <label class="form-label">📝 ${{isEn ? 'Your Commentary, Critique, or Classroom Observation' : 'Şerh, Analiz, Eleştiri veya Sınıf İçi Gözlem Metniniz'}}</label>
+          <textarea id="fbContent" class="form-textarea" placeholder="${{isEn ? 'Write your analytical commentary, classical reference, response to Z-3, or pedagogical feedback here...' : 'Bu raporun analitik çerçevesine, klasik tefsir nakillerine, Z-3 sorusuna veya sınıf içi uygulanabilirliğine dair görüş ve katkınızı buraya yazınız...'}}"></textarea>
         </div>
 
         <div class="form-group">
-          <label class="form-label">📚 Varsa Dayanak Kaynak / Tefsir / DOI / Âyet Referansı (İsteğe Bağlı)</label>
-          <input type="text" id="fbSource" class="form-input" placeholder="Örn: İbn Âşûr, et-Tahrîr, c. X, s. Y veya DOI: 10.xxxx/...">
+          <label class="form-label">📚 ${{isEn ? 'Supporting Reference / Tafsir / DOI / Verse (Optional)' : 'Varsa Dayanak Kaynak / Tefsir / DOI / Âyet Referansı (İsteğe Bağlı)'}}</label>
+          <input type="text" id="fbSource" class="form-input" placeholder="${{isEn ? 'e.g., Ibn Ashur, al-Tahrir, vol. X, p. Y or DOI: 10.xxxx/...' : 'Örn: İbn Âşûr, et-Tahrîr, c. X, s. Y veya DOI: 10.xxxx/...'}}">
         </div>
 
         <div class="action-row">
-          <button class="btn btn-primary" onclick="sendViaWhatsApp()">🟢 WhatsApp ile Gönder / Paylaş</button>
-          <button class="btn btn-gold" onclick="openGitHubPeerReview()">🏛️ Resmi Akademik Şerh Kaydı Aç (GitHub)</button>
-          <button class="btn" onclick="saveLocalNoteAndCopy()">💾 Notlarıma Kaydet & Metni Kopyala</button>
-          <a class="btn" href="https://github.com/mehmetyarici-crypto/quran-vision/issues" target="_blank" rel="noopener">🔎 Tüm Açık Şerhleri Gör</a>
+          <button class="btn btn-primary" onclick="sendViaWhatsApp()">🟢 ${{isEn ? 'Send / Share via WhatsApp' : 'WhatsApp ile Gönder / Paylaş'}}</button>
+          <button class="btn btn-gold" onclick="openGitHubPeerReview()">🏛️ ${{isEn ? 'Open Official Peer-Review Issue (GitHub)' : 'Resmi Akademik Şerh Kaydı Aç (GitHub)'}}</button>
+          <button class="btn" onclick="saveLocalNoteAndCopy()">💾 ${{isEn ? 'Save to My Notes & Copy' : 'Notlarıma Kaydet & Metni Kopyala'}}</button>
+          <a class="btn" href="https://github.com/mehmetyarici-crypto/quran-vision/issues" target="_blank" rel="noopener">🔎 ${{isEn ? 'View All Peer-Reviews' : 'Tüm Açık Şerhleri Gör'}}</a>
         </div>
         <div id="fbToast" class="toast-msg"></div>
       </div>
     </div>
 
     <div class="panel" style="margin-bottom:24px;">
-      <h3><span>🗳️ Külliyatın ${{nextReportNum}}. Raporu (${{nextCaseId}}) Hangi Âyet Olsun? (Aday Âyet Havuzu)</span><span>Kolektif Gündem</span></h3>
+      <h3><span>🗳️ ${{isEn ? `Which Verse Should Be Report #${{nextReportNum}} (${{nextCaseId}})? (Candidate Verse Pool)` : `Külliyatın ${{nextReportNum}}. Raporu (${{nextCaseId}}) Hangi Âyet Olsun? (Aday Âyet Havuzu)`}}</span><span>${{isEn ? 'Collective Agenda' : 'Kolektif Gündem'}}</span></h3>
       <p style="font-size:13px; color:var(--text-secondary);">
-        Aşağıdaki aday âyetlerden birini seçerek bir sonraki stratejik analizin hangi âyet üzerine inşa edilmesini istediğinizi önerebilirsiniz:
+        ${{isEn
+          ? 'Select one of the candidate verses below to propose the next 26-step strategic report in the Quran Vision Corpus:'
+          : 'Aşağıdaki aday âyetlerden birini seçerek bir sonraki stratejik analizin hangi âyet üzerine inşa edilmesini istediğinizi önerebilirsiniz:'}}
       </p>
       <div class="candidate-grid">
         ${{candidatesHtml}}
@@ -1741,44 +2107,50 @@ function selectCategoryAndFocus(catValue) {{
 }}
 
 function prefillCandidateVerse(verseRef, verseTitle) {{
+  const isEn = currentLang === 'en';
   const nextReportNum = REPORTS.length + 1;
   const nextCaseId = 'QV-2026-' + String(nextReportNum).padStart(3, '0');
   const sel = document.getElementById('fbCategory');
   if (sel) sel.value = "Külliyata Yeni Âyet / Rapor Önerisi";
   const ta = document.getElementById('fbContent');
   if (ta) {{
-    ta.value = `Külliyatın ${{nextReportNum}}. raporu (${{nextCaseId}}) olarak "${{verseRef}} — ${{verseTitle}}" konusunun 26 adımlı Quran Vision çerçevesinde incelenmesini öneriyorum.\\n\\nÖneri Gerekçem: `;
+    ta.value = isEn
+      ? `I nominate "${{verseRef}} — ${{verseTitle}}" to be analyzed as Report #${{nextReportNum}} (${{nextCaseId}}) within the 26-step Quran Vision framework.\\n\\nRationale for Nomination: `
+      : `Külliyatın ${{nextReportNum}}. raporu (${{nextCaseId}}) olarak "${{verseRef}} — ${{verseTitle}}" konusunun 26 adımlı Quran Vision çerçevesinde incelenmesini öneriyorum.\\n\\nÖneri Gerekçem: `;
     ta.focus();
   }}
-  showToast("✨ Aday âyet forma aktarıldı! Gerekçenizi ekleyip WhatsApp veya GitHub üzerinden gönderebilirsiniz.");
+  showToast(isEn
+    ? "✨ Candidate verse loaded into the form! Add your rationale and submit via WhatsApp or GitHub."
+    : "✨ Aday âyet forma aktarıldı! Gerekçenizi ekleyip WhatsApp veya GitHub üzerinden gönderebilirsiniz.");
 }}
 
 function buildFormattedFeedbackText() {{
   const r = REPORTS[currentIndex];
-  const author = (document.getElementById('fbAuthor')?.value || 'İsimsiz Katılımcı').trim();
+  const isEn = currentLang === 'en';
+  const author = (document.getElementById('fbAuthor')?.value || (isEn ? 'Anonymous Contributor' : 'İsimsiz Katılımcı')).trim();
   const category = document.getElementById('fbCategory')?.value || 'Akademik Şerh';
   const content = (document.getElementById('fbContent')?.value || '').trim();
   const source = (document.getElementById('fbSource')?.value || '—').trim();
 
   return {{
     r, author, category, content, source,
-    formatted: `*QURAN VISION (v6.2.1) — AKADEMİK ŞERH & GERİ DÖNÜT KARTI*\\n` +
+    formatted: `*QURAN VISION (v6.2.1) — ${{isEn ? 'ACADEMIC PEER-REVIEW & FEEDBACK CARD' : 'AKADEMİK ŞERH & GERİ DÖNÜT KARTI'}}*\\n` +
       `━━━━━━━━━━━━━━━━━━━━\\n` +
-      `📌 *Rapor:* ${{r.case_id}} — ${{r.surah}} Sûresi ${{r.verse}}\\n` +
-      `📖 *Konu:* ${{r.topic}}\\n` +
-      `👤 *Katkı Sunan:* ${{author}}\\n` +
-      `📂 *Kategori:* ${{category}}\\n` +
+      `📌 *${{isEn ? 'Report' : 'Rapor'}}:* ${{r.case_id}} — ${{getReportSurah(r)}} ${{r.verse}}\\n` +
+      `📖 *${{isEn ? 'Topic' : 'Konu'}}:* ${{getReportTopic(r)}}\\n` +
+      `👤 *${{isEn ? 'Contributor' : 'Katkı Sunan'}}:* ${{author}}\\n` +
+      `📂 *${{isEn ? 'Category' : 'Kategori'}}:* ${{category}}\\n` +
       `━━━━━━━━━━━━━━━━━━━━\\n` +
-      `📝 *Şerh / Görüş:*\\n${{content || '(Belirtilmedi)'}}\\n\\n` +
-      `📚 *Dayanak / Kaynak:* ${{source}}\\n` +
-      `🔗 *Rapor Linki:* https://mehmetyarici-crypto.github.io/quran-vision/`
+      `📝 *${{isEn ? 'Commentary' : 'Şerh / Görüş'}}:*\\n${{content || '(—)'}}\\n\\n` +
+      `📚 *${{isEn ? 'Reference' : 'Dayanak / Kaynak'}}:* ${{source}}\\n` +
+      `🔗 *Portal:* https://mehmetyarici-crypto.github.io/quran-vision/`
   }};
 }}
 
 function sendViaWhatsApp() {{
   const data = buildFormattedFeedbackText();
   if (!data.content) {{
-    showToast("⚠️ Lütfen önce görüş veya şerh metninizi yazınız.");
+    showToast(currentLang === 'en' ? "⚠️ Please enter your commentary text first." : "⚠️ Lütfen önce görüş veya şerh metninizi yazınız.");
     document.getElementById('fbContent')?.focus();
     return;
   }}
@@ -1790,7 +2162,7 @@ function sendViaWhatsApp() {{
 function openGitHubPeerReview() {{
   const data = buildFormattedFeedbackText();
   if (!data.content) {{
-    showToast("⚠️ Lütfen önce görüş veya şerh metninizi yazınız.");
+    showToast(currentLang === 'en' ? "⚠️ Please enter your commentary text first." : "⚠️ Lütfen önce görüş veya şerh metninizi yazınız.");
     document.getElementById('fbContent')?.focus();
     return;
   }}
@@ -1828,7 +2200,7 @@ function saveNoteToStorage(data) {{
     category: data.category,
     content: data.content,
     source: data.source,
-    date: new Date().toLocaleString('tr-TR')
+    date: new Date().toLocaleString(currentLang === 'en' ? 'en-US' : 'tr-TR')
   }});
   localStorage.setItem(key, JSON.stringify(existing));
   renderLocalNotes();
@@ -1837,7 +2209,7 @@ function saveNoteToStorage(data) {{
 function saveLocalNoteAndCopy() {{
   const data = buildFormattedFeedbackText();
   if (!data.content) {{
-    showToast("⚠️ Lütfen önce görüş veya şerh metninizi yazınız.");
+    showToast(currentLang === 'en' ? "⚠️ Please enter your commentary text first." : "⚠️ Lütfen önce görüş veya şerh metninizi yazınız.");
     document.getElementById('fbContent')?.focus();
     return;
   }}
@@ -1845,7 +2217,9 @@ function saveLocalNoteAndCopy() {{
   if (navigator.clipboard) {{
     navigator.clipboard.writeText(data.formatted);
   }}
-  showToast("✅ Şerhiniz bu raporun altına kaydedildi ve biçimlendirilmiş metin panoya kopyalandı!");
+  showToast(currentLang === 'en'
+    ? "✅ Note saved under this report and formatted text copied to clipboard!"
+    : "✅ Şerhiniz bu raporun altına kaydedildi ve biçimlendirilmiş metin panoya kopyalandı!");
 }}
 
 function deleteLocalNote(noteId) {{
@@ -1861,6 +2235,7 @@ function deleteLocalNote(noteId) {{
 
 function renderLocalNotes() {{
   const r = REPORTS[currentIndex];
+  const isEn = currentLang === 'en';
   const listEl = document.getElementById('localNotesList');
   const countEl = document.getElementById('localNotesCount');
   if (!listEl) return;
@@ -1871,10 +2246,12 @@ function renderLocalNotes() {{
   }} catch (e) {{ existing = []; }}
 
   const reportNotes = existing.filter(n => n.case_id === r.case_id);
-  if (countEl) countEl.textContent = `${{reportNotes.length}} Kayıtlı Not`;
+  if (countEl) countEl.textContent = isEn ? `${{reportNotes.length}} Saved Notes` : `${{reportNotes.length}} Kayıtlı Not`;
 
   if (reportNotes.length === 0) {{
-    listEl.innerHTML = `<div class="source-card" style="color:var(--text-muted); font-size:13px;">Bu rapor (${{r.case_id}}) için henüz tarayıcınıza kaydettiğiniz bir kişisel şerh veya ders notu bulunmuyor. Sağdaki formdan ekleyebilirsiniz.</div>`;
+    listEl.innerHTML = `<div class="source-card" style="color:var(--text-muted); font-size:13px;">${{isEn
+      ? `No personal annotations or lesson notes saved in your browser for ${{r.case_id}} yet. Use the form on the right to add one.`
+      : `Bu rapor (${{r.case_id}}) için henüz tarayıcınıza kaydettiğiniz bir kişisel şerh veya ders notu bulunmuyor. Sağdaki formdan ekleyebilirsiniz.`}}</div>`;
     return;
   }}
 
@@ -1882,10 +2259,10 @@ function renderLocalNotes() {{
     <div class="source-card">
       <div class="source-header">
         <span class="source-author">${{n.author}} • <span style="color:var(--accent-gold);">${{n.category}}</span></span>
-        <button class="btn" style="padding:2px 8px; font-size:11px;" onclick="deleteLocalNote(${{n.id}})">🗑️ Sil</button>
+        <button class="btn" style="padding:2px 8px; font-size:11px;" onclick="deleteLocalNote(${{n.id}})">🗑️ ${{isEn ? 'Delete' : 'Sil'}}</button>
       </div>
       <div style="font-size:13.5px; color:var(--text-primary); white-space:pre-wrap; margin-bottom:6px;">${{n.content.replace(/</g, '&lt;')}}</div>
-      <div class="source-meta">📚 Kaynak: ${{n.source}} &nbsp;|&nbsp; 🕒 ${{n.date}}</div>
+      <div class="source-meta">📚 ${{isEn ? 'Ref' : 'Kaynak'}}: ${{n.source}} &nbsp;|&nbsp; 🕒 ${{n.date}}</div>
     </div>
   `).join('');
 }}
@@ -1913,9 +2290,11 @@ function printCurrentReport() {{
 
 function formatInlineMd(str) {{
   if (!str) return '';
+  const isEn = currentLang === 'en';
   return str
-    .replace(/\\[NAKİL\\]/g, '<span class="tag-nakil">[NAKİL]</span>')
-    .replace(/\\[YORUM\\]/g, '<span class="tag-yorum">[YORUM]</span>')
+    .replace(/\\[NAKİL\\]/g, `<span class="tag-nakil">${{isEn ? '[CITATION / NAKİL]' : '[NAKİL]'}}</span>`)
+    .replace(/\\[ANALYSIS\\]/g, '<span class="tag-yorum">[ANALYSIS]</span>')
+    .replace(/\\[YORUM\\]/g, `<span class="tag-yorum">${{isEn ? '[ANALYSIS / YORUM]' : '[YORUM]'}}</span>`)
     .replace(/\\*\\*(.*?)\\*\\*/g, '<strong>$1</strong>')
     .replace(/\\*(.*?)\\*/g, '<em>$1</em>')
     .replace(/\\[\\^(\\d+)\\]/g, '<sup style="color:var(--accent-gold); font-weight:700;">[$1]</sup>');
@@ -2003,8 +2382,7 @@ function toggleTheme() {{
 
 document.getElementById('searchInput').addEventListener('input', (e) => renderSidebar(e.target.value));
 
-renderSidebar();
-selectReport(0);
+setLanguage(currentLang);
 </script>
 </body>
 </html>
