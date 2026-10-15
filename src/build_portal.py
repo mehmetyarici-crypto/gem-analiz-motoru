@@ -49,11 +49,13 @@ def parse_report(md_path: Path):
     z1_match = re.search(r"#{2,3}\s*Z-1[:\s·].*?\n(.*?)(?=\n#{2,3}\s*Z-2[:\s·]|\Z)", body, re.DOTALL)
     aporia_text = z1_match.group(1).strip() if z1_match else ""
     aporia_text = re.sub(r"\n---\s*$", "", aporia_text).strip()
+    aporia_text = re.sub(r"^#{1,4}\s*(.+?)\n+", r"**\1:** ", aporia_text)
 
     # Extract Z-3 Open-ended Reader Dilemma (supports both '### Z-3:' and '## Z-3 ·')
     z3_match = re.search(r"#{2,3}\s*Z-3[:\s·].*?\n(.*?)(?=\n#{2,3}\s*Z-4[:\s·]|\Z)", body, re.DOTALL)
     z3_text = z3_match.group(1).strip() if z3_match else ""
     z3_text = re.sub(r"\n---\s*$", "", z3_text).strip()
+    z3_text = re.sub(r"^#{1,4}\s*(.+?)\n+", r"**\1:** ", z3_text)
 
     # Extract Prior & Posterior if present
     prior_m = re.search(r"(?:P\(S1\)\s*=\s*|Prior\s*P\(H\)\):\*\*\s*)([0-9.]+)", body)
