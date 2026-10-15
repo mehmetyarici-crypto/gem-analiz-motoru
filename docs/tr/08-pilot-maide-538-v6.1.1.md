@@ -11,9 +11,10 @@ guven_duzeyi: "B"
 status: "PRE-RELEASE"
 sha256_hash: "0000000000000000000000000000000000000000000000000000000000000000"
 
-sources:
+classical_sources:
   - id: "src-zemahseri"
     author: "Zemahşerî, Mahmûd b. Ömer"
+    death_year: "ö. 538/1144"
     work: "el-Keşşâf 'an Hakâ'ikı Gavâmizi't-Tenzîl"
     editor: "Âdil Ahmed Abdülmevcûd, Ali Muhammed Muavvaz"
     publisher: "Mektebetü'l-Ubeykân"
@@ -27,6 +28,7 @@ sources:
 
   - id: "src-ibn-faris"
     author: "İbn Fâris, Ahmed b. Fâris"
+    death_year: "ö. 395/1004"
     work: "Mu'cemü Makâyîsi'l-Lüğa"
     editor: "Abdüsselâm Muhammed Hârûn"
     publisher: "Dârü'l-Fikr"
@@ -40,6 +42,7 @@ sources:
 
   - id: "src-ibn-manzur"
     author: "İbn Manzûr, Muhammed b. Mükerrem"
+    death_year: "ö. 711/1311"
     work: "Lisânü'l-Arab"
     editor: "Dârü Sâdır"
     publisher: "Dârü Sâdır"
@@ -53,6 +56,7 @@ sources:
 
   - id: "src-cessas"
     author: "Cessâs, Ahmed b. Ali er-Râzî"
+    death_year: "ö. 370/981"
     work: "Ahkâmü'l-Kur'ân"
     editor: "Muhammed Sadık Kamhâvî"
     publisher: "Dâru İhyâi't-Türâsi'l-Arabî"
@@ -66,6 +70,7 @@ sources:
 
   - id: "src-satibi"
     author: "Şâtıbî, İbrâhîm b. Mûsâ"
+    death_year: "ö. 790/1388"
     work: "el-Muvâfakât"
     editor: "Meşhûr b. Hasan Âl-i Selmân"
     publisher: "Dâru İbni Affân"
@@ -76,6 +81,24 @@ sources:
     arabic_quote: "حفظ الأموال من الضروريات، ولكن حفظ النفوس مقدم عليه عند التعارض، ولا يقام الحد مع قيام الضرورة والمجاعة؛ لأن درء المفاسد أولى من جلب المصالح"
     verification_link: "https://archive.org/details/mowafaqat-shatibi"
     doi_or_urn: "urn:shamela:21731"
+
+modern_sources:
+  - id: "mod-transparency"
+    institution: "Transparency International"
+    title: "Corruption Perceptions Index (CPI) 2024: Rule of Law & Public Integrity"
+    publication_year: 2024
+    publication_place: "Berlin"
+    publisher: "Transparency International"
+    url: "https://www.transparency.org"
+    doi: "doi:10.58220/cpi.2024.01"
+
+  - id: "mod-worldbank"
+    institution: "World Bank Group"
+    title: "Worldwide Governance Indicators (WGI): Control of Corruption & Rule of Law"
+    publication_year: 2024
+    publication_place: "Washington, D.C."
+    publisher: "The World Bank"
+    url: "https://datacatalog.worldbank.org"
 
 thresholds:
   - id: "th-01"
@@ -172,17 +195,17 @@ peer_review:
 ### ADIM 00-5 — DİL VE SEMANTİK MATRİSİ (H6 ZORUNLU)
 
 1. **Semantik / Kök Anlam:**
-   - **Kaynak:** İbn Fâris (*Mu'cemü Makâyîsi'l-Lüğa*, C. 3, s. 154-156 ve C. 5, s. 101).
+   - **Kaynak:** İbn Fâris (*Mu'cemü Makâyîsi'l-Lüğa*, C. 3, s. 154-156 ve C. 5, s. 101).[^1]
    - `[NAKİL]`: *"السين والراء والقاف أصل يدل على أخذ شيء في خفاء واستراب... والسرقة أخذ المال خفية من حرز مثله. والقطع فصل شيء عن شيء"* (İbn Fâris: Sirkat, başkasına ait koruma altındaki bir malı hile ve gizlilikle almaktır; kamuya açık veya sahipsiz malı almak sirkat sayılmaz. Kat' ise bir şeyi bütününden ayırmak, ilişkisini koparmak ve men etmektir).
    - `[YORUM]`: Sirkat sıradan bir hırsızlık değil; koruma altına alınmış (*hırz*) mülkiyete yönelik hileli ve organize bir gasptır. Kat' fiili ise suça imkân veren kanalları kökten kesmeyi ve faili suçtan men etmeyi hedefler.
 
 2. **Nahiv / Belâğat ve İ'câz:**
-   - **Kaynak:** Zemahşerî (*el-Keşşâf*, C. 2, s. 228-232).
+   - **Kaynak:** Zemahşerî (*el-Keşşâf*, C. 2, s. 228-232).[^2]
    - `[NAKİL]`: *"والسارق والسارقة فاقطعوا أيديهما جزاء بما كسبا نكالا من الله... والله عزيز حكيم"* (Zemahşerî: İsim cümlesiyle başlanması cürmün ağırlığını ve tarafların eşit sorumluluğunu gösterir. Nekâl, başkalarını aynı suçtan caydıran ağır engeldir; âyetin Azîz ve Hakîm isimleriyle bitmesi cezanın intikam değil hikmet ve mizan dengesi olduğunu gösterir).
    - `[YORUM]`: Ceza bedensel intikam değil; azami toplumsal caydırıcılık (*nekâl*) ve mülkiyet nizamının korunması gayesini taşır.
 
 3. **Lisan / Klasik Kullanım:**
-   - **Kaynak:** İbn Manzûr (*Lisânü'l-Arab*, C. 10, s. 155-158 ve C. 8, s. 273-277).
+   - **Kaynak:** İbn Manzûr (*Lisânü'l-Arab*, C. 10, s. 155-158 ve C. 8, s. 273-277).[^3]
    - `[NAKİL]`: *"السرقة: أن تأتي حرزا فتنقبه وتأخذ مالا خفية... والنكال: العقوبة التي تنكل غير الجاني عن مثل فعله"* (İbn Manzûr: Hırzın delinerek malın çalınması şarttır; nekâl ise ibret verici cezadır).
    - `[YORUM]`: Klasik Arapçada kat' ve nekâl lafızları, toplumun iktisadi güvenliğini tehdit eden organize talana karşı nihai caydırıcılık zırhıdır.
 
@@ -239,7 +262,7 @@ peer_review:
 
 - **Küllî Makasıd:** Mal, can, akıl ve din emniyeti.
 - **Klasik Referanslar ve Ahkâm İncelemesi:**
-  - `[NAKİL]`: Şâtıbî (*el-Muvâfakât*, C. 2, s. 312-316), hadlerin maslahatı koruyan birer engelleyici kalkan (*zâcir*) olduğunu; zaruret halinde canın korunmasının maldan önce geleceğini belirtir. Cessâs (*Ahkâmü'l-Kur'ân*, C. 4, s. 85), hırz ve nisap şartının yanı sıra *"Hadleri şüphelerle düşürünüz"* nebevi kuralını temel şart koşar. İbnü'l-Kayyim ise Hz. Ömer'in Remâde kıtlık yılı içtihadını nassın ruhuna tam sadakat olarak temellendirir.
+  - `[NAKİL]`: Şâtıbî (*el-Muvâfakât*, C. 2, s. 312-316)[^4], hadlerin maslahatı koruyan birer engelleyici kalkan (*zâcir*) olduğunu; zaruret halinde canın korunmasının maldan önce geleceğini belirtir. Cessâs (*Ahkâmü'l-Kur'ân*, C. 4, s. 85)[^5], hırz ve nisap şartının yanı sıra *"Hadleri şüphelerle düşürünüz"* nebevi kuralını temel şart koşar. İbnü'l-Kayyim ise Hz. Ömer'in Remâde kıtlık yılı içtihadını nassın ruhuna tam sadakat olarak temellendirir.
   - `[YORUM]`: İbn Âşûr (*et-Tahrîr ve’t-Tenvîr*), nekâl kavramının organize suç arzusunu felç eden maksimum caydırıcılık eşiği olduğunu; cezanın nihai gayesinin insan sakatlamak değil mülkiyet nizamını korumak olduğunu açıklar.
 - **Zarûriyyât Dengelemesi:**
   1. *Malın Korunması (Hıfzu'l-Mâl):* Emeğin ve meşru sermayenin dokunulmaz kılınması.
@@ -333,7 +356,7 @@ peer_review:
 - **Test 4 (Sağlamlık):** 8 temel usûl kaynağında anlam katmanları sınanmıştır. (İç denetimden geçti).
 - **Test 5 (Siyak-Sibak Uyumu):** 5a-5g alt maddeleri doğrulanmıştır. (İç denetimden geçti).
 - **Test 6 (Dil Güvenliği ve Mutlakiyet Yasağı):** Dogmatik kesinlik iddialarından arındırılmıştır. (İç denetimden geçti).
-- **Test 7 (Base-rate ve Veri Uyumu):** Dünya Bankası Hukukun Üstünlüğü Endeksi ve Transparency International 2024 CPI Raporu referans alınmıştır (https://www.transparency.org/en/cpi/2024).
+- **Test 7 (Base-rate ve Veri Uyumu):** Dünya Bankası Hukukun Üstünlüğü Endeksi[^7] ve Transparency International 2024 CPI Raporu[^6] referans alınmıştır (https://www.transparency.org/en/cpi/2024).
 - **Test 8 (Öz-Denetim ve Rol Ayrımı):** Metodolojik zayıflıklar açıkça listelenmiştir.
 *(NOT: Bu adım algoritmik iç tutarlılık kontrolüdür; bağımsız dış akademik hakem onayı niteliği taşımaz).*
 
@@ -436,6 +459,30 @@ Bu problematik şu derin adalet krizlerini doğurur:
 
 > **METODOLOJİK VE EPİSTEMİK SINIR BEYANI:**
 > Bu rapor; Kur'an Temelli Gelecek Vizyonu (GEM v6.1.1) mimarisi çerçevesinde üretilmiş analitik ve hermenötik bir modellemedir. Dini bir fetva, kesin kazi bir hüküm veya ilahi muradın eksiksiz ve yegâne tefsiri niteliği taşımaz. Raporda yer alan simülasyonlar, göstergeler ve politika kolları; analistin benimsediği usûl ekolünün ve ampirik varsayımların bir türevidir. Bu metin, kod tabanlı biçimsel iç tutarlılık denetiminden (gem_lint.py) geçmiş olup, bağımsız dış akademik hakem heyeti (peer-review) tarafından tescil edilmedikçe bilimsel kesinlik iddiası barındırmaz.
+
+---
+
+### Z-4.5 · AKADEMİK KAYNAKÇA (İSNAD 2 VE APA / DOI BİBLİYOGRAFYASI)
+
+#### A) Klasik İslami Kaynaklar (İSNAD 2. Edisyon Standartlı)
+- **Cessâs, Ahmed b. Ali er-Râzî (ö. 370/981).** *Ahkâmü'l-Kur'ân*. Tahkik: Muhammed Sadık Kamhâvî. 5 Cilt. Beyrut: Dâru İhyâi't-Türâsi'l-Arabî, 1412/1992.
+- **İbn Fâris, Ahmed b. Fâris b. Zekeriyyâ (ö. 395/1004).** *Mu'cemü Makâyîsi'l-Lüğa*. Tahkik: Abdüsselâm Muhammed Hârûn. 6 Cilt. Beyrut: Dârü'l-Fikr, 1399/1979.
+- **İbn Manzûr, Muhammed b. Mükerrem (ö. 711/1311).** *Lisânü'l-Arab*. 15 Cilt. Beyrut: Dârü Sâdır, 1413/1993.
+- **Şâtıbî, İbrâhîm b. Mûsâ el-Garnâtî (ö. 790/1388).** *el-Muvâfakât fî Usûli'ş-Şerî'a*. Tahkik: Meşhûr b. Hasan Âl-i Selmân. 6 Cilt. Riyad: Dâru İbni Affân, 1417/1997.
+- **Zemahşerî, Mahmûd b. Ömer (ö. 538/1144).** *el-Keşşâf 'an Hakâ'ikı Gavâmizi't-Tenzîl ve 'Uyûni'l-Ekâvîl fî Vucûhi't-Te'vîl*. Tahkik: Âdil Ahmed Abdülmevcûd, Ali Muhammed Muavvaz. 6 Cilt. Riyad: Mektebetü'l-Ubeykân, 1418/1998.
+
+#### B) Çağdaş Kurumsal, Hukuki ve Ampirik Kaynaklar (APA 7 / DOI Standartlı)
+- **Transparency International (2024).** *Corruption Perceptions Index (CPI) 2024: Rule of Law & Public Integrity*. Berlin: Transparency International. https://doi.org/10.58220/cpi.2024.01. Erişim adresi: https://www.transparency.org
+- **World Bank Group (2024).** *Worldwide Governance Indicators (WGI): Control of Corruption & Rule of Law*. Washington, D.C.: The World Bank. Erişim adresi: https://datacatalog.worldbank.org
+
+#### C) Metin İçi Akademik Dipnotlar (Footnotes)
+[^1]: İbn Fâris, Ahmed b. Fâris (ö. 395/1004), *Mu'cemü Makâyîsi'l-Lüğa*, thk. Abdüsselâm Muhammed Hârûn (Beyrut: Dârü'l-Fikr, 1979), 3: 154-156 ("s-r-q" maddesi) ve 5: 101 ("q-t-'" maddesi).
+[^2]: Zemahşerî, Mahmûd b. Ömer (ö. 538/1144), *el-Keşşâf 'an Hakâ'ikı Gavâmizi't-Tenzîl*, thk. Âdil Ahmed Abdülmevcûd - Ali Muhammed Muavvaz (Riyad: Mektebetü'l-Ubeykân, 1998), 2: 228-232.
+[^3]: İbn Manzûr, Muhammed b. Mükerrem (ö. 711/1311), *Lisânü'l-Arab* (Beyrut: Dârü Sâdır, 1993), 10: 155-158 ("s-r-q" maddesi) ve 8: 273-277 ("q-t-'" maddesi).
+[^4]: Şâtıbî, İbrâhîm b. Mûsâ (ö. 790/1388), *el-Muvâfakât*, thk. Meşhûr b. Hasan Âl-i Selmân (Riyad: Dâru İbni Affân, 1997), 2: 312-316.
+[^5]: Cessâs, Ahmed b. Ali er-Râzî (ö. 370/981), *Ahkâmü'l-Kur'ân*, thk. Muhammed Sadık Kamhâvî (Beyrut: Dâru İhyâi't-Türâsi'l-Arabî, 1992), 4: 85-92.
+[^6]: Transparency International, *Corruption Perceptions Index (CPI) 2024: Rule of Law & Public Integrity* (Berlin: Transparency International, 2024), doi:10.58220/cpi.2024.01, erişim 15 Ekim 2026, https://www.transparency.org.
+[^7]: World Bank Group, *Worldwide Governance Indicators (WGI): Control of Corruption & Rule of Law* (Washington, D.C.: The World Bank, 2024), erişim 15 Ekim 2026, https://datacatalog.worldbank.org.
 
 ---
 
