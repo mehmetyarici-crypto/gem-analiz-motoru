@@ -16,9 +16,9 @@
 <br>
 
 ### 🏛️ **OFFICIAL CERN / ZENODO DOI:** **[`https://doi.org/10.5281/zenodo.23391192`](https://doi.org/10.5281/zenodo.23391192)**
-### 🎓 **ACADEMIC AUTHORS & INSTITUTIONAL AFFILIATIONS / AKADEMİK HEYET VE KURUMSAL KÜNYE**
-- **Mehmet Yarıcı** — *Uludağ Üniversitesi İlahiyat Fakültesi (1989) • T.C. Millî Eğitim Bakanlığı, İstanbul Bahçelievler Dede Korkut Anadolu Lisesi (Kıdemli DKAB Öğretmeni & İlahiyat Araştırmacısı)* • **ORCID:** [`0009-0003-0356-8582`](https://orcid.org/0009-0003-0356-8582)
-- **Mehmet Emin Koç** — *Azerbaycan Milli İlimler Akademisi (AMEA / Azerbaijan National Academy of Sciences), Felsefe ve Sosyoloji Enstitüsü* • **ORCID:** [`0000-0002-1025-5643`](https://orcid.org/0000-0002-1025-5643)
+### 🎓 **ACADEMIC OWNERSHIP, AUTHORSHIP & ADVISORY BOARD / ESER SAHİPLİĞİ, BAŞYAZAR VE DANIŞMA KÜNYESİ**
+- 👑 **Proje Kurucusu & Başyazar (*Founder, Copyright Owner & Principal Author*):** **Mehmet Yarıcı** — *Uludağ Üniversitesi İlahiyat Fakültesi (1989) • T.C. Millî Eğitim Bakanlığı, İstanbul Bahçelievler Dede Korkut Anadolu Lisesi* • **ORCID:** [`0009-0003-0356-8582`](https://orcid.org/0009-0003-0356-8582)
+- 🏛️ **Akademik Danışman & Dış Hakem (*Academic Advisor & External Peer-Reviewer*):** **Mehmet Emin Koç** — *Azerbaycan Milli İlimler Akademisi (AMEA / Azerbaijan National Academy of Sciences), Felsefe ve Sosyoloji Enstitüsü* • **ORCID:** [`0000-0002-1025-5643`](https://orcid.org/0000-0002-1025-5643)
 
 ### 🌐 **[🚀 LAUNCH LIVE INTERACTIVE PORTAL (🇹🇷 TR | 🇬🇧 EN)](https://mehmetyarici-crypto.github.io/quran-vision/)**
 ### 📙 **[📥 Download Full English Corpus Book (15 Reports - A4 PDF)](https://mehmetyarici-crypto.github.io/quran-vision/pdf/Quran_Vision_Corpus_EN_v6.2.1.pdf)** &nbsp;|&nbsp; 📘 **[📥 Tam Külliyat Kitabını İndir (15 Rapor - Türkçe A4 PDF)](https://mehmetyarici-crypto.github.io/quran-vision/pdf/Quran_Vision_Kulliyat_v6.2.1.pdf)**
@@ -102,12 +102,12 @@ python src/build_portal.py --force-pdf
 You can click the **"Cite this repository"** button in the top-right sidebar of GitHub, or use the APA 7 / BibTeX records below:
 
 **APA 7th Edition:**
-> Yarıcı, M., & Koç, M. E. (2026). *Quran Vision Corpus (Kur'ân Vizyonu Külliyatı): 26-Step Evidence-Based Strategic Tafsir, Maqasid & Civilization Foresight Corpus (v6.2.1)* [Data set & Monograph Series]. Zenodo / Quran Vision Institute. https://doi.org/10.5281/zenodo.23391192
+> Yarıcı, M. (2026). *Quran Vision Corpus (Kur'ân Vizyonu Külliyatı): 26-Step Evidence-Based Strategic Tafsir, Maqasid & Civilization Foresight Corpus (v6.2.1)* [Data set & Monograph Series]. Zenodo / Quran Vision Institute. https://doi.org/10.5281/zenodo.23391192
 
 **BibTeX:**
 ```bibtex
-@book{yaricikoc2026quranvision,
-  author    = {Yarıcı, Mehmet and Koç, Mehmet Emin},
+@book{yarici2026quranvision,
+  author    = {Yarıcı, Mehmet},
   title     = {Quran Vision Corpus (Kur'ân Vizyonu Külliyatı): 26-Step Evidence-Based Strategic Tafsir, Maqasid \& Civilization Foresight Corpus},
   version   = {6.2.1},
   year      = {2026},

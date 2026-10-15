@@ -19,11 +19,7 @@ authors:
   - family-names: "Yarıcı"
     given-names: "Mehmet"
     orcid: "https://orcid.org/0009-0003-0356-8582"
-    affiliation: "Uludağ Üniversitesi İlahiyat Fakültesi (1989) • T.C. Millî Eğitim Bakanlığı, İstanbul Bahçelievler Dede Korkut Anadolu Lisesi"
-  - family-names: "Koç"
-    given-names: "Mehmet Emin"
-    orcid: "https://orcid.org/0000-0002-1025-5643"
-    affiliation: "Azerbaycan Milli İlimler Akademisi (AMEA / ANAS), Felsefe ve Sosyoloji Enstitüsü"
+    affiliation: "Kurucu & Başyazar (Founder & Principal Author) | Uludağ Üniversitesi İlahiyat Fakültesi (1989) • T.C. Millî Eğitim Bakanlığı, İstanbul Bahçelievler Dede Korkut Anadolu Lisesi"
 keywords:
   - "Quranic Studies"
   - "Strategic Tafsir"
@@ -34,4 +30,4 @@ keywords:
   - "Civilization Foresight"
   - "TYMM Religious Education Pedagogy"
 abstract: >-
-  The Quran Vision Corpus (v6.2.1) is a bilingual (Turkish/English) academic research corpus and interactive digital cockpit comprising 15 foundational Quranic verse monographs (QV-2026-001 through QV-2026-015). Each report follows a standardized 26-step methodological protocol across 5 macro-phases and 5 mandatory appendices (Z-1 to Z-5), bridging 76 primary Arabic classical tafsir citations (verified under the ISNAD 2nd Edition standard) with 45 contemporary empirical datasets (World Bank, UNDP, WJP, UNESCO, SIPRI, OECD, WHO via APA 7 / DOI) and 10-year quantitative Bayesian scenario simulations (2026–2036).
+  The Quran Vision Corpus (v6.2.1), founded and authored by Mehmet Yarıcı (ORCID: 0009-0003-0356-8582; Uludağ University Faculty of Theology / Republic of Türkiye Ministry of National Education), is a bilingual (Turkish/English) academic research corpus and interactive digital cockpit comprising 15 foundational Quranic verse monographs (QV-2026-001 through QV-2026-015). Each report follows a standardized 26-step methodological protocol across 5 macro-phases and 5 mandatory appendices (Z-1 to Z-5), bridging 76 primary Arabic classical tafsir citations (verified under the ISNAD 2nd Edition standard) with 45 contemporary empirical datasets (World Bank, UNDP, WJP, UNESCO, SIPRI, OECD, WHO via APA 7 / DOI) and 10-year quantitative Bayesian scenario simulations (2026–2036). External Academic Advisor & Peer-Reviewer: Mehmet Emin Koç (ORCID: 0000-0002-1025-5643; Azerbaijan National Academy of Sciences, Institute of Philosophy and Sociology).

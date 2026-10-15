@@ -11,12 +11,15 @@
     {
       "name": "Yarıcı, Mehmet",
       "orcid": "0009-0003-0356-8582",
-      "affiliation": "Uludağ Üniversitesi İlahiyat Fakültesi (1989) • T.C. Millî Eğitim Bakanlığı, İstanbul Bahçelievler Dede Korkut Anadolu Lisesi"
-    },
+      "affiliation": "Kurucu & Başyazar (Founder & Principal Author) | Uludağ Üniversitesi İlahiyat Fakültesi (1989) • T.C. Millî Eğitim Bakanlığı, İstanbul Bahçelievler Dede Korkut Anadolu Lisesi"
+    }
+  ],
+  "contributors": [
     {
       "name": "Koç, Mehmet Emin",
       "orcid": "0000-0002-1025-5643",
-      "affiliation": "Azerbaycan Milli İlimler Akademisi (AMEA / ANAS), Felsefe ve Sosyoloji Enstitüsü"
+      "type": "Other",
+      "affiliation": "Akademik Danışman & Dış Hakem (Academic Advisor & External Peer-Reviewer) | Azerbaycan Milli İlimler Akademisi (AMEA / ANAS), Felsefe ve Sosyoloji Enstitüsü"
     }
   ],
   "description": "<p><strong>Quran Vision Corpus (v6.2.1)</strong> is an open-access bilingual (Turkish / English) academic corpus and interactive foresight cockpit featuring <strong>15 foundational Quranic verse reports (QV-2026-001 to QV-2026-015)</strong>. Every monograph integrates <strong>76 primary classical Arabic tafsir citations (ISNAD 2nd Edition verified)</strong> with <strong>45 contemporary empirical datasets (APA 7 / DOI: World Bank, UNDP, WJP, UNESCO, SIPRI, OECD, WHO)</strong>, 10-year Bayesian policy simulations (2026–2036), falsifiable early-warning thresholds, and 40-minute competency-based seminar/classroom debate lesson plans.</p>",
