@@ -484,13 +484,19 @@ def generate_all_pdfs(reports: list):
         return
 
     all_articles = []
+    rebuild_all = "--rebuild-all" in sys.argv
     for idx, r in enumerate(reports, start=1):
         art_html = build_single_report_print_html(r, idx)
         all_articles.append(art_html)
 
+        out_pdf = PDF_DIR / r["pdf_filename"]
+        if out_pdf.exists() and out_pdf.stat().st_size > 1000 and not rebuild_all:
+            shutil.copy2(out_pdf, DESKTOP_PDF_DIR / r["pdf_filename"])
+            shutil.copy2(out_pdf, parent_pdf_dir / r["pdf_filename"])
+            continue
+
         single_doc = wrap_pdf_document(f"{r['case_id']} - {r['surah']} {r['verse']}", art_html)
         tmp_html = PDF_DIR / f"{r['case_id']}.html"
-        out_pdf = PDF_DIR / r["pdf_filename"]
         tmp_html.write_text(single_doc, encoding="utf-8")
 
         cmd = [
@@ -506,9 +512,9 @@ def generate_all_pdfs(reports: list):
         if out_pdf.exists() and out_pdf.stat().st_size > 1000:
             shutil.copy2(out_pdf, DESKTOP_PDF_DIR / r["pdf_filename"])
             shutil.copy2(out_pdf, parent_pdf_dir / r["pdf_filename"])
-            print(f"  📄 PDF üretildi: {out_pdf.name} ({out_pdf.stat().st_size // 1024} KB)")
+            print(f"  📄 Yeni PDF üretildi: {out_pdf.name} ({out_pdf.stat().st_size // 1024} KB)")
 
-    # Generate combined 13-report book PDF
+    last_code = reports[-1]["case_id"] if reports else "QV-2026-014"
     cover_html = f"""
     <div style="page-break-after: always; padding: 60px 30px; text-align: center; border: 3px double #0f5132; border-radius: 12px; margin-top: 40px;">
       <div style="font-size: 12pt; font-weight: 700; color: #856404; letter-spacing: 1.5px; margin-bottom: 16px;">
@@ -519,10 +525,10 @@ def generate_all_pdfs(reports: list):
       </h1>
       <p style="font-size: 12pt; color: #374151; max-width: 540px; margin: 0 auto 30px;">
         26 Adımlı Analitik Çerçeve, İSNAD 2 Klasik Tefsir Tahkiki, Çağdaş Ampirik (DOI) Göstergeler ve
-        Bayesyen Politika Simülasyonlarıyla Hazırlanmış 13 Tam Rapor (QV-2026-001 – QV-2026-013)
+        Bayesyen Politika Simülasyonlarıyla Hazırlanmış {len(reports)} Tam Rapor (QV-2026-001 – {last_code})
       </p>
       <div style="text-align: left; max-width: 560px; margin: 25px auto; padding: 16px 20px; background: #f8faf9; border: 1px solid #d1d5db; border-radius: 8px; font-size: 9.5pt;">
-        <strong style="color:#0f5132; display:block; margin-bottom:8px;">İÇİNDEKİLER (13 STRATEJİK VAKA RAPORU):</strong>
+        <strong style="color:#0f5132; display:block; margin-bottom:8px;">İÇİNDEKİLER ({len(reports)} STRATEJİK VAKA RAPORU):</strong>
         {''.join(f'<div style="margin-bottom:4px;"><b>{i}. {r["case_id"]}</b> — {r["surah"]} {r["verse"]}: {r["topic"]}</div>' for i, r in enumerate(reports, 1))}
       </div>
       <div style="font-size: 9pt; color: #6b7280; margin-top: 30px;">
@@ -1151,7 +1157,7 @@ body {{
     <div class="top-actions">
       <button class="btn btn-gold" onclick="openFeedbackTab()">💬 Akademik Katkı & Şerh Yaz</button>
       <a id="downloadPdfBtn" class="btn btn-primary" href="pdf/QV-2026-001.pdf" download="QV-2026-001.pdf">📥 Raporu PDF İndir</a>
-      <a class="btn btn-gold" href="pdf/Quran_Vision_Kulliyat_v6.2.1.pdf" download="Quran_Vision_Kulliyat_v6.2.1.pdf">📚 Tüm Külliyat PDF (13 Rapor)</a>
+      <a class="btn btn-gold" href="pdf/Quran_Vision_Kulliyat_v6.2.1.pdf" download="Quran_Vision_Kulliyat_v6.2.1.pdf">📚 Tüm Külliyat PDF ({len(reports)} Rapor)</a>
       <button class="btn" onclick="printCurrentReport()">🖨️ Yazdır</button>
       <button class="btn" onclick="toggleTheme()">🌗 Tema</button>
     </div>
@@ -1184,12 +1190,12 @@ let currentIndex = 0;
 let currentTab = 'dashboard';
 
 const CANDIDATE_VERSES = [
-  {{ surah: "Hucurât", verse: "49:13", title: "İnsanlığın Eşitliği, Kabilecilik Karşıtlığı ve Takvâ Temelli Evrensel Değer Mimarisi" }},
   {{ surah: "Mâide", verse: "5:32", title: "Yaşam Hakkının Dokunulmazlığı, Küresel İnsani Güvenlik ve Biyoetik Doktrini" }},
   {{ surah: "Bakara", verse: "2:143", title: "Vasat Ümmet (Denge ve İtidal), Küresel Şahitlik ve Kutuplaşma Karşıtı Jeopolitik" }},
   {{ surah: "Zümer", verse: "39:18", title: "Sözü Dinleyip En Güzeline Uymak (Ahsenü'l-Kavl): Eleştirel Düşünce ve Açık Müzakere Ahlakı" }},
   {{ surah: "Alak", verse: "96:1-5", title: "İkra ve Kalem Doktrini: Bilimsel Üretim, Epistemik Medeniyet ve Eğitim Felsefesi" }},
-  {{ surah: "Mülk", verse: "67:3-4", title: "Kozmik Düzen, Kusursuzluk Arayışı, Bilimsel Gözlem ve Ekoloji Mimarisi" }}
+  {{ surah: "Mülk", verse: "67:3-4", title: "Kozmik Düzen, Kusursuzluk Arayışı, Bilimsel Gözlem ve Ekoloji Mimarisi" }},
+  {{ surah: "Fussilet", verse: "41:34", title: "Kötülüğü En Güzel Olanla Savmak (İhsan Stratejisi): Çatışma Çözümü ve Toplumsal Barış Diplomasisi" }}
 ];
 
 function renderSidebar(filter = '') {{
@@ -1557,7 +1563,7 @@ function renderSynthesisTab() {{
   document.getElementById('tab-synthesis').innerHTML = `
     <div class="grid-2">
       <div class="panel">
-        <h3><span>📈 Külliyat Makro-Bayesyen Sentezi (13 Rapor Ortalaması)</span><span>2026–2036</span></h3>
+        <h3><span>📈 Külliyat Makro-Bayesyen Sentezi (${{REPORTS.length}} Rapor Ortalaması)</span><span>2026–2036</span></h3>
         <div class="bayes-row">
           <div class="bayes-label">
             <span>Külliyat Ortalama Önsel Olasılık — Prior P(S1) (Mevcut Kurumsal Atalet)</span>
@@ -1577,18 +1583,18 @@ function renderSynthesisTab() {{
           </div>
         </div>
         <p style="font-size:13px; color:var(--text-secondary); margin-top:10px;">
-          13 kurucu âyetin tamamında yapılan nicel simülasyonlar; ahit vefası, liyakat, şûrâ, bilgi doğrulama (tebeyyün), servet dolaşımı ve mîzân ilkeleri kurumsallaştırıldığında toplumsal istikrar olasılığının ortalama <strong>+%${{netGain}} puan</strong> arttığını kanıtlamaktadır.
+          ${{REPORTS.length}} kurucu âyetin tamamında yapılan nicel simülasyonlar; ahit vefası, liyakat, şûrâ, bilgi doğrulama (tebeyyün), servet dolaşımı, mîzân ve teâruf ilkeleri kurumsallaştırıldığında toplumsal istikrar olasılığının ortalama <strong>+%${{netGain}} puan</strong> arttığını kanıtlamaktadır.
         </p>
       </div>
 
       <div class="panel">
         <h3><span>🏛️ Metodolojik Mimari Özeti</span><span>v6.2.1 Standardı</span></h3>
         <div class="source-card">
-          <div class="source-author">1. İSNAD 2 Klasik Tefsir Tahkiki (71 Arapça Nakil)</div>
+          <div class="source-author">1. İSNAD 2 Klasik Tefsir Tahkiki ({total_classical} Arapça Nakil)</div>
           <div class="source-meta">Erken dönem rivayet, dirayet, fıkhî ahkâm ve makâsıd tefsirlerinden hicrî/milâdî vefat yılı, tahkik ve cilt/sayfa doğrulamalı birincil kaynak ağı.</div>
         </div>
         <div class="source-card">
-          <div class="source-author">2. Çağdaş Ampirik Veri & DOI Ağı (65 Kurumsal Veri Kaynağı)</div>
+          <div class="source-author">2. Çağdaş Ampirik Veri & DOI Ağı ({total_modern} Kurumsal Veri Kaynağı)</div>
           <div class="source-meta">Dünya Bankası, UNDP, WJP, SIPRI, OECD ve UNESCO göstergeleriyle kalibre edilmiş yanlışlanabilir eşik değerler (Thresholds).</div>
         </div>
       </div>
@@ -1602,7 +1608,7 @@ function renderSynthesisTab() {{
     </div>
 
     <div class="panel md-body" style="padding:22px;">
-      <h3 style="margin-top:0;"><span>📊 13 Stratejik Raporun Bütüncül Karşılaştırma Matrisi (Rapora Gitmek İçin Satıra Tıklayın)</span></h3>
+      <h3 style="margin-top:0;"><span>📊 ${{REPORTS.length}} Stratejik Raporun Bütüncül Karşılaştırma Matrisi (Rapora Gitmek İçin Satıra Tıklayın)</span></h3>
       <table>
         <thead>
           <tr>
@@ -1631,6 +1637,8 @@ function filterByScholar(scholarName) {{
 }}
 
 function renderFeedbackTab(r) {{
+  const nextReportNum = REPORTS.length + 1;
+  const nextCaseId = 'QV-2026-' + String(nextReportNum).padStart(3, '0');
   const candidatesHtml = CANDIDATE_VERSES.map((cv, cIdx) => `
     <div class="candidate-card">
       <div>
@@ -1682,7 +1690,7 @@ function renderFeedbackTab(r) {{
             <option value="Çağdaş Ampirik Veri / DOI / Makale Önerisi">📊 Çağdaş Ampirik Veri / DOI / Makale Önerisi</option>
             <option value="Sınıf İçi / Zümre Pedagojik Uygulama Deneyimi">🏫 Sınıf İçi / Zümre Pedagojik Uygulama Deneyimi</option>
             <option value="Metodolojik Tenkit / Yanlışlama Kanıtı (Adım 12)">⚖️ Metodolojik Tenkit / Yanlışlama Kanıtı (Adım 12)</option>
-            <option value="Külliyata Yeni Âyet / Rapor Önerisi (QV-2026-014+)">💡 Külliyata Yeni Âyet / Rapor Önerisi (QV-2026-014+)</option>
+            <option value="Külliyata Yeni Âyet / Rapor Önerisi">💡 Külliyata Yeni Âyet / Rapor Önerisi (${{nextCaseId}}+)</option>
           </select>
         </div>
 
@@ -1707,7 +1715,7 @@ function renderFeedbackTab(r) {{
     </div>
 
     <div class="panel" style="margin-bottom:24px;">
-      <h3><span>🗳️ Külliyatın 14. Raporu (QV-2026-014) Hangi Âyet Olsun? (Aday Âyet Havuzu)</span><span>Kolektif Gündem</span></h3>
+      <h3><span>🗳️ Külliyatın ${{nextReportNum}}. Raporu (${{nextCaseId}}) Hangi Âyet Olsun? (Aday Âyet Havuzu)</span><span>Kolektif Gündem</span></h3>
       <p style="font-size:13px; color:var(--text-secondary);">
         Aşağıdaki aday âyetlerden birini seçerek bir sonraki stratejik analizin hangi âyet üzerine inşa edilmesini istediğinizi önerebilirsiniz:
       </p>
@@ -1733,11 +1741,13 @@ function selectCategoryAndFocus(catValue) {{
 }}
 
 function prefillCandidateVerse(verseRef, verseTitle) {{
+  const nextReportNum = REPORTS.length + 1;
+  const nextCaseId = 'QV-2026-' + String(nextReportNum).padStart(3, '0');
   const sel = document.getElementById('fbCategory');
-  if (sel) sel.value = "Külliyata Yeni Âyet / Rapor Önerisi (QV-2026-014+)";
+  if (sel) sel.value = "Külliyata Yeni Âyet / Rapor Önerisi";
   const ta = document.getElementById('fbContent');
   if (ta) {{
-    ta.value = `Külliyatın 14. raporu (QV-2026-014) olarak "${{verseRef}} — ${{verseTitle}}" konusunun 26 adımlı Quran Vision çerçevesinde incelenmesini öneriyorum.\\n\\nÖneri Gerekçem: `;
+    ta.value = `Külliyatın ${{nextReportNum}}. raporu (${{nextCaseId}}) olarak "${{verseRef}} — ${{verseTitle}}" konusunun 26 adımlı Quran Vision çerçevesinde incelenmesini öneriyorum.\\n\\nÖneri Gerekçem: `;
     ta.focus();
   }}
   showToast("✨ Aday âyet forma aktarıldı! Gerekçenizi ekleyip WhatsApp veya GitHub üzerinden gönderebilirsiniz.");
