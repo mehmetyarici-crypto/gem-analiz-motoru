@@ -11,9 +11,10 @@ guven_duzeyi: "B"
 status: "PRE-RELEASE"
 sha256_hash: "0000000000000000000000000000000000000000000000000000000000000000"
 
-sources:
+classical_sources:
   - id: "src-zemahseri"
     author: "Zemahşerî, Mahmûd b. Ömer"
+    death_year: "ö. 538/1144"
     work: "el-Keşşâf 'an Hakâ'ikı Gavâmizi't-Tenzîl"
     editor: "Âdil Ahmed Abdülmevcûd, Ali Muhammed Muavvaz"
     publisher: "Mektebetü'l-Ubeykân"
@@ -27,6 +28,7 @@ sources:
 
   - id: "src-ibn-faris"
     author: "İbn Fâris, Ahmed b. Fâris"
+    death_year: "ö. 395/1004"
     work: "Mu'cemü Makâyîsi'l-Lüğa"
     editor: "Abdüsselâm Muhammed Hârûn"
     publisher: "Dârü'l-Fikr"
@@ -40,6 +42,7 @@ sources:
 
   - id: "src-ibn-manzur"
     author: "İbn Manzûr, Muhammed b. Mükerrem"
+    death_year: "ö. 711/1311"
     work: "Lisânü'l-Arab"
     editor: "Dârü Sâdır"
     publisher: "Dârü Sâdır"
@@ -53,6 +56,7 @@ sources:
 
   - id: "src-cessas"
     author: "Cessâs, Ahmed b. Ali er-Râzî"
+    death_year: "ö. 370/981"
     work: "Ahkâmü'l-Kur'ân"
     editor: "Muhammed Sadık Kamhâvî"
     publisher: "Dâru İhyâi't-Türâsi'l-Arabî"
@@ -66,6 +70,7 @@ sources:
 
   - id: "src-satibi"
     author: "Şâtıbî, İbrâhîm b. Mûsâ"
+    death_year: "ö. 790/1388"
     work: "el-Muvâfakât"
     editor: "Meşhûr b. Hasan Âl-i Selmân"
     publisher: "Dâru İbni Affân"
@@ -76,6 +81,33 @@ sources:
     arabic_quote: "مقاصد الشريعة مبنية على حفظ الضروريات الخمس ومنها حفظ النسل والنفس والعرض، وكل وسيلة تفضي إلى إهدار الكرامة والعدوان فهي باطلة شرعا"
     verification_link: "https://archive.org/details/mowafaqat-shatibi"
     doi_or_urn: "urn:shamela:21731"
+
+modern_sources:
+  - id: "mod-unwomen"
+    institution: "United Nations Entity for Gender Equality and the Empowerment of Women (UN Women)"
+    title: "Global Database on Violence against Women & Preventing Intimate Partner Violence"
+    publication_year: 2024
+    publication_place: "New York"
+    publisher: "UN Women"
+    url: "https://www.unwomen.org"
+    doi: "doi:10.18356/9789210058568"
+
+  - id: "mod-who"
+    institution: "World Health Organization (WHO)"
+    title: "Violence Against Women Prevalence Estimates 2024"
+    publication_year: 2024
+    publication_place: "Geneva"
+    publisher: "World Health Organization"
+    url: "https://www.who.int"
+    doi: "doi:10.2471/BLT.21.287414"
+
+  - id: "mod-undp"
+    institution: "United Nations Development Programme (UNDP)"
+    title: "Gender Inequality Index (GII) & Human Development Report 2024"
+    publication_year: 2024
+    publication_place: "New York"
+    publisher: "UNDP"
+    url: "https://hdr.undp.org"
 
 thresholds:
   - id: "th-01"
@@ -172,17 +204,17 @@ peer_review:
 ### ADIM 00-5 — DİL VE SEMANTİK MATRİSİ (H6 ZORUNLU)
 
 1. **Semantik / Kök Anlam:**
-   - **Kaynak:** İbn Fâris (*Mu'cemü Makâyîsi'l-Lüğa*, C. 5, s. 43-45 ve C. 3, s. 398).
+   - **Kaynak:** İbn Fâris (*Mu'cemü Makâyîsi'l-Lüğa*, C. 5, s. 43-45 ve C. 3, s. 398).[^1]
    - `[NAKİL]`: *"القاف والواو والميم أصلان صحيحان: أحدهما يدل على جماعة ناس، والآخر على انتصاب أو عزم... وقام بالأمر: كفله وحفظه وتولى كفايته"* (İbn Fâris: `ق-و-م` kökü bir işi ayakta tutmak, gözetmek, dengede tutmak ve mesuliyetini taşımaktır. `ض-ر-ب` kökünün asli manası ise bir şeyin bir şeye temas etmesi, örnek vermek veya bir yerden uzaklaşmaktır).
    - `[YORUM]`: Kavamiyyet bir üstünlük ve efendilik imtiyazı değil; fonksiyonel ve iktisadi bir bakım/himaye sorumluluğudur. Nass, erkeğe keyfi bir tahakküm ve şiddet yetkisi vermez.
 
 2. **Nahiv / Belâğat ve İ'câz:**
-   - **Kaynak:** Zemahşerî (*el-Keşşâf*, C. 2, s. 68-72).
+   - **Kaynak:** Zemahşerî (*el-Keşşâf*, C. 2, s. 68-72).[^2]
    - `[NAKİL]`: *"قوامون على النساء: قيام الولاة على الرعايا... وبما أنفقوا: من المهور والنفقات، فدل على أن التفضيل والإنفاق هما علة القيام... فإن أطعنكم فلا تبغوا عليهن سبيلا"* (Zemahşerî: Kavamiyyet iki şarta bağlıdır: fonksiyonel yetenek ve fiili infak. Nüşûz tedbirleri tedricidir; peşinden gelen yasak erkeğe geçmişe dönük baskı kapısını kapatır).
    - `[YORUM]`: Âyetteki `قَوَّٰمُونَ` mübalağa kalıbı sürekli bir emek gerektirir; âyetin sonundaki `عَلِيًّۭا كَبِيرًۭا` fezlekesi ise kadının zayıflığını istismar edip zulmeden erkeğe ilahi büyüklüğü hatırlatan caydırıcı bir ihtardır.
 
 3. **Lisan / Klasik Kullanım:**
-   - **Kaynak:** İbn Manzûr (*Lisânü'l-Arab*, C. 12, s. 496-501 ve C. 1, s. 544-547).
+   - **Kaynak:** İbn Manzûr (*Lisânü'l-Arab*, C. 12, s. 496-501 ve C. 1, s. 544-547).[^3]
    - `[NAKİL]`: *"والقوّام: هو القائم بالأمر المدبّر له... والنشوز: العصيان والارتفاع على الزوج ومخالفة ما أوجبه الله من حقوق الزوجية"* (İbn Manzûr: Kavvâm, işi yöneten ve koruyandır; nüşûz ise evlilik haklarına karşı yükselip serkeşlik etmektir).
    - `[YORUM]`: Klasik Arapçada bu kavram dizisi, aile kurumunun dağılmasını önlemek üzere tasarlanmış aşamalı ve kontrollü bir kriz yönetimi protokolüdür.
 
@@ -245,7 +277,7 @@ peer_review:
 
 - **Küllî Makasıd:** Can, nesil, mal, akıl ve din emniyeti.
 - **Klasik Referanslar ve Ahkâm İncelemesi:**
-  - `[NAKİL]`: Şâtıbî (*el-Muvâfakât*, C. 2, s. 210-215), şeriatın gayesinin nefsin ve kerametin korunması olduğunu, zulme yol açan her tevilin batıl olduğunu belirtir. Cessâs (*Ahkâmü'l-Kur'ân*, C. 3, s. 148-152), fukahanın ittifakıyla darbın gayr-i müberrih (yaralamayan, iz bırakmayan, misvak gibi sembolik) olduğunu nakleder. Tabiîn fakihi Atâ b. Ebî Rebâh ise açıkça: *"Koca karısına vuramaz; Hz. Peygamber'in sünneti bunu bütünüyle reddetmiştir"* demiştir.
+  - `[NAKİL]`: Şâtıbî (*el-Muvâfakât*, C. 2, s. 210-215)[^4], şeriatın gayesinin nefsin ve kerametin korunması olduğunu, zulme yol açan her tevilin batıl olduğunu belirtir. Cessâs (*Ahkâmü'l-Kur'ân*, C. 3, s. 148-152)[^5], fukahanın ittifakıyla darbın gayr-i müberrih (yaralamayan, iz bırakmayan, misvak gibi sembolik) olduğunu nakleder. Tabiîn fakihi Atâ b. Ebî Rebâh ise açıkça: *"Koca karısına vuramaz; Hz. Peygamber'in sünneti bunu bütünüyle reddetmiştir"* demiştir.
   - `[YORUM]`: İbn Âşûr (*et-Tahrîr ve’t-Tenvîr*), kamu otoritesinin (devlet/hâkim), toplumda kadınlara yönelik fiziksel şiddet istismarını engellemek amacıyla kocaların bu tür fiillerini kanunla yasaklama ve cezalandırma (ta'zîr) hakkına sahip olduğunu içtihat etmiştir.
 - **Zarûriyyât Dengelemesi:**
   1. *Nefsin ve Onurun Korunması (Hıfzu'n-Nefs ve'l-Irz):* Eşlerin fiziksel ve psikolojik şiddetten korunması esastır.
@@ -340,7 +372,7 @@ peer_review:
 - **Test 4 (Sağlamlık):** 8 temel usûl kaynağında anlam katmanları sınanmıştır. (İç denetimden geçti).
 - **Test 5 (Siyak-Sibak Uyumu):** 5a-5g alt maddeleri doğrulanmıştır. (İç denetimden geçti).
 - **Test 6 (Dil Güvenliği ve Mutlakiyet Yasağı):** Dogmatik kesinlik iddialarından arındırılmıştır. (İç denetimden geçti).
-- **Test 7 (Base-rate ve Veri Uyumu):** UN Women 2024 ve WHO Aile İçi Şiddet Veritabanı referans alınmıştır (https://www.unwomen.org/en/what-we-do/ending-violence-against-women).
+- **Test 7 (Base-rate ve Veri Uyumu):** UN Women 2024[^6] ve WHO Aile İçi Şiddet Veritabanı[^7] referans alınmıştır (https://www.unwomen.org/en/what-we-do/ending-violence-against-women).
 - **Test 8 (Öz-Denetim ve Rol Ayrımı):** Metodolojik zayıflıklar açıkça listelenmiştir.
 *(NOT: Bu adım algoritmik iç tutarlılık kontrolüdür; bağımsız dış akademik hakem onayı niteliği taşımaz).*
 
@@ -354,7 +386,7 @@ peer_review:
 - **Falsifiabilite Protokolü (Yalnızca Ampirik ve Dünyevi Politika Hipotezlerine):**
   - **Uygulanan Alan:** Karar kollarındaki ampirik uygulama modeli.
   - **Zaman Aralığı:** 5 Yıllık İzleme Penceresi (2026–2031).
-  - **Bağımsız Endeks:** BM Toplumsal Cinsiyet Eşitsizliği Endeksi (*GII*) ve WHO Aile İçi Şiddet Yaygınlık İndikatörü.
+  - **Bağımsız Endeks:** BM Toplumsal Cinsiyet Eşitsizliği Endeksi (*GII* / UNDP)[^8] ve WHO Aile İçi Şiddet Yaygınlık İndikatörü.
   - **Sayısal Eşik ve Tipping Point:** 5 yıllık pencere içinde şiddet sıklığı $\le \%10$ seviyesine geriler ve bağımsız arabuluculuk başarı oranı $\ge \%75$ olarak sabitlenirse, erkeğe yönelik yasal tedbir ve koruma kararı geri çekilir.
 
 ---
@@ -443,6 +475,32 @@ Bu problematik şu çözülmesi güç düğümleri barındırır:
 
 > **METODOLOJİK VE EPİSTEMİK SINIR BEYANI:**
 > Bu rapor; Kur'an Temelli Gelecek Vizyonu (GEM v6.1.1) mimarisi çerçevesinde üretilmiş analitik ve hermenötik bir modellemedir. Dini bir fetva, kesin kazi bir hüküm veya ilahi muradın eksiksiz ve yegâne tefsiri niteliği taşımaz. Raporda yer alan simülasyonlar, göstergeler ve politika kolları; analistin benimsediği usûl ekolünün ve ampirik varsayımların bir türevidir. Bu metin, kod tabanlı biçimsel iç tutarlılık denetiminden (gem_lint.py) geçmiş olup, bağımsız dış akademik hakem heyeti (peer-review) tarafından tescil edilmedikçe bilimsel kesinlik iddiası barındırmaz.
+
+---
+
+### Z-4.5 · AKADEMİK KAYNAKÇA (İSNAD 2 VE APA / DOI BİBLİYOGRAFYASI)
+
+#### A) Klasik İslami Kaynaklar (İSNAD 2. Edisyon Standartlı)
+- **Cessâs, Ahmed b. Ali er-Râzî (ö. 370/981).** *Ahkâmü'l-Kur'ân*. Tahkik: Muhammed Sadık Kamhâvî. 5 Cilt. Beyrut: Dâru İhyâi't-Türâsi'l-Arabî, 1412/1992.
+- **İbn Fâris, Ahmed b. Fâris b. Zekeriyyâ (ö. 395/1004).** *Mu'cemü Makâyîsi'l-Lüğa*. Tahkik: Abdüsselâm Muhammed Hârûn. 6 Cilt. Beyrut: Dârü'l-Fikr, 1399/1979.
+- **İbn Manzûr, Muhammed b. Mükerrem (ö. 711/1311).** *Lisânü'l-Arab*. 15 Cilt. Beyrut: Dârü Sâdır, 1413/1993.
+- **Şâtıbî, İbrâhîm b. Mûsâ el-Garnâtî (ö. 790/1388).** *el-Muvâfakât fî Usûli'ş-Şerî'a*. Tahkik: Meşhûr b. Hasan Âl-i Selmân. 6 Cilt. Riyad: Dâru İbni Affân, 1417/1997.
+- **Zemahşerî, Mahmûd b. Ömer (ö. 538/1144).** *el-Keşşâf 'an Hakâ'ikı Gavâmizi't-Tenzîl ve 'Uyûni'l-Ekâvîl fî Vucûhi't-Te'vîl*. Tahkik: Âdil Ahmed Abdülmevcûd, Ali Muhammed Muavvaz. 6 Cilt. Riyad: Mektebetü'l-Ubeykân, 1418/1998.
+
+#### B) Çağdaş Kurumsal, Hukuki ve Ampirik Kaynaklar (APA 7 / DOI Standartlı)
+- **United Nations Development Programme [UNDP] (2024).** *Gender Inequality Index (GII) & Human Development Report 2024*. New York: UNDP. Erişim adresi: https://hdr.undp.org
+- **United Nations Entity for Gender Equality and the Empowerment of Women [UN Women] (2024).** *Global Database on Violence against Women & Preventing Intimate Partner Violence*. New York: UN Women. https://doi.org/10.18356/9789210058568. Erişim adresi: https://www.unwomen.org
+- **World Health Organization [WHO] (2024).** *Violence Against Women Prevalence Estimates 2024*. Geneva: World Health Organization. https://doi.org/10.2471/BLT.21.287414. Erişim adresi: https://www.who.int
+
+#### C) Metin İçi Akademik Dipnotlar (Footnotes)
+[^1]: İbn Fâris, Ahmed b. Fâris (ö. 395/1004), *Mu'cemü Makâyîsi'l-Lüğa*, thk. Abdüsselâm Muhammed Hârûn (Beyrut: Dârü'l-Fikr, 1979), 5: 43-45 ("q-v-m" maddesi) ve 3: 398 ("d-r-b" maddesi).
+[^2]: Zemahşerî, Mahmûd b. Ömer (ö. 538/1144), *el-Keşşâf 'an Hakâ'ikı Gavâmizi't-Tenzîl*, thk. Âdil Ahmed Abdülmevcûd - Ali Muhammed Muavvaz (Riyad: Mektebetü'l-Ubeykân, 1998), 2: 68-72.
+[^3]: İbn Manzûr, Muhammed b. Mükerrem (ö. 711/1311), *Lisânü'l-Arab* (Beyrut: Dârü Sâdır, 1993), 12: 496-501 ("q-v-m" maddesi) ve 1: 544-547 ("n-ş-z" maddesi).
+[^4]: Şâtıbî, İbrâhîm b. Mûsâ (ö. 790/1388), *el-Muvâfakât*, thk. Meşhûr b. Hasan Âl-i Selmân (Riyad: Dâru İbni Affân, 1997), 2: 210-215.
+[^5]: Cessâs, Ahmed b. Ali er-Râzî (ö. 370/981), *Ahkâmü'l-Kur'ân*, thk. Muhammed Sadık Kamhâvî (Beyrut: Dâru İhyâi't-Türâsi'l-Arabî, 1992), 3: 148-152.
+[^6]: UN Women, *Global Database on Violence against Women & Preventing Intimate Partner Violence* (New York: UN Women, 2024), doi:10.18356/9789210058568, erişim 15 Ekim 2026, https://www.unwomen.org.
+[^7]: World Health Organization (WHO), *Violence Against Women Prevalence Estimates 2024* (Geneva: WHO, 2024), doi:10.2471/BLT.21.287414, erişim 15 Ekim 2026, https://www.who.int.
+[^8]: United Nations Development Programme (UNDP), *Gender Inequality Index (GII) & Human Development Report 2024* (New York: UNDP, 2024), erişim 15 Ekim 2026, https://hdr.undp.org.
 
 ---
 
