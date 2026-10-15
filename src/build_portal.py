@@ -37,24 +37,25 @@ def parse_report(md_path: Path):
         if sha_line:
             real_sha = sha_line.split()[0]
 
-    # Extract Z-1 Aporia summary
-    z1_match = re.search(r"### Z-1:.*?\n(.*?)(?=\n### Z-2:|\Z)", body, re.DOTALL)
+    # Extract Z-1 Aporia summary (supports both '### Z-1:' and '## Z-1 ·')
+    z1_match = re.search(r"#{2,3}\s*Z-1[:\s·].*?\n(.*?)(?=\n#{2,3}\s*Z-2[:\s·]|\Z)", body, re.DOTALL)
     aporia_text = z1_match.group(1).strip() if z1_match else ""
+    aporia_text = re.sub(r"\n---\s*$", "", aporia_text).strip()
 
     # Extract Prior & Posterior if present
-    prior_m = re.search(r"P\(S1\)\s*=\s*([0-9.]+)", body)
+    prior_m = re.search(r"(?:P\(S1\)\s*=\s*|Prior\s*P\(H\)\):\*\*\s*)([0-9.]+)", body)
     post_m = re.search(r"P\(S1\|E\)\s*\\approx\s*([0-9.]+)", body)
-    prior_val = float(prior_m.group(1)) if prior_m else 0.25
-    post_val = float(post_m.group(1)) if post_m else 0.75
+    prior_val = float(prior_m.group(1)) if prior_m else 0.30
+    post_val = float(post_m.group(1)) if post_m else 0.78
 
     return {
         "filename": md_path.name,
-        "case_id": fm.get("case_id", ""),
-        "surah": fm.get("surah", ""),
-        "verse": str(fm.get("verse", "")),
-        "topic": fm.get("topic", ""),
-        "date": str(fm.get("date", "2026-10-15")),
-        "confidence": fm.get("confidence_grade", "B"),
+        "case_id": fm.get("case_id") or fm.get("vaka_kodu", ""),
+        "surah": fm.get("surah") or fm.get("sure", ""),
+        "verse": str(fm.get("verse") or fm.get("ayet_no", "")),
+        "topic": fm.get("topic") or fm.get("konu", ""),
+        "date": str(fm.get("date") or fm.get("tarih", "2026-10-15")),
+        "confidence": fm.get("confidence_grade") or fm.get("guven_duzeyi", "B"),
         "status": fm.get("status", "PRE-RELEASE"),
         "sha256": real_sha,
         "classical_sources": fm.get("classical_sources", []),

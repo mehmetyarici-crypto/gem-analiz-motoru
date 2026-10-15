@@ -1,13 +1,13 @@
 ---
 gem_version: "6.1.1"
-vaka_kodu: "GEM-RAPOR-2026-006"
-sure: "Mâide"
-ayet_no: "5:38"
-konu: "Hırsızlık Suçu (Sirkat), Hırz ve Nisap Şartları, Zaruret Hali ve Sosyal Güvenlik / Caydırıcılık Mimarisi"
-tarih: "2026-10-15"
-katman: 3
-h6_durumu: true
-guven_duzeyi: "B"
+case_id: "GEM-RAPOR-2026-006"
+surah: "Mâide"
+verse: "5:38"
+topic: "Hırsızlık Suçu (Sirkat), Hırz ve Nisap Şartları, Zaruret Hali ve Sosyal Güvenlik / Caydırıcılık Mimarisi"
+date: "2026-10-15"
+layer: 3
+h6: true
+confidence_grade: "B"
 status: "PRE-RELEASE"
 sha256_hash: "0000000000000000000000000000000000000000000000000000000000000000"
 
