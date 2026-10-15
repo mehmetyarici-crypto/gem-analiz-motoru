@@ -870,7 +870,7 @@ function renderPedagogyTab(r) {
           <div style="font-size:12px; color:var(--accent-gold);">— ${firstScholar}</div>
         </div>
         <div class="source-card">
-          <div class="source-author" style="margin-bottom:4px;">💡 Pedagojik Vurgu (`[NAKİL]` vs `[YORUM]`):</div>
+          <div class="source-author" style="margin-bottom:4px;">💡 Pedagojik Vurgu (<code>[NAKİL]</code> vs <code>[YORUM]</code>):</div>
           <div class="source-meta">
             Öğrencilere âyetin değişmez ilahi metni ve klasik tefsir nakli (<code>[NAKİL]</code>) ile bugünün dünyasına yönelik stratejik çıkarımların (<code>[YORUM]</code>) birbirinden nasıl ayırt edileceği uygulamalı olarak gösterilir.
           </div>
@@ -965,8 +965,8 @@ function renderSynthesisTab() {
   });
 
   const sortedScholars = Object.entries(scholarMap).sort((a, b) => b[1].count - a[1].count);
-  const scholarsGridHtml = sortedScholars.map(([name, info]) => `
-    <div class="candidate-card" style="cursor:pointer;" onclick="filterByScholar('${name.replace(/'/g, "\'")}')">
+  const scholarsGridHtml = sortedScholars.map(([name, info], sIdx) => `
+    <div class="candidate-card" style="cursor:pointer;" data-scholar="${name.replace(/"/g, '&quot;')}" onclick="filterByScholar(this.getAttribute('data-scholar'))">
       <div>
         <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
           <strong style="color:var(--accent-gold); font-size:13.5px;">🕌 ${name}</strong>
