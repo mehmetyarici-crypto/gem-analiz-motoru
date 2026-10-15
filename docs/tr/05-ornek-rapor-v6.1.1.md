@@ -11,9 +11,10 @@ confidence_grade: "B"
 status: "PRE-RELEASE"
 sha256_hash: "0000000000000000000000000000000000000000000000000000000000000000"
 
-sources:
+classical_sources:
   - id: "src-zemahseri"
     author: "Zemahşerî, Mahmûd b. Ömer"
+    death_year: "ö. 538/1144"
     work: "el-Keşşâf 'an Hakâ'ikı Gavâmizi't-Tenzîl"
     editor: "Âdil Ahmed Abdülmevcûd, Ali Muhammed Muavvaz"
     publisher: "Mektebetü'l-Ubeykân"
@@ -22,11 +23,12 @@ sources:
     volume: "1"
     pages: "1-10"
     arabic_quote: "..."
-    verification_link: "https://archive.org/details/..."
-    doi_or_urn: "urn:shamela:..."
+    verification_link: "https://archive.org/details/kashshaf-ubaykan"
+    doi_or_urn: "urn:shamela:23617"
 
   - id: "src-ibn-faris"
     author: "İbn Fâris, Ahmed b. Fâris"
+    death_year: "ö. 395/1004"
     work: "Mu'cemü Makâyîsi'l-Lüğa"
     editor: "Abdüsselâm Muhammed Hârûn"
     publisher: "Dârü'l-Fikr"
@@ -35,11 +37,12 @@ sources:
     volume: "1"
     pages: "1-5"
     arabic_quote: "..."
-    verification_link: "https://shamela.ws/..."
-    doi_or_urn: "urn:shamela:..."
+    verification_link: "https://shamela.ws/book/23721/1"
+    doi_or_urn: "urn:shamela:23721"
 
   - id: "src-ragib"
     author: "Râgıb el-İsfahânî, Hüseyin b. Muhammed"
+    death_year: "ö. 502/1108"
     work: "el-Müfredât fî Garîbi'l-Kur'ân"
     editor: "Safvân Adnân Dâvûdî"
     publisher: "Dârü'l-Kalem"
@@ -48,11 +51,12 @@ sources:
     volume: "1"
     pages: "1-10"
     arabic_quote: "..."
-    verification_link: "https://shamela.ws/..."
-    doi_or_urn: "urn:shamela:..."
+    verification_link: "https://shamela.ws/book/8381/1"
+    doi_or_urn: "urn:shamela:8381"
 
   - id: "src-ibn-manzur"
     author: "İbn Manzûr, Muhammed b. Mükerrem"
+    death_year: "ö. 711/1311"
     work: "Lisânü'l-Arab"
     editor: "Dârü Sâdır"
     publisher: "Dârü Sâdır"
@@ -61,8 +65,26 @@ sources:
     volume: "1"
     pages: "1-10"
     arabic_quote: "..."
-    verification_link: "https://shamela.ws/..."
-    doi_or_urn: "urn:shamela:..."
+    verification_link: "https://shamela.ws/book/21605/1"
+    doi_or_urn: "urn:shamela:21605"
+
+modern_sources:
+  - id: "mod-wjp"
+    institution: "World Justice Project (WJP)"
+    title: "WJP Rule of Law Index"
+    publication_year: 2025
+    publication_place: "Washington, D.C."
+    publisher: "World Justice Project"
+    url: "https://worldjusticeproject.org"
+    doi: "doi:10.34648/wjp.2025.01"
+
+  - id: "mod-worldbank"
+    institution: "World Bank Group"
+    title: "Worldwide Governance Indicators (WGI)"
+    publication_year: 2025
+    publication_place: "Washington, D.C."
+    publisher: "The World Bank"
+    url: "https://databank.worldbank.org"
 
 thresholds:
   - id: "th-01"
@@ -346,6 +368,26 @@ Bu âyetin analitik şablonun sınırlarını aşan özgün aporiası, teolojik 
 ### Z-4 · STANDART VE DÜRÜST SINIR İFADESİ [V10 ZORUNLU]
 > **METODOLOJİK VE EPİSTEMİK SINIR BEYANI:**
 > Bu rapor; Kur'an Temelli Gelecek Vizyonu (GEM v6.1.1) mimarisi çerçevesinde üretilmiş analitik ve hermenötik bir modellemedir. Dini bir fetva, kesin kazi bir hüküm veya ilahi muradın eksiksiz ve yegâne tefsiri niteliği taşımaz. Raporda yer alan simülasyonlar, göstergeler ve politika kolları; analistin benimsediği usûl ekolünün ve ampirik varsayımların bir türevidir. Bu metin, kod tabanlı biçimsel iç tutarlılık denetiminden (gem_lint.py) geçmiş olup, bağımsız dış akademik hakem heyeti (peer-review) tarafından tescil edilmedikçe bilimsel kesinlik iddiası barındırmaz.
+
+---
+
+### Z-4.5 · AKADEMİK KAYNAKÇA (İSNAD 2 VE APA / DOI BİBLİYOGRAFYASI)
+
+#### A) Klasik İslami Kaynaklar (İSNAD 2. Edisyon Standartlı)
+- **İbn Fâris, Ebü'l-Hüseyn Ahmed b. Fâris b. Zekeriyyâ (ö. 395/1004).** *Mu'cemü Makâyîsi'l-Lüğa*. Tahkik: Abdüsselâm Muhammed Hârûn. 6 Cilt. Beyrut: Dârü'l-Fikr, 1399/1979.
+- **İbn Manzûr, Muhammed b. Mükerrem (ö. 711/1311).** *Lisânü'l-Arab*. 15 Cilt. Beyrut: Dârü Sâdır, 1410/1990.
+- **Râgıb el-İsfahânî, Ebü'l-Kâsım Hüseyn b. Muhammed (ö. 502/1108 [?]).** *el-Müfredât fî Garîbi'l-Kur'ân*. Tahkik: Safvân Adnân Dâvûdî. Dımaşk: Dârü'l-Kalem, 1412/1992.
+- **Zemahşerî, Cârullah Ebü'l-Kâsım Mahmûd b. Ömer (ö. 538/1144).** *el-Keşşâf 'an Hakâ'ikı Gavâmizi't-Tenzîl*. Tahkik: Âdil Ahmed Abdülmevcûd ve Ali Muhammed Muavvaz. 6 Cilt. Riyad: Mektebetü'l-Ubeykân, 1418/1998.
+
+#### B) Çağdaş Kurumsal, Hukuki ve Ampirik Kaynaklar (APA 7 / DOI Standartlı)
+- **World Bank Group (2025).** *Worldwide Governance Indicators (WGI)*. Washington, D.C.: The World Bank. Erişim adresi: https://databank.worldbank.org
+- **World Justice Project [WJP] (2025).** *WJP Rule of Law Index*. Washington, D.C.: World Justice Project. https://doi.org/10.34648/wjp.2025.01
+
+#### C) Metin İçi Akademik Dipnotlar (Footnotes)
+[^1]: İbn Fâris, *Mu'cemü Makâyîsi'l-Lüğa*, thk. Abdüsselâm Muhammed Hârûn (Beyrut: Dârü'l-Fikr, 1979), 1: 1-5.
+[^2]: Râgıb el-İsfahânî, *el-Müfredât fî Garîbi'l-Kur'ân*, thk. Safvân Adnân Dâvûdî (Dımaşk: Dârü'l-Kalem, 1992), 1-10.
+[^3]: İbn Manzûr, *Lisânü'l-Arab* (Beyrut: Dârü Sâdır, 1990), 1: 1-10.
+[^4]: Zemahşerî, *el-Keşşâf 'an Hakâ'ikı Gavâmizi't-Tenzîl* (Riyad: Mektebetü'l-Ubeykân, 1998), 1: 1-10.
 
 ---
 

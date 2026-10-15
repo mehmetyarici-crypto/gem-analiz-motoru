@@ -138,6 +138,41 @@ Ayrıca mutlak nass çerçevesinde değerlendirilmiştir.
             if m.exists():
                 m.unlink()
 
+    def test_isnad2_classical_and_modern_sources(self):
+        # classical_sources içinde death_year eksikse L-0106, modern_sources içinde url/doi eksikse L-0105 vermeli
+        text = """---
+gem_version: "6.1.1"
+status: "PRE-RELEASE"
+classical_sources:
+  - id: "src-1"
+    author: "Zemahşerî"
+    work: "el-Keşşâf"
+    volume: "1"
+    pages: "10"
+    verification_link: "https://archive.org/details/kashshaf"
+modern_sources:
+  - id: "mod-1"
+    institution: "World Bank"
+    title: "Governance Indicators"
+---
+Test içeriği.
+"""
+        with tempfile.NamedTemporaryFile("w", encoding="utf-8", suffix=".md", delete=False) as f:
+            f.write(text)
+            temp_path = Path(f.name)
+
+        try:
+            linter = GemLinterV6(temp_path, katman=1, h6=False)
+            linter.load_file()
+            linter.check_v1_sources()
+
+            rules = [f["rule"] for f in linter.findings]
+            assert "L-0106" in rules
+            assert "L-0105" in rules
+        finally:
+            if temp_path.exists():
+                temp_path.unlink()
+
 
 class TestGemLintCLI:
     def test_cli_version(self):

@@ -343,6 +343,12 @@ class GemLinterV6:
                 if not link or "..." in str(link):
                     self.report("L-0103", WARN, f"Kaynak '{sid}': Dijital tahkik linki eksik veya yer tutucu.")
 
+                # İSNAD 2 vefat tarihi kontrolü (classical_sources kullanıldığında)
+                if classical_sources and s in classical_sources:
+                    death_year = s.get("death_year") or s.get("vefat")
+                    if not death_year:
+                        self.report("L-0106", WARN, f"Klasik kaynak '{sid}': İSNAD 2 standardı gereği müellif vefat tarihi (death_year: 'ö. H/M') eksik.")
+
             # Modern kaynaklar kontrolü (varsa)
             for idx, ms in enumerate(modern_sources, 1):
                 ms_id = ms.get("id", f"modern-{idx}")
