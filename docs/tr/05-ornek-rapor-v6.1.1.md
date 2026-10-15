@@ -1,6 +1,6 @@
 ---
 gem_version: "6.1.1"
-case_id: "GEM-RAPOR-2026-0XX"
+case_id: "QV-2026-0XX"
 surah: "{{SURE_ADI}}"
 verse: "{{SURE_NO}}:{{AYET_NO}}"
 topic: "{{KONU_BASLIGI}}"
@@ -116,12 +116,12 @@ peer_review:
   review_notes: "Ön sürüm (PRE-RELEASE); bağımsız dış akademik hakem incelemesine açıktır."
 ---
 
-# GEM RAPOR-2026-0XX — {{KONU_BASLIGI}}
+# {{SURE_ADI}} Sûresi {{SURE_NO}}:{{AYET_NO}} Tahlili — {{KONU_BASLIGI}}
 
 ## FAZ I — KİMLİK, METİN VE BAĞLAM
 
 ### ADIM 00 — KÜNYE VE GİRİŞ BİLGİLERİ
-- **Vaka Kodu:** GEM-RAPOR-2026-0XX
+- **Vaka Kodu:** QV-2026-0XX
 - **Âyet:** {{SURE_ADI}} {{SURE_NO}}:{{AYET_NO}}
 - **Konu Başlığı:** {{KONU_BASLIGI}}
 - **Tarih:** {{TARIH}}
@@ -367,7 +367,7 @@ Bu âyetin analitik şablonun sınırlarını aşan özgün aporiası, teolojik 
 
 ### Z-4 · STANDART VE DÜRÜST SINIR İFADESİ [V10 ZORUNLU]
 > **METODOLOJİK VE EPİSTEMİK SINIR BEYANI:**
-> Bu rapor; Kur'an Temelli Gelecek Vizyonu (GEM v6.1.1) mimarisi çerçevesinde üretilmiş analitik ve hermenötik bir modellemedir. Dini bir fetva, kesin kazi bir hüküm veya ilahi muradın eksiksiz ve yegâne tefsiri niteliği taşımaz. Raporda yer alan simülasyonlar, göstergeler ve politika kolları; analistin benimsediği usûl ekolünün ve ampirik varsayımların bir türevidir. Bu metin, kod tabanlı biçimsel iç tutarlılık denetiminden (gem_lint.py) geçmiş olup, bağımsız dış akademik hakem heyeti (peer-review) tarafından tescil edilmedikçe bilimsel kesinlik iddiası barındırmaz.
+> Bu rapor; Kur'an Temelli Gelecek Vizyonu (Quran Vision v6.1.1) mimarisi çerçevesinde üretilmiş analitik ve hermenötik bir modellemedir. Dini bir fetva, kesin kazi bir hüküm veya ilahi muradın eksiksiz ve yegâne tefsiri niteliği taşımaz. Raporda yer alan simülasyonlar, göstergeler ve politika kolları; analistin benimsediği usûl ekolünün ve ampirik varsayımların bir türevidir. Bu metin, kod tabanlı biçimsel iç tutarlılık denetiminden (gem_lint.py) geçmiş olup, bağımsız dış akademik hakem heyeti (peer-review) tarafından tescil edilmedikçe bilimsel kesinlik iddiası barındırmaz.
 
 ---
 

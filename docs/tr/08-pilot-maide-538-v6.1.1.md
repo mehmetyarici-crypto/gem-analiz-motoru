@@ -1,9 +1,9 @@
 ---
 gem_version: "6.1.1"
-case_id: "GEM-RAPOR-2026-006"
+case_id: "QV-2026-003"
 surah: "Mâide"
 verse: "5:38"
-topic: "Hırsızlık Suçu (Sirkat), Hırz ve Nisap Şartları, Zaruret Hali ve Sosyal Güvenlik / Caydırıcılık Mimarisi"
+topic: "Hırsızlık Suçu (Sirkat), Hırz ve Nisap Şartları, Zaruret Hali ve Sosyal Güvenlik Mimarisi"
 date: "2026-10-15"
 layer: 3
 h6: true
@@ -172,14 +172,14 @@ peer_review:
   review_notes: "Ön sürüm aşamasındadır; bağımsız dış akademik hakem incelemesine açıktır."
 ---
 
-# GEM RAPOR-2026-006 — Hırsızlık Suçu (Sirkat), Hırz ve Nisap Şartları, Zaruret Hali ve Sosyal Güvenlik / Caydırıcılık Mimarisi
+# Mâide Sûresi 5:38 Tahlili — Hırsızlık Suçu (Sirkat), Hırz ve Nisap Şartları, Zaruret Hali ve Sosyal Güvenlik Mimarisi
 
 ## FAZ I — KİMLİK, METİN VE BAĞLAM
 
 ### ADIM 00 — KÜNYE VE GİRİŞ BİLGİLERİ
-- **Vaka Kodu:** GEM-RAPOR-2026-006
+- **Vaka Kodu:** QV-2026-003
 - **Âyet:** Mâide Sûresi 5:38
-- **Konu Başlığı:** Hırsızlık (Sirkat) Cezası, Mülkiyet Güvenliği, Sosyal Adalet Eşikleri (Şüphe ve Zaruret) ve İktisadi Caydırıcılık Mimarisi
+- **Konu Başlığı:** Hırsızlık Suçu (Sirkat), Hırz ve Nisap Şartları, Zaruret Hali ve Sosyal Güvenlik Mimarisi
 - **Tarih:** 2026-10-14
 - **Sürüm:** v6.1.1 (Akademik Doğrulama Standartlı)
 - **Katman:** 3 (26 Adımlı Tam Analiz Motoru + Z-1..Z-5 Zorunlu Ekler)
@@ -425,7 +425,7 @@ Mâide 5:38 âyetinin modern ceza hukuku ve İslam iktisadı açısından en çe
 Bu problematik şu derin adalet krizlerini doğurur:
 1. **Hz. Ömer'in Remâde İçtihadı ve Yapısal Açlık:** Hz. Ömer kıtlık yılında hırsızlık haddini askıya alarak; açlık, yoksulluk ve ekonomik çaresizlik ortamında ceza verilemeyeceğini, bilakis sorumluluğun toplumu aç bırakan kamu idaresinde olduğunu ilan etmiştir. Ancak bu içtihat modern çağda şu soruyu doğurur: Sosyal güvencesi olmayan bir kapitalist düzende bir asgari ücretlinin veya işsizin marketten bebek maması çalması durumunda had tatbik edilebilir mi? Fıkıh bu soruya "hayır" cevabını verse de, pozitif ceza yasaları bu yoksulları hapse tıkmaktadır.
 2. **Beyaz Yakalı ve Dijital Hırsızlık Asimetrisi:** Geleneksel fıkıh fiziki bir kasayı kırmayı (*hırzın delinmesi*) sirkat sayıp el kesme cezası öngörürken; bugün bir banka genel müdürünün, fon yöneticisinin veya siber korsanın tek bir tıkla milyonlarca insanın mevduatını ve emeklilik fonunu hortumlaması klasik "hırz" tarifine tam uymadığı için "güveni kötüye kullanma" (*hıyanet*) veya "dolandırıcılık" (*ihtiyâl*) sayılarak had kapsamı dışında tutulabilmektedir.
-3. **Ceza Asimetrisi Açmazı:** Bir yanda fiziki hırzdan birkaç bin lira çalan yoksul fail en ağır bedensel müeyyide tehdidiyle karşılaşırken; diğer yanda yüz milyonlarca kamu kaynağını batıran beyaz yakalı suçluların birkaç yıl lüks cezaevlerinde yatıp çıkması Kur'an'ın vazettiği ilahi izzet ve hikmet (*Azîz ve Hakîm*) terazisini kökten sarsar. GEM analiz motoru, kat' kavramını suç kanallarının ve finansal hortumlama imkânlarının kesilmesi, müsadere ve en ağır ta'zîr cezası olarak genişletir; ancak bu yaklaşım klasik fıkhın lafızcı sınırlarını aşmayı zorunlu kılan özgün bir metodolojik meydan okumadır.
+3. **Ceza Asimetrisi Açmazı:** Bir yanda fiziki hırzdan birkaç bin lira çalan yoksul fail en ağır bedensel müeyyide tehdidiyle karşılaşırken; diğer yanda yüz milyonlarca kamu kaynağını batıran beyaz yakalı suçluların birkaç yıl lüks cezaevlerinde yatıp çıkması Kur'an'ın vazettiği ilahi izzet ve hikmet (*Azîz ve Hakîm*) terazisini kökten sarsar. Quran Vision analiz motoru, kat' kavramını suç kanallarının ve finansal hortumlama imkânlarının kesilmesi, müsadere ve en ağır ta'zîr cezası olarak genişletir; ancak bu yaklaşım klasik fıkhın lafızcı sınırlarını aşmayı zorunlu kılan özgün bir metodolojik meydan okumadır.
 
 ---
 
@@ -458,7 +458,7 @@ Bu problematik şu derin adalet krizlerini doğurur:
 ## Z-4 · STANDART VE DÜRÜST SINIR İFADESİ [V10 ZORUNLU]
 
 > **METODOLOJİK VE EPİSTEMİK SINIR BEYANI:**
-> Bu rapor; Kur'an Temelli Gelecek Vizyonu (GEM v6.1.1) mimarisi çerçevesinde üretilmiş analitik ve hermenötik bir modellemedir. Dini bir fetva, kesin kazi bir hüküm veya ilahi muradın eksiksiz ve yegâne tefsiri niteliği taşımaz. Raporda yer alan simülasyonlar, göstergeler ve politika kolları; analistin benimsediği usûl ekolünün ve ampirik varsayımların bir türevidir. Bu metin, kod tabanlı biçimsel iç tutarlılık denetiminden (gem_lint.py) geçmiş olup, bağımsız dış akademik hakem heyeti (peer-review) tarafından tescil edilmedikçe bilimsel kesinlik iddiası barındırmaz.
+> Bu rapor; Kur'an Temelli Gelecek Vizyonu (Quran Vision v6.1.1) mimarisi çerçevesinde üretilmiş analitik ve hermenötik bir modellemedir. Dini bir fetva, kesin kazi bir hüküm veya ilahi muradın eksiksiz ve yegâne tefsiri niteliği taşımaz. Raporda yer alan simülasyonlar, göstergeler ve politika kolları; analistin benimsediği usûl ekolünün ve ampirik varsayımların bir türevidir. Bu metin, kod tabanlı biçimsel iç tutarlılık denetiminden (gem_lint.py) geçmiş olup, bağımsız dış akademik hakem heyeti (peer-review) tarafından tescil edilmedikçe bilimsel kesinlik iddiası barındırmaz.
 
 ---
 

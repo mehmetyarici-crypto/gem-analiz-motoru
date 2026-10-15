@@ -1,6 +1,6 @@
 ---
 gem_version: "6.1.1"
-case_id: "GEM-RAPOR-2026-010"
+case_id: "QV-2026-007"
 surah: "Hucurât"
 verse: "49:9-10"
 topic: "Uluslararası Çatışma Çözümü, Bağy Doktrini, Kolektif Güvenlik ve Barış Gücü Yönetişimi"
@@ -180,12 +180,12 @@ peer_review:
   review_notes: "Ön sürüm (PRE-RELEASE) aşamasındadır; bağımsız dış akademik hakem incelemesine açıktır."
 ---
 
-# GEM RAPOR-2026-010 — Uluslararası Çatışma Çözümü, Bağy Doktrini, Kolektif Güvenlik ve Barış Gücü Yönetişimi (Hucurât 49:9-10 Tahlili)
+# Hucurât Sûresi 49:9-10 Tahlili — Uluslararası Çatışma Çözümü, Bağy Doktrini, Kolektif Güvenlik ve Barış Gücü Yönetişimi
 
 ## FAZ I — KİMLİK, METİN VE BAĞLAM
 
 ### ADIM 00 — KÜNYE VE GİRİŞ BİLGİLERİ
-- **Vaka Kodu:** GEM-RAPOR-2026-010
+- **Vaka Kodu:** QV-2026-007
 - **Âyet:** Hucurât Sûresi 49:9-10 ("Islah, Bağy ve Uhuvvet Âyetleri")
 - **Konu Başlığı:** Uluslararası Çatışma Çözümü, Bağy Doktrini, Kolektif Güvenlik ve Barış Gücü Yönetişimi
 - **Tarih:** 2026-10-15
@@ -377,7 +377,7 @@ Rapor etnik, mezhepçi ve ulusal taassuplardan arındırılmış; adaletin kimin
 | 04 | Jeopolitik | Dış güçlerin müdahil olduğu vekâlet savaşlarında bu nasıl işler? | Dış lojistik hatları kesilmeden iç tahkim başarıya ulaşamaz |
 
 ### Z-3: H6 ÂYET ÖZEL DENETİM BEYANI
-Hucurât Sûresi 9-10. âyetleri, siyasi fıkıh, savaş hukuku ve tekfir tartışmalarının merkezinde yer aldığı için GEM metodolojisi kapsamında H6 (Zorlu Âyet) statüsündedir. Bu raporda:
+Hucurât Sûresi 9-10. âyetleri, siyasi fıkıh, savaş hukuku ve tekfir tartışmalarının merkezinde yer aldığı için Quran Vision metodolojisi kapsamında H6 (Zorlu Âyet) statüsündedir. Bu raporda:
 - Tekfirci yaklaşımlar lafzın açık beyanıyla ("müminlerden iki grup") ilga edilmiştir.
 - Şiddet tekelinin keyfi kullanımı "bağy" şartı ve "fey'" tahdidiyle sınırlandırılmıştır.
 - Barışın yalnızca silahların susması değil, adaletin ("adl") ve hakkaniyetin ("kıst") ikamesi olduğu teyit edilmiştir.
@@ -413,7 +413,7 @@ Bu raporda serdedilen tüm tespit, modelleme ve politika tasarımları birer be�
 
 ```yaml
 hakem_degerlendirme_protokolu:
-  rapor_id: "GEM-RAPOR-2026-010"
+  rapor_id: "QV-2026-007"
   sure_ayet: "Hucurât 49:9-10"
   tarih: "2026-10-15"
   status: "PRE-RELEASE"
@@ -430,5 +430,5 @@ hakem_degerlendirme_protokolu:
     boyut_5_kurumsal_tasarim_ve_ozgunluk: "— / 20"
     toplam_skor: "— / 100"
   hakem_karari: "PENDING_EXTERNAL_REVIEW"
-  derkenar_notu: "Rapor GEM v6.1.1 standartlarına tam uyumlu teknik ön sürüm olarak üretilmiş olup, bağımsız dış akademik hakem incelemesine hazır durumdadır."
+  derkenar_notu: "Rapor Quran Vision v6.1.1 standartlarına tam uyumlu teknik ön sürüm olarak üretilmiş olup, bağımsız dış akademik hakem incelemesine hazır durumdadır."
 ```

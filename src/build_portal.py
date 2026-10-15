@@ -79,7 +79,7 @@ def build_html(reports):
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GEM v6.2.1 — Kur'an Temelli Gelecek Vizyonu | Dijital Akademik Külliyat Portalı</title>
+<title>Quran Vision (v6.2.1) — Kur'an Temelli Gelecek Vizyonu | Dijital Akademik Külliyat Portalı</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -530,9 +530,9 @@ body {{
 
 <aside class="sidebar">
   <div class="brand">
-    <div class="brand-badge">⚖️ GEM v6.2.1 • İSNAD 2 + DOI</div>
-    <h1>Kur'an Temelli Gelecek Vizyonu</h1>
-    <p>26 Adımlı Stratejik Analiz & Akademik Külliyat Kokpiti</p>
+    <div class="brand-badge">⚖️ QURAN VISION v6.2.1 • İSNAD 2 + DOI</div>
+    <h1>Quran Vision — Gelecek Vizyonu</h1>
+    <p>26 Adımlı Stratejik Tefsir & Akademik Külliyat Kokpiti</p>
   </div>
   <div class="search-box">
     <input type="text" id="searchInput" class="search-input" placeholder="Sûre, âyet, kavram veya müfessir ara...">

@@ -1,6 +1,6 @@
 ---
 gem_version: "6.1.1"
-case_id: "GEM-RAPOR-2026-013"
+case_id: "QV-2026-010"
 surah: "Rûm"
 verse: "30:22"
 topic: "Ontolojik Çoğulculuk, Dilsel ve Etnik Çeşitlilik, Asimilasyon Karşıtlığı ve Çok Kültürlü Bir Arada Yaşama Mimarisi"
@@ -180,12 +180,12 @@ peer_review:
   review_notes: "Ön sürüm (PRE-RELEASE) aşamasındadır; bağımsız dış akademik hakem incelemesine açıktır."
 ---
 
-# GEM RAPOR-2026-013 — Ontolojik Çoğulculuk, Dilsel ve Etnik Çeşitlilik, Asimilasyon Karşıtlığı ve Çok Kültürlü Bir Arada Yaşama Mimarisi (Rûm 30:22 Tahlili)
+# Rûm Sûresi 30:22 Tahlili — Ontolojik Çoğulculuk, Dilsel ve Etnik Çeşitlilik, Asimilasyon Karşıtlığı ve Bir Arada Yaşama Mimarisi
 
 ## FAZ I — KİMLİK, METİN VE BAĞLAM
 
 ### ADIM 00 — KÜNYE VE GİRİŞ BİLGİLERİ
-- **Vaka Kodu:** GEM-RAPOR-2026-013
+- **Vaka Kodu:** QV-2026-010
 - **Âyet:** Rûm Sûresi 30:22 ("Ontolojik Çoğulculuk ve Ayetler Âyeti")
 - **Konu Başlığı:** Ontolojik Çoğulculuk, Dilsel ve Etnik Çeşitlilik, Asimilasyon Karşıtlığı ve Çok Kültürlü Bir Arada Yaşama Mimarisi
 - **Tarih:** 2026-10-15
@@ -376,7 +376,7 @@ Rapor etno-sentrik, kabileci veya Batı merkezli oryantalist yaklaşımlardan ar
 | 04 | Felsefî | Evrensel tek bir ortak dünya dili kurulamaz mı? | Tek tipleştirme ilahi yaratılış kanununa (sünnetullah) aykırıdır |
 
 ### Z-3: H6 ÂYET ÖZEL DENETİM BEYANI
-Rûm Sûresi 22. âyeti, İslam siyaset felsefesi, insan hakları ve çoğulculuk tartışmalarının temel taşı olması hasebiyle GEM metodolojisi kapsamında H6 (Zorlu Âyet) statüsündedir. Bu raporda:
+Rûm Sûresi 22. âyeti, İslam siyaset felsefesi, insan hakları ve çoğulculuk tartışmalarının temel taşı olması hasebiyle Quran Vision metodolojisi kapsamında H6 (Zorlu Âyet) statüsündedir. Bu raporda:
 - İhtilâf kavramı çatışma değil, ilahi ontolojik zenginlik olarak temellendirilmiştir.
 - Asimilasyon ve ırkçılık teolojik düzeyde ilahi âyetleri tahrif teşebbüsü olarak tanımlanmıştır.
 - Birlikte yaşama kültürü modern sosyolojik göstergeler ve Bayesyen olasılıklarla modellenmiştir.
@@ -412,7 +412,7 @@ Bu raporda serdedilen tüm tespit, modelleme ve politika tasarımları birer be�
 
 ```yaml
 hakem_degerlendirme_protokolu:
-  rapor_id: "GEM-RAPOR-2026-013"
+  rapor_id: "QV-2026-010"
   sure_ayet: "Rûm 30:22"
   tarih: "2026-10-15"
   status: "PRE-RELEASE"
@@ -429,5 +429,5 @@ hakem_degerlendirme_protokolu:
     boyut_5_kurumsal_tasarim_ve_ozgunluk: "— / 20"
     toplam_skor: "— / 100"
   hakem_karari: "PENDING_EXTERNAL_REVIEW"
-  derkenar_notu: "Rapor GEM v6.1.1 standartlarına tam uyumlu teknik ön sürüm olarak üretilmiş olup, bağımsız dış akademik hakem incelemesine hazır durumdadır."
+  derkenar_notu: "Rapor Quran Vision v6.1.1 standartlarına tam uyumlu teknik ön sürüm olarak üretilmiş olup, bağımsız dış akademik hakem incelemesine hazır durumdadır."
 ```

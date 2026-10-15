@@ -1,6 +1,6 @@
 **English** | [Türkçe](README.tr.md)
 
-# GEM — Quran-Based Strategic Analysis Framework
+# Quran Vision — Quran-Based Strategic & Hermeneutic Analysis Framework
 
 > **This project does not claim religious authority.** Outputs are interpretation, not ruling.
 > It does not claim prophecy, fatwa, or definitive historical prediction.
@@ -20,7 +20,7 @@
 
 ## What is this project?
 
-GEM (Future-Oriented Reasoning) is a 26-step, 5-macro-phase framework of thought and audit that examines Quranic verses through **strategic analysis** and hermeneutic methods.
+**Quran Vision** (Kur'an Temelli Gelecek Vizyonu) is a 26-step, 5-macro-phase framework of thought and academic audit that examines Quranic verses through **strategic analysis**, classical philology (ISNAD 2), and empirical governance methods.
 
 ### What does it do?
 

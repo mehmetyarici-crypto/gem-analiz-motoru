@@ -1,6 +1,6 @@
 ---
 gem_version: "6.1.1"
-case_id: "GEM-RAPOR-2026-009"
+case_id: "QV-2026-006"
 surah: "Âl-i İmrân"
 verse: "3:159"
 topic: "Kriz Dönemlerinde İstişare (Şûrâ), Katılımcı Karar Alma ve Merhamet Temelli Liderlik Mimarisi"
@@ -172,12 +172,12 @@ peer_review:
   review_notes: "Ön sürüm (PRE-RELEASE) aşamasındadır; bağımsız dış akademik hakem incelemesine açıktır."
 ---
 
-# GEM RAPOR-2026-009 — Kriz Dönemlerinde İstişare (Şûrâ), Katılımcı Karar Alma ve Merhamet Temelli Liderlik Mimarisi (Âl-i İmrân 3:159 Tahlili)
+# Âl-i İmrân Sûresi 3:159 Tahlili — Kriz Dönemlerinde İstişare (Şûrâ), Katılımcı Karar Alma ve Merhamet Temelli Liderlik Mimarisi
 
 ## FAZ I — KİMLİK, METİN VE BAĞLAM
 
 ### ADIM 00 — KÜNYE VE GİRİŞ BİLGİLERİ
-- **Vaka Kodu:** GEM-RAPOR-2026-009
+- **Vaka Kodu:** QV-2026-006
 - **Âyet:** Âl-i İmrân Sûresi 3:159 ("İstişare ve Liderlik Âyeti")
 - **Konu Başlığı:** Kriz Dönemlerinde İstişare (Şûrâ), Katılımcı Karar Alma ve Merhamet Temelli Liderlik Mimarisi
 - **Tarih:** 2026-10-15
@@ -489,7 +489,7 @@ peer_review:
 Bu gerilim şu çetin açmazları içerir:
 1. Eğer istişare lidere bağlayıcı değilse; lider istediği zaman istişare edip istemediği kararı tek başına verebiliyorsa, bu durum istişareyi otokratik iktidarın halkı teskin etme tiyatrosuna dönüştürmez mi?
 2. Eğer istişare istisnasız bağlayıcı ise; âyetteki `فَإِذَا عَزَمْتَ` (Kararını verdiğin zaman) tekil hitabı nereye oturtulacaktır? Lider meclisin sadece bir sözcüsü müdür, yoksa kararı icra eden irade midir?
-3. GEM analiz motoru bu aporiayı şöyle çözümler: **İstişare kararı meşruiyet üretir; azim ise o meşruiyeti icraya dönüştürür.** Hz. Peygamber'in kendi kişisel tercihine aykırı olmasına rağmen Uhud'da çoğunluğun fikrine uyması, istişarenin bağlayıcı bir ahlaki-hukuki karakter taşıdığını gösterir. Ancak bu gerilim, modern demokrasilerdeki kuvvetler ayrılığı ile İslam fıkıh geleneği arasında şablonun ötesinde daimi bir siyaset bilimi tartışmasıdır.
+3. Quran Vision analiz motoru bu aporiayı şöyle çözümler: **İstişare kararı meşruiyet üretir; azim ise o meşruiyeti icraya dönüştürür.** Hz. Peygamber'in kendi kişisel tercihine aykırı olmasına rağmen Uhud'da çoğunluğun fikrine uyması, istişarenin bağlayıcı bir ahlaki-hukuki karakter taşıdığını gösterir. Ancak bu gerilim, modern demokrasilerdeki kuvvetler ayrılığı ile İslam fıkıh geleneği arasında şablonun ötesinde daimi bir siyaset bilimi tartışmasıdır.
 
 ---
 
@@ -520,7 +520,7 @@ Bu gerilim şu çetin açmazları içerir:
 ### Z-4 · STANDART VE DÜRÜST SINIR İFADESİ [V10 ZORUNLU]
 
 > **METODOLOJİK VE EPİSTEMİK SINIR BEYANI:**
-> Bu rapor; Kur'an Temelli Gelecek Vizyonu (GEM v6.1.1) mimarisi çerçevesinde üretilmiş analitik ve hermenötik bir modellemedir. Dini bir fetva, kesin kazi bir hüküm veya ilahi muradın eksiksiz ve yegâne tefsiri niteliği taşımaz. Raporda yer alan simülasyonlar, göstergeler ve politika kolları; analistin benimsediği usûl ekolünün ve ampirik varsayımların bir türevidir. Bu metin, kod tabanlı biçimsel iç tutarlılık denetiminden (gem_lint.py) geçmiş olup, bağımsız dış akademik hakem heyeti (peer-review) tarafından tescil edilmedikçe bilimsel kesinlik iddiası barındırmaz.
+> Bu rapor; Kur'an Temelli Gelecek Vizyonu (Quran Vision v6.1.1) mimarisi çerçevesinde üretilmiş analitik ve hermenötik bir modellemedir. Dini bir fetva, kesin kazi bir hüküm veya ilahi muradın eksiksiz ve yegâne tefsiri niteliği taşımaz. Raporda yer alan simülasyonlar, göstergeler ve politika kolları; analistin benimsediği usûl ekolünün ve ampirik varsayımların bir türevidir. Bu metin, kod tabanlı biçimsel iç tutarlılık denetiminden (gem_lint.py) geçmiş olup, bağımsız dış akademik hakem heyeti (peer-review) tarafından tescil edilmedikçe bilimsel kesinlik iddiası barındırmaz.
 
 ---
 

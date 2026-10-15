@@ -1,6 +1,6 @@
 ---
 gem_version: "6.1.1"
-case_id: "GEM-RAPOR-2026-015"
+case_id: "QV-2026-012"
 surah: "Hadîd"
 verse: "57:25"
 topic: "Kitap, Mîzân ve Demir Üçlüsü: Anayasal Hukuk, Kurumsal Adalet ve Caydırıcı Savunma-Sanayi Mimarisi"
@@ -190,12 +190,12 @@ peer_review:
   review_notes: "Ön sürüm (PRE-RELEASE) aşamasındadır; bağımsız dış akademik hakem incelemesine açıktır."
 ---
 
-# GEM RAPOR-2026-015 — Kitap, Mîzân ve Demir Üçlüsü: Anayasal Hukuk, Kurumsal Adalet ve Caydırıcı Savunma-Sanayi Mimarisi (Hadîd 57:25 Tahlili)
+# Hadîd Sûresi 57:25 Tahlili — Kitap, Mîzân ve Demir Üçlüsü: Anayasal Hukuk, Kurumsal Adalet ve Caydırıcı Savunma-Sanayi Mimarisi
 
 ## FAZ I — KİMLİK, METİN VE BAĞLAM
 
 ### ADIM 00 — KÜNYE VE GİRİŞ BİLGİLERİ
-- **Vaka Kodu:** GEM-RAPOR-2026-015
+- **Vaka Kodu:** QV-2026-012
 - **Âyet:** Hadîd Sûresi 57:25
 - **Konu Başlığı:** Kitap, Mîzân ve Demir Üçlüsü: Anayasal Hukuk, Kurumsal Adalet ve Caydırıcı Savunma-Sanayi Mimarisi
 - **Tarih:** 2026-10-15
@@ -354,7 +354,7 @@ Kuantum hesaplama, otonom yapay zekâ silah sistemleri (LAWS) veya uzay madencil
 - **Metodolojik Cevap:** Âyetin dizilimi bu itirazı sentaktik ve semantik olarak çürütür: Âyet önce Beyyinât (açık deliller/akıl), Kitap (hukuk) ve Mîzân'ı (adalet) zikreder ve gayeyi "insanların adaleti ayakta tutması" olarak bağlar. Demir üçüncü sırada gelir ve hemen yanında "insanlar için faydalar" (menâfiu li'n-nâs) kaydı bulunur. Dolayısıyla âyet gücü kutsamaz; tam aksine başıboş bırakıldığında zulüm üretecek olan maddi gücü Kitap ve Mîzân'ın emrine ve denetimine sokar.
 
 ### ADIM 21 — HUME GİYOTİNİ (IS-OUGHT) VE FALSİFİABİLİTE PROTOKOLÜ
-- **Hume Giyotini (Olgu-Değer Ayrımı):** "Demir (teknoloji ve güç), adaleti korumak ve insanlığa fayda sağlamak için kullanılmalıdır" önermesi normatif bir değerdir (ought). Ancak "Güçlü ordulara ve ağır sanayiye sahip devletler daima adildir" önermesi ampirik olarak yanlıştır (is). GEM çerçevesi, teknolojik kapasite (olgu) ile adil yönetişim (değer) arasındaki uçurumu kapatmak için kurumsal denge ve denetleme mekanizmaları tasarlar.
+- **Hume Giyotini (Olgu-Değer Ayrımı):** "Demir (teknoloji ve güç), adaleti korumak ve insanlığa fayda sağlamak için kullanılmalıdır" önermesi normatif bir değerdir (ought). Ancak "Güçlü ordulara ve ağır sanayiye sahip devletler daima adildir" önermesi ampirik olarak yanlıştır (is). Quran Vision çerçevesi, teknolojik kapasite (olgu) ile adil yönetişim (değer) arasındaki uçurumu kapatmak için kurumsal denge ve denetleme mekanizmaları tasarlar.
 - **Falsifiabilite:** Hukukun üstünlüğü (Mîzân) ile sivil-endüstriyel teknoloji transferinin (menâfi') birlikte yürütüldüğü ekonomilerde hem iç barışın hem de toplam faktör verimliliğinin arttığı hipotezi; WJP, SIPRI ve UNIDO verileriyle 10 yıllık periyotlarda ampirik olarak test edilebilir ve yanlışlanabilir.
 
 ### ADIM 22 — ÖNYARGI VE YANLILIK FİLTRESİ
@@ -420,7 +420,7 @@ Bu raporda serdedilen tüm tespit, modelleme ve politika tasarımları birer be�
 
 ```yaml
 hakem_degerlendirme_protokolu:
-  rapor_id: "GEM-RAPOR-2026-015"
+  rapor_id: "QV-2026-012"
   sure_ayet: "Hadîd 57:25"
   tarih: "2026-10-15"
   status: "PRE-RELEASE"
@@ -437,5 +437,5 @@ hakem_degerlendirme_protokolu:
     boyut_5_kurumsal_tasarim_ve_ozgunluk: "— / 20"
     toplam_skor: "— / 100"
   hakem_karari: "PENDING_EXTERNAL_REVIEW"
-  derkenar_notu: "Rapor GEM v6.1.1 ve v6.2.1 İSNAD 2 akademik atıf standartlarına tam uyumlu teknik ön sürüm olarak üretilmiş olup, bağımsız dış akademik hakem incelemesine hazır durumdadır."
+  derkenar_notu: "Rapor Quran Vision v6.1.1 ve v6.2.1 İSNAD 2 akademik atıf standartlarına tam uyumlu teknik ön sürüm olarak üretilmiş olup, bağımsız dış akademik hakem incelemesine hazır durumdadır."
 ```

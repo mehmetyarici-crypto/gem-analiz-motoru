@@ -1,6 +1,6 @@
 [English](README.md) | **Türkçe**
 
-# GEM — Kur'an Temelli Stratejik Analiz Çerçevesi
+# Quran Vision — Kur'an Temelli Gelecek Vizyonu ve Stratejik Tefsir Çerçevesi
 
 > **Bu proje dini otorite iddia etmez.** Çıktılar yorumdur, hüküm değildir.
 > Kehanet, fetva veya kesin tarih iddiası taşımaz.
@@ -12,7 +12,7 @@
 - [Bu proje nedir?](#bu-proje-nedir)
 - [Ne yapar?](#ne-yapar)
 - [Ne yapmaz?](#ne-yapmaz)
-- [Yayımlanan GEM v6.1.1 Raporları (Külliyat)](#yayımlanan-gem-v611-raporları-külliyat)
+- [Yayımlanan Quran Vision Raporları (Külliyat)](#yayımlanan-gem-v611-raporları-külliyat)
 - [Sürümler ve Rehberler](#sürümler-ve-rehberler)
 - [Dosyalar](#dosyalar)
 - [Hızlı Başlangıç](#hızlı-başlangıç)
@@ -21,8 +21,7 @@
 
 ## Bu proje nedir?
 
-GEM (Gelecek Eksenli Muhakeme), Kur'an ayetlerini **stratejik analiz** yöntemleriyle
-inceleyen, **26 adımlı** ve **5 makro fazlı** bir düşünce ve denetim çerçevesidir.
+**Quran Vision** (Kur'an Temelli Gelecek Vizyonu), Kur'an âyetlerini klasik filolojik tahkik (İSNAD 2), makâsıd usûlü ve çağdaş **stratejik analiz** yöntemleriyle inceleyen, **26 adımlı** ve **5 makro fazlı** bir akademik araştırma ve karar mimarisi çerçevesidir.
 
 ### Ne yapar?
 - Âyet metnini **dilbilimsel** olarak analiz eder (siyak-sibak, nüzul, hitap, 4'lü lügat matrisi).

@@ -1,15 +1,15 @@
 [English](METHOD.md) | **Türkçe**
 
-# GEM — 26 Adımlı Analiz Yöntemi ve 5 Makro Faz
+# Quran Vision — 26 Adımlı Analiz Yöntemi ve 5 Makro Faz
 
 > **Not:** Bu belge yöntemin genel mimarisini ve adım dizinini özetler. Ayrıntılı metodolojik kurallar, epistemik sınır şartları ve V1–V11 doğrulama modülleri için güncel standart belgesine bakınız:  
-> 🔗 **[GEM v6.1.1 Standart Taslağı](docs/tr/GEM-v6.1.1-taslak.md)**
+> 🔗 **[Quran Vision v6.1.1 / v6.2.1 Standart Belgesi](docs/tr/GEM-v6.1.1-taslak.md)**
 
 ---
 
 ## Makro Fazlar ve Analiz Adımları (Katman 3)
 
-GEM v6.1.1 mimarisi, 26 analiz adımını bilişsel bütünlüğü korumak amacıyla **5 Makro Faz** altında düzenler:
+Quran Vision mimarisi, 26 analiz adımını bilişsel bütünlüğü korumak amacıyla **5 Makro Faz** altında düzenler:
 
 ### Faz I — Kimlik, Metin ve Bağlam
 - **Adım 00 — Künye ve Giriş Bilgileri:** Vaka kodu, âyet, konu, tarih, katman, H6, güven düzeyi.

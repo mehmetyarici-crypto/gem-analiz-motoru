@@ -1,6 +1,6 @@
 ---
 gem_version: "6.1.1"
-case_id: "GEM-RAPOR-2026-016"
+case_id: "QV-2026-013"
 surah: "Nahl"
 verse: "16:90"
 topic: "Evrensel Medeniyet Sözleşmesi: Adalet, İhsan, Sosyal Dayanışma ve Üçlü Yozlaşma (Fuhşiyat, Münker, Bağy) Karşıtı Yönetişim Mimarisi"
@@ -190,12 +190,12 @@ peer_review:
   review_notes: "Ön sürüm (PRE-RELEASE) aşamasındadır; bağımsız dış akademik hakem incelemesine açıktır."
 ---
 
-# GEM RAPOR-2026-016 — Evrensel Medeniyet Sözleşmesi: Adalet, İhsan, Sosyal Dayanışma ve Üçlü Yozlaşma (Fuhşiyat, Münker, Bağy) Karşıtı Yönetişim Mimarisi (Nahl 16:90 Tahlili)
+# Nahl Sûresi 16:90 Tahlili — Evrensel Medeniyet Sözleşmesi: Adalet, İhsan, Sosyal Dayanışma ve Üçlü Yozlaşma Karşıtı Yönetişim Mimarisi
 
 ## FAZ I — KİMLİK, METİN VE BAĞLAM
 
 ### ADIM 00 — KÜNYE VE GİRİŞ BİLGİLERİ
-- **Vaka Kodu:** GEM-RAPOR-2026-016
+- **Vaka Kodu:** QV-2026-013
 - **Âyet:** Nahl Sûresi 16:90 ("Câmi'u'l-Ahlâk ve'l-Hukûk / Kur'an'ın En Kapsayıcı Medeniyet Âyeti")
 - **Konu Başlığı:** Evrensel Medeniyet Sözleşmesi: Adalet, İhsan, Sosyal Dayanışma ve Üçlü Yozlaşma (Fuhşiyat, Münker, Bağy) Karşıtı Yönetişim Mimarisi
 - **Tarih:** 2026-10-15
@@ -423,7 +423,7 @@ Bu raporda serdedilen tüm tespit, modelleme ve politika tasarımları birer be�
 
 ```yaml
 hakem_degerlendirme_protokolu:
-  rapor_id: "GEM-RAPOR-2026-016"
+  rapor_id: "QV-2026-013"
   sure_ayet: "Nahl 16:90"
   tarih: "2026-10-15"
   status: "PRE-RELEASE"
@@ -440,5 +440,5 @@ hakem_degerlendirme_protokolu:
     boyut_5_kurumsal_tasarim_ve_ozgunluk: "— / 20"
     toplam_skor: "— / 100"
   hakem_karari: "PENDING_EXTERNAL_REVIEW"
-  derkenar_notu: "Rapor GEM v6.1.1 ve v6.2.1 İSNAD 2 akademik atıf standartlarına tam uyumlu teknik ön sürüm olarak üretilmiş olup, bağımsız dış akademik hakem incelemesine hazır durumdadır."
+  derkenar_notu: "Rapor Quran Vision v6.1.1 ve v6.2.1 İSNAD 2 akademik atıf standartlarına tam uyumlu teknik ön sürüm olarak üretilmiş olup, bağımsız dış akademik hakem incelemesine hazır durumdadır."
 ```

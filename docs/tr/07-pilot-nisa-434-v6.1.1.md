@@ -1,6 +1,6 @@
 ---
 gem_version: "6.1.1"
-case_id: "GEM-RAPOR-2026-005"
+case_id: "QV-2026-002"
 surah: "Nisâ"
 verse: "4:34"
 topic: "Aile İçi Yönetişim, Kavamiyyet Sorumluluğu ve Nüşûz Krizinde Tedricî Tedbirler Doktrini"
@@ -181,14 +181,14 @@ peer_review:
   review_notes: "Ön sürüm aşamasındadır; bağımsız dış akademik hakem incelemesine açıktır."
 ---
 
-# GEM RAPOR-2026-005 — Aile İçi Yönetişim, Kavamiyyet Sorumluluğu ve Nüşûz Krizinde Tedricî Tedbirler Doktrini
+# Nisâ Sûresi 4:34 Tahlili — Aile İçi Yönetişim, Kavamiyyet Sorumluluğu ve Nüşûz Krizinde Tedricî Tedbirler Doktrini
 
 ## FAZ I — KİMLİK, METİN VE BAĞLAM
 
 ### ADIM 00 — KÜNYE VE GİRİŞ BİLGİLERİ
-- **Vaka Kodu:** GEM-RAPOR-2026-005
+- **Vaka Kodu:** QV-2026-002
 - **Âyet:** Nisâ Sûresi 4:34
-- **Konu Başlığı:** Aile İçi Yönetişim, Kavamiyyet (Sorumluluk ve Himaye), Şiddet Yasağı ve Kurumsal Çözülme Dinamikleri
+- **Konu Başlığı:** Aile İçi Yönetişim, Kavamiyyet Sorumluluğu ve Nüşûz Krizinde Tedricî Tedbirler Doktrini
 - **Tarih:** 2026-10-14
 - **Sürüm:** v6.1.1 (Akademik Doğrulama Standartlı)
 - **Katman:** 3 (26 Adımlı Tam Analiz Motoru + Z-1..Z-5 Zorunlu Ekler)
@@ -441,7 +441,7 @@ Nisâ 4:34 âyetinin tefsir tarihindeki en çetin ve yaralayıcı aporiası (ç�
 Bu problematik şu çözülmesi güç düğümleri barındırır:
 1. **Hz. Peygamber'in Fiili Sünneti ve Nass Gerilimi:** Sahih rivayetlerle sabittir ki Hz. Peygamber ömrü boyunca hiçbir kadına el kaldırmamış (*"Mâ daraba Rasûlullâh bi-yedihi şey'en qattu ve lâ imraeten"*), kadınları dövenleri *"Onlar sizin hayırlılarınız değildir"* diyerek kınamıştır. Buna rağmen lafızcı fıkıh anlayışları bu fiili bir ruhsat olarak kodlamıştır.
 2. **Lügat ve Delalet Çıkmazı:** Arap dilinde `darabe` fiilinin onlarca mecazi anlamı (yola çıkmak, uzaklaşmak, terk etmek, örnek vermek) bulunmasına rağmen; nüzul ortamındaki örfi baskı sebebiyle klasik tefsircilerin ezici çoğunluğu kelimeyi fiziksel darp olarak anlamış; ancak oluşan vicdani rahatsızlığı gidermek için *"misvakla vurmak"*, *"yüze vurmamak"*, *"kemik kırmamak ve iz bırakmamak"* gibi son derece zorlama sınırlamalar icat etmek zorunda kalmışlardır.
-3. **Nisâ 4:35'in İhmali ve Kurumsal Körlük:** Nisâ 4:34 tek başına ele alındığında erkeğe tek taraflı bir yargıçlık ve infaz yetkisi veriyormuş yanılsaması doğurur. Oysa hemen peşinden gelen Nisâ 4:35, çözümü iki ailenin eşit temsil edildiği bağımsız bir hakem heyetine havale eder. GEM analiz motoru, Tabiîn fakihi Atâ b. Ebî Rebâh ve Tunuslu allâme İbn Âşûr'un çizgisini benimser: Aile içi şiddet bir hak değil, kamu otoritesinin kanunla yasaklaması gereken bir suçtur. Ancak bu tercih, klasik fıkıh mirasındaki yaygın ataerkil kabullerle hesaplaşmayı ve derin hermenötik bir yüzleşmeyi zorunlu kılar.
+3. **Nisâ 4:35'in İhmali ve Kurumsal Körlük:** Nisâ 4:34 tek başına ele alındığında erkeğe tek taraflı bir yargıçlık ve infaz yetkisi veriyormuş yanılsaması doğurur. Oysa hemen peşinden gelen Nisâ 4:35, çözümü iki ailenin eşit temsil edildiği bağımsız bir hakem heyetine havale eder. Quran Vision analiz motoru, Tabiîn fakihi Atâ b. Ebî Rebâh ve Tunuslu allâme İbn Âşûr'un çizgisini benimser: Aile içi şiddet bir hak değil, kamu otoritesinin kanunla yasaklaması gereken bir suçtur. Ancak bu tercih, klasik fıkıh mirasındaki yaygın ataerkil kabullerle hesaplaşmayı ve derin hermenötik bir yüzleşmeyi zorunlu kılar.
 
 ---
 
@@ -474,7 +474,7 @@ Bu problematik şu çözülmesi güç düğümleri barındırır:
 ## Z-4 · STANDART VE DÜRÜST SINIR İFADESİ [V10 ZORUNLU]
 
 > **METODOLOJİK VE EPİSTEMİK SINIR BEYANI:**
-> Bu rapor; Kur'an Temelli Gelecek Vizyonu (GEM v6.1.1) mimarisi çerçevesinde üretilmiş analitik ve hermenötik bir modellemedir. Dini bir fetva, kesin kazi bir hüküm veya ilahi muradın eksiksiz ve yegâne tefsiri niteliği taşımaz. Raporda yer alan simülasyonlar, göstergeler ve politika kolları; analistin benimsediği usûl ekolünün ve ampirik varsayımların bir türevidir. Bu metin, kod tabanlı biçimsel iç tutarlılık denetiminden (gem_lint.py) geçmiş olup, bağımsız dış akademik hakem heyeti (peer-review) tarafından tescil edilmedikçe bilimsel kesinlik iddiası barındırmaz.
+> Bu rapor; Kur'an Temelli Gelecek Vizyonu (Quran Vision v6.1.1) mimarisi çerçevesinde üretilmiş analitik ve hermenötik bir modellemedir. Dini bir fetva, kesin kazi bir hüküm veya ilahi muradın eksiksiz ve yegâne tefsiri niteliği taşımaz. Raporda yer alan simülasyonlar, göstergeler ve politika kolları; analistin benimsediği usûl ekolünün ve ampirik varsayımların bir türevidir. Bu metin, kod tabanlı biçimsel iç tutarlılık denetiminden (gem_lint.py) geçmiş olup, bağımsız dış akademik hakem heyeti (peer-review) tarafından tescil edilmedikçe bilimsel kesinlik iddiası barındırmaz.
 
 ---
 

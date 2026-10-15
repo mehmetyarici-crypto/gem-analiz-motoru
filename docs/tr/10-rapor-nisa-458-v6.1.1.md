@@ -1,6 +1,6 @@
 ---
 gem_version: "6.1.1"
-case_id: "GEM-RAPOR-2026-008"
+case_id: "QV-2026-005"
 surah: "Nisâ"
 verse: "4:58"
 topic: "Emanet, Liyakat, Yargı Bağımsızlığı ve Evrensel Adalet Mimarisi (Kamu Yönetişimi Doktrini)"
@@ -172,14 +172,14 @@ peer_review:
   review_notes: "Ön sürüm (PRE-RELEASE) aşamasındadır; bağımsız dış akademik hakem incelemesine açıktır."
 ---
 
-# GEM RAPOR-2026-008 — Emanet, Liyakat, Yargı Bağımsızlığı ve Evrensel Adalet Mimarisi (Nisâ 4:58 Tahlili)
+# Nisâ Sûresi 4:58 Tahlili — Emanet, Liyakat, Yargı Bağımsızlığı ve Evrensel Adalet Mimarisi
 
 ## FAZ I — KİMLİK, METİN VE BAĞLAM
 
 ### ADIM 00 — KÜNYE VE GİRİŞ BİLGİLERİ
-- **Vaka Kodu:** GEM-RAPOR-2026-008
+- **Vaka Kodu:** QV-2026-005
 - **Âyet:** Nisâ Sûresi 4:58 ("Yönetişim ve Adalet Âyeti")
-- **Konu Başlığı:** Emanet, Liyakat, Yargı Bağımsızlığı ve Evrensel Adalet Mimarisi
+- **Konu Başlığı:** Emanet, Liyakat, Yargı Bağımsızlığı ve Evrensel Adalet Mimarisi (Kamu Yönetişimi Doktrini)
 - **Tarih:** 2026-10-15
 - **Sürüm:** v6.1.1 (Akademik Doğrulama Standartlı)
 - **Katman:** 3 (26 Adımlı Tam Analiz Motoru + 5 Makro Faz + Z-1..Z-5 Zorunlu Ekler)
@@ -485,7 +485,7 @@ Nisâ 4:58 âyetinin kamu hukuku ve siyaset felsefesi tarihindeki en derin apori
 Bu gerilim şu çetin soruları doğurur:
 1. Bir bürokrat alanında dünyanın en yetkin uzmanı olsa dahi, iktidarın benimsediği temel siyasi vizyona ideolojik olarak karşıt ise; bu uzmanı o göreve atamak kamu maslahatına mı yoksa sabotaja mı yol açar?
 2. Tarih boyunca birçok siyasal rejim, "ihaneti önleme" ve "devletin bekası" gerekçesini öne sürerek liyakati bütünüyle tasfiye etmiş ve kamu makamlarını sadece sadık yandaşlara dağıtmıştır. Bu durum ise devleti ehliyetsiz ellerin idaresinde çöküşe sürüklemiştir.
-3. GEM analiz motoru bu krizi şu usûlî ayrımla karşılar: **Sadakat şahıslara veya partilere değil; anayasaya, hukukun üstünlüğüne ve devlete olmalıdır.** Teknik uzmanlık ve mesleki ehliyet liyakatin ilk şartıdır; ancak anayasal sadakat de liyakatin ahlaki bir cüzüdür. Buna rağmen siyasi iktidarların "beka" söylemiyle nepotizmi meşrulaştırma eğilimi, şablonun ötesinde daimi bir siyaset bilimi ve ahlak felsefesi problematiğidir.
+3. Quran Vision analiz motoru bu krizi şu usûlî ayrımla karşılar: **Sadakat şahıslara veya partilere değil; anayasaya, hukukun üstünlüğüne ve devlete olmalıdır.** Teknik uzmanlık ve mesleki ehliyet liyakatin ilk şartıdır; ancak anayasal sadakat de liyakatin ahlaki bir cüzüdür. Buna rağmen siyasi iktidarların "beka" söylemiyle nepotizmi meşrulaştırma eğilimi, şablonun ötesinde daimi bir siyaset bilimi ve ahlak felsefesi problematiğidir.
 
 ---
 
@@ -516,7 +516,7 @@ Bu gerilim şu çetin soruları doğurur:
 ### Z-4 · STANDART VE DÜRÜST SINIR İFADESİ [V10 ZORUNLU]
 
 > **METODOLOJİK VE EPİSTEMİK SINIR BEYANI:**
-> Bu rapor; Kur'an Temelli Gelecek Vizyonu (GEM v6.1.1) mimarisi çerçevesinde üretilmiş analitik ve hermenötik bir modellemedir. Dini bir fetva, kesin kazi bir hüküm veya ilahi muradın eksiksiz ve yegâne tefsiri niteliği taşımaz. Raporda yer alan simülasyonlar, göstergeler ve politika kolları; analistin benimsediği usûl ekolünün ve ampirik varsayımların bir türevidir. Bu metin, kod tabanlı biçimsel iç tutarlılık denetiminden (gem_lint.py) geçmiş olup, bağımsız dış akademik hakem heyeti (peer-review) tarafından tescil edilmedikçe bilimsel kesinlik iddiası barındırmaz.
+> Bu rapor; Kur'an Temelli Gelecek Vizyonu (Quran Vision v6.1.1) mimarisi çerçevesinde üretilmiş analitik ve hermenötik bir modellemedir. Dini bir fetva, kesin kazi bir hüküm veya ilahi muradın eksiksiz ve yegâne tefsiri niteliği taşımaz. Raporda yer alan simülasyonlar, göstergeler ve politika kolları; analistin benimsediği usûl ekolünün ve ampirik varsayımların bir türevidir. Bu metin, kod tabanlı biçimsel iç tutarlılık denetiminden (gem_lint.py) geçmiş olup, bağımsız dış akademik hakem heyeti (peer-review) tarafından tescil edilmedikçe bilimsel kesinlik iddiası barındırmaz.
 
 ---
 

@@ -1,6 +1,6 @@
 ---
 gem_version: "6.1.1"
-case_id: "GEM-RAPOR-2026-011"
+case_id: "QV-2026-008"
 surah: "İsrâ"
 verse: "17:36"
 topic: "Epistemik Sorumluluk, Enformasyon Doğrulama, Bilişsel Güvenlik ve Yapay Zekâ Çağında Veri Yönetişimi"
@@ -180,12 +180,12 @@ peer_review:
   review_notes: "Ön sürüm (PRE-RELEASE) aşamasındadır; bağımsız dış akademik hakem incelemesine açıktır."
 ---
 
-# GEM RAPOR-2026-011 — Epistemik Sorumluluk, Enformasyon Doğrulama, Bilişsel Güvenlik ve Yapay Zekâ Çağında Veri Yönetişimi (İsrâ 17:36 Tahlili)
+# İsrâ Sûresi 17:36 Tahlili — Epistemik Sorumluluk, Enformasyon Doğrulama, Bilişsel Güvenlik ve Yapay Zekâ Çağında Veri Yönetişimi
 
 ## FAZ I — KİMLİK, METİN VE BAĞLAM
 
 ### ADIM 00 — KÜNYE VE GİRİŞ BİLGİLERİ
-- **Vaka Kodu:** GEM-RAPOR-2026-011
+- **Vaka Kodu:** QV-2026-008
 - **Âyet:** İsrâ Sûresi 17:36 ("Epistemik Sorumluluk ve İdrak Âyeti")
 - **Konu Başlığı:** Epistemik Sorumluluk, Enformasyon Doğrulama, Bilişsel Güvenlik ve Yapay Zekâ Çağında Veri Yönetişimi
 - **Tarih:** 2026-10-15
@@ -367,7 +367,7 @@ Metin belirli bir ideolojik veya siyasi grubun bilgi anlayışını tekelleştir
 
 ### Z-1: ŞABLONA SIĞMAYAN ÖZGÜN PROBLEMATİK (APORİA)
 **"Yapay Zekânın 'Kafv' Fiilini Üstlenmesi ve Sorumluluğun Ontolojik Boşluğu":**
-Âyetteki sorumluluk ("mes'ûlâ") fail olan bir insan benliğine (nefs/fuâd) yöneliktir. Ancak günümüzde otonom yapay zekâ ajanları, insan müdahalesi olmaksızın milyarlarca verinin 'ardına düşmekte' (kafv), örüntüler çıkarıp kararlar vermektedir. Eğer bir yapay zekâ modeli halüsinasyon görüp masum bir insanı suçlu ilan eder veya dezenformasyon üretirse, 'sorumlu' kim olacaktır? Kulak ve gözün dijital sensörlerle, fuâdın sinir ağlarıyla ikame edildiği bir dünyada epistemik ve cezai sorumluluk kime rücu edecektir? Bu aporia, GEM metodolojisinin yapay zekâ sistemlerinde "Human-in-the-Loop" (insan denetiminde karar) ilkesini ilahi bir teklif zorunluluğu olarak temellendirmesini zorunlu kılar.
+Âyetteki sorumluluk ("mes'ûlâ") fail olan bir insan benliğine (nefs/fuâd) yöneliktir. Ancak günümüzde otonom yapay zekâ ajanları, insan müdahalesi olmaksızın milyarlarca verinin 'ardına düşmekte' (kafv), örüntüler çıkarıp kararlar vermektedir. Eğer bir yapay zekâ modeli halüsinasyon görüp masum bir insanı suçlu ilan eder veya dezenformasyon üretirse, 'sorumlu' kim olacaktır? Kulak ve gözün dijital sensörlerle, fuâdın sinir ağlarıyla ikame edildiği bir dünyada epistemik ve cezai sorumluluk kime rücu edecektir? Bu aporia, Quran Vision metodolojisinin yapay zekâ sistemlerinde "Human-in-the-Loop" (insan denetiminde karar) ilkesini ilahi bir teklif zorunluluğu olarak temellendirmesini zorunlu kılar.
 
 ### Z-2: ÇOK BOYUTLU İTİRAZ & RED TEAM MATRİSİ
 
@@ -415,7 +415,7 @@ Bu raporda serdedilen tüm tespit, modelleme ve politika tasarımları birer be�
 
 ```yaml
 hakem_degerlendirme_protokolu:
-  rapor_id: "GEM-RAPOR-2026-011"
+  rapor_id: "QV-2026-008"
   sure_ayet: "İsrâ 17:36"
   tarih: "2026-10-15"
   status: "PRE-RELEASE"
@@ -432,5 +432,5 @@ hakem_degerlendirme_protokolu:
     boyut_5_kurumsal_tasarim_ve_ozgunluk: "— / 20"
     toplam_skor: "— / 100"
   hakem_karari: "PENDING_EXTERNAL_REVIEW"
-  derkenar_notu: "Rapor GEM v6.1.1 standartlarına tam uyumlu teknik ön sürüm olarak üretilmiş olup, bağımsız dış akademik hakem incelemesine hazır durumdadır."
+  derkenar_notu: "Rapor Quran Vision v6.1.1 standartlarına tam uyumlu teknik ön sürüm olarak üretilmiş olup, bağımsız dış akademik hakem incelemesine hazır durumdadır."
 ```

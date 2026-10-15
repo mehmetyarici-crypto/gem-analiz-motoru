@@ -1,9 +1,9 @@
 ---
 gem_version: "6.1.1"
-case_id: "GEM-RAPOR-2026-004"
+case_id: "QV-2026-001"
 surah: "Tevbe"
 verse: "9:5"
-topic: "Ahit İhlali, Güç Kullanımı Eşiği ve Uluslararası Hukukta Meşru Müdafaa / Caydırıcılık Mimarisi (Kılıç Âyeti Tahlili)"
+topic: "Ahit İhlali, Caydırıcılık ve Uluslararası Hukukta Meşru Savunma Mimarisi"
 date: "2026-10-15"
 layer: 3
 h6: true
@@ -181,14 +181,14 @@ peer_review:
   review_notes: "Ön sürüm (PRE-RELEASE) aşamasındadır; bağımsız dış akademik hakem incelemesine açıktır."
 ---
 
-# GEM RAPOR-2026-004 — Antlaşma İhlali ve Meşru Güvenlik Harekâtı Doktrini (Kılıç Âyeti Tahlili)
+# Tevbe Sûresi 9:5 Tahlili — Ahit İhlali, Caydırıcılık ve Uluslararası Hukukta Meşru Savunma Mimarisi
 
 ## FAZ I — KİMLİK, METİN VE BAĞLAM
 
 ### ADIM 00 — KÜNYE VE GİRİŞ BİLGİLERİ
-- **Vaka Kodu:** GEM-RAPOR-2026-004
+- **Vaka Kodu:** QV-2026-001
 - **Âyet:** Tevbe Sûresi 9:5 ("Kılıç Âyeti" / Âyetü's-Seyf)
-- **Konu Başlığı:** Ahit İhlali, Güç Kullanımı Eşiği ve Uluslararası Hukukta Meşru Müdafaa / Caydırıcılık Mimarisi
+- **Konu Başlığı:** Ahit İhlali, Caydırıcılık ve Uluslararası Hukukta Meşru Savunma Mimarisi
 - **Tarih:** 2026-10-15
 - **Sürüm:** v6.1.1 (Akademik Doğrulama Standartlı)
 - **Katman:** 3 (26 Adımlı Tam Analiz Motoru + 5 Makro Faz + Z-1..Z-5 Zorunlu Ekler)
@@ -495,7 +495,7 @@ Tevbe 9:5 âyetinin geleneksel tefsir ve fıkıh tarihindeki en çetin aporiası
 Bu iddia şu derin teolojik ve metodolojik krizi doğurur:
 1. Eğer Tevbe 9:5 bütün barış âyetlerini nesh ettiyse; Kur'an'ın "Dinde zorlama yoktur" (Bakara 2:256) ve "Sizin dininiz size, benim dinim bana" (Kâfirûn 109:6) gibi temel ahlaki-ontolojik ilkeleri tarihsel birer parantezden mi ibarettir?
 2. Şâtıbî ve Cessâs gibi usûlcüler erken dönemdeki "nesh" ıstılahının "tahsis ve takyid" (genel kuralın özel duruma sınırlandırılması) anlamında kullanıldığını belgelemiştir. Ancak buna rağmen tarih boyunca siyasi iktidarlar ve radikal yapılar, nesh teorisini sınırsız bir fetih ve imha ideolojisinin meşruiyet aracına dönüştürmüştür.
-3. GEM analiz motorunun benimsediği Makasıdî Usûl, bu krizi "Tahsis Doktrini" ile çözmektedir: Barış genel ve kalıcı ilkedir; savaş ise antlaşmayı bozan muhariplere has istisnai bir güvenlik tedbiridir. Ancak bu çözüm dahi, klasik literatürdeki 140 âyetin nesh edildiği yönündeki devasa külliyatla modern okuyucu arasındaki hermenötik gerilimi tamamen ortadan kaldıramaz. Bu husus şablonun ötesinde, bağımsız bir kelam ve tefsir usûlü müzakeresini zorunlu kılmaktadır.
+3. Quran Vision analiz motorunun benimsediği Makasıdî Usûl, bu krizi "Tahsis Doktrini" ile çözmektedir: Barış genel ve kalıcı ilkedir; savaş ise antlaşmayı bozan muhariplere has istisnai bir güvenlik tedbiridir. Ancak bu çözüm dahi, klasik literatürdeki 140 âyetin nesh edildiği yönündeki devasa külliyatla modern okuyucu arasındaki hermenötik gerilimi tamamen ortadan kaldıramaz. Bu husus şablonun ötesinde, bağımsız bir kelam ve tefsir usûlü müzakeresini zorunlu kılmaktadır.
 
 ---
 
@@ -528,7 +528,7 @@ Bu iddia şu derin teolojik ve metodolojik krizi doğurur:
 ### Z-4 · STANDART VE DÜRÜST SINIR İFADESİ [V10 ZORUNLU]
 
 > **METODOLOJİK VE EPİSTEMİK SINIR BEYANI:**
-> Bu rapor; Kur'an Temelli Gelecek Vizyonu (GEM v6.1.1) mimarisi çerçevesinde üretilmiş analitik ve hermenötik bir modellemedir. Dini bir fetva, kesin kazi bir hüküm veya ilahi muradın eksiksiz ve yegâne tefsiri niteliği taşımaz. Raporda yer alan simülasyonlar, göstergeler ve politika kolları; analistin benimsediği usûl ekolünün ve ampirik varsayımların bir türevidir. Bu metin, kod tabanlı biçimsel iç tutarlılık denetiminden (gem_lint.py) geçmiş olup, bağımsız dış akademik hakem heyeti (peer-review) tarafından tescil edilmedikçe bilimsel kesinlik iddiası barındırmaz.
+> Bu rapor; Kur'an Temelli Gelecek Vizyonu (Quran Vision v6.1.1) mimarisi çerçevesinde üretilmiş analitik ve hermenötik bir modellemedir. Dini bir fetva, kesin kazi bir hüküm veya ilahi muradın eksiksiz ve yegâne tefsiri niteliği taşımaz. Raporda yer alan simülasyonlar, göstergeler ve politika kolları; analistin benimsediği usûl ekolünün ve ampirik varsayımların bir türevidir. Bu metin, kod tabanlı biçimsel iç tutarlılık denetiminden (gem_lint.py) geçmiş olup, bağımsız dış akademik hakem heyeti (peer-review) tarafından tescil edilmedikçe bilimsel kesinlik iddiası barındırmaz.
 
 ---
 

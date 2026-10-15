@@ -1,15 +1,15 @@
 **English** | [Türkçe](YONTEM.md)
 
-# GEM — 26-Step Analytical Method and 5 Macro Phases
+# Quran Vision — 26-Step Analytical Method and 5 Macro Phases
 
-> **Note:** This document provides a structural summary of the 26-step method and macro phases. For detailed methodological criteria, epistemic disclaimer standards, and V1–V11 validation modules, please see the current specification draft:  
-> 🔗 **[GEM v6.1.1 Specification Draft (Turkish)](docs/tr/GEM-v6.1.1-taslak.md)**
+> **Note:** This document provides a structural summary of the 26-step method and macro phases. For detailed methodological criteria, epistemic disclaimer standards, and V1–V11 validation modules, please see the current specification:  
+> 🔗 **[Quran Vision v6.1.1 / v6.2.1 Specification (Turkish)](docs/tr/GEM-v6.1.1-taslak.md)**
 
 ---
 
 ## Macro Phases and Analytical Steps (Layer 3)
 
-The GEM v6.1.1 architecture organizes the 26 analysis steps under **5 Macro Phases** to preserve cognitive and epistemological coherence:
+The Quran Vision architecture organizes the 26 analysis steps under **5 Macro Phases** to preserve cognitive and epistemological coherence:
 
 ### Phase I — Identity, Text, and Context
 - **Step 00 — Metadata and Header Info:** Case code, verse, topic, date, layer, H6 flag, confidence grade.
