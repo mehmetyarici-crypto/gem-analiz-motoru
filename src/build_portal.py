@@ -135,6 +135,12 @@ def format_inline_md_py(text: str) -> str:
     if not text:
         return ""
     s = html_lib.escape(text)
+    # Clean LaTeX math operators & expressions into crisp Unicode typography
+    s = s.replace(r"\ge", "≥").replace(r"\le", "≤").replace(r"\approx", "≈")
+    s = s.replace(r"\rightarrow", "→").replace(r"\to", "→").replace(r"\%", "%")
+    s = re.sub(r"\$([^$]+)\$", r"<strong>\1</strong>", s)
+    # Clean backtick inline code
+    s = re.sub(r"`([^`]+)`", r"<code>\1</code>", s)
     s = s.replace("[NAKİL]", '<span class="tag-nakil">[NAKİL]</span>')
     s = s.replace("[CITATION / NAKİL]", '<span class="tag-nakil">[CITATION / NAKİL]</span>')
     s = s.replace("[CITATION]", '<span class="tag-nakil">[CITATION]</span>')
@@ -144,6 +150,12 @@ def format_inline_md_py(text: str) -> str:
     s = re.sub(r"\*\*(.*?)\*\*", r"<strong>\1</strong>", s)
     s = re.sub(r"\*(.*?)\*", r"<em>\1</em>", s)
     s = re.sub(r"\[\^(\d+)\]", r'<sup class="fn-ref">[\1]</sup>', s)
+    # Wrap inline Arabic sequences in <bdi dir="rtl"> so bidirectional punctuation never scrambles in PDF
+    s = re.sub(
+        r"([\u0600-\u06FF][\u0600-\u06FF\s\u064B-\u065F\u0670،؛؟\.…]*[\u0600-\u06FF\u064B-\u065F])",
+        r'<bdi dir="rtl" style="font-family:\'Traditional Arabic\',\'Amiri\',serif; font-size:11.5pt; color:#064e3b;">\1</bdi>',
+        s,
+    )
     return s
 
 
@@ -2616,12 +2628,21 @@ function formatInlineMd(str) {{
   if (!str) return '';
   const isEn = currentLang === 'en';
   return str
+    .replace(/\\\\ge/g, '≥')
+    .replace(/\\\\le/g, '≤')
+    .replace(/\\\\approx/g, '≈')
+    .replace(/\\\\rightarrow/g, '→')
+    .replace(/\\\\to/g, '→')
+    .replace(/\\\\%/g, '%')
+    .replace(/\\$([^$]+)\\$/g, '<strong>$1</strong>')
     .replace(/\\[NAKİL\\]/g, `<span class="tag-nakil">${{isEn ? '[CITATION / NAKİL]' : '[NAKİL]'}}</span>`)
     .replace(/\\[ANALYSIS\\]/g, '<span class="tag-yorum">[ANALYSIS]</span>')
     .replace(/\\[YORUM\\]/g, `<span class="tag-yorum">${{isEn ? '[ANALYSIS / YORUM]' : '[YORUM]'}}</span>`)
+    .replace(/`([^`]+)`/g, '<code>$1</code>')
     .replace(/\\*\\*(.*?)\\*\\*/g, '<strong>$1</strong>')
     .replace(/\\*(.*?)\\*/g, '<em>$1</em>')
-    .replace(/\\[\\^(\\d+)\\]/g, '<sup style="color:var(--accent-gold); font-weight:700;">[$1]</sup>');
+    .replace(/\\[\\^(\\d+)\\]/g, '<sup style="color:var(--accent-gold); font-weight:700;">[$1]</sup>')
+    .replace(/([\\u0600-\\u06FF][\\u0600-\\u06FF\\s\\u064B-\\u065F\\u0670،؛؟.]*[\\u0600-\\u06FF\\u064B-\\u065F])/g, '<bdi dir="rtl" style="font-family:\\x27Amiri\\x27,serif; font-size:1.15em; color:var(--accent-gold);">$1</bdi>');
 }}
 
 function formatZ5YamlJs(rawYaml) {{

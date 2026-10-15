@@ -1810,12 +1810,21 @@ function formatInlineMd(str) {
   if (!str) return '';
   const isEn = currentLang === 'en';
   return str
+    .replace(/\\ge/g, '≥')
+    .replace(/\\le/g, '≤')
+    .replace(/\\approx/g, '≈')
+    .replace(/\\rightarrow/g, '→')
+    .replace(/\\to/g, '→')
+    .replace(/\\%/g, '%')
+    .replace(/\$([^$]+)\$/g, '<strong>$1</strong>')
     .replace(/\[NAKİL\]/g, `<span class="tag-nakil">${isEn ? '[CITATION / NAKİL]' : '[NAKİL]'}</span>`)
     .replace(/\[ANALYSIS\]/g, '<span class="tag-yorum">[ANALYSIS]</span>')
     .replace(/\[YORUM\]/g, `<span class="tag-yorum">${isEn ? '[ANALYSIS / YORUM]' : '[YORUM]'}</span>`)
+    .replace(/`([^`]+)`/g, '<code>$1</code>')
     .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
     .replace(/\*(.*?)\*/g, '<em>$1</em>')
-    .replace(/\[\^(\d+)\]/g, '<sup style="color:var(--accent-gold); font-weight:700;">[$1]</sup>');
+    .replace(/\[\^(\d+)\]/g, '<sup style="color:var(--accent-gold); font-weight:700;">[$1]</sup>')
+    .replace(/([\u0600-\u06FF][\u0600-\u06FF\s\u064B-\u065F\u0670،؛؟.]*[\u0600-\u06FF\u064B-\u065F])/g, '<bdi dir="rtl" style="font-family:\x27Amiri\x27,serif; font-size:1.15em; color:var(--accent-gold);">$1</bdi>');
 }
 
 function formatZ5YamlJs(rawYaml) {
