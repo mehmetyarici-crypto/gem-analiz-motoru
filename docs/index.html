@@ -1117,7 +1117,26 @@ function selectReport(idx) {
 
   // Tab 3: Full 26-Step Markdown (Full English 26-Step Document when in EN mode, Full Turkish 26-Step Document when in TR mode)
   const activeBodyMd = isEn ? (r.body_en || r.body) : r.body;
-  document.getElementById('tab-fulltext').innerHTML = `<div class="md-body">${renderMarkdown(activeBodyMd)}</div>`;
+  let renderedFullMd = renderMarkdown(activeBodyMd);
+  if (!renderedFullMd.includes('id="z5-peer-review-card"')) {
+    renderedFullMd += formatZ5YamlJs(`rapor_id: "${r.case_id}"\nsure_ayet: "${getReportSurah(r)} ${r.verse}"\ntarih: "2026-10-15"`);
+  }
+  const fulltextToolbar = `
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; padding:12px 16px; margin-bottom:18px; border-radius:10px; background:var(--bg-surface); border:1px solid var(--border);">
+      <div style="font-size:13px; color:var(--text-secondary);">
+        📖 <strong>${r.case_id} • ${getReportSurah(r)} ${r.verse}</strong> — ${isEn ? '26-Step Full Academic Text & Z-5 Peer-Review Protocol' : '26 Adımlı Tam Akademik Metin & Z-5 Hakem Değerlendirme Formu'}
+      </div>
+      <div style="display:flex; gap:8px; flex-wrap:wrap;">
+        <button class="btn" style="padding:6px 12px; font-size:12px;" onclick="document.getElementById('z5-peer-review-card')?.scrollIntoView({behavior:'smooth', block:'center'})">
+          🔽 ${isEn ? 'Jump to Z-5 Peer-Review Table' : 'Z-5 Hakem Değerlendirme Tablosuna İn'}
+        </button>
+        <button class="btn btn-gold" style="padding:6px 12px; font-size:12px;" onclick="openFeedbackTab()">
+          ✍️ ${isEn ? 'Submit Peer Review / Commentary for This Report' : 'Bu Rapor İçin Hakem Şerhi / Değerlendirme Gönder'}
+        </button>
+      </div>
+    </div>
+  `;
+  document.getElementById('tab-fulltext').innerHTML = `<div class="md-body">${fulltextToolbar}${renderedFullMd}</div>`;
 
   // Tab 4: Pedagogy & Lesson Plan Kit (TYMM)
   renderPedagogyTab(r);
@@ -1733,6 +1752,7 @@ function formatInlineMd(str) {
 }
 
 function formatZ5YamlJs(rawYaml) {
+  const isEn = currentLang === 'en';
   const data = {};
   rawYaml.split('\n').forEach(line => {
     const idx = line.indexOf(':');
@@ -1745,63 +1765,67 @@ function formatZ5YamlJs(rawYaml) {
   const raporId = data.rapor_id || '—';
   const sureAyet = data.sure_ayet || '—';
   const tarih = data.tarih || '2026-10-15';
-  const uzmanlik = data.uzmanlik_alani || 'Tefsir / İslam Hukuku / Sosyal Bilimler';
-  const notu = data.derkenar_notu || 'Rapor Quran Vision v6.1.1 ve v6.2.1 İSNAD 2 akademik atıf standartlarına tam uyumlu teknik ön sürüm olarak üretilmiş olup, bağımsız dış akademik hakem incelemesine hazır durumdadır.';
+  const uzmanlik = data.uzmanlik_alani || (isEn ? 'Tafsir / Islamic Law / Social Sciences' : 'Tefsir / İslam Hukuku / Sosyal Bilimler');
+  const notu = data.derkenar_notu || (isEn
+    ? 'Produced in full compliance with Quran Vision v6.1.1 & v6.2.1 ISNAD 2 and APA 7 / DOI standards; open for independent external academic peer review.'
+    : 'Rapor Quran Vision v6.1.1 ve v6.2.1 İSNAD 2 akademik atıf standartlarına tam uyumlu teknik ön sürüm olarak üretilmiş olup, bağımsız dış akademik hakem incelemesine hazır durumdadır.');
   return `
-    <div style="border:1px solid var(--border); background:var(--bg-surface); border-radius:12px; padding:16px 18px; margin:14px 0;">
-      <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-bottom:12px;">
+    <div id="z5-peer-review-card" style="border:1.5px solid var(--accent-gold); background:var(--bg-surface); border-radius:12px; padding:18px 20px; margin:18px 0;">
+      <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-bottom:14px;">
         <div>
-          <span class="badge badge-gold">🏛️ AKADEMİK DÜRÜSTLÜK & AÇIK HAKEMLİK PROTOKOLÜ (Z-5)</span>
+          <span class="badge badge-gold">${isEn ? '🏛️ ACADEMIC INTEGRITY & OPEN PEER-REVIEW PROTOCOL (Z-5)' : '🏛️ AKADEMİK DÜRÜSTLÜK & AÇIK HAKEMLİK PROTOKOLÜ (Z-5)'}</span>
           <span class="badge badge-emerald" style="margin-left:6px;">${raporId} • ${sureAyet}</span>
         </div>
-        <button class="btn btn-gold" style="padding:5px 12px; font-size:12px;" onclick="openFeedbackTab()">✍️ Bu Rapor İçin Hakem Şerhi / Değerlendirme Gönder</button>
+        <button class="btn btn-gold" style="padding:7px 14px; font-size:12.5px;" onclick="openFeedbackTab()">
+          ✍️ ${isEn ? 'Submit Peer Review / Commentary for This Report' : 'Bu Rapor İçin Hakem Şerhi / Değerlendirme Gönder'}
+        </button>
       </div>
       <table style="margin:8px 0;">
         <thead>
           <tr>
-            <th style="width:36%;">Akademik Değerlendirme Boyutu</th>
-            <th style="width:46%;">Denetim Kapsamı ve Metodolojik Ölçüt</th>
-            <th style="width:18%;">Rubrik Puanı</th>
+            <th style="width:36%;">${isEn ? 'Academic Evaluation Dimension' : 'Akademik Değerlendirme Boyutu'}</th>
+            <th style="width:46%;">${isEn ? 'Audit Scope & Methodological Criterion' : 'Denetim Kapsamı ve Metodolojik Ölçüt'}</th>
+            <th style="width:18%;">${isEn ? 'Rubric Score' : 'Rubrik Puanı'}</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td><strong>Künye & Hakemlik Statüsü</strong></td>
-            <td>Tarih: <strong>${tarih}</strong> • Uzmanlık Alanı: <em>${uzmanlik}</em></td>
-            <td><span class="badge badge-gold">AÇIK HAKEMLİK</span></td>
+            <td><strong>${isEn ? 'Metadata & Review Status' : 'Künye & Hakemlik Statüsü'}</strong></td>
+            <td>${isEn ? 'Date' : 'Tarih'}: <strong>${tarih}</strong> • ${isEn ? 'Field' : 'Uzmanlık Alanı'}: <em>${uzmanlik}</em></td>
+            <td><span class="badge badge-gold">${isEn ? 'OPEN PEER REVIEW' : 'AÇIK HAKEMLİK'}</span></td>
           </tr>
           <tr>
-            <td><strong>1. Metin ve Klasik Tahkik (İSNAD 2)</strong></td>
-            <td>Arapça ibare doğruluğu, cilt/sayfa tahkiki ve <code>[NAKİL]</code> / <code>[YORUM]</code> ayrımı</td>
+            <td><strong>${isEn ? '1. Textual & Classical Verification (ISNAD 2)' : '1. Metin ve Klasik Tahkik (İSNAD 2)'}</strong></td>
+            <td>${isEn ? 'Primary Arabic quote accuracy, vol/page verification & [CITATION]/[ANALYSIS] separation' : 'Arapça ibare doğruluğu, cilt/sayfa tahkiki ve <code>[NAKİL]</code> / <code>[YORUM]</code> ayrımı'}</td>
             <td><strong>— / 20</strong></td>
           </tr>
           <tr>
-            <td><strong>2. Sosyo-Politik ve Kriz Analizi</strong></td>
-            <td>Aktör haritası, kırılma noktası (N4) ve tarihsel retrodiction tutarlılığı</td>
+            <td><strong>${isEn ? '2. Socio-Political & Crisis Modeling' : '2. Sosyo-Politik ve Kriz Analizi'}</strong></td>
+            <td>${isEn ? 'Actor mapping, tipping point (N4) & historical retrodiction coherence' : 'Aktör haritası, kırılma noktası (N4) ve tarihsel retrodiction tutarlılığı'}</td>
             <td><strong>— / 20</strong></td>
           </tr>
           <tr>
-            <td><strong>3. Dil Güvenliği ve Tarafsızlık</strong></td>
-            <td>Mezhebî/ideolojik indirgemecilikten uzak, kapsayıcı ve akademik üslup</td>
+            <td><strong>${isEn ? '3. Language Safety & Impartiality' : '3. Dil Güvenliği ve Tarafsızlık'}</strong></td>
+            <td>${isEn ? 'Inclusive academic register free from sectarian or ideological reductionism' : 'Mezhebî/ideolojik indirgemecilikten uzak, kapsayıcı ve akademik üslup'}</td>
             <td><strong>— / 20</strong></td>
           </tr>
           <tr>
-            <td><strong>4. Falsifiabilite ve Hume Giyotini</strong></td>
-            <td>Olgu-değer ayrımı, yanlışlanabilir eşikler (th-01..03) ve DOI veri uyumu</td>
+            <td><strong>${isEn ? '4. Falsifiability & Hume’s Guillotine' : '4. Falsifiabilite ve Hume Giyotini'}</strong></td>
+            <td>${isEn ? 'Is-ought distinction, falsifiable thresholds (th-01..03) & DOI dataset alignment' : 'Olgu-değer ayrımı, yanlışlanabilir eşikler (th-01..03) ve DOI veri uyumu'}</td>
             <td><strong>— / 20</strong></td>
           </tr>
           <tr>
-            <td><strong>5. Kurumsal Tasarım ve Özgünlük</strong></td>
-            <td>Uygulanabilir politika kolları, TYMM pedagojik uyumu ve Z-1 Aporia derinliği</td>
+            <td><strong>${isEn ? '5. Institutional Design & Originality' : '5. Kurumsal Tasarım ve Özgünlük'}</strong></td>
+            <td>${isEn ? 'Actionable policy branches, pedagogical integration & Z-1 Aporia depth' : 'Uygulanabilir politika kolları, TYMM pedagojik uyumu ve Z-1 Aporia derinliği'}</td>
             <td><strong>— / 20</strong></td>
           </tr>
           <tr>
-            <td><strong>TOPLAM AKADEMİK SKOR</strong></td>
-            <td><strong>Dış Hakem Kararı:</strong> Bağımsız Akademik Hakem Değerlendirmesine Açık</td>
+            <td><strong>${isEn ? 'TOTAL ACADEMIC SCORE' : 'TOPLAM AKADEMİK SKOR'}</strong></td>
+            <td><strong>${isEn ? 'External Referee Decision:' : 'Dış Hakem Kararı:'}</strong> ${isEn ? 'Open for Independent Peer Evaluation' : 'Bağımsız Akademik Hakem Değerlendirmesine Açık'}</td>
             <td><strong style="color:var(--accent-gold);">— / 100</strong></td>
           </tr>
           <tr>
-            <td><strong>Editoryal Derkenar Notu</strong></td>
+            <td><strong>${isEn ? 'Editorial Note' : 'Editoryal Derkenar Notu'}</strong></td>
             <td colspan="2" style="color:var(--text-secondary); line-height:1.6;">${notu}</td>
           </tr>
         </tbody>
@@ -1900,6 +1924,28 @@ function toggleTheme() {
 document.getElementById('searchInput').addEventListener('input', (e) => renderSidebar(e.target.value));
 
 setLanguage(currentLang);
+
+// Deep-link URL query parameters (?report=QV-2026-014&tab=fulltext&scroll=z5)
+(function handleUrlParams() {
+  try {
+    const params = new URLSearchParams(window.location.search);
+    const repParam = params.get('report');
+    const tabParam = params.get('tab');
+    const scrollParam = params.get('scroll');
+    if (repParam) {
+      const foundIdx = REPORTS.findIndex(x => x.case_id.toUpperCase() === repParam.toUpperCase());
+      if (foundIdx > -1) selectReport(foundIdx);
+    }
+    if (tabParam && document.getElementById('tabBtn-' + tabParam)) {
+      setTab(tabParam, document.getElementById('tabBtn-' + tabParam));
+    }
+    if (scrollParam === 'z5') {
+      setTimeout(() => {
+        document.getElementById('z5-peer-review-card')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }, 250);
+    }
+  } catch (e) {}
+})();
 </script>
 </body>
 </html>
