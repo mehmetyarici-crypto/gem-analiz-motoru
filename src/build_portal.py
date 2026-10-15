@@ -137,6 +137,8 @@ def format_inline_md_py(text: str) -> str:
     s = html_lib.escape(text)
     # Clean LaTeX math operators & expressions into crisp Unicode typography
     s = re.sub(r"\\text\{([^}]*)\}", r"\1", s)
+    s = s.replace("v6.1.1 ve v6.2.1", "v6.2.1").replace("v6.1.1 & v6.2.1", "v6.2.1")
+    s = re.sub(r"(?<!-)v6\.1\.1(?!\.md)", "v6.2.1", s)
     s = s.replace(r"\ge", "≥").replace(r"\le", "≤").replace(r"\approx", "≈")
     s = s.replace(r"\rightarrow", "→").replace(r"\to", "→").replace(r"\%", "%")
     s = re.sub(r"\$([^$]+)\$", r"<strong>\1</strong>", s)
@@ -173,10 +175,12 @@ def format_z5_yaml_py(yaml_text: str) -> str:
     sure_ayet = html_lib.escape(data.get("sure_ayet", "—"))
     tarih = html_lib.escape(data.get("tarih", "2026-10-15"))
     uzmanlik = html_lib.escape(data.get("uzmanlik_alani", "Tefsir / İslam Hukuku / Sosyal Bilimler"))
-    notu = html_lib.escape(data.get(
+    raw_notu = data.get(
         "derkenar_notu",
-        "Rapor Quran Vision v6.1.1 ve v6.2.1 İSNAD 2 akademik atıf standartlarına tam uyumlu teknik ön sürüm olarak üretilmiş olup, bağımsız dış akademik hakem incelemesine hazır durumdadır."
-    ))
+        "Rapor Quran Vision v6.2.1 İSNAD 2 akademik atıf standartlarına tam uyumlu teknik ön sürüm olarak üretilmiş olup, bağımsız dış akademik hakem incelemesine hazır durumdadır."
+    )
+    raw_notu = raw_notu.replace("v6.1.1 ve v6.2.1", "v6.2.1").replace("v6.1.1", "v6.2.1")
+    notu = html_lib.escape(raw_notu)
     return f"""
     <table>
       <thead>
@@ -2740,6 +2744,9 @@ function formatInlineMd(str) {{
   const isEn = currentLang === 'en';
   return str
     .replace(/\\\\text\\{{([^}}]*)\\}}/g, '$1')
+    .replace(/v6\\.1\\.1 ve v6\\.2\\.1/g, 'v6.2.1')
+    .replace(/v6\\.1\\.1 & v6\\.2\\.1/g, 'v6.2.1')
+    .replace(/(?<!-)v6\\.1\\.1(?!\\.md)/g, 'v6.2.1')
     .replace(/\\\\ge/g, '≥')
     .replace(/\\\\le/g, '≤')
     .replace(/\\\\approx/g, '≈')
@@ -2772,9 +2779,10 @@ function formatZ5YamlJs(rawYaml) {{
   const sureAyet = data.sure_ayet || '—';
   const tarih = data.tarih || '2026-10-15';
   const uzmanlik = data.uzmanlik_alani || (isEn ? 'Tafsir / Islamic Law / Social Sciences' : 'Tefsir / İslam Hukuku / Sosyal Bilimler');
-  const notu = data.derkenar_notu || (isEn
-    ? 'Produced in full compliance with Quran Vision v6.1.1 & v6.2.1 ISNAD 2 and APA 7 / DOI standards; open for independent external academic peer review.'
-    : 'Rapor Quran Vision v6.1.1 ve v6.2.1 İSNAD 2 akademik atıf standartlarına tam uyumlu teknik ön sürüm olarak üretilmiş olup, bağımsız dış akademik hakem incelemesine hazır durumdadır.');
+  let notu = data.derkenar_notu || (isEn
+    ? 'Produced in full compliance with Quran Vision v6.2.1 ISNAD 2 and APA 7 / DOI standards; open for independent external academic peer review.'
+    : 'Rapor Quran Vision v6.2.1 İSNAD 2 akademik atıf standartlarına tam uyumlu teknik ön sürüm olarak üretilmiş olup, bağımsız dış akademik hakem incelemesine hazır durumdadır.');
+  notu = notu.replace(/v6\\.1\\.1 ve v6\\.2\\.1/g, 'v6.2.1').replace(/v6\\.1\\.1/g, 'v6.2.1');
   return `
     <div id="z5-peer-review-card" style="border:1.5px solid var(--accent-gold); background:var(--bg-surface); border-radius:12px; padding:18px 20px; margin:18px 0;">
       <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-bottom:14px;">

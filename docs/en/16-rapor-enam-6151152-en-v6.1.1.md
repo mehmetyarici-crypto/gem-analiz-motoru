@@ -1,7 +1,7 @@
 # QV-2026-011 — Surah Al-An'am 6:151-152: Universal Moral Decalogue, Fundamental Human Rights Charter, Market Integrity & Judicial Impartiality
 
 **Document Status:** `PRE-RELEASE` | **Confidence Grade:** `B` | **Methodological Layer:** `Layer 3 (H6 Complex Verse Protocol)`
-**External Cryptographic Manifest (SHA-256):** `30ca2012d9447183edd0b0bcf9ac26f5ad2f07859e556b3c233ebdc272d884ab`
+**External Cryptographic Manifest (SHA-256):** `328423dc78f2989a1f3336473fb86a5a8c0fe800b4baf886b2caa4163a35ee76`
 
 ---
 

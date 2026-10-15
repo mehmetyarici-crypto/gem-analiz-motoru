@@ -203,7 +203,7 @@ peer_review:
 - **Âyet:** Mâide Sûresi 5:32 ("Yaşam Hakkının Evrensel Dokunulmazlığı ve İhyâ [Can Kurtarma] Beyannamesi")
 - **Konu Başlığı:** Yaşam Hakkının Dokunulmazlığı, İhyâ (Can Kurtarma) Doktrini, Küresel İnsani Güvenlik ve Biyoetik Mimarisi
 - **Tarih:** 2026-10-15
-- **Sürüm:** v6.1.1 (Akademik Doğrulama Standartlı • CERN/Zenodo DOI: `10.5281/zenodo.23391192` • ORCID: `0009-0003-0356-8582`)
+- **Sürüm:** v6.2.1 (Akademik Doğrulama Standartlı • CERN/Zenodo DOI: `10.5281/zenodo.23391192` • ORCID: `0009-0003-0356-8582`)
 - **Katman:** 3 (26 Adımlı Tam Analiz Motoru + 5 Makro Faz + Z-1..Z-5 Zorunlu Ekler)
 - **H6 Durumu:** Evet (Zorlu Âyet Kapsamı — Yaşam Hakkı, Fesâd fi'l-Arz Kavramının Sınırları, Ceza Hukuku İhtiyatı ve Evrensel İhyâ Doktrini)
 - **Dil:** Türkçe (TR)
@@ -441,5 +441,5 @@ hakem_degerlendirme_protokolu:
     boyut_5_kurumsal_tasarim_ve_ozgunluk: "— / 20"
     toplam_skor: "— / 100"
   hakem_karari: "PENDING_EXTERNAL_REVIEW"
-  derkenar_notu: "Rapor Quran Vision v6.1.1 ve v6.2.1 İSNAD 2 akademik atıf standartlarına tam uyumlu teknik ön sürüm olarak üretilmiş olup, bağımsız dış akademik hakem incelemesine hazır durumdadır."
+  derkenar_notu: "Rapor Quran Vision v6.2.1 İSNAD 2 akademik atıf standartlarına tam uyumlu teknik ön sürüm olarak üretilmiş olup, bağımsız dış akademik hakem incelemesine hazır durumdadır."
 ```

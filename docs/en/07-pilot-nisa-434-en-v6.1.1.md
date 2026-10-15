@@ -1,7 +1,7 @@
 # QV-2026-002 — Surah An-Nisa 4:34: Intra-Family Governance, Fiduciary Responsibility (Qawwamah) & Graduated De-Escalation in Marital Crisis
 
 **Document Status:** `PRE-RELEASE` | **Confidence Grade:** `B` | **Methodological Layer:** `Layer 3 (H6 Complex Verse Protocol)`
-**External Cryptographic Manifest (SHA-256):** `44ba872c9609a6c9c2d06fc60543cd219a1a8e63c4d0219db98bc4bb9f355a51`
+**External Cryptographic Manifest (SHA-256):** `77856f9bd62fd7250514c7135cf427819ab413e35fe2766f2a0fb4b3b652555d`
 
 ---
 

@@ -1,7 +1,7 @@
 # QV-2026-003 — Surah Al-Ma'idah 5:38: Property Protection, Stringent Evidentiary Conditions (Hirz & Nisab), State of Necessity & Social Security Architecture
 
 **Document Status:** `PRE-RELEASE` | **Confidence Grade:** `B` | **Methodological Layer:** `Layer 3 (H6 Complex Verse Protocol)`
-**External Cryptographic Manifest (SHA-256):** `3e461b7d7d11aa53c5c0419ccf43bb922a95e1c94ea2237958fa7990b4effcf1`
+**External Cryptographic Manifest (SHA-256):** `07e45c370ce5461812a9398212d900a6f4814ee15202621dc34080376f8a9351`
 
 ---
 

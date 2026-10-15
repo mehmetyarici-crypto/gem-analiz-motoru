@@ -189,7 +189,7 @@ peer_review:
 - **Âyet:** Hucurât Sûresi 49:9-10 ("Islah, Bağy ve Uhuvvet Âyetleri")
 - **Konu Başlığı:** Uluslararası Çatışma Çözümü, Bağy Doktrini, Kolektif Güvenlik ve Barış Gücü Yönetişimi
 - **Tarih:** 2026-10-15
-- **Sürüm:** v6.1.1 (Akademik Doğrulama Standartlı)
+- **Sürüm:** v6.2.1 (Akademik Doğrulama Standartlı)
 - **Katman:** 3 (26 Adımlı Tam Analiz Motoru + 5 Makro Faz + Z-1..Z-5 Zorunlu Ekler)
 - **H6 Durumu:** Evet (Zorlu Âyet Kapsamı — Savaş Hukuku, İç İsyan ve Mümin Gruplar Arası Meşru Müdahale)
 - **Dil:** Türkçe (TR)
@@ -430,5 +430,5 @@ hakem_degerlendirme_protokolu:
     boyut_5_kurumsal_tasarim_ve_ozgunluk: "— / 20"
     toplam_skor: "— / 100"
   hakem_karari: "PENDING_EXTERNAL_REVIEW"
-  derkenar_notu: "Rapor Quran Vision v6.1.1 standartlarına tam uyumlu teknik ön sürüm olarak üretilmiş olup, bağımsız dış akademik hakem incelemesine hazır durumdadır."
+  derkenar_notu: "Rapor Quran Vision v6.2.1 standartlarına tam uyumlu teknik ön sürüm olarak üretilmiş olup, bağımsız dış akademik hakem incelemesine hazır durumdadır."
 ```

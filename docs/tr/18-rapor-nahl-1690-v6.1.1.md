@@ -199,7 +199,7 @@ peer_review:
 - **Âyet:** Nahl Sûresi 16:90 ("Câmi'u'l-Ahlâk ve'l-Hukûk / Kur'an'ın En Kapsayıcı Medeniyet Âyeti")
 - **Konu Başlığı:** Evrensel Medeniyet Sözleşmesi: Adalet, İhsan, Sosyal Dayanışma ve Üçlü Yozlaşma (Fuhşiyat, Münker, Bağy) Karşıtı Yönetişim Mimarisi
 - **Tarih:** 2026-10-15
-- **Sürüm:** v6.1.1 (Akademik Doğrulama Standartlı)
+- **Sürüm:** v6.2.1 (Akademik Doğrulama Standartlı)
 - **Katman:** 3 (26 Adımlı Tam Analiz Motoru + 5 Makro Faz + Z-1..Z-5 Zorunlu Ekler)
 - **H6 Durumu:** Evet (Zorlu Âyet Kapsamı — Hukuk Felsefesi, Adalet-İhsan Diyalektiği, Bağy/İsyan Hukuku, Kamu Etiği ve Sosyal Devlet)
 - **Dil:** Türkçe (TR)
@@ -440,5 +440,5 @@ hakem_degerlendirme_protokolu:
     boyut_5_kurumsal_tasarim_ve_ozgunluk: "— / 20"
     toplam_skor: "— / 100"
   hakem_karari: "PENDING_EXTERNAL_REVIEW"
-  derkenar_notu: "Rapor Quran Vision v6.1.1 ve v6.2.1 İSNAD 2 akademik atıf standartlarına tam uyumlu teknik ön sürüm olarak üretilmiş olup, bağımsız dış akademik hakem incelemesine hazır durumdadır."
+  derkenar_notu: "Rapor Quran Vision v6.2.1 İSNAD 2 akademik atıf standartlarına tam uyumlu teknik ön sürüm olarak üretilmiş olup, bağımsız dış akademik hakem incelemesine hazır durumdadır."
 ```

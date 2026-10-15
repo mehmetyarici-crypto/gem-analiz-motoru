@@ -181,7 +181,7 @@ peer_review:
 - **Âyet:** Bakara Sûresi 2:256 ("İkrâh Yasağı Âyeti")
 - **Konu Başlığı:** İnanç ve Vicdan Özgürlüğü, İkrâh Yasağı ve Çoğulcu Toplum Mimarisi (Lâ İkrâhe fi'd-Dîn Doktrini)
 - **Tarih:** 2026-10-15
-- **Sürüm:** v6.1.1 (Akademik Doğrulama Standartlı)
+- **Sürüm:** v6.2.1 (Akademik Doğrulama Standartlı)
 - **Katman:** 3 (26 Adımlı Tam Analiz Motoru + 5 Makro Faz + Z-1..Z-5 Zorunlu Ekler)
 - **H6 Durumu:** Evet (Zorlu Âyet Kapsamı — Nesh ve İrtidat Tartışmaları)
 - **Dil:** Türkçe (TR)
@@ -520,7 +520,7 @@ Bu durum şu açık gerilimleri doğurur:
 ### Z-4 · STANDART VE DÜRÜST SINIR İFADESİ [V10 ZORUNLU]
 
 > **METODOLOJİK VE EPİSTEMİK SINIR BEYANI:**
-> Bu rapor; Kur'an Temelli Gelecek Vizyonu (Quran Vision v6.1.1) mimarisi çerçevesinde üretilmiş analitik ve hermenötik bir modellemedir. Dini bir fetva, kesin kazi bir hüküm veya ilahi muradın eksiksiz ve yegâne tefsiri niteliği taşımaz. Raporda yer alan simülasyonlar, göstergeler ve politika kolları; analistin benimsediği usûl ekolünün ve ampirik varsayımların bir türevidir. Bu metin, kod tabanlı biçimsel iç tutarlılık denetiminden (gem_lint.py) geçmiş olup, bağımsız dış akademik hakem heyeti (peer-review) tarafından tescil edilmedikçe bilimsel kesinlik iddiası barındırmaz.
+> Bu rapor; Kur'an Temelli Gelecek Vizyonu (Quran Vision v6.2.1) mimarisi çerçevesinde üretilmiş analitik ve hermenötik bir modellemedir. Dini bir fetva, kesin kazi bir hüküm veya ilahi muradın eksiksiz ve yegâne tefsiri niteliği taşımaz. Raporda yer alan simülasyonlar, göstergeler ve politika kolları; analistin benimsediği usûl ekolünün ve ampirik varsayımların bir türevidir. Bu metin, kod tabanlı biçimsel iç tutarlılık denetiminden (gem_lint.py) geçmiş olup, bağımsız dış akademik hakem heyeti (peer-review) tarafından tescil edilmedikçe bilimsel kesinlik iddiası barındırmaz.
 
 ---
 
@@ -555,4 +555,4 @@ Bu durum şu açık gerilimleri doğurur:
 - **ORCID No:** —
 - **Değerlendirme Tarihi:** —
 - **Hakem Kararı:** `HENÜZ ATANMADI (ÖN SÜRÜM / PRE-RELEASE)`
-- **Hakem Değerlendirme Notu:** Rapor v6.1.1 akademik standartlarına göre hazırlanmış ön sürüm niteliğindedir. Bağımsız dış akademik hakem incelemesine açıktır.
+- **Hakem Değerlendirme Notu:** Rapor v6.2.1 akademik standartlarına göre hazırlanmış ön sürüm niteliğindedir. Bağımsız dış akademik hakem incelemesine açıktır.

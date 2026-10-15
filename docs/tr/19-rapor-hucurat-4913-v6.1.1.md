@@ -203,7 +203,7 @@ peer_review:
 - **Âyet:** Hucurât Sûresi 49:13 ("İnsanlığın Evrensel Eşitlik, Teâruf ve Anti-Irkçılık Beyannamesi")
 - **Konu Başlığı:** İnsanlığın Ontolojik Eşitliği, Teâruf (Karşılıklı Tanışma ve Diplomasi) Doktrini, Irkçılık Karşıtlığı ve Takvâ Temelli Evrensel Değer Mimarisi
 - **Tarih:** 2026-10-15
-- **Sürüm:** v6.1.1 (Akademik Doğrulama Standartlı)
+- **Sürüm:** v6.2.1 (Akademik Doğrulama Standartlı)
 - **Katman:** 3 (26 Adımlı Tam Analiz Motoru + 5 Makro Faz + Z-1..Z-5 Zorunlu Ekler)
 - **H6 Durumu:** Evet (Zorlu Âyet Kapsamı — Ontolojik Eşitlik, Soy/Irk Ayrımcılığı Yasağı, Çokkültürlülük ve Takvâ/Liyakat Ölçütü)
 - **Dil:** Türkçe (TR)
@@ -444,5 +444,5 @@ hakem_degerlendirme_protokolu:
     boyut_5_kurumsal_tasarim_ve_ozgunluk: "— / 20"
     toplam_skor: "— / 100"
   hakem_karari: "PENDING_EXTERNAL_REVIEW"
-  derkenar_notu: "Rapor Quran Vision v6.1.1 ve v6.2.1 İSNAD 2 akademik atıf standartlarına tam uyumlu teknik ön sürüm olarak üretilmiş olup, bağımsız dış akademik hakem incelemesine hazır durumdadır."
+  derkenar_notu: "Rapor Quran Vision v6.2.1 İSNAD 2 akademik atıf standartlarına tam uyumlu teknik ön sürüm olarak üretilmiş olup, bağımsız dış akademik hakem incelemesine hazır durumdadır."
 ```
