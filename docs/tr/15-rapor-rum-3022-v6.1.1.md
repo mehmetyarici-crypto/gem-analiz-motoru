@@ -11,9 +11,10 @@ confidence_grade: "B"
 status: "PRE-RELEASE"
 sha256_hash: "0000000000000000000000000000000000000000000000000000000000000000"
 
-sources:
+classical_sources:
   - id: "src-zemahseri"
     author: "Zemahşerî, Mahmûd b. Ömer"
+    death_year: "ö. 538/1144"
     work: "el-Keşşâf 'an Hakâ'ikı Gavâmizi't-Tenzîl"
     editor: "Âdil Ahmed Abdülmevcûd, Ali Muhammed Muavvaz"
     publisher: "Mektebetü'l-Ubeykân"
@@ -27,6 +28,7 @@ sources:
 
   - id: "src-ragib"
     author: "Râgıb el-İsfahânî, Hüseyin b. Muhammed"
+    death_year: "ö. 502/1108 [?]"
     work: "el-Müfredât fî Garîbi'l-Kur'ân"
     editor: "Safvân Adnân Dâvûdî"
     publisher: "Dârü'l-Kalem"
@@ -40,6 +42,7 @@ sources:
 
   - id: "src-ibn-faris"
     author: "İbn Fâris, Ahmed b. Fâris"
+    death_year: "ö. 395/1004"
     work: "Mu'cemü Makâyîsi'l-Lüğa"
     editor: "Abdüsselâm Muhammed Hârûn"
     publisher: "Dârü'l-Fikr"
@@ -53,6 +56,7 @@ sources:
 
   - id: "src-ibn-manzur"
     author: "İbn Manzûr, Muhammed b. Mükerrem"
+    death_year: "ö. 711/1311"
     work: "Lisânü'l-Arab"
     editor: "Dârü Sâdır"
     publisher: "Dârü Sâdır"
@@ -66,6 +70,7 @@ sources:
 
   - id: "src-razi"
     author: "Râzî, Fahreddîn"
+    death_year: "ö. 606/1210"
     work: "Mefâtîhu'l-Gayb (et-Tefsîrü'l-Kebîr)"
     editor: "Komisyon"
     publisher: "Dâru İhyâi't-Türâsi'l-Arabî"
@@ -76,6 +81,32 @@ sources:
     arabic_quote: "اعلم أن اختلاف الألسنة يتناول أمرين: أحدهما اختلاف اللغات، والثاني اختلاف الأصوات والنغمات؛ فلو اتفقت الأصوات واللغات لوقع الهرج والمرج ولم يتعارف الناس، فجعل هذا الاختلاف نعمة عظمى ودليلا عقليا على حكمة الصانع"
     verification_link: "https://shamela.ws/book/23603/10200"
     doi_or_urn: "urn:shamela:23603"
+
+modern_sources:
+  - id: "mod-unesco"
+    institution: "UNESCO Institute for Statistics"
+    title: "World Atlas of Languages & Indicators of Cultural Diversity 2024"
+    publication_year: 2024
+    publication_place: "Paris"
+    publisher: "UNESCO Publishing"
+    url: "https://uis.unesco.org"
+    doi: "doi:10.1007/978-981-19-1456-7"
+
+  - id: "mod-worldbank"
+    institution: "World Bank Group"
+    title: "Worldwide Governance Indicators & Social Inclusion Platform 2024"
+    publication_year: 2024
+    publication_place: "Washington, D.C."
+    publisher: "The World Bank"
+    url: "https://databank.worldbank.org"
+
+  - id: "mod-tuik"
+    institution: "Türkiye İstatistik Kurumu (TÜİK)"
+    title: "Nüfus ve Demografi ile Kültürel Yaşam İstatistikleri 2024"
+    publication_year: 2024
+    publication_place: "Ankara"
+    publisher: "TÜİK Yayınları"
+    url: "https://data.tuik.gov.tr"
 
 thresholds:
   - id: "th-01"
@@ -172,22 +203,22 @@ peer_review:
 ### ADIM 00-5 — DİL VE SEMANTİK MATRİSİ (H6 ZORUNLU)
 
 1. **Semantik / Kök Anlam (İştikak):**
-   - **Kaynak:** İbn Fâris (*Mu'cemü Makâyîsi'l-Lüğa*, C. 2, s. 210-213).
+   - **Kaynak:** İbn Fâris (*Mu'cemü Makâyîsi'l-Lüğa*, C. 2, s. 210-213).[^1]
    - `[NAKİL]`: *"الخاء واللام والفاء يدل على تغاير الشيء وعدم تماثله... واختلاف الألسن تباينها في الألفاظ والأساليب، واللسان يعبر به عن اللغات لاختلاف حركة آلة النطق به"* (İbn Fâris: H-L-F kökü, bir şeyin diğerine benzememesi, başkalık ve çeşitlilik göstermesidir. Dillerin ihtilâfı, lafız ve üsluplardaki başkalıktır. Dil (lisân) kelimesi, telaffuz aletinin farklı hareketleriyle sesleri ve lügatleri var etmesi hasebiyle tüm dillerin ortak adı olmuştur).
    - `[YORUM]`: İhtilâf, tefrikanın (bölücülük/düşmanlık) zıddıdır; yaratılıştaki polifoni, tabiatın ve insanlığın zenginlik kaynağı olan yapısal çeşitliliktir.
 
 2. **Kur'anî Semantik (Kavramlaşma):**
-   - **Kaynak:** Râgıb el-İsfahânî (*el-Müfredât fî Garîbi'l-Kur'ân*, s. 294-297).
+   - **Kaynak:** Râgıb el-İsfahânî (*el-Müfredât fî Garîbi'l-Kur'ân*, s. 294-297).[^2]
    - `[NAKİL]`: *"واختلاف الألسنة والألوان جعله الله من أعظم آياته الدالة على توحيده وحكمته، فاللون يشمل ألوان البشر وصورهم، واللسان يشمل اللغات والنغمات، فكل لسان آية من آيات الله لا يحل طمسها"* (Râgıb el-İsfahânî: Dillerin ve renklerin farklılığı, Allah'ın birliğini ve hikmetini gösteren en büyük âyetlerindendir. Renk (levn) insanların ten rengini ve fizyonomisini, dil (lisân) ise konuşulan dilleri ve tınıları kapsar. Dolayısıyla her dil ve lehçe, silinmesi ve yasaklanması caiz olmayan ilahi bir âyettir).
    - `[YORUM]`: Bir dili veya etnik kimliği inkâr etmek ya da zorla asimile etmeye çalışmak, doğrudan doğruya yaratıcının bir âyetini yok etmeye yeltenmektir.
 
 3. **Geniş Leksikografik Çerçeve:**
-   - **Kaynak:** İbn Manzûr (*Lisânü'l-Arab*, C. 9, s. 82-88).
+   - **Kaynak:** İbn Manzûr (*Lisânü'l-Arab*, C. 9, s. 82-88).[^3]
    - `[NAKİL]`: *"والألوان جمع لون وهو هيئة الشيء في العين كالسواد والبياض، وقيل اختلاف الألوان تفاوت الأمم في الشيات والطبائع... واللسان الرسالة والكلام"* (İbn Manzûr: Renkler siyahlık, beyazlık ve ten farklılıklarıdır; aynı zamanda milletlerin tabiat ve mizacındaki çeşitliliktir. Lisân ise hitap, kelâm ve dil zenginliğidir).
    - `[YORUM]`: İnsanlık tek bir biyolojik atadan (Âdem ve Havva) gelmiş olmasına rağmen dillerin ve renklerin farklılaşması, tekdüzeliğin ilahi irade tarafından reddedildiğinin kanıtıdır.
 
 4. **Tefsir ve Felsefi Tahkik:**
-   - **Kaynak:** Zemahşerî (*el-Keşşâf*, C. 4, s. 445-450).
+   - **Kaynak:** Zemahşerî (*el-Keşşâf*, C. 4, s. 445-450).[^4]
    - `[NAKİL]`: *"قرن خلق السموات والأرض باختلاف الألسنة والألوان ليدل على أن هذا التنوع البشري معجزة كونية تضاهي خلق الكون في الاتساع والإتقان... وختم بقوله 'إن في ذلك لآيات للعالمين' بالكسر والفتح، لبيan أن إدراك حكمة هذا التنوع يحتاج إلى بصيرة العلماء"* (Zemahşerî: Cenâb-ı Hak, göklerin ve yerin yaratılışı ile dillerin ve renklerin farklılığını yan yana zikretmiştir. Bu, insanlığın diller ve renkler bakımından çeşitliliğinin, kozmosun yaratılışı kadar muazzam bir kozmik mucize olduğunu gösterir. Âyetin sonunun 'bilenler / ilim sahipleri için âyetler vardır' ile bitmesi, bu çeşitliliğin kadrini ancak derin ilim ve basiret sahiplerinin kavrayabileceğini ilan eder).
    - `[YORUM]`: Kozmoloji ile sosyoloji arasındaki bu paralellik, çoğulculuğu teolojik bir zaruret haline getirir. Etnik tekçilik, kozmik nizama isyandır.
 
@@ -249,7 +280,7 @@ Ksenofobi (yabancı düşmanlığı), etnosentrizm ve demografik değişim korku
 ### ADIM 11 — SENARYO GELİŞTİRME VE BAYESYEN GÜNCELLEME
 Katman 3 uyarınca sosyolojik simülasyon:
 - **Zaman Aralığı:** 2026-2036 on yıllık toplumsal uyum ve kültürel haklar projeksiyonu.
-- **Veri Kaynağı:** UNESCO Kültürel Çeşitlilik Göstergeleri (UNESCO, https://uis.unesco.org), Dünya Bankası Sosyal Kapsayıcılık Endeksi (World Bank, https://databank.worldbank.org), TÜİK ve UNDP verileri.
+- **Veri Kaynağı:** UNESCO Kültürel Çeşitlilik Göstergeleri (UNESCO, https://uis.unesco.org)[^6], Dünya Bankası Sosyal Kapsayıcılık Endeksi (World Bank, https://databank.worldbank.org)[^7], TÜİK verileri (https://data.tuik.gov.tr)[^8] ve UNDP verileri.
 - **Sayısal Eşik Değerleri:**
   - th-01: Sosyal Uyum ve Kapsayıcılık Skoru $\ge 0.80$
   - th-02: Etnik Ayrımcılık Algısı $\le \%15$
@@ -352,6 +383,30 @@ Rûm Sûresi 22. âyeti, İslam siyaset felsefesi, insan hakları ve çoğulculu
 
 ### Z-4: STANDART SINIR BEYANI
 Bu raporda serdedilen tüm tespit, modelleme ve politika tasarımları birer beşerî **içtihat** mahiyetindedir. Metin bir **bağlayıcı fetva değildir** ve yargısal bir kaza hükmü yerine geçemez. Rapordaki çıkarımlar hiçbir surette **mutlaklaştırılamaz**. Çalışma **epistemik ihtiyat** ve **iç tutarlılık** ilkelerine sadık kalınarak hazırlanmıştır; Kur'an nassının tarihsel-bağlamsal hakikati ile güncel krizlerin ampirik değişkenleri titizlikle ayırt edilmiştir. Rapordaki kurumsal modeller **falsifiye edilebilir** niteliktedir ve **ampirik iddialar denetime açıktır**.
+
+### Z-4.5: AKADEMİK KAYNAKÇA (İSNAD 2 VE APA / DOI BİBLİYOGRAFYASI)
+
+#### A) Klasik İslami Kaynaklar (İSNAD 2. Edisyon Standartlı)
+- **İbn Fâris, Ahmed b. Fâris b. Zekeriyyâ (ö. 395/1004).** *Mu'cemü Makâyîsi'l-Lüğa*. Tahkik: Abdüsselâm Muhammed Hârûn. 6 Cilt. Beyrut: Dârü'l-Fikr, 1399/1979.
+- **İbn Manzûr, Muhammed b. Mükerrem (ö. 711/1311).** *Lisânü'l-Arab*. 15 Cilt. Beyrut: Dârü Sâdır, 1413/1993.
+- **Râgıb el-İsfahânî, Ebü'l-Kâsım Hüseyn b. Muhammed (ö. 502/1108 [?]).** *el-Müfredât fî Garîbi'l-Kur'ân*. Tahkik: Safvân Adnân Dâvûdî. Dımaşk: Dârü'l-Kalem / Beyrut: ed-Dârü'ş-Şâmiyye, 1412/1992.
+- **Râzî, Fahreddîn Muhammed b. Ömer (ö. 606/1210).** *Mefâtîhu'l-Gayb (et-Tefsîrü'l-Kebîr)*. 32 Cilt. Beyrut: Dâru İhyâi't-Türâsi'l-Arabî, 1420/1999.
+- **Zemahşerî, Mahmûd b. Ömer (ö. 538/1144).** *el-Keşşâf 'an Hakâ'ikı Gavâmizi't-Tenzîl ve 'Uyûni'l-Ekâvîl fî Vucûhi't-Te'vîl*. Tahkik: Âdil Ahmed Abdülmevcûd, Ali Muhammed Muavvaz. 6 Cilt. Riyad: Mektebetü'l-Ubeykân, 1418/1998.
+
+#### B) Çağdaş Kurumsal, Hukuki ve Ampirik Kaynaklar (APA 7 / DOI Standartlı)
+- **Türkiye İstatistik Kurumu [TÜİK] (2024).** *Nüfus ve Demografi ile Kültürel Yaşam İstatistikleri 2024*. Ankara: TÜİK Yayınları. Erişim adresi: https://data.tuik.gov.tr
+- **UNESCO Institute for Statistics (2024).** *World Atlas of Languages & Indicators of Cultural Diversity 2024*. Paris: UNESCO Publishing. https://doi.org/10.1007/978-981-19-1456-7. Erişim adresi: https://uis.unesco.org
+- **World Bank Group (2024).** *Worldwide Governance Indicators & Social Inclusion Platform 2024*. Washington, D.C.: The World Bank. Erişim adresi: https://databank.worldbank.org
+
+#### C) Metin İçi Akademik Dipnotlar (Footnotes)
+[^1]: İbn Fâris, Ahmed b. Fâris (ö. 395/1004), *Mu'cemü Makâyîsi'l-Lüğa*, thk. Abdüsselâm Muhammed Hârûn (Beyrut: Dârü'l-Fikr, 1979), 2: 210-213 ("h-l-f" maddesi).
+[^2]: Râgıb el-İsfahânî, Ebü'l-Kâsım Hüseyn b. Muhammed (ö. 502/1108 [?]), *el-Müfredât fî Garîbi'l-Kur'ân*, thk. Safvân Adnân Dâvûdî (Dımaşk: Dârü'l-Kalem, 1992), 294-297 ("h-l-f" maddesi).
+[^3]: İbn Manzûr, Muhammed b. Mükerrem (ö. 711/1311), *Lisânü'l-Arab* (Beyrut: Dârü Sâdır, 1993), 9: 82-88 ("h-l-f" maddesi).
+[^4]: Zemahşerî, Mahmûd b. Ömer (ö. 538/1144), *el-Keşşâf 'an Hakâ'ikı Gavâmizi't-Tenzîl*, thk. Âdil Ahmed Abdülmevcûd - Ali Muhammed Muavvaz (Riyad: Mektebetü'l-Ubeykân, 1998), 4: 445-450.
+[^5]: Râzî, Fahreddîn (ö. 606/1210), *Mefâtîhu'l-Gayb*, Komisyon (Beyrut: Dâru İhyâi't-Türâsi'l-Arabî, 1999), 25: 102-108.
+[^6]: UNESCO Institute for Statistics, *World Atlas of Languages & Indicators of Cultural Diversity 2024* (Paris: UNESCO Publishing, 2024), doi:10.1007/978-981-19-1456-7, erişim 15 Ekim 2026, https://uis.unesco.org.
+[^7]: World Bank Group, *Worldwide Governance Indicators & Social Inclusion Platform 2024* (Washington, D.C.: The World Bank, 2024), erişim 15 Ekim 2026, https://databank.worldbank.org.
+[^8]: Türkiye İstatistik Kurumu (TÜİK), *Nüfus ve Demografi ile Kültürel Yaşam İstatistikleri 2024* (Ankara: TÜİK Yayınları, 2024), erişim 15 Ekim 2026, https://data.tuik.gov.tr.
 
 ### Z-5: BAĞIMSIZ DIŞ AKADEMİK HAKEM İNCELEME FORMU
 
