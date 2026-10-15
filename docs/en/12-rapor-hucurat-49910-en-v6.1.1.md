@@ -1,7 +1,7 @@
 # QV-2026-007 — Surah Al-Hujurat 49:9-10: International Conflict Resolution, Anti-Aggression Doctrine (Baghy), Collective Security & Peacekeeping Governance
 
 **Document Status:** `PRE-RELEASE` | **Confidence Grade:** `B` | **Methodological Layer:** `Layer 3 (H6 Complex Verse Protocol)`
-**External Cryptographic Manifest (SHA-256):** `65e10c47721fcbbf8dd5f6b43eb67025ded541e9d7a015608491920baeac4707`
+**External Cryptographic Manifest (SHA-256):** `644d3fffbf4a14896de92ca73b86338ef6d540159dc22d82051e6e6876d09a94`
 
 ---
 

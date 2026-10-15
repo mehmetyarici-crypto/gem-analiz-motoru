@@ -1,7 +1,7 @@
 # QV-2026-015 — Surah Al-Ma'idah 5:32: Inviolability of Human Life, Doctrine of Saving Life (Ihya'), Global Human Security & Bioethics Architecture
 
 **Document Status:** `PRE-RELEASE` | **Confidence Grade:** `B` | **Methodological Layer:** `Layer 3 (H6 Complex Verse Protocol)`
-**External Cryptographic Manifest (SHA-256):** `cdcd23a157e51ef79b3f96d2465ed1f9227fbb464e2cba172f4a64f7c75eb7c1`
+**External Cryptographic Manifest (SHA-256):** `9553f66094c8b4fad3a3443fda41fc7c42d47360fce52f92bc27c95aacc923f3`
 
 ---
 

@@ -224,7 +224,28 @@ peer_review:
 
 ---
 
-### ADIM 01 — SİYÂK-SİBÂK VE TARİHSEL BAĞLAM
+### ADIM 01 — LAFZÎ TAHLİL, SİYÂK-SİBÂK VE TARİHSEL BAĞLAM
+
+- **Arapça Metin (İsrâ Sûresi 17:36 — Resm-i Osmânî):**
+  > وَلَا تَقْفُ مَا لَيْسَ لَكَ بِهِۦ عِلْمٌ ۚ إِنَّ ٱلسَّمْعَ وَٱلْبَصَرَ وَٱلْفُؤَادَ كُلُّ أُو۟لَـٰٓئِكَ كَانَ عَنْهُ مَسْـُٔولًا ﴿٣٦﴾
+
+- **Sahih Türkçe Meal:**
+  > *"Hakkında kesin bilgin olmayan şeyin peşine düşme (ardına takılıp hüküm verme)! Çünkü kulak, göz ve kalp (fuâd); bunların hepsi ondan (yaptığı tahkik ve eylemden) sorumludur / sorguya çekilecektir. (36)"*
+
+- **Kelime-Kelime Lafzî Çözümleme (Kelime Mealleri):**
+  - `وَلَا تَقْفُ` (Ve lâ takfu): Ardına düşme, izini sürme, peşine takılıp konuşma ve hüküm verme! (`kafâ - yakfû - kafven` kökünden nehy-i hâzır; illet harfi vav cezm alameti olarak düşmüştür).
+  - `مَا لَيْسَ لَكَ بِهِۦ عِلْمٌ` (mâ leyse leke bihî ‘ilm): Senin için kendisi hakkında doğrulanmış, yakînî veya delilli bir bilgi (`‘ilm`) bulunmayan şey (nekre olarak gelen `‘ilm`, nefy siyâkında umum ifade ederek her türlü temelsiz zan, dedikodu, yalan şahitlik ve tahkiksiz iddiayı kapsar).
+  - `إِنَّ ٱلسَّمْعَ` (inne's-sem‘a): Şüphesiz kulak / işitme yetisi (işitsel ve naklî bilginin giriş kapısı; tekil mastar kalıbıyla cins isim olarak bütün işitme süreçlerini kuşatır).
+  - `وَٱلْبَصَرَ` (ve'l-basara): Ve göz / görme yetisi (gözleme, deneye ve görsel şahitliğe dayalı ampirik bilginin giriş kapısı).
+  - `وَٱلْفُؤَادَ` (ve'l-füâde): Ve kalp / zihnî-ahlaki muhakeme merkezi (`füâd`, `fekd/tefevvüd` kökünden tutuşup parlayan idrak, akıl ve vicdan süzgecidir; duyulardan gelen ham veriyi analiz edip hükme bağlayan merkezdir).
+  - `كُلُّ أُو۟لَـٰٓئِكَ` (küllü ülâike): İşte bütün bu yetilerin her biri (`ülâike` işaret zamiri normalde akıl sahipleri için kullanılırken burada kulak, göz ve kalbin şuurlu birer şahit gibi muhatap alınacağını göstermek üzere istiâre/teşhis sanatıyla kullanılmıştır).
+  - `كَانَ عَنْهُ مَسْـُٔولًا` (kâne ‘anhü mes'ûlâ): Ondan (sahibinin bu yetileri nasıl kullandığından veya bu yetilerin bizzat kendisinden) kesin olarak hesap sorulacaktır.
+
+- **Klasik Tefsir Lafzî Tahlili (Fahreddîn er-Râzî & İbn Âşûr):**
+  - `[NAKİL]`: Fahreddîn er-Râzî (*Mefâtîhu'l-Gayb*, C. 20, s. 209–212), âyetteki `lâ takfu` nehyinin hem itikadî konularda taklit ve zannı, hem fıkhî/kazâî konularda delilsiz şahitliği ve iftirayı, hem de toplumsal hayatta teyitsiz haber yaymayı kapsadığını; `sem‘`, `basar` ve `füâd` sıralamasının ise insan bilgisinin *duyu verisi -> gözlem -> rasyonel/vicdani muhakeme* hiyerarşisini kusursuz biçimde ortaya koyduğunu vurgular.[^1]
+  - `[YORUM]`: Âyet-i kerîme, modern epistemolojinin "gerekçelendirilmiş doğru inanç" (*justified true belief*) şartını ahlaki ve hukuki hesap verebilirlikle (`mes'ûlâ`) birleştirerek; teyitsiz paylaşımı, sahte haberi ve algoritmik dezenformasyonu doğrudan kulak, göz ve kalp emanetine ihanet olarak tanımlar.
+
+- **Siyâk-Sibâk ve Tarihsel Bağlam:**
 İsrâ Sûresi Mekke döneminin sonlarında nâzil olmuştur. 22 ile 39. âyetler arasında yer alan "On İki Evrensel Hikmet / İlahi Emirler Dekalogu" zinciri içerisinde yer alır. Siyâkında ana-babaya hürmet, yetim malına yaklaşmama, ölçü ve tartıda dürüstlük (35. âyet) emredilir. Sibâkında ise kibre kapılarak yeryüzünde böbürlenerek yürüme yasağı (37. âyet) gelir. Bu bağlam, epistemik ahlakın (zanna uymama) iktisadi dürüstlük ile ahlaki tevazu arasındaki ayrılmaz köprü olduğunu kanıtlar.
 
 ---

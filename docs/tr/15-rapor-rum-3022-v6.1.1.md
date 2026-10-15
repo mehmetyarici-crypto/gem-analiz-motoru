@@ -224,7 +224,27 @@ peer_review:
 
 ---
 
-### ADIM 01 — SİYÂK-SİBÂK VE TARİHSEL BAĞLAM
+### ADIM 01 — LAFZÎ TAHLİL, SİYÂK-SİBÂK VE TARİHSEL BAĞLAM
+
+- **Arapça Metin (Rûm Sûresi 30:22 — Resm-i Osmânî):**
+  > وَمِنْ ءَايَـٰتِهِۦ خَلْقُ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ وَٱخْتِلَـٰفُ أَلْسِنَتِكُمْ وَأَلْوَٰنِكُمْ ۚ إِنَّ فِى ذَٰلِكَ لَـَٔايَـٰتٍ لِّلْعَـٰلِمِينَ ﴿٢٢﴾
+
+- **Sahih Türkçe Meal:**
+  > *"Göklerin ve yerin yaratılması ile dillerinizin ve renklerinizin farklılığı da O’nun (kudret ve hikmetinin) âyetlerindendir (delillerindendir). Şüphesiz bunda bilenler (âlimler / derin kavrayış sahipleri) için nice ibretler ve işaretler vardır. (22)"*
+
+- **Kelime-Kelime Lafzî Çözümleme (Kelime Mealleri):**
+  - `وَمِنْ ءَايَـٰتِهِۦ` (Ve min âyâtihî): O’nun (Allah’ın varlığının, birliğinin ve sonsuz hikmetinin) kevnî âyetlerinden / mucizevi delillerindendir.
+  - `خَلْقُ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ` (halku's-semâvâti ve'l-ard): Göklerin ve yerin yoktan ve kusursuz bir ölçüyle yaratılması.
+  - `وَٱخْتِلَـٰفُ أَلْسِنَتِكُمْ` (vahtilâfü elsinetiküm): Ve dillerinizin, lehçelerinizin, ses tonlarınızın ve ifade biçimlerinizin çeşitliliği (`elsine`, `lisân` kelimesinin çoğuludur; hem fonetik ses farklılığını hem de dünya dillerinin çoğulculuğunu kapsar).
+  - `وَأَلْوَٰنِكُمْ` (ve elvâniküm): Ve ten renklerinizin, ırkî/fizyolojik simalarınızın ve fıtrî mizaçlarınızın çeşitliliği (`elvân`, `levn` kelimesinin çoğuludur).
+  - `إِنَّ فِى ذَٰلِكَ لَـَٔايَـٰتٍ` (inne fî zâlike le-âyâtin): Şüphesiz bütün bunlarda kesin ve çoğul deliller / dersler vardır.
+  - `لِّلْعَـٰلِمِينَ` (li'l-‘âlimîn): Âlimler / ilim ve basiret sahipleri için (Hafs kıraatinde lam’ın kesresiyle `li'l-‘âlimîn` [bilenler, bilginler]; diğer mütevatir kıraatte fethasıyla `li'l-‘âlemîn` [bütün âlemler] okunarak hem bilimsel derinliğe hem evrensel insanlığa işaret edilmiştir).
+
+- **Klasik Tefsir Lafzî Tahlili (Taberî, Râzî & İbn Âşûr):**
+  - `[NAKİL]`: Fahreddîn er-Râzî (*Mefâtîhu'l-Gayb*, C. 25, s. 96–98) ve İbn Âşûr (*et-Tahrîr ve't-Tenvîr*, C. 21, s. 68–71), dillerin ve renklerin farklılığının (`ihtilâf`) göklerin ve yerin yaratılışıyla (`halku's-semâvâti ve'l-ard`) aynı cümlede eşdeğer bir "ilahi âyet" olarak zikredilmesine dikkat çekerler: Nasıl ki gökleri ve yeri tahrip etmek ilahi sanata saldırıysa, insanlığın dil ve renk çeşitliliğini zorla tek tipleştirmeye çalışmak veya bir rengi/dili diğerine üstün görmek de Allah’ın kevnî âyetleriyle savaşmaktır.[^1]
+  - `[YORUM]`: Lafzî düzlemde `ihtilâf` (çeşitlilik) bir arıza, ceza veya çatışma sebebi değil; bizzat Yaratıcı’nın murat ettiği kozmik bir güzellik ve ontolojik eşitlik delilidir.
+
+- **Siyâk-Sibâk ve Tarihsel Bağlam:**
 Rûm Sûresi Mekke döneminde, Bizans İmparatorluğu'nun Sâsânîler karşısında ağır bir yenilgi aldığı ve putperest Mekkelilerin Müslümanlarla alay ettiği bir psikolojik kriz ortamında inmiştir. Sûrenin 20-25. âyetleri, insanın topraktan yaratılışı (20), eşler arasındaki sevgi ve rahmet (21), gökler ve yer ile dillerin/renklerin farklılığı (22), uyku ve maişet arayışı (23), şimşek, korku ve ümit (24) gibi kozmik ve antropolojik âyetleri ardışık olarak sıralar. Bu muazzam bağlam, farklı dil ve kültürlerin birer çatışma sebebi değil, varoluşun tefekkür edilmesi gereken ilahi işaretleri olduğunu ortaya koyar.
 
 ---

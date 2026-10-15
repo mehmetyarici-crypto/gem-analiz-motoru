@@ -224,7 +224,31 @@ peer_review:
 
 ---
 
-### ADIM 01 — SİYÂK-SİBÂK VE TARİHSEL BAĞLAM
+### ADIM 01 — LAFZÎ TAHLİL, SİYÂK-SİBÂK VE TARİHSEL BAĞLAM
+
+- **Arapça Metin (Hucurât Sûresi 49:9–10 — Resm-i Osmânî):**
+  > وَإِن طَآئِفَتَانِ مِنَ ٱلْمُؤْمِنِينَ ٱقْتَتَلُوا۟ فَأَصْلِحُوا۟ بَيْنَهُمَا ۖ فَإِنۢ بَغَتْ إِحْدَىٰهُمَا عَلَى ٱلْأُخْرَىٰ فَقَـٰتِلُوا۟ ٱلَّتِى تَبْغِى حَتَّىٰ تَفِىٓءَ إِلَىٰٓ أَمْرِ ٱللَّهِ ۚ فَإِن فَآءَتْ فَأَصْلِحُوا۟ بَيْنَهُمَا بِٱلْعَدْلِ وَأَقْسِطُوٓا۟ ۖ إِنَّ ٱللَّهَ يُحِبُّ ٱلْمُقْسِطِينَ ﴿٩﴾ إِنَّمَا ٱلْمُؤْمِنُونَ إِخْوَةٌ فَأَصْلِحُوا۟ بَيْنَ أَخَوَيْكُمْ ۚ وَٱتَّقُوا۟ ٱللَّهَ لَعَلَّكُمْ تُرْحَمُونَ ﴿١٠﴾
+
+- **Sahih Türkçe Meal:**
+  > *"Eğer müminlerden iki topluluk birbirleriyle vuruşacak olurlarsa aralarını derhal düzeltin (ıslah edin). Şayet biri ötekine saldırıp haddi aşarsa (bağy ederse), Allah’ın buyruğuna (hak ve hukuka) dönünceye kadar o mütecaviz tarafla mücadele edin. Eğer dönerse, artık aralarını adaletle düzeltin ve tam bir hakkaniyetle (kıst ile) hareket edin; şüphesiz Allah adil davrananları (muksitleri) sever. (9) Müminler ancak kardeştirler; öyleyse iki kardeşinizin arasını düzeltin ve Allah’a karşı sorumluluk bilinciyle (takvâ ile) hareket edin ki merhamete erişesiniz. (10)"*
+
+- **Kelime-Kelime Lafzî Çözümleme (Kelime Mealleri):**
+  - `وَإِن طَآئِفَتَانِ مِنَ ٱلْمُؤْمِنِينَ` (Ve in tâifetâni mine'l-mü'minîn): Eğer müminlerden iki zümre / topluluk (tesniye kalıbıyla gelse de lafzı cem‘ manası taşıdığı için devamındaki fiil çoğul gelmiştir).
+  - `ٱقْتَتَلُوا۟` (iktetelû): Birbirleriyle çarpışırlarsa, fiilî çatışmaya girerlerse (*ifti‘âl* bâbından işteşlik/müşâreket bildirir; çatışmanın iki taraf arasında vuku bulduğunu gösterir).
+  - `فَأَصْلِحُوا۟ بَيْنَهُمَا` (fe-aslihû beynehümâ): Derhal aralarını ıslah edin; öğüt, arabuluculuk ve sulh çağrısıyla çatışmayı durdurun.
+  - `فَإِنۢ بَغَتْ إِحْدَىٰهُمَا عَلَى ٱلْأُخْرَىٰ` (fe-in bağat ihdâhümâ ‘ale'l-uhrâ): Şayet ikisinden biri diğerine karşı haddi aşar, sulhu reddedip zulüm ve tecavüze (bağy) kalkışırsa.
+  - `فَقَـٰتِلُوا۟ ٱلَّتِى تَبْغِى` (fe-kâtilü'lletî tebğî): O haddi aşan / mütecaviz grupla (zulmü durdurmak üzere kolektif meşru güçle) mücadele edin.
+  - `حَتَّىٰ تَفِىٓءَ إِلَىٰٓ أَمْرِ ٱللَّهِ` (hattâ tefîe ilâ emrillâh): Allah’ın hükmüne, hakemliğine ve hukuk düzenine rücû edip dönünceye kadar (mücadelenin hedefi imha değil, hukuka döndürmektir).
+  - `فَإِن فَآءَتْ فَأَصْلِحُوا۟ بَيْنَهُمَا بِٱلْعَدْلِ` (fe-in fâet fe-aslihû beynehümâ bi'l-‘adl): Eğer hukuka dönerse, artık aralarını rövanşizmle değil tam bir adaletle ıslah edin.
+  - `وَأَقْسِطُوٓا۟ ۖ إِنَّ ٱللَّهَ يُحِبُّ ٱلْمُقْسِطِينَ` (ve aksitû innallâhe yuhibbü'l-muksitîn): Hakkaniyeti (kıstı) ayakta tutun; Allah hakkaniyetle hükmedenleri sever.
+  - `إِنَّمَا ٱلْمُؤْمِنُونَ إِخْوَةٌ` (İnneme'l-mü'minûne ihvetün): Müminler ancak ve yalnızca kardeştirler (*innemâ* hasr edatıyla çatışma halinde dahi iman kardeşliği hukukunun düşmediği tescil edilmiştir).
+  - `فَأَصْلِحُوا۟ بَيْنَ أَخَوَيْكُمْ` (fe-aslihû beyne ehaveyküm): Öyleyse iki kardeşinizin arasını düzeltin (9. âyetteki 'iki grup', 10. âyette 'iki öz kardeş' mertebesine indirilerek şefkat ve uzlaşı zemini güçlendirilmiştir).
+
+- **Klasik Tefsir Lafzî Tahlili (Kurtubî & Fahreddîn er-Râzî):**
+  - `[NAKİL]`: Kurtubî (*el-Câmi‘ li-Ahkâmi'l-Kur'ân*, C. 16, s. 315–322), âyette birbirleriyle savaşan ve biri diğerine *bağy* (zulüm/isyan) eden zümrelerin hâlâ *"el-mü'minîn"* ve *"ihvetün"* (müminler ve kardeşler) olarak isimlendirilmesinin, büyük günah işleyen kimsenin imandan çıkmadığının (Ehl-i Sünnet kaidesinin) en açık nassı olduğunu; ayrıca *"bi'l-adl"* kaydının çatışma sonrası galiplerin mağluplara keyfî şartlar dayatmasını kesin olarak haram kıldığını belirtir.[^1]
+  - `[YORUM]`: Lafzî dizilim 3 aşamalı bir barış inşası protokolü kurar: (1) Önleyici diplomasi ve sulh (`fe-aslihû`), (2) Sulhu reddeden mütecavizi hukuka döndürmeye matuf orantılı caydırıcılık (`hattâ tefîe`), (3) Çatışma sonrası rövanşizmden arınmış adil yeniden inşa (`bi'l-adl ve aksitû`).
+
+- **Siyâk-Sibâk ve Tarihsel Bağlam:**
 Hucurât Sûresi 9 ve 10. âyetleri, sûrenin 6. âyetinde geçen bilgi güvenliği ve yalan haber teyidi ("fâsık bir haber getirirse tahkik edin...") uyarısının hemen ardında yer alır. Sibâkında ise (11-13. âyetler) alay, gıybet, tecessüs ve ırkçılık/kabilecilik yasaklanır. Tarihsel nüzûl rivayetlerinde (Taberî, Cessâs[^5]) Evs ve Hazrec kabileleri arasındaki sürtüşmelerin sopalı ve ayakkabılı kavgaya dönüşmesi üzerine bu âyetin indiği nakledilir. Buradaki temel nassî nükte, toplum içi çatışmaların ilk kıvılcımında kamu otoritesinin tarafsız bir arabuluculukla devreye girmesidir.
 
 ---

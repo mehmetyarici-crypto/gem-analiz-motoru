@@ -238,7 +238,29 @@ peer_review:
 
 ---
 
-### ADIM 01 — SİYÂK-SİBÂK VE TARİHSEL BAĞLAM
+### ADIM 01 — LAFZÎ TAHLİL, SİYÂK-SİBÂK VE TARİHSEL BAĞLAM
+
+- **Arapça Metin (Mâide Sûresi 5:32 — Resm-i Osmânî):**
+  > مِنْ أَجْلِ ذَٰلِكَ كَتَبْنَا عَلَىٰ بَنِىٓ إِسْرَٰٓءِيلَ أَنَّهُۥ مَن قَتَلَ نَفْسًۢا بِغَيْرِ نَفْسٍ أَوْ فَسَادٍ فِى ٱلْأَرْضِ فَكَأَنَّمَا قَتَلَ ٱلنَّاسَ جَمِيعًا وَمَنْ أَحْيَاهَا فَكَأَنَّمَآ أَحْيَا ٱلنَّاسَ جَمِيعًا ۚ وَلَقَدْ جَآءَتْهُمْ رُسُلُنَا بِٱلْبَيِّنَـٰتِ ثُمَّ إِنَّ كَثِيرًا مِّنْهُم بَعْدَ ذَٰلِكَ فِى ٱلْأَرْضِ لَمُسْرِفُونَ ﴿٣٢﴾
+
+- **Sahih Türkçe Meal:**
+  > *"İşte bu yüzdendir ki (Kâbil’in Hâbil’i haksız yere öldürmesi sebebiyle) İsrâiloğullarına şöyle yazdık (hüküm olarak farz kıldık): Kim, bir cana karşılık (kısas) olmaksızın veya yeryüzünde bir fesat (terör/eşkıyalık) çıkarmaya karşılık olmaksızın bir insanı öldürürse, sanki bütün insanları öldürmüş gibidir! Kim de bir insanın hayatını kurtarırsa (ihyâ ederse), sanki bütün insanların hayatını kurtarmış gibidir! Andolsun ki elçilerimiz onlara apaçık delillerle (beyyinelerle) gelmiştir; fakat bundan sonra da onlardan birçoğu yeryüzünde (kan dökerek) haddi aşmaktadırlar. (32)"*
+
+- **Kelime-Kelime Lafzî Çözümleme (Kelime Mealleri):**
+  - `مِنْ أَجْلِ ذَٰلِكَ` (Min ecli zâlike): İşte bu cinayet (Âdem’in iki oğlunun kıssasındaki ilk haksız kan dökme suçu) sebebiyledir ki.
+  - `كَتَبْنَا عَلَىٰ بَنِىٓ إِسْرَٰٓءِيلَ` (ketebnâ ‘alâ benî isrâîle): İsrâiloğulları üzerine (ve tüm semavî şeriatlarda geçerli evrensel bir hüküm olarak) yazdık / farz kıldık.
+  - `أَنَّهُۥ مَن قَتَلَ نَفْسًۢا` (ennehû men katele nefsen): Kim bir canı (`nefsen` nekre olarak gelerek din, ırk, statü farkı gözetmeksizin her masum insan canını kapsar) öldürürse.
+  - `بِغَيْرِ نَفْسٍ أَوْ فَسَادٍ فِى ٱلْأَرْضِ` (bi-ğayri nefsin ev fesâdin fi'l-ard): Bir cana karşılık (mahkeme kararıyla infaz edilen adil kısas) veya yeryüzünde silahlı terör/eşkıyalık (`fesâd fi'l-ard`) suçu dışında haksız yere.
+  - `فَكَأَنَّمَا قَتَلَ ٱلنَّاسَ جَمِيعًا` (fe-keennemâ katele'n-nâse cemî‘â): Sanki bütün insanlığı topyekûn öldürmüş gibidir! (`keennemâ` teşbih-i belîğ ve tazim edatı; `cemî‘â` tekit haliyle tek bir masumun yaşam hakkını tüm insanlığın yaşam hakkına eşitler).
+  - `وَمَنْ أَحْيَاهَا` (ve men ahyâhâ): Ve kim de o canı yaşatırsa / ölümden kurtarırsa (affederek, boğulmaktan/yangından/açlıktan kurtararak, tıbbi tedavi veya insani yardımla hayata döndürerek).
+  - `فَكَأَنَّمَآ أَحْيَا ٱلنَّاسَ جَمِيعًا` (fe-keennemâ ahye'n-nâse cemî‘â): Sanki bütün insanlığı diriltmiş / yaşatmış gibidir!
+  - `فِى ٱلْأَرْضِ لَمُسْرِفُونَ` (fi'l-ardı le-müsrifûn): Yeryüzünde (kan dökme ve hak çiğneme konusunda) haddi aşan müsriflerdir.
+
+- **Klasik Tefsir Lafzî Tahlili (Taberî, Râzî & Kurtubî):**
+  - `[NAKİL]`: Fahreddîn er-Râzî (*Mefâtîhu'l-Gayb*, C. 11, s. 210–213) ve Kurtubî (*el-Câmi‘*, C. 6, s. 146–149), `fe-keennemâ katele'n-nâse cemî‘â` ifadesinin lafzî ve hukuki sırrını şöyle açıklarlar: Tek bir masum insanı haksız yere öldüren kimse, "insan hayatının dokunulmazlığı" (*hurmetü'd-dem*) ilkesini yıkmıştır; bu ilke yıkıldığında ise hiçbir insanın can güvenliği kalmaz. Tersine bir canı kurtaran (`ahyâhâ`) ise bütün insanlığın yaşam onurunu ihya etmiştir.[^1]
+  - `[YORUM]`: Âyet, insan hayatını aritmetik çoğunluk hesabına kurban eden faydacı (*utilitarian*) anlayışı reddederek `1 Masum Can = Bütün İnsanlık` ontolojik denklemini kurar.
+
+- **Siyâk-Sibâk ve Tarihsel Bağlam:**
 Mâide Sûresi 5:27–31 âyetlerinde insanlık tarihinin ilk cinayeti olan **Hâbil ile Kâbil** kıssası anlatılır. Kâbil'in kıskançlık ve kibirle kardeşi Hâbil'i öldürmesi ve ardından pişmanlıkla aciz kalması tasvir edildikten hemen sonra 32. âyette *"İşte bu yüzdendir ki (min ecli zâlike)..."* buyrularak bütün vahiy tarihinin ortak evrensel normu ilan edilir: Tek bir masum insanı öldürmek bütün insanlığı öldürmekle, tek bir insanı yaşatmak ise bütün insanlığı yaşatmakla eşdeğerdir.
 
 ---

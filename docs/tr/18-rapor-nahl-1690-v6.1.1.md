@@ -234,7 +234,29 @@ peer_review:
 
 ---
 
-### ADIM 01 — SİYÂK-SİBÂK VE TARİHSEL BAĞLAM
+### ADIM 01 — LAFZÎ TAHLİL, SİYÂK-SİBÂK VE TARİHSEL BAĞLAM
+
+- **Arapça Metin (Nahl Sûresi 16:90 — Resm-i Osmânî):**
+  > إِنَّ ٱللَّهَ يَأْمُرُ بِٱلْعَدْلِ وَٱلْإِحْسَـٰنِ وَإِيتَآئِ ذِى ٱلْقُرْبَىٰ وَيَنْهَىٰ عَنِ ٱلْفَحْشَآءِ وَٱلْمُنكَرِ وَٱلْبَغْىِ ۚ يَعِظُكُمْ لَعَلَّكُمْ تَذَكَّرُونَ ﴿٩٠﴾
+
+- **Sahih Türkçe Meal:**
+  > *"Şüphesiz Allah; adaleti, ihsanı (iyiliği, güzelliği ve erdemli fazileti) ve yakınlara (haklarını/ihtiyaçlarını) vermeyi emreder; fahşâdan (hayâsızlıktan), münkerden (aklın ve dinin çirkin gördüğü kötülüklerden) ve bağyden (haddi aşmaktan, zulüm ve zorbalıktan) ise nehyeder (yasaklar). Düşünüp öğüt alasınız diye size böyle vaaz eder. (90)"*
+
+- **Kelime-Kelime Lafzî Çözümleme (Kelime Mealleri):**
+  - `إِنَّ ٱللَّهَ يَأْمُرُ` (İnnallâhe ye'muru): Şüphesiz Allah kesin ve sürekli bir hükümle emreder (muzâri fiil teceddüd ve süreklilik ifade eder).
+  - `بِٱلْعَدْلِ` (bi'l-‘adl): Adaleti (ifrat ve tefritten uzak tam dengeyi, herkese hakkını eksiksiz vermeyi ve hukuk önünde mutlak eşitliği).
+  - `وَٱلْإِحْسَـٰنِ` (ve'l-ihsân): Ve ihsanı (farz olan adaletin ötesine geçerek karşılık beklemeden iyilik yapmayı, kusuru affetmeyi ve her işi en yüksek kalite/estetik ve samimiyetle icra etmeyi).
+  - `وَإِيتَآئِ ذِى ٱلْقُرْبَىٰ` (ve îtâi zi'l-kurbâ): Ve yakınlara / akrabaya ve sosyal çevredeki muhtaçlara haklarını ve desteklerini vermeyi (aile ve sosyal dayanışma ağının korunması).
+  - `وَيَنْهَىٰ عَنِ ٱلْفَحْشَآءِ` (ve yenhâ ‘ani'l-fahşâi): Ve fahşâyı yasaklar (nefsin şehvet ve açgözlülük güdüsüyle işlediği sınır aşan her türlü çirkinlik ve ahlaksızlık).
+  - `وَٱلْمُنكَرِ` (ve'l-münker): Ve münkeri yasaklar (selim aklın, fıtratın ve şer‘î hukukun tanımayıp reddettiği her türlü kamusal kötülük).
+  - `وَٱلْبَغْىِ` (ve'l-bağy): Ve bağyi yasaklar (insanlara karşı kibirlenme, yetki aşımı, tahakküm, zulüm ve meşru düzene karşı zorbalık).
+  - `يَعِظُكُمْ لَعَلَّكُمْ تَذَكَّرُونَ` (ye‘izuküm le‘alleküm tezekkerûn): Düşünüp fıtrî hakikati hatırlayasınız diye size öğüt verir.
+
+- **Klasik Tefsir Lafzî Tahlili (İbn Mes‘ûd, Taberî & İbn Âşûr):**
+  - `[NAKİL]`: Abdullah b. Mes‘ûd (r.a.) *"Kur’ân’da hayır ve şerri bu âyetten daha kapsamlı toplayan (câmi‘) başka bir âyet yoktur"* demiş; İbn Âşûr (*et-Tahrîr ve't-Tenvîr*, C. 14, s. 256–262) Ömer b. Abdülazîz’in bu âyeti cuma hutbelerinin sonuna yerleştirmesiyle İslam medeniyetinin her hafta bu **6 maddelik anayasal sözleşmeyi** (3 emir: *Adl, İhsan, Îtâi zi'l-kurbâ*; 3 yasak: *Fahşâ, Münker, Bağy*) yenilediğini kaydetmiştir.[^1]
+  - `[YORUM]`: Salt hukuk (`Adl`) toplumu ayakta tutar ama soğuk bürokrasiye dönüşebilir; `İhsan` ve `Sosyal Dayanışma` hukuku merhametle ısıtır. Karşısındaki 3 yasak ise bireysel yozlaşmayı (`Fahşâ`), kamusal suçu (`Münker`) ve siyasal/kurumsal zorbalığı (`Bağy`) aynı anda engeller.
+
+- **Siyâk-Sibâk ve Tarihsel Bağlam:**
 Nahl Sûresi Mekke döneminin sonlarında inmiş olup nimetlerin sayımı ("Sûretü'n-Ni'am") ve ahde vefa teması üzerine kuruludur. 89. âyette Kur'an'ın "her şeyi açıklayan bir tibyân, hidayet, rahmet ve müjde" olduğu bildirilir; hemen ardından gelen 90. âyet bu "tibyân"ın (açıklayıcılığın) evrensel anayasasını 6 kavramla (3 emir + 3 yasak) özetler. Sibâkında ise (91-95. âyetler) antlaşmalara sadakat, yeminlerin bozulmaması ve toplumsal güveni ipliklerini çözen kadının durumuna düşürmeme uyarısı yer alır. Tarihsel olarak Halife Ömer b. Abdülazîz (ö. 101/720), Emevî hutbelerindeki siyasi lanetleme geleneğini kaldırıp yerine her cuma hutbesinin sonunda bu âyetin okunmasını emretmiş ve âyeti devletin resmi adalet manifestosu kılmıştır.
 
 ---

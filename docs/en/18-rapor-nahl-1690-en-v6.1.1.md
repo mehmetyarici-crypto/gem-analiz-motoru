@@ -1,7 +1,7 @@
 # QV-2026-013 — Surah An-Nahl 16:90: Universal Civilizational Covenant: Justice ('Adl), Excellence (Ihsan), Social Solidarity & Anti-Corruption Governance
 
 **Document Status:** `PRE-RELEASE` | **Confidence Grade:** `B` | **Methodological Layer:** `Layer 3 (H6 Complex Verse Protocol)`
-**External Cryptographic Manifest (SHA-256):** `2561e10bfd7d75515be2f75149bba9f034262c75c259b456e952de91b09eeef3`
+**External Cryptographic Manifest (SHA-256):** `c44ae8cc7305606dd6712181f606251fc3aea8a4c929e16f0db905628fb451e2`
 
 ---
 

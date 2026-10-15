@@ -1,7 +1,7 @@
 # QV-2026-009 — Surah Al-Hashr 59:7: Wealth Concentration, Economic Circulation (Kay la Yakuna Dulatan), Distributive Justice & Anti-Oligarchy Doctrine
 
 **Document Status:** `PRE-RELEASE` | **Confidence Grade:** `B` | **Methodological Layer:** `Layer 3 (H6 Complex Verse Protocol)`
-**External Cryptographic Manifest (SHA-256):** `77f85cad3e81757484d843840b7c9fb3cb73d05b72588d46ec147ff80400358b`
+**External Cryptographic Manifest (SHA-256):** `28a851aace3b8d82d384e06d0eb14b79034616d611231e8ad50fd1cbb96ca70e`
 
 ---
 

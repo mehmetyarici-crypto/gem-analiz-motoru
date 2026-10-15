@@ -224,7 +224,29 @@ peer_review:
 
 ---
 
-### ADIM 01 — SİYÂK-SİBÂK VE TARİHSEL BAĞLAM
+### ADIM 01 — LAFZÎ TAHLİL, SİYÂK-SİBÂK VE TARİHSEL BAĞLAM
+
+- **Arapça Metin (Haşr Sûresi 59:7 — Resm-i Osmânî):**
+  > مَّآ أَفَآءَ ٱللَّهُ عَلَىٰ رَسُولِهِۦ مِنْ أَهْلِ ٱلْقُرَىٰ فَلِلَّهِ وَلِلرَّسُولِ وَلِذِى ٱلْقُرْبَىٰ وَٱلْيَتَـٰمَىٰ وَٱلْمَسَـٰكِينِ وَٱبْنِ ٱلسَّبِيلِ كَىْ لَا يَكُونَ دُولَةًۢ بَيْنَ ٱلْأَغْنِيَآءِ مِنكُمْ ۚ وَمَآ ءَاتَىٰكُمُ ٱلرَّسُولُ فَخُذُوهُ وَمَا نَهَىٰكُمْ عَنْهُ فَٱنتَهُوا۟ ۚ وَٱتَّقُوا۟ ٱللَّهَ ۖ إِنَّ ٱللَّهَ شَدِيدُ ٱلْعِقَابِ ﴿٧﴾
+
+- **Sahih Türkçe Meal:**
+  > *"Allah’ın, (fethedilen) beldelerin halkından Resûlüne fey olarak (savaşsız kamu gelirleriyle) verdiği mallar; Allah’a, Resûlüne, yakınlara, yetimlere, yoksullara ve yolda kalmışlara aittir. Bu, o malların içinizden yalnızca zenginler arasında elden ele dolaşan bir servet tekeli (dûleten) haline gelmemesi içindir. Peygamber size ne verdiyse onu alın, sizi neden menettiyse ondan da sakının. Allah’a karşı gelmekten sakının; şüphesiz Allah’ın cezası pek çetindir. (7)"*
+
+- **Kelime-Kelime Lafzî Çözümleme (Kelime Mealleri):**
+  - `مَّآ أَفَآءَ ٱللَّهُ عَلَىٰ رَسُولِهِۦ` (Mâ efâallâhu ‘alâ rasûlihî): Allah’ın Resûlüne fey olarak döndürüp nasip ettiği kamu kaynakları (`fey’`, gölgenin dönmesi gibi servetin asıl gayesi olan kamu yararına rücû etmesidir).
+  - `مِنْ أَهْلِ ٱلْقُرَىٰ` (min ehli'l-kurâ): Beldelerin / şehirlerin ahalisinden (savaşsız anlaşmalarla ve kamu hukuku yoluyla hazineye intikal eden gelirler).
+  - `فَلِلَّهِ وَلِلرَّسُولِ` (fe-lillâhi ve li'r-rasûli): Allah’a ve Resûlüne aittir (yani kamu otoritesinin genel maslahat ve adalet harcamalarına tahsis edilir).
+  - `وَلِذِى ٱلْقُرْبَىٰ وَٱلْيَتَـٰمَىٰ` (ve li-zi'l-kurbâ ve'l-yetâmâ): Yakınlara ve cemiyet içinde hâmisiz kalan yetimlere.
+  - `وَٱلْمَسَـٰكِينِ وَٱبْنِ ٱلسَّبِيلِ` (ve'l-mesâkîni vebni's-sebîl): Geçim darlığı çeken yoksullara ve memleketinden uzakta çaresiz kalmış yolculara/muhacirlere.
+  - `كَىْ لَا يَكُونَ دُولَةًۢ` (key lâ yekûne dûleten): Ta ki o servet sadece belirli bir zümrenin tekelinde dönüp duran bir meta (`dûle`) olmasın! (`key` ta‘lîl/illet edatıdır; İslam iktisat hukukunun en temel *hikmet-i teşrî‘* ve *illet* cümlesidir).
+  - `بَيْنَ ٱلْأَغْنِيَآءِ مِنكُمْ` (beyne'l-ağniyâi minküm): İçinizden yalnızca zenginler / sermaye sahipleri arasında (kapalı devre dolaşan bir rant çarkı olmasın).
+  - `وَمَآ ءَاتَىٰكُمُ ٱلرَّسُولُ فَخُذُوهُ وَمَا نَهَىٰكُمْ عَنْهُ فَٱنتَهُوا۟` (ve mâ âtâkümü'r-rasûlü fe-huzûhü ve mâ nehâküm ‘anhü fentehû): Resûl size neyi verdiyse (ve neyi emrettiyse) onu alın; sizi neden nehyettiyse ondan derhal vazgeçin (hem mali taksimde hem de küllî teşrî‘de Sünnetin bağlayıcılık delili).
+
+- **Klasik Tefsir Lafzî Tahlili (İbn Âşûr & Cessâs):**
+  - `[NAKİL]`: İbn Âşûr (*et-Tahrîr ve't-Tenvîr*, C. 28, s. 84–91), `key lâ yekûne dûleten beyne'l-ağniyâi minküm` cümlesinin İslam maliye ve iktisat hukukunda **külli bir makâsıd kaidesi (aslün ‘azîm)** olduğunu; Şâri‘in servetin dar bir oligarşi elinde toplanmasını (temerküz/tekelleşme) açıkça gayrimeşru ilan ettiğini ve kamu maliyesinin serveti tabana yaymakla yükümlü olduğunu belirtir.[^1]
+  - `[YORUM]`: Âyetin lafzî mimarisi mülkiyet hakkını ortadan kaldırmaz; fakat kamu kaynaklarının ve iktisadi büyümenin sadece en üst gelir dilimi arasında kapalı devre dönmesini (`dûle`) toplumsal çöküş sebebi sayarak kırılgan kesimler lehine yapısal yeniden bölüşümü emreder.
+
+- **Siyâk-Sibâk ve Tarihsel Bağlam:**
 Haşr Sûresi Hicretin 4. yılında Medine'de Benî Nadîr kabilesinin şehirden çıkarılması hadisesi (tarihsel bağlam) üzerine nâzil olmuştur. 6. âyette, savaşılmaksızın elde edilen 'fey'' mallarının gazilere ganimet olarak dağıtılmayacağı açıklanmıştır. 7. âyet ise bu devasa kamusal kaynağın beşte dörtlük kısmının savaşçılara verilmeyip; Muhacirlerin yoksullarına, yetimlere ve muhtaçlara tahsis edilmesinin gerekçesini (hikmet-i teşri') açıklar: "Servet aranızdaki zenginler arasında elden ele dolaşan bir güç olmasın." Sibâkında (8-9. âyetler) ise mallarını geride bırakan Muhacirler ile onları kendi nefislerine tercih eden Ensar'ın feragati ("îsâr") övülür.
 
 ---

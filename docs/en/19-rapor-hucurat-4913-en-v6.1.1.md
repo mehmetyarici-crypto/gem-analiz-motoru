@@ -1,7 +1,7 @@
 # QV-2026-014 — Surah Al-Hujurat 49:13: Ontological Equality of Humankind, Doctrine of Mutual Recognition (Ta'aruf), Anti-Racism & Taqwa-Based Universal Merit
 
 **Document Status:** `PRE-RELEASE` | **Confidence Grade:** `B` | **Methodological Layer:** `Layer 3 (H6 Complex Verse Protocol)`
-**External Cryptographic Manifest (SHA-256):** `82092367583de69a7b3d23391ef72f43d1db3368c3bad8163e2f7a37237a23c9`
+**External Cryptographic Manifest (SHA-256):** `bca0cee1a3e02e0c73a7b1291d8a7447b350d1fe6b2b77bdcdd3fd4317997c33`
 
 ---
 

@@ -234,7 +234,28 @@ peer_review:
 
 ---
 
-### ADIM 01 — SİYÂK-SİBÂK VE TARİHSEL BAĞLAM
+### ADIM 01 — LAFZÎ TAHLİL, SİYÂK-SİBÂK VE TARİHSEL BAĞLAM
+
+- **Arapça Metin (Hadîd Sûresi 57:25 — Resm-i Osmânî):**
+  > لَقَدْ أَرْسَلْنَا رُسُلَنَا بِٱلْبَيِّنَـٰتِ وَأَنزَلْنَا مَعَهُمُ ٱلْكِتَـٰبَ وَٱلْمِيزَانَ لِيَقُومَ ٱلنَّاسُ بِٱلْقِسْطِ ۖ وَأَنزَلْنَا ٱلْحَدِيدَ فِيهِ بَأْسٌ شَدِيدٌ وَمَنَـٰفِعُ لِلنَّاسِ وَلِيَعْلَمَ ٱللَّهُ مَن يَنصُرُهُۥ وَرُسُلَهُۥ بِٱلْغَيْبِ ۚ إِنَّ ٱللَّهَ قَوِىٌّ عَزِيزٌ ﴿٢٥﴾
+
+- **Sahih Türkçe Meal:**
+  > *"Andolsun Biz peygamberlerimizi açık delillerle (beyyinelerle) gönderdik ve insanların adaleti (kıstı) bizzat ayakta tutmaları için onlarla birlikte Kitab’ı ve Mîzân’ı (adalet ölçüsünü) indirdik. Ve kendisinde çetin bir güç (caydırıcı kudret) ve insanlar için çeşitli faydalar bulunan demiri de indirdik (var ettik); ta ki Allah, görmediği halde (gaybda) kendisine ve peygamberlerine kimin yardım edeceğini ortaya çıkarsın. Şüphesiz Allah mutlak güç sahibidir, daima üstündür. (25)"*
+
+- **Kelime-Kelime Lafzî Çözümleme (Kelime Mealleri):**
+  - `لَقَدْ أَرْسَلْنَا رُسُلَنَا بِٱلْبَيِّنَـٰتِ` (Lekad erselnâ rusülenâ bi'l-beyyinât): Yemin olsun ki elçilerimizi apaçık deliller, burhanlar ve mucizelerle gönderdik.
+  - `وَأَنزَلْنَا مَعَهُمُ ٱلْكِتَـٰبَ` (ve enzelnâ me‘ahümü'l-kitâbe): Ve onlarla birlikte ilahi vahyi ve yazılı hukuk normlarını (`el-Kitâb`) indirdik.
+  - `وَٱلْمِيزَانَ` (ve'l-mîzân): Ve adalet terazisini, rasyonel ve hukuki denge ölçütünü (`el-Mîzân`).
+  - `لِيَقُومَ ٱلنَّاسُ بِٱلْقِسْطِ` (li-yekûme'n-nâsü bi'l-kıst): Ta ki insanlar toplumsal, iktisadi ve hukuki hayatta hakkaniyeti (`el-kıst`) bizzat kendileri ayakta tutsunlar (`lâm-ı ta‘lîl` ile bütün peygamberlerin ve kitapların gönderiliş gayesi tek bir cümlede özetlenmiştir: **Adaletin ikamesi**).
+  - `وَأَنزَلْنَا ٱلْحَدِيدَ` (ve enzelne'l-hadîd): Ve demiri indirdik / yarattık (hem kozmolojik olarak süpernova nükleosenteziyle yeryüzüne indirilişine hem de nimet olarak insanlığın emrine verilişine işaret eder).
+  - `فِيهِ بَأْسٌ شَدِيدٌ` (fîhi be'sün şedîd): Onda çetin bir sertlik, savunma ve caydırıcılık gücü (`be'sün şedîd`) vardır (hukuku koruyan meşru kamu gücü ve savunma kapasitesi).
+  - `وَمَنَـٰفِعُ لِلنَّاسِ` (ve menâfi‘u li'n-nâs): Ve insanlar için sayısız sivil, endüstriyel ve medeni faydalar (`menâfi‘`) vardır.
+
+- **Klasik Tefsir Lafzî Tahlili (Mâtürîdî, Râzî & İbn Teymiyye):**
+  - `[NAKİL]`: Ebû Mansûr el-Mâtürîdî (*Te'vîlâtü Ehli's-Sünne*, C. 9, s. 524–526) ve Fahreddîn er-Râzî (*Mefâtîhu'l-Gayb*, C. 29, s. 242–245), âyetin medeniyetin üç kurucu sütununu bir araya getirdiğini vurgularlar: **Kitap** (vahyî ve ahlaki norm), **Mîzân** (akli ve hukuki adalet ölçüsü) ve **Hadîd / Demir** (bu adaleti dış ve iç saldırılara karşı koruyan caydırıcı icra gücü ve sivil teknoloji).[^1]
+  - `[YORUM]`: Hukuktan (`Kitap` ve `Mîzân`) kopuk bir demir (`Hadîd`) zorbalık ve yıkım üretir; demirden (caydırıcı güç ve teknolojiden) yoksun bir hukuk ise mütecavizler karşısında aciz kalır. Medeniyet ancak `Kitap + Mîzân + Hadîd` dengesiyle ayakta durur.
+
+- **Siyâk-Sibâk ve Tarihsel Bağlam:**
 Hadîd Sûresi Medine döneminde, İslam toplumunun artık müstakil bir siyasi, iktisadi ve askeri özne haline geldiği süreçte nâzil olmuştur. Sûrenin önceki âyetlerinde (57:7-24) infak, servetin sirkülasyonu, dünya hayatının aldatıcılığına kapılmama ve musibetler karşısında metanet işlenir. Tam bu zeminde 25. âyet, bireysel ahlaktan makro-devlet ve medeniyet felsefesine geçerek; peygamberlerin gönderiliş gayesini "insanların bizzat kıst (adalet) üzere kıyam etmesi" olarak ilan eder ve bunun üç kurucu enstrümanını (Kitap, Mîzân, Hadîd) vazeder. Sibâkında ise (26-29. âyetler) Nûh, İbrâhîm ve Îsâ peygamberlerin mirası ile ruhbanlık eleştirisi yapılarak dünyadan el etek çeken pasif dindarlık yerine adaleti ve ilmi kuşanan aktif medeniyet tasavvuru pekiştirilir.
 
 ---

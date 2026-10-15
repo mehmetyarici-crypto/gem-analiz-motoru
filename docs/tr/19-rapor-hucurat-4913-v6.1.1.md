@@ -238,7 +238,27 @@ peer_review:
 
 ---
 
-### ADIM 01 — SİYÂK-SİBÂK VE TARİHSEL BAĞLAM
+### ADIM 01 — LAFZÎ TAHLİL, SİYÂK-SİBÂK VE TARİHSEL BAĞLAM
+
+- **Arapça Metin (Hucurât Sûresi 49:13 — Resm-i Osmânî):**
+  > يَـٰٓأَيُّهَا ٱلنَّاسُ إِنَّا خَلَقْنَـٰكُم مِّن ذَكَرٍ وَأُنثَىٰ وَجَعَلْنَـٰكُمْ شُعُوبًا وَقَبَآئِلَ لِتَعَارَفُوٓا۟ ۚ إِنَّ أَكْرَمَكُمْ عِندَ ٱللَّهِ أَتْقَىٰكُمْ ۚ إِنَّ ٱللَّهَ عَلِيمٌ خَبِيرٌ ﴿١٣﴾
+
+- **Sahih Türkçe Meal:**
+  > *"Ey insanlar! Şüphesiz Biz sizi bir erkekle bir dişiden yarattık ve birbirinizle tanışıp bilişesiniz (teârüf edesiniz) diye sizi milletlere (şuûb) ve kabilelere ayırdık. Şüphesiz Allah katında en üstününüz (en değerli olanınız), O’na karşı sorumluluk bilinci en yüksek olanınızdır (en muttakî olanınızdır). Şüphesiz Allah her şeyi hakkıyla bilendir, her şeyden haberdar olandır. (13)"*
+
+- **Kelime-Kelime Lafzî Çözümleme (Kelime Mealleri):**
+  - `يَـٰٓأَيُّهَا ٱلنَّاسُ` (Yâ eyyühe'n-nâs): Ey insanlar! (Sûrenin önceki âyetlerinde `Yâ eyyühellezîne âmenû` hitabı kullanılırken, bu âyette hitap doğrudan bütün insanlık ailesine genişletilmiştir).
+  - `إِنَّا خَلَقْنَـٰكُم مِّن ذَكَرٍ وَأُنثَىٰ` (innâ halaknâküm min zekerin ve ünsâ): Şüphesiz Biz sizi tek bir erkek (Hz. Âdem) ve tek bir dişiden (Hz. Havvâ) —veya her birinizi anne ve baba birliğinden— yarattık (bütün insanların ontolojik ve biyolojik eşitliği).
+  - `وَجَعَلْنَـٰكُمْ شُعُوبًا وَقَبَآئِلَ` (ve ce‘alnâküm şu‘ûben ve kabâile): Ve sizi büyük milletlere/halklara (`şu‘ûb`) ve boylara/kabilelere (`kabâil`) ayırdık.
+  - `لِتَعَارَفُوٓا۟` (li-te‘ârafû): Birbirinizle tanışasınız, yardımlaşasınız ve karşılıklı kültür/bilgi alışverişinde bulunasınız diye! (`tefâ‘ul` bâbından işteş fiil; üstünlük taslamak `li-tefâharû` veya çatışmak `li-tenâkerû` için değil, karşılıklı tanışma `teârüf` içindir).
+  - `إِنَّ أَكْرَمَكُمْ عِندَ ٱللَّهِ أَتْقَىٰكُمْ` (inne ekrameküm ‘indallâhi etkâküm): Şüphesiz Allah katında en kerîm, en şerefli ve en üstün olanınız, takvâca (ahlaki sorumluluk ve adalet bilincince) en ileri olanınızdır.
+  - `إِنَّ ٱللَّهَ عَلِيمٌ خَبِيرٌ` (innallâhe ‘alîmün habîr): Şüphesiz Allah (niyetleri ve amelleri) hakkıyla bilendir, (kalplerin iç yüzünden) haberdar olandır.
+
+- **Klasik Tefsir Lafzî Tahlili (Taberî, Zemahşerî & İbn Âşûr):**
+  - `[NAKİL]`: İbn Âşûr (*et-Tahrîr ve't-Tenvîr*, C. 26, s. 258–264), `li-te‘ârafû` kelimesindeki `lâm-ı ta‘lîl`in sosyolojik çeşitliliğin tek meşru gayesini **"karşılıklı tanışma ve medeni işbirliği"** olarak belirlediğini; `inne ekrameküm ‘indallâhi etkâküm` cümlesinin ise cahiliyenin soy, kan, ırk ve kabile üstünlüğü (`neseb/asabiyet`) iddiasını kökünden yıkarak değer ölçütünü iradî ve ahlaki liyakate (`takvâ`) bağladığını vurgular.[^1]
+  - `[YORUM]`: Lafzî yapı üç aşamalı bir insanlık beyannamesidir: (1) Yaratılışta mutlak eşitlik (`min zekerin ve ünsâ`), (2) Sosyolojik çeşitlilikte çatışma değil tanışma etiği (`li-te‘ârafû`), (3) Üstünlükte ırk/soy değil yalnızca ahlaki sorumluluk ve adalet (`etkâküm`).
+
+- **Siyâk-Sibâk ve Tarihsel Bağlam:**
 Hucurât Sûresi Medine döneminde, hicretin 9. yılında ("Senetü'l-Vüfûd" — Heyetler Yılı) Arap yarımadasının dört bir yanından farklı kabilelerin Medine'ye gelerek İslam cemiyetine katıldığı bir tarihsel kesitte nazil olmuştur. Sûrenin ilk 12 âyetinde haber doğrulama (*tebeyyün*), çatışma çözümü (*ıslah*), müminlerin kardeşliği (*uhuvvet*), alay etmeme, lakap takmama, suizan ve gıybetten kaçınma gibi toplumsal ahlak normları vazedilmiş; 13. âyette ise hitap *"Yâ eyyühe'l-lezîne âmenû"* (Ey iman edenler) dairesinden *"Yâ eyyühe'n-nâs"* (Ey insanlar!) dairesine genişletilerek tüm insanlığı kapsayan evrensel eşitlik ilkesi ilan edilmiştir. Mekke'nin fethinde Hz. Bilâl-i Habeşî'nin Kâbe'nin üzerinde ezan okumasına kibirle itiraz eden Kureyş asabiyetine karşı bu âyet nazil olmuş ve Veda Hutbesi'nin temelini oluşturmuştur.
 
 ---
