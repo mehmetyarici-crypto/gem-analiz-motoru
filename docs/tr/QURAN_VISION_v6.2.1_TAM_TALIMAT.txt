@@ -1,0 +1,386 @@
+================================================================================
+QURAN VISION ENSTİTÜSÜ • KUR'AN TEMELLİ GELECEK VİZYONU (QURAN VISION) — v6.2.1
+METODOLOJİ, 26 ADIMLI ANALİZ MİMARİSİ, İSNAD 2 / DOI DOĞRULAMA STANDARDI,
+ÇİFT DİLLİ (TR/EN) KÜLLİYAT MOTORU VE TAM UYGULAMA TALİMATNAMESİ
+================================================================================
+
+• Sürüm                 : v6.2.1 (Külliyat, İSNAD 2 + APA 7/DOI, Çift Dilli A4 PDF, XMP ve CERN/Zenodo Tescil Sürümü)
+• Tarih                 : 15 Ekim 2026
+• Önceki Sürümler       : v5.1.3 -> v5.2.0 -> v6.0.0 -> v6.1.0 -> v6.1.1 -> v6.2.0 -> v6.2.1
+• Kapsam                : Katman 3 (Akademik-Derin); 5 Makro Faz, 26 Analiz Adımı, Z-1..Z-5 Zorunlu/Koşullu Ekler (Z-4.5 Çift Katmanlı Bibliyografya dahil), 40 Dakikalık TYMM Pedagojik Ders Planı ve Çift Dilli (TR/EN) Yayın Hattı
+• Kalıcı CERN/Zenodo DOI: 10.5281/zenodo.23391192 (Kavram DOI) | 10.5281/zenodo.23391193 (v6.2.1 Sürüm DOI)
+• Canlı Külliyat Portalı: https://mehmetyarici-crypto.github.io/quran-vision/
+• Açık Bilim Lisansı    : Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
+
+--------------------------------------------------------------------------------
+0. KURUMSAL KİMLİK, ESER SAHİPLİĞİ VE AKADEMİK DANIŞMA KÜNYESİ (SIFIR BELİRSİZLİK İLKESİ)
+--------------------------------------------------------------------------------
+1) 👑 Proje Kurucusu & Başyazar (Eser Sahibi / Founder, Copyright Owner & Principal Author):
+   • Adı Soyadı     : Mehmet Yarıcı
+   • Kurumsal Künye : Uludağ Üniversitesi İlahiyat Fakültesi (1989) • T.C. Millî Eğitim Bakanlığı, İstanbul Bahçelievler Dede Korkut Anadolu Lisesi
+   • ORCID iD       : 0009-0003-0356-8582 (https://orcid.org/0009-0003-0356-8582)
+   • Hukuki Statü   : CITATION.cff, .zenodo.json ("creators" / "Project leader"), Google Scholar ("citation_author") ve PDF XMP ("Author") üst-verilerinde tek birincil müellif ve eser sahibidir.
+
+2) 🏛️ Akademik Danışman & Dış Hakem (Academic Advisor & External Peer-Reviewer / Zenodo Supervisor):
+   • Adı Soyadı     : Mehmet Emin Koç
+   • Kurumsal Künye : Azerbaycan Milli İlimler Akademisi (AMEA / ANAS), Felsefe ve Sosyoloji Enstitüsü
+   • ORCID iD       : 0000-0002-1025-5643 (https://orcid.org/0000-0002-1025-5643)
+   • Akademik Statü : .zenodo.json ("contributors" -> "type": "Supervisor") ve Schema.org JSON-LD katmanında Akademik Danışman ve Dış Hakem olarak tescillidir.
+
+3) 📋 Efrâdını Câmi‘, Ağyârını Mâni‘ Resmi Takdim Özeti:
+   Mehmet Yarıcı (Uludağ Üniversitesi İlahiyat Fakültesi, 1989; T.C. MEB, ORCID: 0009-0003-0356-8582) tarafından kurgulanan ve kaleme alınan, Mehmet Emin Koç’un (Azerbaycan Milli İlimler Akademisi Felsefe ve Sosyoloji Enstitüsü, ORCID: 0000-0002-1025-5643) akademik danışmanlık ve dış hakemliğini üstlendiği "Kur’ân Vizyonu (Quran Vision): Stratejik Tefsir, Makâsıd ve Medeniyet Öngörü Külliyatı (v6.2.1; DOI: 10.5281/zenodo.23391192)"; Kur’ân-ı Kerîm’in hukuk, adalet, kamu emaneti, şûra, barış inşası, epistemik doğrulama, iktisadi denge, çoğulculuk ve insan hayatının dokunulmazlığı eksenindeki 15 kurucu âyetini (QV-2026-001 – QV-2026-015) "26 Adımlı Kanıt-Temelli Analitik Çerçeve" ile inceleyen, Türkçe ve İngilizce çift dilli açık erişim bir araştırma külliyatıdır. Eser; lafzî-filolojik tahlil, sebeb-i nüzûl ve İSNAD 2. Edisyon standardında cilt/sayfa/tahkik düzeyinde doğrulanmış 76 klasik Arapça tefsir ve fıkıh kaynağını (Taberî, Mâtürîdî, Râzî, Kurtubî, İbn Âşûr, Şâtıbî vd.), Makâsıdü’ş-Şerîa’nın zarûriyyât-ı hamse (dîn, nefis, akıl, nesil ve mal emniyeti) ilkeleriyle birleştirmekte; klasik tefsir mirasını Dünya Bankası, UNDP, WJP, UNESCO, SIPRI, OECD ve WHO gibi uluslararası kuruluşların 45 güncel ampirik (DOI’li) veri seti, 2026–2036 dönemini kapsayan Bayesyen olasılık ve politika simülasyonları, yanlışlanabilir erken uyarı eşikleri ve 40 dakikalık yapılandırılmış seminer/münazara ders planlarıyla (TYMM) sentezlemektedir. Metin dışı spekülatif yorumları, anakronik okumaları ve tahkiksiz nakilleri "0 Kesici Hata (Zero-Block Linter)" ve kriptografik SHA-256 doğrulama protokolüyle dışarıda bırakan külliyat; İslâmî ilimlerin sahih rivayet ve dirayet omurgasını çağdaş sosyal bilimler, veri bilimi ve stratejik öngörü metodolojisiyle buluşturan özgün bir medeniyet ve tefsir modeli sunmaktadır.
+
+================================================================================
+1. AMAÇ, KAPSAM VE 6 TEMEL EPİSTEMİK İLKE
+================================================================================
+Kur’an Temelli Gelecek Vizyonu (Quran Vision v6.2.1), Kur'an âyetleri üzerine filolojik, tefsirî, usûlî, makâsıdî ve ampirik politika analizini düzenleyen bilimsel bir araştırma ve öngörü çerçevesidir. Bir fetva, bağlayıcı yargı kararı, ilahî muradın tek temsili veya kendi başına dış akademik hakemlik onayı değildir.
+
+1) Otorite Sınırı: Çıktı analitik ve beşerî bir içtihat/yorumdur; dinî fetva veya adli kaza hükmü yerine geçmez.
+2) Determinizm Sınırı: Toplumsal sonuçlar kaçınılmaz kader kabul edilmez; insan iradesi (sünnetullah), kurumlar ve bağlam birlikte değerlendirilir.
+3) Epistemik Tevazu: Mutlak kesinlik ve kusursuzluk iddiaları ("kesinlikle kanıtlanmıştır", "şüphesiz tek doğru" vb.) kullanılmaz. Doğrudan kaynak nakli (`[NAKİL]`), tercüme (`[TERCÜME]`), analistin çıkarımı (`[YORUM]`), varsayım ve belirsizlik birbirinden kesin olarak ayrılır.
+4) Rol Ayrımı: Analiz, Red Team karşı okuma, algoritmik iç kalite kontrol (`gem_lint.py`) ve bağımsız dış akademik hakemlik (`Z-5`) farklı işlevlerdir. Algoritmik iç denetim testleri dış hakem onayı gibi sunulamaz.
+5) Olgu-Değer Ayrımı (Hume Giyotini): Ampirik bulgular ("olan / is") normatif öncülleri ("olması gereken / ought") tek başına üretmez; aradaki normatif köprü aksiyomu açıkça yazılır. Popperci yanlışlanabilirlik (falsifiabilite) Kur'an âyetinin ilahî hakikatine değil, yalnızca dünyevi politika hipotezlerine ve kurumsal modellere uygulanır.
+6) Orantılı Yöntem: Bir alt alan âyet veya araştırma sorusu için uygulanabilir değilse yapay içerik uydurulmaz; "uygulanamaz" gerekçesi kaydedilir. Ebced, cifir veya numerolojik çıkarımlar analitik kanıt olarak kesinlikle kullanılmaz.
+
+================================================================================
+2. ON BİR DOĞRULAMA MODÜLÜ (V1–V11)
+================================================================================
+• V1 — İki Katmanlı Kaynak Künyesi ve İzlenebilir Atıf:
+  Rapor kaynakçası iki katmanlıdır:
+  (a) `classical_sources`: Klasik İslami kaynaklarda İSNAD 2. Edisyon standardında müellif (`author`), hicrî/milâdî vefat tarihi (`death_year: "ö. H/M"`), eser adı (`work`), muhakkik (`editor`), yayınevi (`publisher`), basım yeri (`publication_place`), basım yılı (`publication_year`), cilt (`volume`), sayfa (`pages`), orijinal Arapça ibare (`arabic_quote`), doğrulama bağlantısı (`verification_link`) ve URN/DOI (`doi_or_urn`) zorunludur.
+  (b) `modern_sources`: Çağdaş ampirik/kurumsal kaynaklarda APA 7 standardında kurum/yazar (`institution` / `author`), rapor başlığı (`title`), yayın yılı (`publication_year`), yayınevi (`publisher`), basım yeri (`publication_place`), erişim adresi (`url`) ve kalıcı `doi` numarası zorunludur.
+• V2 — Nakil, Tercüme ve Yorum Ayrımı:
+  Doğrudan alıntılar `[NAKİL]` (İngilizce: `[CITATION / NAKİL]`), tercümeler `[TERCÜME]`, analistin çıkarımları `[YORUM]` (İngilizce: `[ANALYSIS / YORUM]`) etiketiyle ayrılır ve metin içi dipnotlarla (`[^1]`, `[^2]`) `Z-4.5` kaynakçasına bağlanır.
+• V3 — İhtilaf ve Alternatif Okumalar:
+  H6 (Zorlu Âyet) veya yorumu anlamlı biçimde etkileyen ihtilaflarda klasik mezhebî/kelâmî/fıkhî görüşler ve delilleri `Z-2` cetvelinde karşılaştırılır.
+• V4 — Kriptografik Dosya Bütünlüğü (Harici .sha256 Manifesti):
+  SHA-256 özeti kendi içinde değişen YAML alanına gömülmez (`sha256_hash` alanında `0000...` yer tutucusu durur); gerçek dosya özeti harici `<rapor-adi>.md.sha256` manifest dosyasında tutulur ve `L-0404` kuralıyla doğrulanır.
+• V5 — Senaryo Puanları ve Gerekçesi:
+  4 senaryonun (`S1..S4`) 1–5 ölçeğindeki boyut puanları (`olasilik`, `tesir`, `firsat`, `kirilganlik`, `stratejik_oncelik` veya `uygulama`, `meşruiyet`, `dayanıklılık`) ve puanlama gerekçesi (`score_justification`) tanımlanır.
+• V6 — Eşiklerin Kökeni (`th-01..th-03`):
+  Her erken uyarı ve politika eşiği veri temelli, kurum standardı veya `[TAHMİNÎ EŞİK]` (analitik çalışma hipotezi) olarak sınıflanır. LaTeX kalıntısı (`\text{...}`) bırakılmaz, temiz tipografi (`≤ 2 saat`, `≥ %85`) kullanılır.
+• V7 — Ampirik Verinin İzlenebilirliği:
+  Dünya Bankası (World Bank), UNDP, WJP, UNESCO, SIPRI, OECD, WHO, UNODC vb. veri setlerinin yayın yılı, göstergesi ve DOI/URL bilgisi kaydedilir.
+• V8 — Sınırlı Yanlışlanabilirlik (Popperci Falsifiabilite):
+  Yalnızca 5–10 yıllık dünyevi politika hipotezleri için ölçüm penceresi, bağımsız endeks ve hipotezin hangi sayısal eşikte yanlışlanmış sayılacağı yazılır.
+• V9 — Âyete Özgü Açık Problem (Aporia — `Z-1`):
+  Âyete özgü çözümlenmemiş felsefî, hukuki veya sosyo-politik gerilim (`Z-1`) derinlemesine tartışılır.
+• V10 — Standart Sınır Beyanı (`Z-4`):
+  Raporun beşerî bir içtihat olduğu, bağlayıcı fetva veya yargı kararı olmadığı açıkça beyan edilir.
+• V11 — Değerlendirme ve Açık Hakemlik Kaydı (`Z-5`):
+  Algoritmik iç kontrol (`internal_linter_verified: true`) ile bağımsız dış akademik hakem incelemesi (`status: "PRE-RELEASE"` / `"EXTERNALLY-REVIEWED"`) birbirinden ayrılır.
+
+================================================================================
+3. TAM YAML FRONTMATTER ŞEMASI (v6.2.1 RAPOR ÜST-VERİ STANDARDI)
+================================================================================
+Her rapor dosyası (`docs/tr/<sira>-rapor-<sure>-<ayet>-v6.1.1.md`) aşağıdaki YAML şemasıyla başlar:
+
+```yaml
+---
+gem_version: "6.1.1"
+case_id: "QV-2026-0XX"
+vaka_kodu: "QV-2026-0XX"
+surah: "{{SURE_ADI}}"
+sure: "{{SURE_ADI}}"
+verse: "{{SURE_NO}}:{{AYET_NO}}"
+ayet_no: "{{SURE_NO}}:{{AYET_NO}}"
+topic: "{{KONU_BASLIGI}}"
+konu: "{{KONU_BASLIGI}}"
+date: "2026-10-15"
+tarih: "2026-10-15"
+layer: 3
+katman: 3
+h6: true
+h6_durumu: true
+confidence_grade: "B"
+guven_duzeyi: "B"
+status: "PRE-RELEASE"
+sha256_hash: "0000000000000000000000000000000000000000000000000000000000000000"
+integrity_verification:
+  hash_algorithm: "SHA-256"
+  manifest_file: "{{DOSYA_ADI}}.sha256"
+  verification_command: "sha256sum -c {{DOSYA_ADI}}.sha256"
+
+classical_sources:
+  - id: "src-ibn-faris"
+    author: "İbn Fâris, Ebü'l-Hüseyn Ahmed b. Fâris"
+    death_year: "ö. 395/1004"
+    work: "Mu'cemü Makâyîsi'l-Lüğa"
+    editor: "Abdüsselâm Muhammed Hârûn"
+    publisher: "Dârü'l-Fikr"
+    publication_place: "Beyrut"
+    publication_year: 1979
+    volume: "Cilt No"
+    pages: "Sayfa Aralığı"
+    arabic_quote: "Doğrulanmış orijinal Arapça ibare..."
+    verification_link: "https://shamela.ws/book/..."
+    doi_or_urn: "urn:shamela:book:..."
+  # (En az 5 klasik kaynak: İbn Fâris, Râgıb el-İsfahânî, Zemahşerî/Taberî, İbn Manzûr, Râzî/Kurtubî/Mâtürîdî/İbn Âşûr/Şâtıbî)
+
+modern_sources:
+  - id: "mod-01"
+    author: "Kurum veya Yazar Adı"
+    institution: "World Bank / UNDP / WJP / UNESCO / SIPRI / OECD / WHO"
+    title: "Rapor veya Veri Seti Başlığı"
+    publisher: "Yayınevi / Kurum"
+    publication_place: "Şehir"
+    publication_year: 2024
+    url: "https://..."
+    doi: "10.xxxx/..."
+  # (En az 3 çağdaş ampirik/kurumsal DOI'li kaynak)
+
+thresholds:
+  - id: "th-01"
+    name: "Birinci Erken Uyarı / Politika Eşiği"
+    value: ">= 0.80"
+    derivation_basis: "[TAHMİNÎ EŞİK — HİPOTEZ] Kurumsal endeks korelasyonuna dayalı çalışma hipotezi"
+    is_empirical: true
+  - id: "th-02"
+    name: "İkinci Erken Uyarı / Politika Eşiği"
+    value: "<= %15"
+    derivation_basis: "[TAHMİNÎ EŞİK — HİPOTEZ] Mukayeseli kamu politikası göstergesi"
+    is_empirical: true
+  - id: "th-03"
+    name: "Üçüncü Erken Uyarı / Politika Eşiği"
+    value: ">= %90"
+    derivation_basis: "[TAHMİNÎ EŞİK — HİPOTEZ] Kurumsal denetim hedef eşiği"
+    is_empirical: true
+
+scenarios:
+  - id: "S1"
+    title: "İdeal / Koruyucu ve İhya Edici Medeniyet Senaryosu"
+    scores:
+      olasilik: 3
+      tesir: 5
+      firsat: 5
+      kirilganlik: 2
+      stratejik_oncelik: 5
+    score_justification: "Normatif ilkelerin kurumsal denetimle birleştiği yüksek dirençli model."
+  - id: "S2"
+    title: "Bozulma / Kriz ve Kurumsal Çözülme Senaryosu"
+    scores:
+      olasilik: 3
+      tesir: 5
+      firsat: 1
+      kirilganlik: 5
+      stratejik_oncelik: 5
+    score_justification: "İlkelerin terk edildiği yüksek kırılganlık ve çatışma simülasyonu."
+  - id: "S3"
+    title: "Statüko / Kısmi ve Şeklî Uyum Senaryosu"
+    scores:
+      olasilik: 4
+      tesir: 3
+      firsat: 2
+      kirilganlik: 4
+      stratejik_oncelik: 3
+    score_justification: "Lafzın korunduğu fakat makâsıdın kurumsallaşamadığı kırılgan denge."
+  - id: "S4"
+    title: "Dönüştürücü Yapısal Reform Senaryosu"
+    scores:
+      olasilik: 3
+      tesir: 4
+      firsat: 4
+      kirilganlik: 2
+      stratejik_oncelik: 4
+    score_justification: "Kriz sonrası kademeli kurumsal öğrenme ve hukuk reformu modeli."
+
+peer_review:
+  status: "PRE-RELEASE"
+  internal_linter_verified: true
+  linter_timestamp: "2026-10-15T12:00:00Z"
+  reviewer_name: "Mehmet Emin Koç"
+  reviewer_title: "Akademik Danışman & Dış Hakem"
+  reviewer_orcid: "0000-0002-1025-5643"
+  reviewer_institution: "Azerbaycan Milli İlimler Akademisi (AMEA / ANAS), Felsefe ve Sosyoloji Enstitüsü"
+  review_date: "2026-10-15"
+  review_notes: "Quran Vision v6.2.1 İSNAD 2 ve APA 7 / DOI akademik standartlarına tam uyumludur; bağımsız akran değerlendirmesine açıktır."
+---
+```
+
+================================================================================
+4. BEŞ MAKRO FAZ VE 26 ANALİZ ADIMI TAM MİMARİSİ (ADIM 00 – ADIM 20)
+================================================================================
+
+--------------------------------------------------------------------------------
+FAZ I — KİMLİK, METİN VE BAĞLAM
+--------------------------------------------------------------------------------
+• ADIM 00 — KÜNYE VE GİRİŞ BİLGİLERİ:
+  Vaka Kodu (`QV-2026-0XX`), Âyet, Konu Başlığı, Proje Kurucusu & Başyazar (`Mehmet Yarıcı — ORCID: 0009-0003-0356-8582`), Akademik Danışman & Dış Hakem (`Mehmet Emin Koç — ORCID: 0000-0002-1025-5643`), Kalıcı DOI (`10.5281/zenodo.23391192`), Tarih, Sürüm (`v6.2.1`), Katman (`3`), H6 Durumu (`Evet`), Dil (`TR / EN`), Güven Düzeyi (`B`), Yorumcu Konumu Özeti, Harici `.sha256` Manifest bilgisi ve Mushaf/Kıraat Standardı (Resm-i Osmânî, Kûfî 6236, Âsım/Hafs).
+
+• ADIM 00-5 — DİL VE SEMANTİK MATRİSİ (H6 ZORUNLU — 4 BOYUTLU):
+  Her alt boyutta mutlaka orijinal Arapça ibare ve tercümesi `[NAKİL]` etiketiyle (`[^1]..[^4]` dipnotlu), analitik çıkarım ise `[YORUM]` etiketiyle ayrı yazılır:
+  1. Semantik / Kök Anlam (İştikak): İbn Fâris (*Mu'cemü Makâyîsi'l-Lüğa*, ö. 395/1004).
+  2. Kur'anî Semantik (Kavramlaşma): Râgıb el-İsfahânî (*el-Müfredât fî Garîbi'l-Kur'ân*, ö. 502/1108).
+  3. Geniş Leksikografik Çerçeve ve Klasik Örf: İbn Manzûr (*Lisânü'l-Arab*, ö. 711/1311).
+  4. Nahiv, Belâğat, İ'câz ve Fıkhî/Tefsirî Tahkik: Zemahşerî (*el-Keşşâf*, ö. 538/1144), Taberî (*Câmi‘u'l-Beyân*, ö. 310/923) veya Mâtürîdî (*Te'vîlât*, ö. 333/944).
+  + Çapraz Kontrol ve Dil Güvenliği Sentezi.
+
+• ADIM 01 — LAFZÎ TAHLİL, SİYÂK-SİBÂK VE TARİHSEL BAĞLAM (KRİTİK ZORUNLU BÖLÜM):
+  Bu adım hiçbir raporda atlanamaz; şu 5 alt bileşeni eksiksiz içermek zorundadır:
+  1. Arapça Metin (Resm-i Osmânî tam harekeli âyet metni `> ...` blok alıntısı olarak).
+  2. Sahih Türkçe Meal.
+  3. Kelime-Kelime Lafzî Çözümleme (`Kelime Mealleri`): Âyetteki tüm anahtar lafızların Arapça yazılışı, Latinize okunuşu, kök/bâb/i‘râb özelliği ve ıstılahî anlamı (en az 6–10 madde).
+  4. Klasik Tefsir Lafzî Tahlili (`[NAKİL]` + `[YORUM]`): Taberî, Râzî, Kurtubî, Mâtürîdî veya İbn Âşûr'dan cümle dizilimi ve lafzî nüktelerin tahkiki.
+  5. Siyâk-Sibâk ve Tarihsel Bağlam (Sebeb-i Nüzûl ve pasaj bütünlüğü).
+
+• ADIM 02 — MANTIKSAL SEMANTİK, MUHATAP, DİL GÜVENLİĞİ VE KARŞIT İLKE TESTİ:
+  Önerme yapısı (şart, ceza, istisna, illet), muhatap kitle analizi ve Karşıt İlke Testi (nassın koruduğu asıl maslahat ile gerilim halindeki alternatif maslahatın tartılması ve trade-off sınırı).
+
+• ADIM 03 — ÜÇLÜ ÇERÇEVE (ETHOS / LOGOS / PATHOS), DELALET VE İS-OUGHT KÖPRÜSÜ:
+  Zahirî hüküm / bâtınî hikmet dengesi; Ethos (ahlaki yük), Logos (mantıksal tutarlılık), Pathos (vicdani tesir) ve Hume Giyotini (Olgu-Değer Köprü Aksiyomu).
+
+• ADIM 04 — MAKÂSIDÜ'Ş-ŞERÎA MATRİSİ:
+  Şâtıbî (*el-Muvâfakât*) ve İbn Âşûr (*Makâsıdü'ş-Şerîati'l-İslâmiyye*) çerçevesinde Zarûriyyât (dîn, nefis, akıl, nesil, mal emniyeti), Hâciyyât ve Tahsîniyyât analizi.
+
+• ADIM 04b — YORUMCU KONUMU (GADAMER HERMENÖTİĞİ):
+  Benimsenen usûl ekolü, felsefi perspektif, analistin metodolojik sınırları ve alternatif bir usûlün (örn. lafızcı/zâhirî veya indirgemeci tarihselci okumanın) üreteceği farklı sonuç.
+
+• ADIM 05 — SİYAK-SİBAK ANALİZİ (S1–S7 SABİT KODLARI):
+  - S1: Önceki âyetle münasebet.
+  - S2: Sonraki âyetle münasebet.
+  - S3: Sûre başı / pasaj konumu.
+  - S4: Sûre sonu ve küllî bütünlük.
+  - S5: Sûre ana teması.
+  - S6: Nüzul bağlamı ve tarihsel zemin.
+  - S7: Bağlamdan koparma (cımbızlama / kırpma) riski ve metin içi emniyet kilidi.
+
+• ADIM 06 — ÇAPRAZ ÂYET ANALİZİ (EL-KUR'ÂNÜ YÜFESSİRÜ BA'DUHÛ BA'DAN):
+  Âyeti açıklayan, tahsis veya takyid eden diğer Kur'an âyetleriyle bütünlüklü konu tefsiri.
+
+--------------------------------------------------------------------------------
+FAZ II — SİSTEM, ÇAĞDAŞ HARİTALAMA VE GELECEK MODELLEMESİ
+--------------------------------------------------------------------------------
+• ADIM 07 — SİSTEM HARİTASI (CAUSAL LOOP DİAGRAMI — CLD), ÇAĞDAŞ AKTÖRLER VE KIRILMA NOKTASI:
+  Temel değişkenler, Pekiştirici (`R1, R2`) ve Dengeleyici (`B1, B2`) geri besleme döngüleri, gecikmeler, Tipping Point (Kırılma Noktası) ve Erken Uyarı (`EU-01..EU-03` / `N4`) sinyalleri.
+
+• ADIM 08 — DÖRT SENARYO VE STRATEJİK DEĞERLENDİRME (2026–2036):
+  - Senaryo 1 (S1): İdeal / Koruyucu ve İhya Edici Model.
+  - Senaryo 2 (S2): Bozulma / Kriz ve Çözülme Modeli.
+  - Senaryo 3 (S3): Statüko / Şeklî Uyum ve Kırılgan Denge Modeli.
+  - Senaryo 4 (S4): Dönüştürücü Yapısal Reform Modeli.
+
+• ADIM 09 — ZAMAN UFKU BANDI (H1–H4) VE PSİKOSOSYAL/JEOPOLİTİK FAKTÖRLER:
+  H1 (0–3 Yıl Kısa Vade), H2 (3–10 Yıl Orta Vade), H3 (10–30 Yıl Uzun Vade), H4 (30+ Yıl Medeniyet Ufku).
+
+• ADIM 10 — MORFOLOJİK GÖZLEM VE KIRPMA RİSKİ (S7) ANALİZİ:
+  Kök/vezin frekansı ve dilbilimsel yapı (ebced/numeroloji yasağına tam riayetle).
+
+• ADIM 10b — BELİRSİZLİK VE KARAR STRATEJİSİ:
+  Ölçülebilir risk ile derin (Knightian) belirsizlik ayrımı; robust/uyarlamalı strateji seçimi.
+
+--------------------------------------------------------------------------------
+FAZ III — SINAMA, KARŞI OKUMA VE AHLAKÎ DEĞERLENDİRME (KALP FIKHI)
+--------------------------------------------------------------------------------
+• ADIM 11 — SEKİZ İÇ DENETİM TESTİ (ALGORİTMİK İÇ TUTARLILIK):
+  Metin, bağlam, kaynak, karşıt ilke, ampirik veri, dil güvenliği, rol ayrımı ve geri çekilebilirlik iç testleri (bağımsız dış hakemlik onayı olmadığı açıkça belirtilir).
+
+• ADIM 12 — RED TEAM (KARŞIT OKUMA), SIÇRAMA DİNAMİKLERİ VE FALSİFİABİLİTE PROTOKOLÜ:
+  Analizi zorlayan en güçlü karşı argümanlar, Siyah Kuğular ve Popperci Sınırlı Yanlışlanabilirlik Protokolü (`th-01..th-03`).
+
+• ADIM 13 — ENFÜS-ÂFÂK VE KALP FIKHI:
+  Âyetin bireysel vicdan, niyet ve ahlaki muhasebe boyutu (`Enfüs`) ile kurumsal, hukuki ve medeni düzen boyutu (`Âfâk`) arasındaki karşılıklı etkileşim ve karar köprüsü.
+
+--------------------------------------------------------------------------------
+FAZ IV — BAYES GÜNCELLEMESİ, KARAR MİMARİSİ VE ETİK DENETİM
+--------------------------------------------------------------------------------
+• ADIM 14 — ERKEN UYARI SİNYALLERİ (`th-01..th-03`) VE BAYES GÜNCELLEMESİ:
+  $$P(S1\mid E)=\frac{P(E\mid S1)\,P(S1)}{P(E)}$$
+  - Önsel Olasılık (`Prior P(S1)`): Mevcut küresel/yerel baz oranlar altında reformsuz başarı olasılığı (örn. `0.22` – `0.35`).
+  - Kanıt / Müdahale (`Likelihood P(E|S1)`): Kurumsal karar kollarının ve erken uyarı eşiklerinin uygulanması.
+  - Sonsal Olasılık (`Posterior P(S1|E)`): Bayes güncellemesi sonrası beklenen başarı olasılığı (örn. `0.65` – `0.84`).
+
+• ADIM 15 — KARAR VE POLİTİKA KOLLARI (`K1–K3`) VE KARAR AĞACI MANTIĞI:
+  Her karar kolu için Yetkili Aktör, Hedef Değişken, Politika Aracı, Sayısal Eşik (`[TAHMİNÎ EŞİK]`), Trade-off (Feda Edilen Taraf), İkinci Derece Etki ve Geri Dönüş Mekanizması.
+
+• ADIM 16 — ÖNYARGI, TARAFLILIK DENETİMİ VE KALİTE KAPISI:
+  Doğrulama yanlılığı, anakronizm, mezhebî/ideolojik indirgemecilik ve otoriteye aşırı dayanma filtreleri.
+
+--------------------------------------------------------------------------------
+FAZ V — GÜVEN, SORUMLULUK, İZLEME VE PEDAGOJİK UYGULAMA
+--------------------------------------------------------------------------------
+• ADIM 17 — GÜVEN DÜZEYİ (`A / B / C`) VE KURUMSAL ROL DAĞILIMI:
+  Nitel güven derecesinin gerekçesi (teolojik hükümlere sayısal olasılık verilmez).
+
+• ADIM 17b — AKTÖR VE GÜÇ HARİTASI:
+  Kamu otoritesi, yargı, sivil toplum, akademi, medya/teknoloji aktörleri ve kırılgan gruplar.
+
+• ADIM 18 — BİLGİ TABANI, RİSK VE AZALTMA MATRİSİ:
+  İddiaların epistemik statüsü ve uygulama risklerine karşı kurumsal emniyet sübapları.
+
+• ADIM 18.1 — DİL GÜVENLİĞİ BEYANI:
+  Linter (`gem_lint.py`) dil güvenliği kurallarına ve sıfır tekfir/mutlakiyet ilkesine uyum kaydı.
+
+• ADIM 19 — İZLEME, YOL HARİTASI (1., 3., 5. YIL KPI) VE GERİYE DÖNÜK SINAMA (RETRODICTION):
+  Tarihsel vakalarla (retrodiction) doğrulama ve 1–3–5 yıllık somut performans göstergeleri.
+
+• ADIM 20 — AÇIK ARAŞTIRMA SORULARI VE VARSAYIMLAR:
+  Gelecek akademik çalışmalar, doktora tezleri ve saha araştırmaları için açık sorular.
+
+================================================================================
+5. ZORUNLU VE KOŞULLU EKLER (Z-1 – Z-5 VE Z-4.5 AKADEMİK KAYNAKÇA)
+================================================================================
+• Z-1: ŞABLONA SIĞMAYAN ÖZGÜN PROBLEMATİK (APORİA) [V9 ZORUNLU]
+  Âyete özgü en derin felsefî/hukuki ikilem ve çok katmanlı çözüm çerçevesi.
+
+• Z-2: ÇOK BOYUTLU İTİRAZ, GÖRÜŞ İHTİLAFI & RED TEAM MATRİSİ [V3 ZORUNLU]
+  En az 4 farklı disipliner boyutta (Usûlî/Fıkhî, Hukukî, Sosyo-Politik/İktisadî, Felsefî/Etik) Karşıt İddia ve Metodolojik Cevap tablosu.
+
+• Z-3: H6 ÂYET ÖZEL DENETİM BEYANI VE OKUYUCU İKİLEMİ (OPEN-ENDED DILEMMA)
+  H6 zorlu âyet denetim kriterleri ve okuyucuyu/öğrenciyi derin tefekküre sevk eden açık uçlu karar ikilemi sorusu.
+
+• Z-4: STANDART VE DÜRÜST SINIR BEYANI [V10 ZORUNLU]
+  Metnin beşerî bir içtihat olduğu, bağlayıcı fetva veya kaza hükmü olmadığı, mutlaklaştırılamayacağı ve ampirik modellerin yanlışlanabilir (falsifiable) olduğu beyanı.
+
+• Z-4.5: AKADEMİK KAYNAKÇA (İSNAD 2 VE APA 7 / DOI BİBLİYOGRAFYASI) [V1/V7 ZORUNLU]
+  - A) Klasik İslami Kaynaklar (İSNAD 2. Edisyon Standartlı — Vefat tarihi, tahkik, cilt/sayfa, URN/URL).
+  - B) Çağdaş Kurumsal, Hukuki ve Ampirik Kaynaklar (APA 7 / DOI Standartlı).
+  - C) Metin İçi Akademik Dipnotlar (`[^1]` .. `[^8]`).
+
+• Z-5: BAĞIMSIZ DIŞ AKADEMİK HAKEM İNCELEME FORMU [V11 ZORUNLU]
+  Standart `hakem_degerlendirme_protokolu` YAML bloğu (`rapor_id`, `sure_ayet`, `sürüm: v6.2.1`, 5 boyutlu 20'şer puanlık rubrik şeması ve `derkenar_notu`).
+
+================================================================================
+6. QURAN VISION ENSTİTÜSÜ • v6.2.1 DİJİTAL EKOSİSTEM VE YAYIN BİLEŞENLERİ
+================================================================================
+1) `src/gem_lint.py` (Akademik Standart, Doğrulama ve Dil Güvenliği Denetçisi):
+   • Raporları yayın öncesi denetler; `0 KESİCİ HATA (BLOCK)` şartını sağlamayan hiçbir rapor külliyata giremez.
+   • Denetim Kodları: `L-0101..L-0106` (İSNAD 2 klasik kaynak künyeleri, `death_year`, Arapça nakil ve DOI kontrolü), `L-0201` (`[NAKİL]` ve `[YORUM]` etiket dengesi), `L-0404` (Harici `.sha256` kriptografik özet doğrulaması), `L-0601` (Eşiklerin kökeni), `L-0801` (Falsifiabilite sınırları), `L-1101..L-1104` (Hakemlik statüsü dürüstlüğü).
+
+2) `src/en_corpus_data.py` (Çift Dilli Akademik İngilizce Külliyat Motoru):
+   • Her raporun İngilizce başlık, Aporia (`aporia_en`), Z-3 İkilemi (`z3_en`), Erken Uyarı Eşikleri (`thresholds_en`), 4 Senaryo (`scenarios_en`), Sahih İngilizce Meal, Kelime-Kelime İngilizce Lafzî Çözümleme (`lexical_en`), Makâsıd, Çağdaş Politika & Bayes Simülasyonu ve 40 Dakikalık İngilizce Seminer/Münazara Planını (`docs/en/*-en-v6.1.1.md`) üretir.
+
+3) `src/build_portal.py` (6 Sekmeli İnteraktif Web Kokpiti + 32 A4 PDF + Gömülü XMP Motoru):
+   • Canlı Web Portalı (`docs/index.html`):
+     - Sekme 1: 📊 Stratejik Kokpit & 2026–2036 Bayesyen Politika Simülasyonu
+     - Sekme 2: 📚 İSNAD 2 Klasik Arapça Tahkik & Çağdaş DOI Kaynak Doğrulama
+     - Sekme 3: 📖 26 Adımlı Tam Akademik Rapor Metni (TR / EN Anlık Dil Geçişli)
+     - Sekme 4: 🎓 40 Dakikalık Türkiye Yüzyılı Maarif Modeli (TYMM) Seminer & Münazara Ders Planı
+     - Sekme 5: 🧭 15 Raporluk Külliyat Sentez & Karşılaştırma Matrisi
+     - Sekme 6: ⚖️ Z-5 Açık Hakemlik, Akademisyen Geri Bildirim Formu & Kişisel Şerh Defteri
+   • 32 Adet A4 PDF Kütüphanesi (`docs/pdf/`):
+     - 15 Türkçe Tekil Monografi (`QV-2026-001.pdf` .. `QV-2026-015.pdf`)
+     - 15 İngilizce Tekil Monografi (`QV-2026-001_EN.pdf` .. `QV-2026-015_EN.pdf`)
+     - Türkçe Tam Külliyat Kitabı (`Quran_Vision_Kulliyat_v6.2.1.pdf`)
+     - İngilizce Tam Külliyat Kitabı (`Quran_Vision_Corpus_EN_v6.2.1.pdf`)
+   • Gömülü XMP / PDF Info Katmanı (`stamp_pdf_metadata`):
+     - Tüm 32 PDF dosyasının ikili (binary) üst-verilerine Zotero, Mendeley, Adobe Acrobat ve Google Scholar için `Author: Mehmet Yarıcı (ORCID: 0009-0003-0356-8582)`, `Subject`, `Title` ve `Keywords` mühürlenir.
+
+================================================================================
+7. KÜLLİYAT ENVANTERİ (15 KURUCU MONOGRAFİK RAPOR: QV-2026-001 – QV-2026-015)
+================================================================================
+01. [QV-2026-001] Tevbe Sûresi 9:5 — Ahit İhlali, Caydırıcılık ve Uluslararası Hukukta Meşru Savunma Mimarisi
+02. [QV-2026-002] Nisâ Sûresi 4:34 — Aile Kurumu, Kavamet Sorumluluğu ve Şiddetsiz Çatışma Çözümü Mimarisi
+03. [QV-2026-003] Mâide Sûresi 5:38 — Mülkiyet Dokunulmazlığı, Caydırıcılık, İkrah İstisnası ve Sosyal Adalet Önkoşulu
+04. [QV-2026-004] Bakara Sûresi 2:256 — İnanç Özgürlüğü, İrade Dokunulmazlığı ve Çoğulcu Hukuk Mimarisi
+05. [QV-2026-005] Nisâ Sûresi 4:58 — Liyakat, Kamu Emaneti ve Kurumsal Adalet Mimarisi
+06. [QV-2026-006] Âl-i İmrân Sûresi 3:159 — Şûra (İstişare), Katılımcı Yönetişim ve Kriz Liderliğinde Merhamet Mimarisi
+07. [QV-2026-007] Hucurât Sûresi 49:9–10 — Aktif Barış İnşası, Arabuluculuk ve Adil Uzlaşı Mimarisi
+08. [QV-2026-008] İsrâ Sûresi 17:36 — Epistemik Sorumluluk, Bilgi Doğrulama ve Dezenformasyonla Mücadele Mimarisi
+09. [QV-2026-009] Haşr Sûresi 59:7 — İktisadi Adalet, Servet Dolaşımı ve Tekelleşmeyi Önleme Mimarisi
+10. [QV-2026-010] Rûm Sûresi 30:22 — Dillerin ve Renklerin Çoğulculuğu, Ontolojik Eşitlik ve Birlikte Yaşama Mimarisi
+11. [QV-2026-011] En'âm Sûresi 6:151–152 — Evrensel İnsan Hakları, Yaşam Dokunulmazlığı ve Ölçü-Tartı Adaleti
+12. [QV-2026-012] Hadîd Sûresi 57:25 — Mîzân (Hukuk Devleti), Kurumsal Adalet ve Kamu Gücünün Meşruiyet Sınırları
+13. [QV-2026-013] Nahl Sûresi 16:90 — Evrensel Medeniyet Anayasası: Adalet, İhsan ve Sosyal Dayanışma Mimarisi
+14. [QV-2026-014] Hucurât Sûresi 49:13 — İnsani Eşitlik, Çoğulcu Tanışma (Teârüf) Etiği ve Ahlaki Sorumluluk (Takvâ)
+15. [QV-2026-015] Mâide Sûresi 5:32 — Yaşam Hakkının Evrensel Dokunulmazlığı, İhyâ (Can Kurtarma) Etiği ve Fesadın Önlenmesi
+================================================================================
