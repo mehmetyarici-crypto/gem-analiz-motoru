@@ -5,7 +5,8 @@
 #### *26 Adımlı Kanıta Dayalı Stratejik Tefsir, Makâsıd ve Medeniyet Öngörü Külliyatı*
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23391192.svg)](https://doi.org/10.5281/zenodo.23391192)
-[![ORCID](https://img.shields.io/badge/ORCID_iD-0009--0003--0356--8582-A6CE39?style=for-the-badge&logo=orcid&logoColor=white)](https://orcid.org/0009-0003-0356-8582)
+[![ORCID Yarıcı](https://img.shields.io/badge/ORCID_(M._Yar%C4%B1c%C4%B1)-0009--0003--0356--8582-A6CE39?style=for-the-badge&logo=orcid&logoColor=white)](https://orcid.org/0009-0003-0356-8582)
+[![ORCID Koç](https://img.shields.io/badge/ORCID_(M._E._Ko%C3%A7)-0000--0002--1025--5643-A6CE39?style=for-the-badge&logo=orcid&logoColor=white)](https://orcid.org/0000-0002-1025-5643)
 [![Version](https://img.shields.io/badge/Corpus_Version-v6.2.1-D4AF37?style=for-the-badge)](https://mehmetyarici-crypto.github.io/quran-vision/)
 [![Reports](https://img.shields.io/badge/Foundational_Reports-15_Monographs_(TR_%26_EN)-10B981?style=for-the-badge)](https://mehmetyarici-crypto.github.io/quran-vision/)
 [![ISNAD 2](https://img.shields.io/badge/ISNAD_2_Classical_Tafsir-76_Primary_Arabic_Citations-0f5132?style=for-the-badge)](https://mehmetyarici-crypto.github.io/quran-vision/)
@@ -14,10 +15,10 @@
 
 <br>
 
-### 🏛️ **OFFICIAL CERN / ZENODO DOI:** **[`https://doi.org/10.5281/zenodo.23391192`](https://doi.org/10.5281/zenodo.23391192)** &nbsp;|&nbsp; 🆔 **ORCID:** **[`0009-0003-0356-8582`](https://orcid.org/0009-0003-0356-8582)**
+### 🏛️ **OFFICIAL CERN / ZENODO DOI:** **[`https://doi.org/10.5281/zenodo.23391192`](https://doi.org/10.5281/zenodo.23391192)**
 ### 🎓 **ACADEMIC AUTHORS & INSTITUTIONAL AFFILIATIONS / AKADEMİK HEYET VE KURUMSAL KÜNYE**
 - **Mehmet Yarıcı** — *Uludağ Üniversitesi İlahiyat Fakültesi (1989) • T.C. Millî Eğitim Bakanlığı, İstanbul Bahçelievler Dede Korkut Anadolu Lisesi (Kıdemli DKAB Öğretmeni & İlahiyat Araştırmacısı)* • **ORCID:** [`0009-0003-0356-8582`](https://orcid.org/0009-0003-0356-8582)
-- **Mehmet Emin Koç** — *Azerbaycan Milli İlimler Akademisi (AMEA / Azerbaijan National Academy of Sciences), Felsefe ve Sosyoloji Enstitüsü*
+- **Mehmet Emin Koç** — *Azerbaycan Milli İlimler Akademisi (AMEA / Azerbaijan National Academy of Sciences), Felsefe ve Sosyoloji Enstitüsü* • **ORCID:** [`0000-0002-1025-5643`](https://orcid.org/0000-0002-1025-5643)
 
 ### 🌐 **[🚀 LAUNCH LIVE INTERACTIVE PORTAL (🇹🇷 TR | 🇬🇧 EN)](https://mehmetyarici-crypto.github.io/quran-vision/)**
 ### 📙 **[📥 Download Full English Corpus Book (15 Reports - A4 PDF)](https://mehmetyarici-crypto.github.io/quran-vision/pdf/Quran_Vision_Corpus_EN_v6.2.1.pdf)** &nbsp;|&nbsp; 📘 **[📥 Tam Külliyat Kitabını İndir (15 Rapor - Türkçe A4 PDF)](https://mehmetyarici-crypto.github.io/quran-vision/pdf/Quran_Vision_Kulliyat_v6.2.1.pdf)**

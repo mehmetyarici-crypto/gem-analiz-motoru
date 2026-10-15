@@ -340,7 +340,7 @@ def build_single_report_print_html(r: dict, idx: int) -> str:
         <h1 class="pdf-main-title">{idx}. {html_lib.escape(r['surah'])} Sûresi {html_lib.escape(r['verse'])} — {html_lib.escape(r['topic'])}</h1>
         <div class="pdf-submeta" style="color:#064e3b; background:#eef5f2; padding:5px 8px; border-radius:4px; border-left:3px solid #856404; margin-bottom:6px; line-height:1.45;">
           🎓 <strong>Mehmet Yarıcı</strong> — <em>Uludağ Üniversitesi İlahiyat Fakültesi (1989) • T.C. MEB İstanbul Bahçelievler Dede Korkut Anadolu Lisesi</em> (ORCID: 0009-0003-0356-8582)<br>
-          🏛️ <strong>Mehmet Emin Koç</strong> — <em>Azerbaycan Milli İlimler Akademisi (AMEA), Felsefe ve Sosyoloji Enstitüsü</em>
+          🏛️ <strong>Mehmet Emin Koç</strong> — <em>Azerbaycan Milli İlimler Akademisi (AMEA), Felsefe ve Sosyoloji Enstitüsü</em> (ORCID: 0000-0002-1025-5643)
         </div>
         <div class="pdf-submeta">
           Katman: 3 (Akademik-Derin) &nbsp;|&nbsp; H6 Zorlu Âyet &nbsp;|&nbsp; Güven Derecesi: {html_lib.escape(r['confidence'])} &nbsp;|&nbsp;
@@ -655,7 +655,7 @@ def build_single_report_print_html_en(r: dict, idx: int) -> str:
         <h1 class="pdf-main-title">{idx}. Surah {html_lib.escape(r.get('surah_en', r['surah']))} {html_lib.escape(r['verse'])} — {html_lib.escape(r.get('topic_en', r['topic']))}</h1>
         <div class="pdf-submeta" style="color:#064e3b; background:#eef5f2; padding:5px 8px; border-radius:4px; border-left:3px solid #856404; margin-bottom:6px; line-height:1.45;">
           🎓 <strong>Mehmet Yarıcı</strong> — <em>Uludağ University Faculty of Theology (1989) • Republic of Türkiye Ministry of National Education (MEB), Bahçelievler Dede Korkut Anatolian High School</em> (ORCID: 0009-0003-0356-8582)<br>
-          🏛️ <strong>Mehmet Emin Koç</strong> — <em>Azerbaijan National Academy of Sciences (ANAS), Institute of Philosophy and Sociology</em>
+          🏛️ <strong>Mehmet Emin Koç</strong> — <em>Azerbaijan National Academy of Sciences (ANAS), Institute of Philosophy and Sociology</em> (ORCID: 0000-0002-1025-5643)
         </div>
         <div class="pdf-submeta">
           Layer: 3 (Academic-Deep) &nbsp;|&nbsp; H6 Complex Verse &nbsp;|&nbsp; Confidence Grade: {html_lib.escape(r['confidence'])} &nbsp;|&nbsp;
@@ -754,7 +754,7 @@ def generate_all_pdfs(reports: list):
       <div style="text-align: left; max-width: 560px; margin: 0 auto 18px; padding: 12px 16px; background: #eef5f2; border: 1.5px solid #0f5132; border-left: 5px solid #856404; border-radius: 8px; font-size: 9.5pt; line-height: 1.55;">
         <div style="font-weight: 800; color: #0f5132; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 0.5px;">🎓 AKADEMİK HEYET VE KURUMSAL KÜNYE (AUTHORS & INSTITUTIONAL AFFILIATIONS):</div>
         <div style="margin-bottom: 4px;">• <strong>Mehmet Yarıcı</strong> — <em>Uludağ Üniversitesi İlahiyat Fakültesi (1989) • T.C. Millî Eğitim Bakanlığı, İstanbul Bahçelievler Dede Korkut Anadolu Lisesi</em> (ORCID: <code>0009-0003-0356-8582</code>)</div>
-        <div>• <strong>Mehmet Emin Koç</strong> — <em>Azerbaycan Milli İlimler Akademisi (AMEA), Felsefe ve Sosyoloji Enstitüsü</em></div>
+        <div>• <strong>Mehmet Emin Koç</strong> — <em>Azerbaycan Milli İlimler Akademisi (AMEA), Felsefe ve Sosyoloji Enstitüsü</em> (ORCID: <code>0000-0002-1025-5643</code>)</div>
       </div>
       <p style="font-size: 11pt; color: #374151; max-width: 560px; margin: 0 auto 18px;">
         26 Adımlı Analitik Çerçeve, İSNAD 2 Klasik Tefsir Tahkiki, Çağdaş Ampirik (DOI) Göstergeler ve
@@ -797,7 +797,7 @@ def generate_all_pdfs(reports: list):
       <div style="text-align: left; max-width: 560px; margin: 0 auto 18px; padding: 12px 16px; background: #eef5f2; border: 1.5px solid #0f5132; border-left: 5px solid #856404; border-radius: 8px; font-size: 9.5pt; line-height: 1.55;">
         <div style="font-weight: 800; color: #0f5132; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 0.5px;">🎓 ACADEMIC AUTHORS & INSTITUTIONAL AFFILIATIONS:</div>
         <div style="margin-bottom: 4px;">• <strong>Mehmet Yarıcı</strong> — <em>Uludağ University Faculty of Theology (1989) • Republic of Türkiye Ministry of National Education (MEB), Bahçelievler Dede Korkut Anatolian High School</em> (ORCID: <code>0009-0003-0356-8582</code>)</div>
-        <div>• <strong>Mehmet Emin Koç</strong> — <em>Azerbaijan National Academy of Sciences (ANAS), Institute of Philosophy and Sociology</em></div>
+        <div>• <strong>Mehmet Emin Koç</strong> — <em>Azerbaijan National Academy of Sciences (ANAS), Institute of Philosophy and Sociology</em> (ORCID: <code>0000-0002-1025-5643</code>)</div>
       </div>
       <p style="font-size: 11pt; color: #374151; max-width: 560px; margin: 0 auto 18px;">
         26-Step Analytical Framework, ISNAD 2 Classical Tafsir Verification, Contemporary Empirical (DOI) Indicators, and
@@ -866,6 +866,7 @@ def build_html(reports):
 <meta name="citation_author_orcid" content="0009-0003-0356-8582">
 <meta name="citation_author" content="Koç, Mehmet Emin">
 <meta name="citation_author_institution" content="Azerbaycan Milli İlimler Akademisi (AMEA / ANAS), Felsefe ve Sosyoloji Enstitüsü">
+<meta name="citation_author_orcid" content="0000-0002-1025-5643">
 <meta name="citation_publication_date" content="2026/10/15">
 <meta name="citation_publisher" content="Zenodo / Quran Vision Institute">
 <meta name="citation_doi" content="10.5281/zenodo.23391192">
@@ -901,7 +902,9 @@ def build_html(reports):
     {{
       "@type": "Person",
       "name": "Mehmet Emin Koç",
-      "affiliation": "Azerbaycan Milli İlimler Akademisi (AMEA / ANAS), Felsefe ve Sosyoloji Enstitüsü"
+      "affiliation": "Azerbaycan Milli İlimler Akademisi (AMEA / ANAS), Felsefe ve Sosyoloji Enstitüsü",
+      "identifier": "https://orcid.org/0000-0002-1025-5643",
+      "sameAs": "https://orcid.org/0000-0002-1025-5643"
     }}
   ],
   "distribution": [
@@ -1933,7 +1936,7 @@ function selectReport(idx) {{
       </div>
       <div style="display:flex; flex-direction:column; gap:3px; color:var(--text-primary);">
         <div>🎓 <strong>Mehmet Yarıcı</strong> — <span style="color:var(--text-secondary);">${{isEn ? 'Uludağ University Faculty of Theology (1989) • Republic of Türkiye Ministry of National Education (MEB), Bahçelievler Dede Korkut Anatolian High School' : 'Uludağ Üniversitesi İlahiyat Fakültesi (1989) • T.C. Millî Eğitim Bakanlığı, İstanbul Bahçelievler Dede Korkut Anadolu Lisesi'}}</span> &nbsp;<a href="https://orcid.org/0009-0003-0356-8582" target="_blank" rel="noopener" style="color:var(--accent-emerald); font-family:'JetBrains Mono',monospace; font-size:11.5px; text-decoration:none;">[ORCID: 0009-0003-0356-8582]</a></div>
-        <div>🏛️ <strong>Mehmet Emin Koç</strong> — <span style="color:var(--text-secondary);">${{isEn ? 'Azerbaijan National Academy of Sciences (ANAS), Institute of Philosophy and Sociology' : 'Azerbaycan Milli İlimler Akademisi (AMEA), Felsefe ve Sosyoloji Enstitüsü'}}</span></div>
+        <div>🏛️ <strong>Mehmet Emin Koç</strong> — <span style="color:var(--text-secondary);">${{isEn ? 'Azerbaijan National Academy of Sciences (ANAS), Institute of Philosophy and Sociology' : 'Azerbaycan Milli İlimler Akademisi (AMEA), Felsefe ve Sosyoloji Enstitüsü'}}</span> &nbsp;<a href="https://orcid.org/0000-0002-1025-5643" target="_blank" rel="noopener" style="color:var(--accent-emerald); font-family:'JetBrains Mono',monospace; font-size:11.5px; text-decoration:none;">[ORCID: 0000-0002-1025-5643]</a></div>
       </div>
     </div>
     <div class="sha-bar">🔒 <strong>${{isEn ? 'External Cryptographic Manifest (SHA-256):' : 'Harici Kriptografik Manifest (SHA-256):'}}</strong> ${{r.sha256}} &nbsp;|&nbsp; 📄 <code>${{activeMdPath}}</code> &nbsp;|&nbsp; 🏛️ <strong>DOI:</strong> <a href="https://doi.org/10.5281/zenodo.23391192" target="_blank" rel="noopener" style="color:var(--accent-gold);">10.5281/zenodo.23391192</a></div>
