@@ -1,0 +1,68 @@
+name: "🏛️ Akademik Şerh, Zümre Deneyimi veya Yeni Âyet Önerisi"
+description: "Quran Vision (v6.2.1) raporlarına klasik tefsir tahkiki, çağdaş veri (DOI), Z-3 ikilem yanıtı, sınıf içi deneyim veya yeni âyet önerisi ekleyin."
+title: "[ŞERH / KATKI] QV-2026-00X — "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### ⚖️ Quran Vision (v6.2.1) — Açık Akademik Hakemlik ve İstişare (Şûrâ) Formu
+        Katkınız için teşekkür ederiz. Bu form üzerinden iletilen klasik tefsir nakilleri, ampirik veri (DOI) önerileri ve pedagojik saha gözlemleri, doğrulama sürecinin ardından ilgili raporun bir sonraki sürümüne (`Z-4.5` ve `Adım 12`) referans olarak işlenir.
+
+  - type: input
+    id: author
+    attributes:
+      label: "👤 Adınız, Unvanınız ve Kurum/Zümreniz"
+      placeholder: "Örn: Doç. Dr. ... / DKAB Öğretmeni ..."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: report_id
+    attributes:
+      label: "📌 İlgili Rapor (Vaka Kodu)"
+      options:
+        - "QV-2026-001 — Tevbe 9:5 (Ahit İhlali ve Meşru Müdafaa)"
+        - "QV-2026-002 — Nisâ 4:34 (Kıvâm ve Aile Hukuku)"
+        - "QV-2026-003 — Bakara 2:282 (Müdâyene ve Finansal Şeffaflık)"
+        - "QV-2026-004 — Bakara 2:256 (Lâ İkrâhe fi'd-Dîn ve Çoğulculuk)"
+        - "QV-2026-005 — Nisâ 4:58 (Emanet, Liyakat ve Yargı Bağımsızlığı)"
+        - "QV-2026-006 — Âl-i İmrân 3:159 (Şûrâ ve Kriz Liderliği)"
+        - "QV-2026-007 — Hucurât 49:9-10 (Çatışma Çözümü ve Bağy Doktrini)"
+        - "QV-2026-008 — İsrâ 17:36 (Epistemik Sorumluluk ve Yapay Zekâ Etiği)"
+        - "QV-2026-009 — Haşr 59:7 (Servet Dolaşımı ve Anti-Oligarşi)"
+        - "QV-2026-010 — Rûm 30:22 (Ontolojik Çoğulculuk ve Dillerin/Renklerin Âyetliği)"
+        - "QV-2026-011 — En'âm 6:151-152 (Evrensel Ahlak Dekalogu ve Temel Haklar)"
+        - "QV-2026-012 — Hadîd 57:25 (Kitap, Mîzân ve Demir Üçlüsü)"
+        - "QV-2026-013 — Nahl 16:90 (Evrensel Medeniyet Sözleşmesi)"
+        - "YENİ ÂYET ÖNERİSİ (QV-2026-014+)"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: "📂 Katkı Kategorisi"
+      options:
+        - "🎓 Z-3 Açık Uçlu İkileme Çözüm / Yanıt"
+        - "🕌 İSNAD 2 Klasik Tefsir / Arapça Kaynak İlavesi"
+        - "📊 Çağdaş Ampirik Veri / DOI / Makale Önerisi"
+        - "🏫 Sınıf İçi / Zümre Pedagojik Uygulama Deneyimi"
+        - "⚖️ Metodolojik Tenkit / Yanlışlama Kanıtı (Adım 12)"
+        - "💡 Külliyata Yeni Âyet / Rapor Önerisi (QV-2026-014+)"
+    validations:
+      required: true
+
+  - type: textarea
+    id: content
+    attributes:
+      label: "📝 Şerh, Analiz veya Geri Bildirim Metni"
+      description: "Görüşünüzü, klasik tefsir ibaresini, ampirik veriyi veya sınıf içi gözleminizi detaylıca yazınız."
+    validations:
+      required: true
+
+  - type: input
+    id: references
+    attributes:
+      label: "📚 Dayanak Kaynak / Tefsir / DOI / URL (İsteğe Bağlı)"
+      placeholder: "Örn: Kurtubî, el-Câmi', c. X, s. Y veya DOI: 10.xxxx/..."

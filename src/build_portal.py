@@ -50,6 +50,11 @@ def parse_report(md_path: Path):
     aporia_text = z1_match.group(1).strip() if z1_match else ""
     aporia_text = re.sub(r"\n---\s*$", "", aporia_text).strip()
 
+    # Extract Z-3 Open-ended Reader Dilemma (supports both '### Z-3:' and '## Z-3 ·')
+    z3_match = re.search(r"#{2,3}\s*Z-3[:\s·].*?\n(.*?)(?=\n#{2,3}\s*Z-4[:\s·]|\Z)", body, re.DOTALL)
+    z3_text = z3_match.group(1).strip() if z3_match else ""
+    z3_text = re.sub(r"\n---\s*$", "", z3_text).strip()
+
     # Extract Prior & Posterior if present
     prior_m = re.search(r"(?:P\(S1\)\s*=\s*|Prior\s*P\(H\)\):\*\*\s*)([0-9.]+)", body)
     post_m = re.search(r"P\(S1\|E\)\s*\\approx\s*([0-9.]+)", body)
@@ -80,6 +85,7 @@ def parse_report(md_path: Path):
         "thresholds": fm.get("thresholds", []),
         "scenarios": fm.get("scenarios", []),
         "aporia": aporia_text,
+        "z3_question": z3_text,
         "prior": prior_val,
         "posterior": post_val,
         "body": body,
@@ -1022,12 +1028,76 @@ body {{
   font-weight: 600;
 }}
 
+.form-group {{
+  margin-bottom: 14px;
+}}
+.form-label {{
+  display: block;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--accent-gold);
+  margin-bottom: 6px;
+}}
+.form-input, .form-select, .form-textarea {{
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg-surface);
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: 13.5px;
+  outline: none;
+  transition: border 0.2s;
+}}
+.form-input:focus, .form-select:focus, .form-textarea:focus {{
+  border-color: var(--accent-gold);
+}}
+.form-textarea {{
+  min-height: 115px;
+  resize: vertical;
+  line-height: 1.6;
+}}
+.action-row {{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}}
+.toast-msg {{
+  display: none;
+  margin-top: 12px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: var(--accent-emerald-soft);
+  border: 1px solid var(--accent-emerald);
+  color: var(--accent-emerald);
+  font-size: 13px;
+  font-weight: 600;
+}}
+.candidate-grid {{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+  margin-top: 12px;
+}}
+.candidate-card {{
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+}}
+
 @media print {{
   @page {{
     size: A4 portrait;
     margin: 15mm;
   }}
-  .sidebar, .topbar, .tabs, .no-print {{
+  .sidebar, .topbar, .tabs, .no-print, #tab-feedback {{
     display: none !important;
   }}
   html, body, .main, .content-scroll {{
@@ -1079,6 +1149,7 @@ body {{
       <div class="stat-pill">🛡️ Linter & SHA-256: <strong>0 KESİCİ HATA</strong></div>
     </div>
     <div class="top-actions">
+      <button class="btn btn-gold" onclick="openFeedbackTab()">💬 Akademik Katkı & Şerh Yaz</button>
       <a id="downloadPdfBtn" class="btn btn-primary" href="pdf/QV-2026-001.pdf" download="QV-2026-001.pdf">📥 Raporu PDF İndir</a>
       <a class="btn btn-gold" href="pdf/Quran_Vision_Kulliyat_v6.2.1.pdf" download="Quran_Vision_Kulliyat_v6.2.1.pdf">📚 Tüm Külliyat PDF (13 Rapor)</a>
       <button class="btn" onclick="printCurrentReport()">🖨️ Yazdır</button>
@@ -1090,14 +1161,16 @@ body {{
     <div class="hero-card" id="heroCard"></div>
 
     <div class="tabs">
-      <button class="tab-btn active" onclick="setTab('dashboard', this)">📊 1. Stratejik Kokpit & Aporia</button>
-      <button class="tab-btn" onclick="setTab('sources', this)">🏛️ 2. İSNAD 2 Klasik & Modern Kaynakça</button>
-      <button class="tab-btn" onclick="setTab('fulltext', this)">📖 3. Tam Akademik Metin (26 Adım + Dipnotlar)</button>
+      <button id="tabBtn-dashboard" class="tab-btn active" onclick="setTab('dashboard', this)">📊 1. Stratejik Kokpit & Aporia</button>
+      <button id="tabBtn-sources" class="tab-btn" onclick="setTab('sources', this)">🏛️ 2. İSNAD 2 Klasik & Modern Kaynakça</button>
+      <button id="tabBtn-fulltext" class="tab-btn" onclick="setTab('fulltext', this)">📖 3. Tam Akademik Metin (26 Adım + Dipnotlar)</button>
+      <button id="tabBtn-feedback" class="tab-btn" onclick="setTab('feedback', this)">💬 4. Akademik Şerh, Katkı & Müzakere</button>
     </div>
 
     <div id="tab-dashboard"></div>
     <div id="tab-sources" style="display:none;"></div>
     <div id="tab-fulltext" style="display:none;"></div>
+    <div id="tab-feedback" style="display:none;"></div>
   </section>
 </main>
 
@@ -1105,6 +1178,15 @@ body {{
 const REPORTS = {reports_json};
 let currentIndex = 0;
 let currentTab = 'dashboard';
+
+const CANDIDATE_VERSES = [
+  {{ surah: "Hucurât", verse: "49:13", title: "İnsanlığın Eşitliği, Kabilecilik Karşıtlığı ve Takvâ Temelli Evrensel Değer Mimarisi" }},
+  {{ surah: "Mâide", verse: "5:32", title: "Yaşam Hakkının Dokunulmazlığı, Küresel İnsani Güvenlik ve Biyoetik Doktrini" }},
+  {{ surah: "Bakara", verse: "2:143", title: "Vasat Ümmet (Denge ve İtidal), Küresel Şahitlik ve Kutuplaşma Karşıtı Jeopolitik" }},
+  {{ surah: "Zümer", verse: "39:18", title: "Sözü Dinleyip En Güzeline Uymak (Ahsenü'l-Kavl): Eleştirel Düşünce ve Açık Müzakere Ahlakı" }},
+  {{ surah: "Alak", verse: "96:1-5", title: "İkra ve Kalem Doktrini: Bilimsel Üretim, Epistemik Medeniyet ve Eğitim Felsefesi" }},
+  {{ surah: "Mülk", verse: "67:3-4", title: "Kozmik Düzen, Kusursuzluk Arayışı, Bilimsel Gözlem ve Ekoloji Mimarisi" }}
+];
 
 function renderSidebar(filter = '') {{
   const listEl = document.getElementById('reportList');
@@ -1151,7 +1233,10 @@ function selectReport(idx) {{
       <span class="badge badge-mono">${{r.case_id}}</span>
       <span class="badge badge-mono">Güven Derecesi: ${{r.confidence}}</span>
       <span class="badge badge-mono">Statü: ${{r.status}}</span>
-      <a class="btn btn-primary no-print" style="margin-left:auto; padding:4px 10px; font-size:11.5px;" href="pdf/${{r.pdf_filename}}" download="${{r.case_id}}_${{r.surah}}_Raporu.pdf">📥 Doğrudan A4 PDF İndir (${{r.case_id}}.pdf)</a>
+      <div class="no-print" style="margin-left:auto; display:flex; gap:8px; flex-wrap:wrap;">
+        <button class="btn btn-gold" style="padding:4px 10px; font-size:11.5px;" onclick="openFeedbackTab()">💬 Bu Rapora Şerh / Katkı Yaz</button>
+        <a class="btn btn-primary" style="padding:4px 10px; font-size:11.5px;" href="pdf/${{r.pdf_filename}}" download="${{r.case_id}}_${{r.surah}}_Raporu.pdf">📥 A4 PDF İndir (${{r.case_id}}.pdf)</a>
+      </div>
     </div>
     <div class="hero-title">${{r.topic}}</div>
     <div class="sha-bar">🔒 <strong>Harici Kriptografik Manifest (SHA-256):</strong> ${{r.sha256}} &nbsp;|&nbsp; 📄 <code>docs/tr/${{r.filename}}</code></div>
@@ -1268,6 +1353,267 @@ function selectReport(idx) {{
 
   // Tab 3: Full Markdown
   document.getElementById('tab-fulltext').innerHTML = `<div class="md-body">${{renderMarkdown(r.body)}}</div>`;
+
+  // Tab 4: Interactive Academic Feedback & Peer Review
+  renderFeedbackTab(r);
+}}
+
+function renderFeedbackTab(r) {{
+  const candidatesHtml = CANDIDATE_VERSES.map((cv, cIdx) => `
+    <div class="candidate-card">
+      <div>
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+          <strong style="color:var(--accent-gold); font-size:14px;">📖 ${{cv.surah}} ${{cv.verse}}</strong>
+          <span class="badge badge-mono">Aday #${{cIdx + 1}}</span>
+        </div>
+        <div style="font-size:12.5px; color:var(--text-secondary); line-height:1.5;">${{cv.title}}</div>
+      </div>
+      <button class="btn btn-gold" style="width:100%; justify-content:center;" onclick="prefillCandidateVerse('${{cv.surah}} ${{cv.verse}}', '${{cv.title}}')">
+        🗳️ Sıradaki Rapor İçin Bu Âyeti Öner
+      </button>
+    </div>
+  `).join('');
+
+  document.getElementById('tab-feedback').innerHTML = `
+    <div class="grid-2">
+      <div class="panel">
+        <h3><span>❓ Z-3: Okuyucuya Bırakılan Açık Uçlu Stratejik İkilem</span><span>${{r.case_id}} • ${{r.surah}} ${{r.verse}}</span></h3>
+        <div class="source-card" style="border-left: 3px solid var(--accent-emerald); font-size:14px; line-height:1.75; margin-bottom:16px;">
+          ${{formatInlineMd(r.z3_question || 'Bu raporun açık uçlu müzakere sorusu hakkında görüşünüzü aşağıdan paylaşabilirsiniz.')}}
+        </div>
+        <div style="display:flex; gap:10px; flex-wrap:wrap; margin-bottom:22px;">
+          <button class="btn btn-primary" onclick="selectCategoryAndFocus('Z-3 Açık Uçlu İkileme Çözüm / Yanıt')">✍️ Bu İkileme Cevabımı Yaz</button>
+          <button class="btn" onclick="selectCategoryAndFocus('İSNAD 2 Klasik Tefsir / Arapça Kaynak İlavesi')">🕌 Klasik Tefsir Nakli Ekle</button>
+          <button class="btn" onclick="selectCategoryAndFocus('Sınıf İçi / Zümre Pedagojik Uygulama Deneyimi')">🏫 Zümre / Ders Deneyimi Paylaş</button>
+        </div>
+
+        <h3><span>📌 Bu Rapor İçin Kaydettiğim Şerhler & Ders Notlarım</span><span id="localNotesCount">0 Not</span></h3>
+        <div id="localNotesList"></div>
+      </div>
+
+      <div class="panel">
+        <h3><span>✍️ Etkileşimli Akademik Şerh, Hakemlik ve Geri Dönüt Formu</span><span>Açık Müzakere</span></h3>
+        <p style="font-size:12.5px; color:var(--text-secondary); margin-bottom:14px;">
+          <strong>${{r.case_id}} (${{r.surah}} Sûresi ${{r.verse}})</strong> raporu için hazırladığınız katkıyı tek tıkla <strong>WhatsApp</strong> üzerinden paylaşabilir, <strong>Resmi GitHub Akademik Hakemlik (Peer-Review)</strong> kaydı açabilir veya kişisel araştırma notlarınıza kaydedebilirsiniz.
+        </p>
+
+        <div class="form-group">
+          <label class="form-label">👤 Adınız / Unvanınız / Kurum veya Zümreniz</label>
+          <input type="text" id="fbAuthor" class="form-input" placeholder="Örn: Doç. Dr. ... / DKAB Öğretmeni ...">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">📂 Katkı veya Geri Bildirim Türü</label>
+          <select id="fbCategory" class="form-select">
+            <option value="Z-3 Açık Uçlu İkileme Çözüm / Yanıt">🎓 Z-3 Açık Uçlu İkileme Çözüm / Yanıt</option>
+            <option value="İSNAD 2 Klasik Tefsir / Arapça Kaynak İlavesi">🕌 İSNAD 2 Klasik Tefsir / Arapça Kaynak İlavesi</option>
+            <option value="Çağdaş Ampirik Veri / DOI / Makale Önerisi">📊 Çağdaş Ampirik Veri / DOI / Makale Önerisi</option>
+            <option value="Sınıf İçi / Zümre Pedagojik Uygulama Deneyimi">🏫 Sınıf İçi / Zümre Pedagojik Uygulama Deneyimi</option>
+            <option value="Metodolojik Tenkit / Yanlışlama Kanıtı (Adım 12)">⚖️ Metodolojik Tenkit / Yanlışlama Kanıtı (Adım 12)</option>
+            <option value="Külliyata Yeni Âyet / Rapor Önerisi (QV-2026-014+)">💡 Külliyata Yeni Âyet / Rapor Önerisi (QV-2026-014+)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">📝 Şerh, Analiz, Eleştiri veya Sınıf İçi Gözlem Metniniz</label>
+          <textarea id="fbContent" class="form-textarea" placeholder="Bu raporun analitik çerçevesine, klasik tefsir nakillerine, Z-3 sorusuna veya sınıf içi uygulanabilirliğine dair görüş ve katkınızı buraya yazınız..."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">📚 Varsa Dayanak Kaynak / Tefsir / DOI / Âyet Referansı (İsteğe Bağlı)</label>
+          <input type="text" id="fbSource" class="form-input" placeholder="Örn: İbn Âşûr, et-Tahrîr, c. X, s. Y veya DOI: 10.xxxx/...">
+        </div>
+
+        <div class="action-row">
+          <button class="btn btn-primary" onclick="sendViaWhatsApp()">🟢 WhatsApp ile Gönder / Paylaş</button>
+          <button class="btn btn-gold" onclick="openGitHubPeerReview()">🏛️ Resmi Akademik Şerh Kaydı Aç (GitHub)</button>
+          <button class="btn" onclick="saveLocalNoteAndCopy()">💾 Notlarıma Kaydet & Metni Kopyala</button>
+          <a class="btn" href="https://github.com/mehmetyarici-crypto/quran-vision/issues" target="_blank" rel="noopener">🔎 Tüm Açık Şerhleri Gör</a>
+        </div>
+        <div id="fbToast" class="toast-msg"></div>
+      </div>
+    </div>
+
+    <div class="panel" style="margin-bottom:24px;">
+      <h3><span>🗳️ Külliyatın 14. Raporu (QV-2026-014) Hangi Âyet Olsun? (Aday Âyet Havuzu)</span><span>Kolektif Gündem</span></h3>
+      <p style="font-size:13px; color:var(--text-secondary);">
+        Aşağıdaki aday âyetlerden birini seçerek bir sonraki stratejik analizin hangi âyet üzerine inşa edilmesini istediğinizi önerebilirsiniz:
+      </p>
+      <div class="candidate-grid">
+        ${{candidatesHtml}}
+      </div>
+    </div>
+  `;
+
+  renderLocalNotes();
+}}
+
+function openFeedbackTab() {{
+  const btn = document.getElementById('tabBtn-feedback');
+  if (btn) setTab('feedback', btn);
+}}
+
+function selectCategoryAndFocus(catValue) {{
+  const sel = document.getElementById('fbCategory');
+  if (sel) sel.value = catValue;
+  const ta = document.getElementById('fbContent');
+  if (ta) ta.focus();
+}}
+
+function prefillCandidateVerse(verseRef, verseTitle) {{
+  const sel = document.getElementById('fbCategory');
+  if (sel) sel.value = "Külliyata Yeni Âyet / Rapor Önerisi (QV-2026-014+)";
+  const ta = document.getElementById('fbContent');
+  if (ta) {{
+    ta.value = `Külliyatın 14. raporu (QV-2026-014) olarak "${{verseRef}} — ${{verseTitle}}" konusunun 26 adımlı Quran Vision çerçevesinde incelenmesini öneriyorum.\n\nÖneri Gerekçem: `;
+    ta.focus();
+  }}
+  showToast("✨ Aday âyet forma aktarıldı! Gerekçenizi ekleyip WhatsApp veya GitHub üzerinden gönderebilirsiniz.");
+}}
+
+function buildFormattedFeedbackText() {{
+  const r = REPORTS[currentIndex];
+  const author = (document.getElementById('fbAuthor')?.value || 'İsimsiz Katılımcı').trim();
+  const category = document.getElementById('fbCategory')?.value || 'Akademik Şerh';
+  const content = (document.getElementById('fbContent')?.value || '').trim();
+  const source = (document.getElementById('fbSource')?.value || '—').trim();
+
+  return {{
+    r, author, category, content, source,
+    formatted: `*QURAN VISION (v6.2.1) — AKADEMİK ŞERH & GERİ DÖNÜT KARTI*\n` +
+      `━━━━━━━━━━━━━━━━━━━━\n` +
+      `📌 *Rapor:* ${{r.case_id}} — ${{r.surah}} Sûresi ${{r.verse}}\n` +
+      `📖 *Konu:* ${{r.topic}}\n` +
+      `👤 *Katkı Sunan:* ${{author}}\n` +
+      `📂 *Kategori:* ${{category}}\n` +
+      `━━━━━━━━━━━━━━━━━━━━\n` +
+      `📝 *Şerh / Görüş:*\n${{content || '(Belirtilmedi)'}}\n\n` +
+      `📚 *Dayanak / Kaynak:* ${{source}}\n` +
+      `🔗 *Rapor Linki:* https://mehmetyarici-crypto.github.io/quran-vision/`
+  }};
+}}
+
+function sendViaWhatsApp() {{
+  const data = buildFormattedFeedbackText();
+  if (!data.content) {{
+    showToast("⚠️ Lütfen önce görüş veya şerh metninizi yazınız.");
+    document.getElementById('fbContent')?.focus();
+    return;
+  }}
+  saveNoteToStorage(data);
+  const waUrl = `https://wa.me/?text=${{encodeURIComponent(data.formatted)}}`;
+  window.open(waUrl, '_blank');
+}}
+
+function openGitHubPeerReview() {{
+  const data = buildFormattedFeedbackText();
+  if (!data.content) {{
+    showToast("⚠️ Lütfen önce görüş veya şerh metninizi yazınız.");
+    document.getElementById('fbContent')?.focus();
+    return;
+  }}
+  saveNoteToStorage(data);
+  const issueTitle = `[${{data.category}}] ${{data.r.case_id}} (${{data.r.surah}} ${{data.r.verse}}) — ${{data.author}}`;
+  const issueBody =
+    `### 🏛️ Quran Vision (v6.2.1) Akademik Şerh & Katkı Kaydı\n\n` +
+    `- **Vaka Kodu:** \`${{data.r.case_id}}\`\n` +
+    `- **Sûre ve Âyet:** ${{data.r.surah}} Sûresi ${{data.r.verse}}\n` +
+    `- **Rapor Başlığı:** ${{data.r.topic}}\n` +
+    `- **SHA-256 Manifest:** \`${{data.r.sha256}}\`\n` +
+    `- **Katkı Sunan:** ${{data.author}}\n` +
+    `- **Katkı Kategorisi:** ${{data.category}}\n\n` +
+    `---\n\n` +
+    `### 📝 Şerh / Analiz / Geri Bildirim Metni\n\n` +
+    `${{data.content}}\n\n` +
+    `### 📚 Dayanak Kaynak / Referans\n\n` +
+    `${{data.source}}\n`;
+  const ghUrl = `https://github.com/mehmetyarici-crypto/quran-vision/issues/new?title=${{encodeURIComponent(issueTitle)}}&body=${{encodeURIComponent(issueBody)}}`;
+  window.open(ghUrl, '_blank');
+}}
+
+function saveNoteToStorage(data) {{
+  const key = 'qv_notes_v621';
+  let existing = [];
+  try {{
+    existing = JSON.parse(localStorage.getItem(key) || '[]');
+  }} catch (e) {{ existing = []; }}
+  existing.unshift({{
+    id: Date.now(),
+    case_id: data.r.case_id,
+    surah: data.r.surah,
+    verse: data.r.verse,
+    author: data.author,
+    category: data.category,
+    content: data.content,
+    source: data.source,
+    date: new Date().toLocaleString('tr-TR')
+  }});
+  localStorage.setItem(key, JSON.stringify(existing));
+  renderLocalNotes();
+}}
+
+function saveLocalNoteAndCopy() {{
+  const data = buildFormattedFeedbackText();
+  if (!data.content) {{
+    showToast("⚠️ Lütfen önce görüş veya şerh metninizi yazınız.");
+    document.getElementById('fbContent')?.focus();
+    return;
+  }}
+  saveNoteToStorage(data);
+  if (navigator.clipboard) {{
+    navigator.clipboard.writeText(data.formatted);
+  }}
+  showToast("✅ Şerhiniz bu raporun altına kaydedildi ve biçimlendirilmiş metin panoya kopyalandı!");
+}}
+
+function deleteLocalNote(noteId) {{
+  const key = 'qv_notes_v621';
+  let existing = [];
+  try {{
+    existing = JSON.parse(localStorage.getItem(key) || '[]');
+  }} catch (e) {{ existing = []; }}
+  existing = existing.filter(n => n.id !== noteId);
+  localStorage.setItem(key, JSON.stringify(existing));
+  renderLocalNotes();
+}}
+
+function renderLocalNotes() {{
+  const r = REPORTS[currentIndex];
+  const listEl = document.getElementById('localNotesList');
+  const countEl = document.getElementById('localNotesCount');
+  if (!listEl) return;
+
+  let existing = [];
+  try {{
+    existing = JSON.parse(localStorage.getItem('qv_notes_v621') || '[]');
+  }} catch (e) {{ existing = []; }}
+
+  const reportNotes = existing.filter(n => n.case_id === r.case_id);
+  if (countEl) countEl.textContent = `${{reportNotes.length}} Kayıtlı Not`;
+
+  if (reportNotes.length === 0) {{
+    listEl.innerHTML = `<div class="source-card" style="color:var(--text-muted); font-size:13px;">Bu rapor (${{r.case_id}}) için henüz tarayıcınıza kaydettiğiniz bir kişisel şerh veya ders notu bulunmuyor. Sağdaki formdan ekleyebilirsiniz.</div>`;
+    return;
+  }}
+
+  listEl.innerHTML = reportNotes.map(n => `
+    <div class="source-card">
+      <div class="source-header">
+        <span class="source-author">${{n.author}} • <span style="color:var(--accent-gold);">${{n.category}}</span></span>
+        <button class="btn" style="padding:2px 8px; font-size:11px;" onclick="deleteLocalNote(${{n.id}})">🗑️ Sil</button>
+      </div>
+      <div style="font-size:13.5px; color:var(--text-primary); white-space:pre-wrap; margin-bottom:6px;">${{n.content.replace(/</g, '&lt;')}}</div>
+      <div class="source-meta">📚 Kaynak: ${{n.source}} &nbsp;|&nbsp; 🕒 ${{n.date}}</div>
+    </div>
+  `).join('');
+}}
+
+function showToast(msg) {{
+  const el = document.getElementById('fbToast');
+  if (!el) return;
+  el.textContent = msg;
+  el.style.display = 'block';
+  setTimeout(() => {{ el.style.display = 'none'; }}, 5000);
 }}
 
 function printCurrentReport() {{
@@ -1359,10 +1705,11 @@ function renderMarkdown(md) {{
 function setTab(tabName, btn) {{
   currentTab = tabName;
   document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
+  if (btn) btn.classList.add('active');
   document.getElementById('tab-dashboard').style.display = tabName === 'dashboard' ? 'block' : 'none';
   document.getElementById('tab-sources').style.display = tabName === 'sources' ? 'block' : 'none';
   document.getElementById('tab-fulltext').style.display = tabName === 'fulltext' ? 'block' : 'none';
+  document.getElementById('tab-feedback').style.display = tabName === 'feedback' ? 'block' : 'none';
 }}
 
 function toggleTheme() {{
@@ -1400,8 +1747,11 @@ def main():
     print(f"✅ Portal üretildi: {out1} ({len(reports)} rapor)")
     print(f"✅ Masaüstü hızlı erişim kopyaları: {out2.name}, {out3.name}")
 
-    print("🖨️ Gerçek A4 PDF dosyaları üretiliyor (Edge Headless Motoru)...")
-    generate_all_pdfs(reports)
+    if "--force-pdf" in sys.argv or not (PDF_DIR / "Quran_Vision_Kulliyat_v6.2.1.pdf").exists():
+        print("🖨️ Gerçek A4 PDF dosyaları üretiliyor (Edge Headless Motoru)...")
+        generate_all_pdfs(reports)
+    else:
+        print("✅ A4 PDF dosyaları zaten güncel (yeniden üretmek için --force-pdf kullanın).")
 
 
 if __name__ == "__main__":
