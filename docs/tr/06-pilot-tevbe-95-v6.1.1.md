@@ -11,9 +11,10 @@ confidence_grade: "B"
 status: "PRE-RELEASE"
 sha256_hash: "0000000000000000000000000000000000000000000000000000000000000000"
 
-sources:
+classical_sources:
   - id: "src-zemahseri"
     author: "Zemahşerî, Mahmûd b. Ömer"
+    death_year: "ö. 538/1144"
     work: "el-Keşşâf 'an Hakâ'ikı Gavâmizi't-Tenzîl"
     editor: "Âdil Ahmed Abdülmevcûd, Ali Muhammed Muavvaz"
     publisher: "Mektebetü'l-Ubeykân"
@@ -27,6 +28,7 @@ sources:
 
   - id: "src-ibn-faris"
     author: "İbn Fâris, Ahmed b. Fâris"
+    death_year: "ö. 395/1004"
     work: "Mu'cemü Makâyîsi'l-Lüğa"
     editor: "Abdüsselâm Muhammed Hârûn"
     publisher: "Dârü'l-Fikr"
@@ -40,6 +42,7 @@ sources:
 
   - id: "src-ibn-manzur"
     author: "İbn Manzûr, Muhammed b. Mükerrem"
+    death_year: "ö. 711/1311"
     work: "Lisânü'l-Arab"
     editor: "Dârü Sâdır"
     publisher: "Dârü Sâdır"
@@ -53,6 +56,7 @@ sources:
 
   - id: "src-cessas"
     author: "Cessâs, Ahmed b. Ali er-Râzî"
+    death_year: "ö. 370/981"
     work: "Ahkâmü'l-Kur'ân"
     editor: "Muhammed Sadık Kamhâvî"
     publisher: "Dâru İhyâi't-Türâsi'l-Arabî"
@@ -66,6 +70,7 @@ sources:
 
   - id: "src-satibi"
     author: "Şâtıbî, İbrâhîm b. Mûsâ"
+    death_year: "ö. 790/1388"
     work: "el-Muvâfakât"
     editor: "Meşhûr b. Hasan Âl-i Selmân"
     publisher: "Dâru İbni Affân"
@@ -76,6 +81,33 @@ sources:
     arabic_quote: "النسخ في لسان المتقدمين أعم منه في لسان المتأخرين، وأكثر ما يطلقونه على تخصيص العام أو تقييد المطلق"
     verification_link: "https://archive.org/details/mowafaqat-shatibi"
     doi_or_urn: "urn:shamela:21731"
+
+modern_sources:
+  - id: "mod-ucdp"
+    institution: "Uppsala University (Uppsala Conflict Data Program - UCDP)"
+    title: "UCDP Georeferenced Event Dataset (GED) and Armed Conflict Database 2024"
+    publication_year: 2024
+    publication_place: "Uppsala"
+    publisher: "Department of Peace and Conflict Research, Uppsala University"
+    url: "https://ucdp.uu.se"
+    doi: "doi:10.1177/0022343320934986"
+
+  - id: "mod-iep"
+    institution: "Institute for Economics and Peace (IEP)"
+    title: "Global Peace Index 2024: Measuring Peace in a Complex World"
+    publication_year: 2024
+    publication_place: "Sydney"
+    publisher: "Institute for Economics and Peace"
+    url: "https://www.economicsandpeace.org"
+    doi: "doi:10.13140/RG.2.2.14668.01928"
+
+  - id: "mod-worldbank"
+    institution: "World Bank Group"
+    title: "Worldwide Governance Indicators (WGI): Rule of Law and Political Stability"
+    publication_year: 2024
+    publication_place: "Washington, D.C."
+    publisher: "The World Bank"
+    url: "https://datacatalog.worldbank.org"
 
 thresholds:
   - id: "th-01"
@@ -172,17 +204,17 @@ peer_review:
 ### ADIM 00-5 — DİL VE SEMANTİK MATRİSİ (H6 ZORUNLU)
 
 1. **Semantik / Kök Anlam:**
-   - **Kaynak:** İbn Fâris (*Mu'cemü Makâyîsi'l-Lüğa*, C. 3, s. 97).
+   - **Kaynak:** İbn Fâris (*Mu'cemü Makâyîsi'l-Lüğa*, C. 3, s. 97).[^1]
    - `[NAKİL]`: *"السين واللام والخاء أصل يدل على كشط الشيء عن الشيء، وانسلاخ الشهر: خروجه كله"* (İbn Fâris: Selaha kökü, bir şeyin örtüsünden sıyrılıp tamamen çıkmasını ifade eder; ayın insilâhı ise vaktin bütünüyle çıkıp geriye hiçbir şeyin kalmamasıdır).
    - `[YORUM]`: Diplomatik mühlet tek taraflı veya keyfi olarak kısaltılamaz; antlaşmanın tanıdığı zaman dilimi bütünüyle dolmadan meşru askeri mukabele başlatılamaz.
 
 2. **Nahiv / Belâğat ve İ'câz:**
-   - **Kaynak:** Zemahşerî (*el-Keşşâf*, C. 3, s. 10-15).
+   - **Kaynak:** Zemahşerî (*el-Keşşâf*, C. 3, s. 10-15).[^2]
    - `[NAKİL]`: *"فإذا انسلخ الأشهر الحرم: يعني أشهر التسيير الأربعة... والمشركين: العاهدين الناكثين خاصة دون غيرهم"* (Zemahşerî: Âyetteki harf-i tarif ahd-i hâricî içindir; antlaşmayı tek taraflı bozan muayyen muharip müşrikleri kasteder).
    - `[YORUM]`: `Ahz` (esir alma), `hasr` (kuşatma) ve `marsad` (gözetleme yerlerini tutma) emirleri, sınırsız bir imha değil; hasmın lojistik hatlarını kesen, teslim koridorunu açık tutan kademeli bir askeri harekât doktrinidir.
 
 3. **Lisan / Klasik Kullanım:**
-   - **Kaynak:** İbn Manzûr (*Lisânü'l-Arab*, C. 3, s. 182-184).
+   - **Kaynak:** İbn Manzûr (*Lisânü'l-Arab*, C. 3, s. 182-184).[^3]
    - `[NAKİL]`: *"والمرصد: موضع الرصد والترقب، وقعدت له كل مرصد أي كل طريق يمر به ليؤخذ"* (İbn Manzûr: Marsad, düşmanın geçiş güzergâhlarını gözetleme ve yakalama mevkiidir).
    - `[YORUM]`: Klasik Arapçada bu terkipler kör bir şiddeti değil; stratejik denetimi, istihbari gözetlemeyi ve saldırganı teslim olmaya zorlayan kuşatmayı anlatır.
 
@@ -245,7 +277,7 @@ peer_review:
 
 - **Küllî Makasıd:** Can, din, akıl, nesil ve mal güvenliği.
 - **Şâtıbî ve Cessâs Çerçevesi:**
-  - `[NAKİL]`: Şâtıbî (*el-Muvâfakât*, C. 3, s. 340-345), ceza ve cihat nasslarının kamu yararı ve fesadın defi (*def‘-i mefsede*) ekseninde anlaşılması gerektiğini; 9:5'in barış nasslarını nesh etmeyip muharip saldırganlara tahsis ettiğini vurgular. Cessâs (*Ahkâmü'l-Kur'ân*, C. 4, s. 268) da âyetin ahdini bozanlarla sınırlı olduğunu tescil eder.
+  - `[NAKİL]`: Şâtıbî (*el-Muvâfakât*, C. 3, s. 340-345)[^4], ceza ve cihat nasslarının kamu yararı ve fesadın defi (*def‘-i mefsede*) ekseninde anlaşılması gerektiğini; 9:5'in barış nasslarını nesh etmeyip muharip saldırganlara tahsis ettiğini vurgular. Cessâs (*Ahkâmü'l-Kur'ân*, C. 4, s. 268)[^5] da âyetin ahdini bozanlarla sınırlı olduğunu tescil eder.
   - `[YORUM]`: Âyetin nihai makāsıdı kan dökmek değil; antlaşma ihlallerini sonlandırarak toplumsal barışı ve hukuk nizamını korumaktır (*Hıfzu'n-Nizâm*).
 - **Zarûriyyât Dengelemesi:**
   1. *Canın Korunması (Hıfzu'n-Nefs):* Masumların canı korunurken, Tevbe 9:6 ile teslim olan düşmanın canı da dokunulmaz kılınır.
@@ -340,7 +372,7 @@ peer_review:
 - **Test 4 (Sağlamlık):** 5 temel usûl kaynağında anlam bütünlüğü sınanmıştır. (İç denetimden geçti).
 - **Test 5 (Siyak-Sibak Uyumu):** 5a-5g alt maddeleri doğrulanmıştır. (İç denetimden geçti).
 - **Test 6 (Dil Güvenliği ve Mutlakiyet Yasağı):** Kesinlik iddialarından arındırılmıştır. (İç denetimden geçti).
-- **Test 7 (Base-rate ve Veri Uyumu):** Uppsala Çatışma Veri Programı (UCDP) 2024 ve PRIO raporları referans alınmıştır (https://ucdp.uu.se/).
+- **Test 7 (Base-rate ve Veri Uyumu):** Uppsala Çatışma Veri Programı (UCDP) 2024[^6] ve PRIO raporları referans alınmıştır (https://ucdp.uu.se/).
 - **Test 8 (Öz-Denetim ve Rol Ayrımı):** Metodolojik zayıflıklar açıkça listelenmiştir.
 *(NOT: Bu adım algoritmik iç tutarlılık kontrolüdür; bağımsız dış akademik hakem onayı niteliği taşımaz).*
 
@@ -354,7 +386,7 @@ peer_review:
 - **Falsifiabilite Protokolü (Yalnızca Ampirik ve Dünyevi Politika Hipotezlerine):**
   - **Uygulanan Alan:** Karar kollarındaki ampirik uygulama modeli.
   - **Zaman Aralığı:** 5 Yıllık İzleme Penceresi (2026–2031).
-  - **Bağımsız Endeks ve Veri Kaynağı:** Dünya Bankası Hukukun Üstünlüğü Endeksi veritabanı (https://datacatalog.worldbank.org/) ve IEP Küresel Barış Endeksi.
+  - **Bağımsız Endeks ve Veri Kaynağı:** Dünya Bankası Hukukun Üstünlüğü Endeksi veritabanı (https://datacatalog.worldbank.org/)[^7] ve IEP Küresel Barış Endeksi[^8].
   - **Sayısal Eşik ve Tipping Point:** 5 yıllık pencere içinde çatışma nüks ve ahit güvenliği skoru $\ge 0.75$ sayısal eşik değerine ulaşır ve taahhüt ihlal oranı $\le \%15$ seviyesine gerilerse, askeri abluka ve yüksek caydırıcılık kararı geri çekilir.
 
 ---
@@ -417,7 +449,7 @@ peer_review:
 ## FAZ V — GÜVEN, SORUMLULUK VE İZLEME KAYDI
 
 ### ADIM 17 — GÜVEN DÜZEYİ
-- **Nitel Derece:** B (Orta-Yüksek Analitik Güven). Sayısal bir olasılık veya mutlak kesinlik değildir.
+- **Nitel Derece:** B (Orta-Yüksek Analitik Güven). Sayısal bir olasılık veya dogmatik kesinlik iddiası değildir.
 
 ---
 
@@ -497,6 +529,32 @@ Bu iddia şu derin teolojik ve metodolojik krizi doğurur:
 
 > **METODOLOJİK VE EPİSTEMİK SINIR BEYANI:**
 > Bu rapor; Kur'an Temelli Gelecek Vizyonu (GEM v6.1.1) mimarisi çerçevesinde üretilmiş analitik ve hermenötik bir modellemedir. Dini bir fetva, kesin kazi bir hüküm veya ilahi muradın eksiksiz ve yegâne tefsiri niteliği taşımaz. Raporda yer alan simülasyonlar, göstergeler ve politika kolları; analistin benimsediği usûl ekolünün ve ampirik varsayımların bir türevidir. Bu metin, kod tabanlı biçimsel iç tutarlılık denetiminden (gem_lint.py) geçmiş olup, bağımsız dış akademik hakem heyeti (peer-review) tarafından tescil edilmedikçe bilimsel kesinlik iddiası barındırmaz.
+
+---
+
+### Z-4.5 · AKADEMİK KAYNAKÇA (İSNAD 2 VE APA / DOI BİBLİYOGRAFYASI)
+
+#### A) Klasik İslami Kaynaklar (İSNAD 2. Edisyon Standartlı)
+- **Cessâs, Ahmed b. Ali er-Râzî (ö. 370/981).** *Ahkâmü'l-Kur'ân*. Tahkik: Muhammed Sadık Kamhâvî. 5 Cilt. Beyrut: Dâru İhyâi't-Türâsi'l-Arabî, 1412/1992.
+- **İbn Fâris, Ahmed b. Fâris b. Zekeriyyâ (ö. 395/1004).** *Mu'cemü Makâyîsi'l-Lüğa*. Tahkik: Abdüsselâm Muhammed Hârûn. 6 Cilt. Beyrut: Dârü'l-Fikr, 1399/1979.
+- **İbn Manzûr, Muhammed b. Mükerrem (ö. 711/1311).** *Lisânü'l-Arab*. 15 Cilt. Beyrut: Dârü Sâdır, 1413/1993.
+- **Şâtıbî, İbrâhîm b. Mûsâ el-Garnâtî (ö. 790/1388).** *el-Muvâfakât fî Usûli'ş-Şerî'a*. Tahkik: Meşhûr b. Hasan Âl-i Selmân. 6 Cilt. Riyad: Dâru İbni Affân, 1417/1997.
+- **Zemahşerî, Mahmûd b. Ömer (ö. 538/1144).** *el-Keşşâf 'an Hakâ'ikı Gavâmizi't-Tenzîl ve 'Uyûni'l-Ekâvîl fî Vucûhi't-Te'vîl*. Tahkik: Âdil Ahmed Abdülmevcûd, Ali Muhammed Muavvaz. 6 Cilt. Riyad: Mektebetü'l-Ubeykân, 1418/1998.
+
+#### B) Çağdaş Kurumsal, Hukuki ve Ampirik Kaynaklar (APA 7 / DOI Standartlı)
+- **Institute for Economics and Peace [IEP] (2024).** *Global Peace Index 2024: Measuring Peace in a Complex World*. Sydney: Institute for Economics & Peace. https://doi.org/10.13140/RG.2.2.14668.01928. Erişim adresi: https://www.economicsandpeace.org
+- **Uppsala University [UCDP] (2024).** *UCDP Georeferenced Event Dataset (GED) and Armed Conflict Database 2024*. Uppsala: Department of Peace and Conflict Research. https://doi.org/10.1177/0022343320934986. Erişim adresi: https://ucdp.uu.se
+- **World Bank Group (2024).** *Worldwide Governance Indicators (WGI): Rule of Law and Political Stability*. Washington, D.C.: The World Bank. Erişim adresi: https://datacatalog.worldbank.org
+
+#### C) Metin İçi Akademik Dipnotlar (Footnotes)
+[^1]: İbn Fâris, Ahmed b. Fâris (ö. 395/1004), *Mu'cemü Makâyîsi'l-Lüğa*, thk. Abdüsselâm Muhammed Hârûn (Beyrut: Dârü'l-Fikr, 1979), 3: 97-98 ("s-l-h" maddesi).
+[^2]: Zemahşerî, Mahmûd b. Ömer (ö. 538/1144), *el-Keşşâf 'an Hakâ'ikı Gavâmizi't-Tenzîl*, thk. Âdil Ahmed Abdülmevcûd - Ali Muhammed Muavvaz (Riyad: Mektebetü'l-Ubeykân, 1998), 3: 10-15.
+[^3]: İbn Manzûr, Muhammed b. Mükerrem (ö. 711/1311), *Lisânü'l-Arab* (Beyrut: Dârü Sâdır, 1993), 3: 182-184 ("r-s-d" maddesi).
+[^4]: Şâtıbî, İbrâhîm b. Mûsâ (ö. 790/1388), *el-Muvâfakât*, thk. Meşhûr b. Hasan Âl-i Selmân (Riyad: Dâru İbni Affân, 1997), 3: 340-345.
+[^5]: Cessâs, Ahmed b. Ali er-Râzî (ö. 370/981), *Ahkâmü'l-Kur'ân*, thk. Muhammed Sadık Kamhâvî (Beyrut: Dâru İhyâi't-Türâsi'l-Arabî, 1992), 4: 268-272.
+[^6]: Uppsala University (UCDP), *UCDP Georeferenced Event Dataset (GED) and Armed Conflict Database 2024* (Uppsala: Department of Peace and Conflict Research, 2024), doi:10.1177/0022343320934986, erişim 15 Ekim 2026, https://ucdp.uu.se.
+[^7]: World Bank Group, *Worldwide Governance Indicators (WGI): Rule of Law and Political Stability* (Washington, D.C.: The World Bank, 2024), erişim 15 Ekim 2026, https://datacatalog.worldbank.org.
+[^8]: Institute for Economics and Peace (IEP), *Global Peace Index 2024: Measuring Peace in a Complex World* (Sydney: IEP, 2024), doi:10.13140/RG.2.2.14668.01928, erişim 15 Ekim 2026, https://www.economicsandpeace.org.
 
 ---
 
