@@ -136,6 +136,7 @@ def format_inline_md_py(text: str) -> str:
         return ""
     s = html_lib.escape(text)
     # Clean LaTeX math operators & expressions into crisp Unicode typography
+    s = re.sub(r"\\text\{([^}]*)\}", r"\1", s)
     s = s.replace(r"\ge", "≥").replace(r"\le", "≤").replace(r"\approx", "≈")
     s = s.replace(r"\rightarrow", "→").replace(r"\to", "→").replace(r"\%", "%")
     s = re.sub(r"\$([^$]+)\$", r"<strong>\1</strong>", s)
@@ -2738,6 +2739,7 @@ function formatInlineMd(str) {{
   if (!str) return '';
   const isEn = currentLang === 'en';
   return str
+    .replace(/\\\\text\\{{([^}}]*)\\}}/g, '$1')
     .replace(/\\\\ge/g, '≥')
     .replace(/\\\\le/g, '≤')
     .replace(/\\\\approx/g, '≈')

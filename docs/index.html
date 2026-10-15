@@ -1842,6 +1842,7 @@ function formatInlineMd(str) {
   if (!str) return '';
   const isEn = currentLang === 'en';
   return str
+    .replace(/\\text\{([^}]*)\}/g, '$1')
     .replace(/\\ge/g, '≥')
     .replace(/\\le/g, '≤')
     .replace(/\\approx/g, '≈')
