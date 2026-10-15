@@ -833,7 +833,8 @@ def build_html(reports):
 <meta name="citation_title" content="Quran Vision Corpus (Kur'ân Vizyonu Külliyatı): 26-Step Evidence-Based Strategic Tafsir, Maqasid and Civilization Foresight Corpus (v6.2.1)">
 <meta name="citation_author" content="Yarıcı, Mehmet">
 <meta name="citation_publication_date" content="2026/10/15">
-<meta name="citation_publisher" content="Quran Vision Institute">
+<meta name="citation_publisher" content="Zenodo / Quran Vision Institute">
+<meta name="citation_doi" content="10.5281/zenodo.23391192">
 <meta name="citation_pdf_url" content="https://mehmetyarici-crypto.github.io/quran-vision/pdf/Quran_Vision_Corpus_EN_v6.2.1.pdf">
 <meta name="citation_fulltext_html_url" content="https://mehmetyarici-crypto.github.io/quran-vision/">
 
@@ -844,10 +845,15 @@ def build_html(reports):
   "@type": "Dataset",
   "name": "Quran Vision Corpus (Kur'ân Vizyonu Külliyatı) v6.2.1",
   "alternateName": "26-Step Evidence-Based Strategic Tafsir, Maqasid & Civilization Foresight Corpus",
+  "identifier": "https://doi.org/10.5281/zenodo.23391192",
   "description": "Bilingual (Turkish/English) academic corpus of {len(reports)} foundational Quranic verse monographs integrating {total_classical} primary Arabic classical tafsir citations (ISNAD 2) with {total_modern} contemporary empirical datasets (APA 7 / DOI) and 2026-2036 Bayesian policy simulations.",
   "version": "6.2.1",
   "url": "https://mehmetyarici-crypto.github.io/quran-vision/",
-  "sameAs": "https://github.com/mehmetyarici-crypto/quran-vision",
+  "sameAs": [
+    "https://doi.org/10.5281/zenodo.23391192",
+    "https://zenodo.org/records/23391193",
+    "https://github.com/mehmetyarici-crypto/quran-vision"
+  ],
   "inLanguage": ["tr", "en", "ar"],
   "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
   "creator": {{
@@ -1556,7 +1562,7 @@ body {{
       <div class="stat-pill">📚 Külliyat: <strong>{len(reports)} Rapor</strong></div>
       <div class="stat-pill">🕌 Klasik Tahkik (İSNAD 2): <strong>{total_classical} Nakil</strong></div>
       <div class="stat-pill">🌐 Ampirik Veri (DOI/URL): <strong>{total_modern} Kurum</strong></div>
-      <div class="stat-pill">🛡️ Linter & SHA-256: <strong>0 KESİCİ HATA</strong></div>
+      <a class="stat-pill" href="https://doi.org/10.5281/zenodo.23391192" target="_blank" rel="noopener" style="text-decoration:none; border-color:var(--accent-gold);">🏛️ CERN/Zenodo DOI: <strong>10.5281/zenodo.23391192</strong></a>
     </div>
     <div class="top-actions">
       <button id="topFeedbackBtn" class="btn btn-gold" onclick="openFeedbackTab()">💬 Akademik Katkı & Şerh Yaz</button>
@@ -1778,12 +1784,12 @@ function setLanguage(lang) {{
       <div class="stat-pill">📚 Corpus: <strong>${{REPORTS.length}} Reports</strong></div>
       <div class="stat-pill">🕌 Classical Citations (ISNAD 2): <strong>${{TOTAL_CLASSICAL}} Primary Texts</strong></div>
       <div class="stat-pill">🌐 Empirical Data (DOI/URL): <strong>${{TOTAL_MODERN}} Institutions</strong></div>
-      <div class="stat-pill">🛡️ Linter & SHA-256: <strong>0 BLOCK ERRORS</strong></div>
+      <a class="stat-pill" href="https://doi.org/10.5281/zenodo.23391192" target="_blank" rel="noopener" style="text-decoration:none; border-color:var(--accent-gold);">🏛️ CERN/Zenodo DOI: <strong>10.5281/zenodo.23391192</strong></a>
     ` : `
       <div class="stat-pill">📚 Külliyat: <strong>${{REPORTS.length}} Rapor</strong></div>
       <div class="stat-pill">🕌 Klasik Tahkik (İSNAD 2): <strong>${{TOTAL_CLASSICAL}} Nakil</strong></div>
       <div class="stat-pill">🌐 Ampirik Veri (DOI/URL): <strong>${{TOTAL_MODERN}} Kurum</strong></div>
-      <div class="stat-pill">🛡️ Linter & SHA-256: <strong>0 KESİCİ HATA</strong></div>
+      <a class="stat-pill" href="https://doi.org/10.5281/zenodo.23391192" target="_blank" rel="noopener" style="text-decoration:none; border-color:var(--accent-gold);">🏛️ CERN/Zenodo DOI: <strong>10.5281/zenodo.23391192</strong></a>
     `;
   }}
 

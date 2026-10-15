@@ -4,6 +4,7 @@
 ### **26-Step Evidence-Based Strategic Tafsir, Maqasid & Civilization Foresight Corpus (TR / EN)**
 #### *26 Adımlı Kanıta Dayalı Stratejik Tefsir, Makâsıd ve Medeniyet Öngörü Külliyatı*
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23391192.svg)](https://doi.org/10.5281/zenodo.23391192)
 [![Version](https://img.shields.io/badge/Corpus_Version-v6.2.1-D4AF37?style=for-the-badge)](https://mehmetyarici-crypto.github.io/quran-vision/)
 [![Reports](https://img.shields.io/badge/Foundational_Reports-14_Monographs_(TR_%26_EN)-10B981?style=for-the-badge)](https://mehmetyarici-crypto.github.io/quran-vision/)
 [![ISNAD 2](https://img.shields.io/badge/ISNAD_2_Classical_Tafsir-71_Primary_Arabic_Citations-0f5132?style=for-the-badge)](https://mehmetyarici-crypto.github.io/quran-vision/)
@@ -12,6 +13,7 @@
 
 <br>
 
+### 🏛️ **OFFICIAL CERN / ZENODO DOI:** **[`https://doi.org/10.5281/zenodo.23391192`](https://doi.org/10.5281/zenodo.23391192)**
 ### 🌐 **[🚀 LAUNCH LIVE INTERACTIVE PORTAL (🇹🇷 TR | 🇬🇧 EN)](https://mehmetyarici-crypto.github.io/quran-vision/)**
 ### 📙 **[📥 Download Full English Corpus Book (14 Reports - A4 PDF)](https://mehmetyarici-crypto.github.io/quran-vision/pdf/Quran_Vision_Corpus_EN_v6.2.1.pdf)** &nbsp;|&nbsp; 📘 **[📥 Tam Külliyat Kitabını İndir (14 Rapor - Türkçe A4 PDF)](https://mehmetyarici-crypto.github.io/quran-vision/pdf/Quran_Vision_Kulliyat_v6.2.1.pdf)**
 
@@ -93,7 +95,7 @@ python src/build_portal.py --force-pdf
 You can click the **"Cite this repository"** button in the top-right sidebar of GitHub, or use the APA 7 / BibTeX records below:
 
 **APA 7th Edition:**
-> Yarıcı, M. (2026). *Quran Vision Corpus (Kur'ân Vizyonu Külliyatı): 26-Step Evidence-Based Strategic Tafsir, Maqasid & Civilization Foresight Corpus (v6.2.1)* [Data set & Monograph Series]. Quran Vision Institute. https://mehmetyarici-crypto.github.io/quran-vision/
+> Yarıcı, M. (2026). *Quran Vision Corpus (Kur'ân Vizyonu Külliyatı): 26-Step Evidence-Based Strategic Tafsir, Maqasid & Civilization Foresight Corpus (v6.2.1)* [Data set & Monograph Series]. Quran Vision Institute / Zenodo. https://doi.org/10.5281/zenodo.23391192
 
 **BibTeX:**
 ```bibtex
@@ -102,8 +104,9 @@ You can click the **"Cite this repository"** button in the top-right sidebar of 
   title     = {Quran Vision Corpus (Kur'ân Vizyonu Külliyatı): 26-Step Evidence-Based Strategic Tafsir, Maqasid \& Civilization Foresight Corpus},
   version   = {6.2.1},
   year      = {2026},
-  publisher = {Quran Vision Institute},
-  url       = {https://mehmetyarici-crypto.github.io/quran-vision/}
+  publisher = {Zenodo / Quran Vision Institute},
+  doi       = {10.5281/zenodo.23391192},
+  url       = {https://doi.org/10.5281/zenodo.23391192}
 }
 ```
 
