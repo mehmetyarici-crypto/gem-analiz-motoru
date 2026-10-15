@@ -7,14 +7,15 @@ Bu belgede GEM (Kur'an Temelli Gelecek Vizyonu) çerçevesinin sürüm değişik
 ## [v6.2.1] — 2026-10-15 (Akademik Atıf & İSNAD 2 Hibrit Bibliyografya / Academic Citations)
 
 ### Eklenen ve Güncellenen Hususlar
-- **12. Stratejik Analiz Raporu (Hadîd 57:25):** `docs/tr/17-rapor-hadid-5725-v6.1.1.md` (*Kitap, Mîzân ve Demir Üçlüsü: Anayasal Hukuk, Kurumsal Adalet ve Caydırıcı Savunma-Sanayi Mimarisi*) külliyata eklendi.
-- **GEM Akademik Atıf ve Kaynakça Standardı (İSNAD 2 + Veri Bilimi Hibriti):** 12 stratejik analiz raporunun tamamı (06–17) çift katmanlı akademik kaynakça ve metin içi dipnot mimarisine kavuşturuldu.
+- **İnteraktif Dijital Külliyat ve Karar Destek Kokpiti (`docs/index.html` & `src/build_portal.py`):** 13 raporun tamamını, Bayesyen olasılık sıçramalarını, Z-1 Aporia kutularını, İSNAD 2 harekeli Arapça ibare kartlarını ve 26 adımlı tam metinleri tek tıkla tarayıcıda (ve GitHub Pages üzerinde) çalıştıran modern web portalı inşa edildi.
+- **12. ve 13. Stratejik Analiz Raporları (Hadîd 57:25 & Nahl 16:90):** `docs/tr/17-rapor-hadid-5725-v6.1.1.md` (*Kitap, Mîzân ve Demir Üçlüsü*) ile `docs/tr/18-rapor-nahl-1690-v6.1.1.md` (*Evrensel Medeniyet Sözleşmesi: Adalet, İhsan, Sosyal Dayanışma ve Üçlü Yozlaşma Karşıtı Yönetişim*) külliyata eklendi.
+- **GEM Akademik Atıf ve Kaynakça Standardı (İSNAD 2 + Veri Bilimi Hibriti):** 13 stratejik analiz raporunun tamamı (06–18) çift katmanlı akademik kaynakça ve metin içi dipnot mimarisine kavuşturuldu.
 - **İki Katmanlı Frontmatter Bibliyografyası (`classical_sources` & `modern_sources`):**
   - Klasik tefsir, hadis ve lügat kaynaklarında İSNAD 2 standart vefat tarihleri (`ö. H/M`), tahkik/muhakkik bilgisi, cilt/sayfa, yayınevi ve neşir yeri eksiksiz modellendi.
   - Çağdaş veri bilimi, hukuk, strateji ve sosyo-ekonomik kaynaklarda yayıncı kurum, yayın yılı, resmî URL ve kalıcı tanımlayıcılar (DOI / Rapor Kimliği) tanımlandı.
 - **Metin İçi Akademik Dipnotlar (Footnotes):** Adım 00-5 (Siyak-Sibak), Adım 01/04 (Semantik & Filoloji) ve Adım 11/12 (Modern Senaryo & Ampirik Politikalar) bölümlerine standart markdown dipnotları (`[^1]`, `[^2]`, ...) entegre edildi.
 - **Z-4.5: Akademik Kaynakça Bölümü:** Tüm raporlara Z-5 öncesinde `Z-4.5: AKADEMİK KAYNAKÇA (İSNAD 2 VE APA / DOI BİBLİYOGRAFYASI)` başlığı altında alfabetik dizilimli, klasik ve çağdaş ayrımı yapılmış resmi bibliyografya eklendi.
-- **Kriptografik Güvenlik ve Linter Uyumu:** 12 raporun tamamında `gem_lint.py --katman 3 --h6` ile **0 KESİCİ HATA (BLOCK: 0)** teyit edildi; harici `.sha256` manifestoları ve test paketi (8/8) tam senkronize edildi.
+- **Kriptografik Güvenlik ve Linter Uyumu:** 13 raporun tamamında `gem_lint.py --katman 3 --h6` ile **0 KESİCİ HATA (BLOCK: 0)** teyit edildi; harici `.sha256` manifestoları ve test paketi (9/9) tam senkronize edildi.
 
 ---
 

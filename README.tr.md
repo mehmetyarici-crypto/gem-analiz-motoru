@@ -58,6 +58,7 @@ Aşağıdaki raporlar, GEM v6.1.1 standardına tam uyumlu olarak hazırlanmış 
 | **10** | **Rûm 30:22** | Ontolojik Çoğulculuk, Dilsel/Etnik Çeşitlilik ve Birlikte Yaşama | [`docs/tr/15-rapor-rum-3022-v6.1.1.md`](docs/tr/15-rapor-rum-3022-v6.1.1.md) | `PRE-RELEASE` |
 | **11** | **En'âm 6:151–152** | Evrensel Ahlak Dekalogu, Temel Haklar, Mîzân ve Adalet | [`docs/tr/16-rapor-enam-6151152-v6.1.1.md`](docs/tr/16-rapor-enam-6151152-v6.1.1.md) | `PRE-RELEASE` |
 | **12** | **Hadîd 57:25** | Kitap, Mîzân ve Demir Üçlüsü: Anayasal Hukuk, Kurumsal Adalet ve Caydırıcı Savunma-Sanayi Mimarisi | [`docs/tr/17-rapor-hadid-5725-v6.1.1.md`](docs/tr/17-rapor-hadid-5725-v6.1.1.md) | `PRE-RELEASE` |
+| **13** | **Nahl 16:90** | Evrensel Medeniyet Sözleşmesi: Adalet, İhsan, Sosyal Dayanışma ve Üçlü Yozlaşma Karşıtı Yönetişim | [`docs/tr/18-rapor-nahl-1690-v6.1.1.md`](docs/tr/18-rapor-nahl-1690-v6.1.1.md) | `PRE-RELEASE` |
 
 ---
 

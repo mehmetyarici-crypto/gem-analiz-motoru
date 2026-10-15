@@ -58,6 +58,7 @@ The following reports are fully compliant with the GEM v6.1.1 standard and verif
 | **10** | **Ar-Rum 30:22** | Ontological Pluralism, Linguistic/Ethnic Diversity, and Peaceful Coexistence | [`docs/tr/15-rapor-rum-3022-v6.1.1.md`](docs/tr/15-rapor-rum-3022-v6.1.1.md) | `PRE-RELEASE` |
 | **11** | **Al-An'am 6:151–152** | Universal Moral Decalogue, Fundamental Rights, Market Integrity, and Justice | [`docs/tr/16-rapor-enam-6151152-v6.1.1.md`](docs/tr/16-rapor-enam-6151152-v6.1.1.md) | `PRE-RELEASE` |
 | **12** | **Al-Hadid 57:25** | The Book, the Balance, and Iron: Constitutional Law, Institutional Justice, and Deterrence | [`docs/tr/17-rapor-hadid-5725-v6.1.1.md`](docs/tr/17-rapor-hadid-5725-v6.1.1.md) | `PRE-RELEASE` |
+| **13** | **An-Nahl 16:90** | Universal Civilizational Covenant: Justice, Ihsan, Solidarity, and Anti-Corruption Governance | [`docs/tr/18-rapor-nahl-1690-v6.1.1.md`](docs/tr/18-rapor-nahl-1690-v6.1.1.md) | `PRE-RELEASE` |
 
 ---
 
