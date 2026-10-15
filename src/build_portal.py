@@ -17,6 +17,7 @@ import subprocess
 import sys
 from pathlib import Path
 import yaml
+from en_corpus_data import EN_CORPUS, build_english_report_body
 
 if sys.stdout and hasattr(sys.stdout, "reconfigure"):
     try:
@@ -26,6 +27,7 @@ if sys.stdout and hasattr(sys.stdout, "reconfigure"):
 
 ROOT = Path(__file__).resolve().parent.parent
 DOCS_TR = ROOT / "docs" / "tr"
+DOCS_EN = ROOT / "docs" / "en"
 PDF_DIR = ROOT / "docs" / "pdf"
 DESKTOP_PDF_DIR = ROOT.parent / "QURAN_VISION_PDF_KULLIYAT"
 
@@ -68,12 +70,13 @@ def parse_report(md_path: Path):
     verse = str(fm.get("verse") or fm.get("ayet_no", ""))
 
     # Clean Windows-safe PDF filename
-    safe_verse = re.sub(r"[^0-9a-zA-Z_-]", "-", verse)
     pdf_filename = f"{case_id}.pdf"
+    pdf_filename_en = f"{case_id}_EN.pdf"
 
-    return {
+    base_report = {
         "filename": md_path.name,
         "pdf_filename": pdf_filename,
+        "pdf_filename_en": pdf_filename_en,
         "case_id": case_id,
         "surah": surah,
         "verse": verse,
@@ -93,13 +96,51 @@ def parse_report(md_path: Path):
         "body": body,
     }
 
+    en_meta = EN_CORPUS.get(case_id)
+    if en_meta:
+        base_report["surah_en"] = en_meta["surah_en"]
+        base_report["topic_en"] = en_meta["topic_en"]
+        base_report["aporia_en"] = en_meta["aporia_en"]
+        base_report["z3_en"] = en_meta["z3_en"]
+        base_report["thresholds_en"] = en_meta["thresholds_en"]
+        # Merge original numeric scores into scenarios_en
+        merged_scenarios_en = []
+        orig_scs = base_report["scenarios"]
+        for i, sc_en in enumerate(en_meta["scenarios_en"]):
+            sc_copy = dict(sc_en)
+            sc_copy["scores"] = orig_scs[i].get("scores", {}) if i < len(orig_scs) else {}
+            merged_scenarios_en.append(sc_copy)
+        base_report["scenarios_en"] = merged_scenarios_en
+        base_report["body_en"] = build_english_report_body(base_report, en_meta)
+
+        # Save English Markdown file to docs/en/
+        DOCS_EN.mkdir(parents=True, exist_ok=True)
+        en_md_name = md_path.name.replace("-v6.1.1.md", "-en-v6.1.1.md")
+        base_report["filename_en"] = en_md_name
+        (DOCS_EN / en_md_name).write_text(base_report["body_en"], encoding="utf-8")
+    else:
+        base_report["surah_en"] = surah
+        base_report["topic_en"] = base_report["topic"]
+        base_report["aporia_en"] = aporia_text
+        base_report["z3_en"] = z3_text
+        base_report["thresholds_en"] = base_report["thresholds"]
+        base_report["scenarios_en"] = base_report["scenarios"]
+        base_report["body_en"] = body
+        base_report["filename_en"] = md_path.name
+
+    return base_report
+
 
 def format_inline_md_py(text: str) -> str:
     if not text:
         return ""
     s = html_lib.escape(text)
     s = s.replace("[NAKİL]", '<span class="tag-nakil">[NAKİL]</span>')
+    s = s.replace("[CITATION / NAKİL]", '<span class="tag-nakil">[CITATION / NAKİL]</span>')
+    s = s.replace("[CITATION]", '<span class="tag-nakil">[CITATION]</span>')
     s = s.replace("[YORUM]", '<span class="tag-yorum">[YORUM]</span>')
+    s = s.replace("[ANALYSIS / YORUM]", '<span class="tag-yorum">[ANALYSIS / YORUM]</span>')
+    s = s.replace("[ANALYSIS]", '<span class="tag-yorum">[ANALYSIS]</span>')
     s = re.sub(r"\*\*(.*?)\*\*", r"<strong>\1</strong>", s)
     s = re.sub(r"\*(.*?)\*", r"<em>\1</em>", s)
     s = re.sub(r"\[\^(\d+)\]", r'<sup class="fn-ref">[\1]</sup>', s)
@@ -475,6 +516,79 @@ def find_browser_exe():
     return None
 
 
+def build_single_report_print_html_en(r: dict, idx: int) -> str:
+    """Renders a single report block in clean English academic A4 format for PDF generation."""
+    classical_rows = []
+    for cs in r.get("classical_sources", []):
+        classical_rows.append(f"""
+        <div class="pdf-source-box">
+          <div class="pdf-source-title">
+            <strong>{html_lib.escape(str(cs.get('author', '')))}</strong>
+            <span>({html_lib.escape(str(cs.get('death_year', '')))})</span>
+          </div>
+          <div class="pdf-source-meta">
+            <em>{html_lib.escape(str(cs.get('work', '')))}</em> • Ed.: {html_lib.escape(str(cs.get('editor', '—')))} •
+            {html_lib.escape(str(cs.get('publication_place', '')))}: {html_lib.escape(str(cs.get('publisher', '')))},
+            {html_lib.escape(str(cs.get('publication_year', '')))} • Vol.: {html_lib.escape(str(cs.get('volume', '')))}, pp.: {html_lib.escape(str(cs.get('pages', '')))}
+          </div>
+          <div class="pdf-arabic">{html_lib.escape(str(cs.get('arabic_quote', '')))}</div>
+          <div class="pdf-link">Verification: {html_lib.escape(str(cs.get('verification_link', '')))} ({html_lib.escape(str(cs.get('doi_or_urn', '')))})</div>
+        </div>
+        """)
+
+    modern_rows = []
+    for ms in r.get("modern_sources", []):
+        modern_rows.append(f"""
+        <div class="pdf-source-box">
+          <div class="pdf-source-title">
+            <strong>{html_lib.escape(str(ms.get('institution') or ms.get('author', '')))} ({html_lib.escape(str(ms.get('publication_year', '')))})</strong>
+            <span>DOI: {html_lib.escape(str(ms.get('doi', '—')))}</span>
+          </div>
+          <div class="pdf-source-meta">
+            <em>{html_lib.escape(str(ms.get('title', '')))}</em> • {html_lib.escape(str(ms.get('publication_place', '')))}: {html_lib.escape(str(ms.get('publisher', '')))}
+          </div>
+          <div class="pdf-link">URL: {html_lib.escape(str(ms.get('url', '')))}</div>
+        </div>
+        """)
+
+    body_en_html = render_markdown_py(r.get("body_en") or r["body"])
+
+    return f"""
+    <article class="pdf-report">
+      <div class="pdf-header-banner">
+        <div class="pdf-meta-line">
+          <span>QURAN VISION INSTITUTE v6.2.1 • STRATEGIC TAFSIR & FORESIGHT REPORT</span>
+          <span>CASE ID: <strong>{html_lib.escape(r['case_id'])}</strong></span>
+        </div>
+        <h1 class="pdf-main-title">{idx}. Surah {html_lib.escape(r.get('surah_en', r['surah']))} {html_lib.escape(r['verse'])} — {html_lib.escape(r.get('topic_en', r['topic']))}</h1>
+        <div class="pdf-submeta">
+          Layer: 3 (Academic-Deep) &nbsp;|&nbsp; H6 Complex Verse &nbsp;|&nbsp; Confidence Grade: {html_lib.escape(r['confidence'])} &nbsp;|&nbsp;
+          Prior P(S1): {int(round(r['prior']*100))}% → Posterior P(S1|E): {int(round(r['posterior']*100))}%
+        </div>
+        <div class="pdf-sha">SHA-256: {html_lib.escape(r['sha256'])} (docs/en/{html_lib.escape(r.get('filename_en', r['filename']))})</div>
+      </div>
+
+      <section class="pdf-sources-summary">
+        <h2>I. ISNAD 2 Classical Tafsir Verification & Contemporary Empirical (DOI) Source Summary</h2>
+        <div class="pdf-grid-2">
+          <div>
+            <h3>A) Classical Islamic Primary Sources (ISNAD 2nd Edition)</h3>
+            {''.join(classical_rows)}
+          </div>
+          <div>
+            <h3>B) Contemporary Empirical & Institutional Datasets (APA 7 / DOI)</h3>
+            {''.join(modern_rows)}
+          </div>
+        </div>
+      </section>
+
+      <section class="pdf-body-content">
+        {body_en_html}
+      </section>
+    </article>
+    """
+
+
 def generate_all_pdfs(reports: list):
     PDF_DIR.mkdir(parents=True, exist_ok=True)
     DESKTOP_PDF_DIR.mkdir(parents=True, exist_ok=True)
@@ -486,44 +600,60 @@ def generate_all_pdfs(reports: list):
         return
 
     all_articles = []
+    all_articles_en = []
     rebuild_all = "--rebuild-all" in sys.argv
     for idx, r in enumerate(reports, start=1):
+        # 1. Turkish Report HTML & PDF
         art_html = build_single_report_print_html(r, idx)
         all_articles.append(art_html)
 
         out_pdf = PDF_DIR / r["pdf_filename"]
-        if out_pdf.exists() and out_pdf.stat().st_size > 1000 and not rebuild_all:
+        if not (out_pdf.exists() and out_pdf.stat().st_size > 1000 and not rebuild_all):
+            single_doc = wrap_pdf_document(f"{r['case_id']} - {r['surah']} {r['verse']}", art_html)
+            tmp_html = PDF_DIR / f"{r['case_id']}.html"
+            tmp_html.write_text(single_doc, encoding="utf-8")
+            cmd = [
+                browser, "--headless", "--disable-gpu", "--no-pdf-header-footer",
+                f"--print-to-pdf={out_pdf}", tmp_html.resolve().as_uri(),
+            ]
+            subprocess.run(cmd, check=False, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+            tmp_html.unlink(missing_ok=True)
+            if out_pdf.exists() and out_pdf.stat().st_size > 1000:
+                print(f"  📄 Yeni TR PDF üretildi: {out_pdf.name} ({out_pdf.stat().st_size // 1024} KB)")
+        if out_pdf.exists():
             shutil.copy2(out_pdf, DESKTOP_PDF_DIR / r["pdf_filename"])
             shutil.copy2(out_pdf, parent_pdf_dir / r["pdf_filename"])
-            continue
 
-        single_doc = wrap_pdf_document(f"{r['case_id']} - {r['surah']} {r['verse']}", art_html)
-        tmp_html = PDF_DIR / f"{r['case_id']}.html"
-        tmp_html.write_text(single_doc, encoding="utf-8")
+        # 2. English Report HTML & PDF
+        art_en_html = build_single_report_print_html_en(r, idx)
+        all_articles_en.append(art_en_html)
 
-        cmd = [
-            browser,
-            "--headless",
-            "--disable-gpu",
-            "--no-pdf-header-footer",
-            f"--print-to-pdf={out_pdf}",
-            tmp_html.resolve().as_uri(),
-        ]
-        subprocess.run(cmd, check=False, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-        tmp_html.unlink(missing_ok=True)
-        if out_pdf.exists() and out_pdf.stat().st_size > 1000:
-            shutil.copy2(out_pdf, DESKTOP_PDF_DIR / r["pdf_filename"])
-            shutil.copy2(out_pdf, parent_pdf_dir / r["pdf_filename"])
-            print(f"  📄 Yeni PDF üretildi: {out_pdf.name} ({out_pdf.stat().st_size // 1024} KB)")
+        out_pdf_en = PDF_DIR / r["pdf_filename_en"]
+        if not (out_pdf_en.exists() and out_pdf_en.stat().st_size > 1000 and not rebuild_all):
+            single_doc_en = wrap_pdf_document(f"{r['case_id']} - Surah {r.get('surah_en', r['surah'])} {r['verse']} (EN)", art_en_html)
+            tmp_html_en = PDF_DIR / f"{r['case_id']}_EN.html"
+            tmp_html_en.write_text(single_doc_en, encoding="utf-8")
+            cmd_en = [
+                browser, "--headless", "--disable-gpu", "--no-pdf-header-footer",
+                f"--print-to-pdf={out_pdf_en}", tmp_html_en.resolve().as_uri(),
+            ]
+            subprocess.run(cmd_en, check=False, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+            tmp_html_en.unlink(missing_ok=True)
+            if out_pdf_en.exists() and out_pdf_en.stat().st_size > 1000:
+                print(f"  🇬🇧 Yeni EN PDF üretildi: {out_pdf_en.name} ({out_pdf_en.stat().st_size // 1024} KB)")
+        if out_pdf_en.exists():
+            shutil.copy2(out_pdf_en, DESKTOP_PDF_DIR / r["pdf_filename_en"])
+            shutil.copy2(out_pdf_en, parent_pdf_dir / r["pdf_filename_en"])
 
     last_code = reports[-1]["case_id"] if reports else "QV-2026-014"
+    # Full Turkish Corpus Book PDF
     cover_html = f"""
     <div style="page-break-after: always; padding: 60px 30px; text-align: center; border: 3px double #0f5132; border-radius: 12px; margin-top: 40px;">
       <div style="font-size: 12pt; font-weight: 700; color: #856404; letter-spacing: 1.5px; margin-bottom: 16px;">
         QURAN VISION (v6.2.1) • İSNAD 2 + VERİ BİLİMİ HİBRİT AKADEMİK STANDARDI
       </div>
       <h1 style="font-size: 26pt; color: #091310; font-weight: 800; line-height: 1.25; margin-bottom: 18px;">
-        Kur'an Temelli Gelecek Vizyonu<br>Stratejik Tefsir ve Karar Külliyatı
+        Kur'an Vizyonu (Quran Vision)<br>Stratejik Tefsir, Makâsıd ve Medeniyet Öngörü Külliyatı
       </h1>
       <p style="font-size: 12pt; color: #374151; max-width: 540px; margin: 0 auto 30px;">
         26 Adımlı Analitik Çerçeve, İSNAD 2 Klasik Tefsir Tahkiki, Çağdaş Ampirik (DOI) Göstergeler ve
@@ -538,25 +668,59 @@ def generate_all_pdfs(reports: list):
       </div>
     </div>
     """
-    full_book_doc = wrap_pdf_document("Quran_Vision_Tam_Kulliyat_v6_2_1", cover_html + "\n".join(all_articles))
-    book_html_path = PDF_DIR / "Quran_Vision_Kulliyat_v6.2.1.html"
     book_pdf_path = PDF_DIR / "Quran_Vision_Kulliyat_v6.2.1.pdf"
-    book_html_path.write_text(full_book_doc, encoding="utf-8")
+    if not book_pdf_path.exists() or rebuild_all:
+        full_book_doc = wrap_pdf_document("Quran_Vision_Tam_Kulliyat_v6_2_1", cover_html + "\n".join(all_articles))
+        book_html_path = PDF_DIR / "Quran_Vision_Kulliyat_v6.2.1.html"
+        book_html_path.write_text(full_book_doc, encoding="utf-8")
+        cmd_book = [
+            browser, "--headless", "--disable-gpu", "--no-pdf-header-footer",
+            f"--print-to-pdf={book_pdf_path}", book_html_path.resolve().as_uri(),
+        ]
+        subprocess.run(cmd_book, check=False, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        book_html_path.unlink(missing_ok=True)
+        if book_pdf_path.exists() and book_pdf_path.stat().st_size > 1000:
+            shutil.copy2(book_pdf_path, DESKTOP_PDF_DIR / "Quran_Vision_Kulliyat_v6.2.1.pdf")
+            shutil.copy2(book_pdf_path, parent_pdf_dir / "Quran_Vision_Kulliyat_v6.2.1.pdf")
+            print(f"  📚 Tam Külliyat TR PDF üretildi: {book_pdf_path.name} ({book_pdf_path.stat().st_size // 1024} KB)")
 
-    cmd_book = [
-        browser,
-        "--headless",
-        "--disable-gpu",
-        "--no-pdf-header-footer",
-        f"--print-to-pdf={book_pdf_path}",
-        book_html_path.resolve().as_uri(),
-    ]
-    subprocess.run(cmd_book, check=False, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-    book_html_path.unlink(missing_ok=True)
-    if book_pdf_path.exists() and book_pdf_path.stat().st_size > 1000:
-        shutil.copy2(book_pdf_path, DESKTOP_PDF_DIR / "Quran_Vision_Kulliyat_v6.2.1.pdf")
-        shutil.copy2(book_pdf_path, parent_pdf_dir / "Quran_Vision_Kulliyat_v6.2.1.pdf")
-        print(f"  📚 Tam Külliyat PDF üretildi: {book_pdf_path.name} ({book_pdf_path.stat().st_size // 1024} KB)")
+    # Full English Corpus Book PDF
+    cover_en_html = f"""
+    <div style="page-break-after: always; padding: 60px 30px; text-align: center; border: 3px double #0f5132; border-radius: 12px; margin-top: 40px;">
+      <div style="font-size: 12pt; font-weight: 700; color: #856404; letter-spacing: 1.5px; margin-bottom: 16px;">
+        QURAN VISION INSTITUTE (v6.2.1) • ISNAD 2 + EMPIRICAL DATA SCIENCE STANDARD
+      </div>
+      <h1 style="font-size: 26pt; color: #091310; font-weight: 800; line-height: 1.25; margin-bottom: 18px;">
+        QURAN VISION CORPUS<br>Strategic Tafsir, Maqasid & Civilization Foresight
+      </h1>
+      <p style="font-size: 12pt; color: #374151; max-width: 540px; margin: 0 auto 30px;">
+        26-Step Analytical Framework, ISNAD 2 Classical Tafsir Verification, Contemporary Empirical (DOI) Indicators, and
+        Bayesian Policy Simulations Across {len(reports)} Complete Reports (QV-2026-001 – {last_code})
+      </p>
+      <div style="text-align: left; max-width: 560px; margin: 25px auto; padding: 16px 20px; background: #f8faf9; border: 1px solid #d1d5db; border-radius: 8px; font-size: 9.5pt;">
+        <strong style="color:#0f5132; display:block; margin-bottom:8px;">TABLE OF CONTENTS ({len(reports)} STRATEGIC CASE REPORTS):</strong>
+        {''.join(f'<div style="margin-bottom:4px;"><b>{i}. {r["case_id"]}</b> — Surah {r.get("surah_en", r["surah"])} {r["verse"]}: {r.get("topic_en", r["topic"])}</div>' for i, r in enumerate(reports, 1))}
+      </div>
+      <div style="font-size: 9pt; color: #6b7280; margin-top: 30px;">
+        Linter Verification: 0 BLOCK Errors &nbsp;|&nbsp; Cryptographic Integrity: External .sha256 Manifest
+      </div>
+    </div>
+    """
+    book_en_pdf_path = PDF_DIR / "Quran_Vision_Corpus_EN_v6.2.1.pdf"
+    if not book_en_pdf_path.exists() or rebuild_all:
+        full_book_en_doc = wrap_pdf_document("Quran_Vision_Corpus_EN_v6_2_1", cover_en_html + "\n".join(all_articles_en))
+        book_en_html_path = PDF_DIR / "Quran_Vision_Corpus_EN_v6.2.1.html"
+        book_en_html_path.write_text(full_book_en_doc, encoding="utf-8")
+        cmd_book_en = [
+            browser, "--headless", "--disable-gpu", "--no-pdf-header-footer",
+            f"--print-to-pdf={book_en_pdf_path}", book_en_html_path.resolve().as_uri(),
+        ]
+        subprocess.run(cmd_book_en, check=False, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        book_en_html_path.unlink(missing_ok=True)
+        if book_en_pdf_path.exists() and book_en_pdf_path.stat().st_size > 1000:
+            shutil.copy2(book_en_pdf_path, DESKTOP_PDF_DIR / "Quran_Vision_Corpus_EN_v6.2.1.pdf")
+            shutil.copy2(book_en_pdf_path, parent_pdf_dir / "Quran_Vision_Corpus_EN_v6.2.1.pdf")
+            print(f"  🇬🇧📚 Tam Külliyat EN PDF üretildi: {book_en_pdf_path.name} ({book_en_pdf_path.stat().st_size // 1024} KB)")
 
 
 def build_html(reports):
@@ -1485,7 +1649,12 @@ function setLanguage(lang) {{
   }}
 
   document.getElementById('topFeedbackBtn').innerHTML = isEn ? '💬 Peer-Review & Contribute' : '💬 Akademik Katkı & Şerh Yaz';
-  document.getElementById('fullBookPdfBtn').innerHTML = isEn ? `📚 Full Corpus PDF (${{REPORTS.length}} Reports)` : `📚 Tüm Külliyat PDF (${{REPORTS.length}} Rapor)`;
+  const fullBookBtn = document.getElementById('fullBookPdfBtn');
+  if (fullBookBtn) {{
+    fullBookBtn.href = isEn ? 'pdf/Quran_Vision_Corpus_EN_v6.2.1.pdf' : 'pdf/Quran_Vision_Kulliyat_v6.2.1.pdf';
+    fullBookBtn.setAttribute('download', isEn ? 'Quran_Vision_Corpus_EN_v6.2.1.pdf' : 'Quran_Vision_Kulliyat_v6.2.1.pdf');
+    fullBookBtn.innerHTML = isEn ? `📚 Full Corpus PDF (${{REPORTS.length}} Reports - EN)` : `📚 Tüm Külliyat PDF (${{REPORTS.length}} Rapor)`;
+  }}
   document.getElementById('printBtn').innerHTML = isEn ? '🖨️ Print' : '🖨️ Yazdır';
   document.getElementById('langToggleTopBtn').innerHTML = isEn ? '🌐 Dil: EN ➔ TR' : '🌐 Lang: TR ➔ EN';
   document.getElementById('themeBtn').innerHTML = isEn ? '🌗 Theme' : '🌗 Tema';
@@ -1534,13 +1703,15 @@ function selectReport(idx) {{
   const surahDisp = getReportSurah(r);
   const topicDisp = getReportTopic(r);
   const aporiaDisp = getReportAporia(r);
+  const activePdfFile = isEn ? (r.pdf_filename_en || r.pdf_filename) : r.pdf_filename;
+  const activeMdPath = isEn ? `docs/en/${{r.filename_en || r.filename}}` : `docs/tr/${{r.filename}}`;
 
   document.title = `${{r.case_id}} - ${{surahDisp}} ${{r.verse}} - Quran Vision v6.2.1`;
   const dlBtn = document.getElementById('downloadPdfBtn');
   if (dlBtn) {{
-    dlBtn.href = `pdf/${{r.pdf_filename}}`;
-    dlBtn.setAttribute('download', `${{r.case_id}}_${{r.surah}}_Raporu.pdf`);
-    dlBtn.innerHTML = isEn ? `📥 Download PDF (${{r.case_id}})` : `📥 PDF İndir (${{r.case_id}})`;
+    dlBtn.href = `pdf/${{activePdfFile}}`;
+    dlBtn.setAttribute('download', isEn ? `${{r.case_id}}_${{surahDisp}}_Report_EN.pdf` : `${{r.case_id}}_${{r.surah}}_Raporu.pdf`);
+    dlBtn.innerHTML = isEn ? `📥 Download EN PDF (${{r.case_id}})` : `📥 PDF İndir (${{r.case_id}})`;
   }}
 
   // Hero
@@ -1554,18 +1725,19 @@ function selectReport(idx) {{
       <div class="no-print" style="margin-left:auto; display:flex; gap:8px; flex-wrap:wrap;">
         <button class="btn" style="padding:4px 10px; font-size:11.5px;" onclick="setTab('pedagogy', document.getElementById('tabBtn-pedagogy'))">${{isEn ? '🎓 Lesson & Debate Plan' : '🎓 Ders & Münazara Planı'}}</button>
         <button class="btn btn-gold" style="padding:4px 10px; font-size:11.5px;" onclick="openFeedbackTab()">${{isEn ? '💬 Submit Peer-Review' : '💬 Şerh / Katkı Yaz'}}</button>
-        <a class="btn btn-primary" style="padding:4px 10px; font-size:11.5px;" href="pdf/${{r.pdf_filename}}" download="${{r.case_id}}_${{r.surah}}_Raporu.pdf">${{isEn ? '📥 Download A4 PDF' : '📥 A4 PDF İndir'}} (${{r.case_id}}.pdf)</a>
+        <a class="btn btn-primary" style="padding:4px 10px; font-size:11.5px;" href="pdf/${{activePdfFile}}" download="${{isEn ? r.case_id + '_' + surahDisp + '_Report_EN.pdf' : r.case_id + '_' + r.surah + '_Raporu.pdf'}}">${{isEn ? '📥 Download A4 PDF' : '📥 A4 PDF İndir'}} (${{activePdfFile}})</a>
       </div>
     </div>
     <div class="hero-title">${{topicDisp}}</div>
-    <div class="sha-bar">🔒 <strong>${{isEn ? 'External Cryptographic Manifest (SHA-256):' : 'Harici Kriptografik Manifest (SHA-256):'}}</strong> ${{r.sha256}} &nbsp;|&nbsp; 📄 <code>docs/tr/${{r.filename}}</code></div>
+    <div class="sha-bar">🔒 <strong>${{isEn ? 'External Cryptographic Manifest (SHA-256):' : 'Harici Kriptografik Manifest (SHA-256):'}}</strong> ${{r.sha256}} &nbsp;|&nbsp; 📄 <code>${{activeMdPath}}</code></div>
   `;
 
   // Tab 1: Dashboard
   const priorPct = Math.round(r.prior * 100);
   const postPct = Math.round(r.posterior * 100);
 
-  let scenariosHtml = (r.scenarios || []).map(s => {{
+  const activeScenarios = isEn ? (r.scenarios_en || r.scenarios || []) : (r.scenarios || []);
+  let scenariosHtml = activeScenarios.map(s => {{
     const sc = s.scores || {{}};
     return `
       <div class="source-card">
@@ -1584,7 +1756,8 @@ function selectReport(idx) {{
     `;
   }}).join('');
 
-  let thresholdsHtml = (r.thresholds || []).map(t => `
+  const activeThresholds = isEn ? (r.thresholds_en || r.thresholds || []) : (r.thresholds || []);
+  let thresholdsHtml = activeThresholds.map(t => `
     <div class="source-card">
       <div class="source-header">
         <span class="source-author">${{t.name}}</span>
@@ -1670,26 +1843,9 @@ function selectReport(idx) {{
     </div>
   `;
 
-  // Tab 3: Full Markdown (with English Executive Synthesis Banner when in EN mode)
-  const enAbstractHtml = isEn ? `
-    <div class="panel" style="margin-bottom:20px; border-color:var(--accent-gold);">
-      <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:10px;">
-        <span class="badge badge-gold">🇬🇧 ENGLISH EXECUTIVE & METHODOLOGICAL SYNTHESIS</span>
-        <span class="badge badge-mono">${{r.case_id}} • Surah ${{surahDisp}} ${{r.verse}}</span>
-      </div>
-      <h2 style="font-size:18px; color:var(--text-primary); margin-bottom:8px;">${{topicDisp}}</h2>
-      <p style="font-size:13.5px; color:var(--text-secondary); line-height:1.7; margin-bottom:10px;">
-        <strong>1. Core Problematic (Z-1 Aporia):</strong> ${{formatInlineMd(aporiaDisp)}}
-      </p>
-      <p style="font-size:13.5px; color:var(--text-secondary); line-height:1.7; margin-bottom:10px;">
-        <strong>2. Classical Exegetical Network (ISNAD 2) & Empirical Calibration:</strong> This 26-step report integrates <strong>${{(r.classical_sources||[]).length}} primary Arabic classical tafsir & lexicographical sources</strong> (${{(r.classical_sources||[]).map(c => c.author).join('; ')}}) with <strong>${{(r.modern_sources||[]).length}} contemporary empirical datasets</strong> (${{(r.modern_sources||[]).map(m => m.institution || m.author).join('; ')}}). Under Bayesian policy simulation (2026–2036), institutionalizing the Quranic principles of Surah ${{surahDisp}} ${{r.verse}} raises the probability of structural stability from a baseline prior of <strong>P(S1) = ${{priorPct}}%</strong> to a posterior of <strong>P(S1|E) = ${{postPct}}%</strong>.
-      </p>
-      <p style="font-size:13.5px; color:var(--text-secondary); line-height:1.7;">
-        <strong>3. Open Strategic Dilemma (Z-3):</strong> ${{formatInlineMd(getReportZ3(r))}}
-      </p>
-    </div>
-  ` : '';
-  document.getElementById('tab-fulltext').innerHTML = `${{enAbstractHtml}}<div class="md-body">${{renderMarkdown(r.body)}}</div>`;
+  // Tab 3: Full 26-Step Markdown (Full English 26-Step Document when in EN mode, Full Turkish 26-Step Document when in TR mode)
+  const activeBodyMd = isEn ? (r.body_en || r.body) : r.body;
+  document.getElementById('tab-fulltext').innerHTML = `<div class="md-body">${{renderMarkdown(activeBodyMd)}}</div>`;
 
   // Tab 4: Pedagogy & Lesson Plan Kit (TYMM)
   renderPedagogyTab(r);
@@ -1710,9 +1866,11 @@ function renderPedagogyTab(r) {{
   const scholarsList = (r.classical_sources || []).map(cs => `${{cs.author}} (${{cs.work}})`).join(', ');
   const firstArabic = (r.classical_sources && r.classical_sources[0]) ? r.classical_sources[0].arabic_quote : '';
   const firstScholar = (r.classical_sources && r.classical_sources[0]) ? `${{r.classical_sources[0].author}} (${{r.classical_sources[0].death_year}})` : '';
-  const s1Title = (r.scenarios && r.scenarios[0]) ? r.scenarios[0].title : (isEn ? 'Institutional Reform & Justice Scenario' : 'Kurumsal Reform ve Adalet Senaryosu');
-  const s3Title = (r.scenarios && r.scenarios[2]) ? r.scenarios[2].title : (isEn ? 'Systemic Crisis & Breakdown Scenario' : 'Kriz ve Kurumsal Çözülme Senaryosu');
-  const firstThreshold = (r.thresholds && r.thresholds[0]) ? `${{r.thresholds[0].name}} (${{r.thresholds[0].value}})` : (isEn ? 'Institutional Trust Indicator' : 'Kurumsal Güven Göstergesi');
+  const scList = isEn ? (r.scenarios_en || r.scenarios || []) : (r.scenarios || []);
+  const thList = isEn ? (r.thresholds_en || r.thresholds || []) : (r.thresholds || []);
+  const s1Title = (scList && scList[0]) ? scList[0].title : (isEn ? 'Institutional Reform & Justice Scenario' : 'Kurumsal Reform ve Adalet Senaryosu');
+  const s3Title = (scList && scList[2]) ? scList[2].title : (isEn ? 'Systemic Crisis & Breakdown Scenario' : 'Kriz ve Kurumsal Çözülme Senaryosu');
+  const firstThreshold = (thList && thList[0]) ? `${{thList[0].name}} (${{thList[0].value}})` : (isEn ? 'Institutional Trust Indicator' : 'Kurumsal Güven Göstergesi');
 
   document.getElementById('tab-pedagogy').innerHTML = `
     <div class="panel" style="margin-bottom:20px; border-color:var(--accent-gold);">
