@@ -1,5 +1,5 @@
 ---
-gem_version: "6.1.1"
+gem_version: "6.2.1"
 case_id: "QV-2026-004"
 surah: "Bakara"
 verse: "2:256"
@@ -218,28 +218,33 @@ peer_review:
 
 ---
 
-### ADIM 01 — LAFZÎ TAHLİL
+### ADIM 01 — LAFZÎ TAHLİL, SİYÂK-SİBÂK VE TARİHSEL BAĞLAM
 
-- **Arapça Metin:**
-  > لَآ إِكْرَاهَ فِى ٱلدِّينِ ۖ قَد تَّبَيَّنَ ٱلرُّشْدُ مِنَ ٱلْغَىِّ ۚ فَمَن يَكْفُرْ بِٱلطَّٰغُوتِ وَيُؤْمِنۢ بِٱللَّهِ فَقَدِ ٱسْتَمْسَكَ بِٱلْعُرْوَةِ ٱلْوُثْقَىٰ لَا ٱنفِصَامَ لَهَا ۗ وَٱللَّهُ سَمِيعٌ عَلِيمٌ
+- **Arapça Metin (Bakara Sûresi 2:256 — Resm-i Osmânî):**
+  > لَآ إِكْرَاهَ فِى ٱلدِّينِ ۖ قَد تَّبَيَّنَ ٱلرُّشْدُ مِنَ ٱلْغَىِّ ۚ فَمَن يَكْفُرْ بِٱلطَّٰغُوتِ وَيُؤْمِنۢ بِٱللَّهِ فَقَدِ ٱسْتَمْسَكَ بِٱلْعُرْوَةِ ٱلْوُثْقَىٰ لَا ٱنفِصَامَ لَهَا ۗ وَٱللَّهُ سَمِيعٌ عَلِيمٌ ﴿٢٥٦﴾
 
-- **Kelime Mealleri:**
-  - `لَآ إِكْرَاهَ` (Lâ ikrâhe): Hiçbir zorlama, baskı ve mecbur tutma yoktur/olamaz.
+- **Sahih Türkçe Meal:**
+  > *"Dinde (inanç ve vicdan alanında) hiçbir zorlama yoktur! Doğruluk (rüşd) sapıklıktan (ğayy) apaçık ayrılmıştır. Artık kim tâğûtu (azgın zorbaları ve sahte ilahları) reddedip Allah’a gönülden iman ederse, kopması asla mümkün olmayan en sağlam kulpa (urvetü’l-vüskâ) tutunmuş olur. Allah her şeyi hakkıyla işitendir, her şeyi hakkıyla bilendir. (256)"*
+
+- **Kelime-Kelime Lafzî Çözümleme (Kelime Mealleri):**
+  - `لَآ إِكْرَاهَ` (Lâ ikrâhe): Hiçbir zorlama, baskı ve mecbur tutma yoktur / olamaz (*lâ-i nâfiye li'l-cins* kalıbıyla nekre gelen `ikrâh` kelimesi, fiziksel, hukuki ve psikolojik her türlü zorlama cinsini istisnasız nefyeder; ihbârî lafızla gelen küllî bir inşâî/hukuki yasaktır).
   - `فِى ٱلدِّينِ` (fi'd-dîn): Dinde, inançta ve vicdan alanında.
-  - `قَد تَّبَيَّنَ` (kad tebeyyene): Muhakkak ki açıkça ayrılmış, belirginleşmiştir.
-  - `ٱلرُّشْدُ` (er-ruşdü): Doğru yol, akıl, aydınlık ve hidayet.
+  - `قَد تَّبَيَّنَ` (kad tebeyyene): Muhakkak ki delilleriyle apaçık ayrılmış, belirginleşmiştir (cümle, zorlama yasağının *illet*ini açıklar: Hakikat aklî burhanlarla apaçık olduğu için kaba kuvvete ihtiyaç duymaz).
+  - `ٱلرُّشْدُ` (er-ruşdü): Doğru yol, akıl olgunluğu, aydınlık ve hidayet.
   - `مِنَ ٱلْغَىِّ` (mine'l-gayy): Sapıklıktan, cehaletten ve karanlıktan.
-  - `فَمَن يَكْفُرْ بِٱلطَّٰغُوتِ` (femen yekfur bi't-tâğût): Kim azgın zorbaları, sahte otoriteleri ve tağutu reddederse.
-  - `وَيُؤْمِنۢ بِٱللَّهِ` (ve yü'min billâh): Ve Allah'a gönülden iman ederse.
-  - `فَقَدِ ٱسْتَمْسَكَ` (fekadi'stemseke): Şüphesiz tutunmuş, sarılmıştır.
-  - `بِٱلْعُرْوَةِ ٱلْوُثْقَىٰ` (bi'l-‘urveti'l-vüskâ): En sağlam ve kopmaz kulpa.
-  - `لَا ٱنفِصَامَ لَهَا` (lenfisâme lehâ): Onun için hiçbir kopma ve kırılma yoktur.
-  - `وَٱللَّهُ سَمِيعٌ عَلِيمٌ` (vallâhü semî‘un ‘alîm): Allah her şeyi işitendir, hakkıyla bilendir.
+  - `فَمَن يَكْفُرْ بِٱلطَّٰغُوتِ` (fe-men yekfur bi't-tâğût): Artık kim haddi aşan zorbaları, vicdanlar üzerinde tahakküm kuran sahte otoriteleri (`tâğût`) reddederse.
+  - `وَيُؤْمِنۢ بِٱللَّهِ` (ve yü'min billâh): Ve hür iradesiyle Allah'a gönülden iman ederse.
+  - `فَقَدِ ٱسْتَمْسَكَ` (fe-kadi'stemseke): Şüphesiz bütün gücüyle tutunmuş, sarılmıştır.
+  - `بِٱلْعُرْوَةِ ٱلْوُثْقَىٰ` (bi'l-‘urveti'l-vüskâ): En sağlam ve sarsılmaz kulpa (`vüskâ`, `evsaku` ism-i tafdîlinin müennesidir).
+  - `لَا ٱنفِصَامَ لَهَا` (la'nfisâme lehâ): Onun için hiçbir kopma, çatlama ve çözülme yoktur.
+  - `وَٱللَّهُ سَمِيعٌ عَلِيمٌ` (vallâhü semî‘un ‘alîm): Allah (dillerin ikrarını) hakkıyla işitendir, (kalplerdeki samimi niyeti) hakkıyla bilendir.
 
-- **Taberî (*Câmi'u'l-Beyân*) Lafzî Tahlili:**[^5]
+- **Klasik Tefsir Lafzî Tahlili (Taberî & Fahreddîn er-Râzî):**[^5]
   - `[NAKİL]`: Taberî, âyetin nüzul sebebinde Ensar'dan Husayn isimli zatın Hristiyan olan iki oğlunu zorla Müslüman yapmaya çalışması üzerine indiğini ve Hz. Peygamber'in zorlamayı kesin bir dille men ettiğini belgeler (*Câmi'u'l-Beyân*, C. 4, s. 550).
-  - `[YORUM]`: Ebeveynin dahi öz evladı üzerinde din dayatma hakkı yoktur; vicdan sahası beşerî vesayete bütünüyle kapalıdır.
+  - `[YORUM]`: Ebeveynin dahi öz evladı üzerinde din dayatma hakkı yoktur; iman bir kalp tasdiki ve irade imtihanı olduğundan vicdan sahası beşerî vesayete bütünüyle kapalıdır.
 
+- **Siyâk-Sibâk ve Tarihsel Bağlam:**
+Bakara 2:256, Kur'ân'ın tevhid zirvesi olan **Âyetü'l-Kürsî (2:255)**'nin hemen peşinden gelir: 255. âyette Allah'ın mutlak ilmi ve kudreti ortaya konulduktan sonra, 256. âyette bu yüce hakikate ancak hür akıl ve samimi vicdanla (`lâ ikrâhe fi'd-dîn`) girilebileceği ilan edilmiştir.
 ---
 
 ### ADIM 02 — MANTIKSAL SEMANTİK VE KARŞIT İLKE TESTİ

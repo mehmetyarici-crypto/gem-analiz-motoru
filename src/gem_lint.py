@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-GEM Linter v6.1.1 — Akademik Standart, Doğrulama ve Dil Güvenliği Denetçisi
-Kur'an Temelli Gelecek Vizyonu (GEM) v6.1.1 Metodoloji Mimarisi ve Doğrulama Şartnamesi.
+Quran Vision / GEM Linter v6.2.1 — Akademik Standart, Doğrulama, V12 İçerik Yoğunluğu ve Dil Güvenliği Denetçisi
+Kur'an Temelli Gelecek Vizyonu (Quran Vision) v6.2.1 Metodoloji Mimarisi ve Doğrulama Şartnamesi.
 
 Temel Yetenekler:
     - YAML Frontmatter Ayrıştırma ve Şema Doğrulama (V1, V4, V5, V6, V11)
@@ -647,6 +647,100 @@ class GemLinterV6:
                     self.report("L-2003", BLOCK, f"H6 zorlu âyet zorunlu adımı eksik: '{b_list[0]}'")
 
     # ----------------------------------------------------
+    # V12: ADIM 01 / STEP 01 İçerik Yoğunluğu Doğrulaması (Content-Depth Assertion)
+    # ----------------------------------------------------
+    def check_v12_step01_depth(self):
+        if not self.is_v6:
+            return
+
+        step01_match = re.search(
+            r"(#{2,3}\s+(?:ADIM|STEP)\s+0?1\b[^\n]*\n)(.*?)(?=\n#{2,3}\s+(?:ADIM|STEP)\s+0?2\b|\Z)",
+            self.body_text,
+            re.DOTALL | re.IGNORECASE,
+        )
+        if not step01_match:
+            self.report("L-2101", BLOCK, "V12 İhlali: 'ADIM 01 / STEP 01' (Lafzî Tahlil) bölümü bulunamadı!")
+            return
+
+        s01_body = step01_match.group(2).strip()
+        s01_words = len(s01_body.split())
+
+        # Klasik Tefsir [NAKİL] ve [YORUM] kontrolü (tüm v6 raporları ve şablonlar için)
+        s01_nakil = len(re.findall(r"\[NAK[Iİ]L\]|\[CITATION\]|\[QUOTE\]", s01_body, re.IGNORECASE))
+        s01_yorum = len(re.findall(r"\[YORUM\]|\[ANALYSIS\]|\[INTERPRETATION\]", s01_body, re.IGNORECASE))
+        if s01_nakil == 0 or s01_yorum == 0:
+            self.report(
+                "L-2107",
+                BLOCK,
+                f"V12 İhlali: ADIM 01 içinde Klasik Tefsir Lafzî Tahlili ([NAKİL]={s01_nakil}, [YORUM]={s01_yorum}) eksik!",
+            )
+
+        # Tam külliyat raporları (QV-2026-*) için derinlik ve 4 temel bileşen kontrolü
+        case_id = str(self.frontmatter.get("case_id") or self.frontmatter.get("vaka_kodu") or "")
+        if case_id.startswith("QV-2026-"):
+            if s01_words < 150:
+                self.report(
+                    "L-2102",
+                    BLOCK,
+                    f"V12 İhlali: ADIM 01 içerik yoğunluğu çok düşük ({s01_words} kelime < asgari 150 kelime). Sessiz budanma riski!",
+                )
+            elif s01_words < 250:
+                self.report(
+                    "L-2103",
+                    WARN,
+                    f"ADIM 01 içerik hacmi ({s01_words} kelime) v6.2.1 ideal derinlik eşiğinin (250+ kelime) altında.",
+                )
+
+            has_arabic_blockquote = bool(
+                re.search(r"^\s*>\s*.*[\u0600-\u06FF]{10,}", s01_body, re.MULTILINE)
+            )
+            if not has_arabic_blockquote:
+                self.report(
+                    "L-2104",
+                    BLOCK,
+                    "V12 İhlali: ADIM 01 içinde blok alıntı ('>') formatında harekeli Arapça âyet metni bulunamadı!",
+                )
+
+            has_full_meal = bool(
+                re.search(
+                    r"(?:Türkçe\s+Meal|Sahih\s+Türkçe\s+Meal|Translation)",
+                    s01_body,
+                    re.IGNORECASE,
+                )
+            )
+            if not has_full_meal:
+                self.report(
+                    "L-2105",
+                    BLOCK,
+                    "V12 İhlali: ADIM 01 içinde bütüncül 'Sahih Türkçe Meal' alt bileşeni bulunamadı!",
+                )
+
+            lexical_items = [
+                line
+                for line in s01_body.splitlines()
+                if re.match(r"^\s+-\s+`(?![\[])[^`]+`", line)
+                and re.search(r"[\u0600-\u06FF]", line)
+            ]
+            if len(lexical_items) < 6:
+                self.report(
+                    "L-2106",
+                    BLOCK,
+                    f"V12 İhlali: ADIM 01 Kelime-Kelime Lafzî Çözümleme yetersiz ({len(lexical_items)} madde bulundu, en az 6 madde zorunludur)!",
+                )
+
+            missing_translit = [
+                line.strip()
+                for line in lexical_items
+                if not re.search(r"`\s*\([^)]+\)\s*:", line)
+            ]
+            if missing_translit:
+                self.report(
+                    "L-2108",
+                    BLOCK,
+                    f"V12 İhlali: ADIM 01 Kelime-Kelime çözümlemede {len(missing_translit)} maddede parantez içi Latinize okunuş (transliterasyon) eksik!",
+                )
+
+    # ----------------------------------------------------
     # Ana Tarama Yürütücüsü
     # ----------------------------------------------------
     def run_all(self):
@@ -668,6 +762,7 @@ class GemLinterV6:
         self.check_v9_originality()
         self.check_v10_disclaimer()
         self.check_v11_peer_review()
+        self.check_v12_step01_depth()
 
         return self.print_summary()
 
@@ -676,9 +771,9 @@ class GemLinterV6:
         n_warn = sum(1 for f in self.findings if f["level"] == WARN)
 
         print("\n" + "=" * 70)
-        print(f"   GEM LINTER v6.1.1 — AKADEMİK DOĞRULAMA VE GÜVENLİK RAPORU")
+        print(f"   QURAN VISION / GEM LINTER v6.2.1 — AKADEMİK DOĞRULAMA RAPORU")
         print(f"   Dosya : {self.path.name}")
-        print(f"   Mod   : {'v6.1.1 (Akademik Standart)' if self.is_v6 else 'v5.2 (Geriye Dönük)'} | Katman: {self.katman} | H6: {'Evet' if self.h6 else 'Hayır'}")
+        print(f"   Mod   : {'v6.2.1 / v6.1.1 (Akademik Standart)' if self.is_v6 else 'v5.2 (Geriye Dönük)'} | Katman: {self.katman} | H6: {'Evet' if self.h6 else 'Hayır'}")
         print("=" * 70 + "\n")
 
         if self.findings:
@@ -766,7 +861,7 @@ def main():
         sys.exit(0)
 
     if "--version" in sys.argv:
-        print("GEM Linter v6.1.1 (Python 3)")
+        print("Quran Vision / GEM Linter v6.2.1 (v6.1.1 Standard Compatible - Python 3)")
         sys.exit(0)
 
     target_files = []

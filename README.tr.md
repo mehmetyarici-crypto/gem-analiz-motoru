@@ -12,7 +12,7 @@
 - [Bu proje nedir?](#bu-proje-nedir)
 - [Ne yapar?](#ne-yapar)
 - [Ne yapmaz?](#ne-yapmaz)
-- [Yayımlanan Quran Vision Raporları (Külliyat)](#yayımlanan-gem-v611-raporları-külliyat)
+- [Yayımlanan Quran Vision v6.2.1 Raporları (Külliyat)](#yayımlanan-quran-vision-v621-raporları-külliyat)
 - [Sürümler ve Rehberler](#sürümler-ve-rehberler)
 - [Dosyalar](#dosyalar)
 - [Hızlı Başlangıç](#hızlı-başlangıç)
@@ -21,7 +21,7 @@
 
 ## Bu proje nedir?
 
-**Quran Vision** (Kur'an Temelli Gelecek Vizyonu), Kur'an âyetlerini klasik filolojik tahkik (İSNAD 2), makâsıd usûlü ve çağdaş **stratejik analiz** yöntemleriyle inceleyen, **26 adımlı** ve **5 makro fazlı** bir akademik araştırma ve karar mimarisi çerçevesidir.
+**Quran Vision v6.2.1** (Kur'an Temelli Gelecek Vizyonu), Kur'an âyetlerini klasik filolojik tahkik (İSNAD 2), makâsıd usûlü ve çağdaş **stratejik analiz** yöntemleriyle inceleyen, **26 adımlı** ve **5 makro fazlı** bir akademik araştırma ve karar mimarisi çerçevesidir.
 
 ### Ne yapar?
 - Âyet metnini **dilbilimsel** olarak analiz eder (siyak-sibak, nüzul, hitap, 4'lü lügat matrisi).
@@ -39,9 +39,9 @@
 
 ---
 
-## Yayımlanan GEM v6.1.1 Raporları (Külliyat)
+## Yayımlanan Quran Vision v6.2.1 Raporları (Külliyat)
 
-Aşağıdaki raporlar, GEM v6.1.1 standardına tam uyumlu olarak hazırlanmış ve kriptografik harici manifestlerle doğrulanmıştır:
+Aşağıdaki 15 kurucu rapor, **Quran Vision v6.2.1** standardına tam uyumlu olarak hazırlanmış ve kriptografik harici manifestlerle doğrulanmıştır:
 
 | No | Âyet | Konu Başlığı | Rapor Dosyası | Durum |
 |:---:|:---:|:---|:---|:---:|
@@ -58,17 +58,19 @@ Aşağıdaki raporlar, GEM v6.1.1 standardına tam uyumlu olarak hazırlanmış 
 | **11** | **En'âm 6:151–152** | Evrensel Ahlak Dekalogu, Temel Haklar, Mîzân ve Adalet | [`docs/tr/16-rapor-enam-6151152-v6.1.1.md`](docs/tr/16-rapor-enam-6151152-v6.1.1.md) | `PRE-RELEASE` |
 | **12** | **Hadîd 57:25** | Kitap, Mîzân ve Demir Üçlüsü: Anayasal Hukuk, Kurumsal Adalet ve Caydırıcı Savunma-Sanayi Mimarisi | [`docs/tr/17-rapor-hadid-5725-v6.1.1.md`](docs/tr/17-rapor-hadid-5725-v6.1.1.md) | `PRE-RELEASE` |
 | **13** | **Nahl 16:90** | Evrensel Medeniyet Sözleşmesi: Adalet, İhsan, Sosyal Dayanışma ve Üçlü Yozlaşma Karşıtı Yönetişim | [`docs/tr/18-rapor-nahl-1690-v6.1.1.md`](docs/tr/18-rapor-nahl-1690-v6.1.1.md) | `PRE-RELEASE` |
+| **14** | **Hucurât 49:13** | İnsanlığın Ontolojik Eşitliği, Teârüf (Karşılıklı Tanışma) Doktrini ve Takvâ Temelli Değer Mimarisi | [`docs/tr/19-rapor-hucurat-4913-v6.1.1.md`](docs/tr/19-rapor-hucurat-4913-v6.1.1.md) | `PRE-RELEASE` |
+| **15** | **Mâide 5:32** | Yaşam Hakkının Dokunulmazlığı, İhyâ (Can Kurtarma) Doktrini, Küresel İnsani Güvenlik ve Biyoetik | [`docs/tr/20-rapor-maide-532-v6.1.1.md`](docs/tr/20-rapor-maide-532-v6.1.1.md) | `PRE-RELEASE` |
 
 ---
 
 ## Sürümler ve Rehberler
 
-- **v6.1.1 (Güncel Standart):** [docs/tr/GEM-v6.1.1-taslak.md](docs/tr/GEM-v6.1.1-taslak.md) — 26 adım, 5 makro faz, Enfüs-Âfâk ve Kalp Fıkhı merceği, kaynak tahkiki ve sınır beyanı.
+- **v6.2.1 (Kanonik Güncel Standart — Markdown):** [QURAN_VISION_v6.2.1_SPECIFICATION.md](QURAN_VISION_v6.2.1_SPECIFICATION.md) — 26 adım, 5 makro faz, İSNAD 2 + APA 7/DOI, Enfüs-Âfâk ve Kalp Fıkhı merceği, V1–V12 doğrulama modülleri.
+- **v6.2.1 (Tam Talimatname Metni — TXT):** [docs/QURAN_VISION_v6.2.1_TAM_TALIMAT.txt](docs/QURAN_VISION_v6.2.1_TAM_TALIMAT.txt) — Tek hakikat kaynağı (Single Source of Truth) tam şartname metni.
 - **Akademik Hakem Rehberi:** [docs/tr/akademik-hakem-rehberi.md](docs/tr/akademik-hakem-rehberi.md) — 5 boyutlu hakemlik inceleme rubriği ve Z-5 formu.
-- **Yol Haritası:** [docs/tr/GEM-v6.1.1-yol-haritasi.md](docs/tr/GEM-v6.1.1-yol-haritasi.md) — GitHub geçiş ve test planı.
 - **Linter Kuralları:** [docs/tr/linter-kurallari.md](docs/tr/linter-kurallari.md) — Biçimsel denetim kural rehberi.
 - **Değişiklik Kütüğü:** [CHANGELOG.md](CHANGELOG.md) — Sürüm tarihçesi.
-- **v5.2.0 (Arşiv):** [GEM-V520-TALIMAT.md](GEM-V520-TALIMAT.md) — Tarihsel sürüm kaydı.
+- **Arşiv (Eski Taslaklar):** [archive/legacy_drafts/](archive/legacy_drafts/) — v5.2.0 ve v6.1.1 tarihsel taslak kayıtları.
 
 ---
 
@@ -76,10 +78,11 @@ Aşağıdaki raporlar, GEM v6.1.1 standardına tam uyumlu olarak hazırlanmış 
 
 | Dosya | Ne işe yarar |
 |---|---|
+| `QURAN_VISION_v6.2.1_SPECIFICATION.md` | Güncel v6.2.1 kanonik metodoloji ve uygulama şartnamesi |
+| `docs/QURAN_VISION_v6.2.1_TAM_TALIMAT.txt` | v6.2.1 tam talimatname metni (.txt) |
 | `YONTEM.md` | 26 adımlı yöntemin özeti ve 5 makro faz yapısı |
-| `src/gem_lint.py` | Biçimsel dil, şema ve manifest denetçisi (Python) |
-| `docs/tr/05-ornek-rapor-v6.1.1.md` | Resmi v6.1.1 rapor şablonu |
-| `docs/tr/GEM-v6.1.1-taslak.md` | Güncel v6.1.1 metodoloji standardı |
+| `src/gem_lint.py` | Biçimsel dil, şema, içerik yoğunluğu (V12) ve manifest denetçisi (Python) |
+| `docs/tr/05-ornek-rapor-v6.1.1.md` | Resmi rapor şablonu |
 | `docs/tr/akademik-hakem-rehberi.md` | Bağımsız dış hakemlik değerlendirme kılavuzu |
 
 ---

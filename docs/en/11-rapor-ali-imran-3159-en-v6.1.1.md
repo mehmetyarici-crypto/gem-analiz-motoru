@@ -1,7 +1,7 @@
 # QV-2026-006 — Surah Ali 'Imran 3:159: Consultative Governance (Shura) in Crisis, Participatory Decision-Making & Compassionate Leadership Architecture
 
 **Document Status:** `PRE-RELEASE` | **Confidence Grade:** `B` | **Methodological Layer:** `Layer 3 (H6 Complex Verse Protocol)`
-**External Cryptographic Manifest (SHA-256):** `bb1a93c903e44edc420befb8f2b4797eb4d3b0cb821e4065098f9f2353f713d9`
+**External Cryptographic Manifest (SHA-256):** `a2e21f1dd7fec288d64a36cd5f832ebc7213f78ee1c0d21f19b032c746a1cc70`
 
 ---
 

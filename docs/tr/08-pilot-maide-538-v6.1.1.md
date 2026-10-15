@@ -1,5 +1,5 @@
 ---
-gem_version: "6.1.1"
+gem_version: "6.2.1"
 case_id: "QV-2026-003"
 surah: "Mâide"
 verse: "5:38"
@@ -213,24 +213,29 @@ peer_review:
 
 ---
 
-### ADIM 01 — LAFZÎ TAHLİL
+### ADIM 01 — LAFZÎ TAHLİL, SİYÂK-SİBÂK VE TARİHSEL BAĞLAM
 
-- **Arapça Metin:**
-  > وَٱلسَّارِقُ وَٱلسَّارِقَةُ فَٱقْطَعُوٓا۟ أَيْدِيَهُمَا جَزَآءًۢ بِمَا كَسَبَا نَكَـٰلًۭا مِّنَ ٱللَّهِ ۗ وَٱللَّهُ عَزِيزٌ حَكِيمٌۭ
+- **Arapça Metin (Mâide Sûresi 5:38 — Resm-i Osmânî):**
+  > وَٱلسَّارِقُ وَٱلسَّارِقَةُ فَٱقْطَعُوٓا۟ أَيْدِيَهُمَا جَزَآءًۢ بِمَا كَسَبَا نَكَـٰلًۭا مِّنَ ٱللَّهِ ۗ وَٱللَّهُ عَزِيزٌ حَكِيمٌۭ ﴿٣٨﴾
 
-- **Kelime Mealleri:**
-  - `وَٱلسَّارِقُ`: Hırsızlık yapan erkek.
-  - `وَٱلسَّارِقَةُ`: Ve hırsızlık yapan kadın.
-  - `فَٱقْطَعُوٓا۟`: (Yargı yetkisine sahip meşru otorite olarak) kesin / elini çektirin.
-  - `أَيْدِيَهُمَا`: İkisinin ellerini (suç aletlerini).
-  - `جَزَآءًۢ بِمَا كَسَبَا`: Kazandıklarına (işledikleri suça) karşılık olarak.
-  - `نَكَـٰلًۭا مِّنَ ٱللَّهِ`: Allah tarafından caydırıcı bir ceza olarak.
-  - `وَٱللَّهُ عَزِيزٌ حَكِيمٌۭ`: Ve Allah izzet sahibidir, hikmet sahibidir.
+- **Sahih Türkçe Meal:**
+  > *"Hırsızlık eden erkek (es-sâriku) ve hırsızlık eden kadının (es-sârikatü), kendi hür iradeleriyle işledikleri suça bir karşılık ve Allah’tan caydırıcı bir ibret (nekâl) olmak üzere ellerini kesin (güçlerini/suç vasıtalarını engelleyin). Allah mutlak izzet ve kudret sahibidir, her hükmünde tam hikmet sahibidir. (38) [Ancak kim zulmünden sonra tevbe eder ve durumunu ıslah ederse, şüphesiz Allah onun tevbesini kabul eder; çünkü Allah çok bağışlayandır, çok merhamet edendir. (39)]"*
 
-- **Zemahşerî (*el-Keşşâf*) Lafzî Tahlili:**
+- **Kelime-Kelime Lafzî Çözümleme (Kelime Mealleri):**
+  - `وَٱلسَّارِقُ` (Ve's-sâriku): Hırsızlığı meslek/vasıf edinmiş erkek (*ism-i fâil* kalıbı; arızi açlık veya zaruret halini değil, tam kasıtla ve nisap miktarı korunan malı gizlice çalma suçunu ifade eder).
+  - `وَٱلسَّارِقَةُ` (ve's-sârikatü): Ve hırsızlık yapan kadın (suç ve ceza ehliyetinde cinsiyet veya sosyal statü farkı gözetilmediğini gösterir).
+  - `فَٱقْطَعُوٓا۟` (fakta‘û): Kesin / suç elini çektirin (mübtedânın haberinde gelen *fâ* harfi, sebep-sonuç ve şart manası taşır; çoğul emir kipi ise bireylere değil, bağımsız yargı ve meşru kamu otoritesine hitap eder).
+  - `أَيْدِيَهُمَا` (eydiyehümâ): İkisinin ellerini (klasik fıkıhta nisap, hırz [koruma], şüphe bulunmaması ve açlık/kıtlık zaruretinin olmaması gibi 20'den fazla sıkı usûlî şarta bağlanmıştır).
+  - `جَزَآءًۢ بِمَا كَسَبَا` (cezâen bimâ kesebâ): Kendi hür iradeleriyle kazandıklarına / irtikâp ettikleri suça adil bir karşılık olarak (*mef‘ûlün leh*; ikrah, açlık veya sosyal çaresizlik altında işlenen fiillerde tam *kesb* [hür kasıt] bulunmadığından had düşer).
+  - `نَكَـٰلًۭا مِّنَ ٱللَّهِ` (nekâlen minallâh): Allah tarafından suçtan alıkoyan caydırıcı bir ibret ve kelepçe (`nekâl`) olarak.
+  - `وَٱللَّهُ عَزِيزٌ حَكِيمٌۭ` (vallâhü ‘azîzün hakîm): Allah izzet ve kudret sahibidir, hüküm ve hikmet sahibidir (bir sahabînin âyet sonunu *ğafûrun rahîm* diye okuması üzerine diğer sahabînin *"Hayır, azîzün hakîm'dir; izzet sahibi olduğu için hükmetti, hikmet sahibi olduğu için cezayı koydu"* uyarısı meşhurdur).
+
+- **Klasik Tefsir Lafzî Tahlili (Zemahşerî & Kurtubî):**
   - `[NAKİL]`: Zemahşerî, `جَزَآءًۢ بِمَا كَسَبَا` terkibinin failin hür iradesiyle işlediği suça denk bir karşılık olduğunu; `نَكَـٰلًۭا` lafzının ise toplumu koruyan önleyici ve yüksek caydırıcılık olduğunu belgeler (*el-Keşşâf*, C. 2, s. 230).
-  - `[YORUM]`: Bu lafzî yapı, cezada intikam duygusunu dışlar; orantılılık ve caydırıcılık ilkesini nassın merkezine yerleştirir.
+  - `[YORUM]`: Bu lafzî yapı ve Hz. Ömer'in kıtlık yılında (`Âmü'r-Ramâde`) asgari sosyal güvenlik şartı sağlanmadığı için had cezasını durdurması, İslam ceza hukukunda sosyal adaletin cezalandırmadan önce gelen zorunlu önkoşul olduğunu kanıtlar.
 
+- **Siyâk-Sibâk ve Tarihsel Bağlam:**
+Mâide Sûresi 5:38'in hemen ardından gelen **5:39 âyeti** (*"Kim bu zulmünden sonra tevbe eder ve kendini ıslah ederse Allah onun tevbesini kabul eder"*) cezalandırmanın nihai gaye olmadığını, asıl hedefin mülkiyet emniyeti (`hıfzü'l-mâl`) ile failin topluma yeniden kazandırılması (`ıslâh`) olduğunu ortaya koyar.
 ---
 
 ### ADIM 02 — MANTIKSAL SEMANTİK VE KARŞIT İLKE TESTİ

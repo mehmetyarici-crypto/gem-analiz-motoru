@@ -1,5 +1,5 @@
 ---
-gem_version: "6.1.1"
+gem_version: "6.2.1"
 case_id: "QV-2026-009"
 surah: "Haşr"
 verse: "59:7"

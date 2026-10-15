@@ -1,7 +1,7 @@
 # QV-2026-008 — Surah Al-Isra 17:36: Epistemic Responsibility, Information Verification, Cognitive Security & AI Governance in the Digital Age
 
 **Document Status:** `PRE-RELEASE` | **Confidence Grade:** `B` | **Methodological Layer:** `Layer 3 (H6 Complex Verse Protocol)`
-**External Cryptographic Manifest (SHA-256):** `636670c5ce57eefd7b6a8a97b732d6fd47ef6f57e96700762d7c552d50474707`
+**External Cryptographic Manifest (SHA-256):** `7b6b41e36f21f47cf34c9f10a79c60422992f3b2a7b6625a5097969664a0c4e1`
 
 ---
 

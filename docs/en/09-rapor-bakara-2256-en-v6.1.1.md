@@ -1,7 +1,7 @@
 # QV-2026-004 — Surah Al-Baqarah 2:256: Freedom of Conscience, Prohibition of Coercion (La Ikraha fi'd-Din) & Pluralistic Civil Society Architecture
 
 **Document Status:** `PRE-RELEASE` | **Confidence Grade:** `B` | **Methodological Layer:** `Layer 3 (H6 Complex Verse Protocol)`
-**External Cryptographic Manifest (SHA-256):** `d01738aa829d747c3e068ad3e01538704e24dd70b9096ec8616b74736f409834`
+**External Cryptographic Manifest (SHA-256):** `621902faa9254412d1369d6c194617c50165fa59c33e9a140a9c4d3ce6b988be`
 
 ---
 

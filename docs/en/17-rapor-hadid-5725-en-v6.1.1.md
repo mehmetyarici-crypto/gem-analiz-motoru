@@ -1,7 +1,7 @@
 # QV-2026-012 — Surah Al-Hadid 57:25: The Triad of Book, Balance (Mizan) & Iron (Hadid): Constitutional Law, Institutional Justice & Deterrent Defense
 
 **Document Status:** `PRE-RELEASE` | **Confidence Grade:** `B` | **Methodological Layer:** `Layer 3 (H6 Complex Verse Protocol)`
-**External Cryptographic Manifest (SHA-256):** `e12d4cc95d961c1bdbfbb758c1ce3dcd6f65a32064a432770b5ff74049f924cc`
+**External Cryptographic Manifest (SHA-256):** `2fd0fa223009c51a80a981f7af2198235b481344e3765c10e2e8aabe2a475cdb`
 
 ---
 

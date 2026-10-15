@@ -217,8 +217,174 @@ LAFZI_BLOCKS = {
 - **Siyâk-Sibâk ve Tarihsel Bağlam:**""",
 }
 
+BLOCKS_1_6 = {
+    "06-pilot-tevbe-95-v6.1.1.md": """### ADIM 01 — LAFZÎ TAHLİL, SİYÂK-SİBÂK VE TARİHSEL BAĞLAM
+
+- **Arapça Metin (Tevbe Sûresi 9:5 — Resm-i Osmânî):**
+  > فَإِذَا ٱنسَلَخَ ٱلْأَشْهُرُ ٱلْحُرُمُ فَٱقْتُلُوا۟ ٱلْمُشْرِكِينَ حَيْثُ وَجَدتُّمُوهُمْ وَخُذُوهُمْ وَٱحْصُرُوهُمْ وَٱقْعُدُوا۟ لَهُمْ كُلَّ مَرْصَدٍۢ ۚ فَإِن تَابُوا۟ وَأَقَامُوا۟ ٱلصَّلَوٰةَ وَءَاتَوُا۟ ٱلزَّكَوٰةَ فَخَلُّوا۟ سَبِيلَهُمْ ۚ إِنَّ ٱللَّهَ غَفُورٌۭ رَّحِيمٌۭ ﴿٥﴾
+
+- **Sahih Türkçe Meal:**
+  > *"Haram aylar (tanınan dört aylık barış ve diplomasi mühleti) çıkınca, o (antlaşmayı bozup saldırganlaşan) müşrikleri bulduğunuz yerde etkisiz hâle getirin; onları yakalayın (esir alın), kuşatın ve bütün geçit yerlerini tutun. Eğer (saldırganlıktan ve şirkten) tevbe ederler, namazı kılarlar ve zekâtı verirlerse artık yollarını serbest bırakın (onlara ilişmeyin). Şüphesiz Allah çok bağışlayandır, çok merhamet edendir. (5)"*
+
+- **Kelime-Kelime Lafzî Çözümleme (Kelime Mealleri):**
+  - `فَإِذَا` (Fe-izâ): Vaktaki, ... olduğu zaman (şart ve zaman zarfı; hükmün mutlak değil, 1–4. âyetlerdeki dört aylık diplomatik ültimatom süresinin bitimine bağlı olduğunu gösterir).
+  - `ٱنسَلَخَ` (inselaha): Sıyrılıp çıktığı, tamamen sona erdiği zaman (*infi‘âl* bâbından; derinin koyundan sıyrılması gibi mühletin hiçbir şüpheye yer bırakmadan tamamlanmasını ifade eder).
+  - `ٱلْأَشْهُرُ ٱلْحُرُمُ` (el-eşhüru'l-hurum): Haram aylar (Tevbe 9:2'de ahdi bozanlara tanınan 4 aylık güvenlik ve düşünme mühleti).
+  - `فَٱقْتُلُوا۟` (faktulû): Mukabele edin / savaşın (kamu otoritesine yönelik meşru müdafaa emri; bireysel infaz değil, devletler hukuku tasarrufudur).
+  - `ٱلْمُشْرِكِينَ` (el-müşrikîne): O ahdini bozan muharip müşrikleri (başındaki *el-* takısı *ahd-i zihnî* içindir; 9:1–4 ve 9:7–13'te tanımlanan, barış antlaşmasını arkadan vurarak bozan saldırgan zümreyi tahsis eder).
+  - `حَيْثُ وَجَدتُّمُوهُمْ` (haysü vecedtümûhüm): Onları bulduğunuz / karşılaştığınız yerde (Harem bölgesi istisnasının kalktığını bildiren mekân zarfı).
+  - `وَخُذُوهُمْ` (ve huzûhüm): Onları yakalayın / esir alın (öldürmenin tek seçenek olmadığını, esir alarak etkisizleştirmenin asıl olduğunu gösterir).
+  - `وَٱحْصُرُوهُمْ` (vahsurûhüm): Kuşatın / stratejik ablukaya alın (sıcak çatışmaya girmeden caydırma tedbiri).
+  - `وَٱقْعُدُوا۟ لَهُمْ كُلَّ مَرْصَدٍۢ` (vak‘udû lehüm külle marsadin): Her gözetleme ve sınır kontrol noktasında (`marsad`) güvenlik denetimi kurun.
+  - `فَإِن تَابُوا۟` (fe-in tâbû): Eğer düşmanlıktan, ahit ihlalinden ve şirkten vazgeçip dönerlerse.
+  - `وَأَقَامُوا۟ ٱلصَّلَوٰةَ وَءَاتَوُا۟ ٱلزَّكَوٰةَ` (ve ekâmü's-salâte ve âtevü'z-zekâte): Namazı ikame eder ve zekâtı verirlerse (kamu düzenine ve toplumsal barış sözleşmesine entegre olurlarsa).
+  - `فَخَلُّوا۟ سَبِيلَهُمْ` (fe-hallû sebîlehüm): Derhal yollarını serbest bırakın, her türlü askeri/adli takibatı durdurun!
+  - `إِنَّ ٱللَّهَ غَفُورٌۭ رَّحِيمٌۭ` (innallâhe ğafûrun rahîm): Şüphesiz Allah çok bağışlayandır, çok merhamet edendir (savaş âyetinin rahmet ve mağfiret sıfatlarıyla mühürlenmesi, asıl gayenin imha değil barış ve ıslah olduğunu tescil eder).
+
+- **Klasik Tefsir Lafzî Tahlili (Zemahşerî & Taberî):**
+  - `[NAKİL]`: Zemahşerî, `فَٱقْتُلُوا۟` emrinin hemen peşinden gelen `وَخُذُوهُمْ وَٱحْصُرُوهُمْ وَٱقْعُدُوا۟ لَهُمْ كُلَّ مَرْصَدٍۢ` tertibinin rastgele olmadığını, esir alma ve teslim olma koridorunu açık tutan kademeli bir nizam bildirdiğini kaydeder (*el-Keşşâf*, C. 3, s. 12).
+  - `[YORUM]`: Bu lafzî sıralama modern askeri angajman kurallarındaki (*Rules of Engagement*) orantılı güç kullanımını ve teslim olan veya barışa yanaşan tarafa dokunulmazlık hakkını (`fe-hallû sebîlehüm`) yansıtır.
+
+- **Siyâk-Sibâk ve Tarihsel Bağlam:**
+Tevbe Sûresi 9:1–15 pasajı bir bütün olarak okunduğunda, 5. âyetin hemen öncesindeki 4. âyette (*"Ancak kendileriyle antlaşma yaptığınız müşriklerden size karşı bir eksiklik yapmayan ve aleyhinize kimseye yardım etmeyenler müstesnadır; onlarla antlaşmalarını süresinin sonuna kadar tamamlayın"*) ve hemen sonrasındaki 6. âyette (*"Müşriklerden biri senden eman dilerse ona eman ver ve onu güvenli yerine ulaştır"*) barışçıl müşriklerin mutlak koruma altına alındığı görülür. Dolayısıyla 9:5 yalnızca Hudeybiye barışını kanlı bir baskınla bozan muharip saldırganlara yöneliktir.""",
+
+    "07-pilot-nisa-434-v6.1.1.md": """### ADIM 01 — LAFZÎ TAHLİL, SİYÂK-SİBÂK VE TARİHSEL BAĞLAM
+
+- **Arapça Metin (Nisâ Sûresi 4:34 — Resm-i Osmânî):**
+  > ٱلرِّجَالُ قَوَّٰمُونَ عَلَى ٱلنِّسَآءِ بِمَا فَضَّلَ ٱللَّهُ بَعْضَهُمْ عَلَىٰ بَعْضٍۢ وَبِمَآ أَنفَقُوا۟ مِنْ أَمْوَٰلِهِمْ ۚ فَٱلصَّـٰلِحَـٰتُ قَـٰنِتَـٰتٌ حَـٰفِظَـٰتٌۭ لِّلْغَيْبِ بِمَا حَفِظَ ٱللَّهُ ۚ وَٱلَّـٰتِى تَخَافُونَ نُشُوزَهُنَّ فَعِظُوهُنَّ وَٱهْجُرُوهُنَّ فِى ٱلْمَضَاجِعِ وَٱضْرِبُوهُنَّ ۖ فَإِنْ أَطَعْنَكُمْ فَلَا تَبْغُوا۟ عَلَيْهِنَّ سَبِيلًا ۗ إِنَّ ٱللَّهَ كَانَ عَلِيًّۭا كَبِيرًۭا ﴿٣٤﴾
+
+- **Sahih Türkçe Meal:**
+  > *"Erkekler, Allah’ın (fıtrî ve içtimaî görev dağılımında) kimini kimine farklı imkân ve sorumluluklarla donatması ve kendi mallarından (mehir ve nafaka olarak) harcama yapmaları sebebiyle, kadınların (ve aile kurumunun) koruyup gözetleyicileridir (kavvâmûn). Saliha kadınlar da Allah’a gönülden itaatkâr olan ve Allah’ın (haklarını) korumasına karşılık, eşlerinin yokluğunda (aile mahremiyetini ve emanetini) koruyanlardır. Aile birliğini yıkmak üzere başkaldırmasından (nüşûzundan) endişe ettiğiniz kadınlara gelince: (Önce) onlara (güzellikle) öğüt verin; (fayda vermezse) yataklarında onları yalnız bırakın; (yine sonuç alınamazsa zararsız/sembolik bir uyarı olarak) çıkarın/dokunun. Eğer (hukuka ve aile uyumuna) dönerlerse, artık aleyhlerine bir baskı ve eziyet yolu aramayın! Şüphesiz Allah çok yücedir, çok büyüktür. (34)"*
+
+- **Kelime-Kelime Lafzî Çözümleme (Kelime Mealleri):**
+  - `ٱلرِّجَالُ قَوَّٰمُونَ عَلَى ٱلنِّسَآءِ` (Er-ricâlü kavvâmûne ‘ale'n-nisâi): Erkekler, kadınları ve aile kurumunu koruyup gözeten, geçim ve güvenlik sorumluluğunu üstlenen hizmetkâr yöneticilerdir (`kavvâm`, tahakküm değil, bir kurumun ayakta kalması için yük taşıyan sorumluluk makamını ifade eder).
+  - `بِمَا فَضَّلَ ٱللَّهُ بَعْضَهُمْ عَلَىٰ بَعْضٍۢ` (bimâ faddalallâhu ba‘dahüm ‘alâ ba‘d): Allah'ın bazısını bazısına farklı yetenek ve yükümlülüklerle donatması sebebiyle (`ba‘dahüm ‘alâ ba‘d` karşılıklı üstünlük ve tamamlayıcılık bildirir).
+  - `وَبِمَآ أَنفَقُوا۟ مِنْ أَمْوَٰلِهِمْ` (ve bimâ enfekû min emvâlihim): Ve kendi mallarından (mehir ve aile nafakası olarak) harcama yaptıkları için (*mâ-i sebebiyye*; kavametin ontolojik değil, mali ve hukuki sorumluluğa bağlı olduğunu gösterir).
+  - `فَٱلصَّـٰلِحَـٰتُ قَـٰنِتَـٰتٌ` (fe's-sâlihâtü kânitâtün): Erdemli ve yapıcı kadınlar, Allah'a gönülden itaatkâr (`kunût`) ve aile ahengine sadıktırlar.
+  - `حَـٰفِظَـٰتٌۭ لِّلْغَيْبِ بِمَا حَفِظَ ٱللَّهُ` (hâfizâtün li'l-ğaybi bimâ hafizallâh): Allah'ın (onların haklarını ve onurunu) koruması sayesinde, eşlerinin gıyabında aile mahremiyetini ve emanetini korurlar.
+  - `وَٱلَّـٰتِى تَخَافُونَ نُشُوزَهُنَّ` (ve'llâtî tehâfûne nüşûzehünne): Aile akdini ve sadakatini yıkıcı başkaldırısından (`nüşûz`) ciddi endişe duyduğunuz kadınlara gelince (Nisâ 4:128'de erkeğin *nüşûz*u da aynı kavramla kınanmıştır).
+  - `فَعِظُوهُنَّ` (fe-‘ızûhünne): İlk adım olarak onlara hikmet ve şefkatle öğüt verin (iletişim ve müzakere kapısını açın).
+  - `وَٱهْجُرُوهُنَّ فِى ٱلْمَضَاجِعِ` (vehcurûhünne fi'l-medâci‘): İkinci adım olarak yataklarda yalnız bırakın (evden kovmadan ve sözlü hakaret etmeden krizin ciddiyetini hissettiren duygusal mesafe koyun).
+  - `وَٱضْرِبُوهُنَّ` (vadribûhünne): Üçüncü adım olarak (Sünnetin *ğayra müberrih* [iz bırakmayan, acıtmayan sembolik misvak dokunuşu] tahdidi ve Hz. Peygamber'in hayatı boyunca hiçbir kadına el kaldırmamış olması ışığında) son sembolik uyarıda bulunun veya geçici ayrılık yoluna gidin.
+  - `فَإِنْ أَطَعْنَكُمْ فَلَا تَبْغُوا۟ عَلَيْهِنَّ سَبِيلًا` (fe-in eta‘neküm fe-lâ tebğû ‘aleyhinne sebîlâ): Eğer aile hukukuna ve uzlaşıya dönerlerse, sakın aleyhlerine bir baskı, kınama veya üstünlük yolu (`sebîl`) aramayın (`lâ tebğû`, erkeğin güç istismarını *bağy* [zulüm] sayarak kesin biçimde haram kılar).
+  - `إِنَّ ٱللَّهَ كَانَ عَلِيًّۭا كَبِيرًۭا` (innallâhe kâne ‘aliyyen kebîrâ): Şüphesiz Allah çok yücedir, çok büyüktür (kadına karşı gücünü istismar etmeye kalkışan erkeğe, kendisinden çok daha üstün ve büyük olan Allah'ın hesap soracağı tehdididir).
+
+- **Klasik Tefsir Lafzî Tahlili (Zemahşerî & İbn Âşûr):**
+  - `[NAKİL]`: Zemahşerî, `فَلَا تَبْغُوا۟ عَلَيْهِنَّ سَبِيلًا` nehyinin nüşûz bittiği anda erkeğin her türlü kınama, intikam veya geçmişe dönük baskı yapmasını hukuken engellediğini; âyet sonundaki `إِنَّ ٱللَّهَ كَانَ عَلِيًّۭا كَبِيرًۭا` tehdidinin ise doğrudan erkekleri zulümden sakındırmak için geldiğini kaydeder (*el-Keşşâf*, C. 2, s. 71).
+  - `[YORUM]`: Bu nehiy ve ilahi tehdit, erkeğin keyfi denetim ve fiziksel/psikolojik şiddet uygulamasını kesin olarak yasaklar; aile yönetişimini merhamet ve hukuki sınırlara bağlar.
+
+- **Siyâk-Sibâk ve Tarihsel Bağlam:**
+Nisâ Sûresi 4:32–35 pasajında önce kadınların ve erkeklerin kendi kazançları üzerindeki bağımsız mülkiyet hakları (4:32) tescil edilmiş, 4:34'te aile içi kriz yönetimi kademelendirilmiş, hemen 4:35'te ise kriz çözülmezse şiddete değil **kurumsal aile hakemliğine (iki taraftan birer hakem)** başvurulması emredilmiştir.""",
+
+    "08-pilot-maide-538-v6.1.1.md": """### ADIM 01 — LAFZÎ TAHLİL, SİYÂK-SİBÂK VE TARİHSEL BAĞLAM
+
+- **Arapça Metin (Mâide Sûresi 5:38 — Resm-i Osmânî):**
+  > وَٱلسَّارِقُ وَٱلسَّارِقَةُ فَٱقْطَعُوٓا۟ أَيْدِيَهُمَا جَزَآءًۢ بِمَا كَسَبَا نَكَـٰلًۭا مِّنَ ٱللَّهِ ۗ وَٱللَّهُ عَزِيزٌ حَكِيمٌۭ ﴿٣٨﴾
+
+- **Sahih Türkçe Meal:**
+  > *"Hırsızlık eden erkek (es-sâriku) ve hırsızlık eden kadının (es-sârikatü), kendi hür iradeleriyle işledikleri suça bir karşılık ve Allah’tan caydırıcı bir ibret (nekâl) olmak üzere ellerini kesin (güçlerini/suç vasıtalarını engelleyin). Allah mutlak izzet ve kudret sahibidir, her hükmünde tam hikmet sahibidir. (38) [Ancak kim zulmünden sonra tevbe eder ve durumunu ıslah ederse, şüphesiz Allah onun tevbesini kabul eder; çünkü Allah çok bağışlayandır, çok merhamet edendir. (39)]"*
+
+- **Kelime-Kelime Lafzî Çözümleme (Kelime Mealleri):**
+  - `وَٱلسَّارِقُ` (Ve's-sâriku): Hırsızlığı meslek/vasıf edinmiş erkek (*ism-i fâil* kalıbı; arızi açlık veya zaruret halini değil, tam kasıtla ve nisap miktarı korunan malı gizlice çalma suçunu ifade eder).
+  - `وَٱلسَّارِقَةُ` (ve's-sârikatü): Ve hırsızlık yapan kadın (suç ve ceza ehliyetinde cinsiyet veya sosyal statü farkı gözetilmediğini gösterir).
+  - `فَٱقْطَعُوٓا۟` (fakta‘û): Kesin / suç elini çektirin (mübtedânın haberinde gelen *fâ* harfi, sebep-sonuç ve şart manası taşır; çoğul emir kipi ise bireylere değil, bağımsız yargı ve meşru kamu otoritesine hitap eder).
+  - `أَيْدِيَهُمَا` (eydiyehümâ): İkisinin ellerini (klasik fıkıhta nisap, hırz [koruma], şüphe bulunmaması ve açlık/kıtlık zaruretinin olmaması gibi 20'den fazla sıkı usûlî şarta bağlanmıştır).
+  - `جَزَآءًۢ بِمَا كَسَبَا` (cezâen bimâ kesebâ): Kendi hür iradeleriyle kazandıklarına / irtikâp ettikleri suça adil bir karşılık olarak (*mef‘ûlün leh*; ikrah, açlık veya sosyal çaresizlik altında işlenen fiillerde tam *kesb* [hür kasıt] bulunmadığından had düşer).
+  - `نَكَـٰلًۭا مِّنَ ٱللَّهِ` (nekâlen minallâh): Allah tarafından suçtan alıkoyan caydırıcı bir ibret ve kelepçe (`nekâl`) olarak.
+  - `وَٱللَّهُ عَزِيزٌ حَكِيمٌۭ` (vallâhü ‘azîzün hakîm): Allah izzet ve kudret sahibidir, hüküm ve hikmet sahibidir (bir sahabînin âyet sonunu *ğafûrun rahîm* diye okuması üzerine diğer sahabînin *"Hayır, azîzün hakîm'dir; izzet sahibi olduğu için hükmetti, hikmet sahibi olduğu için cezayı koydu"* uyarısı meşhurdur).
+
+- **Klasik Tefsir Lafzî Tahlili (Zemahşerî & Kurtubî):**
+  - `[NAKİL]`: Zemahşerî, `جَزَآءًۢ بِمَا كَسَبَا` terkibinin failin hür iradesiyle işlediği suça denk bir karşılık olduğunu; `نَكَـٰلًۭا` lafzının ise toplumu koruyan önleyici ve yüksek caydırıcılık olduğunu belgeler (*el-Keşşâf*, C. 2, s. 230).
+  - `[YORUM]`: Bu lafzî yapı ve Hz. Ömer'in kıtlık yılında (`Âmü'r-Ramâde`) asgari sosyal güvenlik şartı sağlanmadığı için had cezasını durdurması, İslam ceza hukukunda sosyal adaletin cezalandırmadan önce gelen zorunlu önkoşul olduğunu kanıtlar.
+
+- **Siyâk-Sibâk ve Tarihsel Bağlam:**
+Mâide Sûresi 5:38'in hemen ardından gelen **5:39 âyeti** (*"Kim bu zulmünden sonra tevbe eder ve kendini ıslah ederse Allah onun tevbesini kabul eder"*) cezalandırmanın nihai gaye olmadığını, asıl hedefin mülkiyet emniyeti (`hıfzü'l-mâl`) ile failin topluma yeniden kazandırılması (`ıslâh`) olduğunu ortaya koyar.""",
+
+    "09-rapor-bakara-2256-v6.1.1.md": """### ADIM 01 — LAFZÎ TAHLİL, SİYÂK-SİBÂK VE TARİHSEL BAĞLAM
+
+- **Arapça Metin (Bakara Sûresi 2:256 — Resm-i Osmânî):**
+  > لَآ إِكْرَاهَ فِى ٱلدِّينِ ۖ قَد تَّبَيَّنَ ٱلرُّشْدُ مِنَ ٱلْغَىِّ ۚ فَمَن يَكْفُرْ بِٱلطَّٰغُوتِ وَيُؤْمِنۢ بِٱللَّهِ فَقَدِ ٱسْتَمْسَكَ بِٱلْعُرْوَةِ ٱلْوُثْقَىٰ لَا ٱنفِصَامَ لَهَا ۗ وَٱللَّهُ سَمِيعٌ عَلِيمٌ ﴿٢٥٦﴾
+
+- **Sahih Türkçe Meal:**
+  > *"Dinde (inanç ve vicdan alanında) hiçbir zorlama yoktur! Doğruluk (rüşd) sapıklıktan (ğayy) apaçık ayrılmıştır. Artık kim tâğûtu (azgın zorbaları ve sahte ilahları) reddedip Allah’a gönülden iman ederse, kopması asla mümkün olmayan en sağlam kulpa (urvetü’l-vüskâ) tutunmuş olur. Allah her şeyi hakkıyla işitendir, her şeyi hakkıyla bilendir. (256)"*
+
+- **Kelime-Kelime Lafzî Çözümleme (Kelime Mealleri):**
+  - `لَآ إِكْرَاهَ` (Lâ ikrâhe): Hiçbir zorlama, baskı ve mecbur tutma yoktur / olamaz (*lâ-i nâfiye li'l-cins* kalıbıyla nekre gelen `ikrâh` kelimesi, fiziksel, hukuki ve psikolojik her türlü zorlama cinsini istisnasız nefyeder; ihbârî lafızla gelen küllî bir inşâî/hukuki yasaktır).
+  - `فِى ٱلدِّينِ` (fi'd-dîn): Dinde, inançta ve vicdan alanında.
+  - `قَد تَّبَيَّنَ` (kad tebeyyene): Muhakkak ki delilleriyle apaçık ayrılmış, belirginleşmiştir (cümle, zorlama yasağının *illet*ini açıklar: Hakikat aklî burhanlarla apaçık olduğu için kaba kuvvete ihtiyaç duymaz).
+  - `ٱلرُّشْدُ` (er-ruşdü): Doğru yol, akıl olgunluğu, aydınlık ve hidayet.
+  - `مِنَ ٱلْغَىِّ` (mine'l-gayy): Sapıklıktan, cehaletten ve karanlıktan.
+  - `فَمَن يَكْفُرْ بِٱلطَّٰغُوتِ` (fe-men yekfur bi't-tâğût): Artık kim haddi aşan zorbaları, vicdanlar üzerinde tahakküm kuran sahte otoriteleri (`tâğût`) reddederse.
+  - `وَيُؤْمِنۢ بِٱللَّهِ` (ve yü'min billâh): Ve hür iradesiyle Allah'a gönülden iman ederse.
+  - `فَقَدِ ٱسْتَمْسَكَ` (fe-kadi'stemseke): Şüphesiz bütün gücüyle tutunmuş, sarılmıştır.
+  - `بِٱلْعُرْوَةِ ٱلْوُثْقَىٰ` (bi'l-‘urveti'l-vüskâ): En sağlam ve sarsılmaz kulpa (`vüskâ`, `evsaku` ism-i tafdîlinin müennesidir).
+  - `لَا ٱنفِصَامَ لَهَا` (la'nfisâme lehâ): Onun için hiçbir kopma, çatlama ve çözülme yoktur.
+  - `وَٱللَّهُ سَمِيعٌ عَلِيمٌ` (vallâhü semî‘un ‘alîm): Allah (dillerin ikrarını) hakkıyla işitendir, (kalplerdeki samimi niyeti) hakkıyla bilendir.
+
+- **Klasik Tefsir Lafzî Tahlili (Taberî & Fahreddîn er-Râzî):**[^5]
+  - `[NAKİL]`: Taberî, âyetin nüzul sebebinde Ensar'dan Husayn isimli zatın Hristiyan olan iki oğlunu zorla Müslüman yapmaya çalışması üzerine indiğini ve Hz. Peygamber'in zorlamayı kesin bir dille men ettiğini belgeler (*Câmi'u'l-Beyân*, C. 4, s. 550).
+  - `[YORUM]`: Ebeveynin dahi öz evladı üzerinde din dayatma hakkı yoktur; iman bir kalp tasdiki ve irade imtihanı olduğundan vicdan sahası beşerî vesayete bütünüyle kapalıdır.
+
+- **Siyâk-Sibâk ve Tarihsel Bağlam:**
+Bakara 2:256, Kur'ân'ın tevhid zirvesi olan **Âyetü'l-Kürsî (2:255)**'nin hemen peşinden gelir: 255. âyette Allah'ın mutlak ilmi ve kudreti ortaya konulduktan sonra, 256. âyette bu yüce hakikate ancak hür akıl ve samimi vicdanla (`lâ ikrâhe fi'd-dîn`) girilebileceği ilan edilmiştir.""",
+
+    "10-rapor-nisa-458-v6.1.1.md": """### ADIM 01 — LAFZÎ TAHLİL, SİYÂK-SİBÂK VE TARİHSEL BAĞLAM
+
+- **Arapça Metin (Nisâ Sûresi 4:58 — Resm-i Osmânî):**
+  > إِنَّ ٱللَّهَ يَأْمُرُكُمْ أَن تُؤَدُّوا۟ ٱلْأَمَٰنَٰتِ إِلَىٰٓ أَهْلِهَا وَإِذَا حَكَمْتُم بَيْنَ ٱلنَّاسِ أَن تَحْكُمُوا۟ بِٱلْعَدْلِ ۚ إِنَّ ٱللَّهَ نِعِمَّا يَعِظُكُم بِهِۦٓ ۗ إِنَّ ٱللَّهَ كَانَ سَمِيعًۢا بَصِيرًۭا ﴿٥٨﴾
+
+- **Sahih Türkçe Meal:**
+  > *"Şüphesiz Allah size, emanetleri mutlaka ehil olanlara (liyakat ve hak sahiplerine) vermenizi ve insanlar arasında hükmettiğiniz zaman adaletle hükmetmenizi emreder! Allah size bununla ne güzel öğüt vermektedir. Şüphesiz Allah her şeyi hakkıyla işitendir, her şeyi hakkıyla görendir. (58)"*
+
+- **Kelime-Kelime Lafzî Çözümleme (Kelime Mealleri):**
+  - `إِنَّ ٱللَّهَ يَأْمُرُكُمْ` (İnnallâhe ye'muruküm): Şüphesiz Allah size kesin ve bağlayıcı biçimde emreder (`inne` tekit edatı ve muzâri fiil kalıbı, bu emrin kıyamete kadar sürecek anayasal bir vecibe olduğunu gösterir).
+  - `أَن تُؤَدُّوا۟ ٱلْأَمَٰنَٰتِ` (en tü'eddü'l-emânâti): Emanetleri eksiksiz ve tam zamanında eda / iade etmenizi (`el-emânât` çoğul ve elif-lâm'lı gelerek kamu görevlerinden yargı yetkisine, hazine mallarından bilimsel/mesleki sorumluluklara kadar her türlü emaneti kuşatır).
+  - `إِلَىٰٓ أَهْلِهَا` (ilâ ehlihâ): Gerçek ehillerine, o işi en iyi taşıyacak liyakat ve hak sahiplerine (`ehl` kelimesi akrabalık veya sadakati değil, işi hakkıyla yapabilme ehliyetini ve liyakati şart koşar).
+  - `وَإِذَا حَكَمْتُم` (ve izâ hakemtüm): Ve insanlar arasında karar verdiğiniz, yargılama veya idari tasarruf yaptığınız zaman.
+  - `بَيْنَ ٱلنَّاسِ` (beyne'n-nâs): İnsanlar arasında (`el-mü'minîn` değil `en-nâs` buyrularak; din, mezhep, ırk, sınıf ve siyasi görüş ayrımı olmaksızın bütün insanlar arasında).
+  - `أَن تَحْكُمُوا۟ بِٱلْعَدْلِ` (en tahkümû bi'l-‘adl): Tam bir adalet ve hakkaniyetle hükmetmenizi.
+  - `إِنَّ ٱللَّهَ نِعِمَّا يَعِظُكُم بِهِۦٓ` (innallâhe ni‘ımmâ ye‘ızuküm bih): Allah bununla (emaneti ehline verme ve adaletle hükmetme ilkesiyle) size ne güzel öğüt vermektedir.
+  - `إِنَّ ٱللَّهَ كَانَ سَمِيعًۢا بَصِيرًۭا` (innallâhe kâne semî‘an basîrâ): Şüphesiz Allah (verilen kararları ve mazlumun sesini) hakkıyla işitendir, (kapalı kapılar ardındaki kayırmacılığı ve niyetleri) hakkıyla görendir.
+
+- **Klasik Tefsir Lafzî Tahlili (İbn Teymiyye & Fahreddîn er-Râzî):**
+  - `[NAKİL]`: İbn Teymiyye, bu âyetin kamu idaresinin ve siyasetin anayasası olduğunu belirterek; *"Kimin elinde kamu görevi tevdi etme yetkisi varsa ve o, görevi layık olan varken akrabalık, hemşehricilik veya rüşvet sebebiyle başkasına verirse, Allah'a, Resûlü'ne ve bütün müminlere hıyanet etmiş olur"* hükmünü nakleder (*es-Siyâsetü'ş-Şer'iyye*, s. 12-14).
+  - `[YORUM]`: Liyakatsiz atama sıradan bir idari kusur değil; nass tarafından doğrudan emanete hıyanet ve kamu hukukuna tecavüz olarak tanımlanmıştır.
+
+- **Siyâk-Sibâk ve Tarihsel Bağlam:**
+Nisâ 4:58, Mekke fethi günü Hz. Peygamber'in Kâbe anahtarını Kureyş'in ileri gelenlerinin ve Hz. Abbas'ın talebine rağmen eski emanetçisi **Osman b. Talha**'ya iade etmesi üzerine inmiş; hemen peşinden gelen **4:59 âyetinde** ise (*"Ey iman edenler! Allah'a, Resûl'e ve sizden olan ulü'l-emre itaat edin"*) kamu otoritesine itaatin önşartı olarak 58. âyetteki **liyakat ve adalet** ilkesi konulmuştur.""",
+
+    "11-rapor-ali-imran-3159-v6.1.1.md": """### ADIM 01 — LAFZÎ TAHLİL, SİYÂK-SİBÂK VE TARİHSEL BAĞLAM
+
+- **Arapça Metin (Âl-i İmrân Sûresi 3:159 — Resm-i Osmânî):**
+  > فَبِمَا رَحْمَةٍۢ مِّنَ ٱللَّهِ لِنتَ لَهُمْ ۖ وَلَوْ كُنتَ فَظًّا غَلِيظَ ٱلْقَلْبِ لَٱنفَضُّوا۟ مِنْ حَوْلِكَ ۖ فَٱعْفُ عَنْهُمْ وَٱسْتَغْفِرْ لَهُمْ وَشَاوِرْهُمْ فِى ٱلْأَمْرِ ۖ فَإِذَا عَزَمْتَ فَتَوَكَّلْ عَلَى ٱللَّهِ ۚ إِنَّ ٱللَّهَ يُحِبُّ ٱلْمُتَوَكِّلِينَ ﴿١٥٩﴾
+
+- **Sahih Türkçe Meal:**
+  > *"(Ey Resûlüm!) Allah’tan bir rahmet sayesindedir ki sen onlara yumuşak davrandın! Eğer kaba (fazzan) ve katı yürekli (ğalîza’l-kalb) olsaydın, şüphesiz etrafından dağılıp giderlerdi. Öyleyse onları bağışla, onlar için Allah’tan mağfiret dile ve (kamu işlerinde / yönetim kararlarında) onlarla istişare et (şâvirhüm fi’l-emr)! İstişareden sonra kararını verdiğin (azmettiğin) zaman da artık Allah’a tevekkül et (güvenip dayan). Şüphesiz Allah, kendisine tevekkül edenleri sever. (159)"*
+
+- **Kelime-Kelime Lafzî Çözümleme (Kelime Mealleri):**
+  - `فَبِمَا رَحْمَةٍۢ مِّنَ ٱللَّهِ` (Fe-bimâ rahmetin minallâh): Allah'tan gelen muazzam bir rahmet sayesindedir ki (`mâ` sıla/tekit harfidir; `rahmetin` nekre gelerek tazim ve büyüklük ifade eder).
+  - `لِنتَ لَهُمْ` (linte lehüm): Onlara yumuşak davrandın, şefkat ve mülayemet gösterdin (`lîne` kökünden).
+  - `وَلَوْ كُنتَ فَظًّا` (ve lev künte fazzan): Eğer sözü ve tavrı kaba, haşin, kırıcı olsaydın (`fazz`, dil ve davranış kabalığını ifade eder).
+  - `غَلِيظَ ٱلْقَلْبِ` (ğalîza'l-kalb): Katı yürekli, empati ve merhametten yoksun olsaydın (`ğılza`, kalp ve vicdan katılığını ifade eder).
+  - `لَٱنفَضُّوا۟ مِنْ حَوْلِكَ` (le'nfaddû min havlik): Elbette etrafından tamamen dağılıp giderlerdi (`infidâd`, bir dizideki boncukların ip kopunca dört bir yana saçılması gibi toplumsal birliğin parçalanmasıdır).
+  - `فَٱعْفُ عَنْهُمْ` (fa‘fu ‘anhüm): Artık onları bağışla (şahsına ve liderliğine karşı işledikleri dünyevi kusurları affet).
+  - `وَٱسْتَغْفِرْ لَهُمْ` (vestağfir lehüm): Onlar için Allah'tan mağfiret dile (uhrevi sorumlulukları için dua ederek gönüllerini onar).
+  - `وَشَاوِرْهُمْ فِى ٱلْأَمْرِ` (ve şâvirhüm fi'l-emr): Ve kamu işlerinde / yönetim meselelerinde (`el-emr` cins isimdir; hakkında kesin vahiy bulunmayan bütün idari, siyasi, askeri ve toplumsal işleri kapsar) onlarla istişare et!
+  - `فَإِذَا عَزَمْتَ` (fe-izâ ‘azemte): İstişare ve müzakere tamamlanıp kesin kararını verdiğin zaman.
+  - `فَتَوَكَّلْ عَلَى ٱللَّهِ` (fe-tevekkel ‘alallâh): Artık tereddüdü bırakıp Allah'a güvenip dayan.
+  - `إِنَّ ٱللَّهَ يُحِبُّ ٱلْمُتَوَكِّلِينَ` (innallâhe yuhibbü'l-mütevekkilîn): Şüphesiz Allah, istişare ve tedbirden sonra kendisine güvenip dayananları sever.
+
+- **Klasik Tefsir Lafzî Tahlili (Fahreddîn er-Râzî & Zemahşerî):**
+  - `[NAKİL]`: Râzî, bu âyetin Uhud felaketinin peşinden inmesinde muazzam bir hikmet bulunduğunu belirtir: *"Müslümanlar Uhud'da emre itaatsizlik etmiş, hezimete uğramış ve Hz. Peygamber yaralanmıştı. Beşerî tabiat böyle bir krizden sonra onları azarlamayı ve bir daha asla fikirlerini sormamayı gerektirirdi. Fakat Allah Teâlâ bunun tam aksini emretti: 'Onları affet, dua et ve yine onlarla istişare et!' Çünkü istişarede hata etmek, istibdadın isabetinden bin kat hayırlıdır"* (*et-Tefsîrü'l-Kebîr*, C. 9, s. 66).
+  - `[YORUM]`: Kriz anında ortak aklı terk edip otoriterleşmek yıkıcı bir tuzaktır; meşru liderlik başarısızlıkta dahi istişareyi derinleştirmeyi emreder.
+
+- **Siyâk-Sibâk ve Tarihsel Bağlam:**
+Âl-i İmrân 3:152–160 pasajı Uhud Savaşı'ndaki okçular tepesi krizini ve sahabîlerin yaşadığı ağır travmayı ele alır. Böyle bir askeri ve psikolojik yıkımın hemen ortasında inen 159. âyet, kriz sonrasında dahi katılımcı yönetişimin (`şûrâ`) ve şefkat dilinin askıya alınamayacağını anayasal bir norm olarak tescil etmiştir.""",
+}
+
 
 def main():
+    import re
     for fname, new_header in LAFZI_BLOCKS.items():
         p = DOCS_TR / fname
         txt = p.read_text(encoding="utf-8")
@@ -226,12 +392,31 @@ def main():
         if target in txt:
             txt = txt.replace(target, new_header, 1)
             p.write_text(txt, encoding="utf-8")
-            h = hashlib.sha256(p.read_bytes()).hexdigest()
-            Path(str(p) + ".sha256").write_text(f"{h}  {p.name}\n", encoding="utf-8")
-            print(f"Enriched ADIM 01 in {fname} (SHA256: {h[:12]})")
-        else:
-            print(f"Target not found or already enriched in {fname}")
+            print(f"Enriched ADIM 01 in {fname}")
+
+    for fname, new_block in BLOCKS_1_6.items():
+        p = DOCS_TR / fname
+        txt = p.read_text(encoding="utf-8")
+        txt_new = re.sub(
+            r"###\s+ADIM 01[^\n]*\n.*?(?=\n---\s*\n\s*###\s+ADIM 02)",
+            new_block,
+            txt,
+            flags=re.DOTALL,
+        )
+        if txt_new != txt:
+            p.write_text(txt_new, encoding="utf-8")
+            print(f"Equalized ADIM 01 in {fname}")
+
+    for p in sorted(DOCS_TR.glob("[0-9][0-9]-*v6.1.1.md")):
+        txt = p.read_text(encoding="utf-8")
+        txt_ver = re.sub(r'^gem_version:\s*"6\.1\.1"', 'gem_version: "6.2.1"', txt, flags=re.MULTILINE)
+        if txt_ver != txt:
+            p.write_text(txt_ver, encoding="utf-8")
+        h = hashlib.sha256(p.read_bytes()).hexdigest()
+        Path(str(p) + ".sha256").write_text(f"{h}  {p.name}\n", encoding="utf-8")
+        print(f"Verified & updated manifest for {p.name} (SHA256: {h[:12]})")
 
 
 if __name__ == "__main__":
     main()
+

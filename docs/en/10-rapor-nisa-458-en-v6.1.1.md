@@ -1,7 +1,7 @@
 # QV-2026-005 — Surah An-Nisa 4:58: Public Trust (Amanah), Meritocracy, Judicial Independence & Universal Justice Architecture
 
 **Document Status:** `PRE-RELEASE` | **Confidence Grade:** `B` | **Methodological Layer:** `Layer 3 (H6 Complex Verse Protocol)`
-**External Cryptographic Manifest (SHA-256):** `ca39ebc5ea98ea085e237cec8beaed36784657fc6c661a31c36f567c641b3ee7`
+**External Cryptographic Manifest (SHA-256):** `8b1a50a207ec9e760d3aa7b62b6f9e9dffdcf990b559fce4ec766af5f6ec7f38`
 
 ---
 

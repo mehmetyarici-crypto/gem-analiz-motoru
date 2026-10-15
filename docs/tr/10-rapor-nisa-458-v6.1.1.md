@@ -1,5 +1,5 @@
 ---
-gem_version: "6.1.1"
+gem_version: "6.2.1"
 case_id: "QV-2026-005"
 surah: "Nisâ"
 verse: "4:58"
@@ -218,25 +218,30 @@ peer_review:
 
 ---
 
-### ADIM 01 — LAFZÎ TAHLİL
+### ADIM 01 — LAFZÎ TAHLİL, SİYÂK-SİBÂK VE TARİHSEL BAĞLAM
 
-- **Arapça Metin:**
-  > إِنَّ ٱللَّهَ يَأْمُرُكُمْ أَن تُؤَدُّوا۟ ٱلْأَمَٰنَٰتِ إِلَىٰٓ أَهْلِهَا وَإِذَا حَكَمْتُم بَيْنَ ٱلنَّاسِ أَن تَحْكُمُوا۟ بِٱلْعَدْلِ ۚ إِنَّ ٱللَّهَ نِعِمَّا يَعِظُكُم بِهِۦٓ ۗ إِنَّ ٱللَّهَ كَانَ سَمِيعًۢا بَصِيرًۭا
+- **Arapça Metin (Nisâ Sûresi 4:58 — Resm-i Osmânî):**
+  > إِنَّ ٱللَّهَ يَأْمُرُكُمْ أَن تُؤَدُّوا۟ ٱلْأَمَٰنَٰتِ إِلَىٰٓ أَهْلِهَا وَإِذَا حَكَمْتُم بَيْنَ ٱلنَّاسِ أَن تَحْكُمُوا۟ بِٱلْعَدْلِ ۚ إِنَّ ٱللَّهَ نِعِمَّا يَعِظُكُم بِهِۦٓ ۗ إِنَّ ٱللَّهَ كَانَ سَمِيعًۢا بَصِيرًۭا ﴿٥٨﴾
 
-- **Kelime Mealleri:**
-  - `إِنَّ ٱللَّهَ يَأْمُرُكُمْ` (İnnallâhe ye'muruküm): Şüphesiz Allah size bağlayıcı biçimde emreder (ilahi emir).
-  - `أَن تُؤَدُّوا۟ ٱلْأَمَٰنَٰتِ` (en tü'eddü'l-emânâti): Emanetleri tastamam vermenizi / iade etmenizi.
-  - `إِلَىٰٓ أَهْلِهَا` (ilâ ehlihâ): Gerçek ehillerine, layık olan liyakat sahiplerine.
-  - `وَإِذَا حَكَمْتُم` (ve izâ hakemtüm): Ve hükmettiğiniz, karar verdiğiniz zaman.
-  - `بَيْنَ ٱلنَّاسِ` (beyne'n-nâs): İnsanlar arasında (ayrımsız bütün tebaa arasında).
-  - `أَن تَحْكُمُوا۟ بِٱلْعَدْلِ` (en tahkümû bi'l-‘adl): Adaletle, hakkaniyetle hükmetmenizi.
-  - `إِنَّ ٱللَّهَ نِعِمَّا يَعِظُكُم بِهِۦٓ` (innallâhe ni‘ımmâ ye‘ızuküm bih): Allah bununla size ne güzel öğüt vermektedir.
-  - `إِنَّ ٱللَّهَ كَانَ سَمِيعًۢا بَصِيرًۭا` (innallâhe kâne semî‘am basîrâ): Şüphesiz Allah her şeyi hakkıyla işitendir, hakkıyla görendir.
+- **Sahih Türkçe Meal:**
+  > *"Şüphesiz Allah size, emanetleri mutlaka ehil olanlara (liyakat ve hak sahiplerine) vermenizi ve insanlar arasında hükmettiğiniz zaman adaletle hükmetmenizi emreder! Allah size bununla ne güzel öğüt vermektedir. Şüphesiz Allah her şeyi hakkıyla işitendir, her şeyi hakkıyla görendir. (58)"*
 
-- **İbn Teymiyye (*es-Siyâsetü'ş-Şer'iyye*) Lafzî Tahlili:**
+- **Kelime-Kelime Lafzî Çözümleme (Kelime Mealleri):**
+  - `إِنَّ ٱللَّهَ يَأْمُرُكُمْ` (İnnallâhe ye'muruküm): Şüphesiz Allah size kesin ve bağlayıcı biçimde emreder (`inne` tekit edatı ve muzâri fiil kalıbı, bu emrin kıyamete kadar sürecek anayasal bir vecibe olduğunu gösterir).
+  - `أَن تُؤَدُّوا۟ ٱلْأَمَٰنَٰتِ` (en tü'eddü'l-emânâti): Emanetleri eksiksiz ve tam zamanında eda / iade etmenizi (`el-emânât` çoğul ve elif-lâm'lı gelerek kamu görevlerinden yargı yetkisine, hazine mallarından bilimsel/mesleki sorumluluklara kadar her türlü emaneti kuşatır).
+  - `إِلَىٰٓ أَهْلِهَا` (ilâ ehlihâ): Gerçek ehillerine, o işi en iyi taşıyacak liyakat ve hak sahiplerine (`ehl` kelimesi akrabalık veya sadakati değil, işi hakkıyla yapabilme ehliyetini ve liyakati şart koşar).
+  - `وَإِذَا حَكَمْتُم` (ve izâ hakemtüm): Ve insanlar arasında karar verdiğiniz, yargılama veya idari tasarruf yaptığınız zaman.
+  - `بَيْنَ ٱلنَّاسِ` (beyne'n-nâs): İnsanlar arasında (`el-mü'minîn` değil `en-nâs` buyrularak; din, mezhep, ırk, sınıf ve siyasi görüş ayrımı olmaksızın bütün insanlar arasında).
+  - `أَن تَحْكُمُوا۟ بِٱلْعَدْلِ` (en tahkümû bi'l-‘adl): Tam bir adalet ve hakkaniyetle hükmetmenizi.
+  - `إِنَّ ٱللَّهَ نِعِمَّا يَعِظُكُم بِهِۦٓ` (innallâhe ni‘ımmâ ye‘ızuküm bih): Allah bununla (emaneti ehline verme ve adaletle hükmetme ilkesiyle) size ne güzel öğüt vermektedir.
+  - `إِنَّ ٱللَّهَ كَانَ سَمِيعًۢا بَصِيرًۭا` (innallâhe kâne semî‘an basîrâ): Şüphesiz Allah (verilen kararları ve mazlumun sesini) hakkıyla işitendir, (kapalı kapılar ardındaki kayırmacılığı ve niyetleri) hakkıyla görendir.
+
+- **Klasik Tefsir Lafzî Tahlili (İbn Teymiyye & Fahreddîn er-Râzî):**
   - `[NAKİL]`: İbn Teymiyye, bu âyetin kamu idaresinin ve siyasetin anayasası olduğunu belirterek; *"Kimin elinde kamu görevi tevdi etme yetkisi varsa ve o, görevi layık olan varken akrabalık, hemşehricilik veya rüşvet sebebiyle başkasına verirse, Allah'a, Resûlü'ne ve bütün müminlere hıyanet etmiş olur"* hükmünü nakleder (*es-Siyâsetü'ş-Şer'iyye*, s. 12-14).
-  - `[YORUM]`: Liyakatsiz atama sıradan bir idari kusur değil; nass tarafından doğrudan hıyanet ve kamu hukukuna tecavüz olarak tanımlanmıştır.
+  - `[YORUM]`: Liyakatsiz atama sıradan bir idari kusur değil; nass tarafından doğrudan emanete hıyanet ve kamu hukukuna tecavüz olarak tanımlanmıştır.
 
+- **Siyâk-Sibâk ve Tarihsel Bağlam:**
+Nisâ 4:58, Mekke fethi günü Hz. Peygamber'in Kâbe anahtarını Kureyş'in ileri gelenlerinin ve Hz. Abbas'ın talebine rağmen eski emanetçisi **Osman b. Talha**'ya iade etmesi üzerine inmiş; hemen peşinden gelen **4:59 âyetinde** ise (*"Ey iman edenler! Allah'a, Resûl'e ve sizden olan ulü'l-emre itaat edin"*) kamu otoritesine itaatin önşartı olarak 58. âyetteki **liyakat ve adalet** ilkesi konulmuştur.
 ---
 
 ### ADIM 02 — MANTIKSAL SEMANTİK VE KARŞIT İLKE TESTİ

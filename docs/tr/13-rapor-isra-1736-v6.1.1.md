@@ -1,5 +1,5 @@
 ---
-gem_version: "6.1.1"
+gem_version: "6.2.1"
 case_id: "QV-2026-008"
 surah: "İsrâ"
 verse: "17:36"

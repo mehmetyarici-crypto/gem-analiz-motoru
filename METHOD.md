@@ -2,8 +2,8 @@
 
 # Quran Vision — 26-Step Analytical Method and 5 Macro Phases
 
-> **Note:** This document provides a structural summary of the 26-step method and macro phases. For detailed methodological criteria, epistemic disclaimer standards, and V1–V11 validation modules, please see the current specification:  
-> 🔗 **[Quran Vision v6.1.1 / v6.2.1 Specification (Turkish)](docs/tr/GEM-v6.1.1-taslak.md)**
+> **Note:** This document provides a structural summary of the 26-step method and macro phases. For detailed methodological criteria, epistemic disclaimer standards, and V1–V12 validation modules, please see the current canonical specification:  
+> 🔗 **[Quran Vision v6.2.1 Canonical Specification (Markdown)](QURAN_VISION_v6.2.1_SPECIFICATION.md)** | **[Full Instruction Text (.txt)](docs/QURAN_VISION_v6.2.1_TAM_TALIMAT.txt)**
 
 ---
 

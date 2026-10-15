@@ -1,5 +1,5 @@
 ---
-gem_version: "6.1.1"
+gem_version: "6.2.1"
 case_id: "QV-2026-006"
 surah: "Âl-i İmrân"
 verse: "3:159"
@@ -218,28 +218,33 @@ peer_review:
 
 ---
 
-### ADIM 01 — LAFZÎ TAHLİL
+### ADIM 01 — LAFZÎ TAHLİL, SİYÂK-SİBÂK VE TARİHSEL BAĞLAM
 
-- **Arapça Metin:**
-  > فَبِمَا رَحْمَةٍۢ مِّنَ ٱللَّهِ لِنتَ لَهُمْ ۖ وَلَوْ كُنتَ فَظًّا غَلِيظَ ٱلْقَلْبِ لَٱنفَضُّوا۟ مِنْ حَوْلِكَ ۖ فَٱعْفُ عَنْهُمْ وَٱسْتَغْفِرْ لَهُمْ وَشَاوِرْهُمْ فِى ٱلْأَمْرِ ۖ فَإِذَا عَزَمْتَ فَتَوَكَّلْ عَلَى ٱللَّهِ ۚ إِنَّ ٱللَّهَ يُحِبُّ ٱلْمُتَوَكِّلِينَ
+- **Arapça Metin (Âl-i İmrân Sûresi 3:159 — Resm-i Osmânî):**
+  > فَبِمَا رَحْمَةٍۢ مِّنَ ٱللَّهِ لِنتَ لَهُمْ ۖ وَلَوْ كُنتَ فَظًّا غَلِيظَ ٱلْقَلْبِ لَٱنفَضُّوا۟ مِنْ حَوْلِكَ ۖ فَٱعْفُ عَنْهُمْ وَٱسْتَغْفِرْ لَهُمْ وَشَاوِرْهُمْ فِى ٱلْأَمْرِ ۖ فَإِذَا عَزَمْتَ فَتَوَكَّلْ عَلَى ٱللَّهِ ۚ إِنَّ ٱللَّهَ يُحِبُّ ٱلْمُتَوَكِّلِينَ ﴿١٥٩﴾
 
-- **Kelime Mealleri:**
-  - `فَبِمَا رَحْمَةٍۢ مِّنَ ٱللَّهِ` (Febimâ rahmetim-minallâh): Allah'tan gelen büyük bir rahmet sayesindedir ki.
-  - `لِنتَ لَهُمْ` (linte lehüm): Onlara yumuşak davrandın, mülayim oldun.
-  - `وَلَوْ كُنتَ فَظًّا` (ve lev künte fazzan): Eğer kaba, haşin, kırıcı olsaydın.
-  - `غَلِيظَ ٱلْقَلْبِ` (ğalîza'l-kalb): Katı yürekli, merhametsiz olsaydın.
-  - `لَٱنفَضُّوا۟ مِنْ حَوْلِكَ` (lenfaddû min havlik): Elbette etrafından dağılıp giderlerdi.
-  - `فَٱعْفُ عَنْهُمْ` (fa‘fu ‘anhüm): Artık onları bağışla (kişisel kusurlarını affet).
-  - `وَٱسْتَغْفِرْ لَهُمْ` (vestağfir lehüm): Onlar için Allah'tan mağfiret dile.
-  - `وَشَاوِرْهُمْ فِى ٱلْأَمْرِ` (ve şâvirhüm fi'l-emr): Ve kamu işlerinde / yönetim meselelerinde onlarla istişare et.
-  - `فَإِذَا عَزَمْتَ` (fe-izâ ‘azemte): İstişareden sonra kesin kararını verdiğin zaman.
-  - `فَتَوَكَّلْ عَلَى ٱللَّهِ` (fe-tevekkel ‘alallâh): Artık Allah'a güvenip dayan.
-  - `إِنَّ ٱللَّهَ يُحِبُّ ٱلْمُتَوَكِّلِينَ`: Şüphesiz Allah kendisine güvenip dayananları sever.
+- **Sahih Türkçe Meal:**
+  > *"(Ey Resûlüm!) Allah’tan bir rahmet sayesindedir ki sen onlara yumuşak davrandın! Eğer kaba (fazzan) ve katı yürekli (ğalîza’l-kalb) olsaydın, şüphesiz etrafından dağılıp giderlerdi. Öyleyse onları bağışla, onlar için Allah’tan mağfiret dile ve (kamu işlerinde / yönetim kararlarında) onlarla istişare et (şâvirhüm fi’l-emr)! İstişareden sonra kararını verdiğin (azmettiğin) zaman da artık Allah’a tevekkül et (güvenip dayan). Şüphesiz Allah, kendisine tevekkül edenleri sever. (159)"*
 
-- **Fahreddîn er-Râzî (*Mefâtîhu'l-Gayb*) Lafzî Tahlili:**
+- **Kelime-Kelime Lafzî Çözümleme (Kelime Mealleri):**
+  - `فَبِمَا رَحْمَةٍۢ مِّنَ ٱللَّهِ` (Fe-bimâ rahmetin minallâh): Allah'tan gelen muazzam bir rahmet sayesindedir ki (`mâ` sıla/tekit harfidir; `rahmetin` nekre gelerek tazim ve büyüklük ifade eder).
+  - `لِنتَ لَهُمْ` (linte lehüm): Onlara yumuşak davrandın, şefkat ve mülayemet gösterdin (`lîne` kökünden).
+  - `وَلَوْ كُنتَ فَظًّا` (ve lev künte fazzan): Eğer sözü ve tavrı kaba, haşin, kırıcı olsaydın (`fazz`, dil ve davranış kabalığını ifade eder).
+  - `غَلِيظَ ٱلْقَلْبِ` (ğalîza'l-kalb): Katı yürekli, empati ve merhametten yoksun olsaydın (`ğılza`, kalp ve vicdan katılığını ifade eder).
+  - `لَٱنفَضُّوا۟ مِنْ حَوْلِكَ` (le'nfaddû min havlik): Elbette etrafından tamamen dağılıp giderlerdi (`infidâd`, bir dizideki boncukların ip kopunca dört bir yana saçılması gibi toplumsal birliğin parçalanmasıdır).
+  - `فَٱعْفُ عَنْهُمْ` (fa‘fu ‘anhüm): Artık onları bağışla (şahsına ve liderliğine karşı işledikleri dünyevi kusurları affet).
+  - `وَٱسْتَغْفِرْ لَهُمْ` (vestağfir lehüm): Onlar için Allah'tan mağfiret dile (uhrevi sorumlulukları için dua ederek gönüllerini onar).
+  - `وَشَاوِرْهُمْ فِى ٱلْأَمْرِ` (ve şâvirhüm fi'l-emr): Ve kamu işlerinde / yönetim meselelerinde (`el-emr` cins isimdir; hakkında kesin vahiy bulunmayan bütün idari, siyasi, askeri ve toplumsal işleri kapsar) onlarla istişare et!
+  - `فَإِذَا عَزَمْتَ` (fe-izâ ‘azemte): İstişare ve müzakere tamamlanıp kesin kararını verdiğin zaman.
+  - `فَتَوَكَّلْ عَلَى ٱللَّهِ` (fe-tevekkel ‘alallâh): Artık tereddüdü bırakıp Allah'a güvenip dayan.
+  - `إِنَّ ٱللَّهَ يُحِبُّ ٱلْمُتَوَكِّلِينَ` (innallâhe yuhibbü'l-mütevekkilîn): Şüphesiz Allah, istişare ve tedbirden sonra kendisine güvenip dayananları sever.
+
+- **Klasik Tefsir Lafzî Tahlili (Fahreddîn er-Râzî & Zemahşerî):**
   - `[NAKİL]`: Râzî, bu âyetin Uhud felaketinin peşinden inmesinde muazzam bir hikmet bulunduğunu belirtir: *"Müslümanlar Uhud'da emre itaatsizlik etmiş, hezimete uğramış ve Hz. Peygamber yaralanmıştı. Beşerî tabiat böyle bir krizden sonra onları azarlamayı ve bir daha asla fikirlerini sormamayı gerektirirdi. Fakat Allah Teâlâ bunun tam aksini emretti: 'Onları affet, dua et ve yine onlarla istişare et!' Çünkü istişarede hata etmek, istibdadın isabetinden bin kat hayırlıdır"* (*et-Tefsîrü'l-Kebîr*, C. 9, s. 66).
-  - `[YORUM]`: Kriz anında ortak aklı terk edip otoriterleşmek şeytanî bir tuzaktır; meşru liderlik başarısızlıkta dahi istişareyi derinleştirmeyi emreder.
+  - `[YORUM]`: Kriz anında ortak aklı terk edip otoriterleşmek yıkıcı bir tuzaktır; meşru liderlik başarısızlıkta dahi istişareyi derinleştirmeyi emreder.
 
+- **Siyâk-Sibâk ve Tarihsel Bağlam:**
+Âl-i İmrân 3:152–160 pasajı Uhud Savaşı'ndaki okçular tepesi krizini ve sahabîlerin yaşadığı ağır travmayı ele alır. Böyle bir askeri ve psikolojik yıkımın hemen ortasında inen 159. âyet, kriz sonrasında dahi katılımcı yönetişimin (`şûrâ`) ve şefkat dilinin askıya alınamayacağını anayasal bir norm olarak tescil etmiştir.
 ---
 
 ### ADIM 02 — MANTIKSAL SEMANTİK VE KARŞIT İLKE TESTİ

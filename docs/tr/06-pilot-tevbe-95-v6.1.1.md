@@ -1,5 +1,5 @@
 ---
-gem_version: "6.1.1"
+gem_version: "6.2.1"
 case_id: "QV-2026-001"
 surah: "Tevbe"
 verse: "9:5"
@@ -222,30 +222,35 @@ peer_review:
 
 ---
 
-### ADIM 01 — LAFZÎ TAHLİL
+### ADIM 01 — LAFZÎ TAHLİL, SİYÂK-SİBÂK VE TARİHSEL BAĞLAM
 
-- **Arapça Metin:**
-  > فَإِذَا ٱنسَلَخَ ٱلْأَشْهُرُ ٱلْحُرُمُ فَٱقْتُلُوا۟ ٱلْمُشْرِكِينَ حَيْثُ وَجَدتُّمُوهُمْ وَخُذُوهُمْ وَٱحْصُرُوهُمْ وَٱقْعُدُوا۟ لَهُمْ كُلَّ مَرْصَدٍۢ ۚ فَإِن تَابُوا۟ وَأَقَامُوا۟ ٱلصَّلَوٰةَ وَءَاتَوُا۟ ٱلزَّكَوٰةَ فَخَلُّوا۟ سَبِيلَهُمْ ۚ إِنَّ ٱللَّهَ غَفُورٌۭ رَّحِيمٌۭ
+- **Arapça Metin (Tevbe Sûresi 9:5 — Resm-i Osmânî):**
+  > فَإِذَا ٱنسَلَخَ ٱلْأَشْهُرُ ٱلْحُرُمُ فَٱقْتُلُوا۟ ٱلْمُشْرِكِينَ حَيْثُ وَجَدتُّمُوهُمْ وَخُذُوهُمْ وَٱحْصُرُوهُمْ وَٱقْعُدُوا۟ لَهُمْ كُلَّ مَرْصَدٍۢ ۚ فَإِن تَابُوا۟ وَأَقَامُوا۟ ٱلصَّلَوٰةَ وَءَاتَوُا۟ ٱلزَّكَوٰةَ فَخَلُّوا۟ سَبِيلَهُمْ ۚ إِنَّ ٱللَّهَ غَفُورٌۭ رَّحِيمٌۭ ﴿٥﴾
 
-- **Kelime Mealleri:**
-  - `فَإِذَا` (Fe-izâ): Vaktaki, ... olduğu zaman (şart ve zaman zarfı).
-  - `ٱنسَلَخَ` (nseleha): Sıyrılıp çıktığı, bittiği zaman.
-  - `ٱلْأَشْهُرُ ٱلْحُرُمُ` (el-eşhüru'l-hurum): Haram aylar (tanınan 4 aylık diplomatik mühlet).
-  - `فَٱقْتُلُوا۟` (faktulû): Etkisiz hale getirin / mukabele edin (kamu otoritesine askeri emir).
-  - `ٱلْمُشْرِكِينَ` (el-müşrikîne): O ahdini bozan muharip müşrikleri.
-  - `حَيْثُ وَجَدتُّمُوهُمْ` (haysü vecedtümûhüm): Karşılaştığınız / bulduğunuz yerde.
-  - `وَخُذُوهُمْ` (ve huzûhüm): Yakalayın / esir alın.
-  - `وَٱحْصُرُوهُمْ` (vahsurûhüm): Kuşatın / ablukaya alın.
-  - `وَٱقْعُدُوا۟ لَهُمْ كُلَّ مَرْصَدٍۢ` (vak‘udû lehüm külle marsadin): Her gözetleme yerinde yollarını denetleyin.
-  - `فَإِن تَابُوا۟` (fe-in tâbû): Eğer düşmanlıktan ve şirkten vazgeçerlerse.
-  - `وَأَقَامُوا۟ ٱلصَّلَوٰةَ وَءَاتَوُا۟ ٱلزَّكَوٰةَ`: Anayasal topluma entegre olurlarsa.
-  - `فَخَلُّوا۟ سَبِيلَهُمْ` (fehallû sebîlehüm): Yollarını serbest bırakın (takibatı derhal durdurun).
-  - `إِنَّ ٱللَّهَ غَفُورٌۭ رَّحِيمٌۭ`: Şüphesiz Allah çok bağışlayandır, çok merhamet edendir.
+- **Sahih Türkçe Meal:**
+  > *"Haram aylar (tanınan dört aylık barış ve diplomasi mühleti) çıkınca, o (antlaşmayı bozup saldırganlaşan) müşrikleri bulduğunuz yerde etkisiz hâle getirin; onları yakalayın (esir alın), kuşatın ve bütün geçit yerlerini tutun. Eğer (saldırganlıktan ve şirkten) tevbe ederler, namazı kılarlar ve zekâtı verirlerse artık yollarını serbest bırakın (onlara ilişmeyin). Şüphesiz Allah çok bağışlayandır, çok merhamet edendir. (5)"*
 
-- **Zemahşerî (*el-Keşşâf*) Lafzî Tahlili:**
-  - `[NAKİL]`: Zemahşerî, `فَٱقْتُلُوا۟` emrinin hemen peşinden gelen `وَخُذُوهُمْ وَٱحْصُرُوهُمْ وَٱقْعُدُوا۟ لَهُمْ كُلَّ مَرْصَدٍۢ` tertibinin rastgele olmadığını, esir alma ve teslim olma koridorunu açık tutan bir nizam bildirdiğini kaydeder (*el-Keşşâf*, C. 3, s. 12).
-  - `[YORUM]`: Bu lafzî sıralama modern askeri angajman kurallarındaki (*Rules of Engagement*) orantılı güç kullanımını ve teslim olan düşmana dokunulmazlık hakkını yansıtır.
+- **Kelime-Kelime Lafzî Çözümleme (Kelime Mealleri):**
+  - `فَإِذَا` (Fe-izâ): Vaktaki, ... olduğu zaman (şart ve zaman zarfı; hükmün mutlak değil, 1–4. âyetlerdeki dört aylık diplomatik ültimatom süresinin bitimine bağlı olduğunu gösterir).
+  - `ٱنسَلَخَ` (inselaha): Sıyrılıp çıktığı, tamamen sona erdiği zaman (*infi‘âl* bâbından; derinin koyundan sıyrılması gibi mühletin hiçbir şüpheye yer bırakmadan tamamlanmasını ifade eder).
+  - `ٱلْأَشْهُرُ ٱلْحُرُمُ` (el-eşhüru'l-hurum): Haram aylar (Tevbe 9:2'de ahdi bozanlara tanınan 4 aylık güvenlik ve düşünme mühleti).
+  - `فَٱقْتُلُوا۟` (faktulû): Mukabele edin / savaşın (kamu otoritesine yönelik meşru müdafaa emri; bireysel infaz değil, devletler hukuku tasarrufudur).
+  - `ٱلْمُشْرِكِينَ` (el-müşrikîne): O ahdini bozan muharip müşrikleri (başındaki *el-* takısı *ahd-i zihnî* içindir; 9:1–4 ve 9:7–13'te tanımlanan, barış antlaşmasını arkadan vurarak bozan saldırgan zümreyi tahsis eder).
+  - `حَيْثُ وَجَدتُّمُوهُمْ` (haysü vecedtümûhüm): Onları bulduğunuz / karşılaştığınız yerde (Harem bölgesi istisnasının kalktığını bildiren mekân zarfı).
+  - `وَخُذُوهُمْ` (ve huzûhüm): Onları yakalayın / esir alın (öldürmenin tek seçenek olmadığını, esir alarak etkisizleştirmenin asıl olduğunu gösterir).
+  - `وَٱحْصُرُوهُمْ` (vahsurûhüm): Kuşatın / stratejik ablukaya alın (sıcak çatışmaya girmeden caydırma tedbiri).
+  - `وَٱقْعُدُوا۟ لَهُمْ كُلَّ مَرْصَدٍۢ` (vak‘udû lehüm külle marsadin): Her gözetleme ve sınır kontrol noktasında (`marsad`) güvenlik denetimi kurun.
+  - `فَإِن تَابُوا۟` (fe-in tâbû): Eğer düşmanlıktan, ahit ihlalinden ve şirkten vazgeçip dönerlerse.
+  - `وَأَقَامُوا۟ ٱلصَّلَوٰةَ وَءَاتَوُا۟ ٱلزَّكَوٰةَ` (ve ekâmü's-salâte ve âtevü'z-zekâte): Namazı ikame eder ve zekâtı verirlerse (kamu düzenine ve toplumsal barış sözleşmesine entegre olurlarsa).
+  - `فَخَلُّوا۟ سَبِيلَهُمْ` (fe-hallû sebîlehüm): Derhal yollarını serbest bırakın, her türlü askeri/adli takibatı durdurun!
+  - `إِنَّ ٱللَّهَ غَفُورٌۭ رَّحِيمٌۭ` (innallâhe ğafûrun rahîm): Şüphesiz Allah çok bağışlayandır, çok merhamet edendir (savaş âyetinin rahmet ve mağfiret sıfatlarıyla mühürlenmesi, asıl gayenin imha değil barış ve ıslah olduğunu tescil eder).
 
+- **Klasik Tefsir Lafzî Tahlili (Zemahşerî & Taberî):**
+  - `[NAKİL]`: Zemahşerî, `فَٱقْتُلُوا۟` emrinin hemen peşinden gelen `وَخُذُوهُمْ وَٱحْصُرُوهُمْ وَٱقْعُدُوا۟ لَهُمْ كُلَّ مَرْصَدٍۢ` tertibinin rastgele olmadığını, esir alma ve teslim olma koridorunu açık tutan kademeli bir nizam bildirdiğini kaydeder (*el-Keşşâf*, C. 3, s. 12).
+  - `[YORUM]`: Bu lafzî sıralama modern askeri angajman kurallarındaki (*Rules of Engagement*) orantılı güç kullanımını ve teslim olan veya barışa yanaşan tarafa dokunulmazlık hakkını (`fe-hallû sebîlehüm`) yansıtır.
+
+- **Siyâk-Sibâk ve Tarihsel Bağlam:**
+Tevbe Sûresi 9:1–15 pasajı bir bütün olarak okunduğunda, 5. âyetin hemen öncesindeki 4. âyette (*"Ancak kendileriyle antlaşma yaptığınız müşriklerden size karşı bir eksiklik yapmayan ve aleyhinize kimseye yardım etmeyenler müstesnadır; onlarla antlaşmalarını süresinin sonuna kadar tamamlayın"*) ve hemen sonrasındaki 6. âyette (*"Müşriklerden biri senden eman dilerse ona eman ver ve onu güvenli yerine ulaştır"*) barışçıl müşriklerin mutlak koruma altına alındığı görülür. Dolayısıyla 9:5 yalnızca Hudeybiye barışını kanlı bir baskınla bozan muharip saldırganlara yöneliktir.
 ---
 
 ### ADIM 02 — MANTIKSAL SEMANTİK VE KARŞIT İLKE TESTİ

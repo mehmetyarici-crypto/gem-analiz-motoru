@@ -2,8 +2,8 @@
 
 # Quran Vision — 26 Adımlı Analiz Yöntemi ve 5 Makro Faz
 
-> **Not:** Bu belge yöntemin genel mimarisini ve adım dizinini özetler. Ayrıntılı metodolojik kurallar, epistemik sınır şartları ve V1–V11 doğrulama modülleri için güncel standart belgesine bakınız:  
-> 🔗 **[Quran Vision v6.1.1 / v6.2.1 Standart Belgesi](docs/tr/GEM-v6.1.1-taslak.md)**
+> **Not:** Bu belge yöntemin genel mimarisini ve adım dizinini özetler. Ayrıntılı metodolojik kurallar, epistemik sınır şartları ve V1–V12 doğrulama modülleri için güncel kanonik şartname belgesine bakınız:  
+> 🔗 **[Quran Vision v6.2.1 Kanonik Şartname Belgesi (Markdown)](QURAN_VISION_v6.2.1_SPECIFICATION.md)** | **[Tam Talimatname Metni (.txt)](docs/QURAN_VISION_v6.2.1_TAM_TALIMAT.txt)**
 
 ---
 

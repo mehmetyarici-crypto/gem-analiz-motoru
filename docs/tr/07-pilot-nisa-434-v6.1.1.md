@@ -1,5 +1,5 @@
 ---
-gem_version: "6.1.1"
+gem_version: "6.2.1"
 case_id: "QV-2026-002"
 surah: "Nisâ"
 verse: "4:34"
@@ -222,28 +222,33 @@ peer_review:
 
 ---
 
-### ADIM 01 — LAFZÎ TAHLİL
+### ADIM 01 — LAFZÎ TAHLİL, SİYÂK-SİBÂK VE TARİHSEL BAĞLAM
 
-- **Arapça Metin:**
-  > ٱلرِّجَالُ قَوَّٰمُونَ عَلَى ٱلنِّسَآءِ بِمَا فَضَّلَ ٱللَّهُ بَعْضَهُمْ عَلَىٰ بَعْضٍۢ وَبِمَآ أَنفَقُوا۟ مِنْ أَمْوَٰلِهِمْ ۚ فَٱلصَّـٰلِحَـٰتُ قَـٰنِتَـٰتٌ حَـٰفِظَـٰتٌۭ لِّلْغَيْبِ بِمَا حَفِظَ ٱللَّهُ ۚ وَٱلَّـٰتِى تَخَافُونَ نُشُوزَهُنَّ فَعِظُوهُنَّ وَٱهْجُرُوهُنَّ فِى ٱلْمَضَاجِعِ وَٱضْرِبُوهُنَّ ۖ فَإِنْ أَطَعْنَكُمْ فَلَا تَبْغُوا۟ عَلَيْهِنَّ سَبِيلًا ۗ إِنَّ ٱللَّهَ كَانَ عَلِيًّۭا كَبِيرًۭا
+- **Arapça Metin (Nisâ Sûresi 4:34 — Resm-i Osmânî):**
+  > ٱلرِّجَالُ قَوَّٰمُونَ عَلَى ٱلنِّسَآءِ بِمَا فَضَّلَ ٱللَّهُ بَعْضَهُمْ عَلَىٰ بَعْضٍۢ وَبِمَآ أَنفَقُوا۟ مِنْ أَمْوَٰلِهِمْ ۚ فَٱلصَّـٰلِحَـٰتُ قَـٰنِتَـٰتٌ حَـٰفِظَـٰتٌۭ لِّلْغَيْبِ بِمَا حَفِظَ ٱللَّهُ ۚ وَٱلَّـٰتِى تَخَافُونَ نُشُوزَهُنَّ فَعِظُوهُنَّ وَٱهْجُرُوهُنَّ فِى ٱلْمَضَاجِعِ وَٱضْرِبُوهُنَّ ۖ فَإِنْ أَطَعْنَكُمْ فَلَا تَبْغُوا۟ عَلَيْهِنَّ سَبِيلًا ۗ إِنَّ ٱللَّهَ كَانَ عَلِيًّۭا كَبِيرًۭا ﴿٣٤﴾
 
-- **Kelime Mealleri:**
-  - `ٱلرِّجَالُ قَوَّٰمُونَ عَلَى ٱلنِّسَآءِ`: Erkekler, kadınları koruyup gözeten, sorumluluğunu üstlenenlerdir.
-  - `بِمَا فَضَّلَ ٱللَّهُ بَعْضَهُمْ عَلَىٰ بَعْضٍۢ`: Allah'ın bazısını bazısına farklı yeteneklerle donatması sebebiyle.
-  - `وَبِمَآ أَنفَقُوا۟ مِنْ أَمْوَٰلِهِمْ`: Ve mallarından harcama yaptıkları (nafaka ve mehir sağladıkları) için.
-  - `فَٱلصَّـٰلِحَـٰتُ قَـٰنِتَـٰتٌ`: Erdemli kadınlar, saygılı ve Allah'ın koyduğu sınırlara sadıktırlar.
-  - `حَـٰفِظَـٰتٌۭ لِّلْغَيْبِ بِمَا حَفِظَ ٱللَّهُ`: Allah'ın koruması sayesinde mahremiyeti ve aile emanetini korurlar.
-  - `وَٱلَّـٰتِى تَخَافُونَ نُشُوزَهُنَّ`: Sadakatsizlik ve başkaldırısından endişe ettiğiniz kadınlara gelince:
-  - `فَعِظُوهُنَّ`: Onlara öğüt verin (iletişim ve ikna kapısını açın).
-  - `وَٱهْجُرُوهُنَّ فِى ٱلْمَضَاجِعِ`: Yataklarında onları yalnız bırakın (duygusal mesafe koyun).
-  - `وَٱضْرِبُوهُنَّ`: Ve onları (sembolik müdahaleyle uyarın / ayrılın).
-  - `فَإِنْ أَطَعْنَكُمْ فَلَا تَبْغُوا۟ عَلَيْهِنَّ سَبِيلًا`: Eğer sizinle uzlaşırlarsa, aleyhlerine bir baskı yolu aramayın.
-  - `إِنَّ ٱللَّهَ كَانَ عَلِيًّۭا كَبِيرًۭا`: Şüphesiz Allah çok yücedir, çok büyüktür.
+- **Sahih Türkçe Meal:**
+  > *"Erkekler, Allah’ın (fıtrî ve içtimaî görev dağılımında) kimini kimine farklı imkân ve sorumluluklarla donatması ve kendi mallarından (mehir ve nafaka olarak) harcama yapmaları sebebiyle, kadınların (ve aile kurumunun) koruyup gözetleyicileridir (kavvâmûn). Saliha kadınlar da Allah’a gönülden itaatkâr olan ve Allah’ın (haklarını) korumasına karşılık, eşlerinin yokluğunda (aile mahremiyetini ve emanetini) koruyanlardır. Aile birliğini yıkmak üzere başkaldırmasından (nüşûzundan) endişe ettiğiniz kadınlara gelince: (Önce) onlara (güzellikle) öğüt verin; (fayda vermezse) yataklarında onları yalnız bırakın; (yine sonuç alınamazsa zararsız/sembolik bir uyarı olarak) çıkarın/dokunun. Eğer (hukuka ve aile uyumuna) dönerlerse, artık aleyhlerine bir baskı ve eziyet yolu aramayın! Şüphesiz Allah çok yücedir, çok büyüktür. (34)"*
 
-- **Zemahşerî (*el-Keşşâf*) Lafzî Tahlili:**
-  - `[NAKİL]`: Zemahşerî, `فَلَا تَبْغُوا۟ عَلَيْهِنَّ سَبِيلًا` nehyinin nüşûz bittiği anda erkeğin her türlü kınama, intikam veya geçmişe dönük baskı yapmasını hukuken engellediğini kaydeder (*el-Keşşâf*, C. 2, s. 71).
-  - `[YORUM]`: Bu nehiy, erkeğin keyfi denetim ve şiddet uygulamasını kesin olarak yasaklar; yönetişimi hukuki sınırlara bağlar.
+- **Kelime-Kelime Lafzî Çözümleme (Kelime Mealleri):**
+  - `ٱلرِّجَالُ قَوَّٰمُونَ عَلَى ٱلنِّسَآءِ` (Er-ricâlü kavvâmûne ‘ale'n-nisâi): Erkekler, kadınları ve aile kurumunu koruyup gözeten, geçim ve güvenlik sorumluluğunu üstlenen hizmetkâr yöneticilerdir (`kavvâm`, tahakküm değil, bir kurumun ayakta kalması için yük taşıyan sorumluluk makamını ifade eder).
+  - `بِمَا فَضَّلَ ٱللَّهُ بَعْضَهُمْ عَلَىٰ بَعْضٍۢ` (bimâ faddalallâhu ba‘dahüm ‘alâ ba‘d): Allah'ın bazısını bazısına farklı yetenek ve yükümlülüklerle donatması sebebiyle (`ba‘dahüm ‘alâ ba‘d` karşılıklı üstünlük ve tamamlayıcılık bildirir).
+  - `وَبِمَآ أَنفَقُوا۟ مِنْ أَمْوَٰلِهِمْ` (ve bimâ enfekû min emvâlihim): Ve kendi mallarından (mehir ve aile nafakası olarak) harcama yaptıkları için (*mâ-i sebebiyye*; kavametin ontolojik değil, mali ve hukuki sorumluluğa bağlı olduğunu gösterir).
+  - `فَٱلصَّـٰلِحَـٰتُ قَـٰنِتَـٰتٌ` (fe's-sâlihâtü kânitâtün): Erdemli ve yapıcı kadınlar, Allah'a gönülden itaatkâr (`kunût`) ve aile ahengine sadıktırlar.
+  - `حَـٰفِظَـٰتٌۭ لِّلْغَيْبِ بِمَا حَفِظَ ٱللَّهُ` (hâfizâtün li'l-ğaybi bimâ hafizallâh): Allah'ın (onların haklarını ve onurunu) koruması sayesinde, eşlerinin gıyabında aile mahremiyetini ve emanetini korurlar.
+  - `وَٱلَّـٰتِى تَخَافُونَ نُشُوزَهُنَّ` (ve'llâtî tehâfûne nüşûzehünne): Aile akdini ve sadakatini yıkıcı başkaldırısından (`nüşûz`) ciddi endişe duyduğunuz kadınlara gelince (Nisâ 4:128'de erkeğin *nüşûz*u da aynı kavramla kınanmıştır).
+  - `فَعِظُوهُنَّ` (fe-‘ızûhünne): İlk adım olarak onlara hikmet ve şefkatle öğüt verin (iletişim ve müzakere kapısını açın).
+  - `وَٱهْجُرُوهُنَّ فِى ٱلْمَضَاجِعِ` (vehcurûhünne fi'l-medâci‘): İkinci adım olarak yataklarda yalnız bırakın (evden kovmadan ve sözlü hakaret etmeden krizin ciddiyetini hissettiren duygusal mesafe koyun).
+  - `وَٱضْرِبُوهُنَّ` (vadribûhünne): Üçüncü adım olarak (Sünnetin *ğayra müberrih* [iz bırakmayan, acıtmayan sembolik misvak dokunuşu] tahdidi ve Hz. Peygamber'in hayatı boyunca hiçbir kadına el kaldırmamış olması ışığında) son sembolik uyarıda bulunun veya geçici ayrılık yoluna gidin.
+  - `فَإِنْ أَطَعْنَكُمْ فَلَا تَبْغُوا۟ عَلَيْهِنَّ سَبِيلًا` (fe-in eta‘neküm fe-lâ tebğû ‘aleyhinne sebîlâ): Eğer aile hukukuna ve uzlaşıya dönerlerse, sakın aleyhlerine bir baskı, kınama veya üstünlük yolu (`sebîl`) aramayın (`lâ tebğû`, erkeğin güç istismarını *bağy* [zulüm] sayarak kesin biçimde haram kılar).
+  - `إِنَّ ٱللَّهَ كَانَ عَلِيًّۭا كَبِيرًۭا` (innallâhe kâne ‘aliyyen kebîrâ): Şüphesiz Allah çok yücedir, çok büyüktür (kadına karşı gücünü istismar etmeye kalkışan erkeğe, kendisinden çok daha üstün ve büyük olan Allah'ın hesap soracağı tehdididir).
 
+- **Klasik Tefsir Lafzî Tahlili (Zemahşerî & İbn Âşûr):**
+  - `[NAKİL]`: Zemahşerî, `فَلَا تَبْغُوا۟ عَلَيْهِنَّ سَبِيلًا` nehyinin nüşûz bittiği anda erkeğin her türlü kınama, intikam veya geçmişe dönük baskı yapmasını hukuken engellediğini; âyet sonundaki `إِنَّ ٱللَّهَ كَانَ عَلِيًّۭا كَبِيرًۭا` tehdidinin ise doğrudan erkekleri zulümden sakındırmak için geldiğini kaydeder (*el-Keşşâf*, C. 2, s. 71).
+  - `[YORUM]`: Bu nehiy ve ilahi tehdit, erkeğin keyfi denetim ve fiziksel/psikolojik şiddet uygulamasını kesin olarak yasaklar; aile yönetişimini merhamet ve hukuki sınırlara bağlar.
+
+- **Siyâk-Sibâk ve Tarihsel Bağlam:**
+Nisâ Sûresi 4:32–35 pasajında önce kadınların ve erkeklerin kendi kazançları üzerindeki bağımsız mülkiyet hakları (4:32) tescil edilmiş, 4:34'te aile içi kriz yönetimi kademelendirilmiş, hemen 4:35'te ise kriz çözülmezse şiddete değil **kurumsal aile hakemliğine (iki taraftan birer hakem)** başvurulması emredilmiştir.
 ---
 
 ### ADIM 02 — MANTIKSAL SEMANTİK VE KARŞIT İLKE TESTİ

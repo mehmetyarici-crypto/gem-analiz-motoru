@@ -1,7 +1,7 @@
 # QV-2026-001 — Surah At-Tawbah 9:5: Breach of Covenant (Nakth al-Ahd), Deterrence & Legitimate Self-Defense Architecture in International Law
 
 **Document Status:** `PRE-RELEASE` | **Confidence Grade:** `B` | **Methodological Layer:** `Layer 3 (H6 Complex Verse Protocol)`
-**External Cryptographic Manifest (SHA-256):** `0ae1742e101e9f59f78ddcca930501bbb9cb158afee571d949c705983014aed4`
+**External Cryptographic Manifest (SHA-256):** `a6a0833bbc39ecd3b7bd350f0fa55828bdee108d4dc3c07c22b65976d9d1c3c7`
 
 ---
 
