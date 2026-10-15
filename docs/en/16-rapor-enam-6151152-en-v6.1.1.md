@@ -143,7 +143,7 @@
 **Open Strategic Dilemma:** [ANALYSIS] When institutional, tribal, or partisan solidarity pressures individuals to conceal wrongdoing by their own group, what legal protections and moral education sustain the Quranic imperative of impartial testimony (wa idha qultum fa'dilu wa law kana dha qurba)?
 
 ### Z-4 · Epistemic Humility & Methodological Limitations Clause
-[ANALYSIS] All quantitative Bayesian probabilities ($P(S_1) = 22\% ightarrow P(S_1|E) = 75\%$) and threshold indicators represent falsifiable human policy models rather than definitive theological decrees. The ultimate truth of the divine word belongs to God alone (*Wa'llahu A'lam bi-muradihi*).
+[ANALYSIS] All quantitative Bayesian probabilities ($P(S_1) = 22\% \rightarrow P(S_1|E) = 75\%$) and threshold indicators represent falsifiable human policy models rather than definitive theological decrees. The ultimate truth of the divine word belongs to God alone (*Wa'llahu A'lam bi-muradihi*).
 
 ### Z-5 · Verified Primary & Empirical Footnotes (ISNAD 2 & APA 7 / DOI)
 [^1]: Zemahşerî, Mahmûd b. Ömer (ö. 538/1144), *el-Keşşâf 'an Hakâ'ikı Gavâmizi't-Tenzîl*, ed. Âdil Ahmed Abdülmevcûd, Ali Muhammed Muavvaz (Riyad: Mektebetü'l-Ubeykân, 1998), 2/488-494. Digital Verification: https://archive.org/details/kashshaf-ubaykan (urn:shamela:23617).

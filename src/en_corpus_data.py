@@ -681,6 +681,54 @@ EN_CORPUS: Dict[str, Dict[str, Any]] = {
                 "score_justification": "Replacing the 'Clash of Civilizations' thesis with the Quranic model of pluralistic mutual enrichment (li-ta'arafu)"
             }
         ]
+    },
+    "QV-2026-015": {
+        "surah_en": "Al-Ma'idah",
+        "topic_en": "Inviolability of Human Life, Doctrine of Saving Life (Ihya'), Global Human Security & Bioethics Architecture",
+        "aporia_en": "[ANALYSIS] Against utilitarian calculus that reduces innocent human lives to expendable statistics ('collateral damage'), Al-Ma'idah 5:32 establishes an absolute ontological equation: taking a single innocent life is equivalent to destroying all of humanity, and saving a single life (wa man ahyaha) is equivalent to saving all of humanity.",
+        "z3_en": "[ANALYSIS] How must contemporary military doctrines, autonomous weapons regulations, and public health / occupational safety systems confront the Quranic principle that 'One Innocent Life = All of Humanity'?",
+        "thresholds_en": [
+            {
+                "id": "th-01",
+                "name": "Intentional Homicide & Right-to-Life Violation Rate (UNODC per 100k)",
+                "value": "<= 1.2",
+                "derivation_basis": "[ESTIMATED THRESHOLD] UNODC Global Study on Homicide benchmark for societies with strong rule of law and human security"
+            },
+            {
+                "id": "th-02",
+                "name": "Preventable Mortality Reduction & Emergency Life-Saving (Ihya') Access Index (WHO UHC)",
+                "value": ">= 0.85",
+                "derivation_basis": "[ESTIMATED THRESHOLD] Calibration of Al-Qurtubi and Al-Raghib's interpretation of 'ihya' (rescuing from disease, famine, fire, and disaster) with the WHO Universal Health Coverage index"
+            },
+            {
+                "id": "th-03",
+                "name": "Civilian Immunity & Humanitarian Corridor Compliance in Armed Conflicts (UCDP/IEP)",
+                "value": ">= 98%",
+                "derivation_basis": "[ESTIMATED THRESHOLD] Working hypothesis enforcing absolute civilian protection under Al-Ma'idah 5:32"
+            }
+        ],
+        "scenarios_en": [
+            {
+                "id": "S1",
+                "title": "Protective Scenario (Universal Ihya' Civilization: Right to Life, Bioethics & Human Security)",
+                "score_justification": "Institutionalizing the inviolability of innocent human life (hifz al-nafs) across law, bioethics, disaster resilience, and international humanitarian law"
+            },
+            {
+                "id": "S2",
+                "title": "Balance Scenario (Selective Right to Life & Geopolitical Double Standards)",
+                "score_justification": "Protecting life in core economies while normalizing civilian casualties and preventable deaths in crisis zones"
+            },
+            {
+                "id": "S3",
+                "title": "Breakdown Scenario (Fasad fi'l-Ard: Mass Civilian Casualties, Autonomous Weapons & Bioethical Collapse)",
+                "score_justification": "Erosion of international humanitarian law and unchecked proliferation of lethal autonomous weapons"
+            },
+            {
+                "id": "S4",
+                "title": "Revival Scenario (Global Al-Ma'idah 5:32 Life-Saving, Medical Solidarity & Disaster Ihya' Pact)",
+                "score_justification": "Translating 'whoever saves one life saves all humanity' into global public health, search-and-rescue, organ donation, and humanitarian diplomacy networks"
+            }
+        ]
     }
 }
 

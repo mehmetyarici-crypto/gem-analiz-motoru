@@ -141,7 +141,7 @@
 **Open Strategic Dilemma:** [ANALYSIS] In economies experiencing high inflation or structural unemployment, how does Islamic legal philosophy prioritize distributive justice, social safety nets, and rehabilitative repentance (Al-Ma'idah 5:39) over punitive formalism?
 
 ### Z-4 · Epistemic Humility & Methodological Limitations Clause
-[ANALYSIS] All quantitative Bayesian probabilities ($P(S_1) = 38\% ightarrow P(S_1|E) = 78\%$) and threshold indicators represent falsifiable human policy models rather than definitive theological decrees. The ultimate truth of the divine word belongs to God alone (*Wa'llahu A'lam bi-muradihi*).
+[ANALYSIS] All quantitative Bayesian probabilities ($P(S_1) = 38\% \rightarrow P(S_1|E) = 78\%$) and threshold indicators represent falsifiable human policy models rather than definitive theological decrees. The ultimate truth of the divine word belongs to God alone (*Wa'llahu A'lam bi-muradihi*).
 
 ### Z-5 · Verified Primary & Empirical Footnotes (ISNAD 2 & APA 7 / DOI)
 [^1]: Zemahşerî, Mahmûd b. Ömer (ö. 538/1144), *el-Keşşâf 'an Hakâ'ikı Gavâmizi't-Tenzîl*, ed. Âdil Ahmed Abdülmevcûd, Ali Muhammed Muavvaz (Riyad: Mektebetü'l-Ubeykân, 1998), 2/228-232. Digital Verification: https://archive.org/details/kashshaf-ubaykan (urn:shamela:23617).

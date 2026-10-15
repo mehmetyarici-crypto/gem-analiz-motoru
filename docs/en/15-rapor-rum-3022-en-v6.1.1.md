@@ -142,7 +142,7 @@
 **Open Strategic Dilemma:** [ANALYSIS] How can modern pluralistic states cultivate a shared civic and constitutional identity while actively preserving minority languages and cultural heritage as protected divine signs (ayat) under Ar-Rum 30:22?
 
 ### Z-4 · Epistemic Humility & Methodological Limitations Clause
-[ANALYSIS] All quantitative Bayesian probabilities ($P(S_1) = 25\% ightarrow P(S_1|E) = 72\%$) and threshold indicators represent falsifiable human policy models rather than definitive theological decrees. The ultimate truth of the divine word belongs to God alone (*Wa'llahu A'lam bi-muradihi*).
+[ANALYSIS] All quantitative Bayesian probabilities ($P(S_1) = 25\% \rightarrow P(S_1|E) = 72\%$) and threshold indicators represent falsifiable human policy models rather than definitive theological decrees. The ultimate truth of the divine word belongs to God alone (*Wa'llahu A'lam bi-muradihi*).
 
 ### Z-5 · Verified Primary & Empirical Footnotes (ISNAD 2 & APA 7 / DOI)
 [^1]: Zemahşerî, Mahmûd b. Ömer (ö. 538/1144), *el-Keşşâf 'an Hakâ'ikı Gavâmizi't-Tenzîl*, ed. Âdil Ahmed Abdülmevcûd, Ali Muhammed Muavvaz (Riyad: Mektebetü'l-Ubeykân, 1998), 4/445-450. Digital Verification: https://archive.org/details/kashshaf-ubaykan (urn:shamela:23617).

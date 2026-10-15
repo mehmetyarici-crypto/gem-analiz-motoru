@@ -150,7 +150,7 @@
 **Open Strategic Dilemma:** [ANALYSIS] In a century marked by mass migration, resurgent xenophobia, and identity polarization, how can states and educational curricula institutionalize the Quranic paradigm of Ta'aruf (active mutual recognition) and Taqwa-based meritocracy over ethnic or ideological tribalism ('asabiyyah)?
 
 ### Z-4 · Epistemic Humility & Methodological Limitations Clause
-[ANALYSIS] All quantitative Bayesian probabilities ($P(S_1) = 28\% ightarrow P(S_1|E) = 81\%$) and threshold indicators represent falsifiable human policy models rather than definitive theological decrees. The ultimate truth of the divine word belongs to God alone (*Wa'llahu A'lam bi-muradihi*).
+[ANALYSIS] All quantitative Bayesian probabilities ($P(S_1) = 28\% \rightarrow P(S_1|E) = 81\%$) and threshold indicators represent falsifiable human policy models rather than definitive theological decrees. The ultimate truth of the divine word belongs to God alone (*Wa'llahu A'lam bi-muradihi*).
 
 ### Z-5 · Verified Primary & Empirical Footnotes (ISNAD 2 & APA 7 / DOI)
 [^1]: İbn Fâris, Ebü'l-Hüseyn Ahmed b. Fâris (ö. 395/1004), *Mu'cemü Makâyîsi'l-Lüğa*, ed. Abdüsselâm Muhammed Hârûn (Beyrut: Dârü'l-Fikr, 1399/1979), 4/281-284. Digital Verification: https://shamela.ws/book/9193 (urn:shamela:book:9193:v4:p281).

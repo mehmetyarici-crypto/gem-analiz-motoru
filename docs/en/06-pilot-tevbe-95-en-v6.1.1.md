@@ -142,7 +142,7 @@
 **Open Strategic Dilemma:** [ANALYSIS] In an era of hybrid warfare, proxy conflicts, and non-state armed actors, how should international legal frameworks define the objective threshold of 'systemic breach of covenant' (nakth al-ahd) without enabling unilateral pre-emptive aggression or disproportionate escalation?
 
 ### Z-4 · Epistemic Humility & Methodological Limitations Clause
-[ANALYSIS] All quantitative Bayesian probabilities ($P(S_1) = 42\% ightarrow P(S_1|E) = 78\%$) and threshold indicators represent falsifiable human policy models rather than definitive theological decrees. The ultimate truth of the divine word belongs to God alone (*Wa'llahu A'lam bi-muradihi*).
+[ANALYSIS] All quantitative Bayesian probabilities ($P(S_1) = 42\% \rightarrow P(S_1|E) = 78\%$) and threshold indicators represent falsifiable human policy models rather than definitive theological decrees. The ultimate truth of the divine word belongs to God alone (*Wa'llahu A'lam bi-muradihi*).
 
 ### Z-5 · Verified Primary & Empirical Footnotes (ISNAD 2 & APA 7 / DOI)
 [^1]: Zemahşerî, Mahmûd b. Ömer (ö. 538/1144), *el-Keşşâf 'an Hakâ'ikı Gavâmizi't-Tenzîl*, ed. Âdil Ahmed Abdülmevcûd, Ali Muhammed Muavvaz (Riyad: Mektebetü'l-Ubeykân, 1998), 3/10-15. Digital Verification: https://archive.org/details/kashshaf-ubaykan (urn:shamela:23617).

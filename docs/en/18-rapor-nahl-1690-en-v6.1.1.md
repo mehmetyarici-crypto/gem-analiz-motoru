@@ -143,7 +143,7 @@
 **Open Strategic Dilemma:** [ANALYSIS] How can modern legal, economic, and educational institutions operationalize the transition from mere formalistic compliance ('Adl) to proactive civic generosity and restorative empathy (Ihsan) while erecting institutional barriers against corruption (Munkar) and abuse of power (Baghy)?
 
 ### Z-4 · Epistemic Humility & Methodological Limitations Clause
-[ANALYSIS] All quantitative Bayesian probabilities ($P(S_1) = 24\% ightarrow P(S_1|E) = 76\%$) and threshold indicators represent falsifiable human policy models rather than definitive theological decrees. The ultimate truth of the divine word belongs to God alone (*Wa'llahu A'lam bi-muradihi*).
+[ANALYSIS] All quantitative Bayesian probabilities ($P(S_1) = 24\% \rightarrow P(S_1|E) = 76\%$) and threshold indicators represent falsifiable human policy models rather than definitive theological decrees. The ultimate truth of the divine word belongs to God alone (*Wa'llahu A'lam bi-muradihi*).
 
 ### Z-5 · Verified Primary & Empirical Footnotes (ISNAD 2 & APA 7 / DOI)
 [^1]: Zemahşerî, Cârullah Ebü'l-Kâsım Mahmûd b. Ömer (ö. 538/1144), *el-Keşşâf 'an Hakâ'ikı Gavâmizi't-Tenzîl*, ed. Âdil Ahmed Abdülmevcûd, Ali Muhammed Muavvaz (Riyad: Mektebetü'l-Ubeykân, 1998), 3/466-470. Digital Verification: https://archive.org/details/kashshaf-ubaykan (urn:shamela:23617).

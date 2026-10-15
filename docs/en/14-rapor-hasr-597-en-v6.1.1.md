@@ -142,7 +142,7 @@
 **Open Strategic Dilemma:** [ANALYSIS] In a global economy where the top 1% captures an unprecedented share of wealth and AI automation threatens labor income, which institutional mechanisms (zakat, awqaf, profit-sharing mudarabah, progressive asset circulation) best actualize Al-Hashr 59:7?
 
 ### Z-4 · Epistemic Humility & Methodological Limitations Clause
-[ANALYSIS] All quantitative Bayesian probabilities ($P(S_1) = 20\% ightarrow P(S_1|E) = 68\%$) and threshold indicators represent falsifiable human policy models rather than definitive theological decrees. The ultimate truth of the divine word belongs to God alone (*Wa'llahu A'lam bi-muradihi*).
+[ANALYSIS] All quantitative Bayesian probabilities ($P(S_1) = 20\% \rightarrow P(S_1|E) = 68\%$) and threshold indicators represent falsifiable human policy models rather than definitive theological decrees. The ultimate truth of the divine word belongs to God alone (*Wa'llahu A'lam bi-muradihi*).
 
 ### Z-5 · Verified Primary & Empirical Footnotes (ISNAD 2 & APA 7 / DOI)
 [^1]: Zemahşerî, Mahmûd b. Ömer (ö. 538/1144), *el-Keşşâf 'an Hakâ'ikı Gavâmizi't-Tenzîl*, ed. Âdil Ahmed Abdülmevcûd, Ali Muhammed Muavvaz (Riyad: Mektebetü'l-Ubeykân, 1998), 5/748-752. Digital Verification: https://archive.org/details/kashshaf-ubaykan (urn:shamela:23617).

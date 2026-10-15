@@ -334,7 +334,7 @@ def build_single_report_print_html(r: dict, idx: int) -> str:
     <article class="pdf-report">
       <div class="pdf-header-banner">
         <div class="pdf-meta-line">
-          <span>QURAN VISION v6.2.1 • AKADEMİK STRATEJİ RAPORU</span>
+          <span>KUR’ÂN VİZYONU ENSTİTÜSÜ v6.2.1 • DOI: 10.5281/zenodo.23391192 • ORCID: 0009-0003-0356-8582</span>
           <span>VAKA KODU: <strong>{html_lib.escape(r['case_id'])}</strong></span>
         </div>
         <h1 class="pdf-main-title">{idx}. {html_lib.escape(r['surah'])} Sûresi {html_lib.escape(r['verse'])} — {html_lib.escape(r['topic'])}</h1>
@@ -645,7 +645,7 @@ def build_single_report_print_html_en(r: dict, idx: int) -> str:
     <article class="pdf-report">
       <div class="pdf-header-banner">
         <div class="pdf-meta-line">
-          <span>QURAN VISION INSTITUTE v6.2.1 • STRATEGIC TAFSIR & FORESIGHT REPORT</span>
+          <span>QURAN VISION INSTITUTE v6.2.1 • DOI: 10.5281/zenodo.23391192 • ORCID: 0009-0003-0356-8582</span>
           <span>CASE ID: <strong>{html_lib.escape(r['case_id'])}</strong></span>
         </div>
         <h1 class="pdf-main-title">{idx}. Surah {html_lib.escape(r.get('surah_en', r['surah']))} {html_lib.escape(r['verse'])} — {html_lib.escape(r.get('topic_en', r['topic']))}</h1>
@@ -1702,24 +1702,20 @@ const EN_REPORTS_META = {{
     topic_en: "Ontological Equality of Humankind, Doctrine of Mutual Recognition (Ta'aruf), Anti-Racism & Taqwa-Based Universal Merit",
     aporia_en: "[ANALYSIS] Addressing all of humanity (Ya ayyuha'n-nas), Al-Hujurat 49:13 affirms a single shared human origin, redefines ethnic and national plurality strictly as a vehicle for mutual discovery and cooperation (li-ta'arafu), and replaces hereditary/racial superiority with moral-ethical consciousness (Taqwa).",
     z3_en: "[ANALYSIS] When demographic migration and geopolitical tensions fuel xenophobia and identity politics, how can educational and civic institutions operationalize the Quranic paradigm of Ta'aruf (active mutual recognition) over conflict?"
+  }},
+  "QV-2026-015": {{
+    surah_en: "Al-Ma'idah",
+    topic_en: "Inviolability of Human Life, Doctrine of Saving Life (Ihya'), Global Human Security & Bioethics Architecture",
+    aporia_en: "[ANALYSIS] Against utilitarian calculus that reduces innocent human lives to expendable statistics ('collateral damage'), Al-Ma'idah 5:32 establishes an absolute ontological equation: taking a single innocent life is equivalent to destroying all of humanity, and saving a single life (wa man ahyaha) is equivalent to saving all of humanity.",
+    z3_en: "[ANALYSIS] How must contemporary military doctrines, autonomous weapons regulations, and public health / occupational safety systems confront the Quranic principle that 'One Innocent Life = All of Humanity'?"
   }}
 }};
 
 const CANDIDATE_VERSES = [
   {{
-    surah: "Mâide", surah_en: "Al-Ma'idah", verse: "5:32",
-    title: "Yaşam Hakkının Dokunulmazlığı, Küresel İnsani Güvenlik ve Biyoetik Doktrini",
-    title_en: "Inviolability of Human Life, Global Human Security & Bioethics Doctrine"
-  }},
-  {{
     surah: "Bakara", surah_en: "Al-Baqarah", verse: "2:143",
     title: "Vasat Ümmet (Denge ve İtidal), Küresel Şahitlik ve Kutuplaşma Karşıtı Jeopolitik",
     title_en: "The Balanced Community (Ummatan Wasatan), Global Moral Witness & Anti-Polarization Geopolitics"
-  }},
-  {{
-    surah: "Zümer", surah_en: "Az-Zumar", verse: "39:18",
-    title: "Sözü Dinleyip En Güzeline Uymak (Ahsenü'l-Kavl): Eleştirel Düşünce ve Açık Müzakere Ahlakı",
-    title_en: "Listening to Discourse and Following the Best of It (Ahsan al-Qawl): Critical Thinking & Deliberative Ethics"
   }},
   {{
     surah: "Alak", surah_en: "Al-'Alaq", verse: "96:1-5",
@@ -1727,14 +1723,24 @@ const CANDIDATE_VERSES = [
     title_en: "The Doctrine of Iqra' and the Pen: Scientific Production, Epistemic Civilization & Philosophy of Education"
   }},
   {{
+    surah: "Fussilet", surah_en: "Fussilat", verse: "41:34",
+    title: "Kötülüğü En Güzel Olanla Savmak (İhsan Stratejisi): Çatışma Çözümü ve Toplumsal Barış Diplomasisi",
+    title_en: "Repelling Evil with What is Best (Daf' bi'llati hiya Ahsan): Conflict Transformation & Peace Diplomacy"
+  }},
+  {{
+    surah: "Zümer", surah_en: "Az-Zumar", verse: "39:18",
+    title: "Sözü Dinleyip En Güzeline Uymak (Ahsenü'l-Kavl): Eleştirel Düşünce ve Açık Müzakere Ahlakı",
+    title_en: "Listening to Discourse and Following the Best of It (Ahsan al-Qawl): Critical Thinking & Deliberative Ethics"
+  }},
+  {{
     surah: "Mülk", surah_en: "Al-Mulk", verse: "67:3-4",
     title: "Kozmik Düzen, Kusursuzluk Arayışı, Bilimsel Gözlem ve Ekoloji Mimarisi",
     title_en: "Cosmic Order, Empirical Observation, Scientific Inquiry & Ecological Stewardship"
   }},
   {{
-    surah: "Fussilet", surah_en: "Fussilat", verse: "41:34",
-    title: "Kötülüğü En Güzel Olanla Savmak (İhsan Stratejisi): Çatışma Çözümü ve Toplumsal Barış Diplomasisi",
-    title_en: "Repelling Evil with What is Best (Daf' bi'llati hiya Ahsan): Conflict Transformation & Peace Diplomacy"
+    surah: "İsrâ", surah_en: "Al-Isra", verse: "17:70",
+    title: "İnsanoğlunun Mükerrem Yaratılışı (Tekrîm-i Benî Âdem): Evrensel İnsan Onuru ve Haklar Mimarisi",
+    title_en: "The Honored Creation of Humankind (Takrim Bani Adam): Universal Human Dignity & Rights Architecture"
   }}
 ];
 
