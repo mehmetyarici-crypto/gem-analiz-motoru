@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+title: "Quran Vision Corpus (Kur'ân Vizyonu Külliyatı): 26-Step Evidence-Based Strategic Tafsir, Maqasid & Civilization Foresight Corpus (TR/EN)"
+message: "If you use this corpus, methodology, or any of its 14 foundational verse reports in your academic research or curriculum, please cite it using the metadata below."
+type: dataset
+version: "6.2.1"
+date-released: "2026-10-15"
+url: "https://mehmetyarici-crypto.github.io/quran-vision/"
+repository-code: "https://github.com/mehmetyarici-crypto/quran-vision"
+license: CC-BY-NC-SA-4.0
+authors:
+  - family-names: "Yarıcı"
+    given-names: "Mehmet"
+    affiliation: "Quran Vision Institute / Kur'ân Vizyonu Stratejik Tefsir Külliyatı"
+keywords:
+  - "Quranic Studies"
+  - "Strategic Tafsir"
+  - "Maqasid al-Shariah"
+  - "ISNAD 2 Citation Standard"
+  - "Bayesian Policy Modeling"
+  - "Islamic Law and Ethics"
+  - "Civilization Foresight"
+  - "TYMM Religious Education Pedagogy"
+abstract: >-
+  The Quran Vision Corpus (v6.2.1) is a bilingual (Turkish/English) academic research corpus and interactive digital cockpit comprising 14 foundational Quranic verse monographs (QV-2026-001 through QV-2026-014). Each report follows a standardized 26-step methodological protocol across 5 macro-phases and 5 mandatory appendices (Z-1 to Z-5), bridging 71 primary Arabic classical tafsir citations (verified under the ISNAD 2nd Edition standard) with 42 contemporary empirical datasets (World Bank, UNDP, WJP, UNESCO, SIPRI, OECD via APA 7 / DOI) and 10-year quantitative Bayesian scenario simulations (2026–2036).

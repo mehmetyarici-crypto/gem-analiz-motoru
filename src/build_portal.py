@@ -809,7 +809,68 @@ def build_html(reports):
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Quran Vision v6.2.1 - Kur'an Temelli Gelecek Vizyonu Akademik Kulliyat Portali</title>
+<title>KUR’ÂN VİZYONU • QURAN VISION CORPUS (v6.2.1) — 26-Step Strategic Tafsir & Foresight</title>
+<meta name="description" content="Bilingual (TR/EN) 26-Step Evidence-Based Strategic Tafsir, Maqasid & Civilization Foresight Corpus. {len(reports)} Foundational Verse Reports, {total_classical} Primary Arabic ISNAD 2 Citations, {total_modern} Empirical DOI Datasets & 40-Min TYMM Lesson Plans.">
+<meta name="keywords" content="Quran Vision, Kur'an Vizyonu, Strategic Tafsir, Stratejik Tefsir, Maqasid al-Shariah, ISNAD 2, Bayesian Policy Modeling, TYMM Ders Planı, Islamic Studies, Mehmet Yarıcı">
+<meta name="author" content="Mehmet Yarıcı — Quran Vision Institute">
+<link rel="canonical" href="https://mehmetyarici-crypto.github.io/quran-vision/">
+
+<!-- OpenGraph / LinkedIn / WhatsApp / Facebook Rich Preview -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="QURAN VISION INSTITUTE • KUR’ÂN VİZYONU KÜLLİYATI">
+<meta property="og:title" content="🏛️ QURAN VISION CORPUS (v6.2.1) — Bilingual Strategic Tafsir & Foresight ({len(reports)} Reports)">
+<meta property="og:description" content="{len(reports)} Foundational Quranic Verse Monographs (TR & EN) • {total_classical} Verified Classical Arabic Citations (ISNAD 2) • {total_modern} Empirical Institutional Datasets (DOI) • 2026–2036 Bayesian Scenarios & A4 PDF Books.">
+<meta property="og:url" content="https://mehmetyarici-crypto.github.io/quran-vision/">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:locale:alternate" content="en_US">
+
+<!-- Twitter / X Rich Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="🏛️ QURAN VISION CORPUS (v6.2.1) — Strategic Tafsir & Civilization Foresight (TR/EN)">
+<meta name="twitter:description" content="{len(reports)} Bilingual 26-Step Verse Reports • {total_classical} ISNAD 2 Classical Citations • {total_modern} Empirical DOI Datasets • Standalone TR/EN A4 PDFs.">
+
+<!-- Google Scholar / Highwire Press Academic Indexing Meta Tags -->
+<meta name="citation_title" content="Quran Vision Corpus (Kur'ân Vizyonu Külliyatı): 26-Step Evidence-Based Strategic Tafsir, Maqasid and Civilization Foresight Corpus (v6.2.1)">
+<meta name="citation_author" content="Yarıcı, Mehmet">
+<meta name="citation_publication_date" content="2026/10/15">
+<meta name="citation_publisher" content="Quran Vision Institute">
+<meta name="citation_pdf_url" content="https://mehmetyarici-crypto.github.io/quran-vision/pdf/Quran_Vision_Corpus_EN_v6.2.1.pdf">
+<meta name="citation_fulltext_html_url" content="https://mehmetyarici-crypto.github.io/quran-vision/">
+
+<!-- Schema.org Academic Dataset & Book Structured Data -->
+<script type="application/ld+json">
+{{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "Quran Vision Corpus (Kur'ân Vizyonu Külliyatı) v6.2.1",
+  "alternateName": "26-Step Evidence-Based Strategic Tafsir, Maqasid & Civilization Foresight Corpus",
+  "description": "Bilingual (Turkish/English) academic corpus of {len(reports)} foundational Quranic verse monographs integrating {total_classical} primary Arabic classical tafsir citations (ISNAD 2) with {total_modern} contemporary empirical datasets (APA 7 / DOI) and 2026-2036 Bayesian policy simulations.",
+  "version": "6.2.1",
+  "url": "https://mehmetyarici-crypto.github.io/quran-vision/",
+  "sameAs": "https://github.com/mehmetyarici-crypto/quran-vision",
+  "inLanguage": ["tr", "en", "ar"],
+  "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+  "creator": {{
+    "@type": "Person",
+    "name": "Mehmet Yarıcı"
+  }},
+  "distribution": [
+    {{
+      "@type": "DataDownload",
+      "encodingFormat": "application/pdf",
+      "contentUrl": "https://mehmetyarici-crypto.github.io/quran-vision/pdf/Quran_Vision_Corpus_EN_v6.2.1.pdf",
+      "name": "Quran Vision Full Corpus Book (English A4 PDF)"
+    }},
+    {{
+      "@type": "DataDownload",
+      "encodingFormat": "application/pdf",
+      "contentUrl": "https://mehmetyarici-crypto.github.io/quran-vision/pdf/Quran_Vision_Kulliyat_v6.2.1.pdf",
+      "name": "Kur'ân Vizyonu Tam Külliyat Kitabı (Türkçe A4 PDF)"
+    }}
+  ]
+}}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">

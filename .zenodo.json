@@ -1,0 +1,41 @@
+{
+  "title": "Quran Vision Corpus (Kur'ân Vizyonu Külliyatı) v6.2.1: Bilingual 26-Step Strategic Tafsir, Maqasid & Civilization Foresight Corpus (14 Foundational Reports)",
+  "upload_type": "publication",
+  "publication_type": "book",
+  "publication_date": "2026-10-15",
+  "version": "6.2.1",
+  "language": "eng",
+  "access_right": "open",
+  "license": "cc-by-nc-sa-4.0",
+  "creators": [
+    {
+      "name": "Yarıcı, Mehmet",
+      "affiliation": "Quran Vision Institute / Kur'ân Vizyonu Stratejik Tefsir Külliyatı"
+    }
+  ],
+  "description": "<p><strong>Quran Vision Corpus (v6.2.1)</strong> is an open-access bilingual (Turkish / English) academic corpus and interactive foresight cockpit featuring <strong>14 foundational Quranic verse reports (QV-2026-001 to QV-2026-014)</strong>. Every monograph integrates <strong>71 primary classical Arabic tafsir citations (ISNAD 2nd Edition verified)</strong> with <strong>42 contemporary empirical datasets (APA 7 / DOI: World Bank, UNDP, WJP, UNESCO, SIPRI, OECD)</strong>, 10-year Bayesian policy simulations (2026–2036), falsifiable early-warning thresholds, and 40-minute competency-based seminar/classroom debate lesson plans.</p>",
+  "keywords": [
+    "Quranic Studies",
+    "Tafsir",
+    "Maqasid al-Shariah",
+    "ISNAD 2",
+    "Strategic Foresight",
+    "Bayesian Modeling",
+    "Islamic Ethics",
+    "Religious Education Pedagogy"
+  ],
+  "related_identifiers": [
+    {
+      "scheme": "url",
+      "identifier": "https://mehmetyarici-crypto.github.io/quran-vision/",
+      "relation": "isSupplementTo",
+      "resource_type": "other"
+    },
+    {
+      "scheme": "url",
+      "identifier": "https://mehmetyarici-crypto.github.io/quran-vision/pdf/Quran_Vision_Corpus_EN_v6.2.1.pdf",
+      "relation": "isIdenticalTo",
+      "resource_type": "publication-book"
+    }
+  ]
+}

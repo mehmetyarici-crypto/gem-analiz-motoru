@@ -1,97 +1,116 @@
-**English** | [Türkçe](README.tr.md)
+<div align="center">
 
-# Quran Vision — Quran-Based Strategic & Hermeneutic Analysis Framework
+# 🏛️ QURAN VISION CORPUS • KUR’ÂN VİZYONU KÜLLİYATI (v6.2.1)
+### **26-Step Evidence-Based Strategic Tafsir, Maqasid & Civilization Foresight Corpus (TR / EN)**
+#### *26 Adımlı Kanıta Dayalı Stratejik Tefsir, Makâsıd ve Medeniyet Öngörü Külliyatı*
 
-> **This project does not claim religious authority.** Outputs are interpretation, not ruling.
-> It does not claim prophecy, fatwa, or definitive historical prediction.
+[![Version](https://img.shields.io/badge/Corpus_Version-v6.2.1-D4AF37?style=for-the-badge)](https://mehmetyarici-crypto.github.io/quran-vision/)
+[![Reports](https://img.shields.io/badge/Foundational_Reports-14_Monographs_(TR_%26_EN)-10B981?style=for-the-badge)](https://mehmetyarici-crypto.github.io/quran-vision/)
+[![ISNAD 2](https://img.shields.io/badge/ISNAD_2_Classical_Tafsir-71_Primary_Arabic_Citations-0f5132?style=for-the-badge)](https://mehmetyarici-crypto.github.io/quran-vision/)
+[![Empirical DOI](https://img.shields.io/badge/Empirical_Datasets_(APA_7_%2F_DOI)-42_Institutions-1d4ed8?style=for-the-badge)](https://mehmetyarici-crypto.github.io/quran-vision/)
+[![Linter](https://img.shields.io/badge/Methodological_Linter_%26_SHA256-0_Block_Errors-059669?style=for-the-badge)](https://github.com/mehmetyarici-crypto/quran-vision/blob/main/src/gem_lint.py)
 
----
+<br>
 
-## Table of Contents
+### 🌐 **[🚀 LAUNCH LIVE INTERACTIVE PORTAL (🇹🇷 TR | 🇬🇧 EN)](https://mehmetyarici-crypto.github.io/quran-vision/)**
+### 📙 **[📥 Download Full English Corpus Book (14 Reports - A4 PDF)](https://mehmetyarici-crypto.github.io/quran-vision/pdf/Quran_Vision_Corpus_EN_v6.2.1.pdf)** &nbsp;|&nbsp; 📘 **[📥 Tam Külliyat Kitabını İndir (14 Rapor - Türkçe A4 PDF)](https://mehmetyarici-crypto.github.io/quran-vision/pdf/Quran_Vision_Kulliyat_v6.2.1.pdf)**
 
-- [What is this project?](#what-is-this-project)
-- [What does it do?](#what-does-it-do)
-- [What does it not do?](#what-does-it-not-do)
-- [Versions and Documentation](#versions-and-documentation)
-- [Files](#files)
-- [Quick Start](#quick-start)
-
----
-
-## What is this project?
-
-**Quran Vision** (Kur'an Temelli Gelecek Vizyonu) is a 26-step, 5-macro-phase framework of thought and academic audit that examines Quranic verses through **strategic analysis**, classical philology (ISNAD 2), and empirical governance methods.
-
-### What does it do?
-
-- Analyzes the verse text **linguistically** (siyāq-sibāq, nuzūl, address, lexicographical matrix).
-- Derives **maqāṣid** (higher objectives).
-- Matches it with contemporary issues and governance crises.
-- Produces **scenarios** (4 structural possibilities).
-- Suggests **decision branches** (actionable policy options and leverage points).
-- Critiques its own analysis (Red Team, empirical falsifiability, self-audit, bias filters).
-
-### What does it not do?
-
-- Does not issue fatwa.
-- Does not claim religious authority or absolute truth.
-- Does not predict the unseen (ghayb) or definitive future dates.
-- Does not give definitive judicial rulings.
+</div>
 
 ---
 
-## Published GEM v6.1.1 Reports (Corpus)
+## 🇬🇧 OVERVIEW (ENGLISH)
 
-The following reports are fully compliant with the GEM v6.1.1 standard and verified with external cryptographic SHA-256 manifests:
+The **Quran Vision Corpus (`v6.2.1`)** is an open-access, bilingual (**Turkish & English**) academic research platform and strategic foresight engine. It bridges **classical Islamic hermeneutics (*riwayah*, *dirayah*, *ahkam*, and *maqasid* exegesis)** with **contemporary social-scientific empirical indicators (*World Bank, UNDP, WJP, UNESCO, SIPRI, OECD*)** and **10-year quantitative Bayesian scenario simulations (2026–2036)**.
 
-| # | Verse | Topic | Report File | Status |
-|:---:|:---:|:---|:---|:---:|
-| **01** | **At-Tawbah 9:5** | Treaty Violation, Deterrence, and Law of Legitimate Defense | [`docs/tr/06-pilot-tevbe-95-v6.1.1.md`](docs/tr/06-pilot-tevbe-95-v6.1.1.md) | `PRE-RELEASE` |
-| **02** | **An-Nisa 4:34** | Domestic Governance, Qiwamah, and Non-Violent Counsel Doctrine | [`docs/tr/07-pilot-nisa-434-v6.1.1.md`](docs/tr/07-pilot-nisa-434-v6.1.1.md) | `PRE-RELEASE` |
-| **03** | **Al-Ma'idah 5:38** | Property Rights, Theft Punishment, Necessity, and Social Security | [`docs/tr/08-pilot-maide-538-v6.1.1.md`](docs/tr/08-pilot-maide-538-v6.1.1.md) | `PRE-RELEASE` |
-| **04** | **Al-Baqarah 2:256** | Freedom of Faith and Conscience, Prohibition of Coercion, and Pluralism | [`docs/tr/09-rapor-bakara-2256-v6.1.1.md`](docs/tr/09-rapor-bakara-2256-v6.1.1.md) | `PRE-RELEASE` |
-| **05** | **An-Nisa 4:58** | Public Governance, Meritocracy, Judicial Independence, and Justice | [`docs/tr/10-rapor-nisa-458-v6.1.1.md`](docs/tr/10-rapor-nisa-458-v6.1.1.md) | `PRE-RELEASE` |
-| **06** | **Ali 'Imran 3:159** | Consultation (Shūrā) in Crisis Governance, Leadership, and Determination | [`docs/tr/11-rapor-ali-imran-3159-v6.1.1.md`](docs/tr/11-rapor-ali-imran-3159-v6.1.1.md) | `PRE-RELEASE` |
-| **07** | **Al-Hujurat 49:9–10** | Conflict Resolution, International Arbitration, Law of Baghy, and Peacekeeping | [`docs/tr/12-rapor-hucurat-49910-v6.1.1.md`](docs/tr/12-rapor-hucurat-49910-v6.1.1.md) | `PRE-RELEASE` |
-| **08** | **Al-Isra 17:36** | Epistemic Responsibility, Verification, Cognitive Security, and AI Era | [`docs/tr/13-rapor-isra-1736-v6.1.1.md`](docs/tr/13-rapor-isra-1736-v6.1.1.md) | `PRE-RELEASE` |
-| **09** | **Al-Hashr 59:7** | Wealth Concentration, Economic Circulation, and Anti-Oligarchy Doctrine | [`docs/tr/14-rapor-hasr-597-v6.1.1.md`](docs/tr/14-rapor-hasr-597-v6.1.1.md) | `PRE-RELEASE` |
-| **10** | **Ar-Rum 30:22** | Ontological Pluralism, Linguistic/Ethnic Diversity, and Peaceful Coexistence | [`docs/tr/15-rapor-rum-3022-v6.1.1.md`](docs/tr/15-rapor-rum-3022-v6.1.1.md) | `PRE-RELEASE` |
-| **11** | **Al-An'am 6:151–152** | Universal Moral Decalogue, Fundamental Rights, Market Integrity, and Justice | [`docs/tr/16-rapor-enam-6151152-v6.1.1.md`](docs/tr/16-rapor-enam-6151152-v6.1.1.md) | `PRE-RELEASE` |
-| **12** | **Al-Hadid 57:25** | The Book, the Balance, and Iron: Constitutional Law, Institutional Justice, and Deterrence | [`docs/tr/17-rapor-hadid-5725-v6.1.1.md`](docs/tr/17-rapor-hadid-5725-v6.1.1.md) | `PRE-RELEASE` |
-| **13** | **An-Nahl 16:90** | Universal Civilizational Covenant: Justice, Ihsan, Solidarity, and Anti-Corruption Governance | [`docs/tr/18-rapor-nahl-1690-v6.1.1.md`](docs/tr/18-rapor-nahl-1690-v6.1.1.md) | `PRE-RELEASE` |
+### ✨ Key Methodological Pillars
+1. **Strict Epistemic Separation (`[CITATION / NAKİL]` vs. `[ANALYSIS / YORUM]`):** Every report rigorously distinguishes immutable scriptural text and classical exegetical transmission from contemporary human policy modeling (*ijtihad*).
+2. **71 Primary Classical Arabic Citations (ISNAD 2nd Edition):** Verified with Hijri/Gregorian death dates, critical edition editors (*tahqiq*), publication metadata, exact volume/page numbers, and digital library URNs (*Al-Tabari, Al-Razi, Al-Qurtubi, Ibn 'Ashur, Al-Maturidi, Al-Shatibi, Al-Zamakhshari, Al-Jassas, Al-Mawardi, Ibn Faris, Al-Raghib al-Isfahani*).
+3. **42 Empirical Institutional Datasets (APA 7 & DOI):** Every strategic claim is paired with falsifiable early-warning thresholds (`th-01` to `th-03`) and obeys **Hume's Guillotine** (explicitly separating empirical *is* from normative *ought*).
+4. **Macro-Bayesian Synthesis:** Across all 14 foundational verses, institutionalizing Quranic governance norms (*Amanah, 'Adl, Shura, Islah, Tabyin, Mizan, Ihsan, Ta'aruf*) raises the 10-year probability of societal stability from a baseline prior of **$P(S_1) = 27\%$** to a posterior of **$P(S_1|E) = 80\%$ (+53 percentage points)**.
+5. **40-Minute Competency & Virtue-Based Seminar / Lesson Plans (TYMM):** Each report includes a ready-to-use classroom debate and case-analysis lesson plan.
 
 ---
 
-## Versions and Documentation
+## 🇹🇷 GENEL BAKIŞ (TÜRKÇE)
 
-- **v6.1.1 (Current Standard):** [docs/tr/GEM-v6.1.1-taslak.md](docs/tr/GEM-v6.1.1-taslak.md) — 26 steps, 5 macro-phases, Enfüs-Âfâk & Heart Fiqh analytical lens, source verification, and epistemic disclaimer.
-- **Academic Peer-Review Guide:** [docs/tr/akademik-hakem-rehberi.md](docs/tr/akademik-hakem-rehberi.md) — 5-dimension peer review rubric and Z-5 form.
-- **Roadmap:** [docs/tr/GEM-v6.1.1-yol-haritasi.md](docs/tr/GEM-v6.1.1-yol-haritasi.md) — Implementation and verification roadmap.
-- **Linter Rules:** [docs/tr/linter-kurallari.md](docs/tr/linter-kurallari.md) — Formal linter rule specifications.
-- **Changelog:** [CHANGELOG.md](CHANGELOG.md) — Version history.
-- **v5.2.0 (Archive):** [GEM-V520-TALIMAT.md](GEM-V520-TALIMAT.md) — Historical specification.
+**Kur’ân Vizyonu Stratejik Tefsir Külliyatı (`v6.2.1`)**, klasik İslam tefsir ve usûl mirasını (**İSNAD 2. Edisyon** standartlı **71 birincil Arapça nakil**), çağdaş uluslararası ampirik veri setleri (**APA 7 / DOI** doğrulamalı **42 kurumsal kaynak**), **2026–2036 Bayesyen senaryo simülasyonu** ve **Türkiye Yüzyılı Maarif Modeli (TYMM)** uyumlu **40 dakikalık ders/zümre planlarıyla** birleştiren çift dilli (`🇹🇷 TR | 🇬🇧 EN`) açık erişimli bir akademik araştırma platformudur.
 
 ---
 
-## Files
+## 📚 COMPLETE 14-REPORT BILINGUAL CATALOG / 14 RAPORLUK TAM KÜLLİYAT KATALOĞU
 
-| File | Purpose |
-|---|---|
-| `YONTEM.md` | Summary of the 26-step method and macro-phases |
-| `src/gem_lint.py` | Format, language safety, schema, and manifest linter (Python) |
-| `docs/tr/05-ornek-rapor-v6.1.1.md` | Official v6.1.1 report template |
-| `docs/tr/GEM-v6.1.1-taslak.md` | Current v6.1.1 methodology standard draft |
-| `docs/tr/akademik-hakem-rehberi.md` | Independent external peer-review guidelines |
+| Case ID | Surah & Verse | 🇬🇧 English Strategic Monograph Title | 🇹🇷 Türkçe Stratejik Rapor Başlığı |Prior → Post| 🌐 Live Cockpit | 🇬🇧 EN PDF | 🇹🇷 TR PDF |
+| :--- | :--- | :--- | :--- | :---: | :---: | :---: | :---: |
+| **QV-2026-001** | **At-Tawbah 9:5** | Breach of Covenant (*Nakth al-'Ahd*), Deterrence & Legitimate Self-Defense in International Law | Ahit İhlali (*Nakz-ı Ahd*), Caydırıcılık ve Uluslararası Hukukta Meşru Müdafaa | 25% → **78%** | [🌐 Open](https://mehmetyarici-crypto.github.io/quran-vision/?report=QV-2026-001) | [📥 EN PDF](https://mehmetyarici-crypto.github.io/quran-vision/pdf/QV-2026-001_EN.pdf) | [📥 TR PDF](https://mehmetyarici-crypto.github.io/quran-vision/pdf/QV-2026-001.pdf) |
+| **QV-2026-002** | **An-Nisa 4:34** | Intra-Family Governance, Fiduciary Stewardship (*Qawwamah*) & Graduated De-Escalation | Aile İçi Yönetişim, Emanet Sorumluluğu (*Kavvâmîyet*) ve Kademeli Kriz Çözümü | 30% → **82%** | [🌐 Open](https://mehmetyarici-crypto.github.io/quran-vision/?report=QV-2026-002) | [📥 EN PDF](https://mehmetyarici-crypto.github.io/quran-vision/pdf/QV-2026-002_EN.pdf) | [📥 TR PDF](https://mehmetyarici-crypto.github.io/quran-vision/pdf/QV-2026-002.pdf) |
+| **QV-2026-003** | **Al-Ma'idah 5:38** | Property Protection, Evidentiary Conditions (*Hirz/Nisab*), Necessity & Social Security | Mülkiyet Dokunulmazlığı, İspat Şartları (*Hırz/Nisab*), Zaruret Hali ve Sosyal Güvenlik | 28% → **79%** | [🌐 Open](https://mehmetyarici-crypto.github.io/quran-vision/?report=QV-2026-003) | [📥 EN PDF](https://mehmetyarici-crypto.github.io/quran-vision/pdf/QV-2026-003_EN.pdf) | [📥 TR PDF](https://mehmetyarici-crypto.github.io/quran-vision/pdf/QV-2026-003.pdf) |
+| **QV-2026-004** | **Al-Baqarah 2:256** | Freedom of Conscience (*La Ikraha fi'd-Din*), Non-Coercion & Pluralistic Civil Society | Din ve Vicdan Hürriyeti (*Lâ İkrâhe fi'd-Dîn*), Zorlama Yasağı ve Çoğulcu Toplum | 32% → **84%** | [🌐 Open](https://mehmetyarici-crypto.github.io/quran-vision/?report=QV-2026-004) | [📥 EN PDF](https://mehmetyarici-crypto.github.io/quran-vision/pdf/QV-2026-004_EN.pdf) | [📥 TR PDF](https://mehmetyarici-crypto.github.io/quran-vision/pdf/QV-2026-004.pdf) |
+| **QV-2026-005** | **An-Nisa 4:58** | Public Trust (*Amanah*), Meritocracy, Judicial Independence & Universal Justice | Emanetin Ehline Verilmesi (*Liyakat*), Yargı Bağımsızlığı ve Evrensel Adalet Mimarisi | 26% → **83%** | [🌐 Open](https://mehmetyarici-crypto.github.io/quran-vision/?report=QV-2026-005) | [📥 EN PDF](https://mehmetyarici-crypto.github.io/quran-vision/pdf/QV-2026-005_EN.pdf) | [📥 TR PDF](https://mehmetyarici-crypto.github.io/quran-vision/pdf/QV-2026-005.pdf) |
+| **QV-2026-006** | **Ali 'Imran 3:159** | Consultative Governance (*Shura*) in Crisis, Participatory Decision-Making & Leadership | Kriz Yönetiminde İstişare (*Şûrâ*), Katılımcı Yönetişim ve Şefkat Temelli Liderlik | 29% → **81%** | [🌐 Open](https://mehmetyarici-crypto.github.io/quran-vision/?report=QV-2026-006) | [📥 EN PDF](https://mehmetyarici-crypto.github.io/quran-vision/pdf/QV-2026-006_EN.pdf) | [📥 TR PDF](https://mehmetyarici-crypto.github.io/quran-vision/pdf/QV-2026-006.pdf) |
+| **QV-2026-007** | **Al-Hujurat 49:9-10** | International Conflict Resolution, Anti-Aggression (*Baghy*) & Collective Security | Uluslararası Çatışma Çözümü, Saldırganlığı Önleme (*Bağy*) ve Adil Barış Gücü | 22% → **76%** | [🌐 Open](https://mehmetyarici-crypto.github.io/quran-vision/?report=QV-2026-007) | [📥 EN PDF](https://mehmetyarici-crypto.github.io/quran-vision/pdf/QV-2026-007_EN.pdf) | [📥 TR PDF](https://mehmetyarici-crypto.github.io/quran-vision/pdf/QV-2026-007.pdf) |
+| **QV-2026-008** | **Al-Isra 17:36** | Epistemic Responsibility, Verification, Cognitive Security & AI Governance | Epistemik Sorumluluk, Bilgi Doğrulama (*Tebeyyün*), Bilişsel Güvenlik ve Yapay Zekâ Etiği | 24% → **79%** | [🌐 Open](https://mehmetyarici-crypto.github.io/quran-vision/?report=QV-2026-008) | [📥 EN PDF](https://mehmetyarici-crypto.github.io/quran-vision/pdf/QV-2026-008_EN.pdf) | [📥 TR PDF](https://mehmetyarici-crypto.github.io/quran-vision/pdf/QV-2026-008.pdf) |
+| **QV-2026-009** | **Al-Hashr 59:7** | Wealth Circulation (*Kay la Yakuna Dulatan*), Distributive Justice & Anti-Monopoly | Servetin Tekelleşmesini Önleme (*Dûlet*), Gelir Adaleti ve Üretken İktisat Mimarisi | 21% → **75%** | [🌐 Open](https://mehmetyarici-crypto.github.io/quran-vision/?report=QV-2026-009) | [📥 EN PDF](https://mehmetyarici-crypto.github.io/quran-vision/pdf/QV-2026-009_EN.pdf) | [📥 TR PDF](https://mehmetyarici-crypto.github.io/quran-vision/pdf/QV-2026-009.pdf) |
+| **QV-2026-010** | **Ar-Rum 30:22** | Ontological Pluralism, Linguistic & Ethnic Diversity (*Ayat*) & Coexistence | Dillerin ve Renklerin Farklılığı (*Âyet*), Ontolojik Çoğulculuk ve Birlikte Yaşama Hukuku | 31% → **82%** | [🌐 Open](https://mehmetyarici-crypto.github.io/quran-vision/?report=QV-2026-010) | [📥 EN PDF](https://mehmetyarici-crypto.github.io/quran-vision/pdf/QV-2026-010_EN.pdf) | [📥 TR PDF](https://mehmetyarici-crypto.github.io/quran-vision/pdf/QV-2026-010.pdf) |
+| **QV-2026-011** | **Al-An'am 6:151-152** | Universal Moral Decalogue, Fundamental Rights, Market Integrity & Impartiality | Evrensel Ahlak Dekalogu, Temel Haklar Beyannamesi, Ölçü/Tartı Dürüstlüğü ve Adil Şahitlik | 30% → **83%** | [🌐 Open](https://mehmetyarici-crypto.github.io/quran-vision/?report=QV-2026-011) | [📥 EN PDF](https://mehmetyarici-crypto.github.io/quran-vision/pdf/QV-2026-011_EN.pdf) | [📥 TR PDF](https://mehmetyarici-crypto.github.io/quran-vision/pdf/QV-2026-011.pdf) |
+| **QV-2026-012** | **Al-Hadid 57:25** | The Triad of Book, Balance (*Mizan*) & Iron (*Hadid*): Law, Justice & Deterrence | Kitap, Mîzân ve Demir Üçlüsü: Anayasal Hukuk, Kurumsal Adalet ve Caydırıcı Savunma | 25% → **80%** | [🌐 Open](https://mehmetyarici-crypto.github.io/quran-vision/?report=QV-2026-012) | [📥 EN PDF](https://mehmetyarici-crypto.github.io/quran-vision/pdf/QV-2026-012_EN.pdf) | [📥 TR PDF](https://mehmetyarici-crypto.github.io/quran-vision/pdf/QV-2026-012.pdf) |
+| **QV-2026-013** | **An-Nahl 16:90** | Universal Civilizational Covenant: Justice (*'Adl*), Excellence (*Ihsan*) & Solidarity | Evrensel Medeniyet Sözleşmesi: Adalet, İhsan, Sosyal Dayanışma ve Üçlü Yozlaşma Yasağı | 27% → **82%** | [🌐 Open](https://mehmetyarici-crypto.github.io/quran-vision/?report=QV-2026-013) | [📥 EN PDF](https://mehmetyarici-crypto.github.io/quran-vision/pdf/QV-2026-013_EN.pdf) | [📥 TR PDF](https://mehmetyarici-crypto.github.io/quran-vision/pdf/QV-2026-013.pdf) |
+| **QV-2026-014** | **Al-Hujurat 49:13** | Ontological Human Equality, Mutual Recognition (*Ta'aruf*) & *Taqwa*-Based Merit | İnsanlığın Ontolojik Eşitliği, Teâruf (Tanışma) Doktrini, Irkçılık Karşıtlığı ve Takvâ | 28% → **81%** | [🌐 Open](https://mehmetyarici-crypto.github.io/quran-vision/?report=QV-2026-014) | [📥 EN PDF](https://mehmetyarici-crypto.github.io/quran-vision/pdf/QV-2026-014_EN.pdf) | [📥 TR PDF](https://mehmetyarici-crypto.github.io/quran-vision/pdf/QV-2026-014.pdf) |
 
 ---
 
-## Quick Start
+## 🛠️ REPOSITORY ARCHITECTURE & AUTOMATED PIPELINE
 
-```bash
-# Lint the template or any report
-python src/gem_lint.py docs/tr/05-ornek-rapor-v6.1.1.md --katman 3 --h6
-python src/gem_lint.py docs/tr/11-rapor-ali-imran-3159-v6.1.1.md --katman 3 --h6
-
-# Run test suite
-pytest tests/ -v
+```text
+quran-vision/
+├── docs/
+│   ├── index.html                  # Interactive Bilingual (TR/EN) Strategic Cockpit & Reader
+│   ├── tr/                         # 14 Sealed Turkish 26-Step Markdown Reports + .sha256 manifests
+│   ├── en/                         # 14 Full English 26-Step Markdown Reports (*-en-v6.1.1.md)
+│   └── pdf/                        # 30 Standalone A4 PDFs (QV-2026-001..014 TR & EN + Full Corpus Books)
+├── src/
+│   ├── gem_lint.py                 # 16-Rule Academic & Methodological Verification Engine (Linter)
+│   ├── build_portal.py             # Bilingual Static Site & Headless Edge A4 PDF Compiler
+│   ├── en_corpus_data.py           # Full English 26-Step Report & Bayesian Scenario Generator
+│   └── create_report.py            # Two-Stage Report Production Pipeline (--stage draft / --stage seal)
+├── CITATION.cff                    # Official GitHub / Zotero / APA / BibTeX Citation Metadata
+└── .zenodo.json                    # CERN / Zenodo Open-Science DOI Indexing Metadata
 ```
+
+### Verification & Build Commands
+```bash
+# 1. Run the 16-rule academic & SHA-256 integrity linter across all reports
+python src/gem_lint.py docs/tr/
+
+# 2. Rebuild the bilingual web portal (docs/index.html) and all 30 TR/EN A4 PDFs
+python src/build_portal.py --force-pdf
+```
+
+---
+
+## 📖 HOW TO CITE THIS CORPUS / AKADEMİK ATIF FORMATI
+
+You can click the **"Cite this repository"** button in the top-right sidebar of GitHub, or use the APA 7 / BibTeX records below:
+
+**APA 7th Edition:**
+> Yarıcı, M. (2026). *Quran Vision Corpus (Kur'ân Vizyonu Külliyatı): 26-Step Evidence-Based Strategic Tafsir, Maqasid & Civilization Foresight Corpus (v6.2.1)* [Data set & Monograph Series]. Quran Vision Institute. https://mehmetyarici-crypto.github.io/quran-vision/
+
+**BibTeX:**
+```bibtex
+@book{yarici2026quranvision,
+  author    = {Yarıcı, Mehmet},
+  title     = {Quran Vision Corpus (Kur'ân Vizyonu Külliyatı): 26-Step Evidence-Based Strategic Tafsir, Maqasid \& Civilization Foresight Corpus},
+  version   = {6.2.1},
+  year      = {2026},
+  publisher = {Quran Vision Institute},
+  url       = {https://mehmetyarici-crypto.github.io/quran-vision/}
+}
+```
+
+---
+
+## 🤝 CALL FOR OPEN PEER-REVIEW & COLLABORATION / AÇIK HAKEMLİK ÇAĞRISI
+
+Scholars of Tafsir, Islamic Law (*Fiqh / Usul*), Social Sciences, and Religious Education are invited to:
+1. **Submit an Open Peer-Review or Exegetical Commentary (`Z-5` Rubric):** Use **[Tab 6 on the Live Portal](https://mehmetyarici-crypto.github.io/quran-vision/?report=QV-2026-014&tab=feedback)** or **[Open a GitHub Issue](https://github.com/mehmetyarici-crypto/quran-vision/issues/new)**.
+2. **Nominate the 15th Report (`QV-2026-015`):** Propose a candidate verse using our **[Structured Verse Request Template](https://github.com/mehmetyarici-crypto/quran-vision/issues/new?template=yeni_ayet_talebi.md)**.
