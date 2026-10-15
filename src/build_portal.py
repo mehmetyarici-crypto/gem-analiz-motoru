@@ -1,13 +1,19 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-GEM v6.2.1 — İnteraktif Dijital Külliyat ve Akademik Portal Üreticisi
-Tüm doğrulanmış GEM raporlarını (YAML Frontmatter + 26 Adım Markdown + .sha256 Manifest)
-okuyarak tek tıkla çalışan bağımsız (self-contained) bir HTML5 Akademik Portal üretir.
+Quran Vision v6.2.1 — İnteraktif Dijital Külliyat, Akademik Portal ve A4 PDF Üreticisi
+Tüm doğrulanmış Quran Vision raporlarını (YAML Frontmatter + 26 Adım Markdown + .sha256 Manifest)
+okuyarak:
+1. İnteraktif HTML5 Akademik Portal (docs/index.html) üretir,
+2. Her bir rapor için bağımsız A4 Akademik PDF (docs/pdf/QV-2026-001.pdf .. 013.pdf) ve
+   13 raporluk Tek Cilt Tam Külliyat PDF'i (docs/pdf/Quran_Vision_Kulliyat_v6.2.1.pdf) üretir.
 """
 
+import html as html_lib
 import json
 import re
+import shutil
+import subprocess
 import sys
 from pathlib import Path
 import yaml
@@ -20,6 +26,8 @@ if sys.stdout and hasattr(sys.stdout, "reconfigure"):
 
 ROOT = Path(__file__).resolve().parent.parent
 DOCS_TR = ROOT / "docs" / "tr"
+PDF_DIR = ROOT / "docs" / "pdf"
+DESKTOP_PDF_DIR = ROOT.parent / "QURAN_VISION_PDF_KULLIYAT"
 
 
 def parse_report(md_path: Path):
@@ -48,11 +56,20 @@ def parse_report(md_path: Path):
     prior_val = float(prior_m.group(1)) if prior_m else 0.30
     post_val = float(post_m.group(1)) if post_m else 0.78
 
+    case_id = fm.get("case_id") or fm.get("vaka_kodu", "")
+    surah = fm.get("surah") or fm.get("sure", "")
+    verse = str(fm.get("verse") or fm.get("ayet_no", ""))
+
+    # Clean Windows-safe PDF filename
+    safe_verse = re.sub(r"[^0-9a-zA-Z_-]", "-", verse)
+    pdf_filename = f"{case_id}.pdf"
+
     return {
         "filename": md_path.name,
-        "case_id": fm.get("case_id") or fm.get("vaka_kodu", ""),
-        "surah": fm.get("surah") or fm.get("sure", ""),
-        "verse": str(fm.get("verse") or fm.get("ayet_no", "")),
+        "pdf_filename": pdf_filename,
+        "case_id": case_id,
+        "surah": surah,
+        "verse": verse,
         "topic": fm.get("topic") or fm.get("konu", ""),
         "date": str(fm.get("date") or fm.get("tarih", "2026-10-15")),
         "confidence": fm.get("confidence_grade") or fm.get("guven_duzeyi", "B"),
@@ -69,6 +86,465 @@ def parse_report(md_path: Path):
     }
 
 
+def format_inline_md_py(text: str) -> str:
+    if not text:
+        return ""
+    s = html_lib.escape(text)
+    s = s.replace("[NAKİL]", '<span class="tag-nakil">[NAKİL]</span>')
+    s = s.replace("[YORUM]", '<span class="tag-yorum">[YORUM]</span>')
+    s = re.sub(r"\*\*(.*?)\*\*", r"<strong>\1</strong>", s)
+    s = re.sub(r"\*(.*?)\*", r"<em>\1</em>", s)
+    s = re.sub(r"\[\^(\d+)\]", r'<sup class="fn-ref">[\1]</sup>', s)
+    return s
+
+
+def render_markdown_py(md: str) -> str:
+    lines = md.split("\n")
+    out = []
+    in_code = False
+    in_table = False
+
+    for line in lines:
+        if line.strip().startswith("```"):
+            if not in_code:
+                in_code = True
+                out.append("<pre><code>")
+            else:
+                in_code = False
+                out.append("</code></pre>")
+            continue
+        if in_code:
+            out.append(html_lib.escape(line) + "\n")
+            continue
+
+        if line.strip().startswith("|"):
+            if "---" in line:
+                continue
+            cells = [format_inline_md_py(c.strip()) for c in line.split("|")[1:-1]]
+            if not in_table:
+                in_table = True
+                out.append("<table><thead><tr>" + "".join(f"<th>{c}</th>" for c in cells) + "</tr></thead><tbody>")
+            else:
+                out.append("<tr>" + "".join(f"<td>{c}</td>" for c in cells) + "</tr>")
+            continue
+        elif in_table:
+            in_table = False
+            out.append("</tbody></table>")
+
+        stripped = line.strip()
+        if line.startswith("# "):
+            out.append(f"<h1>{format_inline_md_py(line[2:])}</h1>")
+        elif line.startswith("## "):
+            out.append(f"<h2>{format_inline_md_py(line[3:])}</h2>")
+        elif line.startswith("### "):
+            out.append(f"<h3>{format_inline_md_py(line[4:])}</h3>")
+        elif line.startswith("#### "):
+            out.append(f"<h4>{format_inline_md_py(line[5:])}</h4>")
+        elif stripped == "---":
+            out.append("<hr>")
+        elif stripped.startswith("- "):
+            out.append(f"<ul><li>{format_inline_md_py(stripped[2:])}</li></ul>")
+        elif re.match(r"^\d+\.\s", stripped):
+            out.append(f'<p class="num-item">{format_inline_md_py(stripped)}</p>')
+        elif stripped.startswith("[^"):
+            out.append(f'<p class="fn-item">{format_inline_md_py(stripped)}</p>')
+        elif stripped != "":
+            out.append(f"<p>{format_inline_md_py(line)}</p>")
+
+    if in_table:
+        out.append("</tbody></table>")
+    return "\n".join(out)
+
+
+def build_single_report_print_html(r: dict, idx: int) -> str:
+    """Renders a single report block in clean academic A4 format for PDF generation."""
+    classical_rows = []
+    for cs in r.get("classical_sources", []):
+        classical_rows.append(f"""
+        <div class="pdf-source-box">
+          <div class="pdf-source-title">
+            <strong>{html_lib.escape(str(cs.get('author', '')))}</strong>
+            <span>({html_lib.escape(str(cs.get('death_year', '')))})</span>
+          </div>
+          <div class="pdf-source-meta">
+            <em>{html_lib.escape(str(cs.get('work', '')))}</em> • Tahkik: {html_lib.escape(str(cs.get('editor', '—')))} •
+            {html_lib.escape(str(cs.get('publication_place', '')))}: {html_lib.escape(str(cs.get('publisher', '')))},
+            {html_lib.escape(str(cs.get('publication_year', '')))} • Cilt: {html_lib.escape(str(cs.get('volume', '')))}, Sayfa: {html_lib.escape(str(cs.get('pages', '')))}
+          </div>
+          <div class="pdf-arabic">{html_lib.escape(str(cs.get('arabic_quote', '')))}</div>
+          <div class="pdf-link">Tahkik: {html_lib.escape(str(cs.get('verification_link', '')))} ({html_lib.escape(str(cs.get('doi_or_urn', '')))})</div>
+        </div>
+        """)
+
+    modern_rows = []
+    for ms in r.get("modern_sources", []):
+        modern_rows.append(f"""
+        <div class="pdf-source-box">
+          <div class="pdf-source-title">
+            <strong>{html_lib.escape(str(ms.get('institution') or ms.get('author', '')))} ({html_lib.escape(str(ms.get('publication_year', '')))})</strong>
+            <span>DOI: {html_lib.escape(str(ms.get('doi', '—')))}</span>
+          </div>
+          <div class="pdf-source-meta">
+            <em>{html_lib.escape(str(ms.get('title', '')))}</em> • {html_lib.escape(str(ms.get('publication_place', '')))}: {html_lib.escape(str(ms.get('publisher', '')))}
+          </div>
+          <div class="pdf-link">URL: {html_lib.escape(str(ms.get('url', '')))}</div>
+        </div>
+        """)
+
+    body_html = render_markdown_py(r["body"])
+
+    return f"""
+    <article class="pdf-report">
+      <div class="pdf-header-banner">
+        <div class="pdf-meta-line">
+          <span>QURAN VISION v6.2.1 • AKADEMİK STRATEJİ RAPORU</span>
+          <span>VAKA KODU: <strong>{html_lib.escape(r['case_id'])}</strong></span>
+        </div>
+        <h1 class="pdf-main-title">{idx}. {html_lib.escape(r['surah'])} Sûresi {html_lib.escape(r['verse'])} — {html_lib.escape(r['topic'])}</h1>
+        <div class="pdf-submeta">
+          Katman: 3 (Akademik-Derin) &nbsp;|&nbsp; H6 Zorlu Âyet &nbsp;|&nbsp; Güven Derecesi: {html_lib.escape(r['confidence'])} &nbsp;|&nbsp;
+          Prior P(S1): %{int(round(r['prior']*100))} → Posterior P(S1|E): %{int(round(r['posterior']*100))}
+        </div>
+        <div class="pdf-sha">SHA-256: {html_lib.escape(r['sha256'])} ({html_lib.escape(r['filename'])})</div>
+      </div>
+
+      <section class="pdf-sources-summary">
+        <h2>I. İSNAD 2 Klasik Tefsir Tahkiki ve Çağdaş Ampirik (DOI) Kaynak Özeti</h2>
+        <div class="pdf-grid-2">
+          <div>
+            <h3>A) Klasik İslami Kaynaklar (İSNAD 2. Edisyon)</h3>
+            {''.join(classical_rows)}
+          </div>
+          <div>
+            <h3>B) Çağdaş Ampirik ve Kurumsal Kaynaklar (APA 7 / DOI)</h3>
+            {''.join(modern_rows)}
+          </div>
+        </div>
+      </section>
+
+      <section class="pdf-body-content">
+        {body_html}
+      </section>
+    </article>
+    """
+
+
+def wrap_pdf_document(title: str, articles_html: str) -> str:
+    return f"""<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>{html_lib.escape(title)}</title>
+<style>
+@page {{
+  size: A4 portrait;
+  margin: 16mm 15mm 16mm 15mm;
+}}
+* {{ box-sizing: border-box; margin: 0; padding: 0; }}
+body {{
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Arial, sans-serif;
+  color: #111827;
+  background: #ffffff;
+  font-size: 10.5pt;
+  line-height: 1.55;
+}}
+.pdf-report {{
+  page-break-after: always;
+}}
+.pdf-report:last-child {{
+  page-break-after: auto;
+}}
+.pdf-header-banner {{
+  border: 1.5px solid #0f5132;
+  background: #f8faf9;
+  border-radius: 8px;
+  padding: 14px 18px;
+  margin-bottom: 16px;
+}}
+.pdf-meta-line {{
+  display: flex;
+  justify-content: space-between;
+  font-size: 8.5pt;
+  font-weight: 700;
+  color: #856404;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}}
+.pdf-main-title {{
+  font-size: 15pt;
+  color: #091310;
+  font-weight: 800;
+  line-height: 1.3;
+  margin-bottom: 8px;
+}}
+.pdf-submeta {{
+  font-size: 9pt;
+  color: #1f2937;
+  font-weight: 600;
+  margin-bottom: 4px;
+}}
+.pdf-sha {{
+  font-family: Consolas, 'Courier New', monospace;
+  font-size: 7.5pt;
+  color: #4b5563;
+  word-break: break-all;
+}}
+.pdf-sources-summary {{
+  margin-bottom: 18px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #d1d5db;
+}}
+.pdf-sources-summary h2 {{
+  font-size: 11.5pt;
+  color: #0f5132;
+  margin-bottom: 8px;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 4px;
+}}
+.pdf-sources-summary h3 {{
+  font-size: 9.5pt;
+  color: #856404;
+  margin: 6px 0;
+  text-transform: uppercase;
+}}
+.pdf-source-box {{
+  border: 1px solid #e5e7eb;
+  background: #fcfdfd;
+  border-radius: 6px;
+  padding: 8px 10px;
+  margin-bottom: 6px;
+  page-break-inside: avoid;
+}}
+.pdf-source-title {{
+  display: flex;
+  justify-content: space-between;
+  font-size: 9.5pt;
+  color: #111827;
+  margin-bottom: 3px;
+}}
+.pdf-source-meta {{
+  font-size: 8.5pt;
+  color: #374151;
+  margin-bottom: 4px;
+}}
+.pdf-arabic {{
+  font-family: 'Traditional Arabic', 'Amiri', 'Scheherazade New', 'Times New Roman', serif;
+  font-size: 13pt;
+  direction: rtl;
+  text-align: right;
+  color: #064e3b;
+  background: #f3f7f5;
+  padding: 5px 10px;
+  border-right: 3px solid #856404;
+  border-radius: 4px;
+  margin: 4px 0;
+}}
+.pdf-link {{
+  font-family: Consolas, monospace;
+  font-size: 7.5pt;
+  color: #047857;
+  word-break: break-all;
+}}
+.pdf-body-content h1 {{
+  font-size: 13.5pt;
+  color: #0f5132;
+  margin: 14px 0 8px;
+  padding-bottom: 4px;
+  border-bottom: 1.5px solid #0f5132;
+  page-break-after: avoid;
+}}
+.pdf-body-content h2 {{
+  font-size: 11.5pt;
+  color: #065f46;
+  margin: 12px 0 6px;
+  padding-bottom: 3px;
+  border-bottom: 1px solid #d1d5db;
+  page-break-after: avoid;
+}}
+.pdf-body-content h3 {{
+  font-size: 10.5pt;
+  color: #92400e;
+  margin: 10px 0 4px;
+  page-break-after: avoid;
+}}
+.pdf-body-content h4 {{
+  font-size: 10pt;
+  color: #111827;
+  margin: 8px 0 4px;
+  page-break-after: avoid;
+}}
+.pdf-body-content p {{
+  margin-bottom: 6px;
+  text-align: justify;
+}}
+.pdf-body-content ul {{
+  margin: 4px 0 8px 18px;
+}}
+.pdf-body-content li {{
+  margin-bottom: 3px;
+}}
+.pdf-body-content pre {{
+  background: #f3f4f6;
+  border: 1px solid #d1d5db;
+  padding: 8px 10px;
+  border-radius: 5px;
+  font-family: Consolas, 'Courier New', monospace;
+  font-size: 8.5pt;
+  white-space: pre-wrap;
+  word-break: break-word;
+  margin: 8px 0;
+  page-break-inside: avoid;
+}}
+.pdf-body-content table {{
+  width: 100%;
+  border-collapse: collapse;
+  margin: 8px 0 12px;
+  font-size: 8.5pt;
+  page-break-inside: avoid;
+}}
+.pdf-body-content th, .pdf-body-content td {{
+  border: 1px solid #9ca3af;
+  padding: 5px 7px;
+  text-align: left;
+  vertical-align: top;
+}}
+.pdf-body-content th {{
+  background: #e5e7eb;
+  color: #111827;
+  font-weight: 700;
+}}
+.pdf-body-content hr {{
+  border: none;
+  border-top: 1px solid #d1d5db;
+  margin: 10px 0;
+}}
+.tag-nakil {{
+  background: #fef3c7;
+  color: #92400e;
+  padding: 1px 5px;
+  border-radius: 3px;
+  font-family: Consolas, monospace;
+  font-size: 8pt;
+  font-weight: 700;
+}}
+.tag-yorum {{
+  background: #d1fae5;
+  color: #065f46;
+  padding: 1px 5px;
+  border-radius: 3px;
+  font-family: Consolas, monospace;
+  font-size: 8pt;
+  font-weight: 700;
+}}
+.fn-ref {{
+  color: #92400e;
+  font-weight: 700;
+}}
+.fn-item {{
+  font-size: 8.5pt;
+  color: #374151;
+  margin-bottom: 3px;
+}}
+</style>
+</head>
+<body>
+{articles_html}
+</body>
+</html>
+"""
+
+
+def find_browser_exe():
+    candidates = [
+        r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe",
+        r"C:\Program Files\Microsoft\Edge\Application\msedge.exe",
+        r"C:\Program Files\Google\Chrome\Application\chrome.exe",
+    ]
+    for c in candidates:
+        if Path(c).exists():
+            return c
+    return None
+
+
+def generate_all_pdfs(reports: list):
+    PDF_DIR.mkdir(parents=True, exist_ok=True)
+    DESKTOP_PDF_DIR.mkdir(parents=True, exist_ok=True)
+    parent_pdf_dir = ROOT.parent / "pdf"
+    parent_pdf_dir.mkdir(parents=True, exist_ok=True)
+    browser = find_browser_exe()
+    if not browser:
+        print("⚠️ Tarayıcı bulunamadı, PDF üretimi atlandı.")
+        return
+
+    all_articles = []
+    for idx, r in enumerate(reports, start=1):
+        art_html = build_single_report_print_html(r, idx)
+        all_articles.append(art_html)
+
+        single_doc = wrap_pdf_document(f"{r['case_id']} - {r['surah']} {r['verse']}", art_html)
+        tmp_html = PDF_DIR / f"{r['case_id']}.html"
+        out_pdf = PDF_DIR / r["pdf_filename"]
+        tmp_html.write_text(single_doc, encoding="utf-8")
+
+        cmd = [
+            browser,
+            "--headless",
+            "--disable-gpu",
+            "--no-pdf-header-footer",
+            f"--print-to-pdf={out_pdf}",
+            tmp_html.resolve().as_uri(),
+        ]
+        subprocess.run(cmd, check=False, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        tmp_html.unlink(missing_ok=True)
+        if out_pdf.exists() and out_pdf.stat().st_size > 1000:
+            shutil.copy2(out_pdf, DESKTOP_PDF_DIR / r["pdf_filename"])
+            shutil.copy2(out_pdf, parent_pdf_dir / r["pdf_filename"])
+            print(f"  📄 PDF üretildi: {out_pdf.name} ({out_pdf.stat().st_size // 1024} KB)")
+
+    # Generate combined 13-report book PDF
+    cover_html = f"""
+    <div style="page-break-after: always; padding: 60px 30px; text-align: center; border: 3px double #0f5132; border-radius: 12px; margin-top: 40px;">
+      <div style="font-size: 12pt; font-weight: 700; color: #856404; letter-spacing: 1.5px; margin-bottom: 16px;">
+        QURAN VISION (v6.2.1) • İSNAD 2 + VERİ BİLİMİ HİBRİT AKADEMİK STANDARDI
+      </div>
+      <h1 style="font-size: 26pt; color: #091310; font-weight: 800; line-height: 1.25; margin-bottom: 18px;">
+        Kur'an Temelli Gelecek Vizyonu<br>Stratejik Tefsir ve Karar Külliyatı
+      </h1>
+      <p style="font-size: 12pt; color: #374151; max-width: 540px; margin: 0 auto 30px;">
+        26 Adımlı Analitik Çerçeve, İSNAD 2 Klasik Tefsir Tahkiki, Çağdaş Ampirik (DOI) Göstergeler ve
+        Bayesyen Politika Simülasyonlarıyla Hazırlanmış 13 Tam Rapor (QV-2026-001 – QV-2026-013)
+      </p>
+      <div style="text-align: left; max-width: 560px; margin: 25px auto; padding: 16px 20px; background: #f8faf9; border: 1px solid #d1d5db; border-radius: 8px; font-size: 9.5pt;">
+        <strong style="color:#0f5132; display:block; margin-bottom:8px;">İÇİNDEKİLER (13 STRATEJİK VAKA RAPORU):</strong>
+        {''.join(f'<div style="margin-bottom:4px;"><b>{i}. {r["case_id"]}</b> — {r["surah"]} {r["verse"]}: {r["topic"]}</div>' for i, r in enumerate(reports, 1))}
+      </div>
+      <div style="font-size: 9pt; color: #6b7280; margin-top: 30px;">
+        Linter Doğrulaması: 0 BLOCK (Kesici Hata) &nbsp;|&nbsp; Kriptografik Bütünlük: Harici .sha256 Manifest
+      </div>
+    </div>
+    """
+    full_book_doc = wrap_pdf_document("Quran_Vision_Tam_Kulliyat_v6_2_1", cover_html + "\n".join(all_articles))
+    book_html_path = PDF_DIR / "Quran_Vision_Kulliyat_v6.2.1.html"
+    book_pdf_path = PDF_DIR / "Quran_Vision_Kulliyat_v6.2.1.pdf"
+    book_html_path.write_text(full_book_doc, encoding="utf-8")
+
+    cmd_book = [
+        browser,
+        "--headless",
+        "--disable-gpu",
+        "--no-pdf-header-footer",
+        f"--print-to-pdf={book_pdf_path}",
+        book_html_path.resolve().as_uri(),
+    ]
+    subprocess.run(cmd_book, check=False, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    book_html_path.unlink(missing_ok=True)
+    if book_pdf_path.exists() and book_pdf_path.stat().st_size > 1000:
+        shutil.copy2(book_pdf_path, DESKTOP_PDF_DIR / "Quran_Vision_Kulliyat_v6.2.1.pdf")
+        shutil.copy2(book_pdf_path, parent_pdf_dir / "Quran_Vision_Kulliyat_v6.2.1.pdf")
+        print(f"  📚 Tam Külliyat PDF üretildi: {book_pdf_path.name} ({book_pdf_path.stat().st_size // 1024} KB)")
+
+
 def build_html(reports):
     reports_json = json.dumps(reports, ensure_ascii=False)
     total_classical = sum(len(r["classical_sources"]) for r in reports)
@@ -79,7 +555,7 @@ def build_html(reports):
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Quran Vision (v6.2.1) — Kur'an Temelli Gelecek Vizyonu | Dijital Akademik Külliyat Portalı</title>
+<title>Quran Vision v6.2.1 - Kur'an Temelli Gelecek Vizyonu Akademik Kulliyat Portali</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -249,20 +725,21 @@ body {{
   justify-content: space-between;
   align-items: center;
   gap: 16px;
+  flex-wrap: wrap;
 }}
 .stats-bar {{
   display: flex;
-  gap: 18px;
+  gap: 12px;
   flex-wrap: wrap;
 }}
 .stat-pill {{
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   font-size: 12px;
   color: var(--text-secondary);
   background: var(--bg-surface);
-  padding: 6px 12px;
+  padding: 6px 11px;
   border-radius: 8px;
   border: 1px solid var(--border);
 }}
@@ -272,22 +749,45 @@ body {{
 }}
 .top-actions {{
   display: flex;
-  gap: 10px;
+  gap: 8px;
+  flex-wrap: wrap;
 }}
 .btn {{
-  padding: 7px 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 13px;
   border-radius: 8px;
   border: 1px solid var(--border);
   background: var(--bg-card);
   color: var(--text-primary);
   font-size: 12.5px;
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
+  text-decoration: none;
   transition: all 0.15s;
 }}
 .btn:hover {{
   border-color: var(--accent-gold);
   color: var(--accent-gold);
+}}
+.btn-primary {{
+  background: var(--accent-emerald-soft);
+  border-color: rgba(16, 185, 129, 0.45);
+  color: var(--accent-emerald);
+}}
+.btn-primary:hover {{
+  background: var(--accent-emerald);
+  color: #091310;
+}}
+.btn-gold {{
+  background: var(--accent-gold-soft);
+  border-color: rgba(212, 175, 55, 0.45);
+  color: var(--accent-gold);
+}}
+.btn-gold:hover {{
+  background: var(--accent-gold);
+  color: #091310;
 }}
 
 .content-scroll {{
@@ -308,6 +808,7 @@ body {{
   flex-wrap: wrap;
   gap: 10px;
   margin-bottom: 12px;
+  align-items: center;
 }}
 .badge {{
   font-size: 11.5px;
@@ -343,6 +844,7 @@ body {{
   margin-bottom: 22px;
   border-bottom: 1px solid var(--border);
   padding-bottom: 12px;
+  flex-wrap: wrap;
 }}
 .tab-btn {{
   padding: 9px 18px;
@@ -521,8 +1023,36 @@ body {{
 }}
 
 @media print {{
-  .sidebar, .topbar, .tabs {{ display: none !important; }}
-  body, .main, .content-scroll {{ height: auto; overflow: visible; }}
+  @page {{
+    size: A4 portrait;
+    margin: 15mm;
+  }}
+  .sidebar, .topbar, .tabs, .no-print {{
+    display: none !important;
+  }}
+  html, body, .main, .content-scroll {{
+    display: block !important;
+    height: auto !important;
+    overflow: visible !important;
+    background: #ffffff !important;
+    color: #111827 !important;
+    padding: 0 !important;
+  }}
+  #tab-dashboard, #tab-sources, #tab-fulltext {{
+    display: block !important;
+    margin-bottom: 20px !important;
+  }}
+  .hero-card, .panel, .source-card, .md-body {{
+    background: #ffffff !important;
+    color: #111827 !important;
+    border: 1px solid #d1d5db !important;
+    box-shadow: none !important;
+    break-inside: avoid;
+  }}
+  .md-body {{
+    break-inside: auto;
+    padding: 16px !important;
+  }}
 }}
 </style>
 </head>
@@ -549,8 +1079,10 @@ body {{
       <div class="stat-pill">🛡️ Linter & SHA-256: <strong>0 KESİCİ HATA</strong></div>
     </div>
     <div class="top-actions">
-      <button class="btn" onclick="toggleTheme()">🌗 Tema Değiştir</button>
-      <button class="btn" onclick="window.print()">🖨️ PDF / Yazdır</button>
+      <a id="downloadPdfBtn" class="btn btn-primary" href="pdf/QV-2026-001.pdf" download="QV-2026-001.pdf">📥 Raporu PDF İndir</a>
+      <a class="btn btn-gold" href="pdf/Quran_Vision_Kulliyat_v6.2.1.pdf" download="Quran_Vision_Kulliyat_v6.2.1.pdf">📚 Tüm Külliyat PDF (13 Rapor)</a>
+      <button class="btn" onclick="printCurrentReport()">🖨️ Yazdır</button>
+      <button class="btn" onclick="toggleTheme()">🌗 Tema</button>
     </div>
   </header>
 
@@ -602,6 +1134,15 @@ function selectReport(idx) {{
   renderSidebar(document.getElementById('searchInput').value);
   const r = REPORTS[idx];
 
+  // Update clean document title & PDF download button
+  document.title = `${{r.case_id}} - ${{r.surah}} ${{r.verse}} - Quran Vision v6.2.1`;
+  const dlBtn = document.getElementById('downloadPdfBtn');
+  if (dlBtn) {{
+    dlBtn.href = `pdf/${{r.pdf_filename}}`;
+    dlBtn.setAttribute('download', `${{r.case_id}}_${{r.surah}}_Raporu.pdf`);
+    dlBtn.innerHTML = `📥 PDF İndir (${{r.case_id}})`;
+  }}
+
   // Hero
   document.getElementById('heroCard').innerHTML = `
     <div class="hero-meta">
@@ -610,6 +1151,7 @@ function selectReport(idx) {{
       <span class="badge badge-mono">${{r.case_id}}</span>
       <span class="badge badge-mono">Güven Derecesi: ${{r.confidence}}</span>
       <span class="badge badge-mono">Statü: ${{r.status}}</span>
+      <a class="btn btn-primary no-print" style="margin-left:auto; padding:4px 10px; font-size:11.5px;" href="pdf/${{r.pdf_filename}}" download="${{r.case_id}}_${{r.surah}}_Raporu.pdf">📥 Doğrudan A4 PDF İndir (${{r.case_id}}.pdf)</a>
     </div>
     <div class="hero-title">${{r.topic}}</div>
     <div class="sha-bar">🔒 <strong>Harici Kriptografik Manifest (SHA-256):</strong> ${{r.sha256}} &nbsp;|&nbsp; 📄 <code>docs/tr/${{r.filename}}</code></div>
@@ -728,6 +1270,19 @@ function selectReport(idx) {{
   document.getElementById('tab-fulltext').innerHTML = `<div class="md-body">${{renderMarkdown(r.body)}}</div>`;
 }}
 
+function printCurrentReport() {{
+  const r = REPORTS[currentIndex];
+  const prevTheme = document.documentElement.getAttribute('data-theme');
+  const prevTitle = document.title;
+  document.documentElement.setAttribute('data-theme', 'light');
+  document.title = `${{r.case_id}}_${{r.surah}}_Raporu`;
+  setTimeout(() => {{
+    window.print();
+    document.documentElement.setAttribute('data-theme', prevTheme);
+    document.title = prevTitle;
+  }}, 150);
+}}
+
 function formatInlineMd(str) {{
   if (!str) return '';
   return str
@@ -781,9 +1336,9 @@ function renderMarkdown(md) {{
       html += `<h1>${{formatInlineMd(line.slice(2))}}</h1>`;
     }} else if (line.startsWith('## ')) {{
       html += `<h2>${{formatInlineMd(line.slice(3))}}</h2>`;
-    }} else if (line.startsWith('### ')) {{
+    }} else if (line.startsWith("### ")) {{
       html += `<h3>${{formatInlineMd(line.slice(4))}}</h3>`;
-    }} else if (line.startsWith('#### ')) {{
+    }} else if (line.startsWith("#### ")) {{
       html += `<h4>${{formatInlineMd(line.slice(5))}}</h4>`;
     }} else if (line.trim() === '---') {{
       html += '<hr style="border:none; border-top:1px solid var(--border); margin:18px 0;">';
@@ -828,7 +1383,6 @@ selectReport(0);
 
 def main():
     report_files = sorted(DOCS_TR.glob("[0-9][0-9]-*-v6.1.1.md"))
-    # Exclude template 05
     report_files = [f for f in report_files if not f.name.startswith("05-")]
     reports = []
     for rf in report_files:
@@ -839,10 +1393,15 @@ def main():
     html = build_html(reports)
     out1 = ROOT / "docs" / "index.html"
     out2 = ROOT.parent / "GEM_DIJITAL_KULLIYAT_PORTALI.html"
+    out3 = ROOT.parent / "QURAN_VISION_KULLIYAT_PORTALI.html"
     out1.write_text(html, encoding="utf-8")
     out2.write_text(html, encoding="utf-8")
+    out3.write_text(html, encoding="utf-8")
     print(f"✅ Portal üretildi: {out1} ({len(reports)} rapor)")
-    print(f"✅ Masaüstü hızlı erişim kopyası: {out2}")
+    print(f"✅ Masaüstü hızlı erişim kopyaları: {out2.name}, {out3.name}")
+
+    print("🖨️ Gerçek A4 PDF dosyaları üretiliyor (Edge Headless Motoru)...")
+    generate_all_pdfs(reports)
 
 
 if __name__ == "__main__":
