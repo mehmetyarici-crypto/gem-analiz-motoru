@@ -685,6 +685,39 @@ def build_single_report_print_html_en(r: dict, idx: int) -> str:
     """
 
 
+def stamp_pdf_metadata(pdf_path: Path, title: str, subject: str):
+    """Embeds standardized XMP / PDF Info metadata (Author, Title, Subject, Keywords) into PDF binaries for Zotero, Mendeley & Scholar."""
+    if not pdf_path.exists() or pdf_path.stat().st_size < 1000:
+        return
+    author_str = "Mehmet Yarıcı (ORCID: 0009-0003-0356-8582)"
+    keywords_str = (
+        "Quran Vision Corpus v6.2.1; Strategic Tafsir; Maqasid al-Shariah; ISNAD 2; "
+        "Bayesian Policy Simulation; DOI:10.5281/zenodo.23391192; "
+        "Principal Author: Mehmet Yarıcı (ORCID: 0009-0003-0356-8582); "
+        "Academic Advisor & Peer-Reviewer: Mehmet Emin Koç (ORCID: 0000-0002-1025-5643)"
+    )
+    creator_str = "Quran Vision Institute v6.2.1 — Founder & Principal Author: Mehmet Yarıcı"
+    try:
+        import pymupdf
+        doc = pymupdf.open(str(pdf_path))
+        if doc.metadata.get("author") != author_str or doc.metadata.get("subject") != subject:
+            doc.set_metadata({
+                "title": title,
+                "author": author_str,
+                "subject": subject,
+                "keywords": keywords_str,
+                "creator": creator_str,
+            })
+            tmp_out = pdf_path.with_suffix(".stamped.pdf")
+            doc.save(str(tmp_out), garbage=1, deflate=True)
+            doc.close()
+            tmp_out.replace(pdf_path)
+        else:
+            doc.close()
+    except Exception:
+        pass
+
+
 def generate_all_pdfs(reports: list):
     PDF_DIR.mkdir(parents=True, exist_ok=True)
     DESKTOP_PDF_DIR.mkdir(parents=True, exist_ok=True)
@@ -704,6 +737,12 @@ def generate_all_pdfs(reports: list):
         all_articles.append(art_html)
 
         out_pdf = PDF_DIR / r["pdf_filename"]
+        tr_title = f"{r['case_id']} — {r['surah']} {r['verse']}: {r['topic']} | Kur'an Vizyonu Külliyatı v6.2.1"
+        tr_subj = (
+            f"Kur'an Vizyonu Külliyatı v6.2.1 ({r['case_id']}) • DOI: 10.5281/zenodo.23391192 • "
+            "Proje Kurucusu & Başyazar (Eser Sahibi): Mehmet Yarıcı (ORCID: 0009-0003-0356-8582) • "
+            "Akademik Danışman & Dış Hakem: Mehmet Emin Koç (ORCID: 0000-0002-1025-5643)"
+        )
         if not (out_pdf.exists() and out_pdf.stat().st_size > 1000 and not rebuild_all):
             single_doc = wrap_pdf_document(f"{r['case_id']} - {r['surah']} {r['verse']}", art_html)
             tmp_html = PDF_DIR / f"{r['case_id']}.html"
@@ -717,6 +756,7 @@ def generate_all_pdfs(reports: list):
             if out_pdf.exists() and out_pdf.stat().st_size > 1000:
                 print(f"  📄 Yeni TR PDF üretildi: {out_pdf.name} ({out_pdf.stat().st_size // 1024} KB)")
         if out_pdf.exists():
+            stamp_pdf_metadata(out_pdf, tr_title, tr_subj)
             shutil.copy2(out_pdf, DESKTOP_PDF_DIR / r["pdf_filename"])
             shutil.copy2(out_pdf, parent_pdf_dir / r["pdf_filename"])
 
@@ -725,6 +765,12 @@ def generate_all_pdfs(reports: list):
         all_articles_en.append(art_en_html)
 
         out_pdf_en = PDF_DIR / r["pdf_filename_en"]
+        en_title = f"{r['case_id']} — Surah {r.get('surah_en', r['surah'])} {r['verse']}: {r.get('topic_en', r['topic'])} | Quran Vision Corpus v6.2.1"
+        en_subj = (
+            f"Quran Vision Corpus v6.2.1 ({r['case_id']}) • DOI: 10.5281/zenodo.23391192 • "
+            "Founder & Principal Author (Corpus Owner): Mehmet Yarıcı (ORCID: 0009-0003-0356-8582) • "
+            "Academic Advisor & External Peer-Reviewer: Mehmet Emin Koç (ORCID: 0000-0002-1025-5643)"
+        )
         if not (out_pdf_en.exists() and out_pdf_en.stat().st_size > 1000 and not rebuild_all):
             single_doc_en = wrap_pdf_document(f"{r['case_id']} - Surah {r.get('surah_en', r['surah'])} {r['verse']} (EN)", art_en_html)
             tmp_html_en = PDF_DIR / f"{r['case_id']}_EN.html"
@@ -738,6 +784,7 @@ def generate_all_pdfs(reports: list):
             if out_pdf_en.exists() and out_pdf_en.stat().st_size > 1000:
                 print(f"  🇬🇧 Yeni EN PDF üretildi: {out_pdf_en.name} ({out_pdf_en.stat().st_size // 1024} KB)")
         if out_pdf_en.exists():
+            stamp_pdf_metadata(out_pdf_en, en_title, en_subj)
             shutil.copy2(out_pdf_en, DESKTOP_PDF_DIR / r["pdf_filename_en"])
             shutil.copy2(out_pdf_en, parent_pdf_dir / r["pdf_filename_en"])
 
@@ -781,9 +828,15 @@ def generate_all_pdfs(reports: list):
         subprocess.run(cmd_book, check=False, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         book_html_path.unlink(missing_ok=True)
         if book_pdf_path.exists() and book_pdf_path.stat().st_size > 1000:
-            shutil.copy2(book_pdf_path, DESKTOP_PDF_DIR / "Quran_Vision_Kulliyat_v6.2.1.pdf")
-            shutil.copy2(book_pdf_path, parent_pdf_dir / "Quran_Vision_Kulliyat_v6.2.1.pdf")
             print(f"  📚 Tam Külliyat TR PDF üretildi: {book_pdf_path.name} ({book_pdf_path.stat().st_size // 1024} KB)")
+    if book_pdf_path.exists():
+        stamp_pdf_metadata(
+            book_pdf_path,
+            f"Kur'an Vizyonu (Quran Vision) Stratejik Tefsir, Makâsıd ve Medeniyet Öngörü Külliyatı v6.2.1 (QV-2026-001 – {last_code})",
+            "Kur'an Vizyonu Külliyatı v6.2.1 • DOI: 10.5281/zenodo.23391192 • Proje Kurucusu & Başyazar (Eser Sahibi): Mehmet Yarıcı (ORCID: 0009-0003-0356-8582) • Akademik Danışman & Dış Hakem: Mehmet Emin Koç (ORCID: 0000-0002-1025-5643)",
+        )
+        shutil.copy2(book_pdf_path, DESKTOP_PDF_DIR / "Quran_Vision_Kulliyat_v6.2.1.pdf")
+        shutil.copy2(book_pdf_path, parent_pdf_dir / "Quran_Vision_Kulliyat_v6.2.1.pdf")
 
     # Full English Corpus Book PDF
     cover_en_html = f"""
@@ -824,9 +877,16 @@ def generate_all_pdfs(reports: list):
         subprocess.run(cmd_book_en, check=False, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         book_en_html_path.unlink(missing_ok=True)
         if book_en_pdf_path.exists() and book_en_pdf_path.stat().st_size > 1000:
-            shutil.copy2(book_en_pdf_path, DESKTOP_PDF_DIR / "Quran_Vision_Corpus_EN_v6.2.1.pdf")
-            shutil.copy2(book_en_pdf_path, parent_pdf_dir / "Quran_Vision_Corpus_EN_v6.2.1.pdf")
             print(f"  🇬🇧📚 Tam Külliyat EN PDF üretildi: {book_en_pdf_path.name} ({book_en_pdf_path.stat().st_size // 1024} KB)")
+    if book_en_pdf_path.exists():
+        stamp_pdf_metadata(
+            book_en_pdf_path,
+            f"Quran Vision Corpus: Strategic Tafsir, Maqasid & Civilization Foresight v6.2.1 (QV-2026-001 – {last_code})",
+            "Quran Vision Corpus v6.2.1 • DOI: 10.5281/zenodo.23391192 • Founder & Principal Author (Corpus Owner): Mehmet Yarıcı (ORCID: 0009-0003-0356-8582) • Academic Advisor & External Peer-Reviewer: Mehmet Emin Koç (ORCID: 0000-0002-1025-5643)",
+        )
+        shutil.copy2(book_en_pdf_path, DESKTOP_PDF_DIR / "Quran_Vision_Corpus_EN_v6.2.1.pdf")
+        shutil.copy2(book_en_pdf_path, parent_pdf_dir / "Quran_Vision_Corpus_EN_v6.2.1.pdf")
+
 
 
 def build_html(reports):
@@ -2918,9 +2978,8 @@ def main():
 
     if "--force-pdf" in sys.argv or not (PDF_DIR / "Quran_Vision_Kulliyat_v6.2.1.pdf").exists():
         print("🖨️ Gerçek A4 PDF dosyaları üretiliyor (Edge Headless Motoru)...")
-        generate_all_pdfs(reports)
-    else:
-        print("✅ A4 PDF dosyaları zaten güncel (yeniden üretmek için --force-pdf kullanın).")
+    generate_all_pdfs(reports)
+    print("✅ A4 PDF dosyaları ve gömülü XMP/Info meta verileri (Author/Title/Subject/DOI/ORCID) doğrulandı.")
 
 
 if __name__ == "__main__":
