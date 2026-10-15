@@ -1465,7 +1465,7 @@ function prefillCandidateVerse(verseRef, verseTitle) {{
   if (sel) sel.value = "Külliyata Yeni Âyet / Rapor Önerisi (QV-2026-014+)";
   const ta = document.getElementById('fbContent');
   if (ta) {{
-    ta.value = `Külliyatın 14. raporu (QV-2026-014) olarak "${{verseRef}} — ${{verseTitle}}" konusunun 26 adımlı Quran Vision çerçevesinde incelenmesini öneriyorum.\n\nÖneri Gerekçem: `;
+    ta.value = `Külliyatın 14. raporu (QV-2026-014) olarak "${{verseRef}} — ${{verseTitle}}" konusunun 26 adımlı Quran Vision çerçevesinde incelenmesini öneriyorum.\\n\\nÖneri Gerekçem: `;
     ta.focus();
   }}
   showToast("✨ Aday âyet forma aktarıldı! Gerekçenizi ekleyip WhatsApp veya GitHub üzerinden gönderebilirsiniz.");
@@ -1480,15 +1480,15 @@ function buildFormattedFeedbackText() {{
 
   return {{
     r, author, category, content, source,
-    formatted: `*QURAN VISION (v6.2.1) — AKADEMİK ŞERH & GERİ DÖNÜT KARTI*\n` +
-      `━━━━━━━━━━━━━━━━━━━━\n` +
-      `📌 *Rapor:* ${{r.case_id}} — ${{r.surah}} Sûresi ${{r.verse}}\n` +
-      `📖 *Konu:* ${{r.topic}}\n` +
-      `👤 *Katkı Sunan:* ${{author}}\n` +
-      `📂 *Kategori:* ${{category}}\n` +
-      `━━━━━━━━━━━━━━━━━━━━\n` +
-      `📝 *Şerh / Görüş:*\n${{content || '(Belirtilmedi)'}}\n\n` +
-      `📚 *Dayanak / Kaynak:* ${{source}}\n` +
+    formatted: `*QURAN VISION (v6.2.1) — AKADEMİK ŞERH & GERİ DÖNÜT KARTI*\\n` +
+      `━━━━━━━━━━━━━━━━━━━━\\n` +
+      `📌 *Rapor:* ${{r.case_id}} — ${{r.surah}} Sûresi ${{r.verse}}\\n` +
+      `📖 *Konu:* ${{r.topic}}\\n` +
+      `👤 *Katkı Sunan:* ${{author}}\\n` +
+      `📂 *Kategori:* ${{category}}\\n` +
+      `━━━━━━━━━━━━━━━━━━━━\\n` +
+      `📝 *Şerh / Görüş:*\\n${{content || '(Belirtilmedi)'}}\\n\\n` +
+      `📚 *Dayanak / Kaynak:* ${{source}}\\n` +
       `🔗 *Rapor Linki:* https://mehmetyarici-crypto.github.io/quran-vision/`
   }};
 }}
@@ -1515,18 +1515,18 @@ function openGitHubPeerReview() {{
   saveNoteToStorage(data);
   const issueTitle = `[${{data.category}}] ${{data.r.case_id}} (${{data.r.surah}} ${{data.r.verse}}) — ${{data.author}}`;
   const issueBody =
-    `### 🏛️ Quran Vision (v6.2.1) Akademik Şerh & Katkı Kaydı\n\n` +
-    `- **Vaka Kodu:** \`${{data.r.case_id}}\`\n` +
-    `- **Sûre ve Âyet:** ${{data.r.surah}} Sûresi ${{data.r.verse}}\n` +
-    `- **Rapor Başlığı:** ${{data.r.topic}}\n` +
-    `- **SHA-256 Manifest:** \`${{data.r.sha256}}\`\n` +
-    `- **Katkı Sunan:** ${{data.author}}\n` +
-    `- **Katkı Kategorisi:** ${{data.category}}\n\n` +
-    `---\n\n` +
-    `### 📝 Şerh / Analiz / Geri Bildirim Metni\n\n` +
-    `${{data.content}}\n\n` +
-    `### 📚 Dayanak Kaynak / Referans\n\n` +
-    `${{data.source}}\n`;
+    `### 🏛️ Quran Vision (v6.2.1) Akademik Şerh & Katkı Kaydı\\n\\n` +
+    `- **Vaka Kodu:** ${{data.r.case_id}}\\n` +
+    `- **Sûre ve Âyet:** ${{data.r.surah}} Sûresi ${{data.r.verse}}\\n` +
+    `- **Rapor Başlığı:** ${{data.r.topic}}\\n` +
+    `- **SHA-256 Manifest:** ${{data.r.sha256}}\\n` +
+    `- **Katkı Sunan:** ${{data.author}}\\n` +
+    `- **Katkı Kategorisi:** ${{data.category}}\\n\\n` +
+    `---\\n\\n` +
+    `### 📝 Şerh / Analiz / Geri Bildirim Metni\\n\\n` +
+    `${{data.content}}\\n\\n` +
+    `### 📚 Dayanak Kaynak / Referans\\n\\n` +
+    `${{data.source}}\\n`;
   const ghUrl = `https://github.com/mehmetyarici-crypto/quran-vision/issues/new?title=${{encodeURIComponent(issueTitle)}}&body=${{encodeURIComponent(issueBody)}}`;
   window.open(ghUrl, '_blank');
 }}
