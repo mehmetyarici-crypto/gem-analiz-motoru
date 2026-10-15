@@ -5,6 +5,7 @@
 #### *26 Adımlı Kanıta Dayalı Stratejik Tefsir, Makâsıd ve Medeniyet Öngörü Külliyatı*
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23391192.svg)](https://doi.org/10.5281/zenodo.23391192)
+[![ORCID](https://img.shields.io/badge/ORCID_iD-0009--0003--0356--8582-A6CE39?style=for-the-badge&logo=orcid&logoColor=white)](https://orcid.org/0009-0003-0356-8582)
 [![Version](https://img.shields.io/badge/Corpus_Version-v6.2.1-D4AF37?style=for-the-badge)](https://mehmetyarici-crypto.github.io/quran-vision/)
 [![Reports](https://img.shields.io/badge/Foundational_Reports-14_Monographs_(TR_%26_EN)-10B981?style=for-the-badge)](https://mehmetyarici-crypto.github.io/quran-vision/)
 [![ISNAD 2](https://img.shields.io/badge/ISNAD_2_Classical_Tafsir-71_Primary_Arabic_Citations-0f5132?style=for-the-badge)](https://mehmetyarici-crypto.github.io/quran-vision/)
@@ -13,7 +14,7 @@
 
 <br>
 
-### 🏛️ **OFFICIAL CERN / ZENODO DOI:** **[`https://doi.org/10.5281/zenodo.23391192`](https://doi.org/10.5281/zenodo.23391192)**
+### 🏛️ **OFFICIAL CERN / ZENODO DOI:** **[`https://doi.org/10.5281/zenodo.23391192`](https://doi.org/10.5281/zenodo.23391192)** &nbsp;|&nbsp; 🆔 **AUTHOR ORCID:** **[`0009-0003-0356-8582`](https://orcid.org/0009-0003-0356-8582)**
 ### 🌐 **[🚀 LAUNCH LIVE INTERACTIVE PORTAL (🇹🇷 TR | 🇬🇧 EN)](https://mehmetyarici-crypto.github.io/quran-vision/)**
 ### 📙 **[📥 Download Full English Corpus Book (14 Reports - A4 PDF)](https://mehmetyarici-crypto.github.io/quran-vision/pdf/Quran_Vision_Corpus_EN_v6.2.1.pdf)** &nbsp;|&nbsp; 📘 **[📥 Tam Külliyat Kitabını İndir (14 Rapor - Türkçe A4 PDF)](https://mehmetyarici-crypto.github.io/quran-vision/pdf/Quran_Vision_Kulliyat_v6.2.1.pdf)**
 

@@ -870,7 +870,9 @@ def build_html(reports):
   "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
   "creator": {{
     "@type": "Person",
-    "name": "Mehmet Yarıcı"
+    "name": "Mehmet Yarıcı",
+    "identifier": "https://orcid.org/0009-0003-0356-8582",
+    "sameAs": "https://orcid.org/0009-0003-0356-8582"
   }},
   "distribution": [
     {{
@@ -1575,6 +1577,7 @@ body {{
       <div class="stat-pill">🕌 Klasik Tahkik (İSNAD 2): <strong>{total_classical} Nakil</strong></div>
       <div class="stat-pill">🌐 Ampirik Veri (DOI/URL): <strong>{total_modern} Kurum</strong></div>
       <a class="stat-pill" href="https://doi.org/10.5281/zenodo.23391192" target="_blank" rel="noopener" style="text-decoration:none; border-color:var(--accent-gold);">🏛️ CERN/Zenodo DOI: <strong>10.5281/zenodo.23391192</strong></a>
+      <a class="stat-pill" href="https://orcid.org/0009-0003-0356-8582" target="_blank" rel="noopener" style="text-decoration:none; border-color:var(--accent-emerald);">🆔 ORCID: <strong>0009-0003-0356-8582</strong></a>
     </div>
     <div class="top-actions">
       <button id="topFeedbackBtn" class="btn btn-gold" onclick="openFeedbackTab()">💬 Akademik Katkı & Şerh Yaz</button>
@@ -1797,11 +1800,13 @@ function setLanguage(lang) {{
       <div class="stat-pill">🕌 Classical Citations (ISNAD 2): <strong>${{TOTAL_CLASSICAL}} Primary Texts</strong></div>
       <div class="stat-pill">🌐 Empirical Data (DOI/URL): <strong>${{TOTAL_MODERN}} Institutions</strong></div>
       <a class="stat-pill" href="https://doi.org/10.5281/zenodo.23391192" target="_blank" rel="noopener" style="text-decoration:none; border-color:var(--accent-gold);">🏛️ CERN/Zenodo DOI: <strong>10.5281/zenodo.23391192</strong></a>
+      <a class="stat-pill" href="https://orcid.org/0009-0003-0356-8582" target="_blank" rel="noopener" style="text-decoration:none; border-color:var(--accent-emerald);">🆔 ORCID: <strong>0009-0003-0356-8582</strong></a>
     ` : `
       <div class="stat-pill">📚 Külliyat: <strong>${{REPORTS.length}} Rapor</strong></div>
       <div class="stat-pill">🕌 Klasik Tahkik (İSNAD 2): <strong>${{TOTAL_CLASSICAL}} Nakil</strong></div>
       <div class="stat-pill">🌐 Ampirik Veri (DOI/URL): <strong>${{TOTAL_MODERN}} Kurum</strong></div>
       <a class="stat-pill" href="https://doi.org/10.5281/zenodo.23391192" target="_blank" rel="noopener" style="text-decoration:none; border-color:var(--accent-gold);">🏛️ CERN/Zenodo DOI: <strong>10.5281/zenodo.23391192</strong></a>
+      <a class="stat-pill" href="https://orcid.org/0009-0003-0356-8582" target="_blank" rel="noopener" style="text-decoration:none; border-color:var(--accent-emerald);">🆔 ORCID: <strong>0009-0003-0356-8582</strong></a>
     `;
   }}
 

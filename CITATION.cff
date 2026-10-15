@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 title: "Quran Vision Corpus (Kur'ân Vizyonu Külliyatı): 26-Step Evidence-Based Strategic Tafsir, Maqasid & Civilization Foresight Corpus (TR/EN)"
-message: "If you use this corpus, methodology, or any of its 14 foundational verse reports in your academic research or curriculum, please cite it using the official DOI metadata below."
+message: "If you use this corpus, methodology, or any of its 14 foundational verse reports in your academic research or curriculum, please cite it using the official DOI and ORCID metadata below."
 type: dataset
 version: "6.2.1"
 doi: "10.5281/zenodo.23391192"
@@ -18,6 +18,7 @@ identifiers:
 authors:
   - family-names: "Yarıcı"
     given-names: "Mehmet"
+    orcid: "https://orcid.org/0009-0003-0356-8582"
     affiliation: "Quran Vision Institute / Kur'ân Vizyonu Stratejik Tefsir Külliyatı"
 keywords:
   - "Quranic Studies"
