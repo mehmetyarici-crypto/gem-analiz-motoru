@@ -68,30 +68,40 @@ The **Quran Vision Corpus (`v6.2.1`)** is an open-access, bilingual (**Turkish &
 
 ---
 
+## 📋 CANONICAL SPECIFICATION & METHODOLOGY GUIDES (v6.2.1)
+
+- 📘 **Canonical v6.2.1 Specification (Markdown):** [`QURAN_VISION_v6.2.1_SPECIFICATION.md`](QURAN_VISION_v6.2.1_SPECIFICATION.md) — Complete 26-step architecture, 5 macro phases, `V1–V12` verification gates, ISNAD 2 & APA 7/DOI standards.
+- 📄 **Full Master Instruction & Specification Text (`.txt`):** [`docs/QURAN_VISION_v6.2.1_TAM_TALIMAT.txt`](docs/QURAN_VISION_v6.2.1_TAM_TALIMAT.txt) — Single Source of Truth master specification document.
+- 🧭 **Methodological Overview (EN / TR):** [`METHOD.md`](METHOD.md) &nbsp;|&nbsp; [`YONTEM.md`](YONTEM.md) &nbsp;|&nbsp; [`README.tr.md`](README.tr.md)
+
+---
+
 ## 🛠️ REPOSITORY ARCHITECTURE & AUTOMATED PIPELINE
 
 ```text
 quran-vision/
+├── QURAN_VISION_v6.2.1_SPECIFICATION.md  # Canonical v6.2.1 Methodological Specification
 ├── docs/
-│   ├── index.html                  # Interactive Bilingual (TR/EN) Strategic Cockpit & Reader
-│   ├── tr/                         # 15 Sealed Turkish 26-Step Markdown Reports + .sha256 manifests
-│   ├── en/                         # 15 Full English 26-Step Markdown Reports (*-en-v6.1.1.md)
-│   └── pdf/                        # 32 Standalone A4 PDFs (QV-2026-001..015 TR & EN + Full Corpus Books)
+│   ├── index.html                        # Interactive Bilingual (TR/EN) Strategic Cockpit & Reader
+│   ├── QURAN_VISION_v6.2.1_TAM_TALIMAT.txt # Master Specification & Instruction Text (.txt)
+│   ├── tr/                               # 15 Sealed Turkish 26-Step Markdown Reports + .sha256 manifests
+│   ├── en/                               # 15 Full English 26-Step Markdown Reports (*-en-v6.1.1.md)
+│   └── pdf/                              # 32 Standalone A4 PDFs (QV-2026-001..015 TR & EN + Full Corpus Books)
 ├── src/
-│   ├── gem_lint.py                 # 16-Rule Academic & Methodological Verification Engine (Linter)
-│   ├── build_portal.py             # Bilingual Static Site & Headless Edge A4 PDF Compiler
-│   ├── en_corpus_data.py           # Full English 26-Step Report & Bayesian Scenario Generator
-│   └── create_report.py            # Two-Stage Report Production Pipeline (--stage draft / --stage seal)
-├── CITATION.cff                    # Official GitHub / Zotero / APA / BibTeX Citation Metadata
-└── .zenodo.json                    # CERN / Zenodo Open-Science DOI Indexing Metadata
+│   ├── gem_lint.py                       # V1-V12 Academic & Methodological Verification Engine (Linter)
+│   ├── build_portal.py                   # Bilingual Static Site, XMP Metadata & Headless Edge A4 PDF Compiler
+│   ├── en_corpus_data.py                 # Full English 26-Step Report & Bayesian Scenario Generator
+│   └── create_report.py                  # Two-Stage Report Production Pipeline (--stage draft / --stage seal)
+├── CITATION.cff                          # Official GitHub / Zotero / APA / BibTeX Citation Metadata
+└── .zenodo.json                          # CERN / Zenodo Open-Science DOI Indexing Metadata
 ```
 
 ### Verification & Build Commands
 ```bash
-# 1. Run the 16-rule academic & SHA-256 integrity linter across all reports
-python src/gem_lint.py docs/tr/
+# 1. Run the V1-V12 academic, lexical depth & SHA-256 integrity linter across all reports
+python src/gem_lint.py docs/tr/06-pilot-tevbe-95-v6.1.1.md --katman 3 --h6
 
-# 2. Rebuild the bilingual web portal (docs/index.html) and all 32 TR/EN A4 PDFs
+# 2. Rebuild the bilingual web portal (docs/index.html), 15 English Markdowns, and all 32 TR/EN A4 PDFs
 python src/build_portal.py --force-pdf
 ```
 

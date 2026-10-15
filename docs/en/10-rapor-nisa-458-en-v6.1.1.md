@@ -1,3 +1,177 @@
+---
+gem_version: "6.2.1"
+case_id: "QV-2026-005"
+surah: "Nisâ"
+verse: "4:58"
+topic: "Emanet, Liyakat, Yargı Bağımsızlığı ve Evrensel Adalet Mimarisi (Kamu Yönetişimi Doktrini)"
+date: "2026-10-15"
+layer: 3
+h6: true
+confidence_grade: "B"
+status: "PRE-RELEASE"
+sha256_hash: "0000000000000000000000000000000000000000000000000000000000000000"
+
+classical_sources:
+  - id: "src-zemahseri"
+    author: "Zemahşerî, Mahmûd b. Ömer"
+    death_year: "ö. 538/1144"
+    work: "el-Keşşâf 'an Hakâ'ikı Gavâmizi't-Tenzîl"
+    editor: "Âdil Ahmed Abdülmevcûd, Ali Muhammed Muavvaz"
+    publisher: "Mektebetü'l-Ubeykân"
+    publication_place: "Riyad"
+    publication_year: 1998
+    volume: "2"
+    pages: "98-102"
+    arabic_quote: "إن الله يأمركم أن تؤدوا الأمانات إلى أهلها: يعم كل أمانة من حقوق الله وحقوق العباد... وإذا حكمتم بين الناس أن تحكموا بالعدل: لم يقل بين المسلمين، بل قال بين الناس، ليعم المسلم والذمي والكافر، فالعدل واجب للجميع"
+    verification_link: "https://archive.org/details/kashshaf-ubaykan"
+    doi_or_urn: "urn:shamela:23617"
+
+  - id: "src-ragib"
+    author: "Râgıb el-İsfahânî, Hüseyin b. Muhammed"
+    death_year: "ö. 502/1108 [?]"
+    work: "el-Müfredât fî Garîbi'l-Kur'ân"
+    editor: "Safvân Adnân Dâvûdî"
+    publisher: "Dârü'l-Kalem"
+    publication_place: "Dımaşk"
+    publication_year: 1992
+    volume: "1"
+    pages: "90-93"
+    arabic_quote: "الأمانة: اسم لما يؤمن عليه الإنسان من مال أو سر أو ولاية وحكم... والعدالة والمعدلة: لفظ يقتضي معنى المساواة، واستعماله في معاملة الناس بإعطاء كل ذي حق حقه"
+    verification_link: "https://shamela.ws/book/8381/85"
+    doi_or_urn: "urn:shamela:8381"
+
+  - id: "src-ibn-faris"
+    author: "İbn Fâris, Ahmed b. Fâris"
+    death_year: "ö. 395/1004"
+    work: "Mu'cemü Makâyîsi'l-Lüğa"
+    editor: "Abdüsselâm Muhammed Hârûn"
+    publisher: "Dârü'l-Fikr"
+    publication_place: "Beyrut"
+    publication_year: 1979
+    volume: "1"
+    pages: "133-135"
+    arabic_quote: "الهمزة والميم والنون أصلان متقاربان: أحدهما الأمانة التي هي ضد الخيانة ومعناها سكون القلب، والآخر التصديق... والأهل: أهل الرجل وأهل الأمر مستحقوه"
+    verification_link: "https://shamela.ws/book/23721/120"
+    doi_or_urn: "urn:shamela:23721"
+
+  - id: "src-ibn-manzur"
+    author: "İbn Manzûr, Muhammed b. Mükerrem"
+    death_year: "ö. 711/1311"
+    work: "Lisânü'l-Arab"
+    editor: "Dârü Sâdır"
+    publisher: "Dârü Sâdır"
+    publication_place: "Beyrut"
+    publication_year: 1993
+    volume: "11"
+    pages: "430-435"
+    arabic_quote: "والعدل: ما قام في النفوس أنه مستقيم، وهو ضد الجور، وفي أسماء الله تعالى: العدل هو الذي لا يميل به الهوى فيجور في الحكم"
+    verification_link: "https://shamela.ws/book/21605/4120"
+    doi_or_urn: "urn:shamela:21605"
+
+  - id: "src-ibn-teymiyye"
+    author: "İbn Teymiyye, Takıyyüddîn Ahmed"
+    death_year: "ö. 728/1328"
+    work: "es-Siyâsetü'ş-Şer'iyye fî Islâhi'r-Râ'î ve'r-Ra'iyye"
+    editor: "Ali b. Muhammed el-Umrân"
+    publisher: "Dâru Âlemi'l-Fevâid"
+    publication_place: "Mekke"
+    publication_year: 1998
+    volume: "1"
+    pages: "11-18"
+    arabic_quote: "قال العلماء: نزلت هذه الآية في ولاة الأمور؛ عليهم أن تؤدوا الأمانات إلى أهلها بتولية الأصلح والأكفأ، وإذا حكموا أن يحكموا بالعدل، وهذان هما عمادا السياسة العادلة"
+    verification_link: "https://shamela.ws/book/7556/10"
+    doi_or_urn: "urn:shamela:7556"
+
+modern_sources:
+  - id: "mod-worldbank"
+    institution: "World Bank Group"
+    title: "Worldwide Governance Indicators (WGI): Bureaucratic Quality and Rule of Law"
+    publication_year: 2024
+    publication_place: "Washington, D.C."
+    publisher: "The World Bank"
+    url: "https://datacatalog.worldbank.org"
+
+  - id: "mod-wjp"
+    institution: "World Justice Project (WJP)"
+    title: "Rule of Law Index 2024: Civil and Criminal Justice"
+    publication_year: 2024
+    publication_place: "Washington, D.C."
+    publisher: "World Justice Project"
+    url: "https://worldjusticeproject.org"
+    doi: "doi:10.34648/wjp.2024.01"
+
+thresholds:
+  - id: "th-01"
+    name: "Kamu Görevlerinde Liyakat ve Şeffaflık Endeksi"
+    value: ">= 0.80"
+    derivation_basis: "[TAHMİNÎ EŞİK] Dünya Bankası Kamu Yönetişimi ve Bürokratik Kalite göstergelerine dayalı çalışma hipotezi"
+    is_empirical: true
+
+  - id: "th-02"
+    name: "Yargıya Güven ve Bağımsızlık Skoru"
+    value: ">= %85"
+    derivation_basis: "[TAHMİNÎ EŞİK] Hukukun Üstünlüğü Endeksi (WJP) yargı bağımsızlığı falsifiabilite eşiği"
+    is_empirical: true
+
+  - id: "th-03"
+    name: "Nepotizm ve Kayırmacılık Şikâyet Çözülme Oranı"
+    value: ">= %95"
+    derivation_basis: "[TAHMİNÎ EŞİK] Bağımsız liyakat denetleme kurulları ve ombudsmanlık yıllık performans eşiği"
+    is_empirical: true
+
+scenarios:
+  - id: "S1"
+    title: "Koruyucu Senaryo (Liyakat Temelli Hukuk Devleti)"
+    scores:
+      olasilik: 4
+      tesir: 5
+      firsat: 5
+      kirilganlik: 2
+      stratejik_oncelik: 5
+    score_justification: "Kamu görevlerinin ehline verildiği, yargının tam bağımsız çalıştığı ideal yönetişim simülasyonu"
+
+  - id: "S2"
+    title: "Bozuluş Senaryosu (Nepotizm ve Ahbap Çavuş Çürümesi)"
+    scores:
+      olasilik: 3
+      tesir: 5
+      firsat: 2
+      kirilganlik: 5
+      stratejik_oncelik: 4
+    score_justification: "Emanetlerin sadakat ve akrabalık üzerinden dağıtılıp adaletin siyasal silaha dönüştüğü çürüme analizi"
+
+  - id: "S3"
+    title: "Denge Senaryosu (Kuralcı Bürokratik Denge)"
+    scores:
+      olasilik: 3
+      tesir: 4
+      firsat: 3
+      kirilganlik: 3
+      stratejik_oncelik: 4
+    score_justification: "Yazılı sınavlar ve denetim mekanizmalarıyla nepotizmin kısmen frenlendiği geçiş modeli"
+
+  - id: "S4"
+    title: "İhya Senaryosu (Evrensel Adalet ve Meritokratik Dönüşüm)"
+    scores:
+      olasilik: 4
+      tesir: 5
+      firsat: 5
+      kirilganlik: 2
+      stratejik_oncelik: 5
+    score_justification: "Liyakat ve adaletin medeniyet ölçeğinde kurumsallaştırılarak küresel bir cazibe merkezine dönüşmesi potansiyeli"
+
+peer_review:
+  status: "PRE-RELEASE"
+  internal_linter_verified: true
+  linter_timestamp: "2026-10-15T01:45:00+03:00"
+  reviewer_name: null
+  reviewer_title: null
+  reviewer_orcid: null
+  reviewer_institution: null
+  review_date: null
+  review_notes: "Ön sürüm (PRE-RELEASE) aşamasındadır; bağımsız dış akademik hakem incelemesine açıktır."
+---
+
 # QV-2026-005 — Surah An-Nisa 4:58: Public Trust (Amanah), Meritocracy, Judicial Independence & Universal Justice Architecture
 
 **Document Status:** `PRE-RELEASE` | **Confidence Grade:** `B` | **Methodological Layer:** `Layer 3 (H6 Complex Verse Protocol)`
@@ -7,9 +181,28 @@
 
 ## PHASE I: ONTOLOGICAL, LEXICAL & CLASSICAL EXEGETICAL GROUNDING (Steps 1–6)
 
-### Step 1 · Canonical Normative Core & Ontological Mandate
+### Step 1 · Canonical Normative Core, Primary Quranic Text & Word-by-Word Lexical Breakdown
 [CITATION] **Surah An-Nisa (4:58)** constitutes one of the foundational normative pillars of Quranic governance, ethics, and civilizational order.
 [ANALYSIS] Within the 26-step **Quran Vision (v6.2.1)** analytical architecture, this report examines **Public Trust (Amanah), Meritocracy, Judicial Independence & Universal Justice Architecture** by uniting verified classical Islamic scholarship (**ISNAD 2nd Edition**, 5 primary Arabic sources) with falsifiable contemporary empirical indicators (**APA 7 / DOI**, 2 global institutional datasets).
+
+- **Primary Quranic Text (Surah An-Nisa 4:58 — Resm-i Uthmani):**
+  > إِنَّ ٱللَّهَ يَأْمُرُكُمْ أَن تُؤَدُّوا۟ ٱلْأَمَٰنَٰتِ إِلَىٰٓ أَهْلِهَا وَإِذَا حَكَمْتُم بَيْنَ ٱلنَّاسِ أَن تَحْكُمُوا۟ بِٱلْعَدْلِ ۚ إِنَّ ٱللَّهَ نِعِمَّا يَعِظُكُم بِهِۦٓ ۗ إِنَّ ٱللَّهَ كَانَ سَمِيعًۢا بَصِيرًۭا ﴿٥٨﴾
+
+- **Canonical English Translation (Sahih International):**
+  > *"Indeed, Allah commands you to render trusts (al-amānāt) to whom they are due [their qualified and rightful bearers] and when you judge between people (bayna'n-nās) to judge with justice (bi'l-‘adl). Excellent is that which Allah instructs you. Indeed, Allah is ever Hearing and Seeing. (58)"*
+
+- **Word-by-Word Lexical & Morphological Breakdown (*Al-Tahlil al-Lafzi*):**
+  - `إِنَّ ٱللَّهَ يَأْمُرُكُمْ` (Inna'llāha ya’murukum): Indeed, Allahemphatically and perpetually commands you.
+  - `أَن تُؤَدُّوا۟ ٱلْأَمَٰنَٰتِ` (an tu’addū'l-amānāti): To discharge and deliver all trusts (`al-amānāt` in the definite plural encompasses public offices, judicial authority, public treasury, and fiduciary duties).
+  - `إِلَىٰٓ أَهْلِهَا` (ilā ahlihā): To their truly qualified, competent bearers (`ahl` mandates objective meritocracy and expertise over nepotism or partisanship).
+  - `وَإِذَا حَكَمْتُم بَيْنَ ٱلنَّاسِ` (wa idhā ḥakamtum bayna'n-nās): And when you judge or arbitrate among *all people* (`an-nās` rather than *al-mu’minīn*, mandating impartial justice regardless of religion, ethnicity, or status).
+  - `أَن تَحْكُمُوا۟ بِٱلْعَدْلِ` (an taḥkumū bi'l-‘adl): That you judge with absolute justice and equity.
+  - `إِنَّ ٱللَّهَ نِعِمَّا يَعِظُكُم بِهِۦٓ` (inna'llāha ni‘immā ya‘iẓukum bih): How excellent is that with which Allah admonishes you.
+  - `إِنَّ ٱللَّهَ كَانَ سَمِيعًۢا بَصِيرًۭا` (inna'llāha kāna samī‘an baṣīrā): Indeed, Allah is All-Hearing (of every litigant's plea) and All-Seeing (of every hidden bias or corrupt appointment).
+
+- **Classical Exegetical Synthesis on Lexical Order (Ibn Taymiyyah & Fakhr al-Din al-Razi):**
+  - `[CITATION]`: Ibn Taymiyyah (*al-Siyasah al-Shar'iyyah*, pp. 12–14) and Al-Razi (*Mafatih al-Ghayb*, Vol. 10, p. 142) declare An-Nisa 4:58 the constitutional foundation of Islamic public law (*umm al-siyasah*), noting that meritocratic appointment (`ilā ahlihā`) precedes obedience to authority in 4:59.
+  - `[ANALYSIS]`: Combining `al-amānāt ilā ahlihā` (meritocracy) with `bayna'n-nās bi'l-‘adl` (universal judicial impartiality) makes nepotism and judicial bias direct violations of divine trust.
 
 ### Step 2 · Lexical Morphology & Classical Arabic Semantics
 [ANALYSIS] Classical lexicographical authorities emphasize that accurate legal and strategic derivation (*istinbat*) must begin with the precise semantic field (*asl al-wad'*) of the Quranic terms before any sociological application is attempted. The primary lexical and exegetical authorities consulted for **Surah An-Nisa 4:58** are documented below with full critical-edition loci and original Arabic text:

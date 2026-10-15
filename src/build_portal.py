@@ -113,11 +113,13 @@ def parse_report(md_path: Path):
         base_report["scenarios_en"] = merged_scenarios_en
         base_report["body_en"] = build_english_report_body(base_report, en_meta)
 
-        # Save English Markdown file to docs/en/
+        # Save English Markdown file to docs/en/ with full YAML frontmatter
         DOCS_EN.mkdir(parents=True, exist_ok=True)
         en_md_name = md_path.name.replace("-v6.1.1.md", "-en-v6.1.1.md")
         base_report["filename_en"] = en_md_name
-        (DOCS_EN / en_md_name).write_text(base_report["body_en"], encoding="utf-8")
+        en_fm_raw = m.group(1).strip()
+        en_full_md = f"---\n{en_fm_raw}\n---\n\n{base_report['body_en']}"
+        (DOCS_EN / en_md_name).write_text(en_full_md, encoding="utf-8")
     else:
         base_report["surah_en"] = surah
         base_report["topic_en"] = base_report["topic"]
