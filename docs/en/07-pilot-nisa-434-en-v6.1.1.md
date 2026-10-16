@@ -193,6 +193,7 @@ peer_review:
 - **Strategic Foresight Window:** `2026–2036 (10-Year Policy & Institutional Horizon)`
 - **Verified Classical Knowledge Base (*ISNAD 2nd Edition*):** Zemahşerî, Mahmûd b. Ömer (*el-Keşşâf 'an Hakâ'ikı Gavâmizi't-Tenzîl*); İbn Fâris, Ahmed b. Fâris (*Mu'cemü Makâyîsi'l-Lüğa*); İbn Manzûr, Muhammed b. Mükerrem (*Lisânü'l-Arab*); Cessâs, Ahmed b. Ali er-Râzî (*Ahkâmü'l-Kur'ân*); Şâtıbî, İbrâhîm b. Mûsâ (*el-Muvâfakât*).
 - **Verified Empirical Datasets (*APA 7 / DOI*):** United Nations Entity for Gender Equality and the Empowerment of Women (UN Women) (2024); World Health Organization (WHO) (2024); United Nations Development Programme (UNDP) (2024).
+- **Principal Author & Project Founder:** **Mehmet Yarıcı** (`ORCID: 0009-0003-0356-8582` — Ministry of National Education [MEB], Rize, Türkiye).
 - **External Peer Reviewer (V11):** **Mehmet Emin Koç** (`ORCID: 0000-0002-1025-5643` — Azerbaijan National Academy of Sciences [ANAS / AMEA], Institute of Philosophy and Sociology).
 
 ---
@@ -454,7 +455,7 @@ peer_review:
 - **Quantitative Bayesian Update (`Scenario S1 — Prophetic Ma'ruf & Bilateral Mediation Model`):**
   - **Baseline Prior Probability — $P(S_1) = 0.36$ (36.0%):** Base rate of peaceful marital crisis resolution without structured pre-marital training and `4:35` mediation (Family Court baseline).
   - **Conditional Likelihood — $P(E|S_1) = 0.82$ & False-Positive Rate — $P(E|\neg S_1) = 0.19$:** Likelihood of achieving non-violent reconciliation or dignified settlement when `4:34–35` counseling, `4:35` bilateral *hakam* arbitration, and zero-harm legal protections (`th-01`) are active.
-  - **Updated Posterior Probability — $P(S_1|E) = \frac{0.36 \times 0.82}{(0.36 \times 0.82) + (0.64 \times 0.19)} = 0.708$ (70.8%):** Represents a **+34.8 percentage-point gain** in non-violent family preservation and conflict resolution.
+  - **Updated Posterior Probability — $P(S_1|E) = \frac{0.36 \times 0.82}{(0.36 \times 0.82) + (0.64 \times 0.19)} = 0.708 \approx 0.71$ (70.8%):** Represents a **+34.8 percentage-point gain** in non-violent family preservation and conflict resolution.
 - *Epistemic Safeguard:* Bayesian probabilities apply strictly to empirical family-mediation and violence-prevention metrics, never to the revealed text itself.
 
 ---

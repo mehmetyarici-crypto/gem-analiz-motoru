@@ -192,6 +192,7 @@ peer_review:
 - **Strategic Foresight Window:** `2026–2036 (10-Year Policy & Institutional Horizon)`
 - **Verified Classical Knowledge Base (*ISNAD 2nd Edition*):** Zemahşerî, Mahmûd b. Ömer (*el-Keşşâf 'an Hakâ'ikı Gavâmizi't-Tenzîl*); Râgıb el-İsfahânî, Hüseyin b. Muhammed (*el-Müfredât fî Garîbi'l-Kur'ân*); İbn Fâris, Ahmed b. Fâris (*Mu'cemü Makâyîsi'l-Lüğa*); İbn Manzûr, Muhammed b. Mükerrem (*Lisânü'l-Arab*); Ebû Bekr el-Cessâs, Ahmed b. Ali (*Ahkâmü'l-Kur'ân*).
 - **Verified Empirical Datasets (*APA 7 / DOI*):** World Bank Group (2024); Türkiye İstatistik Kurumu (TÜİK) (2024); World Inequality Lab (2024).
+- **Principal Author & Project Founder:** **Mehmet Yarıcı** (`ORCID: 0009-0003-0356-8582` — Ministry of National Education [MEB], Rize, Türkiye).
 - **External Peer Reviewer (V11):** **Mehmet Emin Koç** (`ORCID: 0000-0002-1025-5643` — Azerbaijan National Academy of Sciences [ANAS / AMEA], Institute of Philosophy and Sociology).
 
 ---
@@ -447,7 +448,7 @@ peer_review:
 - **Quantitative Bayesian Update (`Scenario S1 — Anti-Dulah Distributive Justice & Productive Circulation`):**
   - **Baseline Prior Probability — $P(S_1) = 0.20$ (20.0%):** Base rate of spontaneous market self-correction of extreme wealth concentration without structural `59:7` fiscal and anti-monopoly intervention (WIR / World Bank historical baseline).
   - **Conditional Likelihood — $P(E|S_1) = 0.85$ & False-Positive Rate — $P(E|\neg S_1) = 0.10$:** Probability of achieving inclusive growth (`Gini <= 0.35`) when progressive fiscal allocation (`K1`), anti-monopoly enforcement (`K2`), and `Zakah/Waqf` productive micro-finance (`K3`) are enacted.
-  - **Updated Posterior Probability — $P(S_1|E) = \frac{0.20 \times 0.85}{(0.20 \times 0.85) + (0.80 \times 0.10)} = 0.680$ (68.0%):** Represents a **+48.0 percentage-point increase** in distributive stability.
+  - **Updated Posterior Probability — $P(S_1|E) = \frac{0.20 \times 0.85}{(0.20 \times 0.85) + (0.80 \times 0.10)} = 0.680 \approx 0.68$ (68.0%):** Represents a **+48.0 percentage-point increase** in distributive stability.
 - *Epistemic Safeguard:* Bayesian probabilities apply strictly to empirical macroeconomic indicators (`Gini`, `WIR`), never to the revealed norm.
 
 ---

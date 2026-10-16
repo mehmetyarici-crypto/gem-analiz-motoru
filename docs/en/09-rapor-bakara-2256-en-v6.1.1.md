@@ -184,6 +184,7 @@ peer_review:
 - **Strategic Foresight Window:** `2026–2036 (10-Year Policy & Institutional Horizon)`
 - **Verified Classical Knowledge Base (*ISNAD 2nd Edition*):** Zemahşerî, Mahmûd b. Ömer (*el-Keşşâf 'an Hakâ'ikı Gavâmizi't-Tenzîl*); Râgıb el-İsfahânî, Hüseyin b. Muhammed (*el-Müfredât fî Garîbi'l-Kur'ân*); İbn Fâris, Ahmed b. Fâris (*Mu'cemü Makâyîsi'l-Lüğa*); İbn Manzûr, Muhammed b. Mükerrem (*Lisânü'l-Arab*); Taberî, Muhammed b. Cerîr (*Câmi'u'l-Beyân 'an Te'vîli Âyi'l-Kur'ân*).
 - **Verified Empirical Datasets (*APA 7 / DOI*):** Pew Research Center (2024); Freedom House (2024).
+- **Principal Author & Project Founder:** **Mehmet Yarıcı** (`ORCID: 0009-0003-0356-8582` — Ministry of National Education [MEB], Rize, Türkiye).
 - **External Peer Reviewer (V11):** **Mehmet Emin Koç** (`ORCID: 0000-0002-1025-5643` — Azerbaijan National Academy of Sciences [ANAS / AMEA], Institute of Philosophy and Sociology).
 
 ---
@@ -396,7 +397,7 @@ peer_review:
 - **Test 4 (Classical Source Verification — V1):** All 5 primary Arabic sources (`[^1]..[^5]`) verified with critical edition, volume, page, and digital URN/link. *(Passed Internal Audit)*.
 - **Test 5 (Anti-De-Contextualization — S7):** Counter-principle and context-stripping safeguards verified in `STEP 02` and `STEP 05`. *(Passed Internal Audit)*.
 - **Test 6 (Language Safety & Anti-Absolutism — L-1801):** Audited against prohibited absolutist or self-authenticating expressions. *(Passed Internal Audit)*.
-- **Test 7 (Empirical Base-Rate & Traceability — V7):** Calibrated against 3 institutional datasets (`[^6]..[^8]`) with traceable DOIs/URLs. *(Passed Internal Audit)*.
+- **Test 7 (Empirical Base-Rate & Traceability — V7):** Calibrated against 3 institutional datasets (`[^6]..[^7]`) with traceable DOIs/URLs. *(Passed Internal Audit)*.
 - **Test 8 (Epistemic Boundary & Self-Audit — V2/V10):** `[CITATION / NAKİL]` and `[ANALYSIS / YORUM]` markers, weaknesses, and assumptions are explicitly segregated.
 *(NOTE: These 8 tests represent algorithmic internal consistency verification (`iç tutarlılık`) and do not substitute for independent human external peer review in `Z-5`).*
 
@@ -431,7 +432,7 @@ peer_review:
 
 ### STEP 14 — EARLY WARNING SIGNALS & QUANTITATIVE BAYESIAN UPDATE [V6]
 
-- **Time Window & Empirical Calibration (2026–2036):** Calibrated against the **Pew Research Center Global Restrictions on Religion Index (GRI & SHI)** (`doi:10.13140/RG.2.2.21456.89602`) [^6], **V-Dem Freedom of Religion Indicator** [^7], and **World Bank WGI Voice & Accountability** [^8].
+- **Time Window & Empirical Calibration (2026–2036):** Calibrated against the **Pew Research Center Global Restrictions on Religion Index (GRI & SHI)** (`doi:10.13140/RG.2.2.21456.89602`) [^6], **V-Dem Freedom of Religion Indicator** [^7], and **World Bank WGI Voice & Accountability** [^7].
 - **Early Warning Signals (`EU-01..EU-04`):**
   - `EU-01`: Rise in Pew Government Restrictions Index (`GRI > 2.5`, `th-01`) or discriminatory administrative barriers against religious groups.
   - `EU-02`: Surge in Social Hostilities Index (`SHI > 2.0`, `th-02`), sectarian hate speech, or attacks on houses of worship (`22:40`).
@@ -440,7 +441,7 @@ peer_review:
 - **Quantitative Bayesian Update (`Scenario S1 — Constitutional Pluralism & Voluntary Faith Ecosystem`):**
   - **Baseline Prior Probability — $P(S_1) = 0.38$ (38.0%):** Base rate of maintaining low religious restrictions and high social cohesion in diverse societies without explicit `2:256` constitutional and educational safeguards (Pew / V-Dem baseline).
   - **Conditional Likelihood — $P(E|S_1) = 0.86$ & False-Positive Rate — $P(E|\neg S_1) = 0.15$:** Probability of achieving high interfaith peace and sincere civic trust when `La ikraha fi'd-din` constitutional guarantees (`K1`), `22:40` house-of-worship protections (`K2`), and inquiry-based religious pedagogy (`K3`) are enacted.
-  - **Updated Posterior Probability — $P(S_1|E) = \frac{0.38 \times 0.86}{(0.38 \times 0.86) + (0.62 \times 0.15)} = 0.778$ (77.8%):** Represents a **+39.8 percentage-point increase** in sustainable pluralist peace.
+  - **Updated Posterior Probability — $P(S_1|E) = \frac{0.38 \times 0.86}{(0.38 \times 0.86) + (0.62 \times 0.15)} = 0.778 \approx 0.78$ (77.8%):** Represents a **+39.8 percentage-point increase** in sustainable pluralist peace.
 - *Epistemic Safeguard:* Bayesian probabilities apply strictly to empirical sociological indicators (`GRI`, `SHI`, `V-Dem`), never to the revealed text.
 
 ---
@@ -592,7 +593,7 @@ peer_review:
 - [x] **2. Epistemic Boundary & Hume's Guillotine (V2 / V8):** Revealed normative text (`[CITATION]`) and human analytical inference (`[ANALYSIS]`) are strictly segregated across all 26 steps; the *Is-Ought* bridge is explicitly documented in `STEP 03`.
 - [x] **3. Intra-Surah Context & Cross-Verse Network (S1–S7):** Context-stripping risks (`S7`) and counter-principles have been audited in `STEP 02`, `STEP 05`, and `STEP 06`.
 - [x] **4. System Dynamics & Causal Loop Diagram (V13):** Stock-flow variables, Reinforcing Loop (`R1`), Balancing Loop (`B1`), Systemic Delay, Leverage Point, and Tipping Point (`N4`) are verified in `STEP 07`.
-- [x] **5. Empirical Traceability & Bayesian Calibration (V5 / V6 / V7):** All 3 institutional datasets (`[^6]..[^8]`), numerical thresholds (`th-01..th-03`), and Bayesian probability updates (`STEP 14`) are falsifiable and limited strictly to worldly policy outcomes.
+- [x] **5. Empirical Traceability & Bayesian Calibration (V5 / V6 / V7):** All 3 institutional datasets (`[^6]..[^7]`), numerical thresholds (`th-01..th-03`), and Bayesian probability updates (`STEP 14`) are falsifiable and limited strictly to worldly policy outcomes.
 - [x] **6. Dialectical Pluralism & Dispute Matrix (V3):** Classical and contemporary jurisprudential divergences are fairly represented in `Z-2` without sectarian bias.
 - [x] **7. Pedagogical Applicability (TYMM Alignment):** The 40-minute competency- and virtue-based lesson plan in `STEP 20` is aligned with secondary and higher-education curricula.
 - [x] **8. Language Safety & Epistemic Humility (V10 / L-1801):** Free from absolutist claims, theological monopoly, or pseudo-authority (`Z-4`).

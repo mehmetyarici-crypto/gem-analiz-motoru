@@ -267,7 +267,7 @@ Nisâ 4:58, Mekke fethi günü Hz. Peygamber'in Kâbe anahtarını Kureyş'in il
 - **İs-Ought Köprüsü ve Hume Giyotini:**
   - *İs (Olgu / Ampirik Durum):* Siyasal otoriteler kamu ihalelerini ve üst düzey makamları partizan aidiyet, sadakat ve akrabalık bağları üzerinden dağıtma temayülündedir.
   - *Ought (Değer / Normatif Hüküm):* Kamu otoritesi atamalarda ve yargı kararlarında tarafgirliği yasaklamalı; şeffaf, ölçülebilir liyakat ve fırsat eşitliğini anayasal kural kılmalıdır.
-  - *Hume Giyotini Köprü Aksiyomu:* *"Liyakatsiz ellerde kamu imkânları heba olduğuna ve adaletsiz yargı toplumsal barışı yok ettiğine göre; devletin bekasını ve kamu maslahatını korumak için emanetleri ehline vermek normatif bir zorunluluktur."*
+  - *Hume Giyotini Köprü Aksiyomu:* *"Liyakatsiz ellerde kamu imkânları heba olduğuna ve adaletsiz yargı toplumsal barışı yok ettiğine göre; devletin bekasını ve kamu maslahatını korumak için emanetleri ehline vermek normatif bir zorunluluktur."* [^5]
 
 ---
 
@@ -408,10 +408,11 @@ Nisâ 4:58, Mekke fethi günü Hz. Peygamber'in Kâbe anahtarını Kureyş'in il
   - `EU-02`: Üst düzey atamalarda akrabalık veya hemşehricilik bağlarının yoğunlaşması.
   - `EU-03`: Yargı kararlarının siyasi açıklamalar doğrultusunda değişmesi.
   - `EU-04`: Liyakatli uzmanların kamu kurumlarından istifa ederek beyin göçüne katılması.
-- **Bayes Güncelleme Alanı:**
-  - **Önsel Olasılık (Prior P(H)):** 0.35 (Dünya Bankası Doğu Avrupa ve Orta Doğu Bürokratik Çürüme Veritabanı başlangıç olasılığı).
-  - **Veri / Kanıt P(E|H):** İlk saha liyakat denetimi verisi bekleniyor.
-  - **Sonsal Olasılık (Posterior P(H|E)):** Henüz hesaplanmadı.
+- **Bayes Güncelleme Alanı (`Senaryo S1 — Kurumsal Emanet, Liyakat ve Yargı Tarafsızlığı`):**
+  - **Önsel Olasılık (Prior $P(S_1)$):** `0.35` (%35.0 — Dünya Bankası Doğu Avrupa ve Orta Doğu Bürokratik Çürüme Veritabanı başlangıç olasılığı).
+  - **Koşullu Olabilirlik $P(E|S_1) = 0.85$ & Yanlış Pozitif $P(E|
+eg S_1) = 0.14$:** Nesnel liyakat sınavları (`edâü'l-emânât ilâ ehlihâ`) ve bağımsız adli denetim (`hükmü bi'l-'adl`) uygulandığında kurumsal güvenin yükselme olasılığı.
+  - **Sonsal Olasılık (Posterior $P(S_1|E)$):** $P(S_1|E) = \frac{0.35 	imes 0.85}{(0.35 	imes 0.85) + (0.65 	imes 0.14)} = 0.766 \approx 0.77$ (%76.6 — **+41.6 puanlık** kurumsal etkinlik artışı).
   - *Kapsam Notu:* Bayes güncellemesi YALNIZCA ölçülebilir kamusal göstergelerde çalışır.
 
 ---

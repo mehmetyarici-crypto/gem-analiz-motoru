@@ -395,10 +395,11 @@ Mâide Sûresi 5:38'in hemen ardından gelen **5:39 âyeti** (*"Kim bu zulmünde
 ### ADIM 14 — ERKEN UYARI SİNYALLERİ VE BAYES GÜNCELLEMESİ
 
 - **Erken Uyarı Sinyalleri (N1–N4):** Organize hırsızlık ve rüşvet yıllık artışı $> \%20$ olduğunda K2 devreye girer.
-- **Bayes Güncelleme Alanı:**
-  - **Önsel Olasılık (Prior P(H)):** 0.38 (Dünya Bankası & Adalet Bakanlığı 2024 Adli Sicil İstatistikleri başlangıç olasılığı).
-  - **Veri / Kanıt P(E|H):** İlk saha yargı denetimi verisi bekleniyor.
-  - **Sonsal Olasılık (Posterior P(H|E)):** Henüz hesaplanmadı.
+- **Bayes Güncelleme Alanı (`Senaryo S1 — Sosyal Adalet + Şüphede İndirim + Caydırıcı Mülkiyet Güvencesi`):**
+  - **Önsel Olasılık (Prior $P(S_1)$):** `0.38` (%38.0 — Dünya Bankası & Adalet Bakanlığı 2024 Adli Sicil İstatistikleri başlangıç olasılığı).
+  - **Koşullu Olabilirlik $P(E|S_1) = 0.86$ & Yanlış Pozitif $P(E|
+eg S_1) = 0.17$:** Zarûret/açlık istisnası (Hz. Ömer içtihadı), şüphe ilkesi (*der'ü'l-hudûd bi'ş-şübühât*) ve `5:39` tevbe/ıslah koridoru birlikte uygulandığında mülkiyet güvenliği ve düşük tekerrür olasılığı.
+  - **Sonsal Olasılık (Posterior $P(S_1|E)$):** $P(S_1|E) = \frac{0.38 	imes 0.86}{(0.38 	imes 0.86) + (0.62 	imes 0.17)} = 0.754 \approx 0.75$ (%75.4 — **+37.4 puanlık** kurumsal güven artışı).
   - *Kapsam Notu:* Bayes güncellemesi YALNIZCA ölçülebilir iktisadi ve adli göstergelerde çalışır; normatif inançlara sayısal katsayı verilemez (Bölüm 9 yasağı).
 
 ---

@@ -202,6 +202,7 @@ peer_review:
 - **Strategic Foresight Window:** `2026–2036 (10-Year Policy & Institutional Horizon)`
 - **Verified Classical Knowledge Base (*ISNAD 2nd Edition*):** Zemahşerî, Cârullah Ebü'l-Kâsım Mahmûd b. Ömer (*el-Keşşâf 'an Hakâ'ikı Gavâmizi't-Tenzîl*); Râgıb el-İsfahânî, Ebü'l-Kâsım Hüseyn b. Muhammed (*el-Müfredât fî Garîbi'l-Kur'ân*); İbn Fâris, Ebü'l-Hüseyn Ahmed b. Fâris b. Zekeriyyâ (*Mu'cemü Makâyîsi'l-Lüğa*); İbn Manzûr, Muhammed b. Mükerrem (*Lisânü'l-Arab*); Taberî, Ebû Ca'fer Muhammed b. Cerîr (*Câmi'u'l-Beyân 'an Te'vîli Âyi'l-Kur'ân*).
 - **Verified Empirical Datasets (*APA 7 / DOI*):** World Justice Project (WJP) (2025); Organisation for Economic Co-operation and Development (OECD) (2025); United Nations Development Programme (UNDP) (2025); Türkiye İstatistik Kurumu (TÜİK) (2025).
+- **Principal Author & Project Founder:** **Mehmet Yarıcı** (`ORCID: 0009-0003-0356-8582` — Ministry of National Education [MEB], Rize, Türkiye).
 - **External Peer Reviewer (V11):** **Mehmet Emin Koç** (`ORCID: 0000-0002-1025-5643` — Azerbaijan National Academy of Sciences [ANAS / AMEA], Institute of Philosophy and Sociology).
 
 ---

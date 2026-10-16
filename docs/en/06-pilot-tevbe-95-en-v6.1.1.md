@@ -193,6 +193,7 @@ peer_review:
 - **Strategic Foresight Window:** `2026–2036 (10-Year Policy & Institutional Horizon)`
 - **Verified Classical Knowledge Base (*ISNAD 2nd Edition*):** Zemahşerî, Mahmûd b. Ömer (*el-Keşşâf 'an Hakâ'ikı Gavâmizi't-Tenzîl*); İbn Fâris, Ahmed b. Fâris (*Mu'cemü Makâyîsi'l-Lüğa*); İbn Manzûr, Muhammed b. Mükerrem (*Lisânü'l-Arab*); Cessâs, Ahmed b. Ali er-Râzî (*Ahkâmü'l-Kur'ân*); Şâtıbî, İbrâhîm b. Mûsâ (*el-Muvâfakât*).
 - **Verified Empirical Datasets (*APA 7 / DOI*):** Uppsala University (Uppsala Conflict Data Program - UCDP) (2024); Institute for Economics and Peace (IEP) (2024); World Bank Group (2024).
+- **Principal Author & Project Founder:** **Mehmet Yarıcı** (`ORCID: 0009-0003-0356-8582` — Ministry of National Education [MEB], Rize, Türkiye).
 - **External Peer Reviewer (V11):** **Mehmet Emin Koç** (`ORCID: 0000-0002-1025-5643` — Azerbaijan National Academy of Sciences [ANAS / AMEA], Institute of Philosophy and Sociology).
 
 ---
@@ -454,7 +455,7 @@ peer_review:
 - **Quantitative Bayesian Update (`Scenario S1 — Deterrence-Backed Covenant Peace`):**
   - **Baseline Prior Probability — $P(S_1) = 0.42$ (42.0%):** Historical base rate of ceasefire durability in post-conflict regions without graduated deterrence + safe-passage guarantees (UCDP baseline).
   - **Conditional Likelihood — $P(E|S_1) = 0.85$ & False-Positive Rate — $P(E|\neg S_1) = 0.18$:** Probability of observing sustained border stability when the dual At-Tawbah `9:4–6` architecture (120-day cooling-off + proportional perimeter containment + mandatory non-combatant `aman`) is institutionalized.
-  - **Updated Posterior Probability — $P(S_1|E) = \frac{0.42 \times 0.85}{(0.42 \times 0.85) + (0.58 \times 0.18)} = 0.774$ (77.4%):** Represents a **+35.4 percentage-point increase** in sustainable treaty stability.
+  - **Updated Posterior Probability — $P(S_1|E) = \frac{0.42 \times 0.85}{(0.42 \times 0.85) + (0.58 \times 0.18)} = 0.774 \approx 0.77$ (77.4%):** Represents a **+35.4 percentage-point increase** in sustainable treaty stability.
 - *Epistemic Safeguard:* Bayesian probabilities apply strictly to empirical conflict-recurrence indicators; the divine norm itself is never subject to probabilistic quantification.
 
 ---

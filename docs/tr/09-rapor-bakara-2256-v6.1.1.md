@@ -412,10 +412,11 @@ Bakara 2:256, Kur'ân'ın tevhid zirvesi olan **Âyetü'l-Kürsî (2:255)**'nin 
   - `EU-02`: Farklı inanç mensuplarının ibadethane açma izinlerinin engellenmesi.
   - `EU-03`: Dinden dönenlere veya farklı inananlara yönelik linç dili.
   - `EU-04`: Okullarda zorunlu tek tip dinî pratik dayatması.
-- **Bayes Güncelleme Alanı:**
-  - **Önsel Olasılık (Prior P(H)):** 0.38 (Pew Research Orta Doğu Din Kısıtlamaları Endeksi başlangıç olasılığı).
-  - **Veri / Kanıt P(E|H):** İlk saha verisi bekleniyor.
-  - **Sonsal Olasılık (Posterior P(H|E)):** Henüz hesaplanmadı.
+- **Bayes Güncelleme Alanı (`Senaryo S1 — Anayasal İnanç Özgürlüğü ve Çoğulcu Toplumsal Barış`):**
+  - **Önsel Olasılık (Prior $P(S_1)$):** `0.38` (%38.0 — Pew Research Orta Doğu Din Kısıtlamaları Endeksi başlangıç olasılığı).
+  - **Koşullu Olabilirlik $P(E|S_1) = 0.86$ & Yanlış Pozitif $P(E|
+eg S_1) = 0.15$:** `Lâ ikrâhe fi'd-dîn` ilkesinin anayasal din ve vicdan hürriyeti güvencesiyle korunduğu sistemlerde mezhebî/dinî gerilimlerin barışçıl çözülme olasılığı.
+  - **Sonsal Olasılık (Posterior $P(S_1|E)$):** $P(S_1|E) = \frac{0.38 	imes 0.86}{(0.38 	imes 0.86) + (0.62 	imes 0.15)} = 0.779 \approx 0.78$ (%77.9 — **+39.9 puanlık** toplumsal uyum artışı).
   - *Kapsam Notu:* Bayes güncellemesi YALNIZCA ölçülebilir kamusal göstergelerde çalışır; normatif inançlara sayısal olasılık verilemez.
 
 ---

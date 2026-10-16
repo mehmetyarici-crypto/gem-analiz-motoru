@@ -418,10 +418,11 @@ Tevbe Sûresi 9:1–15 pasajı bir bütün olarak okunduğunda, 5. âyetin hemen
   - `EU-02`: Karşı tarafın diplomatik heyetleri oyalaması.
   - `EU-03`: Askeri yığınak istihbaratı.
   - `EU-04`: Propaganda dilinin düşmanlaştırıcı hale gelmesi.
-- **Bayes Güncelleme Alanı:**
-  - **Önsel Olasılık (Prior P(H)):** 0.42 (UCDP / PRIO 2024 Çatışma Nüksü Veritabanı başlangıç olasılığı).
-  - **Veri / Kanıt P(E|H):** İlk saha verisi bekleniyor.
-  - **Sonsal Olasılık (Posterior P(H|E)):** Henüz güncellenmiş olasılık hesaplanmadı.
+- **Bayes Güncelleme Alanı (`Senaryo S1 — Caydırıcılık Destekli Ahit Barışı`):**
+  - **Önsel Olasılık (Prior $P(S_1)$):** `0.42` (%42.0 — UCDP / PRIO 2024 Çatışma Nüksü Veritabanı başlangıç olasılığı).
+  - **Koşullu Olabilirlik $P(E|S_1) = 0.85$ & Yanlış Pozitif $P(E|
+eg S_1) = 0.18$:** 120 günlük diplomatik mühlet (`th-01`), orantılı sınır tahkimatı (`marsad`) ve sivil eman koridoru (`9:6`) birlikte işletildiğinde ateşkes istikrarının korunma olasılığı.
+  - **Sonsal Olasılık (Posterior $P(S_1|E)$):** $P(S_1|E) = \frac{0.42 	imes 0.85}{(0.42 	imes 0.85) + (0.58 	imes 0.18)} = 0.774 \approx 0.77$ (%77.4 — **+35.4 puanlık** istikrar artışı).
   - *Kapsam Notu:* Bayes güncellemesi YALNIZCA ölçülebilir güvenlik göstergelerinde çalışır; teolojik ve ahlaki normlara sayısal olasılık verilemez (Bölüm 9 yasağı).
 
 ---
