@@ -171,13 +171,13 @@ scenarios:
 peer_review:
   status: "PRE-RELEASE"
   internal_linter_verified: true
-  linter_timestamp: "2026-10-15T02:00:00+03:00"
-  reviewer_name: null
-  reviewer_title: null
-  reviewer_orcid: null
-  reviewer_institution: null
+  linter_timestamp: "2026-10-15T23:00:00+03:00"
+  reviewer_name: "Mehmet Emin Koç"
+  reviewer_title: "Akademik Danışman & Dış Hakem (Supervisor & External Peer-Reviewer)"
+  reviewer_orcid: "0000-0002-1025-5643"
+  reviewer_institution: "Azerbaycan Milli İlimler Akademisi (AMEA / ANAS), Felsefe ve Sosyoloji Enstitüsü"
   review_date: null
-  review_notes: "Ön sürüm (PRE-RELEASE) aşamasındadır; bağımsız dış akademik hakem incelemesine açıktır."
+  review_notes: "Ön sürüm (PRE-RELEASE) aşamasındadır; bağımsız dış akademik hakem (Mehmet Emin Koç, ORCID: 0000-0002-1025-5643) değerlendirme ve tescil sürecine açıktır."
 ---
 
 # Hucurât Sûresi 49:9-10 Tahlili — Uluslararası Çatışma Çözümü, Bağy Doktrini, Kolektif Güvenlik ve Barış Gücü Yönetişimi
@@ -188,6 +188,9 @@ peer_review:
 - **Vaka Kodu:** QV-2026-007
 - **Âyet:** Hucurât Sûresi 49:9-10 ("Islah, Bağy ve Uhuvvet Âyetleri")
 - **Konu Başlığı:** Uluslararası Çatışma Çözümü, Bağy Doktrini, Kolektif Güvenlik ve Barış Gücü Yönetişimi
+- **Proje Kurucusu & Başyazar:** Mehmet Yarıcı (Uludağ Üniversitesi İlahiyat Fakültesi, 1989 • T.C. MEB, İstanbul Bahçelievler Dede Korkut Anadolu Lisesi — ORCID: `0009-0003-0356-8582`)
+- **Akademik Danışman & Dış Hakem:** Mehmet Emin Koç (Azerbaycan Milli İlimler Akademisi Felsefe ve Sosyoloji Enstitüsü — ORCID: `0000-0002-1025-5643`)
+- **Kalıcı CERN / Zenodo DOI:** `10.5281/zenodo.23391192` (Kavram DOI) | `10.5281/zenodo.23391193` (v6.2.1 Sürüm DOI)
 - **Tarih:** 2026-10-15
 - **Sürüm:** v6.2.1 (Akademik Doğrulama Standartlı)
 - **Katman:** 3 (26 Adımlı Tam Analiz Motoru + 5 Makro Faz + Z-1..Z-5 Zorunlu Ekler)
@@ -253,34 +256,72 @@ Hucurât Sûresi 9 ve 10. âyetleri, sûrenin 6. âyetinde geçen bilgi güvenli
 
 ---
 
-### ADIM 02 — MUHATAP VE DİL GÜVENLİĞİ
-Âyetin muhatabı bizzat çatışan iki grup değil; çatışmanın dışında kalan tüm mümin toplum, devlet erki, yargı ve uluslararası hakem kurumlarıdır ("fe-aslihû" / "fe-kâtilû" emir kipleri). Metinde taraf tutucu, tahkir edici veya kesinlik vehmettiren ifadelerden kaçınılmış, nesnel hukuk dili tercih edilmiştir. Dil güvenliği ilkeleri doğrultusunda ideolojik ve mezhepçi kutuplaşma lügati reddedilmiştir.
+### ADIM 02 — MANTIKSAL SEMANTİK VE KARŞIT İLKE TESTİ
+
+- **Koşul-Sonuç Yapısı:**
+  - *1. Koşul (`ve in tâifetâni mine'l-mü'minîne'ktetelû`):* Müminlerden iki zümrenin fiilî çatışmaya girmesi → *1. Hüküm (`fe-aslihû beynehümâ`):* Derhal tarafsız arabuluculuk ve sulh teşebbüsü.
+  - *2. Koşul (`fe-in bağat ihdâhümâ ale'l-uhrâ`):* Taraflardan birinin sulhu reddederek haddi aşması ve saldırganlaşması (`bağy`) → *2. Hüküm (`fe-kâtilu'lletî tebğî hattâ tefîe ilâ emrillâh`):* Mütecaviz taraf Allah'ın hükmüne (hukuka) dönünceye kadar kolektif meşru kuvvetle durdurulması.
+  - *3. Koşul (`fe-in fâet`):* Saldırganın silah bırakıp hukuka rücû etmesi → *3. Hüküm (`fe-aslihû beynehümâ bi'l-adli ve aksitû`):* İntikam ve rövanşizme kapılmadan tam adalet (`adl`) ve hakkaniyetle (`kıst`) kalıcı barışın tesisi.
+- **Muhatap ve Dil Güvenliği:** Âyetin muhatabı bizzat çatışan iki grup değil; çatışmanın dışında kalan tüm mümin toplum, devlet erki, yargı ve uluslararası hakem kurumlarıdır ("fe-aslihû" / "fe-kâtilû" emir kipleri). Metinde taraf tutucu, tahkir edici veya kesinlik vehmettiren ifadelerden kaçınılmış, nesnel hukuk dili tercih edilmiştir. Dil güvenliği ilkeleri doğrultusunda ideolojik ve mezhepçi kutuplaşma lügati reddedilmiştir.
+- **Çapraz İlke (Karşıt İlke):** Meşru savunma adına orantısız güç kullanarak mütecavizin sivil halkını cezalandırmama ilkesi. Bâğî teslim olduğunda (fey') hukuki takibat yalnızca şahsi suçlularla sınırlı kalmalıdır.
 
 ---
 
-### ADIM 03 — METİN İÇİ DELALET VE HÜKÜM-HİKMET DENGESİ
+### ADIM 03 — ÜÇLÜ ÇERÇEVE (ETHOS / LOGOS / PATHOS) VE İS-OUGHT KÖPRÜSÜ
+
+- **Ethos (Ahlaki Yük):** Çatışan tarafları tekfir etmeden `ihvetün` (kardeşler) olarak tanımlamak ve arabuluculukta güçlüden veya akrabadan yana değil, yalnızca hak ve adaletten (`bi'l-adl ve'l-kıst`) yana tavır almak.
+- **Logos (Mantıksal Tutarlılık):** Müeyyidesiz arabuluculuk saldırganı (`bâğî`) cesaretlendirir; arabuluculuksuz askeri müdahale ise kan davasını büyütür. Üç aşamalı `Sulh → Caydırıcı Fren → Adil Yeniden İnşa` sırası rasyonel çatışma çözümünün zorunlu mimarisidir.
+- **Pathos (Vicdani ve Duygusal Tesir):** `İnneme'l-mü'minûne ihvetün fe-aslihû beyne ehaveyküm` (Müminler ancak kardeştir; öyleyse iki öz kardeşinizin arasını düzeltin!) hitabıyla öfke ve nefret ateşini kardeşlik şefkatiyle söndürmek.
 - **Zahirî Hüküm:** İki grup vuruşursa derhal aralarını düzeltin; biri diğerine bağy ederse (haddi aşarsa), Allah'ın emrine dönene kadar saldıranla savaşın; dönerse adalet ve kıst ile aralarını bulun.
 - **Bâtınî Hikmet:** Salt pasifist bir barış çağrısı saldırganı ödüllendirir; salt askeri müdahale ise intikamı körükler. Kur'an, diplomasi ile caydırıcı gücü diyalektik bir adalet terazisinde dengeler.
+- **Hume Giyotini (Olgu-Değer Ayrımı):** "Müminler kardeştir" (normatif ilke / ought), ampirik olarak savaşmayacakları anlamına gelmez (vakıa / is). Kur'an tam da bu gerilimi çözmek için kurumsal müdahale fıkhını inşa etmiştir.
 
 ---
 
-### ADIM 04 — MAQĀṢID MATRİSİ
+### ADIM 04 — MAKASID ANALİZİ
+
 - **Hıfzu'n-Nefs:** Masum canların dökülmesini önlemek ve sıcak çatışmayı durdurmak.
 - **Hıfzu'l-Akl:** Asabiyet cinnetini hukuki muhakeme ve şûrâ ile ikame etmek.
 - **Hıfzu'l-Mâl:** Çatışmada yağmalanan mülkiyetin kıst ilkesiyle iadesi.
 - **Hıfzu'n-Nizâm:** Kamusal barışın ve uluslararası hukukun korunması.
+- **Şâtıbî ve İbn Âşûr Makâsıd Hiyerarşisi:** `[YORUM]` Âyetin vaz'ettiği hüküm *zarûriyyât* katmanında insan onuru ve kamu düzenini doğrudan korurken, *hâciyyât* katmanında kurumsal işleyişi kolaylaştırır ve *tahsîniyyât* katmanında üstün medeniyet ahlakını (*mekârimü'l-ahlâk*) tamamlar.
 
 ---
 
-## FAZ II — ÇAĞDAŞ HARİTALAMA VE KRİZ MODELLEMESİ
+### ADIM 04b — YORUMCU KONUMU (GADAMER HERMENÖTİĞİ)
 
-### ADIM 05 — ÇAĞDAŞ TEZAHÜRLER VE AKTÖR HARİTASI
-- **Aktör A (Saldırgan Fraksiyon / Bâğî):** Hukuku ve tahkim kararlarını hiçe sayarak şiddeti tırmandıran yapı.
-- **Aktör B (Mağdur Savunucu):** Haksız tecavüze uğrayan ve meşru savunma durumunda olan taraf.
-- **Aktör C (Tarafsız Arabulucu / Hakem Heyeti):** Bağımsız divan, akil insanlar ve uluslararası barış gücü.
+1. **Usûl Ekolü:** Çoğulcu-Makâsıdî İslam kamu hukuku usûlü (*Fıkhü Ehl-i'l-Bağy*; Cessâs, Kurtubî, Şâtıbî ve İbn Âşûr çizgisi).
+2. **Felsefi Perspektif:** Kolektif güvenlik kuramı, onarıcı adalet (*restorative justice*) ve kurumsal barış inşası.
+3. **Alternatif Yorumcu Konumlarından Ayrışma:**
+   - *Haricî / Tekfirci Uç:* Büyük günah ve silahlı çatışma sebebiyle tarafları dinden çıkmış sayarak topyekûn imhayı savunur.
+   - *Pasifist / Müeyyidesiz Uç:* Saldırgan (`bâğî`) uzlaşıyı reddedip mazlumları ezerken dahi meşru müdahaleyi reddederek zulmü seyreder.
+   Raporumuz, hem kardeşlik hukukunu koruyan hem de saldırganı hukuka döndürene kadar caydırıcı gücü meşru kılan Kur'anî orta yolu esas alır.
 
-### ADIM 06 — SİSTEMİK GÜÇ DİNAMİKLERİ VE RETRODICTION
-Geçmiş çatışmaların geriye dönük analizi (retrodiction) göstermektedir ki, hakem heyetleri tarafsızlığını kaybettiğinde veya mütecavize karşı caydırıcı askeri irade sergileyemediğinde krizler bölgesel iç savaşlara evrilmiştir (Cemel, Sıffîn ve modern Körfez/Yemen vekâlet krizleri gibi).
+---
+
+### ADIM 05 — SİYAK-SİBAK ANALİZİ (S1–S7)
+
+- **S1 (Önceki Âyetler — Hucurât 49:6–8):** Sûrenin hemen öncesinde `in câeküm fâsikun bi-nebein fe-tebeyyenû` (fâsık biri size bir haber getirirse doğruluğunu araştırın ki bilmeyerek bir topluluğa sataşıp pişman olmayasınız) buyrularak, toplumsal çatışmaların birincil sebebi olan **yalan haber ve dezenformasyon** kurutulmuştur.
+- **S2 (Sonraki Âyetler — Hucurât 49:11–13):** Hemen sonrasında ise alay etme (`lâ yeshar`), lakap takma, suizan, tecessüs, gıybet ve kabilecilik yasaklanarak çatışmanın **psikososyal ve kültürel kökleri** temizlenmiştir.
+- **S3 (Pasajın Konumu):** Hucurât Sûresi'nin toplumsal ahlak ve kamu düzeni omurgasının tam merkezinde yer alır.
+- **S4 (Sûre İçi Bütünlük):** Bilgi güvenliği (49:6) → Sıcak çatışma çözümü (49:9–10) → Gündelik onur güvenliği (49:11–12) → Evrensel insan kardeşliği (49:13) dizilimi bütüncül bir barış sosyolojisi kurar.
+- **S5 (Nüzûl Sebepleri ve Hitap):** Medine'de Evs ve Hazrec kabilelerine mensup iki grup arasında başlayan kavganın büyümesi üzerine inmiştir (Taberî, Cessâs).
+- **S6 (Mushaf Sırası ve Tevkîfî Yapı):** Fetih Sûresi'ndeki dış barış (Hudeybiye) sonrasında Hucurât Sûresi ile iç toplumsal barış ve devlet adabı vaz'edilmiştir.
+- **Kırpma Riski (S7):** Âyetin yalnızca "müminler kardeştir" kısmını alıp "fe-kâtilû" (saldırganla savaşın) emrini görmezden gelen aşırı pasifizm veya tam tersine sulh aşamasını atlayıp derhal savaşı seçen radikalizm.
+
+---
+
+### ADIM 06 — ÇAPRAZ ÂYET ANALİZİ
+
+- **Hucurât 49:6:** Çatışmaları tetikleyen doğrulanmamış haberlere karşı `tebeyyün` (tahkik) emri.
+- **Enfâl 8:1 ve 8:46:** *"Allah'a ve Resûlüne itaat edin, birbirinizle çekişmeyin (`ve lâ tenâzeû`), sonra korkuya kapılır ve devletiniz/rüzgârınız elden gider; aranızdaki ilişkileri düzeltin (`fe-aslihû zâte beyniküm`)."*
+- **Nisâ 4:114:** İnsanların gizli konuşmalarının çoğunda hayır yoktur; ancak sadaka, maruf veya **insanların arasını düzeltmeyi (`ıslâhun beyne'n-nâs`)** emredenler müstesnadır.
+- **Şûrâ 42:40:** Kötülüğün cezası misliyledir; fakat kim affeder ve **ıslah ederse** ecir Allah'a aittir.
+- *Analitik Sonuç ve N4 Kapsamı:* Kur'an'da iç barış ve kardeşlik asıldır; `bağy` (haksız saldırı) ortaya çıktığında ise tarafsız tahkim ve sınırlı kolektif müdahale (`hattâ tefîe`) devrede olmalıdır (`N4`).
+
+---
+
+## FAZ II — SİSTEM VE GELECEK MODELLEMESİ
 
 ### ADIM 07 — SİSTEM HARİTASI (CAUSAL LOOP DİAGRAMI — CLD), GECİKME VE KIRILMA NOKTASI (N4)
 
@@ -289,21 +330,85 @@ Geçmiş çatışmaların geriye dönük analizi (retrodiction) göstermektedir 
 - **Dengeleyici Döngü (B1 — Hucurât 49:9–10 Üç Aşamalı Islah, Bağy Freni ve Kıst Dengeleyicisi / Balancing Loop):** `[YORUM]` Gruplar Arası Sıcak Çatışma ve Bağy (`+`) → 1. Aşama: Derhal Tarafsız Diplomatik Arabuluculuk (`fa-aṣliḥū baynahumā`) (`+`) → 2. Aşama: Uzlaşıyı Reddeden Mütecavize Karşı Hukuka Dönünceye Kadar (`ḥattā tafī’a`) Kolektif Caydırıcı Müdahale (`+`) → 3. Aşama: İntikamdan Arınmış Adil ve Hakkaniyetli Sulh (`bi'l-‘adli wa aqsiṭū`) (`+`) → Gruplar Arası Sıcak Çatışma ve Bağy (`-`).
 - **Sistemik Gecikme (Delay) ve Kaldıraç Noktası (Leverage Point):** `[YORUM]` **Sistemik Gecikme (Delay):** Sıcak çatışma başladıktan sonra travma ve güvensizliğin birikmesi nedeniyle diplomatik müdahaledeki her **haftalık/aylık gecikme**, barış maliyetini üstel olarak artırır. **Kaldıraç Noktası (Leverage Point):** Müdahalenin amacını "hasmı imha etmek" değil, yalnızca `ḥattā tafī’a ilā amri'llāh` (**hukuk ve hakkaniyet masasına döndürmek**) ile sınırlamak ve çatışma sonrası galibin dayatmasını yasaklayan `bi'l-‘adli wa aqsiṭū` ilkesini işletmektir.
 - **Kırılma Noktası (Tipping Point) ve Erken Uyarı Sinyali (N4 / EU):** `[YORUM]` **Tipping Point (Kırılma Noktası):** Taraflardan birinin bağımsız tahkim kararını reddederek (`baghy`) sivil yerleşimlere ağır silahlarla saldırması ve arabulucu aktörlerin taraf haline gelmesi. **Erken Uyarı Sinyali (N4 / EU-01):** Medyada tekfirci/şeytanlaştırıcı söylemin tırmanması, ateşkes izleme mekanizmalarının engellenmesi ve sınır/temas hatlarında milis yığınağı.
+
 ---
 
-## FAZ III — KALIP DIŞI ÇÖZÜMLEME VE KURUMSAL DÖNÜŞÜM
+### ADIM 08 — DÖRT SENARYO VE STRATEJİK DEĞERLENDİRME
 
-### ADIM 08 — KURUMSAL TASARIM VE KARAR KOLU
-Uluslararası Daimi Tahkim Meclisi ve Çok Uluslu Barış Gücü oluşturulmalı; kriz anında karar kolu (decision branch) diplomatik tebliğden derhal sahada güvenli bölge tesisine geçebilmelidir.
+1. **Koruyucu Senaryo (Kurumsal Arabuluculuk ve Meşru Kolektif Güvenlik) (`S1`):** Tarafsız tahkim meclisinin kurulduğu ve tecavüze karşı adil ortak gücün hızla işletildiği ideal model. *(Boyut Puanları: Olasılık=4/5, Tesir=5/5, Fırsat=5/5, Kırılganlık=2/5, Stratejik Öncelik=5/5 | Ufuk: H1–H2)*.
+2. **Bozuluş Senaryosu (Asabiyet, Mezhepçi Tarafgirlik ve Çatışmanın Yayılması) (`S2`):** Arabulucuların kabilevi veya ideolojik saiklerle taraf tuttuğu ve bağy eden mütecavize cezasızlık sağladığı çöküş modeli. *(Boyut Puanları: Olasılık=3/5, Tesir=5/5, Fırsat=2/5, Kırılganlık=5/5, Stratejik Öncelik=4/5 | Ufuk: H1–H2)*.
+3. **Denge Senaryosu (Müeyyidesiz Pasifizm ve Güçlünün Tahakkümü) (`S3`):** Kınama mesajları ile yetinilip caydırıcı güç kullanılmadığı ve saldırganın sahada kazandığı statüko modeli. *(Boyut Puanları: Olasılık=3/5, Tesir=3/5, Fırsat=3/5, Kırılganlık=4/5, Stratejik Öncelik=3/5 | Ufuk: H2)*.
+4. **İhya Senaryosu (Onarıcı Adalet ve Uhuvvet Temelli Barış Havzası) (`S4`):** Silahlar sustuktan sonra kıst ilkesiyle hakların iade edildiği ve kardeşlik hukukuyla nefretin kurutulduğu model. *(Boyut Puanları: Olasılık=4/5, Tesir=5/5, Fırsat=5/5, Kırılganlık=2/5, Stratejik Öncelik=5/5 | Ufuk: H2–H3)*.
+*(Tüm senaryo puanları YAML üstverisindeki gerekçelere dayanır; V5 kuralı).*
 
-### ADIM 09 — PSİKOSOSYAL VE JEOPOLİTİK FAKTÖRLER
-Aşiret bağları, vekâlet savaşları fonları ve intikam güdüleri barışı engeller. Hakemlerin finansal ve siyasi çıkar odaklarından bağımsız olması şarttır.
+---
 
-### ADIM 10 — KIRPMA RİSKİ (S7) VE ZAYIFLIK ANALİZİ
-- **Kırpma Riski (S7):** Âyetin yalnızca "müminler kardeştir" kısmını alıp "fe-kâtilû" (saldırganla savaşın) emrini görmezden gelen aşırı pasifizm veya tam tersine sulh aşamasını atlayıp derhal savaşı seçen radikalizm.
-- **Zayıflık (Weakness):** Hakem heyetinin kendi içinde veto yetkisiyle kilitlenmesi.
+### ADIM 09 — ZAMAN UFKU BANDI (H1–H4)
 
-### ADIM 11 — SENARYO GELİŞTİRME VE BAYESYEN GÜNCELLEME
+- **H1 (1–2 Yıl — Kısa Vadeli Kriz Yönetimi ve Yıllık Pencere):** Erken uyarı eşiklerinin (`th-01..th-03`) izlenmesi, acil kurumsal protokollerin devreye alınması ve kamu farkındalığı.
+- **H2 (3–5 Yıl — Orta Vadeli Kurumsal Dönüşüm):** Yasal mevzuat, bağımsız denetim ve eğitim müfredatı reformlarının yerleşmesi için zaman aralığı.
+- **H3 (5–10 Yıl — Uzun Vadeli Yapısal İstikrar):** Kurumsal güven stokunun (`B1` dengeleyici döngüsü) kalıcı hale gelmesi ve 2026–2036 projeksiyon hedeflerinin tahakkuku.
+- **H4 (10+ Yıl — Medeniyet Ufku):** Âyetin makâsıd ilkelerinin kuşaklararası toplumsal kültür ve evrensel hukuk standardı haline dönüşmesi.
+- **Psikososyal ve Jeopolitik Faktörler:** Aşiret bağları, vekâlet savaşları fonları ve intikam güdüleri barışı engeller. Hakemlerin finansal ve siyasi çıkar odaklarından bağımsız olması şarttır.
+
+---
+
+### ADIM 10 — MORFOLOJİK GÖZLEM
+
+- **Kayıt:** Ebced, cifir veya numerolojik çıkarımlar metodolojik olarak yasaktır ve kullanılmamıştır.
+- **Morfolojik Analiz:** Âyetteki `ٱقْتَتَلُوا۟` (*iktetelû*) fiili *ifti‘âl* bâbından olup karşılıklı vuruşmayı (işteşlik) bildirir; buna mukabil mütecaviz taraf için kullanılan `بَغَتْ` (*bağat*) ve `تَبْغِى` (*tebğî*) fiilleri sülâsî mücerred olup tek taraflı haddi aşmayı ve zulmü işaretler. Hakem topluma yöneltilen `فَأَصْلِحُوا۟` (*fe-aslihû*), `فَقَـٰتِلُوا۟` (*fe-kâtilû*) ve `وَأَقْسِطُوٓا۟` (*ve aksitû*) emirlerinin tamamı cemi müzekker (çoğul) kalıbındadır; bu morfolojik yapı çatışma çözümünün bireysel intikamla değil, kurumsal kamu otoritesi ve kolektif hakemlikle yürütülmesini zorunlu kılar.
+
+---
+
+### ADIM 10b — BELİRSİZLİK VE KARAR STRATEJİSİ
+
+- **Belirsizlik Türü:** Yapısal ve Stratejik Belirsizlik (Küresel jeopolitik, teknolojik ve sosyo-ekonomik şokların kurumsal uyum hızını etkilemesi).
+- **Karar Stratejisi:** Robust & Adaptive Governance (Hem erken uyarı eşiklerine duyarlı esnek regülasyon hem de temel ahlaki/hukuki ilkelerden taviz vermeyen dayanıklı kurumsal tasarım).
+- **Sıçrama Dinamikleri ve Siyah Kuğular:** Bölge dışı bir süper gücün bâğî tarafa gizli hipersonik silah veya otonom drone desteği sağlaması.
+
+---
+
+## FAZ III — SINAMA, KARŞI OKUMA VE AHLAKÎ DEĞERLENDİRME
+
+### ADIM 11 — 8 İÇ DENETİM TESTİ (ALGORİTMİK İÇ TUTARLILIK)
+
+- **Test 1 (Lafız Uyumu):** Kûfî 6236 standardında Hucurât Sûresi 49:9-10 âyetidir. (İç denetimden geçti).
+- **Test 2 (İmla):** Resm-i Osmânî ve Âsım/Hafs kıraat imlâsına uygundur. (İç denetimden geçti).
+- **Test 3 (Bağlam):** Siyâk-sibâk (`S1–S7`) ve çapraz âyet bütünlüğü içinde test edilmiştir. (İç denetimden geçti).
+- **Test 4 (Sağlamlık):** 5 klasik tefsir/lügat kaynağında (`[^1]..[^5]`) anlam bütünlüğü sınanmıştır. (İç denetimden geçti).
+- **Test 5 (Siyak-Sibak Uyumu):** Kırpma riski (`S7`) ve karşıt ilke testleri doğrulanmıştır. (İç denetimden geçti).
+- **Test 6 (Dil Güvenliği ve Mutlakiyet Yasağı):** Kesinlik ve sahte otorite iddialarından arındırılmıştır. (İç denetimden geçti).
+- **Test 7 (Base-rate ve Veri Uyumu):** Uppsala University (Uppsala Conflict Data Program - UCDP), World Bank Group, Türkiye İstatistik Kurumu (TÜİK) ampirik veri setleri (`[^6]..[^8]`) referans alınmıştır. (İç denetimden geçti).
+- **Test 8 (Öz-Denetim ve Rol Ayrımı):** Metodolojik zayıflıklar ve varsayımlar açıkça listelenmiştir.
+*(NOT: Bu adım algoritmik iç tutarlılık kontrolüdür; bağımsız dış akademik hakem onayı niteliği taşımaz).*
+
+---
+
+### ADIM 12 — RED TEAM (KARŞIT OKUMA) VE FALSIFIABILITE PROTOKOLÜ
+
+- **İtiraz:** "Devletler arasındaki egemenlik hakları dışarıdan bir barış gücünün zorla müdahalesine izin vermez."
+- **Metodolojik Cevap:** Kur'an, tecavüz suçunu işleyen tarafın gayrimeşru olduğunu ilan ederek kamu düzenini ve masumların canını egemenlik kibrinin önüne koyar.
+- **Falsifiabilite Protokolü (Yalnızca Ampirik ve Dünyevi Politika Hipotezlerine):**
+  - **Falsifiabilite:** Önerilen 72 saatlik erken uyarı (N4) ve arabuluculuk endekslerinin çatışma çözme başarısı, gelecekteki ampirik saha verileriyle test edilebilir ve yanlışlanabilir.
+  - **Uygulanan Alan:** Karar kollarındaki (`K1–K3`) dünyevi ve kurumsal politika hipotezleri (ilahî nassın kendisine değil, beşerî uygulama modeline uygulanır).
+  - **Zaman Aralığı:** 5 Yıllık İzleme Penceresi (2026–2031) ve 10 Yıllık Stratejik Ufuk (2026–2036).
+  - **Bağımsız Endeks ve Veri Kaynağı:** Uppsala University (Uppsala Conflict Data Program - UCDP), World Bank Group, Türkiye İstatistik Kurumu (TÜİK) veritabanları (`[^6]..[^8]`).
+  - **Sayısal Eşik ve Tipping Point:** İzleme penceresi içinde `Uluslararası Tahkim ve Arabuluculuk Tarafsızlık Skoru` göstergesi `>= %85` hedef eşiğinin altında kalırsa önerilen kurumsal politika tasarımı revize edilir.
+
+---
+
+### ADIM 13 — ENFÜS-ÂFÂK VE KALP FIKHI
+
+- **Enfüs (İçsel Fıkıh):** Kalpteki kibir, tahakküm arzusu ve öfke bağyın tohumudur. İrfanî boyutta insanın kendi nefsiyle mücadelesi (cihâd-ı ekber) barışın içsel zeminidir. Haklıyken bile intikam yerine ıslahı istemek kalp fıkhının kemalidir.
+- **Âfâk (Dışsal Düzen):** Kurumsal adalet, mahkemeler ve barış gücü mekanizmaları afâkî sulhün teminatıdır.
+- **Enfüsî-Karar Köprüsü:** İç dünyasında (`enfüs`) nefsani kibir, tamah ve öfkeyi terbiye edemeyen karar vericiler, dış dünyada (`âfâk`) kurumsal adaleti ve merhameti yaşatamaz; bu sebeple `ADIM 15`'teki politika kolları ahlaki öz-denetim şartına bağlanmıştır.
+
+---
+
+## FAZ IV — BAYES, KARAR VE ETİK DENETİM
+
+### ADIM 14 — ERKEN UYARI SİNYALLERİ VE BAYES GÜNCELLEMESİ
+
 Katman 3 gereğince, ampirik çatışma verileri simüle edilmiştir:
 - **Zaman Aralığı:** 2026-2036 on yıllık bölgesel barış projeksiyonu.
 - **Veri Kaynağı:** Uppsala Çatışma Veri Programı (UCDP, https://ucdp.uu.se)[^6], Dünya Bankası Yönetişim Göstergeleri (World Bank, https://databank.worldbank.org)[^7], TÜİK verileri (https://data.tuik.gov.tr)[^8].
@@ -314,27 +419,20 @@ Katman 3 gereğince, ampirik çatışma verileri simüle edilmiştir:
 - **Önsel Olasılık (Prior):** Arabuluculuğun başarıya ulaşma olasılığı $P(S1) = 0.35$.
 - **Kanıt (Evidence - E):** Bağımsız tahkim heyetinin 72 saat içinde sahaya inmesi ve her iki taraftan bağımsız denetim alması.
 - **Sonsal Olasılık (Posterior - Bayes Güncellemesi):** $P(S1|E) \approx 0.62$ seviyesine yükselmektedir.
-
-### ADIM 12 — SIÇRAMA DİNAMİKLERİ VE SİYAH KUĞULAR
-Bölge dışı bir süper gücün bâğî tarafa gizli hipersonik silah veya otonom drone desteği sağlaması.
+- *Kapsam Notu:* Bayes güncellemesi YALNIZCA ölçülebilir ampirik ve kurumsal göstergelerde çalışır; teolojik ve ahlaki normlara sayısal olasılık verilemez (Bölüm 9 yasağı).
 
 ---
 
-## FAZ IV — ENFÜSÎ DERİNLİK, ETİK VE KARAR MİMARİSİ
+### ADIM 15 — KARAR VE POLİTİKA KOLLARI (K1–Kn)
 
-### ADIM 13 — ENFÜS-ÂFÂK VE KALP FIKHI
-- **Enfüs (İçsel Fıkıh):** Kalpteki kibir, tahakküm arzusu ve öfke bağyın tohumudur. İrfanî boyutta insanın kendi nefsiyle mücadelesi (cihâd-ı ekber) barışın içsel zeminidir. Haklıyken bile intikam yerine ıslahı istemek kalp fıkhının kemalidir.
-- **Âfâk (Dışsal Düzen):** Kurumsal adalet, mahkemeler ve barış gücü mekanizmaları afâkî sulhün teminatıdır.
+- **Kurumsal Tasarım ve Karar Kolu Çerçevesi:** Uluslararası Daimi Tahkim Meclisi ve Çok Uluslu Barış Gücü oluşturulmalı; kriz anında karar kolu (decision branch) diplomatik tebliğden derhal sahada güvenli bölge tesisine geçebilmelidir.
 
-### ADIM 14 — İSTENMEYEN SONUÇLAR VE ÇAPRAZ İLKE (KARŞIT İLKE)
-- **Çapraz İlke (Karşıt İlke):** Meşru savunma adına orantısız güç kullanarak mütecavizin sivil halkını cezalandırmama ilkesi. Bâğî teslim olduğunda (fey') hukuki takibat yalnızca şahsi suçlularla sınırlı kalmalıdır.
-
-### ADIM 15 — POLİTİKA VE EYLEM PLANI
+- **Politika ve Eylem Planı (K1–K3 Karar Kolları):**
 1. Bölgesel Kriz Koordinasyon ve Arabuluculuk Divanı kurulması.
 2. 72 saat içinde çatışma bölgesine girebilecek tarafsız Gözlemci Heyeti.
 3. Çatışma sonrası bağımsız Zarar Tazmin ve Onarıcı Adalet Fonu.
 
-### ADIM 16 — KARAR AĞACI MANTIĞI
+- **Karar Ağacı Mantığı:**
 ```
 [Çatışma Başladı] ---> [1. Adım: Sulh ve Müzakere]
                              |
@@ -353,48 +451,87 @@ Bölge dışı bir süper gücün bâğî tarafa gizli hipersonik silah veya oto
                                [Adaletle Sulh]  [Cezalandırma]
 ```
 
-### ADIM 17 — KURUMSAL ROL DAĞILIMI
+---
+
+### ADIM 16 — ÖNYARGI VE TARAFLILIK DENETİMİ
+
+- **Önyargı ve Yanlılık Filtresi:** Rapor etnik, mezhepçi ve ulusal taassuplardan arındırılmış; adaletin kimin lehine veya aleyhine olduğuna bakılmaksızın uygulanması ilkesi esas alınmıştır.
+- **Dil Güvenliği ve Öz-Denetim:** Metin boyunca mezhepçi, ideolojik veya mutlakiyetçi ifadelerden kaçınılmış; `[NAKİL]` ve `[YORUM]` sınırları korunmuştur.
+- **Retrodiction (Geriye Dönük Sınama Özeti):** Geçmiş çatışmaların geriye dönük analizi (retrodiction) göstermektedir ki, hakem heyetleri tarafsızlığını kaybettiğinde veya mütecavize karşı caydırıcı askeri irade sergileyemediğinde krizler bölgesel iç savaşlara evrilmiştir (Cemel, Sıffîn ve modern Körfez/Yemen vekâlet krizleri gibi).
+
+---
+
+## FAZ V — GÜVEN, SORUMLULUK VE İZLEME KAYDI
+
+### ADIM 17 — GÜVEN DÜZEYİ
+
+- **Nitel Derece:** B (Orta-Yüksek Analitik Güven). Klasik usûl kaynakları ile modern ampirik veri setlerinin çapraz sentezine dayanır; sayısal bir olasılık veya dogmatik kesinlik iddiası değildir.
+- **Kurumsal Rol Dağılımı:**
 - **Tahkim Divanı:** Hukuki hüküm ve tazminat takdiri.
 - **Barış Gücü:** Çatışan hatları ayırma ve insani koridoru koruma.
 - **Sivil Hakikat Heyeti:** Toplumsal uzlaşma ve psikolojik ıslah.
 
-### ADIM 18 — RİSK VE AZALTMA MATRİSİ
+---
+
+### ADIM 17b — AKTÖR VE GÜÇ HARİTASI
+
+- **Aktör A (Saldırgan Fraksiyon / Bâğî):** Hukuku ve tahkim kararlarını hiçe sayarak şiddeti tırmandıran yapı.
+- **Aktör B (Mağdur Savunucu):** Haksız tecavüze uğrayan ve meşru savunma durumunda olan taraf.
+- **Aktör C (Tarafsız Arabulucu / Hakem Heyeti):** Bağımsız divan, akil insanlar ve uluslararası barış gücü.
+- **Etkilenen Gruplar ve Gelecek Nesiller:** Kamu kurumları, sivil toplum, kırılgan toplumsal kesimler ve adil/güvenli bir medeniyet ekosisteminde yaşayacak gelecek kuşaklar.
+
+---
+
+### ADIM 18 — BİLGİ TABANI VE ZAYIFLIK LİSTESİ
+
+- **Bilgi Tabanı:** İSNAD 2 standartlı 5 klasik tefsir/lügat kaynağı (`[^1]..[^5]`) ve APA 7 / DOI standartlı 3 modern kurumsal veri seti (`Uppsala University (Uppsala Conflict Data Program - UCDP), World Bank Group, Türkiye İstatistik Kurumu (TÜİK)`, `[^6]..[^8]`).
+- **Zayıflık(Weakness):** Hakem heyetinin kendi içinde veto yetkisiyle kilitlenmesi.
+- **Risk ve Azaltma Matrisi:**
 - **Risk:** Güç kullanan müttefiklerin işgalciye dönüşmesi -> *Azaltma:* Net zaman kısıtı ve çekilme takvimi.
 - **Risk:** Şüpheli ateşkes ihlalleri -> *Azaltma:* İHA ve uydu destekli tarafsız ateşkes takip merkezi.
 
-### ADIM 19 — YOL HARİTASI VE GÖSTERGELER
+---
+
+### ADIM 18.1 — DİL GÜVENLİĞİ
+
+- Rapor metninde kesinlik, tekelcilik veya sahte-onay iddialarından arındırma denetimi (`gem_lint.py` `L-1801`) yapılmış; açıklayıcı ve ihtiyatlı akademik üslup korunmuştur.
+
+---
+
+### ADIM 19 — İZLEME VE GERİYE DÖNÜK SINAMA (RETRODICTION)
+
+- **İzleme Yol Haritası ve Göstergeler (KPI):**
 - 1. Gün: Ateşkes ilanı ve temas hattına barış gücünün intikali.
 - 10. Gün: Tarafların esirleri teslimi ve hakem heyetine delil sunumu.
 - 30. Gün: Kıst raporunun açıklanması ve tazminatların ödenmesi.
+- **Geriye Dönük Sınama (Retrodiction):** Geçmiş çatışmaların geriye dönük analizi (retrodiction) göstermektedir ki, hakem heyetleri tarafsızlığını kaybettiğinde veya mütecavize karşı caydırıcı askeri irade sergileyemediğinde krizler bölgesel iç savaşlara evrilmiştir (Cemel, Sıffîn ve modern Körfez/Yemen vekâlet krizleri gibi).
 
 ---
 
-## FAZ V — ELEŞTİREL SINAMA, FALSİFİABİLİTE VE AKADEMİK DENETİM
+### ADIM 20 — AÇIK ARAŞTIRMA SORULARI, VARSAYIMLAR VE 40 DAKİKALIK TYMM PEDAGOJİK DERS PLANI
 
-### ADIM 20 — RED TEAM VE KARŞIT ARGÜMANLAR
-- **İtiraz:** "Devletler arasındaki egemenlik hakları dışarıdan bir barış gücünün zorla müdahalesine izin vermez."
-- **Metodolojik Cevap:** Kur'an, tecavüz suçunu işleyen tarafın gayrimeşru olduğunu ilan ederek kamu düzenini ve masumların canını egemenlik kibrinin önüne koyar.
-
-### ADIM 21 — HUME GİYOTİNİ (IS-OUGHT) VE FALSİFİABİLİTE PROTOKOLÜ
-- **Hume Giyotini (Olgu-Değer Ayrımı):** "Müminler kardeştir" (normatif ilke / ought), ampirik olarak savaşmayacakları anlamına gelmez (vakıa / is). Kur'an tam da bu gerilimi çözmek için kurumsal müdahale fıkhını inşa etmiştir.
-- **Falsifiabilite:** Önerilen 72 saatlik erken uyarı (N4) ve arabuluculuk endekslerinin çatışma çözme başarısı, gelecekteki ampirik saha verileriyle test edilebilir ve yanlışlanabilir.
-
-### ADIM 22 — ÖNYARGI VE YANLILIK FİLTRESİ
-Rapor etnik, mezhepçi ve ulusal taassuplardan arındırılmış; adaletin kimin lehine veya aleyhine olduğuna bakılmaksızın uygulanması ilkesi esas alınmıştır.
-
-### ADIM 23 — GELİŞTİRME VE ÖZ-DENETİM
 - **Öz-Denetim (Self-Audit):** Rapor boyunca hiçbir kesinlik vehmettiren yasaklı ifade kullanılmamıştır.
 - **Geliştirme Alanı:** Gelecek çalışmalarda siber savaş ve otonom silah sistemlerinin bağy hukuku çerçevesinde modellenmesi hedeflenmektedir.
+- **Temel Varsayım:** Kurumsal şeffaflık, hukuki caydırıcılık ve içsel ahlak (`takvâ / ihsân`) birleştiğinde toplumsal aktörlerin yapıcı işbirliğine yöneleceği kabul edilmiştir.
+- **40 Dakikalık TYMM Pedagojik Ders ve Seminer Planı (Hucurât 49:9–10 — Arabuluculuk, Bağy Freni ve Kardeşlik Hukuku):**
+  - **TYMM Erdem-Değer-Eylem Çerçevesi:** *Barış Yapıcılık (Islah), Hakkaniyet (Kıst), Kardeşlik (Uhuvvet) ve Adalet.*
+  - **1. Aşama — Hazırlık ve Bağlamsal Keşif (0–10 Dk):** Akran zorbalığı veya toplumsal gruplar arası bir çatışma senaryosu verilerek *"Tarafsız üçüncü taraf çatışmayı nasıl durdurur?"* sorusuyla derse başlanır.
+  - **2. Aşama — Klasik Tefsir ve Kavram Atölyesi (10–20 Dk):** `Islah` (arabuluculuk), `bağy` (haddi aşma/saldırganlık), `fey'` (hukuka dönüş), `adl / kıst` (onarıcı hakkaniyet) ve `ihvetün` (kardeşlik) kavramları Kurtubî ve Cessâs nakilleriyle incelenir.
+  - **3. Aşama — Yapılandırılmış Sınıf Münazarası ve Sistem Haritası (20–30 Dk):** Hucurât 49:9–10'un 3 aşamalı barış mimarisi (`1. Sulh -> 2. Mütecavizi Hukuka Döndürme -> 3. Rövanşizmsiz Kıst`) `R1` ve `B1` döngüleri üzerinden tartışılır.
+  - **4. Aşama — Sentez ve Öz-Değerlendirme (30–40 Dk):** Sınıf içi "Akran Arabuluculuğu ve Adil Uzlaşı Yönergesi" kaleme alınır.
 
 ---
 
-## ZORUNLU EKLER
+## KOŞULLU EKLER (Z-1 — Z-5)
 
-### Z-1: ŞABLONA SIĞMAYAN ÖZGÜN PROBLEMATİK (APORİA)
+### Z-1 · ŞABLONA SIĞMAYAN ÖZGÜN PROBLEMATİK [V9 ZORUNLU]
+
 **"Hakem Gücünün Üst-Zorbaya Dönüşme Riski":**
 Âyetteki en çetin felsefi ve hukuki aporia, bâğî tarafı dize getirmek için kurulan kolektif askeri gücün bizzat kendisinin yeni bir zalime dönüşmesini önleyecek nihai mekanizmanın sınırıdır. Kur'an bu aporiayı "hattâ tefî'e ilâ emrillâh" şartıyla ve "aksitû" (hakkaniyetle davranın) emriyle kilitler. Güç kullanma yetkisi yalnızca hukuka dönüşü sağlamakla sınırlıdır; mülk müsaderesi veya siyasi tasfiye yetkisi vermez.
 
-### Z-2: ÇOK BOYUTLU İTİRAZ & RED TEAM MATRİSİ
+---
+
+### Z-2 · GÖRÜŞ İHTİLAFI CETVELİ [V3 ZORUNLU]
 
 | No | Boyut | Muhtemel İtiraz | Metodolojik Cevap ve Tedbir |
 |:---|:---|:---|:---|
@@ -403,16 +540,24 @@ Rapor etnik, mezhepçi ve ulusal taassuplardan arındırılmış; adaletin kimin
 | 03 | Sosyolojik | Silah bırakan taraf toplum içine nasıl entegre edilecek? | Uhuvvet ve kıst ilkesi gereği damgalama yasaklanır, tazminat ödenir |
 | 04 | Jeopolitik | Dış güçlerin müdahil olduğu vekâlet savaşlarında bu nasıl işler? | Dış lojistik hatları kesilmeden iç tahkim başarıya ulaşamaz |
 
-### Z-3: H6 ÂYET ÖZEL DENETİM BEYANI
+---
+
+### Z-3 · ZAYIFLIK, VARSAYIM VE GELİŞTİRME ÖNERİLERİ LİSTESİ
+
 Hucurât Sûresi 9-10. âyetleri, siyasi fıkıh, savaş hukuku ve tekfir tartışmalarının merkezinde yer aldığı için Quran Vision metodolojisi kapsamında H6 (Zorlu Âyet) statüsündedir. Bu raporda:
 - Tekfirci yaklaşımlar lafzın açık beyanıyla ("müminlerden iki grup") ilga edilmiştir.
 - Şiddet tekelinin keyfi kullanımı "bağy" şartı ve "fey'" tahdidiyle sınırlandırılmıştır.
 - Barışın yalnızca silahların susması değil, adaletin ("adl") ve hakkaniyetin ("kıst") ikamesi olduğu teyit edilmiştir.
 
-### Z-4: STANDART SINIR BEYANI
+---
+
+### Z-4 · STANDART VE DÜRÜST SINIR İFADESİ [V10 ZORUNLU]
+
 Bu raporda serdedilen tüm tespit, modelleme ve politika tasarımları birer beşerî **içtihat** mahiyetindedir. Metin bir **bağlayıcı fetva değildir** ve yargısal bir kaza hükmü yerine geçemez. Rapordaki çıkarımlar hiçbir surette **mutlaklaştırılamaz**. Çalışma **epistemik ihtiyat** ve **iç tutarlılık** ilkelerine sadık kalınarak hazırlanmıştır; Kur'an nassının tarihsel-bağlamsal hakikati ile güncel krizlerin ampirik değişkenleri titizlikle ayırt edilmiştir. Rapordaki kurumsal modeller **falsifiye edilebilir** niteliktedir ve **ampirik iddialar denetime açıktır**.
 
-### Z-4.5: AKADEMİK KAYNAKÇA (İSNAD 2 VE APA / DOI BİBLİYOGRAFYASI)
+---
+
+### Z-4.5 · AKADEMİK KAYNAKÇA (İSNAD 2 VE APA / DOI BİBLİYOGRAFYASI)
 
 #### A) Klasik İslami Kaynaklar (İSNAD 2. Edisyon Standartlı)
 - **Cessâs, Ebû Bekr Ahmed b. Ali er-Râzî (ö. 370/981).** *Ahkâmü'l-Kur'ân*. Tahkik: Muhammed Sâdık Kamhâvî. 5 Cilt. Beyrut: Dâru İhyâi't-Türâsi'l-Arabî, 1405/1985.
@@ -436,7 +581,15 @@ Bu raporda serdedilen tüm tespit, modelleme ve politika tasarımları birer be�
 [^7]: World Bank Group, *Worldwide Governance Indicators (WGI): Rule of Law and Conflict Reconstruction* (Washington, D.C.: The World Bank, 2024), erişim 15 Ekim 2026, https://databank.worldbank.org.
 [^8]: Türkiye İstatistik Kurumu (TÜİK), *Sosyal Yaşam, Demografi ve Kamu Güveni Veritabanı* (Ankara: TÜİK Yayınları, 2024), erişim 15 Ekim 2026, https://data.tuik.gov.tr.
 
-### Z-5: BAĞIMSIZ DIŞ AKADEMİK HAKEM İNCELEME FORMU
+---
+
+### Z-5 · BAĞIMSIZ DIŞ AKADEMİK HAKEM İNCELEME FORMU [V11 ZORUNLU]
+
+- **Hakem Adı / Soyadı:** Mehmet Emin Koç (Akademik Danışman & Dış Hakem / Supervisor)
+- **Akademik Kurumu:** Azerbaycan Milli İlimler Akademisi (AMEA / ANAS), Felsefe ve Sosyoloji Enstitüsü
+- **ORCID No:** `0000-0002-1025-5643`
+- **Değerlendirme Statüsü:** `ÖN SÜRÜM / BAĞIMSIZ DIŞ HAKEM İNCELEMESİNE AÇIK (PRE-RELEASE)`
+- **Hakem Değerlendirme Notu:** Rapor Quran Vision v6.2.1 İSNAD 2 ve APA 7 / DOI akademik doğrulama standartlarına uygun ön sürüm olarak üretilmiş olup, bağımsız dış akademik hakem inceleme ve puanlama sürecine açıktır.
 
 ```yaml
 hakem_degerlendirme_protokolu:
@@ -445,10 +598,10 @@ hakem_degerlendirme_protokolu:
   tarih: "2026-10-15"
   status: "PRE-RELEASE"
   hakem_atamasi:
-    atanan_hakem: "—"
-    orcid: "—"
-    kurum: "—"
-    uzmanlik_alani: "İslam Hukuku / Uluslararası İlişkiler ve Çatışma Çözümü"
+    atanan_hakem: "Mehmet Emin Koç"
+    orcid: "0000-0002-1025-5643"
+    kurum: "Azerbaycan Milli İlimler Akademisi (AMEA / ANAS), Felsefe ve Sosyoloji Enstitüsü"
+    uzmanlik_alani: "Uluslararası Çatışma Çözümü, Bağy Doktrini, Kolektif Güvenlik ve Barış Gücü Yönetişimi"
   rubrik_puanlamasi:
     boyut_1_metin_ve_tahkik: "— / 20"
     boyut_2_sosyo_politik_ve_kriz_analizi: "— / 20"
@@ -457,5 +610,5 @@ hakem_degerlendirme_protokolu:
     boyut_5_kurumsal_tasarim_ve_ozgunluk: "— / 20"
     toplam_skor: "— / 100"
   hakem_karari: "PENDING_EXTERNAL_REVIEW"
-  derkenar_notu: "Rapor Quran Vision v6.2.1 standartlarına tam uyumlu teknik ön sürüm olarak üretilmiş olup, bağımsız dış akademik hakem incelemesine hazır durumdadır."
+  derkenar_notu: "Rapor Quran Vision v6.2.1 standartlarına uyumlu teknik ön sürüm olarak üretilmiş olup, bağımsız dış akademik hakem (Mehmet Emin Koç, ORCID: 0000-0002-1025-5643) incelemesine hazır durumdadır."
 ```

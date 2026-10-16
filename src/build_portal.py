@@ -60,8 +60,8 @@ def parse_report(md_path: Path):
     z3_text = re.sub(r"^#{1,4}\s*(.+?)\n+", r"**\1:** ", z3_text)
 
     # Extract Prior & Posterior if present
-    prior_m = re.search(r"(?:P\(S1\)\s*=\s*|Prior\s*P\(H\)\):\*\*\s*)([0-9.]+)", body)
-    post_m = re.search(r"P\(S1\|E\)\s*\\approx\s*([0-9.]+)", body)
+    prior_m = re.search(r"(?:P\(S_?1\)\s*=\s*|Prior\s*P\(H\)\):\*\*\s*)([0-9.]+)", body)
+    post_m = re.search(r"P\(S_?1\|E\)\s*(?:\\approx|=)\s*([0-9.]+)", body)
     prior_val = float(prior_m.group(1)) if prior_m else 0.30
     post_val = float(post_m.group(1)) if post_m else 0.78
 
@@ -97,13 +97,16 @@ def parse_report(md_path: Path):
     }
 
     en_meta = EN_CORPUS.get(case_id)
+    en_md_name = md_path.name.replace("-v6.1.1.md", "-en-v6.1.1.md")
+    en_path = DOCS_EN / en_md_name
+    base_report["filename_en"] = en_md_name
+
     if en_meta:
         base_report["surah_en"] = en_meta["surah_en"]
         base_report["topic_en"] = en_meta["topic_en"]
         base_report["aporia_en"] = en_meta["aporia_en"]
         base_report["z3_en"] = en_meta["z3_en"]
         base_report["thresholds_en"] = en_meta["thresholds_en"]
-        # Merge original numeric scores into scenarios_en
         merged_scenarios_en = []
         orig_scs = base_report["scenarios"]
         for i, sc_en in enumerate(en_meta["scenarios_en"]):
@@ -111,19 +114,6 @@ def parse_report(md_path: Path):
             sc_copy["scores"] = orig_scs[i].get("scores", {}) if i < len(orig_scs) else {}
             merged_scenarios_en.append(sc_copy)
         base_report["scenarios_en"] = merged_scenarios_en
-        base_report["body_en"] = build_english_report_body(base_report, en_meta)
-
-        # Save English Markdown file to docs/en/ with full YAML frontmatter
-        DOCS_EN.mkdir(parents=True, exist_ok=True)
-        en_md_name = md_path.name.replace("-v6.1.1.md", "-en-v6.1.1.md")
-        base_report["filename_en"] = en_md_name
-        en_fm_raw = m.group(1).strip()
-        en_full_md = f"---\n{en_fm_raw}\n---\n\n{base_report['body_en']}"
-        en_path = DOCS_EN / en_md_name
-        en_path.write_text(en_full_md, encoding="utf-8")
-        import hashlib as _hl
-        en_sha = _hl.sha256(en_path.read_bytes()).hexdigest()
-        (DOCS_EN / f"{en_md_name}.sha256").write_text(f"{en_sha}  {en_md_name}\n", encoding="utf-8")
     else:
         base_report["surah_en"] = surah
         base_report["topic_en"] = base_report["topic"]
@@ -131,15 +121,59 @@ def parse_report(md_path: Path):
         base_report["z3_en"] = z3_text
         base_report["thresholds_en"] = base_report["thresholds"]
         base_report["scenarios_en"] = base_report["scenarios"]
-        base_report["body_en"] = body
-        base_report["filename_en"] = md_path.name
+
+    # Read canonical 32/32 English monograph directly from docs/en/ without overwriting
+    if en_path.exists():
+        en_raw = en_path.read_text(encoding="utf-8")
+        en_m = re.match(r"^---\r?\n(.*?)\r?\n---\r?\n(.*)$", en_raw, re.DOTALL)
+        base_report["body_en"] = en_m.group(2).strip() if en_m else en_raw.strip()
+        en_sha_path = en_path.with_suffix(en_path.suffix + ".sha256")
+        if en_sha_path.exists():
+            en_sha_line = en_sha_path.read_text(encoding="utf-8").strip()
+            base_report["sha256_en"] = en_sha_line.split()[0] if en_sha_line else real_sha
+        else:
+            import hashlib as _hl
+            en_sha = _hl.sha256(en_path.read_bytes()).hexdigest()
+            en_sha_path.write_text(f"{en_sha}  {en_md_name}\n", encoding="utf-8")
+            base_report["sha256_en"] = en_sha
+    else:
+        base_report["body_en"] = build_english_report_body(base_report, en_meta) if en_meta else body
+        base_report["sha256_en"] = real_sha
 
     return base_report
 
 
-def format_inline_md_py(text: str) -> str:
+def format_source_doi_html(doi_val: str) -> str:
+    if not doi_val or doi_val == "—":
+        return html_lib.escape(str(doi_val or "—"))
+    raw = str(doi_val).strip()
+    m = re.search(r"(10\.\d{4,9}/[-._;()/:A-Za-z0-9]+)", raw)
+    if m:
+        clean_doi = m.group(1).rstrip(".,;:)")
+        esc_doi = html_lib.escape(raw)
+        return f'<a href="https://doi.org/{html_lib.escape(clean_doi)}" target="_blank" rel="noopener" class="doi-link">{esc_doi}</a>'
+    if raw.startswith("http://") or raw.startswith("https://"):
+        esc_url = html_lib.escape(raw)
+        return f'<a href="{esc_url}" target="_blank" rel="noopener" class="ext-link">{esc_url}</a>'
+    return html_lib.escape(raw)
+
+
+def format_source_url_html(url_val: str) -> str:
+    if not url_val or url_val == "—":
+        return html_lib.escape(str(url_val or "—"))
+    raw = str(url_val).strip()
+    if raw.startswith("http://") or raw.startswith("https://"):
+        esc = html_lib.escape(raw)
+        return f'<a href="{esc}" target="_blank" rel="noopener" class="ext-link">{esc}</a>'
+    return format_source_doi_html(raw)
+
+
+def format_inline_md_py(text: str, fn_prefix: str = "", seen_fnrefs: dict | None = None) -> str:
     if not text:
         return ""
+    if seen_fnrefs is None:
+        seen_fnrefs = {}
+
     s = html_lib.escape(text)
     # Clean LaTeX math operators & expressions into crisp Unicode typography
     s = re.sub(r"\\text\{([^}]*)\}", r"\1", s)
@@ -147,7 +181,66 @@ def format_inline_md_py(text: str) -> str:
     s = re.sub(r"(?<!-)v6\.1\.1(?!\.md)", "v6.2.1", s)
     s = s.replace(r"\ge", "≥").replace(r"\le", "≤").replace(r"\approx", "≈")
     s = s.replace(r"\rightarrow", "→").replace(r"\to", "→").replace(r"\%", "%")
+    s = re.sub(r"\\frac\{([^}]+)\}\{([^}]+)\}", r"(\1)/(\2)", s)
+    s = s.replace(r"\times", "×").replace(r"\neg", "¬")
     s = re.sub(r"\$([^$]+)\$", r"<strong>\1</strong>", s)
+
+    links = []
+
+    def save_link(tag_html: str) -> str:
+        idx = len(links)
+        links.append(tag_html)
+        return f"\x00LINK{idx}\x00"
+
+    # 1. Markdown links [label](https://...)
+    def repl_md_link(m):
+        label = m.group(1)
+        url = m.group(2)
+        return save_link(f'<a href="{url}" target="_blank" rel="noopener" class="ext-link">{label}</a>')
+
+    s = re.sub(r"\[([^\]]+)\]\((https?://[^\s)]+)\)", repl_md_link, s)
+
+    # 2. Explicit URLs (https://... or http://...)
+    def repl_url(m):
+        full = m.group(1)
+        url = full.rstrip(".,;:!?)")
+        trail = full[len(url):]
+        cls = "doi-link" if "doi.org/" in url else ("orcid-link" if "orcid.org/" in url else "ext-link")
+        return save_link(f'<a href="{url}" target="_blank" rel="noopener" class="{cls}">{url}</a>') + trail
+
+    s = re.sub(r"(https?://[^\s<>\"'`\])]+)", repl_url, s)
+
+    # 3. Bare DOIs (doi:10.xxxx/... or 10.xxxx/...)
+    def repl_doi(m):
+        prefix = m.group(1) or ""
+        raw_doi = m.group(2)
+        clean_doi = raw_doi.rstrip(".,;:!?)")
+        trail = raw_doi[len(clean_doi):]
+        disp = f"{prefix}{clean_doi}"
+        return save_link(f'<a href="https://doi.org/{clean_doi}" target="_blank" rel="noopener" class="doi-link">{disp}</a>') + trail
+
+    s = re.sub(r"(?i)\b(doi:\s*)?(10\.\d{4,9}/[-._;()/:A-Za-z0-9]+)", repl_doi, s)
+
+    # 4. Bare ORCIDs (0009-0003-0356-8582, 0000-0002-1025-5643, etc.)
+    def repl_orcid(m):
+        orcid = m.group(1)
+        return save_link(f'<a href="https://orcid.org/{orcid}" target="_blank" rel="noopener" class="orcid-link">{orcid}</a>')
+
+    s = re.sub(r"\b(000[09]-\d{4}-\d{4}-\d{3}[\dX])\b", repl_orcid, s)
+
+    # 5. Inline Footnote References [^1] or [1] (bidirectional anchor to #fn-X)
+    def repl_fnref(m):
+        num = m.group(1)
+        count = seen_fnrefs.get(num, 0) + 1
+        seen_fnrefs[num] = count
+        ref_id = f"{fn_prefix}fnref-{num}" if count == 1 else f"{fn_prefix}fnref-{num}-{count}"
+        target_id = f"{fn_prefix}fn-{num}"
+        return save_link(
+            f'<sup class="fn-ref" id="{ref_id}"><a href="#{target_id}" class="fn-link" title="Kaynağa git / Jump to source [{num}]">[{num}]</a></sup>'
+        )
+
+    s = re.sub(r"\[\^(\d{1,2})\]", repl_fnref, s)
+
     # Clean backtick inline code
     s = re.sub(r"`([^`]+)`", r"<code>\1</code>", s)
     s = s.replace("[NAKİL]", '<span class="tag-nakil">[NAKİL]</span>')
@@ -158,13 +251,17 @@ def format_inline_md_py(text: str) -> str:
     s = s.replace("[ANALYSIS]", '<span class="tag-yorum">[ANALYSIS]</span>')
     s = re.sub(r"\*\*(.*?)\*\*", r"<strong>\1</strong>", s)
     s = re.sub(r"\*(.*?)\*", r"<em>\1</em>", s)
-    s = re.sub(r"\[\^(\d+)\]", r'<sup class="fn-ref">[\1]</sup>', s)
     # Wrap inline Arabic sequences in <bdi dir="rtl"> so bidirectional punctuation never scrambles in PDF
     s = re.sub(
         r"([\u0600-\u06FF][\u0600-\u06FF\s\u064B-\u065F\u0670،؛؟\.…]*[\u0600-\u06FF\u064B-\u065F])",
         r'<bdi dir="rtl" style="font-family:\'Traditional Arabic\',\'Amiri\',serif; font-size:11.5pt; color:#064e3b;">\1</bdi>',
         s,
     )
+
+    # Restore protected link placeholders
+    for idx, tag_html in enumerate(links):
+        s = s.replace(f"\x00LINK{idx}\x00", tag_html)
+
     return s
 
 
@@ -186,7 +283,7 @@ def format_z5_yaml_py(yaml_text: str) -> str:
         "Rapor Quran Vision v6.2.1 İSNAD 2 akademik atıf standartlarına tam uyumlu teknik ön sürüm olarak üretilmiş olup, bağımsız dış akademik hakem incelemesine hazır durumdadır."
     )
     raw_notu = raw_notu.replace("v6.1.1 ve v6.2.1", "v6.2.1").replace("v6.1.1", "v6.2.1")
-    notu = html_lib.escape(raw_notu)
+    notu = format_inline_md_py(raw_notu)
     return f"""
     <table>
       <thead>
@@ -198,8 +295,8 @@ def format_z5_yaml_py(yaml_text: str) -> str:
       </thead>
       <tbody>
         <tr>
-          <td><strong>Künye & Durum</strong></td>
-          <td>Rapor: <strong>{rapor_id} ({sure_ayet})</strong> • Tarih: {tarih} • Uzmanlık: {uzmanlik}</td>
+          <td><strong>Künye &amp; Dış Hakem</strong></td>
+          <td>Rapor: <strong>{rapor_id} ({sure_ayet})</strong> • Hakem: <strong>Mehmet Emin Koç</strong> (<a href="https://orcid.org/0000-0002-1025-5643" target="_blank" rel="noopener" class="orcid-link">ORCID: 0000-0002-1025-5643</a>) • Tarih: {tarih} • Uzmanlık: {uzmanlik}</td>
           <td><strong>ÖN SÜRÜM (Açık Hakemlik)</strong></td>
         </tr>
         <tr>
@@ -241,12 +338,13 @@ def format_z5_yaml_py(yaml_text: str) -> str:
     """
 
 
-def render_markdown_py(md: str) -> str:
+def render_markdown_py(md: str, fn_prefix: str = "") -> str:
     lines = md.split("\n")
     out = []
     in_code = False
     code_buf = []
     in_table = False
+    seen_fnrefs = {}
 
     for line in lines:
         if line.strip().startswith("```"):
@@ -268,7 +366,7 @@ def render_markdown_py(md: str) -> str:
         if line.strip().startswith("|"):
             if "---" in line:
                 continue
-            cells = [format_inline_md_py(c.strip()) for c in line.split("|")[1:-1]]
+            cells = [format_inline_md_py(c.strip(), fn_prefix, seen_fnrefs) for c in line.split("|")[1:-1]]
             if not in_table:
                 in_table = True
                 out.append("<table><thead><tr>" + "".join(f"<th>{c}</th>" for c in cells) + "</tr></thead><tbody>")
@@ -281,33 +379,50 @@ def render_markdown_py(md: str) -> str:
 
         stripped = line.strip()
         if line.startswith("# "):
-            out.append(f"<h1>{format_inline_md_py(line[2:])}</h1>")
+            out.append(f"<h1>{format_inline_md_py(line[2:], fn_prefix, seen_fnrefs)}</h1>")
         elif line.startswith("## "):
-            out.append(f"<h2>{format_inline_md_py(line[3:])}</h2>")
+            out.append(f"<h2>{format_inline_md_py(line[3:], fn_prefix, seen_fnrefs)}</h2>")
         elif line.startswith("### "):
-            out.append(f"<h3>{format_inline_md_py(line[4:])}</h3>")
+            out.append(f"<h3>{format_inline_md_py(line[4:], fn_prefix, seen_fnrefs)}</h3>")
         elif line.startswith("#### "):
-            out.append(f"<h4>{format_inline_md_py(line[5:])}</h4>")
+            out.append(f"<h4>{format_inline_md_py(line[5:], fn_prefix, seen_fnrefs)}</h4>")
         elif stripped == "---":
             out.append("<hr>")
+        elif stripped.startswith("- [x] ") or stripped.startswith("- [X] "):
+            out.append(f'<ul><li><span style="color:#059669; font-weight:700;">☑</span> {format_inline_md_py(stripped[6:], fn_prefix, seen_fnrefs)}</li></ul>')
         elif stripped.startswith("- "):
-            out.append(f"<ul><li>{format_inline_md_py(stripped[2:])}</li></ul>")
+            out.append(f"<ul><li>{format_inline_md_py(stripped[2:], fn_prefix, seen_fnrefs)}</li></ul>")
         elif re.match(r"^\d+\.\s", stripped):
-            out.append(f'<p class="num-item">{format_inline_md_py(stripped)}</p>')
+            out.append(f'<p class="num-item">{format_inline_md_py(stripped, fn_prefix, seen_fnrefs)}</p>')
         elif stripped.startswith("[^"):
-            out.append(f'<p class="fn-item">{format_inline_md_py(stripped)}</p>')
+            fn_m = re.match(r"^\[\^(\d+)\]:\s*(.*)$", stripped)
+            if fn_m:
+                fn_num = fn_m.group(1)
+                fn_body = format_inline_md_py(fn_m.group(2), fn_prefix, seen_fnrefs)
+                fn_id = f"{fn_prefix}fn-{fn_num}"
+                ref_id = f"{fn_prefix}fnref-{fn_num}"
+                out.append(
+                    f'<p class="fn-item" id="{fn_id}">'
+                    f'<a href="#{ref_id}" class="fn-num-link" title="Metindeki atfa dön / Return to citation [{fn_num}]"><strong>[{fn_num}]</strong></a> '
+                    f'{fn_body} '
+                    f'<a href="#{ref_id}" class="fn-backref" title="Metne dön / Back to text">↩</a>'
+                    f'</p>'
+                )
+            else:
+                out.append(f'<p class="fn-item">{format_inline_md_py(stripped, fn_prefix, seen_fnrefs)}</p>')
         elif stripped != "":
-            out.append(f"<p>{format_inline_md_py(line)}</p>")
+            out.append(f"<p>{format_inline_md_py(line, fn_prefix, seen_fnrefs)}</p>")
 
     if in_table:
         out.append("</tbody></table>")
     return "\n".join(out)
 
 
-def build_single_report_print_html(r: dict, idx: int) -> str:
+def build_single_report_print_html(r: dict, idx: int, fn_prefix: str = "") -> str:
     """Renders a single report block in clean academic A4 format for PDF generation."""
     classical_rows = []
     for cs in r.get("classical_sources", []):
+        v_link_html = format_source_url_html(cs.get("verification_link", ""))
         classical_rows.append(f"""
         <div class="pdf-source-box">
           <div class="pdf-source-title">
@@ -320,44 +435,46 @@ def build_single_report_print_html(r: dict, idx: int) -> str:
             {html_lib.escape(str(cs.get('publication_year', '')))} • Cilt: {html_lib.escape(str(cs.get('volume', '')))}, Sayfa: {html_lib.escape(str(cs.get('pages', '')))}
           </div>
           <div class="pdf-arabic">{html_lib.escape(str(cs.get('arabic_quote', '')))}</div>
-          <div class="pdf-link">Tahkik: {html_lib.escape(str(cs.get('verification_link', '')))} ({html_lib.escape(str(cs.get('doi_or_urn', '')))})</div>
+          <div class="pdf-link">Tahkik: {v_link_html} ({html_lib.escape(str(cs.get('doi_or_urn', '')))})</div>
         </div>
         """)
 
     modern_rows = []
     for ms in r.get("modern_sources", []):
+        doi_html = format_source_doi_html(ms.get("doi", "—"))
+        url_html = format_source_url_html(ms.get("url", ""))
         modern_rows.append(f"""
         <div class="pdf-source-box">
           <div class="pdf-source-title">
             <strong>{html_lib.escape(str(ms.get('institution') or ms.get('author', '')))} ({html_lib.escape(str(ms.get('publication_year', '')))})</strong>
-            <span>DOI: {html_lib.escape(str(ms.get('doi', '—')))}</span>
+            <span>DOI: {doi_html}</span>
           </div>
           <div class="pdf-source-meta">
             <em>{html_lib.escape(str(ms.get('title', '')))}</em> • {html_lib.escape(str(ms.get('publication_place', '')))}: {html_lib.escape(str(ms.get('publisher', '')))}
           </div>
-          <div class="pdf-link">URL: {html_lib.escape(str(ms.get('url', '')))}</div>
+          <div class="pdf-link">URL: {url_html}</div>
         </div>
         """)
 
-    body_html = render_markdown_py(r["body"])
+    body_html = render_markdown_py(r["body"], fn_prefix=fn_prefix)
 
     return f"""
     <article class="pdf-report">
       <div class="pdf-header-banner">
         <div class="pdf-meta-line">
-          <span>KUR’ÂN VİZYONU ENSTİTÜSÜ v6.2.1 • DOI: 10.5281/zenodo.23391192 • ORCID: 0009-0003-0356-8582</span>
+          <span>KUR’ÂN VİZYONU ENSTİTÜSÜ v6.2.1 • DOI: <a href="https://doi.org/10.5281/zenodo.23391192" target="_blank" rel="noopener" class="doi-link">10.5281/zenodo.23391192</a> • ORCID: <a href="https://orcid.org/0009-0003-0356-8582" target="_blank" rel="noopener" class="orcid-link">0009-0003-0356-8582</a></span>
           <span>VAKA KODU: <strong>{html_lib.escape(r['case_id'])}</strong></span>
         </div>
         <h1 class="pdf-main-title">{idx}. {html_lib.escape(r['surah'])} Sûresi {html_lib.escape(r['verse'])} — {html_lib.escape(r['topic'])}</h1>
         <div class="pdf-submeta" style="color:#064e3b; background:#eef5f2; padding:5px 8px; border-radius:4px; border-left:3px solid #856404; margin-bottom:6px; line-height:1.45;">
-          👑 <strong>Proje Kurucusu &amp; Başyazar (Eser Sahibi): Mehmet Yarıcı</strong> — <em>Uludağ Üniversitesi İlahiyat Fakültesi (1989) • T.C. MEB İstanbul Bahçelievler Dede Korkut Anadolu Lisesi</em> (ORCID: 0009-0003-0356-8582)<br>
-          🏛️ <strong>Akademik Danışman &amp; Dış Hakem: Mehmet Emin Koç</strong> — <em>Azerbaycan Milli İlimler Akademisi (AMEA), Felsefe ve Sosyoloji Enstitüsü</em> (ORCID: 0000-0002-1025-5643)
+          👑 <strong>Proje Kurucusu &amp; Başyazar (Eser Sahibi): Mehmet Yarıcı</strong> — <em>Uludağ Üniversitesi İlahiyat Fakültesi (1989) • T.C. MEB İstanbul Bahçelievler Dede Korkut Anadolu Lisesi</em> (ORCID: <a href="https://orcid.org/0009-0003-0356-8582" target="_blank" rel="noopener" class="orcid-link">0009-0003-0356-8582</a>)<br>
+          🏛️ <strong>Akademik Danışman &amp; Dış Hakem: Mehmet Emin Koç</strong> — <em>Azerbaycan Milli İlimler Akademisi (AMEA), Felsefe ve Sosyoloji Enstitüsü</em> (ORCID: <a href="https://orcid.org/0000-0002-1025-5643" target="_blank" rel="noopener" class="orcid-link">0000-0002-1025-5643</a>)
         </div>
         <div class="pdf-submeta">
           Katman: 3 (Akademik-Derin) &nbsp;|&nbsp; H6 Zorlu Âyet &nbsp;|&nbsp; Güven Derecesi: {html_lib.escape(r['confidence'])} &nbsp;|&nbsp;
           Prior P(S1): %{int(round(r['prior']*100))} → Posterior P(S1|E): %{int(round(r['posterior']*100))}
         </div>
-        <div class="pdf-sha">SHA-256: {html_lib.escape(r['sha256'])} ({html_lib.escape(r['filename'])})</div>
+        <div class="pdf-sha">SHA-256: {html_lib.escape(r['sha256'])} (docs/tr/{html_lib.escape(r['filename'])})</div>
       </div>
 
       <section class="pdf-sources-summary">
@@ -391,6 +508,9 @@ def wrap_pdf_document(title: str, articles_html: str) -> str:
 @page {{
   size: A4 portrait;
   margin: 16mm 15mm 16mm 15mm;
+}}
+html {{
+  scroll-behavior: smooth;
 }}
 * {{ box-sizing: border-box; margin: 0; padding: 0; }}
 body {{
@@ -589,14 +709,41 @@ body {{
   font-size: 8pt;
   font-weight: 700;
 }}
+a.ext-link, a.doi-link, a.orcid-link {{
+  color: #047857;
+  text-decoration: underline;
+  text-decoration-color: rgba(4, 120, 87, 0.45);
+  word-break: break-all;
+}}
 .fn-ref {{
   color: #92400e;
   font-weight: 700;
 }}
+a.fn-link {{
+  color: #92400e;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 0 1px;
+}}
 .fn-item {{
   font-size: 8.5pt;
   color: #374151;
-  margin-bottom: 3px;
+  margin-bottom: 4px;
+  padding: 2px 4px;
+  border-left: 2px solid #d1d5db;
+}}
+a.fn-num-link {{
+  color: #0f5132;
+  text-decoration: none;
+  font-weight: 700;
+}}
+a.fn-backref {{
+  display: inline-block;
+  margin-left: 4px;
+  color: #0f5132;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 8.5pt;
 }}
 </style>
 </head>
@@ -619,10 +766,11 @@ def find_browser_exe():
     return None
 
 
-def build_single_report_print_html_en(r: dict, idx: int) -> str:
+def build_single_report_print_html_en(r: dict, idx: int, fn_prefix: str = "") -> str:
     """Renders a single report block in clean English academic A4 format for PDF generation."""
     classical_rows = []
     for cs in r.get("classical_sources", []):
+        v_link_html = format_source_url_html(cs.get("verification_link", ""))
         classical_rows.append(f"""
         <div class="pdf-source-box">
           <div class="pdf-source-title">
@@ -635,55 +783,57 @@ def build_single_report_print_html_en(r: dict, idx: int) -> str:
             {html_lib.escape(str(cs.get('publication_year', '')))} • Vol.: {html_lib.escape(str(cs.get('volume', '')))}, pp.: {html_lib.escape(str(cs.get('pages', '')))}
           </div>
           <div class="pdf-arabic">{html_lib.escape(str(cs.get('arabic_quote', '')))}</div>
-          <div class="pdf-link">Verification: {html_lib.escape(str(cs.get('verification_link', '')))} ({html_lib.escape(str(cs.get('doi_or_urn', '')))})</div>
+          <div class="pdf-link">Verification: {v_link_html} ({html_lib.escape(str(cs.get('doi_or_urn', '')))})</div>
         </div>
         """)
 
     modern_rows = []
     for ms in r.get("modern_sources", []):
+        doi_html = format_source_doi_html(ms.get("doi", "—"))
+        url_html = format_source_url_html(ms.get("url", ""))
         modern_rows.append(f"""
         <div class="pdf-source-box">
           <div class="pdf-source-title">
             <strong>{html_lib.escape(str(ms.get('institution') or ms.get('author', '')))} ({html_lib.escape(str(ms.get('publication_year', '')))})</strong>
-            <span>DOI: {html_lib.escape(str(ms.get('doi', '—')))}</span>
+            <span>DOI: {doi_html}</span>
           </div>
           <div class="pdf-source-meta">
             <em>{html_lib.escape(str(ms.get('title', '')))}</em> • {html_lib.escape(str(ms.get('publication_place', '')))}: {html_lib.escape(str(ms.get('publisher', '')))}
           </div>
-          <div class="pdf-link">URL: {html_lib.escape(str(ms.get('url', '')))}</div>
+          <div class="pdf-link">URL: {url_html}</div>
         </div>
         """)
 
-    body_en_html = render_markdown_py(r.get("body_en") or r["body"])
+    body_en_html = render_markdown_py(r.get("body_en") or r["body"], fn_prefix=fn_prefix)
 
     return f"""
     <article class="pdf-report">
       <div class="pdf-header-banner">
         <div class="pdf-meta-line">
-          <span>QURAN VISION INSTITUTE v6.2.1 • DOI: 10.5281/zenodo.23391192 • ORCID: 0009-0003-0356-8582</span>
+          <span>QURAN VISION INSTITUTE v6.2.1 • DOI: <a href="https://doi.org/10.5281/zenodo.23391192" target="_blank" rel="noopener" class="doi-link">10.5281/zenodo.23391192</a> • ORCID: <a href="https://orcid.org/0009-0003-0356-8582" target="_blank" rel="noopener" class="orcid-link">0009-0003-0356-8582</a></span>
           <span>CASE ID: <strong>{html_lib.escape(r['case_id'])}</strong></span>
         </div>
         <h1 class="pdf-main-title">{idx}. Surah {html_lib.escape(r.get('surah_en', r['surah']))} {html_lib.escape(r['verse'])} — {html_lib.escape(r.get('topic_en', r['topic']))}</h1>
         <div class="pdf-submeta" style="color:#064e3b; background:#eef5f2; padding:5px 8px; border-radius:4px; border-left:3px solid #856404; margin-bottom:6px; line-height:1.45;">
-          👑 <strong>Founder &amp; Principal Author: Mehmet Yarıcı</strong> — <em>Uludağ University Faculty of Theology (1989) • Republic of Türkiye Ministry of National Education (MEB), Bahçelievler Dede Korkut Anatolian High School</em> (ORCID: 0009-0003-0356-8582)<br>
-          🏛️ <strong>Academic Advisor &amp; External Peer-Reviewer: Mehmet Emin Koç</strong> — <em>Azerbaijan National Academy of Sciences (ANAS), Institute of Philosophy and Sociology</em> (ORCID: 0000-0002-1025-5643)
+          👑 <strong>Founder &amp; Principal Author: Mehmet Yarıcı</strong> — <em>Uludağ University Faculty of Theology (1989) • Republic of Türkiye Ministry of National Education (MEB), Bahçelievler Dede Korkut Anatolian High School</em> (ORCID: <a href="https://orcid.org/0009-0003-0356-8582" target="_blank" rel="noopener" class="orcid-link">0009-0003-0356-8582</a>)<br>
+          🏛️ <strong>Academic Advisor &amp; External Peer-Reviewer: Mehmet Emin Koç</strong> — <em>Azerbaijan National Academy of Sciences (ANAS), Institute of Philosophy and Sociology</em> (ORCID: <a href="https://orcid.org/0000-0002-1025-5643" target="_blank" rel="noopener" class="orcid-link">0000-0002-1025-5643</a>)
         </div>
         <div class="pdf-submeta">
           Layer: 3 (Academic-Deep) &nbsp;|&nbsp; H6 Complex Verse &nbsp;|&nbsp; Confidence Grade: {html_lib.escape(r['confidence'])} &nbsp;|&nbsp;
           Prior P(S1): {int(round(r['prior']*100))}% → Posterior P(S1|E): {int(round(r['posterior']*100))}%
         </div>
-        <div class="pdf-sha">SHA-256: {html_lib.escape(r['sha256'])} (docs/en/{html_lib.escape(r.get('filename_en', r['filename']))})</div>
+        <div class="pdf-sha">SHA-256: {html_lib.escape(r.get('sha256_en', r['sha256']))} (docs/en/{html_lib.escape(r.get('filename_en', r['filename']))})</div>
       </div>
 
       <section class="pdf-sources-summary">
-        <h2>I. ISNAD 2 Classical Tafsir Verification & Contemporary Empirical (DOI) Source Summary</h2>
+        <h2>I. ISNAD 2 Classical Tafsir Verification &amp; Contemporary Empirical (DOI) Source Summary</h2>
         <div class="pdf-grid-2">
           <div>
             <h3>A) Classical Islamic Primary Sources (ISNAD 2nd Edition)</h3>
             {''.join(classical_rows)}
           </div>
           <div>
-            <h3>B) Contemporary Empirical & Institutional Datasets (APA 7 / DOI)</h3>
+            <h3>B) Contemporary Empirical &amp; Institutional Datasets (APA 7 / DOI)</h3>
             {''.join(modern_rows)}
           </div>
         </div>
@@ -743,9 +893,10 @@ def generate_all_pdfs(reports: list):
     all_articles_en = []
     rebuild_all = "--rebuild-all" in sys.argv or "--force-pdf" in sys.argv
     for idx, r in enumerate(reports, start=1):
-        # 1. Turkish Report HTML & PDF
-        art_html = build_single_report_print_html(r, idx)
-        all_articles.append(art_html)
+        # 1. Turkish Report HTML (fn_prefix="" for standalone PDF, fn_prefix=f"r{idx}-" for combined book)
+        art_html_single = build_single_report_print_html(r, idx, fn_prefix="")
+        art_html_book = build_single_report_print_html(r, idx, fn_prefix=f"r{idx}-")
+        all_articles.append(art_html_book)
 
         out_pdf = PDF_DIR / r["pdf_filename"]
         tr_title = f"{r['case_id']} — {r['surah']} {r['verse']}: {r['topic']} | Kur'an Vizyonu Külliyatı v6.2.1"
@@ -755,7 +906,7 @@ def generate_all_pdfs(reports: list):
             "Akademik Danışman & Dış Hakem: Mehmet Emin Koç (ORCID: 0000-0002-1025-5643)"
         )
         if not (out_pdf.exists() and out_pdf.stat().st_size > 1000 and not rebuild_all):
-            single_doc = wrap_pdf_document(f"{r['case_id']} - {r['surah']} {r['verse']}", art_html)
+            single_doc = wrap_pdf_document(f"{r['case_id']} - {r['surah']} {r['verse']}", art_html_single)
             tmp_html = PDF_DIR / f"{r['case_id']}.html"
             tmp_html.write_text(single_doc, encoding="utf-8")
             cmd = [
@@ -771,9 +922,10 @@ def generate_all_pdfs(reports: list):
             shutil.copy2(out_pdf, DESKTOP_PDF_DIR / r["pdf_filename"])
             shutil.copy2(out_pdf, parent_pdf_dir / r["pdf_filename"])
 
-        # 2. English Report HTML & PDF
-        art_en_html = build_single_report_print_html_en(r, idx)
-        all_articles_en.append(art_en_html)
+        # 2. English Report HTML (fn_prefix="" for standalone PDF, fn_prefix=f"r{idx}-" for combined book)
+        art_en_single = build_single_report_print_html_en(r, idx, fn_prefix="")
+        art_en_book = build_single_report_print_html_en(r, idx, fn_prefix=f"r{idx}-")
+        all_articles_en.append(art_en_book)
 
         out_pdf_en = PDF_DIR / r["pdf_filename_en"]
         en_title = f"{r['case_id']} — Surah {r.get('surah_en', r['surah'])} {r['verse']}: {r.get('topic_en', r['topic'])} | Quran Vision Corpus v6.2.1"
@@ -783,7 +935,7 @@ def generate_all_pdfs(reports: list):
             "Academic Advisor & External Peer-Reviewer: Mehmet Emin Koç (ORCID: 0000-0002-1025-5643)"
         )
         if not (out_pdf_en.exists() and out_pdf_en.stat().st_size > 1000 and not rebuild_all):
-            single_doc_en = wrap_pdf_document(f"{r['case_id']} - Surah {r.get('surah_en', r['surah'])} {r['verse']} (EN)", art_en_html)
+            single_doc_en = wrap_pdf_document(f"{r['case_id']} - Surah {r.get('surah_en', r['surah'])} {r['verse']} (EN)", art_en_single)
             tmp_html_en = PDF_DIR / f"{r['case_id']}_EN.html"
             tmp_html_en.write_text(single_doc_en, encoding="utf-8")
             cmd_en = [
@@ -804,15 +956,15 @@ def generate_all_pdfs(reports: list):
     cover_html = f"""
     <div style="page-break-after: always; padding: 48px 28px; text-align: center; border: 3px double #0f5132; border-radius: 12px; margin-top: 24px;">
       <div style="font-size: 11.5pt; font-weight: 700; color: #856404; letter-spacing: 1.4px; margin-bottom: 14px;">
-        QURAN VISION (v6.2.1) • DOI: 10.5281/zenodo.23391192 • İSNAD 2 + VERİ BİLİMİ AKADEMİK STANDARDI
+        QURAN VISION (v6.2.1) • DOI: <a href="https://doi.org/10.5281/zenodo.23391192" target="_blank" rel="noopener" class="doi-link">10.5281/zenodo.23391192</a> • İSNAD 2 + VERİ BİLİMİ AKADEMİK STANDARDI
       </div>
       <h1 style="font-size: 24pt; color: #091310; font-weight: 800; line-height: 1.25; margin-bottom: 14px;">
         Kur'an Vizyonu (Quran Vision)<br>Stratejik Tefsir, Makâsıd ve Medeniyet Öngörü Külliyatı
       </h1>
       <div style="text-align: left; max-width: 560px; margin: 0 auto 18px; padding: 12px 16px; background: #eef5f2; border: 1.5px solid #0f5132; border-left: 5px solid #856404; border-radius: 8px; font-size: 9.5pt; line-height: 1.55;">
         <div style="font-weight: 800; color: #0f5132; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 0.5px;">🏛️ ESER SAHİPLİĞİ, BAŞYAZAR VE AKADEMİK DANIŞMA KÜNYESİ:</div>
-        <div style="margin-bottom: 4px;">👑 <strong>Proje Kurucusu &amp; Başyazar (Eser Sahibi): Mehmet Yarıcı</strong> — <em>Uludağ Üniversitesi İlahiyat Fakültesi (1989) • T.C. Millî Eğitim Bakanlığı, İstanbul Bahçelievler Dede Korkut Anadolu Lisesi</em> (ORCID: <code>0009-0003-0356-8582</code>)</div>
-        <div>🏛️ <strong>Akademik Danışman &amp; Dış Hakem: Mehmet Emin Koç</strong> — <em>Azerbaycan Milli İlimler Akademisi (AMEA), Felsefe ve Sosyoloji Enstitüsü</em> (ORCID: <code>0000-0002-1025-5643</code>)</div>
+        <div style="margin-bottom: 4px;">👑 <strong>Proje Kurucusu &amp; Başyazar (Eser Sahibi): Mehmet Yarıcı</strong> — <em>Uludağ Üniversitesi İlahiyat Fakültesi (1989) • T.C. Millî Eğitim Bakanlığı, İstanbul Bahçelievler Dede Korkut Anadolu Lisesi</em> (ORCID: <code><a href="https://orcid.org/0009-0003-0356-8582" target="_blank" rel="noopener" class="orcid-link">0009-0003-0356-8582</a></code>)</div>
+        <div>🏛️ <strong>Akademik Danışman &amp; Dış Hakem: Mehmet Emin Koç</strong> — <em>Azerbaycan Milli İlimler Akademisi (AMEA), Felsefe ve Sosyoloji Enstitüsü</em> (ORCID: <code><a href="https://orcid.org/0000-0002-1025-5643" target="_blank" rel="noopener" class="orcid-link">0000-0002-1025-5643</a></code>)</div>
       </div>
       <p style="font-size: 11pt; color: #374151; max-width: 560px; margin: 0 auto 18px;">
         26 Adımlı Analitik Çerçeve, İSNAD 2 Klasik Tefsir Tahkiki, Çağdaş Ampirik (DOI) Göstergeler ve
@@ -823,7 +975,7 @@ def generate_all_pdfs(reports: list):
         {''.join(f'<div style="margin-bottom:3px;"><b>{i}. {r["case_id"]}</b> — {r["surah"]} {r["verse"]}: {r["topic"]}</div>' for i, r in enumerate(reports, 1))}
       </div>
       <div style="font-size: 8.5pt; color: #6b7280; margin-top: 18px;">
-        Linter Doğrulaması: 0 BLOCK (Kesici Hata) &nbsp;|&nbsp; Kriptografik Bütünlük: Harici .sha256 Manifest &nbsp;|&nbsp; CERN/Zenodo DOI: 10.5281/zenodo.23391192
+        Linter Doğrulaması: 0 BLOCK (Kesici Hata) &nbsp;|&nbsp; Kriptografik Bütünlük: Harici .sha256 Manifest &nbsp;|&nbsp; CERN/Zenodo DOI: <a href="https://doi.org/10.5281/zenodo.23391192" target="_blank" rel="noopener" class="doi-link">10.5281/zenodo.23391192</a>
       </div>
     </div>
     """
@@ -853,15 +1005,15 @@ def generate_all_pdfs(reports: list):
     cover_en_html = f"""
     <div style="page-break-after: always; padding: 48px 28px; text-align: center; border: 3px double #0f5132; border-radius: 12px; margin-top: 24px;">
       <div style="font-size: 11.5pt; font-weight: 700; color: #856404; letter-spacing: 1.4px; margin-bottom: 14px;">
-        QURAN VISION INSTITUTE (v6.2.1) • DOI: 10.5281/zenodo.23391192 • ISNAD 2 + EMPIRICAL DATA SCIENCE STANDARD
+        QURAN VISION INSTITUTE (v6.2.1) • DOI: <a href="https://doi.org/10.5281/zenodo.23391192" target="_blank" rel="noopener" class="doi-link">10.5281/zenodo.23391192</a> • ISNAD 2 + EMPIRICAL DATA SCIENCE STANDARD
       </div>
       <h1 style="font-size: 24pt; color: #091310; font-weight: 800; line-height: 1.25; margin-bottom: 14px;">
-        QURAN VISION CORPUS<br>Strategic Tafsir, Maqasid & Civilization Foresight
+        QURAN VISION CORPUS<br>Strategic Tafsir, Maqasid &amp; Civilization Foresight
       </h1>
       <div style="text-align: left; max-width: 560px; margin: 0 auto 18px; padding: 12px 16px; background: #eef5f2; border: 1.5px solid #0f5132; border-left: 5px solid #856404; border-radius: 8px; font-size: 9.5pt; line-height: 1.55;">
         <div style="font-weight: 800; color: #0f5132; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 0.5px;">🏛️ CORPUS OWNERSHIP, PRINCIPAL AUTHOR &amp; ACADEMIC ADVISORY BOARD:</div>
-        <div style="margin-bottom: 4px;">👑 <strong>Founder &amp; Principal Author (Copyright Owner): Mehmet Yarıcı</strong> — <em>Uludağ University Faculty of Theology (1989) • Republic of Türkiye Ministry of National Education (MEB), Bahçelievler Dede Korkut Anatolian High School</em> (ORCID: <code>0009-0003-0356-8582</code>)</div>
-        <div>🏛️ <strong>Academic Advisor &amp; External Peer-Reviewer: Mehmet Emin Koç</strong> — <em>Azerbaijan National Academy of Sciences (ANAS), Institute of Philosophy and Sociology</em> (ORCID: <code>0000-0002-1025-5643</code>)</div>
+        <div style="margin-bottom: 4px;">👑 <strong>Founder &amp; Principal Author (Copyright Owner): Mehmet Yarıcı</strong> — <em>Uludağ University Faculty of Theology (1989) • Republic of Türkiye Ministry of National Education (MEB), Bahçelievler Dede Korkut Anatolian High School</em> (ORCID: <code><a href="https://orcid.org/0009-0003-0356-8582" target="_blank" rel="noopener" class="orcid-link">0009-0003-0356-8582</a></code>)</div>
+        <div>🏛️ <strong>Academic Advisor &amp; External Peer-Reviewer: Mehmet Emin Koç</strong> — <em>Azerbaijan National Academy of Sciences (ANAS), Institute of Philosophy and Sociology</em> (ORCID: <code><a href="https://orcid.org/0000-0002-1025-5643" target="_blank" rel="noopener" class="orcid-link">0000-0002-1025-5643</a></code>)</div>
       </div>
       <p style="font-size: 11pt; color: #374151; max-width: 560px; margin: 0 auto 18px;">
         26-Step Analytical Framework, ISNAD 2 Classical Tafsir Verification, Contemporary Empirical (DOI) Indicators, and
@@ -872,7 +1024,7 @@ def generate_all_pdfs(reports: list):
         {''.join(f'<div style="margin-bottom:3px;"><b>{i}. {r["case_id"]}</b> — Surah {r.get("surah_en", r["surah"])} {r["verse"]}: {r.get("topic_en", r["topic"])}</div>' for i, r in enumerate(reports, 1))}
       </div>
       <div style="font-size: 8.5pt; color: #6b7280; margin-top: 18px;">
-        Linter Verification: 0 BLOCK Errors &nbsp;|&nbsp; Cryptographic Integrity: External .sha256 Manifest &nbsp;|&nbsp; CERN/Zenodo DOI: 10.5281/zenodo.23391192
+        Linter Verification: 0 BLOCK Errors &nbsp;|&nbsp; Cryptographic Integrity: External .sha256 Manifest &nbsp;|&nbsp; CERN/Zenodo DOI: <a href="https://doi.org/10.5281/zenodo.23391192" target="_blank" rel="noopener" class="doi-link">10.5281/zenodo.23391192</a>
       </div>
     </div>
     """
@@ -1535,6 +1687,69 @@ body {{
   font-size: 12px;
   font-weight: 600;
 }}
+html, .content-scroll, .report-list {{
+  scroll-behavior: smooth;
+}}
+.md-body a.ext-link, .md-body a.doi-link, .md-body a.orcid-link,
+.source-card a.ext-link, .source-card a.doi-link, .source-card a.orcid-link {{
+  color: var(--accent-emerald);
+  text-decoration: underline;
+  text-decoration-color: rgba(16, 185, 129, 0.45);
+  word-break: break-all;
+  transition: color 0.15s;
+}}
+.md-body a.ext-link:hover, .md-body a.doi-link:hover, .md-body a.orcid-link:hover {{
+  color: var(--accent-gold);
+}}
+.fn-ref {{
+  color: var(--accent-gold);
+  font-weight: 700;
+}}
+a.fn-link {{
+  color: var(--accent-gold);
+  text-decoration: none;
+  font-weight: 700;
+  padding: 0 2px;
+  border-radius: 3px;
+  transition: background 0.2s;
+}}
+a.fn-link:hover {{
+  background: var(--accent-gold-soft);
+  text-decoration: underline;
+}}
+.fn-item {{
+  font-size: 13px !important;
+  color: var(--text-secondary) !important;
+  margin-bottom: 8px !important;
+  padding: 6px 10px;
+  border-left: 3px solid var(--border);
+  border-radius: 0 6px 6px 0;
+  background: var(--bg-surface);
+  transition: background 0.35s, border-color 0.35s;
+}}
+.fn-item:target, .fn-highlight {{
+  background: var(--accent-gold-soft) !important;
+  border-left-color: var(--accent-gold) !important;
+}}
+a.fn-num-link {{
+  color: var(--accent-gold);
+  text-decoration: none;
+  font-weight: 700;
+  margin-right: 4px;
+}}
+a.fn-backref {{
+  display: inline-block;
+  margin-left: 6px;
+  color: var(--accent-emerald);
+  text-decoration: none;
+  font-weight: 700;
+  padding: 0 4px;
+  border-radius: 4px;
+}}
+a.fn-backref:hover {{
+  background: var(--accent-emerald-soft);
+  color: var(--accent-gold);
+}}
 
 .form-group {{
   margin-bottom: 14px;
@@ -2007,7 +2222,7 @@ function selectReport(idx) {{
         <div>🏛️ <strong>${{isEn ? 'Academic Advisor & External Peer-Reviewer:' : 'Akademik Danışman & Dış Hakem:'}} Mehmet Emin Koç</strong> — <span style="color:var(--text-secondary);">${{isEn ? 'Azerbaijan National Academy of Sciences (ANAS), Institute of Philosophy and Sociology' : 'Azerbaycan Milli İlimler Akademisi (AMEA), Felsefe ve Sosyoloji Enstitüsü'}}</span> &nbsp;<a href="https://orcid.org/0000-0002-1025-5643" target="_blank" rel="noopener" style="color:var(--accent-emerald); font-family:'JetBrains Mono',monospace; font-size:11.5px; text-decoration:none;">[ORCID: 0000-0002-1025-5643]</a></div>
       </div>
     </div>
-    <div class="sha-bar">🔒 <strong>${{isEn ? 'External Cryptographic Manifest (SHA-256):' : 'Harici Kriptografik Manifest (SHA-256):'}}</strong> ${{r.sha256}} &nbsp;|&nbsp; 📄 <code>${{activeMdPath}}</code> &nbsp;|&nbsp; 🏛️ <strong>DOI:</strong> <a href="https://doi.org/10.5281/zenodo.23391192" target="_blank" rel="noopener" style="color:var(--accent-gold);">10.5281/zenodo.23391192</a></div>
+    <div class="sha-bar">🔒 <strong>${{isEn ? 'External Cryptographic Manifest (SHA-256):' : 'Harici Kriptografik Manifest (SHA-256):'}}</strong> ${{isEn ? (r.sha256_en || r.sha256) : r.sha256}} &nbsp;|&nbsp; 📄 <code>${{activeMdPath}}</code> &nbsp;|&nbsp; 🏛️ <strong>DOI:</strong> <a href="https://doi.org/10.5281/zenodo.23391192" target="_blank" rel="noopener" style="color:var(--accent-gold);">10.5281/zenodo.23391192</a></div>
   `;
 
   // Tab 1: Dashboard
@@ -2048,7 +2263,7 @@ function selectReport(idx) {{
   document.getElementById('tab-dashboard').innerHTML = `
     <div class="grid-2">
       <div class="panel">
-        <h3><span>📈 ${{isEn ? 'Bayesian Policy Update (Step 11)' : 'Bayesyen Politika Güncellemesi (Adım 11)'}}</span><span>2026–2036</span></h3>
+        <h3><span>📈 ${{isEn ? 'Bayesian Policy Update (Step 14)' : 'Bayesyen Politika Güncellemesi (Adım 14)'}}</span><span>2026–2036</span></h3>
         <div class="bayes-row">
           <div class="bayes-label">
             <span>${{isEn ? 'Prior Probability — P(S1) (Baseline Institutional Inertia)' : 'Önsel Olasılık — Prior P(S1) (Mevcut Ataletle Başarı)'}}</span>
@@ -2097,16 +2312,23 @@ function selectReport(idx) {{
     </div>
   `).join('');
 
-  let modernHtml = (r.modern_sources || []).map(ms => `
-    <div class="source-card">
-      <div class="source-header">
-        <span class="source-author">${{ms.institution || ms.author}} (${{ms.publication_year || ''}})</span>
-        <span class="badge badge-mono">${{ms.doi || (isEn ? 'Institutional Dataset' : 'Kurumsal Veritabanı')}}</span>
+  let modernHtml = (r.modern_sources || []).map(ms => {{
+    const rawDoi = String(ms.doi || '').trim();
+    const doiMatch = rawDoi.match(/(10\\.\\d{{4,9}}\\/[-._;()/:A-Za-z0-9]+)/);
+    const doiBadgeHtml = doiMatch
+      ? `<a class="badge badge-mono doi-link" href="https://doi.org/${{doiMatch[1]}}" target="_blank" rel="noopener">DOI: ${{rawDoi}}</a>`
+      : `<span class="badge badge-mono">${{rawDoi || (isEn ? 'Institutional Dataset' : 'Kurumsal Veritabanı')}}</span>`;
+    return `
+      <div class="source-card">
+        <div class="source-header">
+          <span class="source-author">${{ms.institution || ms.author}} (${{ms.publication_year || ''}})</span>
+          ${{doiBadgeHtml}}
+        </div>
+        <div class="source-meta"><em>${{ms.title}}</em> • ${{ms.publication_place || ''}}: ${{ms.publisher || ''}}</div>
+        <a class="source-link" href="${{ms.url}}" target="_blank" rel="noopener">🌐 ${{ms.url}}</a>
       </div>
-      <div class="source-meta"><em>${{ms.title}}</em> • ${{ms.publication_place || ''}}: ${{ms.publisher || ''}}</div>
-      <a class="source-link" href="${{ms.url}}" target="_blank" rel="noopener">🌐 ${{ms.url}}</a>
-    </div>
-  `).join('');
+    `;
+  }}).join('');
 
   document.getElementById('tab-sources').innerHTML = `
     <div class="grid-2">
@@ -2745,10 +2967,10 @@ function printCurrentReport() {{
   }}, 150);
 }}
 
-function formatInlineMd(str) {{
+function formatInlineMd(str, seenFnRefs = null) {{
   if (!str) return '';
   const isEn = currentLang === 'en';
-  return str
+  let s = str
     .replace(/\\\\text\\{{([^}}]*)\\}}/g, '$1')
     .replace(/v6\\.1\\.1 ve v6\\.2\\.1/g, 'v6.2.1')
     .replace(/v6\\.1\\.1 & v6\\.2\\.1/g, 'v6.2.1')
@@ -2758,16 +2980,74 @@ function formatInlineMd(str) {{
     .replace(/\\\\approx/g, '≈')
     .replace(/\\\\rightarrow/g, '→')
     .replace(/\\\\to/g, '→')
+    .replace(/\\\\times/g, '×')
+    .replace(/\\\\neg/g, '¬')
+    .replace(/\\\\frac\\{{([^}}]+)\\}}\\{{([^}}]+)\\}}/g, '($1)/($2)')
     .replace(/\\\\%/g, '%')
-    .replace(/\\$([^$]+)\\$/g, '<strong>$1</strong>')
+    .replace(/\\$([^$]+)\\$/g, '<strong>$1</strong>');
+
+  const links = [];
+  const saveLink = (tagHtml) => {{
+    const idx = links.length;
+    links.push(tagHtml);
+    return `\\x00LINK${{idx}}\\x00`;
+  }};
+
+  // 1. Markdown links [label](https://...)
+  s = s.replace(/\\[([^\\]]+)\\]\\((https?:\\/\\/[^\\s)]+)\\)/g, (_, label, url) =>
+    saveLink(`<a href="${{url}}" target="_blank" rel="noopener" class="ext-link">${{label}}</a>`)
+  );
+
+  // 2. Explicit URLs (https://... or http://...)
+  s = s.replace(/(https?:\\/\\/[^\\s<>"'`\\])]+)/g, (_, full) => {{
+    const url = full.replace(/[.,;:!?)]+$/, '');
+    const trail = full.slice(url.length);
+    const cls = url.includes('doi.org/') ? 'doi-link' : (url.includes('orcid.org/') ? 'orcid-link' : 'ext-link');
+    return saveLink(`<a href="${{url}}" target="_blank" rel="noopener" class="${{cls}}">${{url}}</a>`) + trail;
+  }});
+
+  // 3. Bare DOIs (doi:10.xxxx/... or 10.xxxx/...)
+  s = s.replace(/\\b(doi:\\s*)?(10\\.\\d{{4,9}}\\/[-._;()/:A-Za-z0-9]+)/gi, (_, prefix, rawDoi) => {{
+    const cleanDoi = rawDoi.replace(/[.,;:!?)]+$/, '');
+    const trail = rawDoi.slice(cleanDoi.length);
+    const disp = (prefix || '') + cleanDoi;
+    return saveLink(`<a href="https://doi.org/${{cleanDoi}}" target="_blank" rel="noopener" class="doi-link">${{disp}}</a>`) + trail;
+  }});
+
+  // 4. Bare ORCIDs (0009-0003-0356-8582, 0000-0002-1025-5643, etc.)
+  s = s.replace(/\\b(000[09]-\\d{{4}}-\\d{{4}}-\\d{{3}}[\\dX])\\b/g, (_, orcid) =>
+    saveLink(`<a href="https://orcid.org/${{orcid}}" target="_blank" rel="noopener" class="orcid-link">${{orcid}}</a>`)
+  );
+
+  // 5. Bidirectional Inline Footnote References [^1]
+  s = s.replace(/\\[\\^(\\d{{1,2}})\\]/g, (_, num) => {{
+    let refId = `fnref-${{num}}`;
+    if (seenFnRefs) {{
+      const count = (seenFnRefs[num] || 0) + 1;
+      seenFnRefs[num] = count;
+      if (count > 1) refId = `fnref-${{num}}-${{count}}`;
+    }}
+    return saveLink(
+      `<sup class="fn-ref" id="${{refId}}"><a href="#fn-${{num}}" class="fn-link" title="${{isEn ? 'Jump to source [' + num + ']' : 'Kaynağa git [' + num + ']'}}">[${{num}}]</a></sup>`
+    );
+  }});
+
+  s = s
     .replace(/\\[NAKİL\\]/g, `<span class="tag-nakil">${{isEn ? '[CITATION / NAKİL]' : '[NAKİL]'}}</span>`)
+    .replace(/\\[CITATION \\/ NAKİL\\]/g, '<span class="tag-nakil">[CITATION / NAKİL]</span>')
+    .replace(/\\[CITATION\\]/g, '<span class="tag-nakil">[CITATION]</span>')
+    .replace(/\\[ANALYSIS \\/ YORUM\\]/g, '<span class="tag-yorum">[ANALYSIS / YORUM]</span>')
     .replace(/\\[ANALYSIS\\]/g, '<span class="tag-yorum">[ANALYSIS]</span>')
     .replace(/\\[YORUM\\]/g, `<span class="tag-yorum">${{isEn ? '[ANALYSIS / YORUM]' : '[YORUM]'}}</span>`)
     .replace(/`([^`]+)`/g, '<code>$1</code>')
     .replace(/\\*\\*(.*?)\\*\\*/g, '<strong>$1</strong>')
     .replace(/\\*(.*?)\\*/g, '<em>$1</em>')
-    .replace(/\\[\\^(\\d+)\\]/g, '<sup style="color:var(--accent-gold); font-weight:700;">[$1]</sup>')
     .replace(/([\\u0600-\\u06FF][\\u0600-\\u06FF\\s\\u064B-\\u065F\\u0670،؛؟.]*[\\u0600-\\u06FF\\u064B-\\u065F])/g, '<bdi dir="rtl" style="font-family:\\x27Amiri\\x27,serif; font-size:1.15em; color:var(--accent-gold);">$1</bdi>');
+
+  for (let idx = 0; idx < links.length; idx++) {{
+    s = s.replace(`\\x00LINK${{idx}}\\x00`, links[idx]);
+  }}
+  return s;
 }}
 
 function formatZ5YamlJs(rawYaml) {{
@@ -2788,7 +3068,7 @@ function formatZ5YamlJs(rawYaml) {{
   let notu = data.derkenar_notu || (isEn
     ? 'Produced in full compliance with Quran Vision v6.2.1 ISNAD 2 and APA 7 / DOI standards; open for independent external academic peer review.'
     : 'Rapor Quran Vision v6.2.1 İSNAD 2 akademik atıf standartlarına tam uyumlu teknik ön sürüm olarak üretilmiş olup, bağımsız dış akademik hakem incelemesine hazır durumdadır.');
-  notu = notu.replace(/v6\\.1\\.1 ve v6\\.2\\.1/g, 'v6.2.1').replace(/v6\\.1\\.1/g, 'v6.2.1');
+  notu = formatInlineMd(notu.replace(/v6\\.1\\.1 ve v6\\.2\\.1/g, 'v6.2.1').replace(/v6\\.1\\.1/g, 'v6.2.1'));
   return `
     <div id="z5-peer-review-card" style="border:1.5px solid var(--accent-gold); background:var(--bg-surface); border-radius:12px; padding:18px 20px; margin:18px 0;">
       <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-bottom:14px;">
@@ -2810,8 +3090,8 @@ function formatZ5YamlJs(rawYaml) {{
         </thead>
         <tbody>
           <tr>
-            <td><strong>${{isEn ? 'Metadata & Review Status' : 'Künye & Hakemlik Statüsü'}}</strong></td>
-            <td>${{isEn ? 'Date' : 'Tarih'}}: <strong>${{tarih}}</strong> • ${{isEn ? 'Field' : 'Uzmanlık Alanı'}}: <em>${{uzmanlik}}</em></td>
+            <td><strong>${{isEn ? 'External Reviewer & Status' : 'Dış Hakem & Künye'}}</strong></td>
+            <td><strong>Mehmet Emin Koç</strong> (<a href="https://orcid.org/0000-0002-1025-5643" target="_blank" rel="noopener" class="orcid-link">ORCID: 0000-0002-1025-5643</a>) • ${{isEn ? 'Date' : 'Tarih'}}: <strong>${{tarih}}</strong> • ${{isEn ? 'Field' : 'Uzmanlık'}}: <em>${{uzmanlik}}</em></td>
             <td><span class="badge badge-gold">${{isEn ? 'OPEN PEER REVIEW' : 'AÇIK HAKEMLİK'}}</span></td>
           </tr>
           <tr>
@@ -2855,11 +3135,13 @@ function formatZ5YamlJs(rawYaml) {{
 }}
 
 function renderMarkdown(md) {{
+  const isEn = currentLang === 'en';
   const lines = md.split('\\n');
   let html = '';
   let inCode = false;
   let codeBuf = [];
   let inTable = false;
+  const seenFnRefs = {{}};
 
   for (let i = 0; i < lines.length; i++) {{
     let line = lines[i];
@@ -2887,7 +3169,7 @@ function renderMarkdown(md) {{
 
     if (line.trim().startsWith('|')) {{
       if (line.includes('---')) continue;
-      const cells = line.split('|').slice(1, -1).map(c => formatInlineMd(c.trim()));
+      const cells = line.split('|').slice(1, -1).map(c => formatInlineMd(c.trim(), seenFnRefs));
       if (!inTable) {{
         inTable = true;
         html += '<table><thead><tr>' + cells.map(c => `<th>${{c}}</th>`).join('') + '</tr></thead><tbody>';
@@ -2900,29 +3182,55 @@ function renderMarkdown(md) {{
       html += '</tbody></table>';
     }}
 
+    const trimmed = line.trim();
     if (line.startsWith('# ')) {{
-      html += `<h1>${{formatInlineMd(line.slice(2))}}</h1>`;
+      html += `<h1>${{formatInlineMd(line.slice(2), seenFnRefs)}}</h1>`;
     }} else if (line.startsWith('## ')) {{
-      html += `<h2>${{formatInlineMd(line.slice(3))}}</h2>`;
-    }} else if (line.startsWith("### ")) {{
-      html += `<h3>${{formatInlineMd(line.slice(4))}}</h3>`;
-    }} else if (line.startsWith("#### ")) {{
-      html += `<h4>${{formatInlineMd(line.slice(5))}}</h4>`;
-    }} else if (line.trim() === '---') {{
+      html += `<h2>${{formatInlineMd(line.slice(3), seenFnRefs)}}</h2>`;
+    }} else if (line.startsWith('### ')) {{
+      const z5IdAttr = line.includes('Z-5') ? ' id="z5-peer-review-card"' : '';
+      html += `<h3${{z5IdAttr}}>${{formatInlineMd(line.slice(4), seenFnRefs)}}</h3>`;
+    }} else if (line.startsWith('#### ')) {{
+      html += `<h4>${{formatInlineMd(line.slice(5), seenFnRefs)}}</h4>`;
+    }} else if (trimmed === '---') {{
       html += '<hr style="border:none; border-top:1px solid var(--border); margin:18px 0;">';
-    }} else if (line.trim().startsWith('- ')) {{
-      html += `<ul><li>${{formatInlineMd(line.trim().slice(2))}}</li></ul>`;
-    }} else if (/^\\d+\\.\\s/.test(line.trim())) {{
-      html += `<p style="margin-left:10px;">${{formatInlineMd(line.trim())}}</p>`;
-    }} else if (line.trim().startsWith('[^')) {{
-      html += `<p style="font-size:12.5px; color:var(--text-secondary); margin-bottom:6px;">${{formatInlineMd(line.trim())}}</p>`;
-    }} else if (line.trim() !== '') {{
-      html += `<p>${{formatInlineMd(line)}}</p>`;
+    }} else if (trimmed.startsWith('- [x] ') || trimmed.startsWith('- [X] ')) {{
+      html += `<ul><li><span style="color:var(--accent-emerald); font-weight:700;">☑</span> ${{formatInlineMd(trimmed.slice(6), seenFnRefs)}}</li></ul>`;
+    }} else if (trimmed.startsWith('- ')) {{
+      html += `<ul><li>${{formatInlineMd(trimmed.slice(2), seenFnRefs)}}</li></ul>`;
+    }} else if (/^\\d+\\.\\s/.test(trimmed)) {{
+      html += `<p style="margin-left:10px;">${{formatInlineMd(trimmed, seenFnRefs)}}</p>`;
+    }} else if (trimmed.startsWith('[^')) {{
+      const fnMatch = trimmed.match(/^\\[\\^(\\d+)\\]:\\s*(.*)$/);
+      if (fnMatch) {{
+        const fnNum = fnMatch[1];
+        const fnBody = formatInlineMd(fnMatch[2], seenFnRefs);
+        const backTitle = isEn ? `Return to citation [${{fnNum}}] in text` : `Metindeki [${{fnNum}}] atfına dön`;
+        html += `<p class="fn-item" id="fn-${{fnNum}}"><a href="#fnref-${{fnNum}}" class="fn-num-link" title="${{backTitle}}"><strong>[${{fnNum}}]</strong></a> ${{fnBody}} <a href="#fnref-${{fnNum}}" class="fn-backref" title="${{backTitle}}">↩</a></p>`;
+      }} else {{
+        html += `<p class="fn-item">${{formatInlineMd(trimmed, seenFnRefs)}}</p>`;
+      }}
+    }} else if (trimmed !== '') {{
+      html += `<p>${{formatInlineMd(line, seenFnRefs)}}</p>`;
     }}
   }}
   if (inTable) html += '</tbody></table>';
   return html;
 }}
+
+// Smooth bidirectional scroll handler for in-page footnote links (#fn-X <-> #fnref-X)
+document.addEventListener('click', (e) => {{
+  const link = e.target.closest('a[href^="#fn"]');
+  if (!link) return;
+  const targetId = link.getAttribute('href').slice(1);
+  const targetEl = document.getElementById(targetId);
+  if (targetEl) {{
+    e.preventDefault();
+    targetEl.scrollIntoView({{ behavior: 'smooth', block: 'center' }});
+    targetEl.classList.add('fn-highlight');
+    setTimeout(() => targetEl.classList.remove('fn-highlight'), 2200);
+  }}
+}});
 
 function setTab(tabName, btn) {{
   currentTab = tabName;

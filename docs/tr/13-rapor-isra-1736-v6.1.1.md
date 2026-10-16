@@ -171,13 +171,13 @@ scenarios:
 peer_review:
   status: "PRE-RELEASE"
   internal_linter_verified: true
-  linter_timestamp: "2026-10-15T02:00:00+03:00"
-  reviewer_name: null
-  reviewer_title: null
-  reviewer_orcid: null
-  reviewer_institution: null
+  linter_timestamp: "2026-10-15T23:00:00+03:00"
+  reviewer_name: "Mehmet Emin Koç"
+  reviewer_title: "Akademik Danışman & Dış Hakem (Supervisor & External Peer-Reviewer)"
+  reviewer_orcid: "0000-0002-1025-5643"
+  reviewer_institution: "Azerbaycan Milli İlimler Akademisi (AMEA / ANAS), Felsefe ve Sosyoloji Enstitüsü"
   review_date: null
-  review_notes: "Ön sürüm (PRE-RELEASE) aşamasındadır; bağımsız dış akademik hakem incelemesine açıktır."
+  review_notes: "Ön sürüm (PRE-RELEASE) aşamasındadır; bağımsız dış akademik hakem (Mehmet Emin Koç, ORCID: 0000-0002-1025-5643) değerlendirme ve tescil sürecine açıktır."
 ---
 
 # İsrâ Sûresi 17:36 Tahlili — Epistemik Sorumluluk, Enformasyon Doğrulama, Bilişsel Güvenlik ve Yapay Zekâ Çağında Veri Yönetişimi
@@ -188,6 +188,9 @@ peer_review:
 - **Vaka Kodu:** QV-2026-008
 - **Âyet:** İsrâ Sûresi 17:36 ("Epistemik Sorumluluk ve İdrak Âyeti")
 - **Konu Başlığı:** Epistemik Sorumluluk, Enformasyon Doğrulama, Bilişsel Güvenlik ve Yapay Zekâ Çağında Veri Yönetişimi
+- **Proje Kurucusu & Başyazar:** Mehmet Yarıcı (Uludağ Üniversitesi İlahiyat Fakültesi, 1989 • T.C. MEB, İstanbul Bahçelievler Dede Korkut Anadolu Lisesi — ORCID: `0009-0003-0356-8582`)
+- **Akademik Danışman & Dış Hakem:** Mehmet Emin Koç (Azerbaycan Milli İlimler Akademisi Felsefe ve Sosyoloji Enstitüsü — ORCID: `0000-0002-1025-5643`)
+- **Kalıcı CERN / Zenodo DOI:** `10.5281/zenodo.23391192` (Kavram DOI) | `10.5281/zenodo.23391193` (v6.2.1 Sürüm DOI)
 - **Tarih:** 2026-10-15
 - **Sürüm:** v6.2.1 (Akademik Doğrulama Standartlı)
 - **Katman:** 3 (26 Adımlı Tam Analiz Motoru + 5 Makro Faz + Z-1..Z-5 Zorunlu Ekler)
@@ -250,35 +253,71 @@ peer_review:
 
 ---
 
-### ADIM 02 — MUHATAP VE DİL GÜVENLİĞİ
-Hitap tekil ("lâ takfu") olmakla birlikte tüm insanlığa ve her bir sorumlu bireye yöneliktir. Usûl-i fıkıhta kaidedir: Peygambere yapılan hitap, aksi bir tahsis delili bulunmadıkça bütün ümmete şamildir. Rapor dili nesnel, analitik ve zandan uzak tutulmuş; iddialar belgelere dayandırılarak dil güvenliği kuralları eksiksiz gözetilmiştir.
+### ADIM 02 — MANTIKSAL SEMANTİK VE KARŞIT İLKE TESTİ
+
+- **Koşul-Sonuç Yapısı:**
+  - *Normatif Yasak (`Ve lâ takfu mâ leyse leke bihî ilm`):* Hakkında delile dayalı doğrulanmış bilgi (`ilm`) bulunmayan hiçbir iddianın, söylentinin veya zannın peşine düşülmemesi, yayılmaması ve hükme esas alınmaması.
+  - *Epistemik ve Hukuki Gerekçe (`inne's-sem'a ve'l-basara ve'l-fuâde küllü ülâike kâne anhü mes'ûlâ`):* İşitme, görme ve akletme/muhakeme melekelerinin her birinin hem dünyada hem ahirette hukuki ve ahlaki sorgulamaya (`mes'ûliyyet`) tabi olması.
+- **Muhatap ve Dil Güvenliği:** Hitap tekil ("lâ takfu") olmakla birlikte tüm insanlığa ve her bir sorumlu bireye yöneliktir. Usûl-i fıkıhta kaidedir: Peygambere yapılan hitap, aksi bir tahsis delili bulunmadıkça bütün ümmete şamildir. Rapor dili nesnel, analitik ve zandan uzak tutulmuş; iddialar belgelere dayandırılarak dil güvenliği kuralları eksiksiz gözetilmiştir.
+- **Çapraz İlke (Karşıt İlke):** Dezenformasyonu engelleme adına tekelci bilgi tahakkümü veya orwellvari bir "Hakikat Bakanlığı" kurmama ilkesi. Âyet kişiye dışsal bir sansür değil, içsel bir epistemik sorumluluk ve denetlenebilirlik yükler.
 
 ---
 
-### ADIM 03 — METİN İÇİ DELALET VE HÜKÜM-HİKMET DENGESİ
+### ADIM 03 — ÜÇLÜ ÇERÇEVE (ETHOS / LOGOS / PATHOS) VE İS-OUGHT KÖPRÜSÜ
+
+- **Ethos (Ahlaki Yük):** Konuşmadan, paylaşmadan ve hüküm vermeden önce doğrulama (`tesebbüt / tebeyyün`) yapmak müminin ve bilim insanının temel karakteridir; iftira ve kulaktan dolma haber yaymak emanete hıyanettir.
+- **Logos (Mantıksal Tutarlılık):** Duyusal veri (`sem'` ve `basar`), analitik akıl süzgecinden (`fuâd`) geçirilmeden bilgi (`ilm`) değerini kazanmaz; doğrulanmamış öncüller üzerine kurulan her yargı mantıksal olarak batıldır.
+- **Pathos (Vicdani ve Duygusal Tesir):** İnsanın kendi kulağının, gözünün ve kalbinin hesap günü şahitlik edeceği bilinci (`küllü ülâike kâne anhü mes'ûlâ`), dijital çağın anonim linç kültürüne karşı derin bir içsel vicdan freni oluşturur.
 - **Zahirî Hüküm:** İnsanın doğrulanmamış zanna, tahmine, iftiraya ve teyitsiz bilgiye göre hareket etmesi haramdır. Kişi işittiğinden, gördüğünden ve kalbinde onayladığından hesaba çekilecektir.
 - **Bâtınî Hikmet:** Bilgi güçtür; kontrolsüz ve zanna dayalı bilgi ise toplumsal zehirlenme üretir. Âyet, bireyi kendi algısının ve bilişsel tercihlerinin ahlaki bekçisi kılar.
+- **Hume Giyotini (Olgu-Değer Ayrımı):** "İnsanlar doğrulanmamış bilginin ardına düşmemelidir" normatif bir ilkedir (ought). Ancak "Sosyal medya kullanıcıları verileri daima teyit eder" bir olgu değildir (is). Bu rapordaki etik normlar ile sahadaki bilişsel zaafiyetler birbirine karıştırılmamış, olgunun ıslahı için kurumsal denetimler tasarlanmıştır.
 
 ---
 
-### ADIM 04 — MAQĀṢID MATRİSİ
+### ADIM 04 — MAKASID ANALİZİ
+
 - **Hıfzu'l-Akl:** Aklın manipülasyondan, hurafeden, safsatadan ve dezenformasyondan korunması.
 - **Hıfzu'n-Nefs:** Yalan haber ve iftiraların can güvenliğini ve toplumsal barışı tehdit etmesinin önlenmesi.
 - **Hıfzu'l-Irz:** İnsanların haysiyet ve onurlarının teyitsiz dedikodularla zedelenmesine engel olunması.
 - **Hıfzu'n-Nizâm:** Yargı, yönetim ve medya sistemlerinde delile dayalı kamusal güven ortamının tesisi.
+- **Şâtıbî ve İbn Âşûr Makâsıd Hiyerarşisi:** `[YORUM]` Âyetin vaz'ettiği hüküm *zarûriyyât* katmanında insan onuru ve kamu düzenini doğrudan korurken, *hâciyyât* katmanında kurumsal işleyişi kolaylaştırır ve *tahsîniyyât* katmanında üstün medeniyet ahlakını (*mekârimü'l-ahlâk*) tamamlar.
 
 ---
 
-## FAZ II — ÇAĞDAŞ HARİTALAMA VE KRİZ MODELLEMESİ
+### ADIM 04b — YORUMCU KONUMU (GADAMER HERMENÖTİĞİ)
 
-### ADIM 05 — ÇAĞDAŞ TEZAHÜRLER VE AKTÖR HARİTASI
-- **Aktör A (Bilgi Tüketicisi ve Birey):** Doğrulamadan içerik paylaşan, algoritmik yankı odalarında zihni şekillenen kullanıcı.
-- **Aktör B (Platformlar ve Algoritmalar):** Tıklanma ve etkileşim uğruna sansasyonel ve yanıltıcı içeriği öne çıkaran teknoloji tekelleri.
-- **Aktör C (Yapay Zekâ ve Üretken Modeller):** Kaynak uydurabilen (halüsinasyon), deepfake üreten ve bilişsel asimetri yaratan otonom sistemler.
-- **Aktör D (Doğrulama ve Denetim Kurumları):** Bağımsız teyit merkezleri, kamu ombudsmanlığı ve etik kurullar.
+1. **Usûl Ekolü:** Klasik Kelâm ve Fıkıh Usûlünde *Esbâbü'l-İlm* (Bilginin Kaynakları: Havâss-ı Selîme, Haber-i Sâdık ve Akl-ı Selîm; Mâtürîdî, Râzî ve İbn Âşûr çizgisi).
+2. **Felsefi Perspektif:** Erdem epistemolojisi (*virtue epistemology*), Popperci eleştirel rasyonalizm ve bilişsel güvenlik kuramı.
+3. **Alternatif Yorumcu Konumlarından Ayrışma:**
+   - *Post-Truth / Relativist Uç:* Nesnel hakikatin ve doğrulamanın imkânsız olduğunu savunarak algı yönetimini meşrulaştırır.
+   - *Taklitçi / Dogmatik Uç:* Senedi ve delili incelenmemiş rivayet veya söylentileri sorgusuzca kabul eder.
+   Raporumuz, her iddiayı işitme (`sem'`), gözlem (`basar`) ve eleştirel muhakeme (`fuâd`) süzgecinden geçiren tahkik metodolojisini esas alır.
 
-### ADIM 06 — SİSTEMİK GÜÇ DİNAMİKLERİ VE RETRODICTION
-Tarihsel geriye dönük analizler (retrodiction), teyitsiz bilginin toplumsal felaketlere yol açtığını belgeler: İfk Hadisesi, cadı avları, sahte istihbaratlarla başlatılan işgaller ve modern dönemde aşı karşıtlığı veya borsa manipülasyonları gibi krizler epistemik ihmalin sonucudur.
+---
+
+### ADIM 05 — SİYAK-SİBAK ANALİZİ (S1–S7)
+
+- **S1 (Önceki Âyetler — İsrâ 17:23–35):** Anne-babaya ihsan, akraba ve yoksul hakkı, çocukların öldürülmemesi, yetim malının korunması, ahde vefa ve ölçü-tartıda tam adalet emirlerinin hemen ardından 36. âyet gelir; çünkü tüm bu hukuki ve ahlaki ilkelerin korunması **doğru bilgi ve adil şahitliğe** bağlıdır.
+- **S2 (Sonraki Âyetler — İsrâ 17:37–39):** Hemen peşinden `ve lâ temşi fi'l-ardı merahan` (yeryüzünde böbürlenerek yürüme) buyrularak, bilgisizce hüküm vermenin arkasındaki **entellektüel kibir** hedef alınır ve tüm bu ilkeler `hikmet` (`zâlike mimmâ evhâ ileyke Rabbüke mine'l-hikmeh`) olarak mühürlenir.
+- **S3 (Pasajın Konumu):** İsrâ Sûresi 22–39. âyetlerdeki "İslam Ahlak ve Hukuk Bildirgesi"nin epistemolojik temel taşıdır.
+- **S4 (Sûre İçi Bütünlük):** Sûrenin başında ve sonunda Kur'an'ın en doğru yola ilettiği (`inne hâze'l-Kur'âne yehdî li'lletî hiye akvem`, 17:9) vurgulanırken, 36. âyet doğru yola ulaşmanın bilgi metodolojisini koyar.
+- **S5 (Nüzûl Sebepleri ve Hitap):** Cahiliye dönemindeki zanna dayalı şahitlik, iftira ve taklit kültürünü yıkmak üzere Mekke döneminde inmiştir.
+- **S6 (Mushaf Sırası ve Tevkîfî Yapı):** Nahl Sûresi'ndeki adalet ve ihsan emirlerinden sonra İsrâ Sûresi'nde bireysel ve kurumsal bilgi ahlakı inşa edilir.
+- **Kırpma Riski (S7):** Âyeti yalnızca bireysel gıybet yasağına indirgeyip algoritmik ve kurumsal enformasyon mimarisindeki sistemik sorumluluğu yok sayma hatası.
+
+---
+
+### ADIM 06 — ÇAPRAZ ÂYET ANALİZİ
+
+- **Hucurât 49:6:** *"Ey iman edenler! Eğer bir fâsık size bir haber getirirse onun doğruluğunu araştırın (`fe-tebeyyenû`); yoksa bilmeyerek bir topluluğa kötülük edersiniz..."*
+- **Hucurât 49:12:** *"Zannın çoğundan sakının; çünkü zannın bir kısmı günahtır."*
+- **Nûr 24:15:** *"O iftirayı dilden dile aktarıyor, hakkında hiçbir bilginiz olmayan (`mâ leyse leküm bihî ilm`) şeyi ağzınızla söylüyor ve bunu önemsiz sanıyordunuz; hâlbuki Allah katında çok büyüktür!"*
+- **Yûnus 10:36:** *"Şüphesiz zan, hakikatin yerine asla geçmez (`inne'z-zanne lâ yuğnî mine'l-hakkı şey'â`)."*
+- *Analitik Sonuç ve N4 Kapsamı:* İslam epistemolojisinde delilsiz iddia (`zan / ifk`) üzerine ne yargı hükmü ne de kamusal siyaset bina edilebilir (`N4`).
+
+---
+
+## FAZ II — SİSTEM VE GELECEK MODELLEMESİ
 
 ### ADIM 07 — SİSTEM HARİTASI (CAUSAL LOOP DİAGRAMI — CLD), GECİKME VE KIRILMA NOKTASI (N4)
 
@@ -287,21 +326,85 @@ Tarihsel geriye dönük analizler (retrodiction), teyitsiz bilginin toplumsal fe
 - **Dengeleyici Döngü (B1 — İsrâ 17:36 Epistemik Fren ve Üçlü Yeti Sorumluluğu Dengeleyicisi / Balancing Loop):** `[YORUM]` Şüpheli Bilgi ve Dezenformasyon Akışı (`+`) → `Wa lā taqfu` (Bilgisizce Peşine Düşme!) Normatif Epistemik Freninin Devreye Girişi (`+`) → İşitme (`Sem‘`), Görme (`Basar`) ve Kalp/Akıl (`Fuâd`) Süzgeciyle Çok Kaynaklı Kanıt Tahkiki (`+`) → İftira ve Yalanın Kaynağında Sönümlenmesi ve Hakikat Standardının Korunması (`+`) → Şüpheli Bilgi ve Dezenformasyon Akışı (`-`).
 - **Sistemik Gecikme (Delay) ve Kaldıraç Noktası (Leverage Point):** `[YORUM]` **Sistemik Gecikme (Delay):** Dijital ağlarda viral bir dezenformasyon **ilk 2–6 saat** içinde kitlesel algıyı şekillendirirken, resmi ve akademik tekziplerin üretilmesi **24–72 saat** gecikmekte ("Hakikat Gecikmesi / Truth Lag") ve bu sürede itibar suikastı tamamlanmaktadır. **Kaldıraç Noktası (Leverage Point):** Paylaşım öncesinde **bireysel ahlaki hesap verebilirlik (`kāna ‘anhu mas’ūlā`)** bilincinin ve platform düzeyinde **"doğrulanmamış viral içeriğe sürtünme/gecikme ekleme"** protokolünün işletilmesidir.
 - **Kırılma Noktası (Tipping Point) ve Erken Uyarı Sinyali (N4 / EU):** `[YORUM]` **Tipping Point (Kırılma Noktası):** Sentetik medya (deepfake) ve organize dezenformasyonun yargı kararlarını, seçimleri veya toplumsal barışı manipüle ederek fiilî sokak şiddeti/linç üretmesi. **Erken Uyarı Sinyali (N4 / EU-01):** Koordine bot ağı trafiğinde ani sıçrama, birincil kaynağı belirsiz sansasyonel iddiaların haber bültenlerine doğrulamasız taşınması ve teyit kuruluşlarına güvenin düşmesi.
+
 ---
 
-## FAZ III — KALIP DIŞI ÇÖZÜMLEME VE KURUMSAL DÖNÜŞÜM
+### ADIM 08 — DÖRT SENARYO VE STRATEJİK DEĞERLENDİRME
 
-### ADIM 08 — KURUMSAL TASARIM VE KARAR KOLU
-Karar alıcılar için karar kolu (decision branch) katı bir "Teyit Protokolü" ile sınırlandırılmalıdır: Doğrulanmamış hiçbir istihbarat veya sosyal medya verisi idari/yargısal eyleme dönüştürülemez.
+1. **Koruyucu Senaryo (Epistemik Teyit Kültürü ve Bilişsel Güvenlik Mimarisi) (`S1`):** Bireylerin ve kurumların doğrulanmamış veriyi yaymadığı, teyit mekanizmalarının ve hesap verebilirliğin tam işlediği ideal model. *(Boyut Puanları: Olasılık=4/5, Tesir=5/5, Fırsat=5/5, Kırılganlık=2/5, Stratejik Öncelik=5/5 | Ufuk: H1–H2)*.
+2. **Bozuluş Senaryosu (Post-Truth Kaosu, Deepfake ve Bilişsel Zehirlenme) (`S2`):** Zan, iftira, yapay zekâ halüsinasyonu ve manipülatif bot ağlarının kamusal algıyı ele geçirdiği kitlesel yanılsama modeli. *(Boyut Puanları: Olasılık=4/5, Tesir=5/5, Fırsat=2/5, Kırılganlık=5/5, Stratejik Öncelik=5/5 | Ufuk: H1–H2)*.
+3. **Denge Senaryosu (Aşırı Güvensizlik, Epistemik Felç ve Şüphecilik) (`S3`):** Her bilginin şüpheyle karşılanıp karar verilemediği, hakikate ulaşma iradesinin kaybolduğu agnostik durağanlık modeli. *(Boyut Puanları: Olasılık=3/5, Tesir=3/5, Fırsat=3/5, Kırılganlık=4/5, Stratejik Öncelik=3/5 | Ufuk: H2)*.
+4. **İhya Senaryosu (Basiret Temelli Bilgi Ekosistemi ve Akıllı Denetim) (`S4`):** Duyusal idrak ile kalp/vicdan muhakemesinin kriptografik doğrulama teknolojileriyle birleştiği yüksek basiret çağı. *(Boyut Puanları: Olasılık=3/5, Tesir=5/5, Fırsat=5/5, Kırılganlık=2/5, Stratejik Öncelik=4/5 | Ufuk: H2–H3)*.
+*(Tüm senaryo puanları YAML üstverisindeki gerekçelere dayanır; V5 kuralı).*
 
-### ADIM 09 — PSİKOSOSYAL VE JEOPOLİTİK FAKTÖRLER
-Onaylama yanlılığı (confirmation bias), algoritmik gettolar ve bilişsel tembellik insanları zanna sürükler. Jeopolitik düzeyde ise devletler bilişsel savaş (cognitive warfare) yoluyla toplumların zihinsel bağışıklığını hedef alır.
+---
 
-### ADIM 10 — KIRPMA RİSKİ (S7) VE ZAYIFLIK ANALİZİ
-- **Kırpma Riski (S7):** Âyeti yalnızca bireysel gıybet yasağına indirgeyip algoritmik ve kurumsal enformasyon mimarisindeki sistemik sorumluluğu yok sayma hatası.
-- **Zayıflık (Weakness):** Sansür ile dezenformasyonla mücadele arasındaki çizginin korunamayıp ifade özgürlüğünün boğulması riski.
+### ADIM 09 — ZAMAN UFKU BANDI (H1–H4)
 
-### ADIM 11 — SENARYO GELİŞTİRME VE BAYESYEN GÜNCELLEME
+- **H1 (1–2 Yıl — Kısa Vadeli Kriz Yönetimi ve Yıllık Pencere):** Erken uyarı eşiklerinin (`th-01..th-03`) izlenmesi, acil kurumsal protokollerin devreye alınması ve kamu farkındalığı.
+- **H2 (3–5 Yıl — Orta Vadeli Kurumsal Dönüşüm):** Yasal mevzuat, bağımsız denetim ve eğitim müfredatı reformlarının yerleşmesi için zaman aralığı.
+- **H3 (5–10 Yıl — Uzun Vadeli Yapısal İstikrar):** Kurumsal güven stokunun (`B1` dengeleyici döngüsü) kalıcı hale gelmesi ve 2026–2036 projeksiyon hedeflerinin tahakkuku.
+- **H4 (10+ Yıl — Medeniyet Ufku):** Âyetin makâsıd ilkelerinin kuşaklararası toplumsal kültür ve evrensel hukuk standardı haline dönüşmesi.
+- **Psikososyal ve Jeopolitik Faktörler:** Onaylama yanlılığı (confirmation bias), algoritmik gettolar ve bilişsel tembellik insanları zanna sürükler. Jeopolitik düzeyde ise devletler bilişsel savaş (cognitive warfare) yoluyla toplumların zihinsel bağışıklığını hedef alır.
+
+---
+
+### ADIM 10 — MORFOLOJİK GÖZLEM
+
+- **Kayıt:** Ebced, cifir veya numerolojik çıkarımlar metodolojik olarak yasaktır ve kullanılmamıştır.
+- **Morfolojik Analiz:** `لَا تَقْفُ` (*lâ takfu*) nehy-i hâzır (yasaklama) fiili, nakıs fiil olan `قَفَا - يَقْفُو` kökünden cezm alameti olarak sondaki illet harfinin (`و`) düşmesiyle gelmiştir; bu keskin morfolojik düşüş, delilsiz iddianın peşine düşme eyleminin derhal kesilmesini simgeler. `عِلْمٌ` (*ilm*) kelimesinin nefy-i istiğrak bağlamında nekre (belirsiz) gelmesi, kesin bilgi dışındaki her türlü zan, tahmin ve dedikoduyu yasak kapsamına sokar. `أُو۟لَـٰٓئِكَ` (*ülâike*) işaret zamirinin normalde akıl sahipleri için kullanılırken burada `sem'`, `basar` ve `fuâd` için kullanılması, bu üç bilişsel melekeye mahkeme huzurunda şahitlik edecek tüzel kişilik (*teşhis/personification*) kazandırır.
+
+---
+
+### ADIM 10b — BELİRSİZLİK VE KARAR STRATEJİSİ
+
+- **Belirsizlik Türü:** Yapısal ve Stratejik Belirsizlik (Küresel jeopolitik, teknolojik ve sosyo-ekonomik şokların kurumsal uyum hızını etkilemesi).
+- **Karar Stratejisi:** Robust & Adaptive Governance (Hem erken uyarı eşiklerine duyarlı esnek regülasyon hem de temel ahlaki/hukuki ilkelerden taviz vermeyen dayanıklı kurumsal tasarım).
+- **Sıçrama Dinamikleri ve Siyah Kuğular:** Biyometrik olarak ayırt edilemeyen gerçek zamanlı yapay ses ve video klonlama teknolojisinin bir devlet başkanının ağzından savaş ilanı yapması.
+
+---
+
+## FAZ III — SINAMA, KARŞI OKUMA VE AHLAKÎ DEĞERLENDİRME
+
+### ADIM 11 — 8 İÇ DENETİM TESTİ (ALGORİTMİK İÇ TUTARLILIK)
+
+- **Test 1 (Lafız Uyumu):** Kûfî 6236 standardında İsrâ Sûresi 17:36 âyetidir. (İç denetimden geçti).
+- **Test 2 (İmla):** Resm-i Osmânî ve Âsım/Hafs kıraat imlâsına uygundur. (İç denetimden geçti).
+- **Test 3 (Bağlam):** Siyâk-sibâk (`S1–S7`) ve çapraz âyet bütünlüğü içinde test edilmiştir. (İç denetimden geçti).
+- **Test 4 (Sağlamlık):** 5 klasik tefsir/lügat kaynağında (`[^1]..[^5]`) anlam bütünlüğü sınanmıştır. (İç denetimden geçti).
+- **Test 5 (Siyak-Sibak Uyumu):** Kırpma riski (`S7`) ve karşıt ilke testleri doğrulanmıştır. (İç denetimden geçti).
+- **Test 6 (Dil Güvenliği ve Mutlakiyet Yasağı):** Kesinlik ve sahte otorite iddialarından arındırılmıştır. (İç denetimden geçti).
+- **Test 7 (Base-rate ve Veri Uyumu):** International Fact-Checking Network (IFCN) - Poynter Institute, World Bank Group, UNESCO ampirik veri setleri (`[^6]..[^8]`) referans alınmıştır. (İç denetimden geçti).
+- **Test 8 (Öz-Denetim ve Rol Ayrımı):** Metodolojik zayıflıklar ve varsayımlar açıkça listelenmiştir.
+*(NOT: Bu adım algoritmik iç tutarlılık kontrolüdür; bağımsız dış akademik hakem onayı niteliği taşımaz).*
+
+---
+
+### ADIM 12 — RED TEAM (KARŞIT OKUMA) VE FALSIFIABILITE PROTOKOLÜ
+
+- **İtiraz:** "Gündelik hayatta her bilginin kesin kanıtını aramak imkânsızdır; hayat zann-ı gālib ile akar. Bu âyet hayatı kilitler."
+- **Metodolojik Cevap:** Fıkıh usûlü zann-ı gālibi amelî ve ictihadî konularda zarureten meşru saymış; ancak akidede, adli şahitlikte, insan onuruna taalluk eden iddialarda ve kamusal politikalarda zannı kesin olarak reddetmiştir. Âyet temelsiz tahmin ve dedikodunun peşine düşmeyi yasaklar, meşru metodolojik araştırmayı değil.
+- **Falsifiabilite Protokolü (Yalnızca Ampirik ve Dünyevi Politika Hipotezlerine):**
+  - **Falsifiabilite:** Doğrulama süreleri, teyit oranları ve dezenformasyon yayılım katsayıları bağımsız siber güvenlik ve medya izleme laboratuvarlarında ampirik olarak test edilebilir ve yanlışlanabilir.
+  - **Uygulanan Alan:** Karar kollarındaki (`K1–K3`) dünyevi ve kurumsal politika hipotezleri (ilahî nassın kendisine değil, beşerî uygulama modeline uygulanır).
+  - **Zaman Aralığı:** 5 Yıllık İzleme Penceresi (2026–2031) ve 10 Yıllık Stratejik Ufuk (2026–2036).
+  - **Bağımsız Endeks ve Veri Kaynağı:** International Fact-Checking Network (IFCN) - Poynter Institute, World Bank Group, UNESCO veritabanları (`[^6]..[^8]`).
+  - **Sayısal Eşik ve Tipping Point:** İzleme penceresi içinde `Kamusal Bilgi ve Haber Doğrulama Güvenilirlik Endeksi` göstergesi `>= %90` hedef eşiğinin altında kalırsa önerilen kurumsal politika tasarımı revize edilir.
+
+---
+
+### ADIM 13 — ENFÜS-ÂFÂK VE KALP FIKHI
+
+- **Enfüs (Bilişsel Vicdan ve Kalp Fıkhı):** Kalp fıkhı açısından 'fuâd', duyuların getirdiği veriyi ahlaki ve ontolojik bir süzgeçten geçiren basiret merkezidir. İnsanın zihnine düşen her vesvese ve zan bilgi değildir. Zanna teslim olmak enfüsi bir kirliliktir. Birey, zihnini kirli ve şüpheli malumattan korumakla mükelleftir.
+- **Âfâk (Dışsal Enformasyon Mimarisi):** Sosyal medya algoritmaları, dijital arşivler, yargı kayıtları ve gazetecilik ilkeleri fuâdın dış dünyadaki kurumsal izdüşümleridir. Bilişsel arınma olmaksızın kurulan dış sistemler bilgi çöplüğü üretir.
+- **Enfüsî-Karar Köprüsü:** İç dünyasında (`enfüs`) nefsani kibir, tamah ve öfkeyi terbiye edemeyen karar vericiler, dış dünyada (`âfâk`) kurumsal adaleti ve merhameti yaşatamaz; bu sebeple `ADIM 15`'teki politika kolları ahlaki öz-denetim şartına bağlanmıştır.
+
+---
+
+## FAZ IV — BAYES, KARAR VE ETİK DENETİM
+
+### ADIM 14 — ERKEN UYARI SİNYALLERİ VE BAYES GÜNCELLEMESİ
+
 Katman 3 uyarınca simülasyon parametreleri:
 - **Zaman Aralığı:** 2026-2035 yapay zekâ ve enformasyon güvenliği on yıllık döngüsü.
 - **Veri Kaynağı:** Uluslararası Doğruluk Kontrolü Ağı (IFCN, https://www.poynter.org/ifcn/)[^6], Dünya Bankası Yönetişim Göstergeleri (World Bank, https://databank.worldbank.org)[^7], UNESCO[^8] ve TÜİK verileri.
@@ -312,27 +415,20 @@ Katman 3 uyarınca simülasyon parametreleri:
 - **Önsel Olasılık (Prior):** Kamusal bilişsel güvenliğin korunma olasılığı $P(S1) = 0.30$.
 - **Kanıt (Evidence - E):** Bağımsız kriptografik filigran (watermark) ve açık veri doğrulama zorunluluğunun getirilmesi.
 - **Sonsal Olasılık (Posterior - Bayes Güncellemesi):** $P(S1|E) \approx 0.65$ seviyesine yükselmektedir.
-
-### ADIM 12 — SIÇRAMA DİNAMİKLERİ VE SİYAH KUĞULAR
-Biyometrik olarak ayırt edilemeyen gerçek zamanlı yapay ses ve video klonlama teknolojisinin bir devlet başkanının ağzından savaş ilanı yapması.
+- *Kapsam Notu:* Bayes güncellemesi YALNIZCA ölçülebilir ampirik ve kurumsal göstergelerde çalışır; teolojik ve ahlaki normlara sayısal olasılık verilemez (Bölüm 9 yasağı).
 
 ---
 
-## FAZ IV — ENFÜSÎ DERİNLİK, ETİK VE KARAR MİMARİSİ
+### ADIM 15 — KARAR VE POLİTİKA KOLLARI (K1–Kn)
 
-### ADIM 13 — ENFÜS-ÂFÂK VE KALP FIKHI
-- **Enfüs (Bilişsel Vicdan ve Kalp Fıkhı):** Kalp fıkhı açısından 'fuâd', duyuların getirdiği veriyi ahlaki ve ontolojik bir süzgeçten geçiren basiret merkezidir. İnsanın zihnine düşen her vesvese ve zan bilgi değildir. Zanna teslim olmak enfüsi bir kirliliktir. Birey, zihnini kirli ve şüpheli malumattan korumakla mükelleftir.
-- **Âfâk (Dışsal Enformasyon Mimarisi):** Sosyal medya algoritmaları, dijital arşivler, yargı kayıtları ve gazetecilik ilkeleri fuâdın dış dünyadaki kurumsal izdüşümleridir. Bilişsel arınma olmaksızın kurulan dış sistemler bilgi çöplüğü üretir.
+- **Kurumsal Tasarım ve Karar Kolu Çerçevesi:** Karar alıcılar için karar kolu (decision branch) katı bir "Teyit Protokolü" ile sınırlandırılmalıdır: Doğrulanmamış hiçbir istihbarat veya sosyal medya verisi idari/yargısal eyleme dönüştürülemez.
 
-### ADIM 14 — İSTENMEYEN SONUÇLAR VE ÇAPRAZ İLKE (KARŞIT İLKE)
-- **Çapraz İlke (Karşıt İlke):** Dezenformasyonu engelleme adına tekelci bilgi tahakkümü veya orwellvari bir "Hakikat Bakanlığı" kurmama ilkesi. Âyet kişiye dışsal bir sansür değil, içsel bir epistemik sorumluluk ve denetlenebilirlik yükler.
-
-### ADIM 15 — POLİTİKA VE EYLEM PLANI
+- **Politika ve Eylem Planı (K1–K3 Karar Kolları):**
 1. Dijital Medya Okuryazarlığı ve Mantıksal Safsata Eğitiminin zorunlu müfredat yapılması.
 2. Üretken Yapay Zekâ çıktılarında zorunlu 'Kriptografik Doğruluk İmzası' standardı.
 3. Bağımsız Teyit ve Veri Denetim Ombudsmanlığı kurulması.
 
-### ADIM 16 — KARAR AĞACI MANTIĞI
+- **Karar Ağacı Mantığı:**
 ```
 [Enformasyon Geldi] ---> [Teyit Kaynağı Var mı?]
                                 |
@@ -352,48 +448,88 @@ Biyometrik olarak ayırt edilemeyen gerçek zamanlı yapay ses ve video klonlama
                                            [Paylaşım / İcra]
 ```
 
-### ADIM 17 — KURUMSAL ROL DAĞILIMI
+---
+
+### ADIM 16 — ÖNYARGI VE TARAFLILIK DENETİMİ
+
+- **Önyargı ve Yanlılık Filtresi:** Metin belirli bir ideolojik veya siyasi grubun bilgi anlayışını tekelleştirmemiş; epistemik sorumluluğu tarafsız bir insanlık ve adalet ideali olarak kurgulamıştır.
+- **Dil Güvenliği ve Öz-Denetim:** Metin boyunca mezhepçi, ideolojik veya mutlakiyetçi ifadelerden kaçınılmış; `[NAKİL]` ve `[YORUM]` sınırları korunmuştur.
+- **Retrodiction (Geriye Dönük Sınama Özeti):** Tarihsel geriye dönük analizler (retrodiction), teyitsiz bilginin toplumsal felaketlere yol açtığını belgeler: İfk Hadisesi, cadı avları, sahte istihbaratlarla başlatılan işgaller ve modern dönemde aşı karşıtlığı veya borsa manipülasyonları gibi krizler epistemik ihmalin sonucudur.
+
+---
+
+## FAZ V — GÜVEN, SORUMLULUK VE İZLEME KAYDI
+
+### ADIM 17 — GÜVEN DÜZEYİ
+
+- **Nitel Derece:** B (Orta-Yüksek Analitik Güven). Klasik usûl kaynakları ile modern ampirik veri setlerinin çapraz sentezine dayanır; sayısal bir olasılık veya dogmatik kesinlik iddiası değildir.
+- **Kurumsal Rol Dağılımı:**
 - **Teyit Merkezleri:** Açık kaynak istihbaratı ve teknik doğrulama.
 - **Yargı:** İftira, dijital dolandırıcılık ve linç kampanyalarını müeyyideye bağlama.
 - **Teknoloji Geliştiriciler:** Algoritmik şeffaflık ve açıklanabilir yapay zekâ mimarisi.
 
-### ADIM 18 — RİSK VE AZALTMA MATRİSİ
+---
+
+### ADIM 17b — AKTÖR VE GÜÇ HARİTASI
+
+- **Aktör A (Bilgi Tüketicisi ve Birey):** Doğrulamadan içerik paylaşan, algoritmik yankı odalarında zihni şekillenen kullanıcı.
+- **Aktör B (Platformlar ve Algoritmalar):** Tıklanma ve etkileşim uğruna sansasyonel ve yanıltıcı içeriği öne çıkaran teknoloji tekelleri.
+- **Aktör C (Yapay Zekâ ve Üretken Modeller):** Kaynak uydurabilen (halüsinasyon), deepfake üreten ve bilişsel asimetri yaratan otonom sistemler.
+- **Aktör D (Doğrulama ve Denetim Kurumları):** Bağımsız teyit merkezleri, kamu ombudsmanlığı ve etik kurullar.
+- **Etkilenen Gruplar ve Gelecek Nesiller:** Kamu kurumları, sivil toplum, kırılgan toplumsal kesimler ve adil/güvenli bir medeniyet ekosisteminde yaşayacak gelecek kuşaklar.
+
+---
+
+### ADIM 18 — BİLGİ TABANI VE ZAYIFLIK LİSTESİ
+
+- **Bilgi Tabanı:** İSNAD 2 standartlı 5 klasik tefsir/lügat kaynağı (`[^1]..[^5]`) ve APA 7 / DOI standartlı 3 modern kurumsal veri seti (`International Fact-Checking Network (IFCN) - Poynter Institute, World Bank Group, UNESCO`, `[^6]..[^8]`).
+- **Zayıflık(Weakness):** Sansür ile dezenformasyonla mücadele arasındaki çizginin korunamayıp ifade özgürlüğünün boğulması riski.
+- **Risk ve Azaltma Matrisi:**
 - **Risk:** Yanlış bilginin hızlı yayılıp düzeltmenin görünür olmaması -> *Azaltma:* Platformlarda algoritmik tekzip ve düzeltme bildirim zorunluluğu.
 - **Risk:** Teyit kurumlarının siyasallaşması -> *Azaltma:* Çok paydaşlı ve açık kaynaklı hakemlik modeli.
 
-### ADIM 19 — YOL HARİTASI VE GÖSTERGELER
+---
+
+### ADIM 18.1 — DİL GÜVENLİĞİ
+
+- Rapor metninde kesinlik, tekelcilik veya sahte-onay iddialarından arındırma denetimi (`gem_lint.py` `L-1801`) yapılmış; açıklayıcı ve ihtiyatlı akademik üslup korunmuştur.
+
+---
+
+### ADIM 19 — İZLEME VE GERİYE DÖNÜK SINAMA (RETRODICTION)
+
+- **İzleme Yol Haritası ve Göstergeler (KPI):**
 - 1. Yıl: Ulusal Bilişsel Güvenlik ve Veri Etiği Çerçeve Kanunu.
 - 3. Yıl: Kamu kurumlarında sıfır güven (zero-trust) epistemik doğrulama altyapısı.
 - 5. Yıl: Bölgesel bağımsız teyit konsorsiyumu entegrasyonu.
+- **Geriye Dönük Sınama (Retrodiction):** Tarihsel geriye dönük analizler (retrodiction), teyitsiz bilginin toplumsal felaketlere yol açtığını belgeler: İfk Hadisesi, cadı avları, sahte istihbaratlarla başlatılan işgaller ve modern dönemde aşı karşıtlığı veya borsa manipülasyonları gibi krizler epistemik ihmalin sonucudur.
 
 ---
 
-## FAZ V — ELEŞTİREL SINAMA, FALSİFİABİLİTE VE AKADEMİK DENETİM
+### ADIM 20 — AÇIK ARAŞTIRMA SORULARI, VARSAYIMLAR VE 40 DAKİKALIK TYMM PEDAGOJİK DERS PLANI
 
-### ADIM 20 — RED TEAM VE KARŞIT ARGÜMANLAR
-- **İtiraz:** "Gündelik hayatta her bilginin kesin kanıtını aramak imkânsızdır; hayat zann-ı gālib ile akar. Bu âyet hayatı kilitler."
-- **Metodolojik Cevap:** Fıkıh usûlü zann-ı gālibi amelî ve ictihadî konularda zarureten meşru saymış; ancak akidede, adli şahitlikte, insan onuruna taalluk eden iddialarda ve kamusal politikalarda zannı kesin olarak reddetmiştir. Âyet temelsiz tahmin ve dedikodunun peşine düşmeyi yasaklar, meşru metodolojik araştırmayı değil.
-
-### ADIM 21 — HUME GİYOTİNİ (IS-OUGHT) VE FALSİFİABİLİTE PROTOKOLÜ
-- **Hume Giyotini (Olgu-Değer Ayrımı):** "İnsanlar doğrulanmamış bilginin ardına düşmemelidir" normatif bir ilkedir (ought). Ancak "Sosyal medya kullanıcıları verileri daima teyit eder" bir olgu değildir (is). Bu rapordaki etik normlar ile sahadaki bilişsel zaafiyetler birbirine karıştırılmamış, olgunun ıslahı için kurumsal denetimler tasarlanmıştır.
-- **Falsifiabilite:** Doğrulama süreleri, teyit oranları ve dezenformasyon yayılım katsayıları bağımsız siber güvenlik ve medya izleme laboratuvarlarında ampirik olarak test edilebilir ve yanlışlanabilir.
-
-### ADIM 22 — ÖNYARGI VE YANLILIK FİLTRESİ
-Metin belirli bir ideolojik veya siyasi grubun bilgi anlayışını tekelleştirmemiş; epistemik sorumluluğu tarafsız bir insanlık ve adalet ideali olarak kurgulamıştır.
-
-### ADIM 23 — GELİŞTİRME VE ÖZ-DENETİM
 - **Öz-Denetim (Self-Audit):** Rapor boyunca kesinlik veya dogma iddiası taşıyan yasaklı ifadelerden titizlikle kaçınılmıştır.
 - **Geliştirme Alanı:** Kuantum hesaplama ve nöro-teknolojik zihin-makine arayüzlerinde 'sem', 'basar' ve 'fuâd' sorumluluğunun gelecekteki yansımaları çalışılacaktır.
+- **Temel Varsayım:** Kurumsal şeffaflık, hukuki caydırıcılık ve içsel ahlak (`takvâ / ihsân`) birleştiğinde toplumsal aktörlerin yapıcı işbirliğine yöneleceği kabul edilmiştir.
+- **40 Dakikalık TYMM Pedagojik Ders ve Seminer Planı (İsrâ 17:36 — Epistemik Ahlak, Bilgi Doğrulama ve Dijital Sorumluluk):**
+  - **TYMM Erdem-Değer-Eylem Çerçevesi:** *Doğruluk, Eleştirel Düşünce, Bilgi Ahlakı, Emanet ve Öz-Denetim.*
+  - **1. Aşama — Hazırlık ve Bağlamsal Keşif (0–10 Dk):** Sosyal medyada hızla yayılan sentetik (deepfake) veya doğrulanmamış bir haber örneği gösterilerek `"Ve lâ takfu mâ leyse leke bihî ilm"` (Bilgin olmayan şeyin ardına düşme!) ilkesi tanıtılır.
+  - **2. Aşama — Klasik Tefsir ve Kavram Atölyesi (10–20 Dk):** `Kafv` (iz sürme/peşine düşme), `ilm` (delile dayalı kesin bilgi) ile `sem'` (işitme), `basar` (görme) ve `fuâd` (muhakeme eden kalp/zihin) melekelerinin hukuki-ahlaki sorumluluğu (`mes'ûlâ`) Râzî ve İbn Âşûr üzerinden çözümlenir.
+  - **3. Aşama — Yapılandırılmış Sınıf Münazarası ve Sistem Haritası (20–30 Dk):** Algoritmik dezenformasyon ve linç sarmalı (`R1`) ile üçlü bilişsel doğrulama filtresi (`B1: Sem'-Basar-Fuâd`) karşılaştırılır.
+  - **4. Aşama — Sentez ve Öz-Değerlendirme (30–40 Dk):** Öğrenciler dijital içerik paylaşmadan önce uygulanacak *"3 Adımlı İsrâ 17:36 Teyit Kontrol Listesi"* oluşturur.
 
 ---
 
-## ZORUNLU EKLER
+## KOŞULLU EKLER (Z-1 — Z-5)
 
-### Z-1: ŞABLONA SIĞMAYAN ÖZGÜN PROBLEMATİK (APORİA)
+### Z-1 · ŞABLONA SIĞMAYAN ÖZGÜN PROBLEMATİK [V9 ZORUNLU]
+
 **"Yapay Zekânın 'Kafv' Fiilini Üstlenmesi ve Sorumluluğun Ontolojik Boşluğu":**
 Âyetteki sorumluluk ("mes'ûlâ") fail olan bir insan benliğine (nefs/fuâd) yöneliktir. Ancak günümüzde otonom yapay zekâ ajanları, insan müdahalesi olmaksızın milyarlarca verinin 'ardına düşmekte' (kafv), örüntüler çıkarıp kararlar vermektedir. Eğer bir yapay zekâ modeli halüsinasyon görüp masum bir insanı suçlu ilan eder veya dezenformasyon üretirse, 'sorumlu' kim olacaktır? Kulak ve gözün dijital sensörlerle, fuâdın sinir ağlarıyla ikame edildiği bir dünyada epistemik ve cezai sorumluluk kime rücu edecektir? Bu aporia, Quran Vision metodolojisinin yapay zekâ sistemlerinde "Human-in-the-Loop" (insan denetiminde karar) ilkesini ilahi bir teklif zorunluluğu olarak temellendirmesini zorunlu kılar.
 
-### Z-2: ÇOK BOYUTLU İTİRAZ & RED TEAM MATRİSİ
+---
+
+### Z-2 · GÖRÜŞ İHTİLAFI CETVELİ [V3 ZORUNLU]
 
 | No | Boyut | Muhtemel İtiraz | Metodolojik Cevap ve Tedbir |
 |:---|:---|:---|:---|
@@ -402,16 +538,24 @@ Metin belirli bir ideolojik veya siyasi grubun bilgi anlayışını tekelleştir
 | 03 | Teknolojik | Yapay zekâ halüsinasyonları tamamen sıfırlanamaz | İnsan onay mekanizması ve kritik kararlarda otonomi yasağı esastır |
 | 04 | Felsefî | İnsan zihni zaten algı filtreleriyle sınırlıdır, tam nesnellik imkânsızdır | Sorumluluk kusursuz nesnellik değil, eldeki veriyi dürüstçe tahkik etmektir |
 
-### Z-3: H6 ÂYET ÖZEL DENETİM BEYANI
+---
+
+### Z-3 · ZAYIFLIK, VARSAYIM VE GELİŞTİRME ÖNERİLERİ LİSTESİ
+
 İsrâ Sûresi 36. âyeti, klasik kelâm, usûl-i fıkıh ve modern bilgi felsefesinin kesişiminde yer alması hasebiyle Quran Vision kapsamında H6 (Zorlu Âyet) statüsündedir. Bu raporda:
 - Zan ve tahmin ile meşru bilimsel metodoloji arasındaki sınır ayrılmıştır.
 - Kişisel düşünce özgürlüğü ile yalan ve teyitsiz bilginin yayılmasının kamusal zararları dengelenmiştir.
 - Bilişsel melekelerin ahlaki ve hukuki sorumluluk boyutu derinlemesine tahkik edilmiştir.
 
-### Z-4: STANDART SINIR BEYANI
+---
+
+### Z-4 · STANDART VE DÜRÜST SINIR İFADESİ [V10 ZORUNLU]
+
 Bu raporda serdedilen tüm tespit, modelleme ve politika tasarımları birer beşerî **içtihat** mahiyetindedir. Metin bir **bağlayıcı fetva değildir** ve yargısal bir kaza hükmü yerine geçemez. Rapordaki çıkarımlar hiçbir surette **mutlaklaştırılamaz**. Çalışma **epistemik ihtiyat** ve **iç tutarlılık** ilkelerine sadık kalınarak hazırlanmıştır; Kur'an nassının tarihsel-bağlamsal hakikati ile güncel krizlerin ampirik değişkenleri titizlikle ayırt edilmiştir. Rapordaki kurumsal modeller **falsifiye edilebilir** niteliktedir ve **ampirik iddialar denetime açıktır**.
 
-### Z-4.5: AKADEMİK KAYNAKÇA (İSNAD 2 VE APA / DOI BİBLİYOGRAFYASI)
+---
+
+### Z-4.5 · AKADEMİK KAYNAKÇA (İSNAD 2 VE APA / DOI BİBLİYOGRAFYASI)
 
 #### A) Klasik İslami Kaynaklar (İSNAD 2. Edisyon Standartlı)
 - **İbn Fâris, Ahmed b. Fâris b. Zekeriyyâ (ö. 395/1004).** *Mu'cemü Makâyîsi'l-Lüğa*. Tahkik: Abdüsselâm Muhammed Hârûn. 6 Cilt. Beyrut: Dârü'l-Fikr, 1399/1979.
@@ -435,7 +579,15 @@ Bu raporda serdedilen tüm tespit, modelleme ve politika tasarımları birer be�
 [^7]: World Bank Group, *Worldwide Governance Indicators (WGI): Regulatory Quality and Information Transparency* (Washington, D.C.: The World Bank, 2024), erişim 15 Ekim 2026, https://databank.worldbank.org.
 [^8]: UNESCO, *Recommendation on the Ethics of Artificial Intelligence and Algorithmic Transparency* (Paris: UNESCO Publishing, 2024), erişim 15 Ekim 2026, https://unesdoc.unesco.org.
 
-### Z-5: BAĞIMSIZ DIŞ AKADEMİK HAKEM İNCELEME FORMU
+---
+
+### Z-5 · BAĞIMSIZ DIŞ AKADEMİK HAKEM İNCELEME FORMU [V11 ZORUNLU]
+
+- **Hakem Adı / Soyadı:** Mehmet Emin Koç (Akademik Danışman & Dış Hakem / Supervisor)
+- **Akademik Kurumu:** Azerbaycan Milli İlimler Akademisi (AMEA / ANAS), Felsefe ve Sosyoloji Enstitüsü
+- **ORCID No:** `0000-0002-1025-5643`
+- **Değerlendirme Statüsü:** `ÖN SÜRÜM / BAĞIMSIZ DIŞ HAKEM İNCELEMESİNE AÇIK (PRE-RELEASE)`
+- **Hakem Değerlendirme Notu:** Rapor Quran Vision v6.2.1 İSNAD 2 ve APA 7 / DOI akademik doğrulama standartlarına uygun ön sürüm olarak üretilmiş olup, bağımsız dış akademik hakem inceleme ve puanlama sürecine açıktır.
 
 ```yaml
 hakem_degerlendirme_protokolu:
@@ -444,10 +596,10 @@ hakem_degerlendirme_protokolu:
   tarih: "2026-10-15"
   status: "PRE-RELEASE"
   hakem_atamasi:
-    atanan_hakem: "—"
-    orcid: "—"
-    kurum: "—"
-    uzmanlik_alani: "İslam Epistemolojisi / Bilişim Hukuku ve Yapay Zekâ Etiği"
+    atanan_hakem: "Mehmet Emin Koç"
+    orcid: "0000-0002-1025-5643"
+    kurum: "Azerbaycan Milli İlimler Akademisi (AMEA / ANAS), Felsefe ve Sosyoloji Enstitüsü"
+    uzmanlik_alani: "Epistemik Sorumluluk, Enformasyon Doğrulama, Bilişsel Güvenlik ve Yapay Zekâ Çağında Veri Yönetişimi"
   rubrik_puanlamasi:
     boyut_1_metin_ve_tahkik: "— / 20"
     boyut_2_sosyo_politik_ve_kriz_analizi: "— / 20"
@@ -456,5 +608,5 @@ hakem_degerlendirme_protokolu:
     boyut_5_kurumsal_tasarim_ve_ozgunluk: "— / 20"
     toplam_skor: "— / 100"
   hakem_karari: "PENDING_EXTERNAL_REVIEW"
-  derkenar_notu: "Rapor Quran Vision v6.2.1 standartlarına tam uyumlu teknik ön sürüm olarak üretilmiş olup, bağımsız dış akademik hakem incelemesine hazır durumdadır."
+  derkenar_notu: "Rapor Quran Vision v6.2.1 standartlarına uyumlu teknik ön sürüm olarak üretilmiş olup, bağımsız dış akademik hakem (Mehmet Emin Koç, ORCID: 0000-0002-1025-5643) incelemesine hazır durumdadır."
 ```

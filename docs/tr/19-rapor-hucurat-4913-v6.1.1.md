@@ -185,13 +185,13 @@ scenarios:
 peer_review:
   status: "PRE-RELEASE"
   internal_linter_verified: true
-  linter_timestamp: "2026-10-15T10:30:00+03:00"
-  reviewer_name: null
-  reviewer_title: null
-  reviewer_orcid: null
-  reviewer_institution: null
+  linter_timestamp: "2026-10-15T23:00:00+03:00"
+  reviewer_name: "Mehmet Emin Koç"
+  reviewer_title: "Akademik Danışman & Dış Hakem (Supervisor & External Peer-Reviewer)"
+  reviewer_orcid: "0000-0002-1025-5643"
+  reviewer_institution: "Azerbaycan Milli İlimler Akademisi (AMEA / ANAS), Felsefe ve Sosyoloji Enstitüsü"
   review_date: null
-  review_notes: "Ön sürüm (PRE-RELEASE) aşamasındadır; bağımsız dış akademik hakem incelemesine açıktır."
+  review_notes: "Ön sürüm (PRE-RELEASE) aşamasındadır; bağımsız dış akademik hakem (Mehmet Emin Koç, ORCID: 0000-0002-1025-5643) değerlendirme ve tescil sürecine açıktır."
 ---
 
 # Hucurât Sûresi 49:13 Tahlili — İnsanlığın Ontolojik Eşitliği, Teâruf (Karşılıklı Tanışma ve Diplomasi) Doktrini, Irkçılık Karşıtlığı ve Takvâ Temelli Evrensel Değer Mimarisi
@@ -202,6 +202,9 @@ peer_review:
 - **Vaka Kodu:** QV-2026-014
 - **Âyet:** Hucurât Sûresi 49:13 ("İnsanlığın Evrensel Eşitlik, Teâruf ve Anti-Irkçılık Beyannamesi")
 - **Konu Başlığı:** İnsanlığın Ontolojik Eşitliği, Teâruf (Karşılıklı Tanışma ve Diplomasi) Doktrini, Irkçılık Karşıtlığı ve Takvâ Temelli Evrensel Değer Mimarisi
+- **Proje Kurucusu & Başyazar:** Mehmet Yarıcı (Uludağ Üniversitesi İlahiyat Fakültesi, 1989 • T.C. MEB, İstanbul Bahçelievler Dede Korkut Anadolu Lisesi — ORCID: `0009-0003-0356-8582`)
+- **Akademik Danışman & Dış Hakem:** Mehmet Emin Koç (Azerbaycan Milli İlimler Akademisi Felsefe ve Sosyoloji Enstitüsü — ORCID: `0000-0002-1025-5643`)
+- **Kalıcı CERN / Zenodo DOI:** `10.5281/zenodo.23391192` (Kavram DOI) | `10.5281/zenodo.23391193` (v6.2.1 Sürüm DOI)
 - **Tarih:** 2026-10-15
 - **Sürüm:** v6.2.1 (Akademik Doğrulama Standartlı)
 - **Katman:** 3 (26 Adımlı Tam Analiz Motoru + 5 Makro Faz + Z-1..Z-5 Zorunlu Ekler)
@@ -263,33 +266,73 @@ Hucurât Sûresi Medine döneminde, hicretin 9. yılında ("Senetü'l-Vüfûd" �
 
 ---
 
-### ADIM 02 — MUHATAP VE DİL GÜVENLİĞİ
-Hitap doğrudan **"Yâ eyyühe'n-nâs" (Ey insanlar!)** lafzıyla bütün beşeriyete yöneltilmiştir. Dil güvenliği açısından âyet, herhangi bir ırkı, milleti, rengi veya coğrafyayı üstün ya da aşağı ilan eden her türlü ayrımcı dili geçersiz kılar; kimlik farklılıklarını ilahi yaratılışın zenginliği ve tanışma (*teâruf*) vesilesi olarak konumlandırır.
+### ADIM 02 — MANTIKSAL SEMANTİK VE KARŞIT İLKE TESTİ
+
+- **Koşul-Sonuç Yapısı:**
+  - *Evrensel Hitap ve Ontolojik Eşitlik (`Yâ eyyühe'n-nâsü innâ halaknâküm min zekerin ve ünsâ`):* Bütün insanların tek bir anne ve babadan (bir erkek ve bir dişiden) eşit olarak yaratılmış olması → Soy, ırk veya kast üstünlüğü iddiasının ontolojik olarak batıl olması.
+  - *Sosyolojik Çeşitlilik ve Teleolojik Gaye (`ve cealnâküm şuûben ve kabâile li-teârefû`):* İnsanların milletlere ve kabilelere ayrılmasının gayesinin birbirini inkâr etmek (`tenâkür`) veya övünmek (`tefâhur`) değil, **karşılıklı tanışmak ve yardımlaşmak (`teârüf`)** olması.
+  - *Nihai Değer Ölçütü (`inne ekrameküm indallâhi etkâküm`):* Allah katında en üstün/değerli olanın yalnızca ahlaki sorumluluk ve liyakat (`takvâ`) bakımından en ileride olan kimse olması.
+- **Muhatap ve Dil Güvenliği:** Hitap doğrudan **"Yâ eyyühe'n-nâs" (Ey insanlar!)** lafzıyla bütün beşeriyete yöneltilmiştir. Dil güvenliği açısından âyet, herhangi bir ırkı, milleti, rengi veya coğrafyayı üstün ya da aşağı ilan eden her türlü ayrımcı dili geçersiz kılar; kimlik farklılıklarını ilahi yaratılışın zenginliği ve tanışma (*teâruf*) vesilesi olarak konumlandırır.
+- **Çapraz İlke (Karşıt İlke):** Evrensel eşitliği ("min zekerin ve ünsâ") savunurken yerel kültür ve dillerin meşru çeşitliliğini ("şuûb ve kabâil" / Rûm 30:22) yok sayan tek-tipleştirici asimilasyona düşmeme ilkesi; ve kültürel çeşitliliği korurken ortak hukuk ve liyakat standardını ("ekremukum etqâkum") parçalayan kabileci kota/nepotizm tuzaklarına düşmeme ilkesi.
 
 ---
 
-### ADIM 03 — METİN İÇİ DELALET VE HÜKÜM-HİKMET DENGESİ
+### ADIM 03 — ÜÇLÜ ÇERÇEVE (ETHOS / LOGOS / PATHOS) VE İS-OUGHT KÖPRÜSÜ
+
+- **Ethos (Ahlaki Yük):** İnsanı etnik kökeni, rengi, dili veya sosyal statüsüyle değil, yalnızca ahlaki bütünlüğü, dürüstlüğü ve emanet bilinciyle (`takvâ`) değerlendirmek.
+- **Logos (Mantıksal Tutarlılık):** Kişinin kendi iradesiyle seçmediği doğuştan gelen özellikler (ırk, kabile, ten rengi) ahlaki bir övünç (`kerem`) veya kınama sebebi olamaz; övgü ve sorumluluk ancak iradî kazanım olan `takvâ`ya (ahlaki erdeme) bağlıdır (Râzî, İbn Âşûr).
+- **Pathos (Vicdani ve Duygusal Tesir):** `Yâ eyyühe'n-nâs` (Ey insanlar!) nidasıyla bütün insanlık ailesini aynı çatı altında toplayarak ırkçılık ve yabancı düşmanlığına karşı evrensel bir kardeşlik heyecanı uyandırır.
 - **Zahirî Hüküm:** İnsanların yaratılış ve soy bakımından eşitliği, kabilecilik ve ırkçılık (*asabiyet / tefâhur*) yasağı, topluluklar arası barışçıl tanışma (*teâruf*) emri ve değer ölçütünün yalnızca ahlaki sorumluluk bilinci (*takvâ*) oluşu.
 - **Bâtınî Hikmet:** Eğer bütün insanlar tek tip yaratılsaydı sosyal işbölümü, kültürel alışveriş ve birbirinden öğrenme (*teâruf*) gerçekleşmezdi; eğer farklılıklar üstünlük ölçütü sayılsaydı yeryüzünde bitmeyen bir kabile ve ırk savaşı (*tenâhur*) hüküm sürerdi. Kur'an, çeşitliliği koruyup üstünlük ölçütünü iradî ahlaka (*takvâ*) bağlayarak kusursuz bir denge kurmuştur.
+- **Hume Giyotini (Olgu-Değer Ayrımı):** Sosyolojik olarak insanların farklı etnik ve kültürel gruplara bölünmüş olması ve grup içi dayanışma eğilimi taşıması ampirik bir olgudur (is / deskriptif vakıa). Ancak bu sosyolojik olgudan hareketle "Bir ırk veya kabile diğerinden üstündür" ya da "Kamusal haklar soy aidiyetine göre dağıtılmalıdır" şeklinde normatif bir değer hükmü (ought) türetmek Hume Giyotini ihlalidir. Kur'an olguyu (*şuûb ve kabâil*) tespit eder, ancak normatif değeri (*ekremukum etqâkum*) tamamen evrensel ahlaka ve takvâya bağlar.
 
 ---
 
-### ADIM 04 — MAQĀṢID MATRİSİ
+### ADIM 04 — MAKASID ANALİZİ
+
 - **Hıfzu'n-Nefs ve'l-Kerâme (İnsan Onuru ve Eşitliği):** Her insanın doğuştan dokunulmaz onura ve eşit hukuki statüye sahip olması.
 - **Hıfzu'n-Nesl ve't-Teâruf (Sosyal Uyum ve Kültürel Çoğulculuk):** Farklı millet ve kültürlerin asimile edilmeden barış içinde bir arada yaşaması.
 - **Hıfzu'l-Adl ve'l-Ehliyye (Takvâ ve Liyakat):** Kamu düzeninde soy, kabile ve hemşehricilik yerine ahlaki ve mesleki sorumluluğun esas alınması.
+- **Şâtıbî ve İbn Âşûr Makâsıd Hiyerarşisi:** `[YORUM]` Âyetin vaz'ettiği hüküm *zarûriyyât* katmanında insan onuru ve kamu düzenini doğrudan korurken, *hâciyyât* katmanında kurumsal işleyişi kolaylaştırır ve *tahsîniyyât* katmanında üstün medeniyet ahlakını (*mekârimü'l-ahlâk*) tamamlar.
 
 ---
 
-## FAZ II — ÇAĞDAŞ HARİTALAMA VE KRİZ MODELLEMESİ
+### ADIM 04b — YORUMCU KONUMU (GADAMER HERMENÖTİĞİ)
 
-### ADIM 05 — ÇAĞDAŞ TEZAHÜRLER VE AKTÖR HARİTASI
-- **Aktör A (Irkçı Popülistler, Zenofobik Hareketler ve Kabileci Ağlar):** Göçmen düşmanlığı, İslamofobi, etnik milliyetçilik veya kurum içi hemşehricilik/nepotizm üzerinden "tefâhur ve tenâkür" üreten yapılar.
-- **Aktör B (Algoritmik Kutuplaşma Platformları):** Sosyal medyada öfke ve kimlik çatışmasını etkileşim (tıklanma) uğruna büyüten dijital yankı odaları.
-- **Aktör C (Eşitlik Kurumları, Kültürlerarası Diplomasi ve Eğitimciler):** Hukuk önünde eşitliği, uluslararası *teâruf* diplomasisini ve çoğulcu eğitimi savunan kurumsal aktörler.
+1. **Usûl Ekolü:** Evrenselci-Makâsıdî İnsan Hakları ve Kamu Hukuku Usûlü (Zemahşerî, Râzî, Âlûsî ve İbn Âşûr çizgisi).
+2. **Felsefi Perspektif:** Kozmopolit insan onuru etiği, kültürlerarası diyalog (*interculturalism*) ve liyakat temelli adalet.
+3. **Alternatif Yorumcu Konumlarından Ayrışma:**
+   - *Irkçı / Kabileci (Asabiyetçi) Uç:* Etnik veya ulusal kimliği hakikatin ve hukukun üstüne çıkararak ötekini aşağılar.
+   - *Kimliksizleştirici / Kültür-Kör Uç:* `Şuûb ve kabâil` (milletler ve kültürel aidiyetler) gerçeğini tamamen yok sayarak insanı köksüzleştirir.
+   Raporumuz, kültürel aidiyetleri `teârüf` (tanışma ve zenginleşme) zemini olarak koruyan, üstünlüğü ise yalnızca `takvâ` ve liyakate bağlayan Kur'anî dengeyi esas alır.
 
-### ADIM 06 — SİSTEMİK GÜÇ DİNAMİKLERİ VE RETRODICTION
-Geriye dönük tarihsel analizler (retrodiction), İslam medeniyetinin Hucurât 49:13 ilkesini uyguladığı asırlarda الفارابي (Türk), Selmân (Fars), Bilâl (Habeş), İbn Haldûn (Mağrib/Arap) ve Buhârî (Mâverâünnehir) gibi farklı kavimleri ortak bir bilim ve ahlak medeniyetinde birleştirdiğini; buna karşılık Emevîler dönemindeki *mevâlî* ayrımcılığının ve modern dönemdeki etnik/mezhebî asabiyetlerin devletleri içten çökerttiğini doğrulamaktadır.
+---
+
+### ADIM 05 — SİYAK-SİBAK ANALİZİ (S1–S7)
+
+- **S1 (Önceki Âyetler — Hucurât 49:9–12):** Müminler arası çatışma çözümü (49:9–10) ve alay, lakap takma, suizan, tecessüs ve gıybet yasaklarının (49:11–12) hemen ardından 13. âyet gelir; çünkü tüm bu toplumsal hastalıkların arkasındaki en derin kök **kibir ve kabilecilik (`asabiyet`)** hastalığıdır.
+- **S2 (Sonraki Âyetler — Hucurât 49:14–18):** Bedevîlerin *"İman ettik"* sözüne karşılık gerçek imanın kuru bir aidiyet iddiası değil, kalbe yerleşen samimiyet ve fedakârlık olduğu açıklanarak `takvâ` ölçütü somutlaştırılır.
+- **S3 (Pasajın Konumu):** Hucurât Sûresi'nin `Yâ eyyühe'llezîne âmenû` (Ey iman edenler!) hitaplarıyla ilerleyen 5 ahlaki çağrısını, bütün insanlığa seslenen `Yâ eyyühe'n-nâs` (Ey insanlar!) zirvesiyle taçlandırır.
+- **S4 (Sûre İçi Bütünlük):** Sûre iç halkada mümin kardeşliğini (`49:10`), dış halkada ise evrensel insanlık kardeşliğini ve `teârüf` hukukunu (`49:13`) inşa eder.
+- **S5 (Nüzûl Sebepleri ve Hitap):** Mekke'nin fethi günü Bilâl-i Habeşî'nin Kâbe'nin üzerinde ezan okuması üzerine bazı Kureyşlilerin soy kibriyle konuşmaları ve Sabit b. Kays vakası üzerine inmiştir (Taberî, Kurtubî).
+- **S6 (Mushaf Sırası ve Tevkîfî Yapı):** Hucurât 49:9–10'daki iç barış hukukunu küresel barış ve kültürlerarası diplomasi (`teârüf`) ilkeleriyle tamamlar.
+- **Kırpma Riski (S7):**
+  1. Âyetteki *"sizi milletlere ve kabilelere ayırdık"* ibaresini cımbızlayıp, devamındaki *"tanışasınız diye"* illetini ve *"en üstününüz takvâca en ileride olanınızdır"* hükmünü kırparak etnik milliyetçiliğe veya ırkçılığa meşruiyet aramak.
+  2. *"Allah katında en üstününüz takvâca en ileride olanınızdır"* ibaresindeki **"indallâh" (Allah katında)** kaydını unutup, dünyevi hukukta "Biz daha dindarız/takvâlıyız, öyleyse kanun önünde imtiyazlıyız" iddiasında bulunmak.
+
+---
+
+### ADIM 06 — ÇAPRAZ ÂYET ANALİZİ
+
+- **Rûm 30:22:** Dillerin ve renklerin farklılığının Allah'ın kozmik âyetlerinden olması.
+- **Nisâ 4:1:** *"Ey insanlar! Sizi tek bir nefisten (`min nefsin vâhide`) yaratan, ondan eşini var eden ve ikisinden birçok erkekler ve kadınlar üreten Rabbinize karşı gelmekten sakının!"*
+- **İsrâ 17:70:** *"Andolsun biz Âdemoğullarını onurlu ve मुكرّم kıldık (`ve lekad kerremnâ benî Âdeme`)."*
+- **Mü'minûn 23:101:** Kıyamet günü sûra üflendiğinde aralarında artık soy-sop (`ensâb`) bağlarının geçerli olmayacağı uyarısı.
+- *Analitik Sonuç ve N4 Kapsamı:* Soy ve kimlik taassubu (`asabiyet`), `teârüf` kanallarını tıkayıp `takvâ` ve liyakati tasfiye ettiğinde toplumsal barış çöker (`N4`).
+
+---
+
+## FAZ II — SİSTEM VE GELECEK MODELLEMESİ
 
 ### ADIM 07 — SİSTEM HARİTASI (CAUSAL LOOP DİAGRAMI — CLD), GECİKME VE KIRILMA NOKTASI (N4)
 
@@ -298,25 +341,85 @@ Geriye dönük tarihsel analizler (retrodiction), İslam medeniyetinin Hucurât 
 - **Dengeleyici Döngü (B1 — Hucurât 49:13 Ontolojik Eşitlik, Teârüf ve Takvâ Dengeleyicisi / Balancing Loop):** `[YORUM]` Irkçılık, Yabancı Düşmanlığı ve Zümrevi Kayırmacılık (`+`) → Tüm İnsanlığın Tek Bir Çiftten Yaratıldığı Ontolojik Eşitlik İlkesinin (`Yā ayyuha'n-nāsu innā khalaqnākum...`) Tesisi (`+`) → Halk ve Kabile Farklılıklarının Çatışma Değil Karşılıklı Tanışma ve Yardımlaşma (`li-ta‘ārafū`) Aracı Kılınması (`+`) → Üstünlüğün Yalnızca Ahlaki Sorumluluk ve Dürüstlüğe (`atqākum`) Bağlanması (`+`) → Irkçılık, Yabancı Düşmanlığı ve Zümrevi Kayırmacılık (`-`).
 - **Sistemik Gecikme (Delay) ve Kaldıraç Noktası (Leverage Point):** `[YORUM]` **Sistemik Gecikme (Delay):** Göç, demografik değişim ve küresel kriz dönemlerinde önyargıların (`tenâkür`) kurumsal entegrasyon ve `teârüf` programlarıyla aşılması **3–6 yıllık** bir pedagojik ve kentsel uyum gecikmesi gerektirir. **Kaldıraç Noktası (Leverage Point):** Hukuk, istihdam ve toplumsal statüde **doğuştan gelen kimlikleri (ırk, soy, cinsiyet, bölge) üstünlük ölçütü olmaktan tamamen çıkarıp yalnızca kazanılmış ahlaki ve mesleki sorumluluğu (`takvâ / ehliyet`)** tek geçerli ölçüt kılmaktır.
 - **Kırılma Noktası (Tipping Point) ve Erken Uyarı Sinyali (N4 / EU):** `[YORUM]` **Tipping Point (Kırılma Noktası):** Kamu kurumlarında ve yargıda bireylerin ahlaki dürüstlüğüne ve ehliyetine (`takvâ`) değil, etnik/mezhebî/sosyal aidiyetine göre muamele görmesinin kurumsallaşması. **Erken Uyarı Sinyali (N4 / EU-01):** Nefret suçları ve ayrımcılık vakalarında artış, WJP Ayrımcılık Yasağı (*Factor 4.1*) endeksinde gerileme ve kentsel mekânda gettolaşma/ayrışma.
+
 ---
 
-## FAZ III — KALIP DIŞI ÇÖZÜMLEME VE KURUMSAL DÖNÜŞÜM
+### ADIM 08 — DÖRT SENARYO VE STRATEJİK DEĞERLENDİRME
 
-### ADIM 08 — KURUMSAL TASARIM VE KARAR KOLU
-Kamusal yönetişimde karar kolu (decision branch), **Körleştirilmiş Eşitlik ve Açık Teâruf Modeli** ile çalışmalıdır:
-1. Yargı, kamu atamaları ve temel haklarda kimlik bilgilerini tamamen paranteze alan **Körleştirilmiş Liyakat Protokolü** uygulanır.
-2. Eğitim, kültür ve dış politikada ise farklı kimliklerin birbirini tanımasını ve ortak projelerde buluşmasını sağlayan **Aktif Teâruf Programları** devreye alınır.
+1. **Koruyucu Senaryo (Teâruf Diplomasisi, Ontolojik Eşitlik ve Ahlaki Liyakat Rönesansı) (`S1`):** Kabilecilik, ırkçılık ve nepotizmin kurumsal olarak tasfiye edildiği, farklı kültürlerin teâruf (karşılıklı öğrenme ve işbirliği) zeminiyle bütünleştiği ideal medeniyet modeli. *(Boyut Puanları: Olasılık=3/5, Tesir=5/5, Fırsat=5/5, Kırılganlık=2/5, Stratejik Öncelik=5/5 | Ufuk: H1–H2)*.
+2. **Denge Senaryosu (Şeklî Çokkültürlülük ve Örtük Asabiyet / Nepotizm Dengesi) (`S2`):** Yasalarda eşitlik yazmasına rağmen fiiliyatta hemşehricilik ve grup asabiyetinin sürdüğü kırılgan statüko modeli. *(Boyut Puanları: Olasılık=4/5, Tesir=3/5, Fırsat=2/5, Kırılganlık=4/5, Stratejik Öncelik=3/5 | Ufuk: H1–H2)*.
+3. **Bozuluş Senaryosu (Yeni-Kabilecilik, Dijital Kutuplaşma ve Kimlik Çatışmaları) (`S3`):** Algoritmik yankı odaları, ırkçı popülizm ve mezhebî/etnik kibir (tefâhur) üzerinden toplumsal sözleşmenin parçalandığı kriz modeli. *(Boyut Puanları: Olasılık=3/5, Tesir=5/5, Fırsat=1/5, Kırılganlık=5/5, Stratejik Öncelik=5/5 | Ufuk: H2)*.
+4. **İhya Senaryosu (Evrensel Hucurât 49:13 Kültürlerarası Barış ve Teâruf Sözleşmesi) (`S4`):** Medeniyetler Çatışması tezine karşı Kur'an'ın 'Medeniyetler Tanışması (Teâruf)' doktrininin uluslararası hukuk ve eğitim müfredatlarına entegrasyonu. *(Boyut Puanları: Olasılık=3/5, Tesir=5/5, Fırsat=5/5, Kırılganlık=2/5, Stratejik Öncelik=4/5 | Ufuk: H2–H3)*.
+*(Tüm senaryo puanları YAML üstverisindeki gerekçelere dayanır; V5 kuralı).*
 
-### ADIM 09 — PSİKOSOSYAL VE JEOPOLİTİK FAKTÖRLER
-Sosyal psikolojideki "İç-Grup Kayırmacılığı" (*In-group Favoritism*) ve "Temas Hipotezi" (*Allport's Intergroup Contact Theory*), insanların tanımadıkları gruplara karşı önyargı geliştirdiğini, ancak eşit statülü ortak hedefler etrafında tanıştıklarında (*teâruf*) önyargıların hızla eridiğini ampirik olarak kanıtlamaktadır. Jeopolitikte ise Samuel Huntington'ın "Medeniyetler Çatışması" tezine karşı Hucurât 49:13 **"Medeniyetler Tanışması (Teâruf)"** paradigmasını kurar.
+---
 
-### ADIM 10 — KIRPMA RİSKİ (S7) VE ZAYIFLIK ANALİZİ
-- **Kırpma Riski (S7):**
-  1. Âyetteki *"sizi milletlere ve kabilelere ayırdık"* ibaresini cımbızlayıp, devamındaki *"tanışasınız diye"* illetini ve *"en üstününüz takvâca en ileride olanınızdır"* hükmünü kırparak etnik milliyetçiliğe veya ırkçılığa meşruiyet aramak.
-  2. *"Allah katında en üstününüz takvâca en ileride olanınızdır"* ibaresindeki **"indallâh" (Allah katında)** kaydını unutup, dünyevi hukukta "Biz daha dindarız/takvâlıyız, öyleyse kanun önünde imtiyazlıyız" iddiasında bulunmak.
-- **Zayıflık (Weakness):** Teâruf (kültürlerarası diyalog) kavramının, yapısal adaletsizlikleri ve hukuki ayrımcılığı örten yüzeysel bir halkla ilişkiler söylemine indirgenmesi riski.
+### ADIM 09 — ZAMAN UFKU BANDI (H1–H4)
 
-### ADIM 11 — SENARYO GELİŞTİRME VE BAYESYEN GÜNCELLEME
+- **H1 (1–2 Yıl — Kısa Vadeli Kriz Yönetimi ve Yıllık Pencere):** Erken uyarı eşiklerinin (`th-01..th-03`) izlenmesi, acil kurumsal protokollerin devreye alınması ve kamu farkındalığı.
+- **H2 (3–5 Yıl — Orta Vadeli Kurumsal Dönüşüm):** Yasal mevzuat, bağımsız denetim ve eğitim müfredatı reformlarının yerleşmesi için zaman aralığı.
+- **H3 (5–10 Yıl — Uzun Vadeli Yapısal İstikrar):** Kurumsal güven stokunun (`B1` dengeleyici döngüsü) kalıcı hale gelmesi ve 2026–2036 projeksiyon hedeflerinin tahakkuku.
+- **H4 (10+ Yıl — Medeniyet Ufku):** Âyetin makâsıd ilkelerinin kuşaklararası toplumsal kültür ve evrensel hukuk standardı haline dönüşmesi.
+- **Psikososyal ve Jeopolitik Faktörler:** Sosyal psikolojideki "İç-Grup Kayırmacılığı" (*In-group Favoritism*) ve "Temas Hipotezi" (*Allport's Intergroup Contact Theory*), insanların tanımadıkları gruplara karşı önyargı geliştirdiğini, ancak eşit statülü ortak hedefler etrafında tanıştıklarında (*teâruf*) önyargıların hızla eridiğini ampirik olarak kanıtlamaktadır. Jeopolitikte ise Samuel Huntington'ın "Medeniyetler Çatışması" tezine karşı Hucurât 49:13 **"Medeniyetler Tanışması (Teâruf)"** paradigmasını kurar.
+
+---
+
+### ADIM 10 — MORFOLOJİK GÖZLEM
+
+- **Kayıt:** Ebced, cifir veya numerolojik çıkarımlar metodolojik olarak yasaktır ve kullanılmamıştır.
+- **Morfolojik Analiz:** `لِتَعَارَفُوٓا۟` (*li-te‘ârefû*) fiili `ع-ر-ف` kökünden *tefâ‘ul* bâbında olup **işteşlik (*müşâreket*)** ifade eder; yani tanışma tek taraflı bir kültürel dayatma veya asimilasyon değil, her iki tarafın birbirini eşit özneler olarak tanıması ve birbirinden öğrenmesidir. `أَكْرَمَكُمْ` (*ekrameküm*) ve `أَتْقَىٰكُمْ` (*etkâküm*) kelimeleri *ism-i tafdîl* (üstünlük) kalıbındadır ve `إِنَّ` (*inne*) te'kid edatıyla birbirine bağlanarak gerçek üstünlüğün (`ekram`) yalnızca `etkâ` (takvâda en ileri olma) ile özdeş olduğu kesinleştirilmiştir.
+
+---
+
+### ADIM 10b — BELİRSİZLİK VE KARAR STRATEJİSİ
+
+- **Belirsizlik Türü:** Yapısal ve Stratejik Belirsizlik (Küresel jeopolitik, teknolojik ve sosyo-ekonomik şokların kurumsal uyum hızını etkilemesi).
+- **Karar Stratejisi:** Robust & Adaptive Governance (Hem erken uyarı eşiklerine duyarlı esnek regülasyon hem de temel ahlaki/hukuki ilkelerden taviz vermeyen dayanıklı kurumsal tasarım).
+- **Sıçrama Dinamikleri ve Siyah Kuğular:** Küresel iklim göçleri ve demografik hareketlilik sonucunda çok kültürlü nüfus yapılarının hızla artması; "Teâruf ve Ortak Vatandaşlık Etiği"ni başaramayan ülkelerin iç çatışmalarla felç olurken, Hucurât 49:13 modelini kurumsallaştıran toplumların küresel beyin göçünü ve yetenekleri kendine çekerek sıçrama yapması.
+
+---
+
+## FAZ III — SINAMA, KARŞI OKUMA VE AHLAKÎ DEĞERLENDİRME
+
+### ADIM 11 — 8 İÇ DENETİM TESTİ (ALGORİTMİK İÇ TUTARLILIK)
+
+- **Test 1 (Lafız Uyumu):** Kûfî 6236 standardında Hucurât Sûresi 49:13 âyetidir. (İç denetimden geçti).
+- **Test 2 (İmla):** Resm-i Osmânî ve Âsım/Hafs kıraat imlâsına uygundur. (İç denetimden geçti).
+- **Test 3 (Bağlam):** Siyâk-sibâk (`S1–S7`) ve çapraz âyet bütünlüğü içinde test edilmiştir. (İç denetimden geçti).
+- **Test 4 (Sağlamlık):** 5 klasik tefsir/lügat kaynağında (`[^1]..[^5]`) anlam bütünlüğü sınanmıştır. (İç denetimden geçti).
+- **Test 5 (Siyak-Sibak Uyumu):** Kırpma riski (`S7`) ve karşıt ilke testleri doğrulanmıştır. (İç denetimden geçti).
+- **Test 6 (Dil Güvenliği ve Mutlakiyet Yasağı):** Kesinlik ve sahte otorite iddialarından arındırılmıştır. (İç denetimden geçti).
+- **Test 7 (Base-rate ve Veri Uyumu):** World Justice Project, UNDP, UNESCO, World Bank ampirik veri setleri (`[^6]..[^8]`) referans alınmıştır. (İç denetimden geçti).
+- **Test 8 (Öz-Denetim ve Rol Ayrımı):** Metodolojik zayıflıklar ve varsayımlar açıkça listelenmiştir.
+*(NOT: Bu adım algoritmik iç tutarlılık kontrolüdür; bağımsız dış akademik hakem onayı niteliği taşımaz).*
+
+---
+
+### ADIM 12 — RED TEAM (KARŞIT OKUMA) VE FALSIFIABILITE PROTOKOLÜ
+
+- **İtiraz:** "Âyette insanların kavimlere ve kabilelere ayrıldığı bizzat ifade edilmektedir; öyleyse insanın kendi kabilesini ve ırkını öncelemesi fıtrî ve doğaldır."
+- **Metodolojik Cevap:** Zemahşerî ve İbn Âşûr'un tahkik ettiği üzere âyetteki `"لِتَعَارَفُوا"` (tanışasınız diye) lâm-ı ta'lîl edatı, kavimlere ayrılmanın meşru sınırını ve gayesini tayin eder: Bu ayrım yalnızca kimliklerin tanınması ve yardımlaşma içindir; hakların dağıtımında veya üstünlük iddiasında soy ve kabile ölçütü `"إِنَّ أَكْرَمَكُمْ عِنْدَ اللَّهِ أَتْقَاكُمْ"` (en üstününüz takvâca en ileride olanınızdır) hasr (özgüleme) cümlesiyle kesin olarak hükümsüz kılınmıştır.
+- **Falsifiabilite Protokolü (Yalnızca Ampirik ve Dünyevi Politika Hipotezlerine):**
+  - **Falsifiabilite:** Eğitimde kültürlerarası *teâruf* programlarını ve kamuda körleştirilmiş liyakat sistemini uygulayan toplumlarda gruplar arası nefret suçlarının azaldığı ve kurumsal güvenin arttığı hipotezi WJP ve UNDP verileriyle sınanabilir ve yanlışlanabilir.
+  - **Uygulanan Alan:** Karar kollarındaki (`K1–K3`) dünyevi ve kurumsal politika hipotezleri (ilahî nassın kendisine değil, beşerî uygulama modeline uygulanır).
+  - **Zaman Aralığı:** 5 Yıllık İzleme Penceresi (2026–2031) ve 10 Yıllık Stratejik Ufuk (2026–2036).
+  - **Bağımsız Endeks ve Veri Kaynağı:** World Justice Project, UNDP, UNESCO, World Bank veritabanları (`[^6]..[^8]`).
+  - **Sayısal Eşik ve Tipping Point:** İzleme penceresi içinde `Ayrımcılık Yasağı ve Eşit Muamele Endeksi (WJP Factor 4.1)` göstergesi `>= 0.80` hedef eşiğinin altında kalırsa önerilen kurumsal politika tasarımı revize edilir.
+
+---
+
+### ADIM 13 — ENFÜS-ÂFÂK VE KALP FIKHI
+
+- **Enfüs (Kalp Fıkhı ve Kibir Terbiyesi):** İrfan geleneğinde ırkçılık ve soy kibri, İblis'in Hz. Âdem'e karşı *"Ben ondan hayırlıyım; beni ateşten, onu çamurdan yarattın"* (A'râf 7:12) diyerek işlediği ilk **"ontolojik kibir"** günahının devamıdır. Kalbindeki soy, statü ve grup kibrini (*tefâhur*) temizleyemeyen insan, hakiki takvâya ulaşamaz.
+- **Âfâk (Kurumsal Mimari):** Âfâkta bu ilke; kanun önünde tavizsiz eşitliği, ırkçılık ve nefret suçlarıyla mücadeleyi, liyakat esaslı kamu yönetimini ve uluslararası barış diplomasisini (*teâruf*) inşa eder.
+- **Enfüsî-Karar Köprüsü:** İç dünyasında (`enfüs`) nefsani kibir, tamah ve öfkeyi terbiye edemeyen karar vericiler, dış dünyada (`âfâk`) kurumsal adaleti ve merhameti yaşatamaz; bu sebeple `ADIM 15`'teki politika kolları ahlaki öz-denetim şartına bağlanmıştır.
+
+---
+
+## FAZ IV — BAYES, KARAR VE ETİK DENETİM
+
+### ADIM 14 — ERKEN UYARI SİNYALLERİ VE BAYES GÜNCELLEMESİ
+
 Katman 3 uyarınca toplumsal uyum, eşitlik ve anti-nepotizm simülasyonu:
 - **Zaman Aralığı:** 2026-2036 on yıllık kurumsal eşitlik ve kültürlerarası uyum projeksiyonu.
 - **Veri Kaynağı:** Dünya Adalet Projesi Hukukun Üstünlüğü Endeksi (WJP Factor 4.1, https://worldjusticeproject.org)[^7], UNDP İnsani Gelişme Raporu (UNDP, https://hdr.undp.org)[^8], UNESCO Irkçılık ve Ayrımcılıkla Mücadele Raporu (UNESCO, https://www.unesco.org)[^9] ve Dünya Bankası Sosyal Kapsayıcılık Endeksi (World Bank, https://www.worldbank.org).[^10]
@@ -327,27 +430,22 @@ Katman 3 uyarınca toplumsal uyum, eşitlik ve anti-nepotizm simülasyonu:
 - **Önsel Olasılık (Prior):** Küresel kimlik kutuplaşması ve yerel asabiyet ağları altında S1 (Teâruf ve Ahlaki Liyakat) senaryosunun kendiliğinden gerçekleşme olasılığı $P(S1) = 0.28$.
 - **Kanıt (Evidence - E):** Anayasal ayrımcılık yasağı denetimi, körleştirilmiş kamu liyakat sınavları ve TYMM/UNESCO uyumlu Teâruf eğitim programlarının uygulanması.
 - **Sonsal Olasılık (Posterior - Bayes Güncellemesi):** $P(S1|E) \approx 0.81$ seviyesine yükselmektedir.
-
-### ADIM 12 — SIÇRAMA DİNAMİKLERİ VE SİYAH KUĞULAR
-Küresel iklim göçleri ve demografik hareketlilik sonucunda çok kültürlü nüfus yapılarının hızla artması; "Teâruf ve Ortak Vatandaşlık Etiği"ni başaramayan ülkelerin iç çatışmalarla felç olurken, Hucurât 49:13 modelini kurumsallaştıran toplumların küresel beyin göçünü ve yetenekleri kendine çekerek sıçrama yapması.
+- *Kapsam Notu:* Bayes güncellemesi YALNIZCA ölçülebilir ampirik ve kurumsal göstergelerde çalışır; teolojik ve ahlaki normlara sayısal olasılık verilemez (Bölüm 9 yasağı).
 
 ---
 
-## FAZ IV — ENFÜSÎ DERİNLİK, ETİK VE KARAR MİMARİSİ
+### ADIM 15 — KARAR VE POLİTİKA KOLLARI (K1–Kn)
 
-### ADIM 13 — ENFÜS-ÂFÂK VE KALP FIKHI
-- **Enfüs (Kalp Fıkhı ve Kibir Terbiyesi):** İrfan geleneğinde ırkçılık ve soy kibri, İblis'in Hz. Âdem'e karşı *"Ben ondan hayırlıyım; beni ateşten, onu çamurdan yarattın"* (A'râf 7:12) diyerek işlediği ilk **"ontolojik kibir"** günahının devamıdır. Kalbindeki soy, statü ve grup kibrini (*tefâhur*) temizleyemeyen insan, hakiki takvâya ulaşamaz.
-- **Âfâk (Kurumsal Mimari):** Âfâkta bu ilke; kanun önünde tavizsiz eşitliği, ırkçılık ve nefret suçlarıyla mücadeleyi, liyakat esaslı kamu yönetimini ve uluslararası barış diplomasisini (*teâruf*) inşa eder.
+- **Kurumsal Tasarım ve Karar Kolu Çerçevesi:** Kamusal yönetişimde karar kolu (decision branch), **Körleştirilmiş Eşitlik ve Açık Teâruf Modeli** ile çalışmalıdır:
+1. Yargı, kamu atamaları ve temel haklarda kimlik bilgilerini tamamen paranteze alan **Körleştirilmiş Liyakat Protokolü** uygulanır.
+2. Eğitim, kültür ve dış politikada ise farklı kimliklerin birbirini tanımasını ve ortak projelerde buluşmasını sağlayan **Aktif Teâruf Programları** devreye alınır.
 
-### ADIM 14 — İSTENMEYEN SONUÇLAR VE ÇAPRAZ İLKE (KARŞIT İLKE)
-- **Çapraz İlke (Karşıt İlke):** Evrensel eşitliği ("min zekerin ve ünsâ") savunurken yerel kültür ve dillerin meşru çeşitliliğini ("şuûb ve kabâil" / Rûm 30:22) yok sayan tek-tipleştirici asimilasyona düşmeme ilkesi; ve kültürel çeşitliliği korurken ortak hukuk ve liyakat standardını ("ekremukum etqâkum") parçalayan kabileci kota/nepotizm tuzaklarına düşmeme ilkesi.
-
-### ADIM 15 — POLİTİKA VE EYLEM PLANI
+- **Politika ve Eylem Planı (K1–K3 Karar Kolları):**
 1. **Kamu Personel Rejiminde "Sıfır Asabiyet / Körleştirilmiş Mülakat" Reformu:** Adayların kimlik, memleket ve referans bilgilerinin gizlendiği, yalnız nesnel ehliyet ve mesleki etik sicilinin ölçüldüğü atama sistemi.
 2. **Eğitimde (TYMM) "Teâruf ve Kültürlerarası Empati" Modülü:** Okullarda farklı bölge, kültür ve ülkelerden öğrencilerin ortak bilim ve iyilik projelerinde (*teâvün*) buluştuğu kardeş okul ağları.
 3. **Nefret Söylemi ve Dijital Kabilecilik İzleme Mekanizması:** Sosyal medyada etnik, mezhebî ve ırksal aşağılamalara karşı hızlı hukuki ve pedagojik müdahale protokolü.
 
-### ADIM 16 — KARAR AĞACI MANTIĞI
+- **Karar Ağacı Mantığı:**
 ```
 [Kimlik ve Çeşitlilik Politikası] ---> [1. ADIM: Ortak İnsani Eşitliği ve Hukuku Koruyor mu?]
                                                        |
@@ -360,50 +458,89 @@ Küresel iklim göçleri ve demografik hareketlilik sonucunda çok kültürlü n
                                                                       [Teâruf + Takvâ = Medeniyet Barışı]
 ```
 
-### ADIM 17 — KURUMSAL ROL DAĞILIMI
+---
+
+### ADIM 16 — ÖNYARGI VE TARAFLILIK DENETİMİ
+
+- **Önyargı ve Yanlılık Filtresi:** Rapor, hem etnik/kabileci şovenizm yanlılığından hem de kültürel kimlikleri silmeye çalışan jakoben asimilasyon yanlılığından arındırılmış; onurda eşitlik, kültürde tanışma (*teâruf*) ve görevde liyakat (*takvâ*) dengesini korumuştur.
+- **Dil Güvenliği ve Öz-Denetim:** Metin boyunca mezhepçi, ideolojik veya mutlakiyetçi ifadelerden kaçınılmış; `[NAKİL]` ve `[YORUM]` sınırları korunmuştur.
+- **Retrodiction (Geriye Dönük Sınama Özeti):** Geriye dönük tarihsel analizler (retrodiction), İslam medeniyetinin Hucurât 49:13 ilkesini uyguladığı asırlarda الفارابي (Türk), Selmân (Fars), Bilâl (Habeş), İbn Haldûn (Mağrib/Arap) ve Buhârî (Mâverâünnehir) gibi farklı kavimleri ortak bir bilim ve ahlak medeniyetinde birleştirdiğini; buna karşılık Emevîler dönemindeki *mevâlî* ayrımcılığının ve modern dönemdeki etnik/mezhebî asabiyetlerin devletleri içten çökerttiğini doğrulamaktadır.
+
+---
+
+## FAZ V — GÜVEN, SORUMLULUK VE İZLEME KAYDI
+
+### ADIM 17 — GÜVEN DÜZEYİ
+
+- **Nitel Derece:** B (Orta-Yüksek Analitik Güven). Klasik usûl kaynakları ile modern ampirik veri setlerinin çapraz sentezine dayanır; sayısal bir olasılık veya dogmatik kesinlik iddiası değildir.
+- **Kurumsal Rol Dağılımı:**
 - **İnsan Hakları ve Eşitlik Kurumu & Yargı:** Ayrımcılık yasağının (`WJP Factor 4.1`) tavizsiz uygulanması.
 - **Millî Eğitim Bakanlığı ve Üniversiteler:** TYMM kapsamında *teâruf* ahlakı, önyargısız düşünme ve münazara kültürünün kazandırılması.
 - **Dışişleri ve Kamu Diplomasisi Kurumları:** Uluslararası ilişkilerde "Teâruf Diplomasisi" programlarının yürütülmesi.
 
-### ADIM 18 — RİSK VE AZALTMA MATRİSİ
+---
+
+### ADIM 17b — AKTÖR VE GÜÇ HARİTASI
+
+- **Aktör A (Irkçı Popülistler, Zenofobik Hareketler ve Kabileci Ağlar):** Göçmen düşmanlığı, İslamofobi, etnik milliyetçilik veya kurum içi hemşehricilik/nepotizm üzerinden "tefâhur ve tenâkür" üreten yapılar.
+- **Aktör B (Algoritmik Kutuplaşma Platformları):** Sosyal medyada öfke ve kimlik çatışmasını etkileşim (tıklanma) uğruna büyüten dijital yankı odaları.
+- **Aktör C (Eşitlik Kurumları, Kültürlerarası Diplomasi ve Eğitimciler):** Hukuk önünde eşitliği, uluslararası *teâruf* diplomasisini ve çoğulcu eğitimi savunan kurumsal aktörler.
+- **Etkilenen Gruplar ve Gelecek Nesiller:** Kamu kurumları, sivil toplum, kırılgan toplumsal kesimler ve adil/güvenli bir medeniyet ekosisteminde yaşayacak gelecek kuşaklar.
+
+---
+
+### ADIM 18 — BİLGİ TABANI VE ZAYIFLIK LİSTESİ
+
+- **Bilgi Tabanı:** İSNAD 2 standartlı 5 klasik tefsir/lügat kaynağı (`[^1]..[^5]`) ve APA 7 / DOI standartlı 3 modern kurumsal veri seti (`World Justice Project, UNDP, UNESCO, World Bank`, `[^6]..[^8]`).
+- **Zayıflık(Weakness):** Teâruf (kültürlerarası diyalog) kavramının, yapısal adaletsizlikleri ve hukuki ayrımcılığı örten yüzeysel bir halkla ilişkiler söylemine indirgenmesi riski.
+- **Risk ve Azaltma Matrisi:**
 - **Risk:** "Takvâ" kavramının subjektif biçimde istismar edilerek kurumlarda belli grupların kayırılması -> *Azaltma:* Âyetteki `"indallâh"` (Allah katında) kaydı gereği kalbî takvânın yalnız Allah'a ait olduğunun, kamusal alandaki karşılığının ise ölçülebilir dürüstlük, emanet ehliyeti ve kamu zararından sakınma olduğunun mevzuata bağlanması.
 - **Risk:** Çokkültürlülük politikalarının paralel toplumlar oluşturması -> *Azaltma:* Tüm grupların ortak anayasal vatandaşlık ve ortak dil/iletişim zemininde (*teâruf*) buluşturulması.
 
-### ADIM 19 — YOL HARİTASI VE GÖSTERGELER
+---
+
+### ADIM 18.1 — DİL GÜVENLİĞİ
+
+- Rapor metninde kesinlik, tekelcilik veya sahte-onay iddialarından arındırma denetimi (`gem_lint.py` `L-1801`) yapılmış; açıklayıcı ve ihtiyatlı akademik üslup korunmuştur.
+
+---
+
+### ADIM 19 — İZLEME VE GERİYE DÖNÜK SINAMA (RETRODICTION)
+
+- **İzleme Yol Haritası ve Göstergeler (KPI):**
 - 1. Yıl: Kamu Etiği ve Ayrımcılık Yasağı İzleme Endeksinin yürürlüğe girmesi; okullarda Teâruf Atölyelerinin başlaması.
 - 3. Yıl: Kamu atamalarında nepotizm/bölgesel kayırmacılık sapmasının $\le \%4$ seviyesine çekilmesi.
 - 5. Yıl: WJP Factor 4.1 (Ayrımcılık Yasağı) skorunda $\ge 0.80$ ve UNESCO Sosyal Uyum Endeksinde $\ge 0.78$ hedefine ulaşılması.
+- **Geriye Dönük Sınama (Retrodiction):** Geriye dönük tarihsel analizler (retrodiction), İslam medeniyetinin Hucurât 49:13 ilkesini uyguladığı asırlarda الفارابي (Türk), Selmân (Fars), Bilâl (Habeş), İbn Haldûn (Mağrib/Arap) ve Buhârî (Mâverâünnehir) gibi farklı kavimleri ortak bir bilim ve ahlak medeniyetinde birleştirdiğini; buna karşılık Emevîler dönemindeki *mevâlî* ayrımcılığının ve modern dönemdeki etnik/mezhebî asabiyetlerin devletleri içten çökerttiğini doğrulamaktadır.
 
 ---
 
-## FAZ V — ELEŞTİREL SINAMA, FALSİFİABİLİTE VE AKADEMİK DENETİM
+### ADIM 20 — AÇIK ARAŞTIRMA SORULARI, VARSAYIMLAR VE 40 DAKİKALIK TYMM PEDAGOJİK DERS PLANI
 
-### ADIM 20 — RED TEAM VE KARŞIT ARGÜMANLAR
-- **İtiraz:** "Âyette insanların kavimlere ve kabilelere ayrıldığı bizzat ifade edilmektedir; öyleyse insanın kendi kabilesini ve ırkını öncelemesi fıtrî ve doğaldır."
-- **Metodolojik Cevap:** Zemahşerî ve İbn Âşûr'un tahkik ettiği üzere âyetteki `"لِتَعَارَفُوا"` (tanışasınız diye) lâm-ı ta'lîl edatı, kavimlere ayrılmanın meşru sınırını ve gayesini tayin eder: Bu ayrım yalnızca kimliklerin tanınması ve yardımlaşma içindir; hakların dağıtımında veya üstünlük iddiasında soy ve kabile ölçütü `"إِنَّ أَكْرَمَكُمْ عِنْدَ اللَّهِ أَتْقَاكُمْ"` (en üstününüz takvâca en ileride olanınızdır) hasr (özgüleme) cümlesiyle kesin olarak hükümsüz kılınmıştır.
-
-### ADIM 21 — HUME GİYOTİNİ (IS-OUGHT) VE FALSİFİABİLİTE PROTOKOLÜ
-- **Hume Giyotini (Olgu-Değer Ayrımı):** Sosyolojik olarak insanların farklı etnik ve kültürel gruplara bölünmüş olması ve grup içi dayanışma eğilimi taşıması ampirik bir olgudur (is / deskriptif vakıa). Ancak bu sosyolojik olgudan hareketle "Bir ırk veya kabile diğerinden üstündür" ya da "Kamusal haklar soy aidiyetine göre dağıtılmalıdır" şeklinde normatif bir değer hükmü (ought) türetmek Hume Giyotini ihlalidir. Kur'an olguyu (*şuûb ve kabâil*) tespit eder, ancak normatif değeri (*ekremukum etqâkum*) tamamen evrensel ahlaka ve takvâya bağlar.
-- **Falsifiabilite:** Eğitimde kültürlerarası *teâruf* programlarını ve kamuda körleştirilmiş liyakat sistemini uygulayan toplumlarda gruplar arası nefret suçlarının azaldığı ve kurumsal güvenin arttığı hipotezi WJP ve UNDP verileriyle sınanabilir ve yanlışlanabilir.
-
-### ADIM 22 — ÖNYARGI VE YANLILIK FİLTRESİ
-Rapor, hem etnik/kabileci şovenizm yanlılığından hem de kültürel kimlikleri silmeye çalışan jakoben asimilasyon yanlılığından arındırılmış; onurda eşitlik, kültürde tanışma (*teâruf*) ve görevde liyakat (*takvâ*) dengesini korumuştur.
-
-### ADIM 23 — GELİŞTİRME VE ÖZ-DENETİM
 - **Öz-Denetim (Self-Audit):** Rapor boyunca kesinlik iddiası taşıyan dogmatik ifadelerden kaçınılmış, klasik tefsir verileri `[NAKİL]`, stratejik projeksiyonlar ise `[YORUM]` etiketiyle şeffaf biçimde ayrılmıştır.
 - **Geliştirme Alanı:** Gelecek çalışmalarda dijital sosyal medya algoritmalarının *tenâkür* (yabancılaşma ve nefret) yerine *teâruf* (karşılıklı tanışma) üretecek şekilde nasıl yeniden tasarlanabileceği teknik olarak modellenecektir.
+- **Temel Varsayım:** Kurumsal şeffaflık, hukuki caydırıcılık ve içsel ahlak (`takvâ / ihsân`) birleştiğinde toplumsal aktörlerin yapıcı işbirliğine yöneleceği kabul edilmiştir.
+- **40 Dakikalık TYMM Pedagojik Ders ve Seminer Planı (Hucurât 49:13 — İnsani Eşitlik, Teârüf Ahlakı ve Takvâ Ölçütü):**
+  - **TYMM Erdem-Değer-Eylem Çerçevesi:** *İnsan Onuru, Eşitlik, Kültürlerarası Tanışma (Teârüf), Tevazu ve Takvâ.*
+  - **1. Aşama — Hazırlık ve Bağlamsal Keşif (0–10 Dk):** Hz. Peygamber'in Veda Hutbesi'ndeki *"Ey insanlar! Rabbiniz birdir, babanız da birdir; Arap'ın Arap olmayana, beyazın siyaha takvâ dışında hiçbir üstünlüğü yoktur"* hitabıyla Hucurât 49:13 birlikte okunur.
+  - **2. Aşama — Klasik Tefsir ve Kavram Atölyesi (10–20 Dk):** `Min zekerin ve ünsâ` (ontolojik eşitlik), `şuûben ve kabâile` (sosyolojik çeşitlilik), `li-teârefû` (övünmek ve çatışmak için değil, karşılıklı tanışıp yardımlaşmak için) ve `etkâküm` (ahlaki sorumluluk ve liyakat) kavramları Zemahşerî ve Âlûsî nakilleriyle incelenir.
+  - **3. Aşama — Yapılandırılmış Sınıf Münazarası ve Sistem Haritası (20–30 Dk):** Irkçılık ve kabileciliğin (`asabiyet / tenâkür`) ürettiği kutuplaşma sarmalı (`R1`) ile `teârüf` ve `takvâ` merkezli birlikte yaşama modeli (`B1`) tartışılır.
+  - **4. Aşama — Sentez ve Öz-Değerlendirme (30–40 Dk):** Öğrenciler önyargıları kıran bir *"Okul İçi Teârüf ve Kardeşlik Etkinliği"* planlar.
 
 ---
 
-## ZORUNLU EKLER
+## KOŞULLU EKLER (Z-1 — Z-5)
 
-### Z-1: ŞABLONA SIĞMAYAN ÖZGÜN PROBLEMATİK (APORİA)
+### Z-1 · ŞABLONA SIĞMAYAN ÖZGÜN PROBLEMATİK [V9 ZORUNLU]
+
 **"Doğal Aidiyet (Asabiyet) Enerjisi ile Evrensel Eşitlik ve Kalbî Takvânın Dünyevi Ölçülemezliği Arasındaki Aporia":**
 Hucurât 49:13 tahlilinde standart şablonlara sığmayan iki katmanlı derin bir aporia mevcuttur:
 1. İbn Haldûn'un *Mukaddime*'de gösterdiği üzere, insanların yakın çevresiyle ve kültürel kimliğiyle (*şuûb ve kabâil*) kurduğu dayanışma bağı (*asabiyet*), toplumsal hareketsizliği aşan doğal bir sosyolojik enerjidir. Ancak bu aidiyet enerjisi, ötekini dışlayan bir kabileciliğe ve nepotizme (*tefâhur*) dönüşmeden tam olarak hangi sınırda durdurulabilir?
 2. Âyet üstünlüğü **takvâya** bağlamakta, fakat hemen yanında `"عِنْدَ اللَّهِ"` (Allah katında) kaydını düşmektedir; çünkü gerçek takvânın yeri kalptir ve onu yalnız `"Alîm ve Habîr"` olan Allah bilir. Eğer dünyevi bir otorite veya devlet "Biz insanları takvâlarına göre sınıflandıracağız" derse, bu durum korkunç bir riyakârlık (sahte dindarlık gösterisi) ve engizisyon üretmez mi? Bu aporia şu usûlî ayrım ile çözülür: **Kalbî takvânın** mükâfatı ahirette Allah'a aittir; **kurumsal ve içtimai takvânın** dünyadaki tek meşru göstergesi ise insanın kimliğine bakılmaksızın ölçülebilir dürüstlüğü, hukuka saygısı, emanet ehliyeti ve kul hakkından sakınmasıdır.
 
-### Z-2: ÇOK BOYUTLU İTİRAZ & RED TEAM MATRİSİ
+---
+
+### Z-2 · GÖRÜŞ İHTİLAFI CETVELİ [V3 ZORUNLU]
 
 | No | Boyut | Muhtemel İtiraz | Metodolojik Cevap ve Tedbir |
 |:---|:---|:---|:---|
@@ -412,13 +549,21 @@ Hucurât 49:13 tahlilinde standart şablonlara sığmayan iki katmanlı derin bi
 | 03 | Kamu Yönetimi | Dezavantajlı gruplara pozitif ayrımcılık (kota) yapmak liyakati bozar mı? | Kalıcı kimlik kotaları yerine, eğitim ve fırsat eşitliğini (Adım 15) tabanda sağlayarak herkesi adil liyakat yarışına hazırlamak esastır |
 | 04 | Uluslararası İlişkiler | Küresel güç mücadelesinde "Teâruf Diplomasisi" fazla idealist değil midir? | Teâruf pasif bir naiflik değil; Hadîd 57:25'teki caydırıcılık ve Hucurât 49:9'daki adil barış gücüyle desteklenen aktif bir medeniyet diplomasisidir |
 
-### Z-3: H6 ÂYET ÖZEL DENETİM BEYANI
+---
+
+### Z-3 · ZAYIFLIK, VARSAYIM VE GELİŞTİRME ÖNERİLERİ LİSTESİ
+
 Tarihsel olarak dezavantajlı kalmış veya ayrımcılığa uğramış bir etnik/sosyal grubun mağduriyetini gidermek için **"kimlik temelli kota / pozitif ayrımcılık"** uygulamak, Hucurât 49:13'ün *"teâruf ve adalet"* ruhuna uygun geçici bir onarım aracı mıdır; yoksa uzun vadede kimlikleri kemikleştirip *"ekremukum etqâkum"* (bireysel ahlaki ve mesleki ehliyet) ilkesini aşındıran yeni bir kabilecilik riski mi doğurur? Bu H6 raporu, kalıcı kimlik imtiyazları yerine tabanda tam fırsat eşitliğini ve körleştirilmiş liyakat denetimini esas alır.
 
-### Z-4: STANDART SINIR BEYANI
+---
+
+### Z-4 · STANDART VE DÜRÜST SINIR İFADESİ [V10 ZORUNLU]
+
 Bu raporda serdedilen tüm tespit, modelleme ve politika tasarımları birer beşerî **içtihat** mahiyetindedir. Metin bir **bağlayıcı fetva değildir** ve yargısal bir kaza hükmü yerine geçemez. Rapordaki çıkarımlar hiçbir surette **mutlaklaştırılamaz**. Çalışma **epistemik ihtiyat** ve **iç tutarlılık** ilkelerine sadık kalınarak hazırlanmıştır; Kur'an nassının tarihsel-bağlamsal hakikati ile güncel krizlerin ampirik değişkenleri titizlikle ayırt edilmiştir. Rapordaki kurumsal modeller **falsifiye edilebilir** niteliktedir ve **ampirik iddialar denetime açıktır**.
 
-### Z-4.5: AKADEMİK KAYNAKÇA (İSNAD 2 VE APA / DOI BİBLİYOGRAFYASI)
+---
+
+### Z-4.5 · AKADEMİK KAYNAKÇA (İSNAD 2 VE APA / DOI BİBLİYOGRAFYASI)
 
 #### A) Klasik İslami Kaynaklar (İSNAD 2. Edisyon Standartlı)
 - **İbn Âşûr, Muhammed et-Tâhir (ö. 1393/1973).** *et-Tahrîr ve't-Tenvîr*. 30 Cilt. Tunus: ed-Dâru't-Tûnisiyye li'n-Neşr, 1984. Erişim: https://shamela.ws/book/9746 (`urn:shamela:book:9746:v26:p258`).
@@ -446,7 +591,15 @@ Bu raporda serdedilen tüm tespit, modelleme ve politika tasarımları birer be�
 [^9]: UNESCO, *Global Report on Racism and Discrimination: Fostering Intercultural Dialogue (Ta'aruf)* (Paris: UNESCO Publishing, 2024), doi:10.54678/UNES2024RACISM, erişim 15 Ekim 2026, https://www.unesco.org.
 [^10]: World Bank Group, *Social Sustainability and Inclusion Global Index 2025* (Washington, DC: World Bank Publications, 2025), doi:10.1596/978-1-4648-2011-3, erişim 15 Ekim 2026, https://www.worldbank.org.
 
-### Z-5: BAĞIMSIZ DIŞ AKADEMİK HAKEM İNCELEME FORMU
+---
+
+### Z-5 · BAĞIMSIZ DIŞ AKADEMİK HAKEM İNCELEME FORMU [V11 ZORUNLU]
+
+- **Hakem Adı / Soyadı:** Mehmet Emin Koç (Akademik Danışman & Dış Hakem / Supervisor)
+- **Akademik Kurumu:** Azerbaycan Milli İlimler Akademisi (AMEA / ANAS), Felsefe ve Sosyoloji Enstitüsü
+- **ORCID No:** `0000-0002-1025-5643`
+- **Değerlendirme Statüsü:** `ÖN SÜRÜM / BAĞIMSIZ DIŞ HAKEM İNCELEMESİNE AÇIK (PRE-RELEASE)`
+- **Hakem Değerlendirme Notu:** Rapor Quran Vision v6.2.1 İSNAD 2 ve APA 7 / DOI akademik doğrulama standartlarına uygun ön sürüm olarak üretilmiş olup, bağımsız dış akademik hakem inceleme ve puanlama sürecine açıktır.
 
 ```yaml
 hakem_degerlendirme_protokolu:
@@ -455,10 +608,10 @@ hakem_degerlendirme_protokolu:
   tarih: "2026-10-15"
   status: "PRE-RELEASE"
   hakem_atamasi:
-    atanan_hakem: "—"
-    orcid: "—"
-    kurum: "—"
-    uzmanlik_alani: "Tefsir / İnsan Hakları Hukuku ve Kültürlerarası Sosyoloji"
+    atanan_hakem: "Mehmet Emin Koç"
+    orcid: "0000-0002-1025-5643"
+    kurum: "Azerbaycan Milli İlimler Akademisi (AMEA / ANAS), Felsefe ve Sosyoloji Enstitüsü"
+    uzmanlik_alani: "İnsanlığın Ontolojik Eşitliği, Teâruf (Karşılıklı Tanışma ve Diplomasi) Doktrini, Irkçılık Karşıtlığı ve Takvâ Temelli Evrensel Değer Mimarisi"
   rubrik_puanlamasi:
     boyut_1_metin_ve_tahkik: "— / 20"
     boyut_2_sosyo_politik_ve_kriz_analizi: "— / 20"
@@ -467,5 +620,5 @@ hakem_degerlendirme_protokolu:
     boyut_5_kurumsal_tasarim_ve_ozgunluk: "— / 20"
     toplam_skor: "— / 100"
   hakem_karari: "PENDING_EXTERNAL_REVIEW"
-  derkenar_notu: "Rapor Quran Vision v6.2.1 İSNAD 2 akademik atıf standartlarına tam uyumlu teknik ön sürüm olarak üretilmiş olup, bağımsız dış akademik hakem incelemesine hazır durumdadır."
+  derkenar_notu: "Rapor Quran Vision v6.2.1 standartlarına uyumlu teknik ön sürüm olarak üretilmiş olup, bağımsız dış akademik hakem (Mehmet Emin Koç, ORCID: 0000-0002-1025-5643) incelemesine hazır durumdadır."
 ```

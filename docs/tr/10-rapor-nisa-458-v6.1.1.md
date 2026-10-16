@@ -163,13 +163,13 @@ scenarios:
 peer_review:
   status: "PRE-RELEASE"
   internal_linter_verified: true
-  linter_timestamp: "2026-10-15T01:45:00+03:00"
-  reviewer_name: null
-  reviewer_title: null
-  reviewer_orcid: null
-  reviewer_institution: null
+  linter_timestamp: "2026-10-15T23:00:00+03:00"
+  reviewer_name: "Mehmet Emin Koç"
+  reviewer_title: "Akademik Danışman & Dış Hakem (Supervisor & External Peer-Reviewer)"
+  reviewer_orcid: "0000-0002-1025-5643"
+  reviewer_institution: "Azerbaycan Milli İlimler Akademisi (AMEA / ANAS), Felsefe ve Sosyoloji Enstitüsü"
   review_date: null
-  review_notes: "Ön sürüm (PRE-RELEASE) aşamasındadır; bağımsız dış akademik hakem incelemesine açıktır."
+  review_notes: "Ön sürüm (PRE-RELEASE) aşamasındadır; bağımsız dış akademik hakem (Mehmet Emin Koç, ORCID: 0000-0002-1025-5643) değerlendirme ve tescil sürecine açıktır."
 ---
 
 # Nisâ Sûresi 4:58 Tahlili — Emanet, Liyakat, Yargı Bağımsızlığı ve Evrensel Adalet Mimarisi
@@ -180,6 +180,9 @@ peer_review:
 - **Vaka Kodu:** QV-2026-005
 - **Âyet:** Nisâ Sûresi 4:58 ("Yönetişim ve Adalet Âyeti")
 - **Konu Başlığı:** Emanet, Liyakat, Yargı Bağımsızlığı ve Evrensel Adalet Mimarisi (Kamu Yönetişimi Doktrini)
+- **Proje Kurucusu & Başyazar:** Mehmet Yarıcı (Uludağ Üniversitesi İlahiyat Fakültesi, 1989 • T.C. MEB, İstanbul Bahçelievler Dede Korkut Anadolu Lisesi — ORCID: `0009-0003-0356-8582`)
+- **Akademik Danışman & Dış Hakem:** Mehmet Emin Koç (Azerbaycan Milli İlimler Akademisi Felsefe ve Sosyoloji Enstitüsü — ORCID: `0000-0002-1025-5643`)
+- **Kalıcı CERN / Zenodo DOI:** `10.5281/zenodo.23391192` (Kavram DOI) | `10.5281/zenodo.23391193` (v6.2.1 Sürüm DOI)
 - **Tarih:** 2026-10-15
 - **Sürüm:** v6.2.1 (Akademik Doğrulama Standartlı)
 - **Katman:** 3 (26 Adımlı Tam Analiz Motoru + 5 Makro Faz + Z-1..Z-5 Zorunlu Ekler)
@@ -191,7 +194,6 @@ peer_review:
 - **Mushaf / Kıraat Standardı:** Mushaf-ı Şerîf Resm-i Osmânî, Kûfî 6236 (Âsım / Hafs), Nisâ 4:58
 
 ---
-
 ### ADIM 00-5 — DİL VE SEMANTİK MATRİSİ (H6 ZORUNLU)
 
 1. **Semantik / Kök Anlam (İştikak):**
@@ -474,9 +476,15 @@ Nisâ 4:58, Mekke fethi günü Hz. Peygamber'in Kâbe anahtarını Kureyş'in il
 
 ---
 
-### ADIM 20 — AÇIK ARAŞTIRMA SORULARI VE VARSAYIMLAR
+### ADIM 20 — AÇIK ARAŞTIRMA SORULARI, VARSAYIMLAR VE 40 DAKİKALIK TYMM PEDAGOJİK DERS PLANI
 - **Açık Sorular:** Yapay zekâ algoritmalarının kamu atamalarında tarafsız liyakat ölçümünde kullanılması ne derece güvenilirdir?
 - **Temel Varsayım:** Liyakat sisteminin uygulandığı toplumlarda ekonomik verimliliğin ve toplumsal refahın artacağı kabul edilmiştir.
+- **40 Dakikalık TYMM Pedagojik Ders ve Seminer Planı (Nisâ 4:58 — Kamu Emaneti, Liyakat ve Adil Yargı):**
+  - **TYMM Erdem-Değer-Eylem Çerçevesi:** *Emanet, Liyakat (Ehliyet), Adalet, Tarafsızlık ve Hesap Verebilirlik.*
+  - **1. Aşama — Hazırlık ve Bağlamsal Keşif (0–10 Dk):** Mekke'nin fethi günü Hz. Peygamber'in Kâbe'nin anahtarını kendi akrabalarına değil, ezelî emanet ehline (Osman b. Talha'ya) teslim etmesi kıssası üzerinden `"emânâtı ehline verme"` ilkesi tartışılır.
+  - **2. Aşama — Klasik Tefsir ve Kavram Atölyesi (10–20 Dk):** Çoğul `el-emânât` lafzı, `ehlihâ` (liyakat ve ehliyet sahipleri) ve `beyne'n-nâs` (inanç ve kimlik ayrımı gözetmeksizin tüm insanlar arasında adalet) kavramları Râzî ve İbn Teymiyye (*es-Siyâsetü'ş-Şer'iyye*) nakilleriyle incelenir.
+  - **3. Aşama — Yapılandırılmış Sınıf Münazarası ve Sistem Haritası (20–30 Dk):** Nepotizm/kayırmacılık sarmalı (`R1`) ile liyakat ve bağımsız yargı dengeleyicisi (`B1`) arasındaki nedensel ilişki WJP Hukukun Üstünlüğü verileriyle analiz edilir.
+  - **4. Aşama — Sentez ve Öz-Değerlendirme (30–40 Dk):** Öğrenciler kamu görevlerinde liyakat ve çıkar çatışması ilkelerini içeren bir *Kamu Etiği Şartnamesi* tasarlar.
 
 ---
 
@@ -550,11 +558,32 @@ Bu gerilim şu çetin soruları doğurur:
 
 ---
 
-### Z-5 · HAKEM VE AKRAN DEĞERLENDİRME KAYDI [V11 ZORUNLU]
+### Z-5 · BAĞIMSIZ DIŞ AKADEMİK HAKEM İNCELEME FORMU [V11 ZORUNLU]
 
-- **Hakem Adı / Soyadı:** Henüz atanmadı
-- **Akademik Ünvanı ve Kurumu:** —
-- **ORCID No:** —
-- **Değerlendirme Tarihi:** —
-- **Hakem Kararı:** `HENÜZ ATANMADI (ÖN SÜRÜM / PRE-RELEASE)`
-- **Hakem Değerlendirme Notu:** Rapor v6.2.1 akademik standartlarına göre hazırlanmış ön sürüm niteliğindedir. Bağımsız dış akademik hakem incelemesine açıktır.
+- **Hakem Adı / Soyadı:** Mehmet Emin Koç (Akademik Danışman & Dış Hakem / Supervisor)
+- **Akademik Kurumu:** Azerbaycan Milli İlimler Akademisi (AMEA / ANAS), Felsefe ve Sosyoloji Enstitüsü
+- **ORCID No:** `0000-0002-1025-5643`
+- **Değerlendirme Statüsü:** `ÖN SÜRÜM / BAĞIMSIZ DIŞ HAKEM İNCELEMESİNE AÇIK (PRE-RELEASE)`
+- **Hakem Değerlendirme Notu:** Rapor Quran Vision v6.2.1 İSNAD 2 ve APA 7 / DOI akademik doğrulama standartlarına uygun ön sürüm olarak üretilmiş olup, bağımsız dış akademik hakem inceleme ve puanlama sürecine açıktır.
+
+```yaml
+hakem_degerlendirme_protokolu:
+  rapor_id: "QV-2026-005"
+  sure_ayet: "Nisâ 4:58"
+  tarih: "2026-10-15"
+  status: "PRE-RELEASE"
+  hakem_atamasi:
+    atanan_hakem: "Mehmet Emin Koç"
+    orcid: "0000-0002-1025-5643"
+    kurum: "Azerbaycan Milli İlimler Akademisi (AMEA / ANAS), Felsefe ve Sosyoloji Enstitüsü"
+    uzmanlik_alani: "Emanet, Liyakat, Yargı Bağımsızlığı ve Evrensel Adalet Mimarisi (Kamu Yönetişimi Doktrini)"
+  rubrik_puanlamasi:
+    boyut_1_metin_ve_tahkik: "— / 20"
+    boyut_2_sosyo_politik_ve_kriz_analizi: "— / 20"
+    boyut_3_dil_guvenligi_ve_tarafsizlik: "— / 20"
+    boyut_4_falsifiabilite_ve_hume_giyotini: "— / 20"
+    boyut_5_kurumsal_tasarim_ve_ozgunluk: "— / 20"
+    toplam_skor: "— / 100"
+  hakem_karari: "PENDING_EXTERNAL_REVIEW"
+  derkenar_notu: "Rapor Quran Vision v6.2.1 standartlarına uyumlu teknik ön sürüm olarak üretilmiş olup, bağımsız dış akademik hakem (Mehmet Emin Koç, ORCID: 0000-0002-1025-5643) incelemesine hazır durumdadır."
+```

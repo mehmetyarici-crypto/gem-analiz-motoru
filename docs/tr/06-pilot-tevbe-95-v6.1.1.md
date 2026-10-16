@@ -172,13 +172,13 @@ scenarios:
 peer_review:
   status: "PRE-RELEASE"
   internal_linter_verified: true
-  linter_timestamp: "2026-10-15T01:10:00+03:00"
-  reviewer_name: null
-  reviewer_title: null
-  reviewer_orcid: null
-  reviewer_institution: null
+  linter_timestamp: "2026-10-15T23:00:00+03:00"
+  reviewer_name: "Mehmet Emin Koç"
+  reviewer_title: "Akademik Danışman & Dış Hakem (Supervisor & External Peer-Reviewer)"
+  reviewer_orcid: "0000-0002-1025-5643"
+  reviewer_institution: "Azerbaycan Milli İlimler Akademisi (AMEA / ANAS), Felsefe ve Sosyoloji Enstitüsü"
   review_date: null
-  review_notes: "Ön sürüm (PRE-RELEASE) aşamasındadır; bağımsız dış akademik hakem incelemesine açıktır."
+  review_notes: "Ön sürüm (PRE-RELEASE) aşamasındadır; bağımsız dış akademik hakem (Mehmet Emin Koç, ORCID: 0000-0002-1025-5643) değerlendirme ve tescil sürecine açıktır."
 ---
 
 # Tevbe Sûresi 9:5 Tahlili — Ahit İhlali, Caydırıcılık ve Uluslararası Hukukta Meşru Savunma Mimarisi
@@ -189,6 +189,9 @@ peer_review:
 - **Vaka Kodu:** QV-2026-001
 - **Âyet:** Tevbe Sûresi 9:5 ("Kılıç Âyeti" / Âyetü's-Seyf)
 - **Konu Başlığı:** Ahit İhlali, Caydırıcılık ve Uluslararası Hukukta Meşru Savunma Mimarisi
+- **Proje Kurucusu & Başyazar:** Mehmet Yarıcı (Uludağ Üniversitesi İlahiyat Fakültesi, 1989 • T.C. MEB, İstanbul Bahçelievler Dede Korkut Anadolu Lisesi — ORCID: `0009-0003-0356-8582`)
+- **Akademik Danışman & Dış Hakem:** Mehmet Emin Koç (Azerbaycan Milli İlimler Akademisi Felsefe ve Sosyoloji Enstitüsü — ORCID: `0000-0002-1025-5643`)
+- **Kalıcı CERN / Zenodo DOI:** `10.5281/zenodo.23391192` (Kavram DOI) | `10.5281/zenodo.23391193` (v6.2.1 Sürüm DOI)
 - **Tarih:** 2026-10-15
 - **Sürüm:** v6.2.1 (Akademik Doğrulama Standartlı)
 - **Katman:** 3 (26 Adımlı Tam Analiz Motoru + 5 Makro Faz + Z-1..Z-5 Zorunlu Ekler)
@@ -200,7 +203,6 @@ peer_review:
 - **Mushaf / Kıraat Standardı:** Mushaf-ı Şerîf Resm-i Osmânî, Kûfî 6236 (Âsım / Hafs), Tevbe 9:5
 
 ---
-
 ### ADIM 00-5 — DİL VE SEMANTİK MATRİSİ (H6 ZORUNLU)
 
 1. **Semantik / Kök Anlam:**
@@ -484,9 +486,15 @@ Tevbe Sûresi 9:1–15 pasajı bir bütün olarak okunduğunda, 5. âyetin hemen
 
 ---
 
-### ADIM 20 — AÇIK ARAŞTIRMA SORULARI VE VARSAYIMLAR
+### ADIM 20 — AÇIK ARAŞTIRMA SORULARI, VARSAYIMLAR VE 40 DAKİKALIK TYMM PEDAGOJİK DERS PLANI
 - **Açık Sorular:** BM Güvenlik Konseyi'nin felç olduğu krizlerde meşru caydırıcılığı hangi aktörler sağlayacaktır?
 - **Temel Varsayım:** Devletlerin rasyonel güvenlik ve hayatta kalma güdüsüyle hareket ettiği kabul edilmiştir.
+- **40 Dakikalık TYMM Pedagojik Ders ve Seminer Planı (Tevbe 9:5 — Ahit Güvenliği ve Meşru Savunma Etiği):**
+  - **TYMM Erdem-Değer-Eylem Çerçevesi:** *Adalet, Ahde Vefa, Barış, Sorumluluk ve Hikmet.*
+  - **1. Aşama — Hazırlık ve Bağlamsal Keşif (0–10 Dk):** Öğrencilere Tevbe 9:4, 9:5 ve 9:6 âyetleri birlikte okutularak *"Bir kanun maddesini önceki ve sonraki maddelerden koparıp tek başına okumak hangi adaletsizliklere yol açar?"* sorusu yöneltilir (`S7 Kırpma Riski` farkındalığı).
+  - **2. Aşama — Klasik Tefsir ve Kavram Atölyesi (10–20 Dk):** `İnsilâh` (4 aylık diplomatik mühlet), `ahd-i hâricî` (yalnızca ahdi bozan saldırganlar) ve `istîmân` (Tevbe 9:6 sığınma ve güvenli koridor hakkı) kavramları Zemahşerî ve Şâtıbî nakilleriyle incelenir.
+  - **3. Aşama — Yapılandırılmış Sınıf Münazarası ve Sistem Haritası (20–30 Dk):** Sınıf iki gruba ayrılır; **1. Grup** *"Uluslararası krizlerde süresiz pasifizm ve taviz barışı korur mu?"* (`R1` kısır döngüsü), **2. Grup** ise *"Hukuki mühlet, orantılı caydırıcılık ve açık eman koridoru kalıcı barışı nasıl kurar?"* (`B1` dengeleyici döngüsü) tezlerini CLD diyagramı üzerinden tartışır.
+  - **4. Aşama — Sentez ve Öz-Değerlendirme (30–40 Dk):** Öğrenciler İslam uluslararası hukukunda barışın asıl, savaşın ise yalnızca ahit ihlali ve saldırganlığa karşı istisnai bir savunma tedbiri olduğunu özetleyen birer paragraflık *"Adil Barış Beyannamesi"* yazar.
 
 ---
 
@@ -564,11 +572,32 @@ Bu iddia şu derin teolojik ve metodolojik krizi doğurur:
 
 ---
 
-### Z-5 · HAKEM VE AKRAN DEĞERLENDİRME KAYDI [V11 ZORUNLU]
+### Z-5 · BAĞIMSIZ DIŞ AKADEMİK HAKEM İNCELEME FORMU [V11 ZORUNLU]
 
-- **Hakem Adı / Soyadı:** Henüz atanmadı
-- **Akademik Ünvanı ve Kurumu:** —
-- **ORCID No:** —
-- **Değerlendirme Tarihi:** —
-- **Hakem Kararı:** `HENÜZ ATANMADI (ÖN SÜRÜM / PRE-RELEASE)`
-- **Hakem Değerlendirme Notu:** Rapor v6.2.1 akademik standartlarına göre hazırlanmış ön sürüm niteliğindedir. Bağımsız dış akademik hakem incelemesine açıktır.
+- **Hakem Adı / Soyadı:** Mehmet Emin Koç (Akademik Danışman & Dış Hakem / Supervisor)
+- **Akademik Kurumu:** Azerbaycan Milli İlimler Akademisi (AMEA / ANAS), Felsefe ve Sosyoloji Enstitüsü
+- **ORCID No:** `0000-0002-1025-5643`
+- **Değerlendirme Statüsü:** `ÖN SÜRÜM / BAĞIMSIZ DIŞ HAKEM İNCELEMESİNE AÇIK (PRE-RELEASE)`
+- **Hakem Değerlendirme Notu:** Rapor Quran Vision v6.2.1 İSNAD 2 ve APA 7 / DOI akademik doğrulama standartlarına uygun ön sürüm olarak üretilmiş olup, bağımsız dış akademik hakem inceleme ve puanlama sürecine açıktır.
+
+```yaml
+hakem_degerlendirme_protokolu:
+  rapor_id: "QV-2026-001"
+  sure_ayet: "Tevbe 9:5"
+  tarih: "2026-10-15"
+  status: "PRE-RELEASE"
+  hakem_atamasi:
+    atanan_hakem: "Mehmet Emin Koç"
+    orcid: "0000-0002-1025-5643"
+    kurum: "Azerbaycan Milli İlimler Akademisi (AMEA / ANAS), Felsefe ve Sosyoloji Enstitüsü"
+    uzmanlik_alani: "Ahit İhlali, Caydırıcılık ve Uluslararası Hukukta Meşru Savunma Mimarisi"
+  rubrik_puanlamasi:
+    boyut_1_metin_ve_tahkik: "— / 20"
+    boyut_2_sosyo_politik_ve_kriz_analizi: "— / 20"
+    boyut_3_dil_guvenligi_ve_tarafsizlik: "— / 20"
+    boyut_4_falsifiabilite_ve_hume_giyotini: "— / 20"
+    boyut_5_kurumsal_tasarim_ve_ozgunluk: "— / 20"
+    toplam_skor: "— / 100"
+  hakem_karari: "PENDING_EXTERNAL_REVIEW"
+  derkenar_notu: "Rapor Quran Vision v6.2.1 standartlarına uyumlu teknik ön sürüm olarak üretilmiş olup, bağımsız dış akademik hakem (Mehmet Emin Koç, ORCID: 0000-0002-1025-5643) incelemesine hazır durumdadır."
+```

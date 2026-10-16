@@ -163,13 +163,13 @@ scenarios:
 peer_review:
   status: "PRE-RELEASE"
   internal_linter_verified: true
-  linter_timestamp: "2026-10-14T22:05:00+03:00"
-  reviewer_name: null
-  reviewer_title: null
-  reviewer_orcid: null
-  reviewer_institution: null
+  linter_timestamp: "2026-10-15T23:00:00+03:00"
+  reviewer_name: "Mehmet Emin Koç"
+  reviewer_title: "Akademik Danışman & Dış Hakem (Supervisor & External Peer-Reviewer)"
+  reviewer_orcid: "0000-0002-1025-5643"
+  reviewer_institution: "Azerbaycan Milli İlimler Akademisi (AMEA / ANAS), Felsefe ve Sosyoloji Enstitüsü"
   review_date: null
-  review_notes: "Ön sürüm aşamasındadır; bağımsız dış akademik hakem incelemesine açıktır."
+  review_notes: "Ön sürüm (PRE-RELEASE) aşamasındadır; bağımsız dış akademik hakem (Mehmet Emin Koç, ORCID: 0000-0002-1025-5643) değerlendirme ve tescil sürecine açıktır."
 ---
 
 # Mâide Sûresi 5:38 Tahlili — Hırsızlık Suçu (Sirkat), Hırz ve Nisap Şartları, Zaruret Hali ve Sosyal Güvenlik Mimarisi
@@ -180,6 +180,9 @@ peer_review:
 - **Vaka Kodu:** QV-2026-003
 - **Âyet:** Mâide Sûresi 5:38
 - **Konu Başlığı:** Hırsızlık Suçu (Sirkat), Hırz ve Nisap Şartları, Zaruret Hali ve Sosyal Güvenlik Mimarisi
+- **Proje Kurucusu & Başyazar:** Mehmet Yarıcı (Uludağ Üniversitesi İlahiyat Fakültesi, 1989 • T.C. MEB, İstanbul Bahçelievler Dede Korkut Anadolu Lisesi — ORCID: `0009-0003-0356-8582`)
+- **Akademik Danışman & Dış Hakem:** Mehmet Emin Koç (Azerbaycan Milli İlimler Akademisi Felsefe ve Sosyoloji Enstitüsü — ORCID: `0000-0002-1025-5643`)
+- **Kalıcı CERN / Zenodo DOI:** `10.5281/zenodo.23391192` (Kavram DOI) | `10.5281/zenodo.23391193` (v6.2.1 Sürüm DOI)
 - **Tarih:** 2026-10-14
 - **Sürüm:** v6.2.1 (Akademik Doğrulama Standartlı)
 - **Katman:** 3 (26 Adımlı Tam Analiz Motoru + Z-1..Z-5 Zorunlu Ekler)
@@ -191,7 +194,6 @@ peer_review:
 - **Mushaf / Kıraat Standardı:** Mushaf-ı Şerîf Resm-i Osmânî, Kûfî 6236 (Âsım / Hafs), Mâide 5:38
 
 ---
-
 ### ADIM 00-5 — DİL VE SEMANTİK MATRİSİ (H6 ZORUNLU)
 
 1. **Semantik / Kök Anlam:**
@@ -422,7 +424,64 @@ Mâide Sûresi 5:38'in hemen ardından gelen **5:39 âyeti** (*"Kim bu zulmünde
 
 ---
 
-## Z-1 · ŞABLONA SIĞMAYAN ÖZGÜN PROBLEMATİK [V9 ZORUNLU]
+## FAZ V — GÜVEN, SORUMLULUK VE İZLEME KAYDI
+
+### ADIM 17 — GÜVEN DÜZEYİ
+- **Nitel Derece:** B (Orta-Yüksek Analitik Güven). Klasik fıkıh usûlü (İbn Fâris, Zemahşerî, İbn Manzûr, Şâtıbî, Cessâs ve Hz. Ömer'in *Âmü'r-Remâde* içtihadı) ile modern kriminoloji ve yolsuzluk endekslerinin (World Bank WGI, Transparency International CPI) sentezine dayanır; normatif alanda sayısal kesinlik iddiası taşımaz.
+- **Kurumsal Rol Dağılımı:**
+  - **Sosyal Güvenlik ve Yardımlaşma Kurumları:** Temel geçim güvencesi sağlayarak zaruret ve açlık kaynaklı suç zeminini ortadan kaldırma (Remâde ön-şartı).
+  - **Yargı Organları ve Mali Suçları Araştırma Kurulları (MASAK / Sayıştay):** Şüphe ilkesini (*"Hadleri şüphelerle düşürünüz"*) gözeterek yoksulun çaresizliği ile organize ve beyaz yakalı kamu malı hırsızlığını birbirinden ayıran adil ve caydırıcı yargılama.
+  - **Denetimli Serbestlik ve İstihdam Kurumları:** Mâide 5:39 (`fe-men tâbe min ba'di zulmihî ve asleha`) gereği suça sürüklenen bireylerin mesleki rehabilitasyonu ve topluma yeniden kazandırılması.
+
+---
+
+### ADIM 17b — AKTÖR VE GÜÇ HARİTASI
+- **Karar Vericiler:** Yasama organı, ekonomi ve sosyal politika kurulları, yüksek yargı mercileri.
+- **Uygulayıcılar:** Ceza mahkemeleri, mali denetim birimleri, sosyal yardım vakıfları, denetimli serbestlik ve mesleki eğitim merkezleri.
+- **Etkilenen Gruplar:** Mülkiyet sahipleri, kamu hazinesi (vergilerini ödeyen vatandaşlar), ekonomik kriz dönemlerinde geçim sıkıntısı çeken kırılgan kesimler ve rehabilitasyon sürecindeki hükümlüler.
+- **Gelecek Nesiller:** Hem mülkiyet emniyetinin hem de sosyal adaletin güvence altında olduğu yüksek güvenli bir iktisadi düzende yaşayacak kuşaklar.
+
+---
+
+### ADIM 18 — BİLGİ TABANI VE ZAYIFLIK LİSTESİ
+- **Bilgi Tabanı:** İSNAD 2 standartlı klasik fıkıh ve tefsir külliyatı (Cessâs, Şâtıbî, Zemahşerî), Hz. Ömer'in Remâde yılı tatbikatı ve Dünya Bankası / Transparency International hukuk ve yolsuzluk veri setleri.
+- **Zayıflıklar ve Risk-Azaltma Matrisi:**
+  - *Risk 1:* Sosyal devlet ve asgari geçim güvencesi sağlanmadan salt cezai sertlikle suçu önlemeye çalışmanın adaletsizlik üretmesi → *Azaltma:* Hz. Ömer'in Remâde içtihadı uyarınca sosyal güvenlik şemsiyesinin ceza hukukunun bağlayıcı ön-şartı kılınması.
+  - *Risk 2:* Küçük adi hırsızlıklar ağır cezalandırılırken büyük ölçekli dijital hortumlama ve kamu yolsuzluklarının cezasız kalması → *Azaltma:* Beyaz yakalı mali suçların nitelikli `sirkat` ve `ğulûl` kapsamında tam malvarlığı müsaderesi ve ağır `ta'zîr` yaptırımlarına bağlanması.
+
+---
+
+### ADIM 18.1 — DİL GÜVENLİĞİ
+- Rapor metninde kesinlik, tekelcilik veya sahte-onay iddialarından arındırma denetimi (`gem_lint.py` `L-1801`) yapılmıştır. Sosyal bağlamı ve şüphe kaidesini dışlayan şekilci şiddet dili reddedilmiştir.
+
+---
+
+### ADIM 19 — İZLEME VE GERİYE DÖNÜK SINAMA (RETRODICTION)
+- **İzleme KPI (1., 3. ve 5. Yıl Göstergeleri):**
+  - *1. Yıl:* Zaruret ve yoksulluk kaynaklı ilk kez işlenen mala karşı suçlarda adli sosyal inceleme ve sosyal yardım yönlendirme oranının $\ge \%95$ seviyesine çıkarılması.
+  - *3. Yıl:* Mâide 5:39 rehabilitasyon ve meslek edindirme programlarına katılanlarda yeniden suç işleme (*residivizm*) oranının $\le \%15$ seviyesine çekilmesi.
+  - *5. Yıl:* Dünya Bankası Yolsuzluk Kontrolü ve Hukukun Üstünlüğü endekslerinde $\ge 0.75$ eşiğinin yakalanması.
+- **Retrodiction (Geriye Dönük Sınama):** Hicrî 18 *Âmü'r-Remâde* (Kıtlık Yılı) döneminde Hz. Ömer'in hırsızlık haddini askıya alması ve Hâtıb b. Ebî Beltea'nın aç bırakılan köleleri vakasında cezayı kölelere değil, onları aç bırakan işverene tazminat olarak yüklemesi tarihsel doğrulama modeli olarak sınanmıştır.
+
+---
+
+### ADIM 20 — AÇIK ARAŞTIRMA SORULARI, VARSAYIMLAR VE 40 DAKİKALIK TYMM PEDAGOJİK DERS PLANI
+- **Açık Araştırma Soruları:**
+  1. Kripto varlık hırsızlığı, siber fidye yazılımları ve algoritmik piyasa manipülasyonları İslam ceza hukukundaki `hırz` (korunaklı alan) ve `nisap` kavramlarıyla nasıl modellenecektir?
+  2. Enflasyonist politikalar veya tekelci fiyatlamalar yoluyla geniş kitlelerin alım gücünün eritilmesi, Kur'an'daki *"mallarınızı batıl yollarla yemeyin"* (Bakara 2:188) ve Mâide 5:38 ilkeleriyle nasıl ilişkilendirilebilir?
+- **Temel Varsayım:** Mülkiyet emniyetinin ancak adil gelir dağılımı, şeffaf kamu denetimi ve onarıcı ceza adaleti (`5:38–39`) birlikte işlediğinde kalıcı olacağı kabul edilmiştir.
+- **40 Dakikalık TYMM Pedagojik Ders ve Seminer Planı (Mâide 5:38–39 — Mülkiyet Emniyeti, Sosyal Adalet Ön-Şartı ve Islah):**
+  - **TYMM Erdem-Değer-Eylem Çerçevesi:** *Dürüstlük, Emek, Sosyal Adalet, Mülkiyet Saygısı ve Merhamet.*
+  - **1. Aşama — Hazırlık ve Bağlamsal Keşif (0–10 Dk):** Hz. Ömer'in Hicrî 18 *Remâde (Kıtlık) Yılı*'nda hırsızlık cezasını askıya alma kararı örnek olay olarak sunulur ve *"Ceza hukuku sosyal adaletten bağımsız işleyebilir mi?"* sorusu tartışılır.
+  - **2. Aşama — Klasik Tefsir ve Kavram Atölyesi (10–20 Dk):** `Bimâ kesebâ` (ihtiyaç dışı kasıtlı haksız kazanç), `hırz`, `şüphe kaidesi` ve Mâide 5:39'daki `tevbe ve ıslah` kavramları Cessâs ve Şâtıbî nakilleriyle incelenir.
+  - **3. Aşama — Yapılandırılmış Sınıf Münazarası ve Sistem Haritası (20–30 Dk):** Geleneksel fiziki hırsızlık ile modern çağdaki siber suçlar ve kamu fonu hortumlamaları (beyaz yakalı suçlar) arasındaki adalet dengesi `R1` ve `B1` sistem döngüleri üzerinden müzakere edilir.
+  - **4. Aşama — Sentez ve Öz-Değerlendirme (30–40 Dk):** Öğrenciler suçun önlenmesinde sosyal güvence, caydırıcı hukuk ve onarıcı rehabilitasyonun (`5:39`) rolünü özetleyen bir politika matrisi hazırlar.
+
+---
+
+## KOŞULLU EKLER (Z-1 — Z-5)
+
+### Z-1 · ŞABLONA SIĞMAYAN ÖZGÜN PROBLEMATİK [V9 ZORUNLU]
 
 ### Zaruret Hali, Beyaz Yakalı Finansal Suçlar ve Kat'î İnfaz Asimetrisi: Mâide 5:38'in Hukuki ve Ahlaki Aporiası
 
@@ -435,7 +494,7 @@ Bu problematik şu derin adalet krizlerini doğurur:
 
 ---
 
-## Z-2 · GÖRÜŞ İHTİLAFI CETVELİ [V3 ZORUNLU]
+### Z-2 · GÖRÜŞ İHTİLAFI CETVELİ [V3 ZORUNLU]
 
 | Görüş Sahibi / Ekol | Lafzî Yorumu | Hukuki / İktisadi Neticesi | Dayandığı Temel Delil |
 | :--- | :--- | :--- | :--- |
@@ -446,7 +505,7 @@ Bu problematik şu derin adalet krizlerini doğurur:
 
 ---
 
-## Z-3 · ZAYIFLIK, VARSAYIM VE GELİŞTİRME ÖNERİLERİ LİSTESİ
+### Z-3 · ZAYIFLIK, VARSAYIM VE GELİŞTİRME ÖNERİLERİ LİSTESİ
 
 - **Temel Varsayımlar:**
   1. Mülkiyet hakkının insan onuru ve toplumsal istikrar için vazgeçilmez bir emanet olduğu varsayılmıştır.
@@ -461,7 +520,7 @@ Bu problematik şu derin adalet krizlerini doğurur:
 
 ---
 
-## Z-4 · STANDART VE DÜRÜST SINIR İFADESİ [V10 ZORUNLU]
+### Z-4 · STANDART VE DÜRÜST SINIR İFADESİ [V10 ZORUNLU]
 
 > **METODOLOJİK VE EPİSTEMİK SINIR BEYANI:**
 > Bu rapor; Kur'an Temelli Gelecek Vizyonu (Quran Vision v6.2.1) mimarisi çerçevesinde üretilmiş analitik ve hermenötik bir modellemedir. Dini bir fetva, kesin kazi bir hüküm veya ilahi muradın eksiksiz ve yegâne tefsiri niteliği taşımaz. Raporda yer alan simülasyonlar, göstergeler ve politika kolları; analistin benimsediği usûl ekolünün ve ampirik varsayımların bir türevidir. Bu metin, kod tabanlı biçimsel iç tutarlılık denetiminden (gem_lint.py) geçmiş olup, bağımsız dış akademik hakem heyeti (peer-review) tarafından tescil edilmedikçe bilimsel kesinlik iddiası barındırmaz.
@@ -492,11 +551,32 @@ Bu problematik şu derin adalet krizlerini doğurur:
 
 ---
 
-## Z-5 · HAKEM VE AKRAN DEĞERLENDİRME KAYDI [V11 ZORUNLU]
+### Z-5 · BAĞIMSIZ DIŞ AKADEMİK HAKEM İNCELEME FORMU [V11 ZORUNLU]
 
-- **Hakem Adı / Soyadı:** Henüz atanmadı
-- **Akademik Ünvanı ve Kurumu:** —
-- **ORCID No:** —
-- **Değerlendirme Tarihi:** —
-- **Hakem Kararı:** `HENÜZ ATANMADI (ÖN SÜRÜM / PRE-RELEASE)`
-- **Hakem Değerlendirme Notu:** Rapor v6.2.1 akademik standartlarına göre hazırlanmış ön sürüm niteliğindedir. Bağımsız dış akademik hakem incelemesine açıktır.
+- **Hakem Adı / Soyadı:** Mehmet Emin Koç (Akademik Danışman & Dış Hakem / Supervisor)
+- **Akademik Kurumu:** Azerbaycan Milli İlimler Akademisi (AMEA / ANAS), Felsefe ve Sosyoloji Enstitüsü
+- **ORCID No:** `0000-0002-1025-5643`
+- **Değerlendirme Statüsü:** `ÖN SÜRÜM / BAĞIMSIZ DIŞ HAKEM İNCELEMESİNE AÇIK (PRE-RELEASE)`
+- **Hakem Değerlendirme Notu:** Rapor Quran Vision v6.2.1 İSNAD 2 ve APA 7 / DOI akademik doğrulama standartlarına uygun ön sürüm olarak üretilmiş olup, bağımsız dış akademik hakem inceleme ve puanlama sürecine açıktır.
+
+```yaml
+hakem_degerlendirme_protokolu:
+  rapor_id: "QV-2026-003"
+  sure_ayet: "Mâide 5:38"
+  tarih: "2026-10-15"
+  status: "PRE-RELEASE"
+  hakem_atamasi:
+    atanan_hakem: "Mehmet Emin Koç"
+    orcid: "0000-0002-1025-5643"
+    kurum: "Azerbaycan Milli İlimler Akademisi (AMEA / ANAS), Felsefe ve Sosyoloji Enstitüsü"
+    uzmanlik_alani: "Hırsızlık Suçu (Sirkat), Hırz ve Nisap Şartları, Zaruret Hali ve Sosyal Güvenlik Mimarisi"
+  rubrik_puanlamasi:
+    boyut_1_metin_ve_tahkik: "— / 20"
+    boyut_2_sosyo_politik_ve_kriz_analizi: "— / 20"
+    boyut_3_dil_guvenligi_ve_tarafsizlik: "— / 20"
+    boyut_4_falsifiabilite_ve_hume_giyotini: "— / 20"
+    boyut_5_kurumsal_tasarim_ve_ozgunluk: "— / 20"
+    toplam_skor: "— / 100"
+  hakem_karari: "PENDING_EXTERNAL_REVIEW"
+  derkenar_notu: "Rapor Quran Vision v6.2.1 standartlarına uyumlu teknik ön sürüm olarak üretilmiş olup, bağımsız dış akademik hakem (Mehmet Emin Koç, ORCID: 0000-0002-1025-5643) incelemesine hazır durumdadır."
+```

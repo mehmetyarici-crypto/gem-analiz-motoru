@@ -185,13 +185,13 @@ scenarios:
 peer_review:
   status: "PRE-RELEASE"
   internal_linter_verified: true
-  linter_timestamp: "2026-10-15T15:10:00+03:00"
-  reviewer_name: null
-  reviewer_title: null
-  reviewer_orcid: null
-  reviewer_institution: null
-  reviewer_date: null
-  review_notes: "Ön sürüm (PRE-RELEASE) aşamasındadır; bağımsız dış akademik hakem incelemesine açıktır."
+  linter_timestamp: "2026-10-15T23:00:00+03:00"
+  reviewer_name: "Mehmet Emin Koç"
+  reviewer_title: "Akademik Danışman & Dış Hakem (Supervisor & External Peer-Reviewer)"
+  reviewer_orcid: "0000-0002-1025-5643"
+  reviewer_institution: "Azerbaycan Milli İlimler Akademisi (AMEA / ANAS), Felsefe ve Sosyoloji Enstitüsü"
+  review_date: null
+  review_notes: "Ön sürüm (PRE-RELEASE) aşamasındadır; bağımsız dış akademik hakem (Mehmet Emin Koç, ORCID: 0000-0002-1025-5643) değerlendirme ve tescil sürecine açıktır."
 ---
 
 # Mâide Sûresi 5:32 Tahlili — Yaşam Hakkının Dokunulmazlığı, İhyâ (Can Kurtarma) Doktrini, Küresel İnsani Güvenlik ve Biyoetik Mimarisi
@@ -202,6 +202,9 @@ peer_review:
 - **Vaka Kodu:** QV-2026-015
 - **Âyet:** Mâide Sûresi 5:32 ("Yaşam Hakkının Evrensel Dokunulmazlığı ve İhyâ [Can Kurtarma] Beyannamesi")
 - **Konu Başlığı:** Yaşam Hakkının Dokunulmazlığı, İhyâ (Can Kurtarma) Doktrini, Küresel İnsani Güvenlik ve Biyoetik Mimarisi
+- **Proje Kurucusu & Başyazar:** Mehmet Yarıcı (Uludağ Üniversitesi İlahiyat Fakültesi, 1989 • T.C. MEB, İstanbul Bahçelievler Dede Korkut Anadolu Lisesi — ORCID: `0009-0003-0356-8582`)
+- **Akademik Danışman & Dış Hakem:** Mehmet Emin Koç (Azerbaycan Milli İlimler Akademisi Felsefe ve Sosyoloji Enstitüsü — ORCID: `0000-0002-1025-5643`)
+- **Kalıcı CERN / Zenodo DOI:** `10.5281/zenodo.23391192` (Kavram DOI) | `10.5281/zenodo.23391193` (v6.2.1 Sürüm DOI)
 - **Tarih:** 2026-10-15
 - **Sürüm:** v6.2.1 (Akademik Doğrulama Standartlı • CERN/Zenodo DOI: `10.5281/zenodo.23391192` • ORCID: `0009-0003-0356-8582`)
 - **Katman:** 3 (26 Adımlı Tam Analiz Motoru + 5 Makro Faz + Z-1..Z-5 Zorunlu Ekler)
@@ -265,33 +268,70 @@ Mâide Sûresi 5:27–31 âyetlerinde insanlık tarihinin ilk cinayeti olan **H�
 
 ---
 
-### ADIM 02 — MUHATAP VE DİL GÜVENLİĞİ
-Hitap, İsrâiloğulları'na vazedilen ilahi hükmün İslam şeriatında da tüm insanlık için ebedî bir küllî kaide olarak tescil edilmesi formundadır. Dil güvenliği açısından âyetteki **`"نَفْسًا"` (herhangi bir can)** lafzı umumi ve şümullüdür; masum bir sivilin kanını dökmeyi hiçbir siyasi, etnik veya ideolojik gerekçe meşrulaştıramaz.
+### ADIM 02 — MANTIKSAL SEMANTİK VE KARŞIT İLKE TESTİ
+
+- **Koşul-Sonuç Yapısı:**
+  - *Birinci Evrensel Yasa (`Men katele nefsen bi-ğayri nefsin ev fesâdin fi'l-ardı fe-ke'ennemâ katele'n-nâse cemî'â`):* Bir cana veya yeryüzünde bozgunculuğa karşılık olmaksızın kim masum bir insanı öldürürse, bütün insanlığı öldürmüş gibi olur.
+  - *İkinci Evrensel Yasa (`ve men ahyâhâ fe-ke'ennemâ ahye'n-nâse cemî'â`):* Kim de bir canı yaşatırsa / ölümden kurtarırsa (`ihyâ`), bütün insanlığı yaşatmış gibi olur.
+- **Muhatap ve Dil Güvenliği:** Hitap, İsrâiloğulları'na vazedilen ilahi hükmün İslam şeriatında da tüm insanlık için ebedî bir küllî kaide olarak tescil edilmesi formundadır. Dil güvenliği açısından âyetteki **`"نَفْسًا"` (herhangi bir can)** lafzı umumi ve şümullüdür; masum bir sivilin kanını dökmeyi hiçbir siyasi, etnik veya ideolojik gerekçe meşrulaştıramaz.
+- **Çapraz İlke (Karşıt İlke):** Masumiyeti ve bağışlamayı savunurken (Mâide 5:28 & 5:32), masum sivillere yönelik aktif saldırganlığı (*bağy* ve *hirâbe*) caydırıcı hukuk gücüyle durdurma yükümlülüğünü (Bakara 2:179 — *"Kısasta sizin için hayat vardır"* ve Hucurât 49:9) ihmal etmeme ilkesi.
 
 ---
 
-### ADIM 03 — METİN İÇİ DELALET VE HÜKÜM-HİKMET DENGESİ
+### ADIM 03 — ÜÇLÜ ÇERÇEVE (ETHOS / LOGOS / PATHOS) VE İS-OUGHT KÖPRÜSÜ
+
+- **Ethos (Ahlaki Yük):** Tek bir masum insanın hayatını hiçbir siyasi, askeri veya iktisadi çıkar uğruna feda edilebilir bir "istatistik" veya "ikincil hasar" olarak görmemek; her bir canı bütün insanlık değerinde aziz bilmek.
+- **Logos (Mantıksal Tutarlılık):** Masumiyet dokunulmazlığı bölünemez bir küllî ilkedir; tek bir masumun haksız yere öldürülmesi meşrulaştırıldığında, bütün insanları koruyan ahlaki ve hukuki dokunulmazlık zırhı delinmiş olur (Râzî, İbn Âşûr).
+- **Pathos (Vicdani ve Duygusal Tesir):** `Ve men ahyâhâ fe-ke'ennemâ ahye'n-nâse cemî'â` müjdesiyle bir hekimin, bir arama-kurtarma görevlisinin veya bir mazlumu koruyan insanın çabasını "bütün insanlığı diriltmek" mertebesine yükseltir.
 - **Zahirî Hüküm:** Haksız yere cana kıymanın (*katlü'n-nefs*) en büyük cürüm oluşu ve bir insanın hayatını kurtarmanın (*ihyâ*) en yüce salih amel oluşu.
 - **Bâtınî Hikmet:** Toplumsal barış, insanların birbirinin can güvenliğine duyduğu sarsılmaz güven üzerine kuruludur. Tek bir masumun dokunulmazlığı delindiğinde toplumsal emniyet sözleşmesi çöker; tek bir mazlumun hayatı kurtarıldığında ise bütün insanlığın yaşam hakkı tahkim edilmiş olur.
+- **Hume Giyotini (Olgu-Değer Ayrımı):** Tarih boyunca savaşların, cinayetlerin ve güç mücadelelerinin var olması ampirik bir olgudur (*is*). Ancak "Dünyada çatışma ve şiddet hep vardır" olgusundan "Öyleyse sivil kayıplar ve şiddet doğaldır/meşrudur" şeklinde normatif bir hüküm (*ought*) çıkarmak Hume Giyotini ihlalidir. Mâide 5:32, Kâbil'in cinayet olgusunu tespit eder, ancak normatif değeri tek bir masumun hayatını bütün insanlığa denk tutan tavizsiz *ihyâ* ahlakına bağlar.
 
 ---
 
-### ADIM 04 — MAQĀṢID MATRİSİ
+### ADIM 04 — MAKASID ANALİZİ
+
 - **Hıfzu'n-Nefs (Yaşam Hakkının Tavizsiz Korunması):** Makâsıdü'ş-Şerîa'daki beş temel gayenin (*zarûriyyât-ı hamse*) en birincil halkası olan can dokunulmazlığı.
 - **Hıfzu'l-İhyâ ve's-Sıhha (Biyoetik, Halk Sağlığı ve Arama-Kurtarma):** Tıbbi tedavi, acil sağlık hizmetleri, organ bağışı, afet önleme ve insani yardımın farz-ı kifâye niteliğindeki kurumsal ibadet boyutu.
 - **Hıfzu'l-Emn ve's-Selâm (Sivil Koruma ve Şiddetsizlik):** Bireysel silahlanma, kan davası, terör ve savaş suçlarına karşı masum sivillerin korunması.
+- **Şâtıbî ve İbn Âşûr Makâsıd Hiyerarşisi:** `[YORUM]` Âyetin vaz'ettiği hüküm *zarûriyyât* katmanında insan onuru ve kamu düzenini doğrudan korurken, *hâciyyât* katmanında kurumsal işleyişi kolaylaştırır ve *tahsîniyyât* katmanında üstün medeniyet ahlakını (*mekârimü'l-ahlâk*) tamamlar.
 
 ---
 
-## FAZ II — ÇAĞDAŞ HARİTALAMA VE KRİZ MODELLEMESİ
+### ADIM 04b — YORUMCU KONUMU (GADAMER HERMENÖTİĞİ)
 
-### ADIM 05 — ÇAĞDAŞ TEZAHÜRLER VE AKTÖR HARİTASI
-- **Aktör A (Savaş Suçluları, Şiddet Şebekeleri ve Yaşam Hakkı İhlalci Yapılar):** Sivilleri hedef alan askeri operasyonlar, terör örgütleri, organize suç şebekeleri ve bireysel şiddet failleri.
-- **Aktör B (Küresel Silah Endüstrisi ve Biyoetik Eşitsizlik Rejimleri):** Otonom ölümcül silah sistemlerini (*LAWS*) yaygınlaştıran veya yaşam kurtarıcı ilaç/sağlık erişimini tekelci kâr uğruna kısıtlayan yapılar.
-- **Aktör C (İhyâ Kurumları — Sağlık Çalışanları, Arama-Kurtarma Ekipleri ve İnsani Diplomasi):** AFAD, Kızılay, WHO, sınır tanımayan doktorlar, hekimler, itfaiyeciler ve barış hukukçuları.
+1. **Usûl Ekolü:** Küllî Makâsıd ve *Şer'u Men Kablenâ* Tahkik Usûlü (Fahreddîn er-Râzî, Kurtubî, Râgıb el-İsfahânî ve Şâtıbî çizgisi — *Hıfzu'n-Nefs*in tüm zarûriyyâtın temeli olması).
+2. **Felsefi Perspektif:** Deontolojik yaşam dokunulmazlığı etiği, biyoetik ve insani güvenlik (*human security*).
+3. **Alternatif Yorumcu Konumlarından Ayrışma:**
+   - *Faydacı / Makyavelist Uç:* "Çoğunluğun veya devletin çıkarı için azınlığın/masumların feda edilebileceği" hesabıyla sivil kayıpları meşrulaştırır.
+   - *Dar Ceza Hukukçusu Uç:* Âyeti yalnızca kasten adam öldürme cezasına indirgeyip, `ve men ahyâhâ` (yaşatma/ihyâ) emrinin halk sağlığı, afet direnci ve iş güvenliği boyutlarını ihmal eder.
+   Raporumuz, hem masum cana yönelik her türlü tecavüzü reddeden hem de aktif `ihyâ` (hayat kurtarma) kurumlarını farz-ı kifâye sayan bütüncül modeli esas alır.
 
-### ADIM 06 — SİSTEMİK GÜÇ DİNAMİKLERİ VE RETRODICTION
-Tarihsel geriye dönük analiz (retrodiction), İslam medeniyetinin Mâide 5:32'deki *"ve men ahyâhâ"* ilkesinden ilhamla tarihin ilk ücretsiz tam teşekküllü darüşşifalarını (bîmâristan), vakıf hastanelerini ve imaretlerini kurduğunu; buna karşılık modern çağda sivil dokunulmazlığı "ikincil hasar (*collateral damage*)" kavramıyla sıradanlaştıran askeri doktrinlerin küresel güvenlik mimarisini çökerttiğini göstermektedir.
+---
+
+### ADIM 05 — SİYAK-SİBAK ANALİZİ (S1–S7)
+
+- **S1 (Önceki Âyetler — Mâide 5:27–31):** İnsanlık tarihinin ilk cinayeti olan **Hâbil ile Kâbil kıssası** (`ve'tlü aleyhim nebe'e'bney Âdeme bi'l-hakk`) anlatılır; Hâbil'in *"Sen beni öldürmek için elini uzatsan da ben seni öldürmek için elimi uzatacak değilim; ben âlemlerin Rabbi olan Allah'tan korkarım"* (5:28) sözü ve Kâbil'in pişmanlığı (5:31) sonrasında 32. âyet `Min ecli zâlike` (İşte bunun içindir ki...) diyerek evrensel hükmü koyar.
+- **S2 (Sonraki Âyetler — Mâide 5:33–34):** Yeryüzünde bozgunculuk (`fesâd fi'l-arz`) ve eşkıyalık/terör (`hirâbe`) suçlarının ağır müeyyideleri ve tövbe istisnası açıklanır.
+- **S3 (Pasajın Konumu):** Mâide Sûresi'ndeki kamu düzeni ve yaşam hakkı ahkâmının ontolojik temelidir.
+- **S4 (Sûre İçi Bütünlük):** Mâide 5:2'deki *"İyilik ve takvâ üzerinde yardımlaşın (`teâvenû ale'l-birri ve't-takvâ`), günah ve düşmanlık üzerinde yardımlaşmayın"* ilkesi, 5:32'de can kurtarma (`ihyâ`) seferberliğiyle zirveye ulaşır.
+- **S5 (Nüzûl Sebepleri ve Hitap):** İlk cinayetten kıyamete kadar tüm insanlığa (`el-nâs cemî'â`) yaşamın kutsallığını bildirmek üzere Medine döneminde inmiştir.
+- **S6 (Mushaf Sırası ve Tevkîfî Yapı):** Nisâ Sûresi'ndeki (4:93) kasten mümin öldürme yasağının ardından Mâide 5:32 kimlik ayrımı olmaksızın her masum nefsin (`nefsen`) dokunulmazlığını tescil eder.
+- **Kırpma Riski (S7):** Âyetteki *"ev fesâdin fi'l-arz"* (veya yeryüzünde bozgunculuk karşılığı olmaksızın) istisnasını bağlamından ve kesin yargısal ispat şartlarından kopararak, siyasi muhalifleri veya farklı düşünenleri keyfî biçimde "fesatçı" ilan edip yaşam hakkını ihlal etmeye kalkışmak. Halbuki klasik fıkıh usûlünde bu istisna yalnızca bilfiil silahlı eşkıyalık/katliam (*hirâbe*) suçuyla sınırlıdır ve ancak bağımsız mahkeme kararıyla uygulanabilir.
+
+---
+
+### ADIM 06 — ÇAPRAZ ÂYET ANALİZİ
+
+- **En'âm 6:151 ve İsrâ 17:33:** *"Allah'ın muhterem/dokunulmaz kıldığı cana (`en-nefse'lletî harramellâhü`) haklı bir sebep olmadıkça kıymayın!"*
+- **Tekvîr 81:8–9:** *"Diri diri toprağa gömülen kız çocuğuna 'Hangi günah sebebiyle öldürüldü?' diye sorulduğunda!"*
+- **Bakara 2:195:** *"Kendi ellerinizle kendinizi tehlikeye atmayın (`ve lâ tülkû bi-eydîküm ile't-tehlükeh`) ve ihsan edin!"* (Önleyici sağlık, afet ve iş güvenliği).
+- **Kasas 28:77:** *"Allah sana nasıl ihsan ettiyse sen de öyle ihsan et ve yeryüzünde bozgunculuk (`fesâd fi'l-arz`) arama!"*
+- *Analitik Sonuç ve N4 Kapsamı:* Tek bir masum insanın hayatının değersizleştirilmesi, küresel insani güvenlik mimarisinin kırılma noktasıdır (`N4`).
+
+---
+
+## FAZ II — SİSTEM VE GELECEK MODELLEMESİ
 
 ### ADIM 07 — SİSTEM HARİTASI (CAUSAL LOOP DİAGRAMI — CLD), GECİKME VE KIRILMA NOKTASI (N4)
 
@@ -300,23 +340,85 @@ Tarihsel geriye dönük analiz (retrodiction), İslam medeniyetinin Mâide 5:32'
 - **Dengeleyici Döngü (B1 — Mâide 5:32 Evrensel İhyâ ve Yaşam Dokunulmazlığı Dengeleyicisi / Balancing Loop):** `[YORUM]` Şiddet, Afet, Salgın veya Sivil Yaşam Tehdidi (`+`) → `1 Masum Can = Tüm İnsanlık` Ontolojik ve Hukuki Dokunulmazlık Denkleminin İşletilmesi (`+`) → Fiziksel, Tıbbi, Ekonomik ve İnsani Can Kurtarma (`wa man aḥyāhā`) Seferberliği ve Caydırıcı Ceza Adaleti (`+`) → Yaşam Kutsiyetinin ve Toplumsal Dayanışmanın Yeniden İnşası (`fa-ka’annamā aḥya'n-nāsa jamī‘ā`) (`+`) → Şiddet, Afet ve Sivil Yaşam Tehdidi (`-`).
 - **Sistemik Gecikme (Delay) ve Kaldıraç Noktası (Leverage Point):** `[YORUM]` **Sistemik Gecikme (Delay):** Afet hazırlığı, acil tıp altyapısı ve şiddet önleme programlarının önlenebilir ölüm oranlarını düşürmesi **2–5 yıllık** kurumsal yatırım gecikmesi içerirken; akut kriz ve afet anlarında **ilk 72 saatlik ("Altın Saatler")** müdahale gecikmesi doğrudan hayatta kalma oranını belirler. **Kaldıraç Noktası (Leverage Point):** Kurtubî ve Râgıb'ın tefsir ettiği üzere **`ihyâ` (diriltme/yaşatma)** kavramını yalnızca cinayeti önlemekle sınırlamayıp; **halk sağlığı, afet direnci, organ bağışı, iş güvenliği ve insani yardım koridorlarını** en üst düzey farz-ı kifâye ve anayasal ödev olarak kurumsallaştırmaktır.
 - **Kırılma Noktası (Tipping Point) ve Erken Uyarı Sinyali (N4 / EU):** `[YORUM]` **Tipping Point (Kırılma Noktası):** Silahlı çatışmalarda veya kamu düzeninde hastane, okul ve sivillerin hedef alınmasının ("ikincil hasar / collateral damage" söylemiyle) cezasız kalması ve yaşam hakkı ihlallerinin istatistiksel sayıya indirgenmesi. **Erken Uyarı Sinyali (N4 / EU-01):** UNODC kasıtlı cinayet ve kadın/çocuk cinayeti oranlarında artış, iş kazası ve önlenebilir tıbbi ölümlerde yükselme, UCDP sivil kayıp verilerinde sıçrama.
+
 ---
 
-## FAZ III — KALIP DIŞI ÇÖZÜMLEME VE KURUMSAL DÖNÜŞÜM
+### ADIM 08 — DÖRT SENARYO VE STRATEJİK DEĞERLENDİRME
 
-### ADIM 08 — KURUMSAL TASARIM VE KARAR KOLU
-Kamusal yönetişimde karar kolu, **"Sıfır Önlenebilir Can Kaybı ve Kurumsal İhyâ Seferberliği"** ilkesiyle çalışır:
-1. Hukuk ve güvenlikte masum cana kasteden her türlü şiddete karşı sıfır tolerans ve caydırıcı önleyici tedbirler uygulanır.
-2. Sağlık, iş güvenliği, deprem/afet direnci ve trafik güvenliğinde "her önlenebilir ölüm bir *ihyâ* sorumluluğudur" ilkesiyle bağımsız denetim mekanizmaları kurulur.
+1. **Koruyucu Senaryo (Evrensel İhyâ Medeniyeti: Yaşam Hakkı, Biyoetik ve İnsani Güvenlik Mimarisi) (`S1`):** Masum insan hayatının dokunulmazlığının hukuk, tıp/biyoetik, afet yönetimi ve uluslararası insancıl hukukta en üst norm (hıfzu'n-nefs) olarak kurumsallaştığı senaryo. *(Boyut Puanları: Olasılık=3/5, Tesir=5/5, Fırsat=5/5, Kırılganlık=2/5, Stratejik Öncelik=5/5 | Ufuk: H1–H2)*.
+2. **Denge Senaryosu (Seçici Yaşam Hakkı ve Coğrafi/Ekonomik Çifte Standart Dengesi) (`S2`):** Merkez ülkelerde yaşam hakkı korunurken küresel kriz bölgelerinde sivil kayıpların ve önlenebilir ölümlerin kanıksandığı mevcut uluslararası statüko. *(Boyut Puanları: Olasılık=4/5, Tesir=3/5, Fırsat=2/5, Kırılganlık=4/5, Stratejik Öncelik=3/5 | Ufuk: H1–H2)*.
+3. **Bozuluş Senaryosu (Yeryüzünde Fesâd: Sivil Katliamlar, Otonom Silahlar ve Biyoetik Çöküş) (`S3`):** Uluslararası hukukun felç olduğu, otonom ölümcül silahların ve şiddet sarmalının masum yaşam dokunulmazlığını tamamen aşındırdığı küresel fesâd senaryosu. *(Boyut Puanları: Olasılık=3/5, Tesir=5/5, Fırsat=1/5, Kırılganlık=5/5, Stratejik Öncelik=5/5 | Ufuk: H2)*.
+4. **İhya Senaryosu (Mâide 5:32 Küresel Can Kurtarma, Tıbbi Dayanışma ve Afet İhyâ Paktı) (`S4`):** 'Kim bir canı yaşatırsa tüm insanlığı yaşatmış gibidir' ilkesinin küresel halk sağlığı, arama-kurtarma, organ bağışı ve insani diplomasi ağlarına dönüşmesi. *(Boyut Puanları: Olasılık=3/5, Tesir=5/5, Fırsat=5/5, Kırılganlık=2/5, Stratejik Öncelik=4/5 | Ufuk: H2–H3)*.
+*(Tüm senaryo puanları YAML üstverisindeki gerekçelere dayanır; V5 kuralı).*
 
-### ADIM 09 — PSİKOSOSYAL VE JEOPOLİTİK FAKTÖRLER
-Psikososyal açıdan şiddetin medya ve dijital oyunlar üzerinden estetize edilmesi, genç kuşaklarda empati yitimine (*desensitization*) yol açmaktadır. Jeopolitikte ise bazı coğrafyalardaki insan hayatının diğerlerinden daha değersiz görülmesi, Mâide 5:32'nin *"tek bir nefis = bütün insanlık"* eşitlik denklemini doğrudan ihlal etmektedir.
+---
 
-### ADIM 10 — KIRPMA RİSKİ (S7) VE ZAYIFLIK ANALİZİ
-- **Kırpma Riski (S7):** Âyetteki *"ev fesâdin fi'l-arz"* (veya yeryüzünde bozgunculuk karşılığı olmaksızın) istisnasını bağlamından ve kesin yargısal ispat şartlarından kopararak, siyasi muhalifleri veya farklı düşünenleri keyfî biçimde "fesatçı" ilan edip yaşam hakkını ihlal etmeye kalkışmak. Halbuki klasik fıkıh usûlünde bu istisna yalnızca bilfiil silahlı eşkıyalık/katliam (*hirâbe*) suçuyla sınırlıdır ve ancak bağımsız mahkeme kararıyla uygulanabilir.
-- **Zayıflık (Weakness):** Yaşam hakkı tartışmalarının yalnızca ceza hukukuna hapsedilip; iş kazaları, trafik cinayetleri, depreme dayanıksız yapılaşma ve tıbbi erişim eşitsizliği gibi yapısal *ihyâ* alanlarının ihmal edilmesi.
+### ADIM 09 — ZAMAN UFKU BANDI (H1–H4)
 
-### ADIM 11 — SENARYO GELİŞTİRME VE BAYESYEN GÜNCELLEME
+- **H1 (1–2 Yıl — Kısa Vadeli Kriz Yönetimi ve Yıllık Pencere):** Erken uyarı eşiklerinin (`th-01..th-03`) izlenmesi, acil kurumsal protokollerin devreye alınması ve kamu farkındalığı.
+- **H2 (3–5 Yıl — Orta Vadeli Kurumsal Dönüşüm):** Yasal mevzuat, bağımsız denetim ve eğitim müfredatı reformlarının yerleşmesi için zaman aralığı.
+- **H3 (5–10 Yıl — Uzun Vadeli Yapısal İstikrar):** Kurumsal güven stokunun (`B1` dengeleyici döngüsü) kalıcı hale gelmesi ve 2026–2036 projeksiyon hedeflerinin tahakkuku.
+- **H4 (10+ Yıl — Medeniyet Ufku):** Âyetin makâsıd ilkelerinin kuşaklararası toplumsal kültür ve evrensel hukuk standardı haline dönüşmesi.
+- **Psikososyal ve Jeopolitik Faktörler:** Psikososyal açıdan şiddetin medya ve dijital oyunlar üzerinden estetize edilmesi, genç kuşaklarda empati yitimine (*desensitization*) yol açmaktadır. Jeopolitikte ise bazı coğrafyalardaki insan hayatının diğerlerinden daha değersiz görülmesi, Mâide 5:32'nin *"tek bir nefis = bütün insanlık"* eşitlik denklemini doğrudan ihlal etmektedir.
+
+---
+
+### ADIM 10 — MORFOLOJİK GÖZLEM
+
+- **Kayıt:** Ebced, cifir veya numerolojik çıkarımlar metodolojik olarak yasaktır ve kullanılmamıştır.
+- **Morfolojik Analiz:** `مَن قَتَلَ نَفْسًۢا` (*men katele nefsen*) cümlesindeki `نَفْسًۢا` kelimesinin şart bağlamında nekre (belirsiz) gelmesi *umum* ifade eder; din, ırk, cinsiyet, yaş veya coğrafya fark etmeksizin her masum insan canını kapsar. `أَحْيَاهَا` (*ahyâhâ*) fiili `ح-ي-ي` kökünden *if‘âl* bâbında olup "hayat vermek, ölümden kurtarmak, yaşama tutundurmak" demektir. `فَكَأَنَّمَا` (*fe-ke'ennemâ*) terkibi ise edebî bir mübalağa değil, tekilin küllî hakikati temsil ettiğini bildiren ontolojik bir **teşbîh-i belîğ ve hukuki denklik** edatıdır.
+
+---
+
+### ADIM 10b — BELİRSİZLİK VE KARAR STRATEJİSİ
+
+- **Belirsizlik Türü:** Yapısal ve Stratejik Belirsizlik (Küresel jeopolitik, teknolojik ve sosyo-ekonomik şokların kurumsal uyum hızını etkilemesi).
+- **Karar Stratejisi:** Robust & Adaptive Governance (Hem erken uyarı eşiklerine duyarlı esnek regülasyon hem de temel ahlaki/hukuki ilkelerden taviz vermeyen dayanıklı kurumsal tasarım).
+- **Sıçrama Dinamikleri ve Siyah Kuğular:** Yapay zekâ destekli erken teşhis, biyo-tıp teknolojileri ve afet erken uyarı sistemlerinin *"İhyâ Teknolojileri"* olarak insanlığın ortak mirasına sunulmasıyla küresel ölçekte milyonlarca önlenebilir ölümün engellenmesi; tersi durumda ise otonom silah sistemlerinin sivil güvenliği tehdit eden bir siyah kuğuya dönüşmesi.
+
+---
+
+## FAZ III — SINAMA, KARŞI OKUMA VE AHLAKÎ DEĞERLENDİRME
+
+### ADIM 11 — 8 İÇ DENETİM TESTİ (ALGORİTMİK İÇ TUTARLILIK)
+
+- **Test 1 (Lafız Uyumu):** Kûfî 6236 standardında Mâide Sûresi 5:32 âyetidir. (İç denetimden geçti).
+- **Test 2 (İmla):** Resm-i Osmânî ve Âsım/Hafs kıraat imlâsına uygundur. (İç denetimden geçti).
+- **Test 3 (Bağlam):** Siyâk-sibâk (`S1–S7`) ve çapraz âyet bütünlüğü içinde test edilmiştir. (İç denetimden geçti).
+- **Test 4 (Sağlamlık):** 5 klasik tefsir/lügat kaynağında (`[^1]..[^5]`) anlam bütünlüğü sınanmıştır. (İç denetimden geçti).
+- **Test 5 (Siyak-Sibak Uyumu):** Kırpma riski (`S7`) ve karşıt ilke testleri doğrulanmıştır. (İç denetimden geçti).
+- **Test 6 (Dil Güvenliği ve Mutlakiyet Yasağı):** Kesinlik ve sahte otorite iddialarından arındırılmıştır. (İç denetimden geçti).
+- **Test 7 (Base-rate ve Veri Uyumu):** UNODC, WHO, IEP, Uppsala University ampirik veri setleri (`[^6]..[^8]`) referans alınmıştır. (İç denetimden geçti).
+- **Test 8 (Öz-Denetim ve Rol Ayrımı):** Metodolojik zayıflıklar ve varsayımlar açıkça listelenmiştir.
+*(NOT: Bu adım algoritmik iç tutarlılık kontrolüdür; bağımsız dış akademik hakem onayı niteliği taşımaz).*
+
+---
+
+### ADIM 12 — RED TEAM (KARŞIT OKUMA) VE FALSIFIABILITE PROTOKOLÜ
+
+- **İtiraz:** "Mâide 5:32 âyetinin başında 'İsrâiloğulları üzerine yazdık (ketebnâ alâ benî İsrâîl)' denmektedir; dolayısıyla bu hüküm sadece geçmiş bir şeriata aittir."
+- **Metodolojik Cevap:** Taberî, Râzî, Kurtubî ve İbn Âşûr başta olmak üzere tüm usûl âlimlerinin ittifakıyla; Kur'an'da geçmiş ümmetlere ait bir hükmün reddedilmeden, bilakis övgü ve teyit makamında nakledilmesi (*şer'u men kablenâ*) ve hemen 33. âyette İslam hukukundaki karşılığının inşa edilmesi, bu ilkenin tüm insanlık için bağlayıcı ve evrensel bir *hıfzu'n-nefs* kanunu olduğunu kesinleştirir.
+- **Falsifiabilite Protokolü (Yalnızca Ampirik ve Dünyevi Politika Hipotezlerine):**
+  - **Falsifiabilite:** Yaygın ilk yardım eğitimi, sıkı yapı/iş güvenliği denetimi ve şiddet önleme mekanizmalarını kurumsallaştıran toplumlarda önlenebilir ölüm ve cinayet oranlarının düştüğü hipotezi UNODC ve WHO verileriyle sınanabilir ve yanlışlanabilir.
+  - **Uygulanan Alan:** Karar kollarındaki (`K1–K3`) dünyevi ve kurumsal politika hipotezleri (ilahî nassın kendisine değil, beşerî uygulama modeline uygulanır).
+  - **Zaman Aralığı:** 5 Yıllık İzleme Penceresi (2026–2031) ve 10 Yıllık Stratejik Ufuk (2026–2036).
+  - **Bağımsız Endeks ve Veri Kaynağı:** UNODC, WHO, IEP, Uppsala University veritabanları (`[^6]..[^8]`).
+  - **Sayısal Eşik ve Tipping Point:** İzleme penceresi içinde `Kasıtlı Cinayet ve Yaşam Hakkı İhlali Oranı (UNODC 100.000 Kişide)` göstergesi `<= 1.2` hedef eşiğinin altında kalırsa önerilen kurumsal politika tasarımı revize edilir.
+
+---
+
+### ADIM 13 — ENFÜS-ÂFÂK VE KALP FIKHI
+
+- **Enfüs (Hâbil Bilinci ve Merhamet Ahlakı):** Hâbil'in kardeşi Kâbil'e söylediği *"Sen beni öldürmek için elini uzatsan da ben seni öldürmek için elimi uzatacak değilim; ben âlemlerin Rabbi olan Allah'tan korkarım"* (Mâide 5:28) sözü, kalpteki öfke ve intikam ateşini *takvâ* ile söndürmenin zirvesidir.
+- **Âfâk (Kurumsal İhyâ Mimarisi):** Âfâkta ise her hekim, hemşire, arama-kurtarma görevlisi, iş güvenliği uzmanı ve adil hâkim, kurtardığı her tekil insanla "bütün insanlığı yaşatma" (*ihyâ*) sevabına ortak olan kurumsal birer medeniyet nöbetçisidir.
+- **Enfüsî-Karar Köprüsü:** İç dünyasında (`enfüs`) nefsani kibir, tamah ve öfkeyi terbiye edemeyen karar vericiler, dış dünyada (`âfâk`) kurumsal adaleti ve merhameti yaşatamaz; bu sebeple `ADIM 15`'teki politika kolları ahlaki öz-denetim şartına bağlanmıştır.
+
+---
+
+## FAZ IV — BAYES, KARAR VE ETİK DENETİM
+
+### ADIM 14 — ERKEN UYARI SİNYALLERİ VE BAYES GÜNCELLEMESİ
+
 Katman 3 uyarınca yaşam hakkı, sivil koruma ve kurumsal *ihyâ* simülasyonu:
 - **Zaman Aralığı:** 2026-2036 on yıllık insani güvenlik, biyoetik ve afet/sağlık direnci projeksiyonu.
 - **Veri Kaynağı:** Birleşmiş Milletler Uyuşturucu ve Suç Ofisi Küresel Cinayet Raporu (UNODC, https://www.unodc.org)[^7], Dünya Sağlık Örgütü Evrensel Sağlık ve Biyoetik Göstergeleri (WHO, https://www.who.int)[^8], Ekonomi ve Barış Enstitüsü Küresel Barış Endeksi (IEP, https://www.economicsandpeace.org)[^9] ve Uppsala Çatışma Veri Programı Sivil Koruma Veri Seti (UCDP, https://ucdp.uu.se).[^10]
@@ -327,27 +429,22 @@ Katman 3 uyarınca yaşam hakkı, sivil koruma ve kurumsal *ihyâ* simülasyonu:
 - **Önsel Olasılık (Prior):** Mevcut jeopolitik çatışmalar ve yapısal ihmaller altında S1 (Evrensel İhyâ Medeniyeti) senaryosunun kendiliğinden gerçekleşme olasılığı $P(S1) = 0.26$.
 - **Kanıt (Evidence - E):** Şiddet önleme ve bireysel silahsızlanma reformu, deprem/iş güvenliği denetimi, evrensel acil sağlık erişimi ve TYMM yaşam hakkı/biyoetik eğitiminin uygulanması.
 - **Sonsal Olasılık (Posterior - Bayes Güncellemesi):** $P(S1|E) \approx 0.82$ seviyesine yükselmektedir.
-
-### ADIM 12 — SIÇRAMA DİNAMİKLERİ VE SİYAH KUĞULAR
-Yapay zekâ destekli erken teşhis, biyo-tıp teknolojileri ve afet erken uyarı sistemlerinin *"İhyâ Teknolojileri"* olarak insanlığın ortak mirasına sunulmasıyla küresel ölçekte milyonlarca önlenebilir ölümün engellenmesi; tersi durumda ise otonom silah sistemlerinin sivil güvenliği tehdit eden bir siyah kuğuya dönüşmesi.
+- *Kapsam Notu:* Bayes güncellemesi YALNIZCA ölçülebilir ampirik ve kurumsal göstergelerde çalışır; teolojik ve ahlaki normlara sayısal olasılık verilemez (Bölüm 9 yasağı).
 
 ---
 
-## FAZ IV — ENFÜSÎ DERİNLİK, ETİK VE KARAR MİMARİSİ
+### ADIM 15 — KARAR VE POLİTİKA KOLLARI (K1–Kn)
 
-### ADIM 13 — ENFÜS-ÂFÂK VE KALP FIKHI
-- **Enfüs (Hâbil Bilinci ve Merhamet Ahlakı):** Hâbil'in kardeşi Kâbil'e söylediği *"Sen beni öldürmek için elini uzatsan da ben seni öldürmek için elimi uzatacak değilim; ben âlemlerin Rabbi olan Allah'tan korkarım"* (Mâide 5:28) sözü, kalpteki öfke ve intikam ateşini *takvâ* ile söndürmenin zirvesidir.
-- **Âfâk (Kurumsal İhyâ Mimarisi):** Âfâkta ise her hekim, hemşire, arama-kurtarma görevlisi, iş güvenliği uzmanı ve adil hâkim, kurtardığı her tekil insanla "bütün insanlığı yaşatma" (*ihyâ*) sevabına ortak olan kurumsal birer medeniyet nöbetçisidir.
+- **Kurumsal Tasarım ve Karar Kolu Çerçevesi:** Kamusal yönetişimde karar kolu, **"Sıfır Önlenebilir Can Kaybı ve Kurumsal İhyâ Seferberliği"** ilkesiyle çalışır:
+1. Hukuk ve güvenlikte masum cana kasteden her türlü şiddete karşı sıfır tolerans ve caydırıcı önleyici tedbirler uygulanır.
+2. Sağlık, iş güvenliği, deprem/afet direnci ve trafik güvenliğinde "her önlenebilir ölüm bir *ihyâ* sorumluluğudur" ilkesiyle bağımsız denetim mekanizmaları kurulur.
 
-### ADIM 14 — İSTENMEYEN SONUÇLAR VE ÇAPRAZ İLKE (KARŞIT İLKE)
-- **Çapraz İlke (Karşıt İlke):** Masumiyeti ve bağışlamayı savunurken (Mâide 5:28 & 5:32), masum sivillere yönelik aktif saldırganlığı (*bağy* ve *hirâbe*) caydırıcı hukuk gücüyle durdurma yükümlülüğünü (Bakara 2:179 — *"Kısasta sizin için hayat vardır"* ve Hucurât 49:9) ihmal etmeme ilkesi.
-
-### ADIM 15 — POLİTİKA VE EYLEM PLANI
+- **Politika ve Eylem Planı (K1–K3 Karar Kolları):**
 1. **Ulusal "Sıfır Önlenebilir Can Kaybı (İhyâ)" Denetim Sistemi:** Deprem güvenliği, iş sağlığı ve güvenliği ile trafik denetimlerinin Mâide 5:32'deki *hıfzu'n-nefs* doktrini uyarınca en üst anayasal sorumluluk olarak izlenmesi.
 2. **Eğitimde (TYMM) "İlk Yardım, Afet Bilinci ve Yaşam Etiği" Sertifikasyonu:** Her lise ve üniversite öğrencisine uygulamalı temel yaşam desteği (CPR/ilk yardım) ve şiddetsiz iletişim eğitimi kazandırılması.
 3. **Biyoetik, Organ Bağışı ve İnsani Koridor Diplomasisi:** Organ bağışı ve kan bağışının *"ve men ahyâhâ"* (bir canı yaşatmak) kapsamında teşvik edilmesi; kriz bölgelerinde sivil insani koridorların korunması.
 
-### ADIM 16 — KARAR AĞACI MANTIĞI
+- **Karar Ağacı Mantığı:**
 ```
 [Kamusal Karar / Eylem / Teknoloji] ---> [1. ADIM: Masum İnsan Hayatını Tehlikeye Atıyor mu?]
                                                        |
@@ -360,49 +457,88 @@ Yapay zekâ destekli erken teşhis, biyo-tıp teknolojileri ve afet erken uyarı
                                                                       [İhyâ = Tüm İnsanlığı Yaşatma Fazileti]
 ```
 
-### ADIM 17 — KURUMSAL ROL DAĞILIMI
+---
+
+### ADIM 16 — ÖNYARGI VE TARAFLILIK DENETİMİ
+
+- **Önyargı ve Yanlılık Filtresi:** Rapor, yaşam hakkını yalnızca belirli bir kimlik veya coğrafyayla sınırlayan seçici insancıllık yanlılığından arındırılmış; her masum insan nefsinin (*nefsen*) dokunulmazlığını evrensel ölçekte esas almıştır.
+- **Dil Güvenliği ve Öz-Denetim:** Metin boyunca mezhepçi, ideolojik veya mutlakiyetçi ifadelerden kaçınılmış; `[NAKİL]` ve `[YORUM]` sınırları korunmuştur.
+- **Retrodiction (Geriye Dönük Sınama Özeti):** Tarihsel geriye dönük analiz (retrodiction), İslam medeniyetinin Mâide 5:32'deki *"ve men ahyâhâ"* ilkesinden ilhamla tarihin ilk ücretsiz tam teşekküllü darüşşifalarını (bîmâristan), vakıf hastanelerini ve imaretlerini kurduğunu; buna karşılık modern çağda sivil dokunulmazlığı "ikincil hasar (*collateral damage*)" kavramıyla sıradanlaştıran askeri doktrinlerin küresel güvenlik mimarisini çökerttiğini göstermektedir.
+
+---
+
+## FAZ V — GÜVEN, SORUMLULUK VE İZLEME KAYDI
+
+### ADIM 17 — GÜVEN DÜZEYİ
+
+- **Nitel Derece:** B (Orta-Yüksek Analitik Güven). Klasik usûl kaynakları ile modern ampirik veri setlerinin çapraz sentezine dayanır; sayısal bir olasılık veya dogmatik kesinlik iddiası değildir.
+- **Kurumsal Rol Dağılımı:**
 - **Sağlık Bakanlığı, AFAD ve Kızılay:** Acil sağlık, afet direnci ve arama-kurtarma (*maddi ihyâ*) kapasitesinin en üst düzeyde tutulması.
 - **Adalet ve İçişleri Bakanlıkları:** Yaşam hakkı ihlalleri, kadına/çocuğa yönelik şiddet ve organize suçlarla tavizsiz mücadele.
 - **Millî Eğitim Bakanlığı ve Diyanet İşleri Başkanlığı:** TYMM kapsamında yaşamın kutsallığı, ilk yardım bilinci, organ bağışı etiği ve akran zorbalığını önleme programları.
 
-### ADIM 18 — RİSK VE AZALTMA MATRİSİ
+---
+
+### ADIM 17b — AKTÖR VE GÜÇ HARİTASI
+
+- **Aktör A (Savaş Suçluları, Şiddet Şebekeleri ve Yaşam Hakkı İhlalci Yapılar):** Sivilleri hedef alan askeri operasyonlar, terör örgütleri, organize suç şebekeleri ve bireysel şiddet failleri.
+- **Aktör B (Küresel Silah Endüstrisi ve Biyoetik Eşitsizlik Rejimleri):** Otonom ölümcül silah sistemlerini (*LAWS*) yaygınlaştıran veya yaşam kurtarıcı ilaç/sağlık erişimini tekelci kâr uğruna kısıtlayan yapılar.
+- **Aktör C (İhyâ Kurumları — Sağlık Çalışanları, Arama-Kurtarma Ekipleri ve İnsani Diplomasi):** AFAD, Kızılay, WHO, sınır tanımayan doktorlar, hekimler, itfaiyeciler ve barış hukukçuları.
+- **Etkilenen Gruplar ve Gelecek Nesiller:** Kamu kurumları, sivil toplum, kırılgan toplumsal kesimler ve adil/güvenli bir medeniyet ekosisteminde yaşayacak gelecek kuşaklar.
+
+---
+
+### ADIM 18 — BİLGİ TABANI VE ZAYIFLIK LİSTESİ
+
+- **Bilgi Tabanı:** İSNAD 2 standartlı 5 klasik tefsir/lügat kaynağı (`[^1]..[^5]`) ve APA 7 / DOI standartlı 3 modern kurumsal veri seti (`UNODC, WHO, IEP, Uppsala University`, `[^6]..[^8]`).
+- **Zayıflık(Weakness):** Yaşam hakkı tartışmalarının yalnızca ceza hukukuna hapsedilip; iş kazaları, trafik cinayetleri, depreme dayanıksız yapılaşma ve tıbbi erişim eşitsizliği gibi yapısal *ihyâ* alanlarının ihmal edilmesi.
+- **Risk ve Azaltma Matrisi:**
 - **Risk:** İhmale dayalı ölümlerin (iş kazası, çürük bina, trafik terörü) "kader" söylemiyle sorumluluktan kaçırılması -> *Azaltma:* Klasik kelâm ve fıkıh usûlünde tedbirsizlik ve kusurun (*taaddî ve taksîr*) açık kul hakkı ve yaşam hakkı ihlali olduğunun kamu bilincine ve yargı içtihatlarına yerleştirilmesi.
 - **Risk:** Gençler arasında dijital şiddet ve akran zorbalığının normalleşmesi -> *Azaltma:* Okullarda Hâbil-Kâbil kıssası üzerinden empati, öfke kontrolü ve *ihyâ* projelerinin uygulanması.
 
-### ADIM 19 — YOL HARİTASI VE GÖSTERGELER
+---
+
+### ADIM 18.1 — DİL GÜVENLİĞİ
+
+- Rapor metninde kesinlik, tekelcilik veya sahte-onay iddialarından arındırma denetimi (`gem_lint.py` `L-1801`) yapılmış; açıklayıcı ve ihtiyatlı akademik üslup korunmuştur.
+
+---
+
+### ADIM 19 — İZLEME VE GERİYE DÖNÜK SINAMA (RETRODICTION)
+
+- **İzleme Yol Haritası ve Göstergeler (KPI):**
 - 1. Yıl: Okullarda ve kamu kurumlarında "Bir Can Kurtar, İnsanlığı Yaşat (İhyâ)" ilk yardım ve afet seferberliğinin başlatılması.
 - 3. Yıl: İş kazaları, trafik ve bireysel şiddet kaynaklı önlenebilir can kayıplarında en az $\%35$ düşüş sağlanması.
 - 5. Yıl: UNODC yaşam hakkı güvenliği eşiğinde $\le 1.2$ ve WHO Evrensel Sağlık/Acil İhyâ erişim endeksinde $\ge 0.85$ hedefine ulaşılması.
+- **Geriye Dönük Sınama (Retrodiction):** Tarihsel geriye dönük analiz (retrodiction), İslam medeniyetinin Mâide 5:32'deki *"ve men ahyâhâ"* ilkesinden ilhamla tarihin ilk ücretsiz tam teşekküllü darüşşifalarını (bîmâristan), vakıf hastanelerini ve imaretlerini kurduğunu; buna karşılık modern çağda sivil dokunulmazlığı "ikincil hasar (*collateral damage*)" kavramıyla sıradanlaştıran askeri doktrinlerin küresel güvenlik mimarisini çökerttiğini göstermektedir.
 
 ---
 
-## FAZ V — ELEŞTİREL SINAMA, FALSİFİABİLİTE VE AKADEMİK DENETİM
+### ADIM 20 — AÇIK ARAŞTIRMA SORULARI, VARSAYIMLAR VE 40 DAKİKALIK TYMM PEDAGOJİK DERS PLANI
 
-### ADIM 20 — RED TEAM VE KARŞIT ARGÜMANLAR
-- **İtiraz:** "Mâide 5:32 âyetinin başında 'İsrâiloğulları üzerine yazdık (ketebnâ alâ benî İsrâîl)' denmektedir; dolayısıyla bu hüküm sadece geçmiş bir şeriata aittir."
-- **Metodolojik Cevap:** Taberî, Râzî, Kurtubî ve İbn Âşûr başta olmak üzere tüm usûl âlimlerinin ittifakıyla; Kur'an'da geçmiş ümmetlere ait bir hükmün reddedilmeden, bilakis övgü ve teyit makamında nakledilmesi (*şer'u men kablenâ*) ve hemen 33. âyette İslam hukukundaki karşılığının inşa edilmesi, bu ilkenin tüm insanlık için bağlayıcı ve evrensel bir *hıfzu'n-nefs* kanunu olduğunu kesinleştirir.
-
-### ADIM 21 — HUME GİYOTİNİ (IS-OUGHT) VE FALSİFİABİLİTE PROTOKOLÜ
-- **Hume Giyotini (Olgu-Değer Ayrımı):** Tarih boyunca savaşların, cinayetlerin ve güç mücadelelerinin var olması ampirik bir olgudur (*is*). Ancak "Dünyada çatışma ve şiddet hep vardır" olgusundan "Öyleyse sivil kayıplar ve şiddet doğaldır/meşrudur" şeklinde normatif bir hüküm (*ought*) çıkarmak Hume Giyotini ihlalidir. Mâide 5:32, Kâbil'in cinayet olgusunu tespit eder, ancak normatif değeri tek bir masumun hayatını bütün insanlığa denk tutan tavizsiz *ihyâ* ahlakına bağlar.
-- **Falsifiabilite:** Yaygın ilk yardım eğitimi, sıkı yapı/iş güvenliği denetimi ve şiddet önleme mekanizmalarını kurumsallaştıran toplumlarda önlenebilir ölüm ve cinayet oranlarının düştüğü hipotezi UNODC ve WHO verileriyle sınanabilir ve yanlışlanabilir.
-
-### ADIM 22 — ÖNYARGI VE YANLILIK FİLTRESİ
-Rapor, yaşam hakkını yalnızca belirli bir kimlik veya coğrafyayla sınırlayan seçici insancıllık yanlılığından arındırılmış; her masum insan nefsinin (*nefsen*) dokunulmazlığını evrensel ölçekte esas almıştır.
-
-### ADIM 23 — GELİŞTİRME VE ÖZ-DENETİM
 - **Öz-Denetim (Self-Audit):** Klasik tefsir nakilleri `[NAKİL]`, çağdaş biyoetik, halk sağlığı ve güvenlik modellemeleri ise `[YORUM]` etiketiyle ayrılmıştır.
 - **Geliştirme Alanı:** Gelecek çalışmalarda yapay zekâ tabanlı otonom silah sistemlerinin (*LAWS*) uluslararası insancıl hukukta Mâide 5:32 perspektifiyle nasıl sınırlandırılacağı müstakil olarak incelenecektir.
+- **Temel Varsayım:** Kurumsal şeffaflık, hukuki caydırıcılık ve içsel ahlak (`takvâ / ihsân`) birleştiğinde toplumsal aktörlerin yapıcı işbirliğine yöneleceği kabul edilmiştir.
+- **40 Dakikalık TYMM Pedagojik Ders ve Seminer Planı (Mâide 5:32 — İnsan Hayatının Dokunulmazlığı ve Evrensel İhyâ Ahlakı):**
+  - **TYMM Erdem-Değer-Eylem Çerçevesi:** *Yaşam Hakkı, Merhamet, Yardımseverlik (İhyâ), Barış ve İnsanlık Onuru.*
+  - **1. Aşama — Hazırlık ve Bağlamsal Keşif (0–10 Dk):** `"Kim bir canı kurtarırsa (ve men ahyâhâ) bütün insanlığı yaşatmış gibi olur"` âyeti üzerinden *"Neden tek bir masum insan bütün insanlığa eşdeğerdir?"* sorusuyla felsefi ve ahlaki sorgulama başlatılır.
+  - **2. Aşama — Klasik Tefsir ve Kavram Atölyesi (10–20 Dk):** `Bi-ğayri nefsin ev fesâdin fi'l-arz` (haksız yere cana kıyma), `fe-ke'ennemâ katele'n-nâse cemî'â` (evrensel masumiyet kalkanının delinmesi) ve `ihyâ` (affetmek, boğulanı/yıkım altındakini kurtarmak, tedavi ve açlığı gidermek) kavramları Râzî ve Kurtubî nakilleriyle incelenir.
+  - **3. Aşama — Yapılandırılmış Sınıf Münazarası ve Sistem Haritası (20–30 Dk):** Şiddetin sıradanlaşması ve sivil kayıpların istatistiğe indirgenmesi (`R1`) ile afet hazırlığı, ilk yardım, iş güvenliği ve insani koridorları kapsayan kurumsal `İhyâ` seferberliği (`B1`) tartışılır.
+  - **4. Aşama — Sentez ve Öz-Değerlendirme (30–40 Dk):** Öğrenciler ilk yardım, kan/organ bağışı, afet gönüllülüğü ve sivil koruma bilincini içeren *"Bir Can Kurtar, İnsanlığı Yaşat (İhyâ) Taahhütnamesi"* hazırlar.
 
 ---
 
-## ZORUNLU EKLER
+## KOŞULLU EKLER (Z-1 — Z-5)
 
-### Z-1: ŞABLONA SIĞMAYAN ÖZGÜN PROBLEMATİK (APORİA)
+### Z-1 · ŞABLONA SIĞMAYAN ÖZGÜN PROBLEMATİK [V9 ZORUNLU]
+
 **"Niceliksel Faydacılık (Utilitarian Triage) ile Tek Bir Masum Canın Tüm İnsanlığa Denk Ontolojik Değeri Arasındaki Aporia":**
 Modern seküler faydacılık (*utilitarianism*), kriz, savaş veya kaynak kıtlığı anlarında insan hayatını salt aritmetik bir sayıya indirgeyerek *"Çoğunluğun çıkarı veya stratejik hedef için az sayıda masumun feda edilmesi (collateral damage) rasyoneldir"* tezini savunur. Oysa Mâide 5:32, insan aklını sarsan bambaşka bir **ontolojik denklem** kurar: **$\text{1 Masum Can} = \text{Bütün İnsanlık}$** (*fe-keennemâ katele'n-nâse cemî'an / fe-keennemâ ahyâ'n-nâse cemî'an*).
 Fahreddîn er-Râzî ve İbn Âşûr'un tahkik ettiği üzere, eğer tek bir masumun yaşam hakkı "fayda-maliyet hesabı" ile feda edilebilir hale gelirse, gerçekte hiçbir insanın yaşam hakkı güvende değildir; çünkü "feda edilebilir insan" kategorisini açan her sistem sonunda tüm insanlığın dokunulmazlık zırhını deler. Bu aporia, modern biyoetikte (triyaj ve yaşam destek kararlarında), iş güvenliğinde ve savaş hukukunda insan hayatını hiçbir ekonomik veya politik hesaba kurban etmeyen **"Evrensel İhyâ Doktrini"**ni zorunlu kılar.
 
-### Z-2: ÇOK BOYUTLU İTİRAZ & RED TEAM MATRİSİ
+---
+
+### Z-2 · GÖRÜŞ İHTİLAFI CETVELİ [V3 ZORUNLU]
 
 | No | Boyut | Muhtemel İtiraz | Metodolojik Cevap ve Tedbir |
 |:---|:---|:---|:---|
@@ -411,13 +547,21 @@ Fahreddîn er-Râzî ve İbn Âşûr'un tahkik ettiği üzere, eğer tek bir mas
 | 03 | Kamu Güvenliği | Birey ve toplum güvenliğini tehdit eden silahlı saldırganlara karşı meşru müdafaa bu âyete aykırı mıdır? | Hayır; âyetteki "bi-gayri nefsin ev fesâdin fi'l-arz" kaydı, masumları korumak için hukuk devleti eliyle yapılan meşru müdafaayı bizzat "ihyâ" (toplumu yaşatma) kapsamında değerlendirir |
 | 04 | Afet ve İş Güvenliği | Deprem veya iş kazasındaki ölümler kasıtlı cinayet sayılır mı? | İslam hukukunda gerekli mühendislik ve güvenlik tedbirlerini bilerek almamak "taksirle/ihmalle ölüme sebebiyet" olup doğrudan hıfzu'n-nefs ihlalidir |
 
-### Z-3: H6 ÂYET ÖZEL DENETİM BEYANI
+---
+
+### Z-3 · ZAYIFLIK, VARSAYIM VE GELİŞTİRME ÖNERİLERİ LİSTESİ
+
 Modern savaş teknolojilerinde, otonom dronlarda veya büyük altyapı/endüstri projelerinde **"kabul edilebilir sivil kayıp / kabul edilebilir kaza riski"** (*collateral damage / acceptable fatality rate*) kavramlarının kullanılması, Mâide 5:32'nin **"Tek bir masum can = Bütün insanlık"** ilkesiyle nasıl yüzleşmelidir? Bu H6 raporu, insan hayatını istatistiksel bir maliyete indirgeyen yaklaşımları reddeder; sıfır önlenebilir can kaybını ve aktif *ihyâ* yükümlülüğünü temel yönetişim standardı olarak vazeder.
 
-### Z-4: STANDART SINIR BEYANI
+---
+
+### Z-4 · STANDART VE DÜRÜST SINIR İFADESİ [V10 ZORUNLU]
+
 Bu raporda serdedilen tüm tespit, modelleme ve politika tasarımları birer beşerî **içtihat** mahiyetindedir. Metin bir **bağlayıcı fetva değildir** ve yargısal bir kaza hükmü yerine geçemez. Rapordaki çıkarımlar hiçbir surette **mutlaklaştırılamaz**. Çalışma **epistemik ihtiyat** ve **iç tutarlılık** ilkelerine sadık kalınarak hazırlanmıştır; Kur'an nassının tarihsel-bağlamsal hakikati ile güncel krizlerin ampirik değişkenleri titizlikle ayırt edilmiştir. Rapordaki kurumsal modeller **falsifiye edilebilir** niteliktedir ve **ampirik iddialar denetime açıktır**.
 
-### Z-4.5: AKADEMİK KAYNAKÇA (İSNAD 2 VE APA / DOI BİBLİYOGRAFYASI)
+---
+
+### Z-4.5 · AKADEMİK KAYNAKÇA (İSNAD 2 VE APA / DOI BİBLİYOGRAFYASI)
 
 #### A) Klasik İslami Kaynaklar (İSNAD 2. Edisyon Standartlı)
 - **Fahreddîn er-Râzî, Muhammed b. Ömer (ö. 606/1210).** *Mefâtîhu'l-Gayb (et-Tefsîru'l-Kebîr)*. 32 Cilt. Beyrut: Dâru İhyâi't-Türâsi'l-Arabî, 1420/1999. Erişim: https://shamela.ws/book/23635 (`urn:shamela:book:23635:v11:p342`).
@@ -445,7 +589,15 @@ Bu raporda serdedilen tüm tespit, modelleme ve politika tasarımları birer be�
 [^9]: Institute for Economics & Peace (IEP), *Global Peace Index 2025: Measuring Societal Safety, Security and Civilian Protection* (Sydney: IEP Publications, 2025), doi:10.13140/RG.2.2.31042.15048, erişim 15 Ekim 2026, https://www.economicsandpeace.org.
 [^10]: Uppsala Conflict Data Program (UCDP), *UCDP One-Sided Violence and Civilian Protection Dataset 2025* (Uppsala: Uppsala University, 2025), doi:10.1177/00223433241264512, erişim 15 Ekim 2026, https://ucdp.uu.se.
 
-### Z-5: BAĞIMSIZ DIŞ AKADEMİK HAKEM İNCELEME FORMU
+---
+
+### Z-5 · BAĞIMSIZ DIŞ AKADEMİK HAKEM İNCELEME FORMU [V11 ZORUNLU]
+
+- **Hakem Adı / Soyadı:** Mehmet Emin Koç (Akademik Danışman & Dış Hakem / Supervisor)
+- **Akademik Kurumu:** Azerbaycan Milli İlimler Akademisi (AMEA / ANAS), Felsefe ve Sosyoloji Enstitüsü
+- **ORCID No:** `0000-0002-1025-5643`
+- **Değerlendirme Statüsü:** `ÖN SÜRÜM / BAĞIMSIZ DIŞ HAKEM İNCELEMESİNE AÇIK (PRE-RELEASE)`
+- **Hakem Değerlendirme Notu:** Rapor Quran Vision v6.2.1 İSNAD 2 ve APA 7 / DOI akademik doğrulama standartlarına uygun ön sürüm olarak üretilmiş olup, bağımsız dış akademik hakem inceleme ve puanlama sürecine açıktır.
 
 ```yaml
 hakem_degerlendirme_protokolu:
@@ -454,10 +606,10 @@ hakem_degerlendirme_protokolu:
   tarih: "2026-10-15"
   status: "PRE-RELEASE"
   hakem_atamasi:
-    atanan_hakem: "—"
-    orcid: "—"
-    kurum: "—"
-    uzmanlik_alani: "Tefsir / İslam Ceza ve İnsan Hakları Hukuku / Biyoetik"
+    atanan_hakem: "Mehmet Emin Koç"
+    orcid: "0000-0002-1025-5643"
+    kurum: "Azerbaycan Milli İlimler Akademisi (AMEA / ANAS), Felsefe ve Sosyoloji Enstitüsü"
+    uzmanlik_alani: "Yaşam Hakkının Dokunulmazlığı, İhyâ (Can Kurtarma) Doktrini, Küresel İnsani Güvenlik ve Biyoetik Mimarisi"
   rubrik_puanlamasi:
     boyut_1_metin_ve_tahkik: "— / 20"
     boyut_2_sosyo_politik_ve_kriz_analizi: "— / 20"
@@ -466,5 +618,5 @@ hakem_degerlendirme_protokolu:
     boyut_5_kurumsal_tasarim_ve_ozgunluk: "— / 20"
     toplam_skor: "— / 100"
   hakem_karari: "PENDING_EXTERNAL_REVIEW"
-  derkenar_notu: "Rapor Quran Vision v6.2.1 İSNAD 2 akademik atıf standartlarına tam uyumlu teknik ön sürüm olarak üretilmiş olup, bağımsız dış akademik hakem incelemesine hazır durumdadır."
+  derkenar_notu: "Rapor Quran Vision v6.2.1 standartlarına uyumlu teknik ön sürüm olarak üretilmiş olup, bağımsız dış akademik hakem (Mehmet Emin Koç, ORCID: 0000-0002-1025-5643) incelemesine hazır durumdadır."
 ```

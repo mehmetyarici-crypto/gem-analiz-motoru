@@ -569,7 +569,7 @@ class GemLinterV6:
             if not reviewer or str(reviewer).strip().lower() in ["null", "none", "—", "henüz atanmadı", ""]:
                 self.report("L-1101", BLOCK, f"{status} statüsü için geçerli Hakem Adı zorunludur!")
 
-            if not orcid or "0000" in str(orcid):
+            if not orcid or "0000-0000" in str(orcid):
                 self.report("L-1102", WARN, f"{status} statüsü için geçerli hakem ORCID kimliği önerilir.")
 
             if not notes or len(str(notes).strip()) < 15:

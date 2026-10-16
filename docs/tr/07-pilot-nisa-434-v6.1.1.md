@@ -172,13 +172,13 @@ scenarios:
 peer_review:
   status: "PRE-RELEASE"
   internal_linter_verified: true
-  linter_timestamp: "2026-10-14T21:55:00+03:00"
-  reviewer_name: null
-  reviewer_title: null
-  reviewer_orcid: null
-  reviewer_institution: null
+  linter_timestamp: "2026-10-15T23:00:00+03:00"
+  reviewer_name: "Mehmet Emin Koç"
+  reviewer_title: "Akademik Danışman & Dış Hakem (Supervisor & External Peer-Reviewer)"
+  reviewer_orcid: "0000-0002-1025-5643"
+  reviewer_institution: "Azerbaycan Milli İlimler Akademisi (AMEA / ANAS), Felsefe ve Sosyoloji Enstitüsü"
   review_date: null
-  review_notes: "Ön sürüm aşamasındadır; bağımsız dış akademik hakem incelemesine açıktır."
+  review_notes: "Ön sürüm (PRE-RELEASE) aşamasındadır; bağımsız dış akademik hakem (Mehmet Emin Koç, ORCID: 0000-0002-1025-5643) değerlendirme ve tescil sürecine açıktır."
 ---
 
 # Nisâ Sûresi 4:34 Tahlili — Aile İçi Yönetişim, Kavamiyyet Sorumluluğu ve Nüşûz Krizinde Tedricî Tedbirler Doktrini
@@ -189,6 +189,9 @@ peer_review:
 - **Vaka Kodu:** QV-2026-002
 - **Âyet:** Nisâ Sûresi 4:34
 - **Konu Başlığı:** Aile İçi Yönetişim, Kavamiyyet Sorumluluğu ve Nüşûz Krizinde Tedricî Tedbirler Doktrini
+- **Proje Kurucusu & Başyazar:** Mehmet Yarıcı (Uludağ Üniversitesi İlahiyat Fakültesi, 1989 • T.C. MEB, İstanbul Bahçelievler Dede Korkut Anadolu Lisesi — ORCID: `0009-0003-0356-8582`)
+- **Akademik Danışman & Dış Hakem:** Mehmet Emin Koç (Azerbaycan Milli İlimler Akademisi Felsefe ve Sosyoloji Enstitüsü — ORCID: `0000-0002-1025-5643`)
+- **Kalıcı CERN / Zenodo DOI:** `10.5281/zenodo.23391192` (Kavram DOI) | `10.5281/zenodo.23391193` (v6.2.1 Sürüm DOI)
 - **Tarih:** 2026-10-14
 - **Sürüm:** v6.2.1 (Akademik Doğrulama Standartlı)
 - **Katman:** 3 (26 Adımlı Tam Analiz Motoru + Z-1..Z-5 Zorunlu Ekler)
@@ -200,7 +203,6 @@ peer_review:
 - **Mushaf / Kıraat Standardı:** Mushaf-ı Şerîf Resm-i Osmânî, Kûfî 6236 (Âsım / Hafs), Nisâ 4:34
 
 ---
-
 ### ADIM 00-5 — DİL VE SEMANTİK MATRİSİ (H6 ZORUNLU)
 
 1. **Semantik / Kök Anlam:**
@@ -438,7 +440,64 @@ Nisâ Sûresi 4:32–35 pasajında önce kadınların ve erkeklerin kendi kazan�
 
 ---
 
-## Z-1 · ŞABLONA SIĞMAYAN ÖZGÜN PROBLEMATİK [V9 ZORUNLU]
+## FAZ V — GÜVEN, SORUMLULUK VE İZLEME KAYDI
+
+### ADIM 17 — GÜVEN DÜZEYİ
+- **Nitel Derece:** B (Orta-Yüksek Analitik Güven). Klasik fıkıh ve tefsir usûlü tahkiki (İbn Fâris, Zemahşerî, İbn Manzûr, Şâtıbî, Cessâs, Atâ b. Ebî Rebâh ve İbn Âşûr) ile çağdaş aile sosyolojisi verilerinin (UN Women, WHO, UNDP) çapraz sentezine dayanır; teolojik veya normatif alanda sayısal kesinlik iddiası taşımaz.
+- **Kurumsal Rol Dağılımı:**
+  - **Aile ve Sosyal Hizmetler Bakanlığı:** Önleyici aile danışmanlığı, evlilik öncesi iletişim eğitimi ve ŞÖNİM koruma altyapısının koordinasyonu.
+  - **Adalet Bakanlığı & Aile Mahkemeleri:** Nisâ 4:35'teki iki taraflı hakemlik (*hakemen min ehlihî ve hakemen min ehlihâ*) mekanizmasının uzman arabuluculuk sistemiyle entegrasyonu ve şiddete karşı caydırıcı yargısal tedbirlerin (*ta'zîr*) uygulanması.
+  - **Diyanet İşleri Başkanlığı & Din Eğitimi Kurumları:** `Kavvâm` kavramının zorbalık değil, sorumluluk ve merhamet emaneti olduğunu anlatan sahih dinî rehberlik.
+
+---
+
+### ADIM 17b — AKTÖR VE GÜÇ HARİTASI
+- **Karar Vericiler:** Yasama organı, Aile Mahkemeleri hâkimleri, Aile ve Sosyal Hizmetler Bakanlığı üst yönetimi.
+- **Uygulayıcılar:** Akredite aile danışmanları, iki taraflı aile hakem kurulları (Nisâ 4:35), ŞÖNİM uzmanları, kolluk kuvvetleri ve din görevlileri.
+- **Etkilenen Gruplar:** Eşler, çocuklar, geniş aile ağları ve şiddet/geçimsizlik riski altındaki kırılgan bireyler.
+- **Gelecek Nesiller:** Şiddetten arınmış, meveddet, rahmet ve karşılıklı saygı temelli aile ortamında yetişecek çocuklar ve gençler.
+
+---
+
+### ADIM 18 — BİLGİ TABANI VE ZAYIFLIK LİSTESİ
+- **Bilgi Tabanı:** İSNAD 2 standartlı klasik tefsir ve fıkıh kaynakları (Cessâs, Şâtıbî, Zemahşerî, İbn Âşûr), Hz. Peygamber'in fiilî sünneti ve UN Women / WHO / UNDP küresel aile içi şiddet ve insani gelişme veri setleri.
+- **Zayıflıklar ve Risk-Azaltma Matrisi:**
+  - *Risk 1:* Örfi ataerkil alışkanlıkların dinî nass gibi sunularak fiziksel/psikolojik şiddete bahane yapılması → *Azaltma:* Hz. Peygamber'in sünneti ve İbn Âşûr/Atâ içtihadı doğrultusunda şiddetin kanunla (`ta'zîr`) açıkça yasaklanması.
+  - *Risk 2:* Aile içi krizlerin mahremiyet gerekçesiyle hakemlik (4:35) aşamasına taşınmadan kronikleşmesi → *Azaltma:* Gizlilik esaslı, erişilebilir ve ücretsiz kurumsal aile danışmanlığı ağının yaygınlaştırılması.
+
+---
+
+### ADIM 18.1 — DİL GÜVENLİĞİ
+- Rapor metninde kesinlik, tekelcilik veya sahte-onay iddialarından arındırma denetimi (`gem_lint.py` `L-1801`) yapılmıştır. Kadın onurunu zedeleyen ataerkil tahakküm dili de, nassın tarihsel ve hukuki bütünlüğünü yok sayan indirgemeci dil de metodolojik olarak reddedilmiştir.
+
+---
+
+### ADIM 19 — İZLEME VE GERİYE DÖNÜK SINAMA (RETRODICTION)
+- **İzleme KPI (1., 3. ve 5. Yıl Göstergeleri):**
+  - *1. Yıl:* Aile mahkemelerine entegre edilen Nisâ 4:35 uzlaştırma/hakemlik pilot uygulamalarında başvuruların $\le 60$ gün içinde sonuçlanma oranı.
+  - *3. Yıl:* Danışmanlık ve hakemlik desteği alan çiftlerde şiddetsiz uzlaşı veya medenî/adil ayrılık oranının $\ge \%75$ seviyesine ulaşması.
+  - *5. Yıl:* WHO / UN Women ve ulusal adli istatistiklerde aile içi fiziksel ve ağır psikolojik şiddet vakalarında anlamlı düşüş ($\ge \%25$ azalma).
+- **Retrodiction (Geriye Dönük Sınama):** 1917 Osmanlı *Hukuk-ı Âile Kararnamesi* (Madde 130) ile Nisâ 4:35'teki aile meclisi/hakemlik kurumunun ilk kez modern kanunlaştırmaya dahil edilmesi ve kadına kötü muamele halinde yargısal tefrik hakkı tanınması tarihsel doğrulama referansı olarak incelenmiştir.
+
+---
+
+### ADIM 20 — AÇIK ARAŞTIRMA SORULARI, VARSAYIMLAR VE 40 DAKİKALIK TYMM PEDAGOJİK DERS PLANI
+- **Açık Araştırma Soruları:**
+  1. Çift gelirli modern kent ailesinde `bimâ enfeqû` (mali infak ve geçim yükümlülüğü) ilkesine dayalı `kavvâmlık` sorumluluğu, ortak karar alma (*şûrâ*) modeliyle hukuki olarak nasıl bütünleştirilmelidir?
+  2. Dijital çağda ortaya çıkan siber ısrarlı takip, duygusal ihmal ve ekonomik kısıtlama fiilleri klasik fıkıhtaki `nüşûz` ve `sui muamele` kategorilerine hangi nesnel ölçütlerle dahil edilmelidir?
+- **Temel Varsayım:** Eşlerin insan onuruna saygılı, profesyonel arabuluculuk ve adil hukuk güvencesi altında krizleri şiddetsiz çözme kapasitesine sahip olduğu kabul edilmiştir.
+- **40 Dakikalık TYMM Pedagojik Ders ve Seminer Planı (Nisâ 4:34–35 — Ailede Emanet, Kavvâmlık ve Şiddetsiz Uzlaşı):**
+  - **TYMM Erdem-Değer-Eylem Çerçevesi:** *Merhamet, Aile Bütünlüğü, Saygı, Adalet ve Nezaket.*
+  - **1. Aşama — Hazırlık ve Bağlamsal Keşif (0–10 Dk):** Hz. Peygamber'in *"Sizin en hayırlınız ailesine en güzel davrananızdır"* hadisi ve hayatı boyunca hiçbir kadına veya çocuğa el kaldırmadığı sünneti tahtaya yazılarak derse giriş yapılır.
+  - **2. Aşama — Klasik Tefsir ve Kavram Atölyesi (10–20 Dk):** `Kavvâm` kavramının "tahakküm ve zorbalık" değil, `bimâ enfeqû` kaydıyla "koruma, gözetme ve mali/hukuki sorumluluk yüklenme" olduğu; Nisâ 4:34'ün mutlaka Nisâ 4:35'teki *iki taraflı aile hakemliği* ile birlikte okunması gerektiği Atâ b. Ebî Rebâh ve İbn Âşûr'un içtihatlarıyla tahlil edilir.
+  - **3. Aşama — Yapılandırılmış Sınıf Münazarası ve Sistem Haritası (20–30 Dk):** Öğrenciler `R1` (iletişimsizlik ve öfke sarmalı) ile `B1` (maruf ile iletişim, kademeli soğutma ve Nisâ 4:35 hakemliği) döngülerini karşılaştırarak aile içi krizlerde şiddetsiz iletişim protokolü tasarlar.
+  - **4. Aşama — Sentez ve Öz-Değerlendirme (30–40 Dk):** Katılımcılar *İnsan Onuru ve Aile İçi Merhamet Sözleşmesi* maddelerini oluşturur.
+
+---
+
+## KOŞULLU EKLER (Z-1 — Z-5)
+
+### Z-1 · ŞABLONA SIĞMAYAN ÖZGÜN PROBLEMATİK [V9 ZORUNLU]
 
 ### Tarihsel Ataerkillik, Fiziksel Darb ve Kur'anî Adalet-Onur Gerilimi: Nisâ 4:34'ün Hermenötik Aporiası
 
@@ -451,7 +510,7 @@ Bu problematik şu çözülmesi güç düğümleri barındırır:
 
 ---
 
-## Z-2 · GÖRÜŞ İHTİLAFI CETVELİ [V3 ZORUNLU]
+### Z-2 · GÖRÜŞ İHTİLAFI CETVELİ [V3 ZORUNLU]
 
 | Görüş Sahibi / Ekol | Lafzî Yorumu | Hukuki / Ailevi Neticesi | Dayandığı Temel Delil |
 | :--- | :--- | :--- | :--- |
@@ -462,7 +521,7 @@ Bu problematik şu çözülmesi güç düğümleri barındırır:
 
 ---
 
-## Z-3 · ZAYIFLIK, VARSAYIM VE GELİŞTİRME ÖNERİLERİ LİSTESİ
+### Z-3 · ZAYIFLIK, VARSAYIM VE GELİŞTİRME ÖNERİLERİ LİSTESİ
 
 - **Temel Varsayımlar:**
   1. Aile kurumunun toplumun temel ahlaki ve ontolojik çekirdeği olduğu varsayılmıştır.
@@ -477,7 +536,7 @@ Bu problematik şu çözülmesi güç düğümleri barındırır:
 
 ---
 
-## Z-4 · STANDART VE DÜRÜST SINIR İFADESİ [V10 ZORUNLU]
+### Z-4 · STANDART VE DÜRÜST SINIR İFADESİ [V10 ZORUNLU]
 
 > **METODOLOJİK VE EPİSTEMİK SINIR BEYANI:**
 > Bu rapor; Kur'an Temelli Gelecek Vizyonu (Quran Vision v6.2.1) mimarisi çerçevesinde üretilmiş analitik ve hermenötik bir modellemedir. Dini bir fetva, kesin kazi bir hüküm veya ilahi muradın eksiksiz ve yegâne tefsiri niteliği taşımaz. Raporda yer alan simülasyonlar, göstergeler ve politika kolları; analistin benimsediği usûl ekolünün ve ampirik varsayımların bir türevidir. Bu metin, kod tabanlı biçimsel iç tutarlılık denetiminden (gem_lint.py) geçmiş olup, bağımsız dış akademik hakem heyeti (peer-review) tarafından tescil edilmedikçe bilimsel kesinlik iddiası barındırmaz.
@@ -510,11 +569,32 @@ Bu problematik şu çözülmesi güç düğümleri barındırır:
 
 ---
 
-## Z-5 · HAKEM VE AKRAN DEĞERLENDİRME KAYDI [V11 ZORUNLU]
+### Z-5 · BAĞIMSIZ DIŞ AKADEMİK HAKEM İNCELEME FORMU [V11 ZORUNLU]
 
-- **Hakem Adı / Soyadı:** Henüz atanmadı
-- **Akademik Ünvanı ve Kurumu:** —
-- **ORCID No:** —
-- **Değerlendirme Tarihi:** —
-- **Hakem Kararı:** `HENÜZ ATANMADI (ÖN SÜRÜM / PRE-RELEASE)`
-- **Hakem Değerlendirme Notu:** Rapor v6.2.1 akademik standartlarına göre hazırlanmış ön sürüm niteliğindedir. Bağımsız dış akademik hakem incelemesine açıktır.
+- **Hakem Adı / Soyadı:** Mehmet Emin Koç (Akademik Danışman & Dış Hakem / Supervisor)
+- **Akademik Kurumu:** Azerbaycan Milli İlimler Akademisi (AMEA / ANAS), Felsefe ve Sosyoloji Enstitüsü
+- **ORCID No:** `0000-0002-1025-5643`
+- **Değerlendirme Statüsü:** `ÖN SÜRÜM / BAĞIMSIZ DIŞ HAKEM İNCELEMESİNE AÇIK (PRE-RELEASE)`
+- **Hakem Değerlendirme Notu:** Rapor Quran Vision v6.2.1 İSNAD 2 ve APA 7 / DOI akademik doğrulama standartlarına uygun ön sürüm olarak üretilmiş olup, bağımsız dış akademik hakem inceleme ve puanlama sürecine açıktır.
+
+```yaml
+hakem_degerlendirme_protokolu:
+  rapor_id: "QV-2026-002"
+  sure_ayet: "Nisâ 4:34"
+  tarih: "2026-10-15"
+  status: "PRE-RELEASE"
+  hakem_atamasi:
+    atanan_hakem: "Mehmet Emin Koç"
+    orcid: "0000-0002-1025-5643"
+    kurum: "Azerbaycan Milli İlimler Akademisi (AMEA / ANAS), Felsefe ve Sosyoloji Enstitüsü"
+    uzmanlik_alani: "Aile İçi Yönetişim, Kavamiyyet Sorumluluğu ve Nüşûz Krizinde Tedricî Tedbirler Doktrini"
+  rubrik_puanlamasi:
+    boyut_1_metin_ve_tahkik: "— / 20"
+    boyut_2_sosyo_politik_ve_kriz_analizi: "— / 20"
+    boyut_3_dil_guvenligi_ve_tarafsizlik: "— / 20"
+    boyut_4_falsifiabilite_ve_hume_giyotini: "— / 20"
+    boyut_5_kurumsal_tasarim_ve_ozgunluk: "— / 20"
+    toplam_skor: "— / 100"
+  hakem_karari: "PENDING_EXTERNAL_REVIEW"
+  derkenar_notu: "Rapor Quran Vision v6.2.1 standartlarına uyumlu teknik ön sürüm olarak üretilmiş olup, bağımsız dış akademik hakem (Mehmet Emin Koç, ORCID: 0000-0002-1025-5643) incelemesine hazır durumdadır."
+```

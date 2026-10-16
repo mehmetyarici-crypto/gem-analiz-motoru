@@ -163,13 +163,13 @@ scenarios:
 peer_review:
   status: "PRE-RELEASE"
   internal_linter_verified: true
-  linter_timestamp: "2026-10-15T02:00:00+03:00"
-  reviewer_name: null
-  reviewer_title: null
-  reviewer_orcid: null
-  reviewer_institution: null
+  linter_timestamp: "2026-10-15T23:00:00+03:00"
+  reviewer_name: "Mehmet Emin Koç"
+  reviewer_title: "Akademik Danışman & Dış Hakem (Supervisor & External Peer-Reviewer)"
+  reviewer_orcid: "0000-0002-1025-5643"
+  reviewer_institution: "Azerbaycan Milli İlimler Akademisi (AMEA / ANAS), Felsefe ve Sosyoloji Enstitüsü"
   review_date: null
-  review_notes: "Ön sürüm (PRE-RELEASE) aşamasındadır; bağımsız dış akademik hakem incelemesine açıktır."
+  review_notes: "Ön sürüm (PRE-RELEASE) aşamasındadır; bağımsız dış akademik hakem (Mehmet Emin Koç, ORCID: 0000-0002-1025-5643) değerlendirme ve tescil sürecine açıktır."
 ---
 
 # Âl-i İmrân Sûresi 3:159 Tahlili — Kriz Dönemlerinde İstişare (Şûrâ), Katılımcı Karar Alma ve Merhamet Temelli Liderlik Mimarisi
@@ -180,6 +180,9 @@ peer_review:
 - **Vaka Kodu:** QV-2026-006
 - **Âyet:** Âl-i İmrân Sûresi 3:159 ("İstişare ve Liderlik Âyeti")
 - **Konu Başlığı:** Kriz Dönemlerinde İstişare (Şûrâ), Katılımcı Karar Alma ve Merhamet Temelli Liderlik Mimarisi
+- **Proje Kurucusu & Başyazar:** Mehmet Yarıcı (Uludağ Üniversitesi İlahiyat Fakültesi, 1989 • T.C. MEB, İstanbul Bahçelievler Dede Korkut Anadolu Lisesi — ORCID: `0009-0003-0356-8582`)
+- **Akademik Danışman & Dış Hakem:** Mehmet Emin Koç (Azerbaycan Milli İlimler Akademisi Felsefe ve Sosyoloji Enstitüsü — ORCID: `0000-0002-1025-5643`)
+- **Kalıcı CERN / Zenodo DOI:** `10.5281/zenodo.23391192` (Kavram DOI) | `10.5281/zenodo.23391193` (v6.2.1 Sürüm DOI)
 - **Tarih:** 2026-10-15
 - **Sürüm:** v6.2.1 (Akademik Doğrulama Standartlı)
 - **Katman:** 3 (26 Adımlı Tam Analiz Motoru + 5 Makro Faz + Z-1..Z-5 Zorunlu Ekler)
@@ -191,7 +194,6 @@ peer_review:
 - **Mushaf / Kıraat Standardı:** Mushaf-ı Şerîf Resm-i Osmânî, Kûfî 6236 (Âsım / Hafs), Âl-i İmrân 3:159
 
 ---
-
 ### ADIM 00-5 — DİL VE SEMANTİK MATRİSİ (H6 ZORUNLU)
 
 1. **Semantik / Kök Anlam (İştikak):**
@@ -478,9 +480,15 @@ peer_review:
 
 ---
 
-### ADIM 20 — AÇIK ARAŞTIRMA SORULARI VE VARSAYIMLAR
+### ADIM 20 — AÇIK ARAŞTIRMA SORULARI, VARSAYIMLAR VE 40 DAKİKALIK TYMM PEDAGOJİK DERS PLANI
 - **Açık Sorular:** Hızlı hareket gerektiren siber savaş ve nükleer krizlerde geniş tabanlı istişare nasıl işletilecektir?
 - **Temel Varsayım:** Çok sesli ve eleştirel istişarenin tek adam kararlarından her zaman daha sağlam sonuç ürettiği kabul edilmiştir.
+- **40 Dakikalık TYMM Pedagojik Ders ve Seminer Planı (Âl-i İmrân 3:159 — Kriz Liderliği, Şefkat, Şûrâ ve Azim):**
+  - **TYMM Erdem-Değer-Eylem Çerçevesi:** *Şefkat (Rıfk), İstişare (Şûrâ), Affedicilik, Kararlılık (Azim) ve Tevekkül.*
+  - **1. Aşama — Hazırlık ve Bağlamsal Keşif (0–10 Dk):** Uhud Savaşı'ndaki ağır taktik hatanın ve kayıpların hemen ardından inen bu âyette, Hz. Peygamber'in hata yapan genç sahabileri suçlamak yerine affedip onlarla yeniden istişare etmesi (`ve şâvirhüm fi'l-emr`) incelenir.
+  - **2. Aşama — Klasik Tefsir ve Kavram Atölyesi (10–20 Dk):** `Linte lehüm` (yumuşak davranma), `fazzan galîza'l-kalb` (kaba ve katı kalpli olma), `lenfaddû min havlike` (etrafından dağılıp gitme), `şûrâ` ve `azm` kavramları Zemahşerî ve İbn Âşûr üzerinden tahlil edilir.
+  - **3. Aşama — Yapılandırılmış Sınıf Münazarası ve Sistem Haritası (20–30 Dk):** Otoriter/kırıcı liderliğin yetenek göçü ve dalkavukluk üretmesi (`R1`) ile şefkatli ve istişarî liderliğin ortak aklı harekete geçirmesi (`B1`) simüle edilir.
+  - **4. Aşama — Sentez ve Öz-Değerlendirme (30–40 Dk):** Öğrenciler okul ve kurum yönetiminde "Psikolojik Güvenlik ve İstişare Protokolü" hazırlar.
 
 ---
 
@@ -554,11 +562,32 @@ Bu gerilim şu çetin açmazları içerir:
 
 ---
 
-### Z-5 · HAKEM VE AKRAN DEĞERLENDİRME KAYDI [V11 ZORUNLU]
+### Z-5 · BAĞIMSIZ DIŞ AKADEMİK HAKEM İNCELEME FORMU [V11 ZORUNLU]
 
-- **Hakem Adı / Soyadı:** Henüz atanmadı
-- **Akademik Ünvanı ve Kurumu:** —
-- **ORCID No:** —
-- **Değerlendirme Tarihi:** —
-- **Hakem Kararı:** `HENÜZ ATANMADI (ÖN SÜRÜM / PRE-RELEASE)`
-- **Hakem Değerlendirme Notu:** Rapor v6.2.1 akademik standartlarına göre hazırlanmış ön sürüm niteliğindedir. Bağımsız dış akademik hakem incelemesine açıktır.
+- **Hakem Adı / Soyadı:** Mehmet Emin Koç (Akademik Danışman & Dış Hakem / Supervisor)
+- **Akademik Kurumu:** Azerbaycan Milli İlimler Akademisi (AMEA / ANAS), Felsefe ve Sosyoloji Enstitüsü
+- **ORCID No:** `0000-0002-1025-5643`
+- **Değerlendirme Statüsü:** `ÖN SÜRÜM / BAĞIMSIZ DIŞ HAKEM İNCELEMESİNE AÇIK (PRE-RELEASE)`
+- **Hakem Değerlendirme Notu:** Rapor Quran Vision v6.2.1 İSNAD 2 ve APA 7 / DOI akademik doğrulama standartlarına uygun ön sürüm olarak üretilmiş olup, bağımsız dış akademik hakem inceleme ve puanlama sürecine açıktır.
+
+```yaml
+hakem_degerlendirme_protokolu:
+  rapor_id: "QV-2026-006"
+  sure_ayet: "Âl-i İmrân 3:159"
+  tarih: "2026-10-15"
+  status: "PRE-RELEASE"
+  hakem_atamasi:
+    atanan_hakem: "Mehmet Emin Koç"
+    orcid: "0000-0002-1025-5643"
+    kurum: "Azerbaycan Milli İlimler Akademisi (AMEA / ANAS), Felsefe ve Sosyoloji Enstitüsü"
+    uzmanlik_alani: "Kriz Dönemlerinde İstişare (Şûrâ), Katılımcı Karar Alma ve Merhamet Temelli Liderlik Mimarisi"
+  rubrik_puanlamasi:
+    boyut_1_metin_ve_tahkik: "— / 20"
+    boyut_2_sosyo_politik_ve_kriz_analizi: "— / 20"
+    boyut_3_dil_guvenligi_ve_tarafsizlik: "— / 20"
+    boyut_4_falsifiabilite_ve_hume_giyotini: "— / 20"
+    boyut_5_kurumsal_tasarim_ve_ozgunluk: "— / 20"
+    toplam_skor: "— / 100"
+  hakem_karari: "PENDING_EXTERNAL_REVIEW"
+  derkenar_notu: "Rapor Quran Vision v6.2.1 standartlarına uyumlu teknik ön sürüm olarak üretilmiş olup, bağımsız dış akademik hakem (Mehmet Emin Koç, ORCID: 0000-0002-1025-5643) incelemesine hazır durumdadır."
+```

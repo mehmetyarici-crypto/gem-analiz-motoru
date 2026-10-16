@@ -171,13 +171,13 @@ scenarios:
 peer_review:
   status: "PRE-RELEASE"
   internal_linter_verified: true
-  linter_timestamp: "2026-10-15T02:00:00+03:00"
-  reviewer_name: null
-  reviewer_title: null
-  reviewer_orcid: null
-  reviewer_institution: null
+  linter_timestamp: "2026-10-15T23:00:00+03:00"
+  reviewer_name: "Mehmet Emin Koç"
+  reviewer_title: "Akademik Danışman & Dış Hakem (Supervisor & External Peer-Reviewer)"
+  reviewer_orcid: "0000-0002-1025-5643"
+  reviewer_institution: "Azerbaycan Milli İlimler Akademisi (AMEA / ANAS), Felsefe ve Sosyoloji Enstitüsü"
   review_date: null
-  review_notes: "Ön sürüm (PRE-RELEASE) aşamasındadır; bağımsız dış akademik hakem incelemesine açıktır."
+  review_notes: "Ön sürüm (PRE-RELEASE) aşamasındadır; bağımsız dış akademik hakem (Mehmet Emin Koç, ORCID: 0000-0002-1025-5643) değerlendirme ve tescil sürecine açıktır."
 ---
 
 # Rûm Sûresi 30:22 Tahlili — Ontolojik Çoğulculuk, Dilsel ve Etnik Çeşitlilik, Asimilasyon Karşıtlığı ve Bir Arada Yaşama Mimarisi
@@ -188,6 +188,9 @@ peer_review:
 - **Vaka Kodu:** QV-2026-010
 - **Âyet:** Rûm Sûresi 30:22 ("Ontolojik Çoğulculuk ve Ayetler Âyeti")
 - **Konu Başlığı:** Ontolojik Çoğulculuk, Dilsel ve Etnik Çeşitlilik, Asimilasyon Karşıtlığı ve Çok Kültürlü Bir Arada Yaşama Mimarisi
+- **Proje Kurucusu & Başyazar:** Mehmet Yarıcı (Uludağ Üniversitesi İlahiyat Fakültesi, 1989 • T.C. MEB, İstanbul Bahçelievler Dede Korkut Anadolu Lisesi — ORCID: `0009-0003-0356-8582`)
+- **Akademik Danışman & Dış Hakem:** Mehmet Emin Koç (Azerbaycan Milli İlimler Akademisi Felsefe ve Sosyoloji Enstitüsü — ORCID: `0000-0002-1025-5643`)
+- **Kalıcı CERN / Zenodo DOI:** `10.5281/zenodo.23391192` (Kavram DOI) | `10.5281/zenodo.23391193` (v6.2.1 Sürüm DOI)
 - **Tarih:** 2026-10-15
 - **Sürüm:** v6.2.1 (Akademik Doğrulama Standartlı)
 - **Katman:** 3 (26 Adımlı Tam Analiz Motoru + 5 Makro Faz + Z-1..Z-5 Zorunlu Ekler)
@@ -249,35 +252,71 @@ Rûm Sûresi Mekke döneminde, Bizans İmparatorluğu'nun Sâsânîler karşıs�
 
 ---
 
-### ADIM 02 — MUHATAP VE DİL GÜVENLİĞİ
-Hitap tüm insanlığa ("el-âlemîn" / "el-âlimîn") yöneliktir. Rapor dili, etnik milliyetçilik, kavmiyetçilik veya kültürel üstünlük iddialarından arındırılmıştır. Dil güvenliği gereğince ırkçı, asimilasyonist ve tahkir edici terminoloji tamamen dışlanmış, insan onuruna ve eşitliğine dayalı akademik bir üslup benimsenmiştir.
+### ADIM 02 — MANTIKSAL SEMANTİK VE KARŞIT İLKE TESTİ
+
+- **Koşul-Sonuç Yapısı:**
+  - *Ontolojik Öncül (`Ve min âyâtihî halku's-semâvâti ve'l-ardı vahtilâfü elsinetiküm ve elvâniküm`):* Dillerin ve renklerin çeşitliliğinin, tıpkı göklerin ve yerin yaratılışı gibi Allah'ın kudret âyetlerinden biri olması.
+  - *Epistemik ve Hukuki Sonuç (`inne fî zâlike le-âyâtin li'l-âlimîn`):* Farklı dil ve etnik kimliklerin bastırılacak bir kusur değil, bilakis âlimler ve düşünen toplumlar için korunması ve incelenmesi gereken ilahi birer delil ve medeniyet zenginliği olması.
+- **Muhatap ve Dil Güvenliği:** Hitap tüm insanlığa ("el-âlemîn" / "el-âlimîn") yöneliktir. Rapor dili, etnik milliyetçilik, kavmiyetçilik veya kültürel üstünlük iddialarından arındırılmıştır. Dil güvenliği gereğince ırkçı, asimilasyonist ve tahkir edici terminoloji tamamen dışlanmış, insan onuruna ve eşitliğine dayalı akademik bir üslup benimsenmiştir.
+- **Çapraz İlke (Karşıt İlke):** Çoğulculuğu savunurken ortak iletişimi ve vatan aidiyetini parçalamama ilkesi. Farklı diller birbirinin düşmanı değil, ortak medeniyet bahçesinin çiçekleridir. Bir üst ortak dil (lingua franca) birlik için zaruridir fakat alt dillerin inkârı pahasına kurulamaz.
 
 ---
 
-### ADIM 03 — METİN İÇİ DELALET VE HÜKÜM-HİKMET DENGESİ
+### ADIM 03 — ÜÇLÜ ÇERÇEVE (ETHOS / LOGOS / PATHOS) VE İS-OUGHT KÖPRÜSÜ
+
+- **Ethos (Ahlaki Yük):** Her insan diline ve ten rengine, Yaratıcı'nın bir sanat eseri ve kozmik âyeti (`âyetullâh`) olduğu bilinciyle hürmet göstermek; ırkçı kibri ve kültürel aşağılamayı reddetmek.
+- **Logos (Mantıksal Tutarlılık):** Aynı anne-babadan ve aynı anatomik ses tellerinden binlerce farklı dil, lehçe ve mizaç çıkması tesadüfle açıklanamaz; bu çeşitlilik beşerî işbölümü, kültürlerarası öğrenme ve medeniyet inşası için tasarlanmıştır.
+- **Pathos (Vicdani ve Duygusal Tesir):** Farklı dil ve renkteki insanları "yabancı/tehdit" olmaktan çıkarıp, gökyüzü ve yeryüzü kadar doğal ve saygın birer "İlahi Âyet" mertebesine yükselterek derin bir estetik hayranlık ve kardeşlik uyandırır.
 - **Zahirî Hüküm:** İnsanların dillerinin, lehçelerinin, ten renklerinin ve etnik aidiyetlerinin farklı olması Allah'ın varlığının ve kudretinin kanıtıdır. Hiçbir dil veya renk diğerinden ontolojik olarak üstün değildir (Veda Hutbesi teyidi).
 - **Bâtınî Hikmet:** Çeşitlilik, iletişimi ve tanışmayı ("te'âruf", Hucurât 49:13) mümkün kılan itici güçtür. Tek tipleşme ölümü ve kültürel çölleşmeyi, çeşitlilik ise hayatı ve medeniyeti temsil eder.
+- **Hume Giyotini (Olgu-Değer Ayrımı):** "Diller ve renkler ilahi birer âyettir, korunmalıdır" ilkesi normatif bir değerdir (ought). "Toplumlar farklılıklara daima hoşgörüyle bakar" önermesi ise fiili bir olgu değildir (is); zira insan doğasında yabancı korkusu ve kabilecilik daima pusudadır. Bu sebeple normatif değer, caydırıcı hukukla korunmalıdır.
 
 ---
 
-### ADIM 04 — MAQĀṢID MATRİSİ
+### ADIM 04 — MAKASID ANALİZİ
+
 - **Hıfzu'n-Nefs:** Irkçılık ve etnik nefret cinayetlerinin, soykırımların ve pogromların engellenmesi.
 - **Hıfzu'l-Akl ve'l-İlim:** Farklı dillerin taşıdığı binlerce yıllık bilişsel sermayenin ve epistemik mirasın korunması.
 - **Hıfzu'l-Irz ve'l-Kerâme:** İnsanların anadilleri ve etnik kökenleri sebebiyle aşağılanmasının ve dışlanmasının yasaklanması.
 - **Hıfzu'n-Nizâm:** Çok kültürlü ve çok dilli toplumlarda anayasal barışın ve sosyal uyumun tesisi.
+- **Şâtıbî ve İbn Âşûr Makâsıd Hiyerarşisi:** `[YORUM]` Âyetin vaz'ettiği hüküm *zarûriyyât* katmanında insan onuru ve kamu düzenini doğrudan korurken, *hâciyyât* katmanında kurumsal işleyişi kolaylaştırır ve *tahsîniyyât* katmanında üstün medeniyet ahlakını (*mekârimü'l-ahlâk*) tamamlar.
 
 ---
 
-## FAZ II — ÇAĞDAŞ HARİTALAMA VE KRİZ MODELLEMESİ
+### ADIM 04b — YORUMCU KONUMU (GADAMER HERMENÖTİĞİ)
 
-### ADIM 05 — ÇAĞDAŞ TEZAHÜRLER VE AKTÖR HARİTASI
-- **Aktör A (Hegemonik Tekçi İktidarlar):** Ulus-devlet refleksiyle tek dil, tek kültür dayatan, anadili eğitimini engelleyen yapılar.
-- **Aktör B (Ayrılıkçı ve Mikro-Milliyetçi Şiddet Odakları):** Kimliği terörize eden ve ortak vatandaşlık bağını dinamitleyen fraksiyonlar.
-- **Aktör C (Azınlıklar, Yerli Halklar ve Göçmenler):** Kültürel kimliğini ve dilini koruma mücadelesi veren dezavantajlı topluluklar.
-- **Aktör D (Uluslararası Hak ve Çoğulculuk Kurumları):** UNESCO, AİHM ve bağımsız insan hakları ombudsmanlıkları.
+1. **Usûl Ekolü:** Kozmolojik-Makâsıdî Tefsir Usûlü (Fahreddîn er-Râzî, Mâtürîdî ve İbn Âşûr çizgisi).
+2. **Felsefi Perspektif:** Çoğulcu medeniyet felsefesi, dilsel-kültürel insan hakları ve çokkültürlü vatandaşlık hukuku.
+3. **Alternatif Yorumcu Konumlarından Ayrışma:**
+   - *Asimilasyonist / Jakoben Uç:* Toplumsal birliği ancak dilsel ve kültürel farklılıkları zorla silerek (tek tipleştirerek) sağlayabileceğini zanneder.
+   - *Ayrılıkçı / Etnosentrik Uç:* Dil ve renk farklılığını ortak vatandaşlık sözleşmesini yıkan bir üstünlük ve çatışma aracına dönüştürür.
+   Raporumuz, çeşitliliği birlik içinde zenginlik (`kesrette vahdet`) ve ilahi bir âyet olarak koruyan Kur'anî çoğulculuk modelini esas alır.
 
-### ADIM 06 — SİSTEMİK GÜÇ DİNAMİKLERİ VE RETRODICTION
-Geriye dönük analizler (retrodiction), dilleri ve kültürleri yasaklayan imparatorlukların ve ulus-devletlerin uzun vadede parçalandığını gösterir: Babil kulesi mitinden modern Balkanlaşmaya, Ruanda soykırımından apartheid rejimlerine kadar tüm yıkımlar âyetteki "ihtilâf" hikmetine savaş açılmasının sonucudur. Buna karşın Osmanlı Millet Sistemi ve Endülüs bir arada yaşama tecrübesi zenginlik üretmiştir.
+---
+
+### ADIM 05 — SİYAK-SİBAK ANALİZİ (S1–S7)
+
+- **S1 (Önceki Âyetler — Rûm 30:20–21):** İnsanın topraktan yaratılıp yeryüzüne yayılması (30:20) ve eşler arasındaki sevgi (`meveddet`) ve merhamet (`rahmet`) âyetinden (30:21) hemen sonra 22. âyette dillerin ve renklerin çeşitliliğine geçilir.
+- **S2 (Sonraki Âyetler — Rûm 30:23–27):** Uyku ve rızık arayışı, şimşek ve yağmurla ölü toprağın diriltilmesi ve göklerle yerin Allah'ın emriyle ayakta durması sıralanarak **6'lı 'Ve min âyâtihî' (Kozmik Âyetler) dizisi** tamamlanır.
+- **S3 (Pasajın Konumu):** Rûm Sûresi'ndeki 20–27. âyetler arasındaki kevnî (kozmik ve antropolojik) deliller manzumesinin üçüncü halkasıdır.
+- **S4 (Sûre İçi Bütünlük):** Rûm 30:30'daki `fıtratullâh` (Allah'ın insanları üzerine yarattığı fıtrat; Allah'ın yaratışında değişme yoktur) ilkesiyle birleştiğinde, dilsel ve etnik çeşitliliğin fıtrata içkin olduğu anlaşılır.
+- **S5 (Nüzûl Sebepleri ve Hitap):** Kureyş'in Kâbe merkezli kabile/soy kibrini ve diğer kavimleri (*acem*) aşağılayan anlayışını kırmak üzere Mekke döneminde inmiştir.
+- **S6 (Mushaf Sırası ve Tevkîfî Yapı):** Ankebût Sûresi'ndeki iman sınamalarından sonra Rûm Sûresi evrensel tarih ve tabiat âyetleriyle ufku bütün insanlığa açar.
+- **Kırpma Riski (S7):** Âyeti yalnızca estetik ve şiirsel bir 'güzelleme' olarak görüp anadili hakları ve anayasal eşit yurttaşlık taleplerine göz yummak; ya da tersine ortak kamusal dili ve toplumsal entegrasyonu tamamen reddedip etnik gettolaşmaya sapmak.
+
+---
+
+### ADIM 06 — ÇAPRAZ ÂYET ANALİZİ
+
+- **Hucurât 49:13:** *"Ey insanlar! Şüphesiz biz sizi bir erkekle bir dişiden yarattık ve birbirinizle tanışasınız (`li-teârefû`) diye sizi kavimlere ve kabilelere ayırdık..."*
+- **Fâtır 35:27–28:** Dağların, meyvelerin, insanların ve canlıların renklerinin farklı farklı (`muhtelifün elvânühû`) yaratılmasının ancak **âlimlerin (`el-ulemâ`)** hakkıyla kavradığı bir mucize olması.
+- **İbrâhîm 14:4:** Her peygamberin, mesajı açıkça anlatabilmesi için kendi kavminin diliyle (`bi-lisâni kavmihî`) gönderilmesi (anadilin iletişim ve hidayet değeri).
+- **Hûd 11:118:** *"Rabbin dileseydi bütün insanları tek tip bir topluluk (`ümmeten vâhide`) yapardı."*
+- *Analitik Sonuç ve N4 Kapsamı:* Farklı dil ve renkleri kriminalize etmek veya üstünlük ölçütü yapmak, doğrudan Allah'ın kevnî âyetleriyle savaşmaktır (`N4`).
+
+---
+
+## FAZ II — SİSTEM VE GELECEK MODELLEMESİ
 
 ### ADIM 07 — SİSTEM HARİTASI (CAUSAL LOOP DİAGRAMI — CLD), GECİKME VE KIRILMA NOKTASI (N4)
 
@@ -286,21 +325,85 @@ Geriye dönük analizler (retrodiction), dilleri ve kültürleri yasaklayan impa
 - **Dengeleyici Döngü (B1 — Rûm 30:22 Ontolojik Saygı ve Çoğulcu Medeniyet Dengeleyicisi / Balancing Loop):** `[YORUM]` Kimliksel Gerilim ve Yabancı Düşmanlığı (`+`) → Dillerin ve Renklerin İlahi Birer Kozmik Âyet (`min āyātihī`) Olarak Anayasal ve Pedagojik Tanınması (`+`) → Eşit Vatandaşlık, Kültürel Haklar ve Çok Dilli/Çok Kültürlü Bilimsel Üretim (`li'l-‘ālimīn`) (`+`) → Ortak Vatan Aidiyetinin ve Medeniyet Zenginliğinin Güçlenmesi (`+`) → Kimliksel Gerilim ve Yabancı Düşmanlığı (`-`).
 - **Sistemik Gecikme (Delay) ve Kaldıraç Noktası (Leverage Point):** `[YORUM]` **Sistemik Gecikme (Delay):** Dilsel ve kültürel dışlama politikalarının ürettiği kuşaklararası kırgınlık **15–30 yıllık** sosyolojik bir gecikmeyle derin krizlere dönüşür; kapsayıcı eğitim ve kültürel hak reformlarının toplumsal güveni tamir etmesi ise **1–2 eğitim kademesi (4–8 yıl)** süre alır. **Kaldıraç Noktası (Leverage Point):** Farklılıkları "katlanılması gereken bir sorun" değil, **göklerin ve yerin yaratılışıyla eşdeğer birer "İlahi Âyet" (`āyāt`)** olarak gören Rûm 30:22 paradigmasının hukuk ve eğitim müfredatına yerleştirilmesidir.
 - **Kırılma Noktası (Tipping Point) ve Erken Uyarı Sinyali (N4 / EU):** `[YORUM]` **Tipping Point (Kırılma Noktası):** Bir dilin veya etnik kimliğin kamusal görünürlüğünün kriminalize edilmesi ve sokakta farklı dil/renk nedeniyle fiziksel nefret suçlarının baş göstermesi. **Erken Uyarı Sinyali (N4 / EU-01):** Sosyal medyada ve siyasi söylemde ırkçı/ötekileştirici nefret söyleminin `%20` üzerinde artışı, eğitimde ve istihdamda kimlik temelli ayrımcılık şikâyetlerinin yükselmesi.
+
 ---
 
-## FAZ III — KALIP DIŞI ÇÖZÜMLEME VE KURUMSAL DÖNÜŞÜM
+### ADIM 08 — DÖRT SENARYO VE STRATEJİK DEĞERLENDİRME
 
-### ADIM 08 — KURUMSAL TASARIM VE KARAR KOLU
-Yönetişimde karar kolu (decision branch), kamusal hizmetlerde çok dillilik ve kültürel erişilebilirlik ilkeleriyle donatılmalıdır: Hiçbir vatandaş anadilini bilmediği için adalet ve sağlık hizmetinden mahrum bırakılamaz.
+1. **Koruyucu Senaryo (Anayasal Çoğulculuk ve Zenginleşen Birliktelik) (`S1`):** Farklı dil ve etnik kimliklerin ilahi birer âyet olarak tanındığı, eşit yurttaşlık ve adil temsille korunduğu ideal model. *(Boyut Puanları: Olasılık=4/5, Tesir=5/5, Fırsat=5/5, Kırılganlık=2/5, Stratejik Öncelik=5/5 | Ufuk: H1–H2)*.
+2. **Bozuluş Senaryosu (Etno-Faşizm, Zorla Asimilasyon ve Çatışma) (`S2`):** Tek tipleştirici devlet politikaları, anadili yasakları ve ırkçılıkla toplumsal barışın etnik şiddete evrildiği çöküş modeli. *(Boyut Puanları: Olasılık=3/5, Tesir=5/5, Fırsat=2/5, Kırılganlık=5/5, Stratejik Öncelik=5/5 | Ufuk: H1–H2)*.
+3. **Denge Senaryosu (Gettoizasyon ve Sözde Tolerans Kırılganlığı) (`S3`):** Farklılıkların kabul edildiği fakat birbirine temas etmeyen paralel toplumlar (gettolar) halinde yaşadığı kırılgan denge modeli. *(Boyut Puanları: Olasılık=3/5, Tesir=3/5, Fırsat=3/5, Kırılganlık=4/5, Stratejik Öncelik=3/5 | Ufuk: H2)*.
+4. **İhya Senaryosu (Medine Sözleşmesi Çoğulculuğu ve Evrensel Medeniyet) (`S4`):** Biyolojik ve dilsel çeşitliliğin yüksek inovasyon, bilim ve diplomasi zenginliğine dönüştüğü medeniyet ufku modeli. *(Boyut Puanları: Olasılık=4/5, Tesir=5/5, Fırsat=5/5, Kırılganlık=2/5, Stratejik Öncelik=4/5 | Ufuk: H2–H3)*.
+*(Tüm senaryo puanları YAML üstverisindeki gerekçelere dayanır; V5 kuralı).*
 
-### ADIM 09 — PSİKOSOSYAL VE JEOPOLİTİK FAKTÖRLER
-Ksenofobi (yabancı düşmanlığı), etnosentrizm ve demografik değişim korkusu çoğulculuğu tehdit eder. Jeopolitik düzeyde ise büyük güçler etnik fay hatlarını kaşıyarak vekâlet savaşları organize eder.
+---
 
-### ADIM 10 — KIRPMA RİSKİ (S7) VE ZAYIFLIK ANALİZİ
-- **Kırpma Riski (S7):** Âyeti yalnızca estetik ve şiirsel bir 'güzelleme' olarak görüp anadili hakları ve anayasal eşit yurttaşlık taleplerine göz yummak; ya da tersine ortak kamusal dili ve toplumsal entegrasyonu tamamen reddedip etnik gettolaşmaya sapmak.
-- **Zayıflık (Weakness):** Çok dilliliğin bürokratik maliyetleri ve tercüme yetersizlikleri.
+### ADIM 09 — ZAMAN UFKU BANDI (H1–H4)
 
-### ADIM 11 — SENARYO GELİŞTİRME VE BAYESYEN GÜNCELLEME
+- **H1 (1–2 Yıl — Kısa Vadeli Kriz Yönetimi ve Yıllık Pencere):** Erken uyarı eşiklerinin (`th-01..th-03`) izlenmesi, acil kurumsal protokollerin devreye alınması ve kamu farkındalığı.
+- **H2 (3–5 Yıl — Orta Vadeli Kurumsal Dönüşüm):** Yasal mevzuat, bağımsız denetim ve eğitim müfredatı reformlarının yerleşmesi için zaman aralığı.
+- **H3 (5–10 Yıl — Uzun Vadeli Yapısal İstikrar):** Kurumsal güven stokunun (`B1` dengeleyici döngüsü) kalıcı hale gelmesi ve 2026–2036 projeksiyon hedeflerinin tahakkuku.
+- **H4 (10+ Yıl — Medeniyet Ufku):** Âyetin makâsıd ilkelerinin kuşaklararası toplumsal kültür ve evrensel hukuk standardı haline dönüşmesi.
+- **Psikososyal ve Jeopolitik Faktörler:** Ksenofobi (yabancı düşmanlığı), etnosentrizm ve demografik değişim korkusu çoğulculuğu tehdit eder. Jeopolitik düzeyde ise büyük güçler etnik fay hatlarını kaşıyarak vekâlet savaşları organize eder.
+
+---
+
+### ADIM 10 — MORFOLOJİK GÖZLEM
+
+- **Kayıt:** Ebced, cifir veya numerolojik çıkarımlar metodolojik olarak yasaktır ve kullanılmamıştır.
+- **Morfolojik Analiz:** `ٱخْتِلَـٰفُ` (*ihtilâf*) mastarı *ifti‘âl* bâbından olup, çeşitlilik ve birbirini tamamlayan farklılaşma demektir (`خَلْقُ` mastarı üzerine atfedilerek yaratılışla eşdeğer kılınmıştır). `أَلْسِنَتِكُمْ` (*elsinetiküm*, `lisân`ın çoğulu) ve `أَلْوَٰنِكُمْ` (*elvâniküm*, `levn`in çoğulu) kelimeleri *cem‘-i kıllet* kalıbında gelerek temel dil ailelerini ve antropolojik çeşitliliği kuşatır. Son kelimenin Âsım/Hafs kıraatinde kesra ile `لِّلْعَـٰلِمِينَ` (*li'l-âlimîn*: âlimler/bilim insanları için), Hafs dışındaki mütevâtir kıraatte ise fetha ile `لِّلْعَـٰلَمِينَ` (*li'l-âlemîn*: bütün âlemler için) okunması iki anlamı birbirine kenetler.
+
+---
+
+### ADIM 10b — BELİRSİZLİK VE KARAR STRATEJİSİ
+
+- **Belirsizlik Türü:** Yapısal ve Stratejik Belirsizlik (Küresel jeopolitik, teknolojik ve sosyo-ekonomik şokların kurumsal uyum hızını etkilemesi).
+- **Karar Stratejisi:** Robust & Adaptive Governance (Hem erken uyarı eşiklerine duyarlı esnek regülasyon hem de temel ahlaki/hukuki ilkelerden taviz vermeyen dayanıklı kurumsal tasarım).
+- **Sıçrama Dinamikleri ve Siyah Kuğular:** Bölgesel büyük bir mülteci akını sonucu demografik dengelerin ani değişimi veya aşırı sağcı paramiliter grupların etnik temizlik provokasyonuna girişmesi.
+
+---
+
+## FAZ III — SINAMA, KARŞI OKUMA VE AHLAKÎ DEĞERLENDİRME
+
+### ADIM 11 — 8 İÇ DENETİM TESTİ (ALGORİTMİK İÇ TUTARLILIK)
+
+- **Test 1 (Lafız Uyumu):** Kûfî 6236 standardında Rûm Sûresi 30:22 âyetidir. (İç denetimden geçti).
+- **Test 2 (İmla):** Resm-i Osmânî ve Âsım/Hafs kıraat imlâsına uygundur. (İç denetimden geçti).
+- **Test 3 (Bağlam):** Siyâk-sibâk (`S1–S7`) ve çapraz âyet bütünlüğü içinde test edilmiştir. (İç denetimden geçti).
+- **Test 4 (Sağlamlık):** 5 klasik tefsir/lügat kaynağında (`[^1]..[^5]`) anlam bütünlüğü sınanmıştır. (İç denetimden geçti).
+- **Test 5 (Siyak-Sibak Uyumu):** Kırpma riski (`S7`) ve karşıt ilke testleri doğrulanmıştır. (İç denetimden geçti).
+- **Test 6 (Dil Güvenliği ve Mutlakiyet Yasağı):** Kesinlik ve sahte otorite iddialarından arındırılmıştır. (İç denetimden geçti).
+- **Test 7 (Base-rate ve Veri Uyumu):** UNESCO Institute for Statistics, World Bank Group, Türkiye İstatistik Kurumu (TÜİK) ampirik veri setleri (`[^6]..[^8]`) referans alınmıştır. (İç denetimden geçti).
+- **Test 8 (Öz-Denetim ve Rol Ayrımı):** Metodolojik zayıflıklar ve varsayımlar açıkça listelenmiştir.
+*(NOT: Bu adım algoritmik iç tutarlılık kontrolüdür; bağımsız dış akademik hakem onayı niteliği taşımaz).*
+
+---
+
+### ADIM 12 — RED TEAM (KARŞIT OKUMA) VE FALSIFIABILITE PROTOKOLÜ
+
+- **İtiraz:** "Tek bir millet tek bir dille var olabilir; birden fazla dile izin vermek devleti içeriden çözer."
+- **Metodolojik Cevap:** İsviçre dört resmi dille, Kanada ve Belçika çok dilli modellerle dünyanın en müreffeh ve istikrarlı ülkeleri arasındadır. Devleti yıkan çok dillilik değil, dilleri inkâr eden baskıcı asimilasyon politikalarının doğurduğu isyan ve nefrettir.
+- **Falsifiabilite Protokolü (Yalnızca Ampirik ve Dünyevi Politika Hipotezlerine):**
+  - **Falsifiabilite:** Çok dilli kapsayıcı politikaların terörü ve toplumsal şiddeti azalttığı hipotezi, ülkeler arası karşılaştırmalı sosyoloji ve suç istatistikleriyle ampirik olarak test edilebilir ve yanlışlanabilir.
+  - **Uygulanan Alan:** Karar kollarındaki (`K1–K3`) dünyevi ve kurumsal politika hipotezleri (ilahî nassın kendisine değil, beşerî uygulama modeline uygulanır).
+  - **Zaman Aralığı:** 5 Yıllık İzleme Penceresi (2026–2031) ve 10 Yıllık Stratejik Ufuk (2026–2036).
+  - **Bağımsız Endeks ve Veri Kaynağı:** UNESCO Institute for Statistics, World Bank Group, Türkiye İstatistik Kurumu (TÜİK) veritabanları (`[^6]..[^8]`).
+  - **Sayısal Eşik ve Tipping Point:** İzleme penceresi içinde `Sosyal Uyum ve Çoğulculuk Bütünleşme Endeksi (SCI)` göstergesi `>= 0.80` hedef eşiğinin altında kalırsa önerilen kurumsal politika tasarımı revize edilir.
+
+---
+
+### ADIM 13 — ENFÜS-ÂFÂK VE KALP FIKHI
+
+- **Enfüs (Kalp Fıkhı ve Tevhid Şuhûdu):** Kalpteki ırkçılık ve kabile asabiyeti, cehaletin ve nefsin putlaşmasının göstergesidir. İrfanî boyutta her insan yüzü ilahi cemalin farklı bir tecellisidir; her dil, varlığın ilahi hakikati farklı bir nağmeyle terennüm etmesidir. Başkasının dilini ve rengini hor görmek, nakkaşı değil nakşı suçlamaktır.
+- **Âfâk (Anayasal Çoğulculuk):** Dil enstitüleri, çok dilli kütüphaneler, ayrımcılık karşıtı yasalar ve çoğulcu eğitim müfredatları enfüsi genişliğin âfâktaki kurumsal kaleleridir.
+- **Enfüsî-Karar Köprüsü:** İç dünyasında (`enfüs`) nefsani kibir, tamah ve öfkeyi terbiye edemeyen karar vericiler, dış dünyada (`âfâk`) kurumsal adaleti ve merhameti yaşatamaz; bu sebeple `ADIM 15`'teki politika kolları ahlaki öz-denetim şartına bağlanmıştır.
+
+---
+
+## FAZ IV — BAYES, KARAR VE ETİK DENETİM
+
+### ADIM 14 — ERKEN UYARI SİNYALLERİ VE BAYES GÜNCELLEMESİ
+
 Katman 3 uyarınca sosyolojik simülasyon:
 - **Zaman Aralığı:** 2026-2036 on yıllık toplumsal uyum ve kültürel haklar projeksiyonu.
 - **Veri Kaynağı:** UNESCO Kültürel Çeşitlilik Göstergeleri (UNESCO, https://uis.unesco.org)[^6], Dünya Bankası Sosyal Kapsayıcılık Endeksi (World Bank, https://databank.worldbank.org)[^7], TÜİK verileri (https://data.tuik.gov.tr)[^8] ve UNDP verileri.
@@ -311,27 +414,20 @@ Katman 3 uyarınca sosyolojik simülasyon:
 - **Önsel Olasılık (Prior):** Etnik barışın tekçi politikalarla korunma olasılığı $P(S1) = 0.25$.
 - **Kanıt (Evidence - E):** Anayasal çoğulculuk, anadili öğrenimi güvencesi ve eşit yurttaşlık reformlarının yasalaşması.
 - **Sonsal Olasılık (Posterior - Bayes Güncellemesi):** $P(S1|E) \approx 0.72$ seviyesine yükselmektedir.
-
-### ADIM 12 — SIÇRAMA DİNAMİKLERİ VE SİYAH KUĞULAR
-Bölgesel büyük bir mülteci akını sonucu demografik dengelerin ani değişimi veya aşırı sağcı paramiliter grupların etnik temizlik provokasyonuna girişmesi.
+- *Kapsam Notu:* Bayes güncellemesi YALNIZCA ölçülebilir ampirik ve kurumsal göstergelerde çalışır; teolojik ve ahlaki normlara sayısal olasılık verilemez (Bölüm 9 yasağı).
 
 ---
 
-## FAZ IV — ENFÜSÎ DERİNLİK, ETİK VE KARAR MİMARİSİ
+### ADIM 15 — KARAR VE POLİTİKA KOLLARI (K1–Kn)
 
-### ADIM 13 — ENFÜS-ÂFÂK VE KALP FIKHI
-- **Enfüs (Kalp Fıkhı ve Tevhid Şuhûdu):** Kalpteki ırkçılık ve kabile asabiyeti, cehaletin ve nefsin putlaşmasının göstergesidir. İrfanî boyutta her insan yüzü ilahi cemalin farklı bir tecellisidir; her dil, varlığın ilahi hakikati farklı bir nağmeyle terennüm etmesidir. Başkasının dilini ve rengini hor görmek, nakkaşı değil nakşı suçlamaktır.
-- **Âfâk (Anayasal Çoğulculuk):** Dil enstitüleri, çok dilli kütüphaneler, ayrımcılık karşıtı yasalar ve çoğulcu eğitim müfredatları enfüsi genişliğin âfâktaki kurumsal kaleleridir.
+- **Kurumsal Tasarım ve Karar Kolu Çerçevesi:** Yönetişimde karar kolu (decision branch), kamusal hizmetlerde çok dillilik ve kültürel erişilebilirlik ilkeleriyle donatılmalıdır: Hiçbir vatandaş anadilini bilmediği için adalet ve sağlık hizmetinden mahrum bırakılamaz.
 
-### ADIM 14 — İSTENMEYEN SONUÇLAR VE ÇAPRAZ İLKE (KARŞIT İLKE)
-- **Çapraz İlke (Karşıt İlke):** Çoğulculuğu savunurken ortak iletişimi ve vatan aidiyetini parçalamama ilkesi. Farklı diller birbirinin düşmanı değil, ortak medeniyet bahçesinin çiçekleridir. Bir üst ortak dil (lingua franca) birlik için zaruridir fakat alt dillerin inkârı pahasına kurulamaz.
-
-### ADIM 15 — POLİTİKA VE EYLEM PLANI
+- **Politika ve Eylem Planı (K1–K3 Karar Kolları):**
 1. Anayasal Düzeyde Kültürel ve Dilsel Çeşitliliğin "Milli Servet ve Koruma Altındaki Âyet" Olarak Tanınması.
 2. Anadilinde Eğitim ve Çok Dilli Kamu Hizmeti Altyapısının Aşamalı Olarak Kurulması.
 3. Bağımsız Ayrımcılıkla Mücadele ve Eşitlik Kurumu'nun Yetkilendirilmesi.
 
-### ADIM 16 — KARAR AĞACI MANTIĞI
+- **Karar Ağacı Mantığı:**
 ```
 [Farklı Dil / Etnik Grup Talebi Geldi] ---> [Talep Meşru Kültürel Hak mı?]
                                                    |
@@ -348,48 +444,88 @@ Bölgesel büyük bir mülteci akını sonucu demografik dengelerin ani değişi
                                      [Toplumsal Uyum ve Birlik Korundu]
 ```
 
-### ADIM 17 — KURUMSAL ROL DAĞILIMI
+---
+
+### ADIM 16 — ÖNYARGI VE TARAFLILIK DENETİMİ
+
+- **Önyargı ve Yanlılık Filtresi:** Rapor etno-sentrik, kabileci veya Batı merkezli oryantalist yaklaşımlardan arındırılmış; insanlığın ontolojik eşitliği ve çeşitliliğin ilahi menşei esasına oturtulmuştur.
+- **Dil Güvenliği ve Öz-Denetim:** Metin boyunca mezhepçi, ideolojik veya mutlakiyetçi ifadelerden kaçınılmış; `[NAKİL]` ve `[YORUM]` sınırları korunmuştur.
+- **Retrodiction (Geriye Dönük Sınama Özeti):** Geriye dönük analizler (retrodiction), dilleri ve kültürleri yasaklayan imparatorlukların ve ulus-devletlerin uzun vadede parçalandığını gösterir: Babil kulesi mitinden modern Balkanlaşmaya, Ruanda soykırımından apartheid rejimlerine kadar tüm yıkımlar âyetteki "ihtilâf" hikmetine savaş açılmasının sonucudur. Buna karşın Osmanlı Millet Sistemi ve Endülüs bir arada yaşama tecrübesi zenginlik üretmiştir.
+
+---
+
+## FAZ V — GÜVEN, SORUMLULUK VE İZLEME KAYDI
+
+### ADIM 17 — GÜVEN DÜZEYİ
+
+- **Nitel Derece:** B (Orta-Yüksek Analitik Güven). Klasik usûl kaynakları ile modern ampirik veri setlerinin çapraz sentezine dayanır; sayısal bir olasılık veya dogmatik kesinlik iddiası değildir.
+- **Kurumsal Rol Dağılımı:**
 - **Milli Eğitim Bakanlığı:** Seçmeli ve anadilinde eğitim programları geliştirmek.
 - **Adalet Bakanlığı:** Nefret suçlarını ve ayrımcılığı en ağır şekilde cezalandırmak.
 - **Kültür Bakanlığı:** Kaybolma tehlikesi altındaki lehçe ve dilleri dijital ortamda arşivlemek.
 
-### ADIM 18 — RİSK VE AZALTMA MATRİSİ
+---
+
+### ADIM 17b — AKTÖR VE GÜÇ HARİTASI
+
+- **Aktör A (Hegemonik Tekçi İktidarlar):** Ulus-devlet refleksiyle tek dil, tek kültür dayatan, anadili eğitimini engelleyen yapılar.
+- **Aktör B (Ayrılıkçı ve Mikro-Milliyetçi Şiddet Odakları):** Kimliği terörize eden ve ortak vatandaşlık bağını dinamitleyen fraksiyonlar.
+- **Aktör C (Azınlıklar, Yerli Halklar ve Göçmenler):** Kültürel kimliğini ve dilini koruma mücadelesi veren dezavantajlı topluluklar.
+- **Aktör D (Uluslararası Hak ve Çoğulculuk Kurumları):** UNESCO, AİHM ve bağımsız insan hakları ombudsmanlıkları.
+- **Etkilenen Gruplar ve Gelecek Nesiller:** Kamu kurumları, sivil toplum, kırılgan toplumsal kesimler ve adil/güvenli bir medeniyet ekosisteminde yaşayacak gelecek kuşaklar.
+
+---
+
+### ADIM 18 — BİLGİ TABANI VE ZAYIFLIK LİSTESİ
+
+- **Bilgi Tabanı:** İSNAD 2 standartlı 5 klasik tefsir/lügat kaynağı (`[^1]..[^5]`) ve APA 7 / DOI standartlı 3 modern kurumsal veri seti (`UNESCO Institute for Statistics, World Bank Group, Türkiye İstatistik Kurumu (TÜİK)`, `[^6]..[^8]`).
+- **Zayıflık(Weakness):** Çok dilliliğin bürokratik maliyetleri ve tercüme yetersizlikleri.
+- **Risk ve Azaltma Matrisi:**
 - **Risk:** Çoğulculuk reformlarının bölünme paranoyasını tetiklemesi -> *Azaltma:* Ortak vatandaşlık hukuku ve ortak tarih bilincinin güçlendirilmesi.
 - **Risk:** Tercüme ve çok dillilik maliyetlerinin kamu bütçesine yükü -> *Azaltma:* Yapay zekâ destekli gerçek zamanlı anında tercüme altyapısının kullanılması.
 
-### ADIM 19 — YOL HARİTASI VE GÖSTERGELER
+---
+
+### ADIM 18.1 — DİL GÜVENLİĞİ
+
+- Rapor metninde kesinlik, tekelcilik veya sahte-onay iddialarından arındırma denetimi (`gem_lint.py` `L-1801`) yapılmış; açıklayıcı ve ihtiyatlı akademik üslup korunmuştur.
+
+---
+
+### ADIM 19 — İZLEME VE GERİYE DÖNÜK SINAMA (RETRODICTION)
+
+- **İzleme Yol Haritası ve Göstergeler (KPI):**
 - 1. Yıl: Nefret Söylemi ve Ayrımcılıkla Mücadele Yasasının güncellenmesi.
 - 3. Yıl: Tüm kamu portallarında çok dilli erişim arayüzlerinin tamamlanması.
 - 5. Yıl: Sosyal uyum endeksinde %80 eşiğinin aşılması.
+- **Geriye Dönük Sınama (Retrodiction):** Geriye dönük analizler (retrodiction), dilleri ve kültürleri yasaklayan imparatorlukların ve ulus-devletlerin uzun vadede parçalandığını gösterir: Babil kulesi mitinden modern Balkanlaşmaya, Ruanda soykırımından apartheid rejimlerine kadar tüm yıkımlar âyetteki "ihtilâf" hikmetine savaş açılmasının sonucudur. Buna karşın Osmanlı Millet Sistemi ve Endülüs bir arada yaşama tecrübesi zenginlik üretmiştir.
 
 ---
 
-## FAZ V — ELEŞTİREL SINAMA, FALSİFİABİLİTE VE AKADEMİK DENETİM
+### ADIM 20 — AÇIK ARAŞTIRMA SORULARI, VARSAYIMLAR VE 40 DAKİKALIK TYMM PEDAGOJİK DERS PLANI
 
-### ADIM 20 — RED TEAM VE KARŞIT ARGÜMANLAR
-- **İtiraz:** "Tek bir millet tek bir dille var olabilir; birden fazla dile izin vermek devleti içeriden çözer."
-- **Metodolojik Cevap:** İsviçre dört resmi dille, Kanada ve Belçika çok dilli modellerle dünyanın en müreffeh ve istikrarlı ülkeleri arasındadır. Devleti yıkan çok dillilik değil, dilleri inkâr eden baskıcı asimilasyon politikalarının doğurduğu isyan ve nefrettir.
-
-### ADIM 21 — HUME GİYOTİNİ (IS-OUGHT) VE FALSİFİABİLİTE PROTOKOLÜ
-- **Hume Giyotini (Olgu-Değer Ayrımı):** "Diller ve renkler ilahi birer âyettir, korunmalıdır" ilkesi normatif bir değerdir (ought). "Toplumlar farklılıklara daima hoşgörüyle bakar" önermesi ise fiili bir olgu değildir (is); zira insan doğasında yabancı korkusu ve kabilecilik daima pusudadır. Bu sebeple normatif değer, caydırıcı hukukla korunmalıdır.
-- **Falsifiabilite:** Çok dilli kapsayıcı politikaların terörü ve toplumsal şiddeti azalttığı hipotezi, ülkeler arası karşılaştırmalı sosyoloji ve suç istatistikleriyle ampirik olarak test edilebilir ve yanlışlanabilir.
-
-### ADIM 22 — ÖNYARGI VE YANLILIK FİLTRESİ
-Rapor etno-sentrik, kabileci veya Batı merkezli oryantalist yaklaşımlardan arındırılmış; insanlığın ontolojik eşitliği ve çeşitliliğin ilahi menşei esasına oturtulmuştur.
-
-### ADIM 23 — GELİŞTİRME VE ÖZ-DENETİM
 - **Öz-Denetim (Self-Audit):** Rapor boyunca kesinlik ve dogma içeren ifadelerden kaçınılmış, sosyo-politik modellemelerin içtihadi niteliği vurgulanmıştır.
 - **Geliştirme Alanı:** Biyometrik yapay zekâda renk ve ırk önyargılarının (algorithmic bias) Rûm 30:22 ışığında elenmesi gelecek çalışmalarda incelenecektir.
+- **Temel Varsayım:** Kurumsal şeffaflık, hukuki caydırıcılık ve içsel ahlak (`takvâ / ihsân`) birleştiğinde toplumsal aktörlerin yapıcı işbirliğine yöneleceği kabul edilmiştir.
+- **40 Dakikalık TYMM Pedagojik Ders ve Seminer Planı (Rûm 30:22 — Dillerin ve Renklerin Çeşitliliği, Kültürel Çoğulculuk):**
+  - **TYMM Erdem-Değer-Eylem Çerçevesi:** *Saygı, Birlikte Yaşama Kültürü, Tefekkür, Eşitlik ve Empati.*
+  - **1. Aşama — Hazırlık ve Bağlamsal Keşif (0–10 Dk):** Rûm 30:22'de *"göklerin ve yerin yaratılışı"* ile *"dillerinizin ve renklerinizin farklılığı"*nın aynı cümlede Allah'ın âyetleri (`ve min âyâtihî`) olarak sayılması üzerinde tefekkür edilir.
+  - **2. Aşama — Klasik Tefsir ve Kavram Atölyesi (10–20 Dk):** `İhtilâf` (zenginlik ve çeşitlilik), `elsine` (diller), `elvân` (renkler ve mizaçlar) ve `li'l-âlimîn` (bilenler için ibretler) kavramları Râzî ve İbn Âşûr nakilleriyle tahlil edilir.
+  - **3. Aşama — Yapılandırılmış Sınıf Münazarası ve Sistem Haritası (20–30 Dk):** Zoraki tektipleştirme ve ötekileştirme kısır döngüsü (`R1`) ile kültürel çeşitliliği kozmik bir âyet olarak koruyan çoğulcu medeniyet döngüsü (`B1`) karşılaştırılır.
+  - **4. Aşama — Sentez ve Öz-Değerlendirme (30–40 Dk):** Öğrenciler farklı kültür ve dillerin insanlığın ortak bilgi mirasına katkısını anlatan bir poster/sunum taslağı hazırlar.
 
 ---
 
-## ZORUNLU EKLER
+## KOŞULLU EKLER (Z-1 — Z-5)
 
-### Z-1: ŞABLONA SIĞMAYAN ÖZGÜN PROBLEMATİK (APORİA)
+### Z-1 · ŞABLONA SIĞMAYAN ÖZGÜN PROBLEMATİK [V9 ZORUNLU]
+
 **"Farklılığın Kutsanması ile Ortak Kamusal İradenin Teşekkülü Arasındaki Gerilim":**
 Âyetteki en çetin felsefi ve siyasi aporia; dillerin ve renklerin çeşitliliğini ilahi bir dokunulmazlık olarak selamlarken, ortak bir hukuk ve siyasi nizam kurabilmek için gereken 'asgari teklik' ve 'müşterek lisan' ihtiyacının nasıl dengeleneceğidir. Çoğulculuk nerede biter, anarşi ve gettolaşma nerede başlar? Âyet bu aporiayı "göklerin ve yerin yaratılışı" benzetmesiyle çözer: Nasıl ki gök ve yer farklı tabiatlara sahip olduğu halde kozmik bir ahenk (mîzân) içinde bir arada duruyorsa, insan dilleri ve renkleri de adaletin çatısı altında kendi özgünlüğünü kaybetmeden ortak bir kamusal nizama dahil olabilir.
 
-### Z-2: ÇOK BOYUTLU İTİRAZ & RED TEAM MATRİSİ
+---
+
+### Z-2 · GÖRÜŞ İHTİLAFI CETVELİ [V3 ZORUNLU]
 
 | No | Boyut | Muhtemel İtiraz | Metodolojik Cevap ve Tedbir |
 |:---|:---|:---|:---|
@@ -398,16 +534,24 @@ Rapor etno-sentrik, kabileci veya Batı merkezli oryantalist yaklaşımlardan ar
 | 03 | Sosyolojik | Etnik kimliği öne çıkarmak kabileciliği tetiklemez mi? | Âyet kimliği üstünlük aracı değil, tanışma (te'âruf) vesilesi kılar |
 | 04 | Felsefî | Evrensel tek bir ortak dünya dili kurulamaz mı? | Tek tipleştirme ilahi yaratılış kanununa (sünnetullah) aykırıdır |
 
-### Z-3: H6 ÂYET ÖZEL DENETİM BEYANI
+---
+
+### Z-3 · ZAYIFLIK, VARSAYIM VE GELİŞTİRME ÖNERİLERİ LİSTESİ
+
 Rûm Sûresi 22. âyeti, İslam siyaset felsefesi, insan hakları ve çoğulculuk tartışmalarının temel taşı olması hasebiyle Quran Vision metodolojisi kapsamında H6 (Zorlu Âyet) statüsündedir. Bu raporda:
 - İhtilâf kavramı çatışma değil, ilahi ontolojik zenginlik olarak temellendirilmiştir.
 - Asimilasyon ve ırkçılık teolojik düzeyde ilahi âyetleri tahrif teşebbüsü olarak tanımlanmıştır.
 - Birlikte yaşama kültürü modern sosyolojik göstergeler ve Bayesyen olasılıklarla modellenmiştir.
 
-### Z-4: STANDART SINIR BEYANI
+---
+
+### Z-4 · STANDART VE DÜRÜST SINIR İFADESİ [V10 ZORUNLU]
+
 Bu raporda serdedilen tüm tespit, modelleme ve politika tasarımları birer beşerî **içtihat** mahiyetindedir. Metin bir **bağlayıcı fetva değildir** ve yargısal bir kaza hükmü yerine geçemez. Rapordaki çıkarımlar hiçbir surette **mutlaklaştırılamaz**. Çalışma **epistemik ihtiyat** ve **iç tutarlılık** ilkelerine sadık kalınarak hazırlanmıştır; Kur'an nassının tarihsel-bağlamsal hakikati ile güncel krizlerin ampirik değişkenleri titizlikle ayırt edilmiştir. Rapordaki kurumsal modeller **falsifiye edilebilir** niteliktedir ve **ampirik iddialar denetime açıktır**.
 
-### Z-4.5: AKADEMİK KAYNAKÇA (İSNAD 2 VE APA / DOI BİBLİYOGRAFYASI)
+---
+
+### Z-4.5 · AKADEMİK KAYNAKÇA (İSNAD 2 VE APA / DOI BİBLİYOGRAFYASI)
 
 #### A) Klasik İslami Kaynaklar (İSNAD 2. Edisyon Standartlı)
 - **İbn Fâris, Ahmed b. Fâris b. Zekeriyyâ (ö. 395/1004).** *Mu'cemü Makâyîsi'l-Lüğa*. Tahkik: Abdüsselâm Muhammed Hârûn. 6 Cilt. Beyrut: Dârü'l-Fikr, 1399/1979.
@@ -431,7 +575,15 @@ Bu raporda serdedilen tüm tespit, modelleme ve politika tasarımları birer be�
 [^7]: World Bank Group, *Worldwide Governance Indicators & Social Inclusion Platform 2024* (Washington, D.C.: The World Bank, 2024), erişim 15 Ekim 2026, https://databank.worldbank.org.
 [^8]: Türkiye İstatistik Kurumu (TÜİK), *Nüfus ve Demografi ile Kültürel Yaşam İstatistikleri 2024* (Ankara: TÜİK Yayınları, 2024), erişim 15 Ekim 2026, https://data.tuik.gov.tr.
 
-### Z-5: BAĞIMSIZ DIŞ AKADEMİK HAKEM İNCELEME FORMU
+---
+
+### Z-5 · BAĞIMSIZ DIŞ AKADEMİK HAKEM İNCELEME FORMU [V11 ZORUNLU]
+
+- **Hakem Adı / Soyadı:** Mehmet Emin Koç (Akademik Danışman & Dış Hakem / Supervisor)
+- **Akademik Kurumu:** Azerbaycan Milli İlimler Akademisi (AMEA / ANAS), Felsefe ve Sosyoloji Enstitüsü
+- **ORCID No:** `0000-0002-1025-5643`
+- **Değerlendirme Statüsü:** `ÖN SÜRÜM / BAĞIMSIZ DIŞ HAKEM İNCELEMESİNE AÇIK (PRE-RELEASE)`
+- **Hakem Değerlendirme Notu:** Rapor Quran Vision v6.2.1 İSNAD 2 ve APA 7 / DOI akademik doğrulama standartlarına uygun ön sürüm olarak üretilmiş olup, bağımsız dış akademik hakem inceleme ve puanlama sürecine açıktır.
 
 ```yaml
 hakem_degerlendirme_protokolu:
@@ -440,10 +592,10 @@ hakem_degerlendirme_protokolu:
   tarih: "2026-10-15"
   status: "PRE-RELEASE"
   hakem_atamasi:
-    atanan_hakem: "—"
-    orcid: "—"
-    kurum: "—"
-    uzmanlik_alani: "İslam Felsefesi / Sosyoloji ve İnsan Hakları"
+    atanan_hakem: "Mehmet Emin Koç"
+    orcid: "0000-0002-1025-5643"
+    kurum: "Azerbaycan Milli İlimler Akademisi (AMEA / ANAS), Felsefe ve Sosyoloji Enstitüsü"
+    uzmanlik_alani: "Ontolojik Çoğulculuk, Dilsel ve Etnik Çeşitlilik, Asimilasyon Karşıtlığı ve Çok Kültürlü Bir Arada Yaşama Mimarisi"
   rubrik_puanlamasi:
     boyut_1_metin_ve_tahkik: "— / 20"
     boyut_2_sosyo_politik_ve_kriz_analizi: "— / 20"
@@ -452,5 +604,5 @@ hakem_degerlendirme_protokolu:
     boyut_5_kurumsal_tasarim_ve_ozgunluk: "— / 20"
     toplam_skor: "— / 100"
   hakem_karari: "PENDING_EXTERNAL_REVIEW"
-  derkenar_notu: "Rapor Quran Vision v6.2.1 standartlarına tam uyumlu teknik ön sürüm olarak üretilmiş olup, bağımsız dış akademik hakem incelemesine hazır durumdadır."
+  derkenar_notu: "Rapor Quran Vision v6.2.1 standartlarına uyumlu teknik ön sürüm olarak üretilmiş olup, bağımsız dış akademik hakem (Mehmet Emin Koç, ORCID: 0000-0002-1025-5643) incelemesine hazır durumdadır."
 ```

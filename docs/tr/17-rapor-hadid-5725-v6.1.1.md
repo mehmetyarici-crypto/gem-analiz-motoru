@@ -181,13 +181,13 @@ scenarios:
 peer_review:
   status: "PRE-RELEASE"
   internal_linter_verified: true
-  linter_timestamp: "2026-10-15T07:50:00+03:00"
-  reviewer_name: null
-  reviewer_title: null
-  reviewer_orcid: null
-  reviewer_institution: null
+  linter_timestamp: "2026-10-15T23:00:00+03:00"
+  reviewer_name: "Mehmet Emin Koç"
+  reviewer_title: "Akademik Danışman & Dış Hakem (Supervisor & External Peer-Reviewer)"
+  reviewer_orcid: "0000-0002-1025-5643"
+  reviewer_institution: "Azerbaycan Milli İlimler Akademisi (AMEA / ANAS), Felsefe ve Sosyoloji Enstitüsü"
   review_date: null
-  review_notes: "Ön sürüm (PRE-RELEASE) aşamasındadır; bağımsız dış akademik hakem incelemesine açıktır."
+  review_notes: "Ön sürüm (PRE-RELEASE) aşamasındadır; bağımsız dış akademik hakem (Mehmet Emin Koç, ORCID: 0000-0002-1025-5643) değerlendirme ve tescil sürecine açıktır."
 ---
 
 # Hadîd Sûresi 57:25 Tahlili — Kitap, Mîzân ve Demir Üçlüsü: Anayasal Hukuk, Kurumsal Adalet ve Caydırıcı Savunma-Sanayi Mimarisi
@@ -198,6 +198,9 @@ peer_review:
 - **Vaka Kodu:** QV-2026-012
 - **Âyet:** Hadîd Sûresi 57:25
 - **Konu Başlığı:** Kitap, Mîzân ve Demir Üçlüsü: Anayasal Hukuk, Kurumsal Adalet ve Caydırıcı Savunma-Sanayi Mimarisi
+- **Proje Kurucusu & Başyazar:** Mehmet Yarıcı (Uludağ Üniversitesi İlahiyat Fakültesi, 1989 • T.C. MEB, İstanbul Bahçelievler Dede Korkut Anadolu Lisesi — ORCID: `0009-0003-0356-8582`)
+- **Akademik Danışman & Dış Hakem:** Mehmet Emin Koç (Azerbaycan Milli İlimler Akademisi Felsefe ve Sosyoloji Enstitüsü — ORCID: `0000-0002-1025-5643`)
+- **Kalıcı CERN / Zenodo DOI:** `10.5281/zenodo.23391192` (Kavram DOI) | `10.5281/zenodo.23391193` (v6.2.1 Sürüm DOI)
 - **Tarih:** 2026-10-15
 - **Sürüm:** v6.2.1 (Akademik Doğrulama Standartlı)
 - **Katman:** 3 (26 Adımlı Tam Analiz Motoru + 5 Makro Faz + Z-1..Z-5 Zorunlu Ekler)
@@ -260,34 +263,72 @@ Hadîd Sûresi Medine döneminde, İslam toplumunun artık müstakil bir siyasi,
 
 ---
 
-### ADIM 02 — MUHATAP VE DİL GÜVENLİĞİ
-Hitap bir yandan devlet kurucularına, hukukçulara, mühendislere ve stratejistlere; diğer yandan bizzat toplumun tamamına ("li-yekûme'n-nâs" — insanların ayağa kalkıp adaleti ikame etmesi) yöneliktir. Dil güvenliği ilkeleri gereğince "be'sün şedîd" ifadesi saldırgan militarizm veya şiddet yüceltmesi olarak değil; uluslararası hukukta meşru savunma, stratejik caydırıcılık ve barışı koruma kapasitesi olarak çerçevelenmiştir.
+### ADIM 02 — MANTIKSAL SEMANTİK VE KARŞIT İLKE TESTİ
+
+- **Koşul-Sonuç Yapısı:**
+  - *İlahi İrsâl ve İnzâl (`Lekad erselnâ rusülenâ bi'l-beyyinâti ve enzelnâ meahümü'l-kitâbe ve'l-mîzâne`):* Peygamberlerin açık delillerle gönderilmesi ve beraberlerinde `Kitâb` (anayasal hukuk/norm) ile `Mîzân`ın (adalet ve denetim terazisi) indirilmesi.
+  - *Evrensel Gaye (`li-yekûme'n-nâsü bi'l-kıst`):* İnsanların bizzat kendilerinin hakkaniyet ve adaletle (`kıst`) ayakta durması.
+  - *Maddi ve Teknolojik Güç (`ve enzelne'l-hadîde fîhi be'sün şedîdün ve menâfi'u li'n-nâs`):* Adaleti savunacak caydırıcı güç (`be'sün şedîd`) ve insanlığın sivil refahına hizmet edecek endüstriyel/teknolojik kapasite (`menâfi'u li'n-nâs`) olarak demirin (`el-hadîd`) yaratılması.
+- **Muhatap ve Dil Güvenliği:** Hitap bir yandan devlet kurucularına, hukukçulara, mühendislere ve stratejistlere; diğer yandan bizzat toplumun tamamına ("li-yekûme'n-nâs" — insanların ayağa kalkıp adaleti ikame etmesi) yöneliktir. Dil güvenliği ilkeleri gereğince "be'sün şedîd" ifadesi saldırgan militarizm veya şiddet yüceltmesi olarak değil; uluslararası hukukta meşru savunma, stratejik caydırıcılık ve barışı koruma kapasitesi olarak çerçevelenmiştir.
+- **Çapraz İlke (Karşıt İlke):** Caydırıcı güç inşa ederken Mîzân'ı (ekonomik refahı ve temel hakları) ezmeme ilkesi. Savunma ve güvenlik politikaları hiçbir zaman hukuku askıya almanın veya toplumu fakirleştirmenin bahanesi yapılamaz; zira âyette Demir'in varlık sebebi, öncesinde zikredilen "insanların adaleti ayakta tutması" gayesine hizmet etmektir.
 
 ---
 
-### ADIM 03 — METİN İÇİ DELALET VE HÜKÜM-HİKMET DENGESİ
+### ADIM 03 — ÜÇLÜ ÇERÇEVE (ETHOS / LOGOS / PATHOS) VE İS-OUGHT KÖPRÜSÜ
+
+- **Ethos (Ahlaki Yük):** Maddi, askeri ve teknolojik gücü (`Hadîd`) hiçbir zaman zorbalık ve tahakküm aracı yapmamak; daima `Kitâb` (hukuk) ve `Mîzân` (adalet terazisi) emrinde ve insanlığın faydasına (`menâfi'u li'n-nâs`) kullanmak.
+- **Logos (Mantıksal Tutarlılık):** Hukuksuz güç (`Mîzânsız Hadîd`) tiranlık üretir; güçsüz hukuk (`Hadîdsiz Mîzân`) ise saldırganlar karşısında aciz kalır. Medeniyet ancak `Kitâb + Mîzân + Hadîd` üçlüsünün dengesiyle ayakta durur (Mâtürîdî, Râzî, İbn Teymiyye).
+- **Pathos (Vicdani ve Duygusal Tesir):** `Li-yekûme'n-nâsü bi'l-kıst` ifadesiyle adaleti sadece devletten beklenen pasif bir lütuf olmaktan çıkarıp, bütün toplumun omuz verdiği onurlu bir kıyama dönüştürür.
 - **Zahirî Hüküm:** Peygamberler açık belgelerle (beyyinât) gönderilmiş; insanlığın adaleti bizzat ayakta tutması için Kitap ve Mîzân indirilmiş; ayrıca kendisinde hem çetin bir caydırıcı güç hem de insanlar için sivil faydalar bulunan Demir indirilmiştir.
 - **Bâtınî Hikmet:** Hukuksuz güç zorbalıktır (tiranlık); güçsüz hukuk ise acziyettir. Ayrıca demirin astrofiziksel olarak süpernova patlamalarıyla sentezlenip yeryüzüne "indirilmesi" (inzâl) ile vahyin indirilmesi arasındaki dilsel paralellik, kevni ayetler (fizik/metalürji) ile kavli ayetlerin (vahiy/hukuk) tek bir İlahi nizamın iki kanadı olduğunu gösterir.
+- **Hume Giyotini (Olgu-Değer Ayrımı):** "Demir (teknoloji ve güç), adaleti korumak ve insanlığa fayda sağlamak için kullanılmalıdır" önermesi normatif bir değerdir (ought). Ancak "Güçlü ordulara ve ağır sanayiye sahip devletler daima adildir" önermesi ampirik olarak yanlıştır (is). Quran Vision çerçevesi, teknolojik kapasite (olgu) ile adil yönetişim (değer) arasındaki uçurumu kapatmak için kurumsal denge ve denetleme mekanizmaları tasarlar.
 
 ---
 
-### ADIM 04 — MAQĀṢID MATRİSİ
+### ADIM 04 — MAKASID ANALİZİ
+
 - **Hıfzu'l-Adl ve'l-Kıst (Merkezî Gaye):** Âyetteki "li-yekûme'n-nâsu bi'l-kıst" lafzı, tüm peygamberlerin ve kitapların gönderilişindeki nihai toplumsal maksadın adaletin ikamesi olduğunu tescil eder.
 - **Hıfzu'n-Nefs ve'l-Emn:** Caydırıcı savunma gücü (be'sün şedîd) sayesinde masumların can ve yurt güvenliğinin dış saldırılara karşı korunması.
 - **Hıfzu'l-Akl ve'l-İlim:** Beyyinât (açık kanıtlar), Kitap ve metalürji/mühendislik bilgisinin birleştirilmesi.
 - **Hıfzu'l-Mâl ve'l-Umrân:** Demirin sivil faydaları ("menâfiu li'n-nâs") üzerinden sanayi, altyapı, ulaşım, tarım ve tıp teknolojilerinin geliştirilmesi.
+- **Şâtıbî ve İbn Âşûr Makâsıd Hiyerarşisi:** `[YORUM]` Âyetin vaz'ettiği hüküm *zarûriyyât* katmanında insan onuru ve kamu düzenini doğrudan korurken, *hâciyyât* katmanında kurumsal işleyişi kolaylaştırır ve *tahsîniyyât* katmanında üstün medeniyet ahlakını (*mekârimü'l-ahlâk*) tamamlar.
 
 ---
 
-## FAZ II — ÇAĞDAŞ HARİTALAMA VE KRİZ MODELLEMESİ
+### ADIM 04b — YORUMCU KONUMU (GADAMER HERMENÖTİĞİ)
 
-### ADIM 05 — ÇAĞDAŞ TEZAHÜRLER VE AKTÖR HARİTASI
-- **Aktör A (Hukuksuz Teknolojik Hegemonlar / Mîzânsız Demir):** Yüksek askeri teknolojiye, yarı-iletken ve çelik tekeline sahip olup bunu uluslararası hukuku ve mazlum halkları ezmek için kullanan emperyal güçler.
-- **Aktör B (Teknolojiden Yoksun Vaaz Toplumları / Demirsiz Kitap):** Elinde Kitap bulunduğu halde bilimi, sanayiyi, malzeme mühendisliğini ve adil kurumları terk ettiği için başkalarının ürettiği teknolojiye ve silaha muhtaç kalan toplumlar.
-- **Aktör C (Stratejik Ar-Ge, Mühendislik ve Hukuk Kurumları):** Çift kullanımlı sivil ve savunma teknolojilerini anayasal denetim ve evrensel adalet ilkeleriyle geliştiren ekosistemler.
+1. **Usûl Ekolü:** Mâtürîdî-Makâsıdî Medeniyet ve Kamu Hukuku Usûlü (Ebû Mansûr el-Mâtürîdî *Te'vîlât*, Fahreddîn er-Râzî *Mefâtîh*, İbn Teymiyye *es-Siyâsetü'ş-Şer'iyye* ve İbn Âşûr çizgisi).
+2. **Felsefi Perspektif:** Kuvvetler ayrılığı, hukukun üstünlüğü (*rule of law*) ve etik teknoloji felsefesi.
+3. **Alternatif Yorumcu Konumlarından Ayrışma:**
+   - *Makyavelist / Militarist Uç:* Gücü (`Hadîd`) hukukun ve ahlakın (`Kitâb ve Mîzân`) üstünde görerek "güçlü olan haklıdır" anlayışını benimser.
+   - *Teknolojiden Kopuk İdealist Uç:* Bilim, sanayi ve savunma teknolojisini (`Hadîd`) ihmal ederek adaleti savunmasız bırakır.
+   Raporumuz, yüksek bilim ve teknolojiyi (`Hadîd`) hukuk ve adalet terazisine (`Mîzân`) tabi kılan üç sütunlu medeniyet modelini esas alır.
 
-### ADIM 06 — SİSTEMİK GÜÇ DİNAMİKLERİ VE RETRODICTION
-Geriye dönük tarihsel analizler (retrodiction), Tunç Çağı'ndan Demir Çağı'na, Sanayi Devrimi'nden (çelik ve buhar) modern çip ve uzay çağına kadar metalürji ve malzeme bilimini (Hadîd) elinde tutanların jeopolitik üstünlük kurduğunu gösterir. Ancak Roma, Moğol veya modern kolonyal imparatorluklar örneğinde görüldüğü üzere, Demir'i Mîzân (adalet) ve Kitap (ahlaki-hukuki sınır) olmadan kullanan güçler eninde sonunda iç çürüme ve zulümle yıkılmıştır.
+---
+
+### ADIM 05 — SİYAK-SİBAK ANALİZİ (S1–S7)
+
+- **S1 (Önceki Âyetler — Hadîd 57:1–24):** Göklerin ve yerin mülkünün Allah'a ait olduğu, iman, infak ve dünya hayatının aldatıcı gösterişine kapılmama uyarıları yapılır.
+- **S2 (Sonraki Âyetler — Hadîd 57:26–29):** Hz. Nûh, Hz. İbrâhîm ve Hz. Îsâ'nın gönderilişi, şefkat ve merhamet (`re'feten ve rahmeh`) ve Allah'ın lütfunun hiçbir zümrenin tekelinde olmadığı bildirilir.
+- **S3 (Pasajın Konumu):** Sûreye adını veren (`Sûretü'l-Hadîd`) 25. âyet, sûrenin kavramsal ve medeniyet zirvesidir.
+- **S4 (Sûre İçi Bütünlük):** Sûrenin başındaki ontolojik kudret (`Hüve'l-Evvelü ve'l-Âhiru...`, 57:3) ve ortasındaki iktisadi infak (57:7, 10–11), 25. âyette kurumsal adalet (`Mîzân`) ve endüstriyel güçle (`Hadîd`) bütünleşir.
+- **S5 (Nüzûl Sebepleri ve Hitap):** Medine İslam toplumunun hem hukuki kurumlarını hem de savunma ve iktisadi altyapısını inşa ettiği dönemde inmiştir.
+- **S6 (Mushaf Sırası ve Tevkîfî Yapı):** Vâkıa Sûresi'ndeki ahiret bilincinin hemen ardından Hadîd Sûresi dünya medeniyetinin imar ve adalet yasalarını vaz'eder.
+- **Kırpma Riski (S7):** Âyetin yalnız "Kitap ve Mîzân" kısmını alıp bilimi, ağır sanayiyi ve caydırıcı savunmayı ihmal etmek (pasifizm/acziyet); veya yalnız "Hadîd ve be'sün şedîd" kısmını cımbızlayıp hukuku, insan haklarını ve sivil refahı ("menâfiu li'n-nâs") rafa kaldırmak (militarizm/otoriterlik).
+
+---
+
+### ADIM 06 — ÇAPRAZ ÂYET ANALİZİ
+
+- **Şûrâ 42:17:** *"Kitab'ı ve Mîzân'ı (adalet terazisini) hak ile indiren Allah'tır (`Allâhü'llezî enzele'l-kitâbe bi'l-hakkı ve'l-mîzân`)."*
+- **Rahmân 55:7–9:** *"Göğü yükseltti ve Mîzân'ı (denge ve adalet yasasını) koydu; sakın terazide/dengede haddi aşmayın (`ellâ tatğav fi'l-mîzân`) ve tartıyı adaletle (`bi'l-kıst`) tutun!"*
+- **Enfâl 8:60:** Düşmanı caydırmak için gücünüzün yettiği kadar kuvvet (`kuvvet`) hazırlayın (barışı koruyan caydırıcılık).
+- **Sebe' 34:10–11 ve Enbiyâ 21:80:** Hz. Dâvûd'a demirin (`el-hadîd`) yumuşatılması ve insanları koruyacak zırh/sanayi üretiminin öğretilmesi.
+- *Analitik Sonuç ve N4 Kapsamı:* `Kitâb`, `Mîzân` ve `Hadîd` arasındaki bağ koptuğunda devletler ya hukuksuz tiranlığa ya da dış müdahaleye açık acziyete sürüklenir (`N4`).
+
+---
+
+## FAZ II — SİSTEM VE GELECEK MODELLEMESİ
 
 ### ADIM 07 — SİSTEM HARİTASI (CAUSAL LOOP DİAGRAMI — CLD), GECİKME VE KIRILMA NOKTASI (N4)
 
@@ -296,21 +337,85 @@ Geriye dönük tarihsel analizler (retrodiction), Tunç Çağı'ndan Demir Çağ
 - **Dengeleyici Döngü (B1 — Hadîd 57:25 Kitâb-Mîzân-Hadîd Üçlü Medeniyet Dengeleyicisi / Balancing Loop):** `[YORUM]` Jeopolitik Tehdit veya Kurumsal Güç Dengesizliği (`+`) → Anayasal Hukuk (`el-Kitâb`) ve Bağımsız Yargı Terazisinin (`el-Mîzân`) Üstün Kılınması (`+`) → Demir/Teknoloji Gücünün (`el-Hadîd`) Hem Meşru Caydırıcılık (`ba’sun shadīd`) Hem İnsani Refah (`manāfi‘u li'n-nās`) İçin Üretilmesi (`+`) → Toplumun Bizzat Kıst ve Adaletle Ayakta Durması (`li-yaqūma'n-nāsu bi'l-qisṭ`) (`+`) → Jeopolitik Tehdit veya Kurumsal Güç Dengesizliği (`-`).
 - **Sistemik Gecikme (Delay) ve Kaldıraç Noktası (Leverage Point):** `[YORUM]` **Sistemik Gecikme (Delay):** Yüksek teknoloji, metalürji ve savunma sanayii (`el-Hadîd`) yatırımlarının stratejik caydırıcılığa dönüşmesi **5–15 yıllık** bir Ar-Ge gecikmesi içerirken; hukuk devleti (`el-Mîzân`) aşınmasının ekonomik çöküş üretmesi **2–4 yıllık** bir gecikmeyle gerçekleşir. **Kaldıraç Noktası (Leverage Point):** Teknolojik ve askeri gücü (`Hadîd`) daima anayasal norm (`Kitâb`) ve bağımsız yargı denetimine (`Mîzân`) tabi kılan **demokratik/hukuki sivil denetim mekanizmasıdır**.
 - **Kırılma Noktası (Tipping Point) ve Erken Uyarı Sinyali (N4 / EU):** `[YORUM]` **Tipping Point (Kırılma Noktası):** Kolluk, istihbarat veya askeri/teknolojik gücün anayasal ve yargısal denetimden (`Mîzân`) tamamen muaf hale gelmesi ya da tersine devletin caydırıcı savunma kapasitesini kaybederek dış müdahaleye açık hale düşmesi. **Erken Uyarı Sinyali (N4 / EU-01):** Sivil Ar-Ge ve eğitim bütçelerinin daraltılması, WJP Hükümet Yetkilerinin Sınırlandırılması (*Factor 1*) skorunda düşüş ve kamu gücünün orantısız kullanımı.
+
 ---
 
-## FAZ III — KALIP DIŞI ÇÖZÜMLEME VE KURUMSAL DÖNÜŞÜM
+### ADIM 08 — DÖRT SENARYO VE STRATEJİK DEĞERLENDİRME
 
-### ADIM 08 — KURUMSAL TASARIM VE KARAR KOLU
-Yönetişimde karar kolu (decision branch), **Üçlü Sütun Denetim Mekanizması** üzerine kurulmalıdır: Hiçbir askeri veya teknolojik güç kullanımı (Hadîd), Anayasal Hukuk (Kitap) ve Bağımsız Yargı/Orantılılık Terazisi (Mîzân) onayından geçmeden icra edilemez. Aynı zamanda her savunma yatırımı, sivil topluma ve sanayiye katkı ("menâfiu li'n-nâs") çarpanıyla değerlendirilmelidir.
+1. **Koruyucu Senaryo (Kitap, Mîzân ve Demir Dengeli Medeniyet Devleti) (`S1`):** Anayasal hukuk (Kitap), adil bölüşüm/yargı (Mîzân) ve caydırıcı teknoloji/sanayi gücünün (Hadîd) eşzamanlı kurumsallaştığı ideal model. *(Boyut Puanları: Olasılık=4/5, Tesir=5/5, Fırsat=5/5, Kırılganlık=2/5, Stratejik Öncelik=5/5 | Ufuk: H1–H2)*.
+2. **Bozuluş Senaryosu (Mîzânsız Demir: Militarist Tiranlık veya Hukuksuz Silahlanma) (`S2`):** Kitap ve Mîzân'dan kopmuş çıplak demir gücünün içeride baskı aracına, dışarıda yıkıcı emperyalizme dönüştüğü çöküş modeli. *(Boyut Puanları: Olasılık=4/5, Tesir=5/5, Fırsat=1/5, Kırılganlık=5/5, Stratejik Öncelik=5/5 | Ufuk: H1–H2)*.
+3. **Denge Senaryosu (Demirsiz Mîzân: Savunmasız ve Teknolojik Bağımlı İyi Niyet Devleti) (`S3`):** Ahlaki ve hukuki söylemi güçlü olduğu halde sanayi, metalürji ve caydırıcı savunma gücünden yoksun kalarak dış müdahalelere yem olan kırılgan model. *(Boyut Puanları: Olasılık=3/5, Tesir=4/5, Fırsat=2/5, Kırılganlık=5/5, Stratejik Öncelik=4/5 | Ufuk: H2)*.
+4. **İhya Senaryosu (Çift Kullanımlı Barış Teknolojisi ve Küresel Adalet Garantörlüğü) (`S4`):** İleri malzeme bilimi, uzay-havacılık ve savunma caydırıcılığını 'insanlar için menfaatler' (menâfiu li'n-nâs) vizyonuyla mazlumların koruyucu şemsiyesi kılan model. *(Boyut Puanları: Olasılık=3/5, Tesir=5/5, Fırsat=5/5, Kırılganlık=2/5, Stratejik Öncelik=4/5 | Ufuk: H2–H3)*.
+*(Tüm senaryo puanları YAML üstverisindeki gerekçelere dayanır; V5 kuralı).*
 
-### ADIM 09 — PSİKOSOSYAL VE JEOPOLİTİK FAKTÖRLER
-Güç zehirlenmesi (hubris), silahlanma yarışı (security dilemma) ve teknolojik aşağılık kompleksi iki aşırı uçtur. Âyetin sonundaki *"Allah kendisi ve elçilerine gaybda (görmeden/samimiyetle) kimin yardım edeceğini bilmek için..."* ifadesi, maddi gücün insanı kibre sürüklememesi gerektiğini, asıl sınavın güce sahipken adaletten sapmamak olduğunu hatırlatır.
+---
 
-### ADIM 10 — KIRPMA RİSKİ (S7) VE ZAYIFLIK ANALİZİ
-- **Kırpma Riski (S7):** Âyetin yalnız "Kitap ve Mîzân" kısmını alıp bilimi, ağır sanayiyi ve caydırıcı savunmayı ihmal etmek (pasifizm/acziyet); veya yalnız "Hadîd ve be'sün şedîd" kısmını cımbızlayıp hukuku, insan haklarını ve sivil refahı ("menâfiu li'n-nâs") rafa kaldırmak (militarizm/otoriterlik).
-- **Zayıflık (Weakness):** Askeri-endüstriyel kompleksin kamu bütçesini yutarak sağlık, eğitim ve adalet yatırımlarını zayıflatma riski.
+### ADIM 09 — ZAMAN UFKU BANDI (H1–H4)
 
-### ADIM 11 — SENARYO GELİŞTİRME VE BAYESYEN GÜNCELLEME
+- **H1 (1–2 Yıl — Kısa Vadeli Kriz Yönetimi ve Yıllık Pencere):** Erken uyarı eşiklerinin (`th-01..th-03`) izlenmesi, acil kurumsal protokollerin devreye alınması ve kamu farkındalığı.
+- **H2 (3–5 Yıl — Orta Vadeli Kurumsal Dönüşüm):** Yasal mevzuat, bağımsız denetim ve eğitim müfredatı reformlarının yerleşmesi için zaman aralığı.
+- **H3 (5–10 Yıl — Uzun Vadeli Yapısal İstikrar):** Kurumsal güven stokunun (`B1` dengeleyici döngüsü) kalıcı hale gelmesi ve 2026–2036 projeksiyon hedeflerinin tahakkuku.
+- **H4 (10+ Yıl — Medeniyet Ufku):** Âyetin makâsıd ilkelerinin kuşaklararası toplumsal kültür ve evrensel hukuk standardı haline dönüşmesi.
+- **Psikososyal ve Jeopolitik Faktörler:** Güç zehirlenmesi (hubris), silahlanma yarışı (security dilemma) ve teknolojik aşağılık kompleksi iki aşırı uçtur. Âyetin sonundaki *"Allah kendisi ve elçilerine gaybda (görmeden/samimiyetle) kimin yardım edeceğini bilmek için..."* ifadesi, maddi gücün insanı kibre sürüklememesi gerektiğini, asıl sınavın güce sahipken adaletten sapmamak olduğunu hatırlatır.
+
+---
+
+### ADIM 10 — MORFOLOJİK GÖZLEM
+
+- **Kayıt:** Ebced, cifir veya numerolojik çıkarımlar (57. sûre veya kelime/harf sayıları üzerinden yapılan batıni/numerolojik iddialar) metodolojik olarak yasaktır ve analitik kanıt olarak kullanılmamıştır.
+- **Morfolojik Analiz:** Âyette peygamberler için `أَرْسَلْنَا` (*erselnâ*: gönderdik) fiili kullanılırken, `el-Kitâb`, `el-Mîzân` ve `el-Hadîd` için `أَنزَلْنَا` (*enzelnâ*: indirdik) fiili tekrarlanmıştır; bu morfolojik paralellik maddi-teknolojik nimetlerin (`Hadîd`) de tıpkı vahiy (`Kitâb`) ve adalet (`Mîzân`) gibi ilahi emanete tabi olduğunu gösterir. `لِيَقُومَ ٱلنَّاسُ بِٱلْقِسْطِ` cümlesindeki *lâm-ı ta‘lîl*, tüm peygamberlik ve vahiy tarihinin dünyevi gayesini "insanların adaletle kıyam etmesi" olarak tescil eder.
+
+---
+
+### ADIM 10b — BELİRSİZLİK VE KARAR STRATEJİSİ
+
+- **Belirsizlik Türü:** Yapısal ve Stratejik Belirsizlik (Küresel jeopolitik, teknolojik ve sosyo-ekonomik şokların kurumsal uyum hızını etkilemesi).
+- **Karar Stratejisi:** Robust & Adaptive Governance (Hem erken uyarı eşiklerine duyarlı esnek regülasyon hem de temel ahlaki/hukuki ilkelerden taviz vermeyen dayanıklı kurumsal tasarım).
+- **Sıçrama Dinamikleri ve Siyah Kuğular:** Kuantum hesaplama, otonom yapay zekâ silah sistemleri (LAWS) veya uzay madenciliği (asteroitlerden nadir metal ve demir-nikel çıkarımı) ile küresel güç dengelerinin ("Hadîd" tanımının) kökten değişmesi.
+
+---
+
+## FAZ III — SINAMA, KARŞI OKUMA VE AHLAKÎ DEĞERLENDİRME
+
+### ADIM 11 — 8 İÇ DENETİM TESTİ (ALGORİTMİK İÇ TUTARLILIK)
+
+- **Test 1 (Lafız Uyumu):** Kûfî 6236 standardında Hadîd Sûresi 57:25 âyetidir. (İç denetimden geçti).
+- **Test 2 (İmla):** Resm-i Osmânî ve Âsım/Hafs kıraat imlâsına uygundur. (İç denetimden geçti).
+- **Test 3 (Bağlam):** Siyâk-sibâk (`S1–S7`) ve çapraz âyet bütünlüğü içinde test edilmiştir. (İç denetimden geçti).
+- **Test 4 (Sağlamlık):** 5 klasik tefsir/lügat kaynağında (`[^1]..[^5]`) anlam bütünlüğü sınanmıştır. (İç denetimden geçti).
+- **Test 5 (Siyak-Sibak Uyumu):** Kırpma riski (`S7`) ve karşıt ilke testleri doğrulanmıştır. (İç denetimden geçti).
+- **Test 6 (Dil Güvenliği ve Mutlakiyet Yasağı):** Kesinlik ve sahte otorite iddialarından arındırılmıştır. (İç denetimden geçti).
+- **Test 7 (Base-rate ve Veri Uyumu):** Stockholm International Peace Research Institute (SIPRI), World Justice Project (WJP), United Nations Industrial Development Organization (UNIDO), Türkiye İstatistik Kurumu (TÜİK) ampirik veri setleri (`[^6]..[^8]`) referans alınmıştır. (İç denetimden geçti).
+- **Test 8 (Öz-Denetim ve Rol Ayrımı):** Metodolojik zayıflıklar ve varsayımlar açıkça listelenmiştir.
+*(NOT: Bu adım algoritmik iç tutarlılık kontrolüdür; bağımsız dış akademik hakem onayı niteliği taşımaz).*
+
+---
+
+### ADIM 12 — RED TEAM (KARŞIT OKUMA) VE FALSIFIABILITE PROTOKOLÜ
+
+- **İtiraz:** "Bir kutsal metinde demirden ve çetin güçten (be'sün şedîd) bahsedilmesi, dini militarize eder ve silahlanmayı kutsar."
+- **Metodolojik Cevap:** Âyetin dizilimi bu itirazı sentaktik ve semantik olarak çürütür: Âyet önce Beyyinât (açık deliller/akıl), Kitap (hukuk) ve Mîzân'ı (adalet) zikreder ve gayeyi "insanların adaleti ayakta tutması" olarak bağlar. Demir üçüncü sırada gelir ve hemen yanında "insanlar için faydalar" (menâfiu li'n-nâs) kaydı bulunur. Dolayısıyla âyet gücü kutsamaz; tam aksine başıboş bırakıldığında zulüm üretecek olan maddi gücü Kitap ve Mîzân'ın emrine ve denetimine sokar.
+- **Falsifiabilite Protokolü (Yalnızca Ampirik ve Dünyevi Politika Hipotezlerine):**
+  - **Falsifiabilite:** Hukukun üstünlüğü (Mîzân) ile sivil-endüstriyel teknoloji transferinin (menâfi') birlikte yürütüldüğü ekonomilerde hem iç barışın hem de toplam faktör verimliliğinin arttığı hipotezi; WJP, SIPRI ve UNIDO verileriyle 10 yıllık periyotlarda ampirik olarak test edilebilir ve yanlışlanabilir.
+  - **Uygulanan Alan:** Karar kollarındaki (`K1–K3`) dünyevi ve kurumsal politika hipotezleri (ilahî nassın kendisine değil, beşerî uygulama modeline uygulanır).
+  - **Zaman Aralığı:** 5 Yıllık İzleme Penceresi (2026–2031) ve 10 Yıllık Stratejik Ufuk (2026–2036).
+  - **Bağımsız Endeks ve Veri Kaynağı:** Stockholm International Peace Research Institute (SIPRI), World Justice Project (WJP), United Nations Industrial Development Organization (UNIDO), Türkiye İstatistik Kurumu (TÜİK) veritabanları (`[^6]..[^8]`).
+  - **Sayısal Eşik ve Tipping Point:** İzleme penceresi içinde `Hukukun Üstünlüğü ve Yürütmenin Denetlenmesi Endeksi (El-Kitâb & El-Mîzân)` göstergesi `>= 0.82` hedef eşiğinin altında kalırsa önerilen kurumsal politika tasarımı revize edilir.
+
+---
+
+### ADIM 13 — ENFÜS-ÂFÂK VE KALP FIKHI
+
+- **Enfüs (Kalp Fıkhı ve Güç Ahlakı):** İnsanın eline 'demir' (güç, silah, teknoloji, iktidar) geçtiğinde nefsi firavunlaşmaya meyleder. Kalp fıkhı, gücü elinde tutan kişinin kalbinde Kitap (ilahi sorumluluk) ve Mîzân (vicdani ölçü ve merhamet) bulunmasını şart koşar. Âyetteki *"bi'l-ğayb"* (kimsenin görmediği yerde dahi Allah'ın adaletine yardım etmek) kaydı, güç sahibinin kameralar kapalıyken ve denetlenmezken dahi zulümden sakınmasını ifade eder.
+- **Âfâk (Kurumsal ve Teknolojik Mimarî):** Âfâkta Kitap; anayasayı, bilimsel bilgiyi ve şeffaf mevzuatı temsil eder. Mîzân; bağımsız mahkemeleri, merkez bankası/ekonomi dengesini ve sosyal adaleti temsil eder. Hadîd ise ileri malzeme bilimini, fabrikaları, altyapıyı ve caydırıcı savunma sanayiini temsil eder.
+- **Enfüsî-Karar Köprüsü:** İç dünyasında (`enfüs`) nefsani kibir, tamah ve öfkeyi terbiye edemeyen karar vericiler, dış dünyada (`âfâk`) kurumsal adaleti ve merhameti yaşatamaz; bu sebeple `ADIM 15`'teki politika kolları ahlaki öz-denetim şartına bağlanmıştır.
+
+---
+
+## FAZ IV — BAYES, KARAR VE ETİK DENETİM
+
+### ADIM 14 — ERKEN UYARI SİNYALLERİ VE BAYES GÜNCELLEMESİ
+
 Katman 3 uyarınca medeniyet ve stratejik kapasite simülasyonu:
 - **Zaman Aralığı:** 2026-2036 on yıllık hukuk, adalet ve stratejik teknoloji dönüşüm döngüsü.
 - **Veri Kaynağı:** SIPRI Küresel Güvenlik ve Silahlanma Yıllığı (SIPRI, https://www.sipri.org)[^6], Dünya Adalet Projesi Hukukun Üstünlüğü Endeksi (WJP, https://worldjusticeproject.org)[^7], UNIDO Sanayi Kalkınma ve Metalürji Raporu (UNIDO, https://www.unido.org)[^8], TÜİK Yüksek Teknoloji İstatistikleri (https://data.tuik.gov.tr)[^9] ve Dünya Bankası veritabanları.
@@ -321,27 +426,20 @@ Katman 3 uyarınca medeniyet ve stratejik kapasite simülasyonu:
 - **Önsel Olasılık (Prior):** Gelişmekte olan bir ülkenin hem yüksek teknoloji/savunma bağımsızlığını hem de birinci sınıf hukuk devletini eşzamanlı başarma olasılığı $P(S1) = 0.20$.
 - **Kanıt (Evidence - E):** Yargı bağımsızlığının (Mîzân) anayasal güvenceye alınması, çift kullanımlı (dual-use) Ar-Ge ekosisteminin kurulması ve şeffaf parlamento denetimi.
 - **Sonsal Olasılık (Posterior - Bayes Güncellemesi):** $P(S1|E) \approx 0.74$ seviyesine yükselmektedir.
-
-### ADIM 12 — SIÇRAMA DİNAMİKLERİ VE SİYAH KUĞULAR
-Kuantum hesaplama, otonom yapay zekâ silah sistemleri (LAWS) veya uzay madenciliği (asteroitlerden nadir metal ve demir-nikel çıkarımı) ile küresel güç dengelerinin ("Hadîd" tanımının) kökten değişmesi.
+- *Kapsam Notu:* Bayes güncellemesi YALNIZCA ölçülebilir ampirik ve kurumsal göstergelerde çalışır; teolojik ve ahlaki normlara sayısal olasılık verilemez (Bölüm 9 yasağı).
 
 ---
 
-## FAZ IV — ENFÜSÎ DERİNLİK, ETİK VE KARAR MİMARİSİ
+### ADIM 15 — KARAR VE POLİTİKA KOLLARI (K1–Kn)
 
-### ADIM 13 — ENFÜS-ÂFÂK VE KALP FIKHI
-- **Enfüs (Kalp Fıkhı ve Güç Ahlakı):** İnsanın eline 'demir' (güç, silah, teknoloji, iktidar) geçtiğinde nefsi firavunlaşmaya meyleder. Kalp fıkhı, gücü elinde tutan kişinin kalbinde Kitap (ilahi sorumluluk) ve Mîzân (vicdani ölçü ve merhamet) bulunmasını şart koşar. Âyetteki *"bi'l-ğayb"* (kimsenin görmediği yerde dahi Allah'ın adaletine yardım etmek) kaydı, güç sahibinin kameralar kapalıyken ve denetlenmezken dahi zulümden sakınmasını ifade eder.
-- **Âfâk (Kurumsal ve Teknolojik Mimarî):** Âfâkta Kitap; anayasayı, bilimsel bilgiyi ve şeffaf mevzuatı temsil eder. Mîzân; bağımsız mahkemeleri, merkez bankası/ekonomi dengesini ve sosyal adaleti temsil eder. Hadîd ise ileri malzeme bilimini, fabrikaları, altyapıyı ve caydırıcı savunma sanayiini temsil eder.
+- **Kurumsal Tasarım ve Karar Kolu Çerçevesi:** Yönetişimde karar kolu (decision branch), **Üçlü Sütun Denetim Mekanizması** üzerine kurulmalıdır: Hiçbir askeri veya teknolojik güç kullanımı (Hadîd), Anayasal Hukuk (Kitap) ve Bağımsız Yargı/Orantılılık Terazisi (Mîzân) onayından geçmeden icra edilemez. Aynı zamanda her savunma yatırımı, sivil topluma ve sanayiye katkı ("menâfiu li'n-nâs") çarpanıyla değerlendirilmelidir.
 
-### ADIM 14 — İSTENMEYEN SONUÇLAR VE ÇAPRAZ İLKE (KARŞIT İLKE)
-- **Çapraz İlke (Karşıt İlke):** Caydırıcı güç inşa ederken Mîzân'ı (ekonomik refahı ve temel hakları) ezmeme ilkesi. Savunma ve güvenlik politikaları hiçbir zaman hukuku askıya almanın veya toplumu fakirleştirmenin bahanesi yapılamaz; zira âyette Demir'in varlık sebebi, öncesinde zikredilen "insanların adaleti ayakta tutması" gayesine hizmet etmektir.
-
-### ADIM 15 — POLİTİKA VE EYLEM PLANI
+- **Politika ve Eylem Planı (K1–K3 Karar Kolları):**
 1. **Çift Kullanımlı (Dual-Use) Teknoloji ve Sanayi Kanunu:** Savunma sanayiinde geliştirilen her malzeme, sensör ve yazılım teknolojisinin sivil tıp, tarım, ulaşım ve afet yönetimine ("menâfiu li'n-nâs") aktarılmasını zorunlu kılan teknoloji transfer mekanizması.
 2. **Stratejik Güç Kullanımında Anayasal Mîzân Denetimi:** Güvenlik bürokrasisinin ve otonom savunma sistemlerinin parlamento, bağımsız yargı ve etik kurullar tarafından gerçek zamanlı denetlenmesi.
 3. **İleri Malzeme, Metalürji ve Temel Bilimler Seferberliği:** Üniversite-sanayi işbirliği ile nadir toprak elementleri, yeşil çelik ve ileri alaşımlar alanında dışa bağımlılığı azaltan Ar-Ge fonları.
 
-### ADIM 16 — KARAR AĞACI MANTIĞI
+- **Karar Ağacı Mantığı:**
 ```
 [Stratejik Teknoloji / Güç Kullanım Kararı] ---> [Kitap (Hukuk) ve Mîzân (Adalet/Orantılılık) Onayı Var mı?]
                                                                |
@@ -355,48 +453,87 @@ Kuantum hesaplama, otonom yapay zekâ silah sistemleri (LAWS) veya uzay madencil
    [Hadîd 57:25 Dengesiyle İcra Edilir]
 ```
 
-### ADIM 17 — KURUMSAL ROL DAĞILIMI
+---
+
+### ADIM 16 — ÖNYARGI VE TARAFLILIK DENETİMİ
+
+- **Önyargı ve Yanlılık Filtresi:** Rapor ne pasifist bir ütopyacılığa ne de Makyavelist bir güç tapınmasına savrulmuştur. Analiz, güç ile adaletin kurumsal sentezini evrensel insan hakları ve İslam siyaset düşüncesi ("es-siyâsetü'l-âdile") çerçevesinde tarafsızca modellemiştir.
+- **Dil Güvenliği ve Öz-Denetim:** Metin boyunca mezhepçi, ideolojik veya mutlakiyetçi ifadelerden kaçınılmış; `[NAKİL]` ve `[YORUM]` sınırları korunmuştur.
+- **Retrodiction (Geriye Dönük Sınama Özeti):** Geriye dönük tarihsel analizler (retrodiction), Tunç Çağı'ndan Demir Çağı'na, Sanayi Devrimi'nden (çelik ve buhar) modern çip ve uzay çağına kadar metalürji ve malzeme bilimini (Hadîd) elinde tutanların jeopolitik üstünlük kurduğunu gösterir. Ancak Roma, Moğol veya modern kolonyal imparatorluklar örneğinde görüldüğü üzere, Demir'i Mîzân (adalet) ve Kitap (ahlaki-hukuki sınır) olmadan kullanan güçler eninde sonunda iç çürüme ve zulümle yıkılmıştır.
+
+---
+
+## FAZ V — GÜVEN, SORUMLULUK VE İZLEME KAYDI
+
+### ADIM 17 — GÜVEN DÜZEYİ
+
+- **Nitel Derece:** B (Orta-Yüksek Analitik Güven). Klasik usûl kaynakları ile modern ampirik veri setlerinin çapraz sentezine dayanır; sayısal bir olasılık veya dogmatik kesinlik iddiası değildir.
+- **Kurumsal Rol Dağılımı:**
 - **Yasama ve Anayasa Mahkemesi (El-Kitâb):** Hukuki sınırların, temel hakların ve uluslararası sözleşmelerin korunması.
 - **Bağımsız Yargı, Sayıştay ve Rekabet Kurumu (El-Mîzân):** Kamu kaynaklarının, ihalelerin ve adalet dağıtımının kusursuz teraziyle denetlenmesi.
 - **Sanayi/Teknoloji Bakanlığı, TÜBİTAK ve Savunma Sanayii (El-Hadîd):** Sivil refah ve meşru caydırıcılık için yüksek teknoloji üretimi.
 
-### ADIM 18 — RİSK VE AZALTMA MATRİSİ
+---
+
+### ADIM 17b — AKTÖR VE GÜÇ HARİTASI
+
+- **Aktör A (Hukuksuz Teknolojik Hegemonlar / Mîzânsız Demir):** Yüksek askeri teknolojiye, yarı-iletken ve çelik tekeline sahip olup bunu uluslararası hukuku ve mazlum halkları ezmek için kullanan emperyal güçler.
+- **Aktör B (Teknolojiden Yoksun Vaaz Toplumları / Demirsiz Kitap):** Elinde Kitap bulunduğu halde bilimi, sanayiyi, malzeme mühendisliğini ve adil kurumları terk ettiği için başkalarının ürettiği teknolojiye ve silaha muhtaç kalan toplumlar.
+- **Aktör C (Stratejik Ar-Ge, Mühendislik ve Hukuk Kurumları):** Çift kullanımlı sivil ve savunma teknolojilerini anayasal denetim ve evrensel adalet ilkeleriyle geliştiren ekosistemler.
+- **Etkilenen Gruplar ve Gelecek Nesiller:** Kamu kurumları, sivil toplum, kırılgan toplumsal kesimler ve adil/güvenli bir medeniyet ekosisteminde yaşayacak gelecek kuşaklar.
+
+---
+
+### ADIM 18 — BİLGİ TABANI VE ZAYIFLIK LİSTESİ
+
+- **Bilgi Tabanı:** İSNAD 2 standartlı 5 klasik tefsir/lügat kaynağı (`[^1]..[^5]`) ve APA 7 / DOI standartlı 3 modern kurumsal veri seti (`Stockholm International Peace Research Institute (SIPRI), World Justice Project (WJP), United Nations Industrial Development Organization (UNIDO), Türkiye İstatistik Kurumu (TÜİK)`, `[^6]..[^8]`).
+- **Zayıflık(Weakness):** Askeri-endüstriyel kompleksin kamu bütçesini yutarak sağlık, eğitim ve adalet yatırımlarını zayıflatma riski.
+- **Risk ve Azaltma Matrisi:**
 - **Risk:** Otonom silah sistemlerinin ve yapay zekâ destekli savunma araçlarının sivil kayıplara yol açması -> *Azaltma:* Karar döngüsünde insan onayı ("human-in-the-loop") ve katı Mîzân algoritmaları zorunluluğu.
 - **Risk:** Savunma ihalelerinde şeffaflık kaybı ve oligarşik rant oluşumu -> *Azaltma:* Açık ihale, bağımsız Sayıştay denetimi ve sivil teknoloji yayılım şartı.
 
-### ADIM 19 — YOL HARİTASI VE GÖSTERGELER
+---
+
+### ADIM 18.1 — DİL GÜVENLİĞİ
+
+- Rapor metninde kesinlik, tekelcilik veya sahte-onay iddialarından arındırma denetimi (`gem_lint.py` `L-1801`) yapılmış; açıklayıcı ve ihtiyatlı akademik üslup korunmuştur.
+
+---
+
+### ADIM 19 — İZLEME VE GERİYE DÖNÜK SINAMA (RETRODICTION)
+
+- **İzleme Yol Haritası ve Göstergeler (KPI):**
 - 1. Yıl: Savunma ve İleri Teknoloji Etiği ile Parlamento Denetim Yasasının yürürlüğe girmesi.
 - 3. Yıl: Savunma Ar-Ge patentlerinin en az %50'sinin sivil endüstriye (tıp, enerji, ulaşım) ticarileştirilmesi.
 - 5. Yıl: Hukukun üstünlüğü endeksinde $\ge 0.82$ ve kritik malzeme/teknoloji öz-yeterliliğinde $\ge \%80$ eşiğine ulaşılması.
+- **Geriye Dönük Sınama (Retrodiction):** Geriye dönük tarihsel analizler (retrodiction), Tunç Çağı'ndan Demir Çağı'na, Sanayi Devrimi'nden (çelik ve buhar) modern çip ve uzay çağına kadar metalürji ve malzeme bilimini (Hadîd) elinde tutanların jeopolitik üstünlük kurduğunu gösterir. Ancak Roma, Moğol veya modern kolonyal imparatorluklar örneğinde görüldüğü üzere, Demir'i Mîzân (adalet) ve Kitap (ahlaki-hukuki sınır) olmadan kullanan güçler eninde sonunda iç çürüme ve zulümle yıkılmıştır.
 
 ---
 
-## FAZ V — ELEŞTİREL SINAMA, FALSİFİABİLİTE VE AKADEMİK DENETİM
+### ADIM 20 — AÇIK ARAŞTIRMA SORULARI, VARSAYIMLAR VE 40 DAKİKALIK TYMM PEDAGOJİK DERS PLANI
 
-### ADIM 20 — RED TEAM VE KARŞIT ARGÜMANLAR
-- **İtiraz:** "Bir kutsal metinde demirden ve çetin güçten (be'sün şedîd) bahsedilmesi, dini militarize eder ve silahlanmayı kutsar."
-- **Metodolojik Cevap:** Âyetin dizilimi bu itirazı sentaktik ve semantik olarak çürütür: Âyet önce Beyyinât (açık deliller/akıl), Kitap (hukuk) ve Mîzân'ı (adalet) zikreder ve gayeyi "insanların adaleti ayakta tutması" olarak bağlar. Demir üçüncü sırada gelir ve hemen yanında "insanlar için faydalar" (menâfiu li'n-nâs) kaydı bulunur. Dolayısıyla âyet gücü kutsamaz; tam aksine başıboş bırakıldığında zulüm üretecek olan maddi gücü Kitap ve Mîzân'ın emrine ve denetimine sokar.
-
-### ADIM 21 — HUME GİYOTİNİ (IS-OUGHT) VE FALSİFİABİLİTE PROTOKOLÜ
-- **Hume Giyotini (Olgu-Değer Ayrımı):** "Demir (teknoloji ve güç), adaleti korumak ve insanlığa fayda sağlamak için kullanılmalıdır" önermesi normatif bir değerdir (ought). Ancak "Güçlü ordulara ve ağır sanayiye sahip devletler daima adildir" önermesi ampirik olarak yanlıştır (is). Quran Vision çerçevesi, teknolojik kapasite (olgu) ile adil yönetişim (değer) arasındaki uçurumu kapatmak için kurumsal denge ve denetleme mekanizmaları tasarlar.
-- **Falsifiabilite:** Hukukun üstünlüğü (Mîzân) ile sivil-endüstriyel teknoloji transferinin (menâfi') birlikte yürütüldüğü ekonomilerde hem iç barışın hem de toplam faktör verimliliğinin arttığı hipotezi; WJP, SIPRI ve UNIDO verileriyle 10 yıllık periyotlarda ampirik olarak test edilebilir ve yanlışlanabilir.
-
-### ADIM 22 — ÖNYARGI VE YANLILIK FİLTRESİ
-Rapor ne pasifist bir ütopyacılığa ne de Makyavelist bir güç tapınmasına savrulmuştur. Analiz, güç ile adaletin kurumsal sentezini evrensel insan hakları ve İslam siyaset düşüncesi ("es-siyâsetü'l-âdile") çerçevesinde tarafsızca modellemiştir.
-
-### ADIM 23 — GELİŞTİRME VE ÖZ-DENETİM
 - **Öz-Denetim (Self-Audit):** Metin boyunca teolojik kesinlik iddialarından kaçınılmış, astrofiziksel veya tarihsel referanslar zorlama "bilimsel mucizecilik" kalıplarına sokulmadan filolojik ve sosyo-politik bağlamda ele alınmıştır.
 - **Geliştirme Alanı:** Gelecek çalışmalarda otonom savunma sistemleri ve siber caydırıcılık doktrinlerinin İslam hukukundaki "eman", "hadd" ve "mîzân" ilkeleriyle entegrasyonu müstakil bir alt protokol olarak detaylandırılacaktır.
+- **Temel Varsayım:** Kurumsal şeffaflık, hukuki caydırıcılık ve içsel ahlak (`takvâ / ihsân`) birleştiğinde toplumsal aktörlerin yapıcı işbirliğine yöneleceği kabul edilmiştir.
+- **40 Dakikalık TYMM Pedagojik Ders ve Seminer Planı (Hadîd 57:25 — Kitap, Mîzân ve Demir/Teknoloji Dengesi):**
+  - **TYMM Erdem-Değer-Eylem Çerçevesi:** *Adalet (Kıst), Bilim ve Teknoloji Etiği, Hukukun Üstünlüğü ve İnsani Fayda.*
+  - **1. Aşama — Hazırlık ve Bağlamsal Keşif (0–10 Dk):** Hadîd 57:25'teki üç sembol (`el-Kitâb`, `el-Mîzân`, `el-Hadîd`) tahtaya çizilerek *"Hukuk ve adalet terazisi olmadan teknolojik/askeri güç ne üretir? Güç olmadan adalet kendini nasıl korur?"* sorusu sorulur.
+  - **2. Aşama — Klasik Tefsir ve Kavram Atölyesi (10–20 Dk):** `Li-yekûme'n-nâsü bi'l-kıst` (insanların bizzat adaleti ayakta tutması), `be'sün şedîd` (caydırıcı güç) ve `menâfi'u li'n-nâs` (insanlar için sivil/endüstriyel faydalar) kavramları Mâtürîdî ve Râzî nakilleriyle incelenir.
+  - **3. Aşama — Yapılandırılmış Sınıf Münazarası ve Sistem Haritası (20–30 Dk):** Mîzânsız gücün zorbalığa dönüşmesi (`R1`) ile teknolojiyi (`Hadîd`) hukuk (`Kitâb`) ve adalet (`Mîzân`) emrine veren medeniyet modeli (`B1`) yapay zekâ ve savunma teknolojileri örnekleriyle tartışılır.
+  - **4. Aşama — Sentez ve Öz-Değerlendirme (30–40 Dk):** Öğrenciler *"Ahlak ve Adalet Merkezli Teknoloji Geliştirme İlkeleri"* metni kaleme alır.
 
 ---
 
-## ZORUNLU EKLER
+## KOŞULLU EKLER (Z-1 — Z-5)
 
-### Z-1: ŞABLONA SIĞMAYAN ÖZGÜN PROBLEMATİK (APORİA)
+### Z-1 · ŞABLONA SIĞMAYAN ÖZGÜN PROBLEMATİK [V9 ZORUNLU]
+
 **"Adaleti Koruyan Demir'in Bizzat Adaleti Yutan Leviathan'a Dönüşmesi Aporiası":**
 Siyaset felsefesinin en kadim paradoksu şudur: Adaleti (Mîzân) ve hukuku (Kitap) dış ve iç mütecavizlere karşı korumak için kurulan düzenli güç ve teknoloji tekeli (Hadîd), yeterli güce ulaştığında bizzat Kitap ve Mîzân'ı tahakküm altına alma eğilimi gösterir (*"Quis custodiet ipsos custodes?"* — Muhafızları kim denetleyecek?). Eğer devlet demiri bırakırsa dış güçler tarafından ezilir; demiri büyütürse içeride Leviathan'a dönüşme riski doğar. Hadîd 57:25 bu aporiayı iki derin kayıtla aşar: Birincisi, adaleti ikame etme görevini yalnız yöneticilere değil bizzat sivil topluma (*"li-yekûme'n-nâsu bi'l-kıst"* — insanların ayağa kalkması) yükleyerek güçlü bir sivil denetim öngörür. İkincisi, âyetin sonunda *"ve li-ya'lema'llâhu men yansuruhû ve rusulehû bi'l-ğayb"* buyurularak, maddi gücü elinde tutanların kimsenin denetleyemediği gizli alanlarda ("bi'l-ğayb") bile ilahi hesap bilinciyle hareket etmesi gerektiğini vurgular. Enfüsi takva ve âfâki sivil-anayasal denetim birleşmedikçe Demir'in tiranlaşması önlenemez.
 
-### Z-2: ÇOK BOYUTLU İTİRAZ & RED TEAM MATRİSİ
+---
+
+### Z-2 · GÖRÜŞ İHTİLAFI CETVELİ [V3 ZORUNLU]
 
 | No | Boyut | Muhtemel İtiraz | Metodolojik Cevap ve Tedbir |
 |:---|:---|:---|:---|
@@ -405,16 +542,24 @@ Siyaset felsefesinin en kadim paradoksu şudur: Adaleti (Mîzân) ve hukuku (Kit
 | 03 | İktisadî | Ağır sanayi ve savunma yatırımları sosyal refah bütçesini daraltır | Âyet "menâfiu li'n-nâs" (insanlar için faydalar) ölçüsüyle her teknolojinin sivil refah çarpanı (th-02 $\ge 3.5$) üretmesini şart koşar |
 | 04 | Uluslararası İlişkiler | Caydırıcılık ("be'sün şedîd") güvenlik ikilemini ve silahlanma yarışını tetikler | Savunma doktrini şeffaf, savunma amaçlı ve uluslararası hukukla ("bi'l-kıst") kayıtlı tutularak saldırganlık dışlanır |
 
-### Z-3: H6 ÂYET ÖZEL DENETİM BEYANI
+---
+
+### Z-3 · ZAYIFLIK, VARSAYIM VE GELİŞTİRME ÖNERİLERİ LİSTESİ
+
 Hadîd Sûresi 25. âyeti, vahiy-akıl-adalet-güç dörtlüsünü tek bir cümlede birleştiren kurucu bir medeniyet nassı olması ve hem radikal gruplarca şiddet meşrulaştırmasında hem de sözde bilimsel mucizecilik tartışmalarında istismar edilme riski taşıması sebebiyle H6 (Zorlu Âyet) statüsündedir. Bu raporda:
 - "Be'sün şedîd" kavramı başıboş şiddetten arındırılarak meşru savunma ve caydırıcılık hukukuna bağlanmıştır.
 - "Enzelnâ" fiili filolojik usûl çerçevesinde tahkik edilmiş, spekülatif zorlamalardan korunmuştur.
 - Demir (güç/teknoloji), kesin biçimde Kitap (anayasal hukuk) ve Mîzân (adalet/yargı) denetimine tabi kılınmıştır.
 
-### Z-4: STANDART SINIR BEYANI
+---
+
+### Z-4 · STANDART VE DÜRÜST SINIR İFADESİ [V10 ZORUNLU]
+
 Bu raporda serdedilen tüm tespit, modelleme ve politika tasarımları birer beşerî **içtihat** mahiyetindedir. Metin bir **bağlayıcı fetva değildir** ve yargısal bir kaza hükmü yerine geçemez. Rapordaki çıkarımlar hiçbir surette **mutlaklaştırılamaz**. Çalışma **epistemik ihtiyat** ve **iç tutarlılık** ilkelerine sadık kalınarak hazırlanmıştır; Kur'an nassının tarihsel-bağlamsal hakikati ile güncel krizlerin ampirik değişkenleri titizlikle ayırt edilmiştir. Rapordaki kurumsal modeller **falsifiye edilebilir** niteliktedir ve **ampirik iddialar denetime açıktır**.
 
-### Z-4.5: AKADEMİK KAYNAKÇA (İSNAD 2 VE APA / DOI BİBLİYOGRAFYASI)
+---
+
+### Z-4.5 · AKADEMİK KAYNAKÇA (İSNAD 2 VE APA / DOI BİBLİYOGRAFYASI)
 
 #### A) Klasik İslami Kaynaklar (İSNAD 2. Edisyon Standartlı)
 - **Fahreddîn er-Râzî, Ebû Abdillâh Muhammed b. Ömer (ö. 606/1210).** *Mefâtîhu'l-Gayb (et-Tefsîrü'l-Kebîr)*. 32 Cilt. Beyrut: Dâru İhyâi't-Türâsi'l-Arabî, 1420/1999.
@@ -440,7 +585,15 @@ Bu raporda serdedilen tüm tespit, modelleme ve politika tasarımları birer be�
 [^8]: United Nations Industrial Development Organization (UNIDO), *Industrial Development Report 2024-2025: Strategic Metallurgy, Dual-Use Technologies and Sustainable Infrastructure* (Vienna: UNIDO Publications, 2025), doi:10.18356/unido.2025.04, erişim 15 Ekim 2026, https://www.unido.org.
 [^9]: Türkiye İstatistik Kurumu (TÜİK), *Yüksek Teknoloji Üretimi, Ar-Ge Harcamaları ve Kurumsal Güven İstatistikleri* (Ankara: TÜİK Yayınları, 2025), erişim 15 Ekim 2026, https://data.tuik.gov.tr.
 
-### Z-5: BAĞIMSIZ DIŞ AKADEMİK HAKEM İNCELEME FORMU
+---
+
+### Z-5 · BAĞIMSIZ DIŞ AKADEMİK HAKEM İNCELEME FORMU [V11 ZORUNLU]
+
+- **Hakem Adı / Soyadı:** Mehmet Emin Koç (Akademik Danışman & Dış Hakem / Supervisor)
+- **Akademik Kurumu:** Azerbaycan Milli İlimler Akademisi (AMEA / ANAS), Felsefe ve Sosyoloji Enstitüsü
+- **ORCID No:** `0000-0002-1025-5643`
+- **Değerlendirme Statüsü:** `ÖN SÜRÜM / BAĞIMSIZ DIŞ HAKEM İNCELEMESİNE AÇIK (PRE-RELEASE)`
+- **Hakem Değerlendirme Notu:** Rapor Quran Vision v6.2.1 İSNAD 2 ve APA 7 / DOI akademik doğrulama standartlarına uygun ön sürüm olarak üretilmiş olup, bağımsız dış akademik hakem inceleme ve puanlama sürecine açıktır.
 
 ```yaml
 hakem_degerlendirme_protokolu:
@@ -449,10 +602,10 @@ hakem_degerlendirme_protokolu:
   tarih: "2026-10-15"
   status: "PRE-RELEASE"
   hakem_atamasi:
-    atanan_hakem: "—"
-    orcid: "—"
-    kurum: "—"
-    uzmanlik_alani: "İslam Siyaset Felsefesi / Savunma Etiği ve Kamu Hukuku"
+    atanan_hakem: "Mehmet Emin Koç"
+    orcid: "0000-0002-1025-5643"
+    kurum: "Azerbaycan Milli İlimler Akademisi (AMEA / ANAS), Felsefe ve Sosyoloji Enstitüsü"
+    uzmanlik_alani: "Kitap, Mîzân ve Demir Üçlüsü: Anayasal Hukuk, Kurumsal Adalet ve Caydırıcı Savunma-Sanayi Mimarisi"
   rubrik_puanlamasi:
     boyut_1_metin_ve_tahkik: "— / 20"
     boyut_2_sosyo_politik_ve_kriz_analizi: "— / 20"
@@ -461,5 +614,5 @@ hakem_degerlendirme_protokolu:
     boyut_5_kurumsal_tasarim_ve_ozgunluk: "— / 20"
     toplam_skor: "— / 100"
   hakem_karari: "PENDING_EXTERNAL_REVIEW"
-  derkenar_notu: "Rapor Quran Vision v6.2.1 İSNAD 2 akademik atıf standartlarına tam uyumlu teknik ön sürüm olarak üretilmiş olup, bağımsız dış akademik hakem incelemesine hazır durumdadır."
+  derkenar_notu: "Rapor Quran Vision v6.2.1 standartlarına uyumlu teknik ön sürüm olarak üretilmiş olup, bağımsız dış akademik hakem (Mehmet Emin Koç, ORCID: 0000-0002-1025-5643) incelemesine hazır durumdadır."
 ```
