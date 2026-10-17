@@ -1907,10 +1907,6 @@ a.fn-backref:hover {{
         <button id="langBtnEn" class="lang-btn" onclick="setLanguage('en')">🇬🇧 EN</button>
       </div>
     </div>
-    <div style="display:flex; gap:8px; margin-bottom:12px; flex-wrap:wrap;">
-      <button id="sidebarHideBtn" type="button" class="QuickControlBtn" style="flex:1; justify-content:center; padding:6px 10px; font-size:12px;" onclick="toggleSidebar()" title="Sol Menüyü Gizle (Ctrl + B)">◀ Menüyü Gizle</button>
-      <button id="themeBtnSidebar" type="button" class="QuickControlBtn" style="flex:1; justify-content:center; padding:6px 10px; font-size:12px;" onclick="toggleTheme()" title="Arayüz Modunu Değiştir (Açık / Koyu Mod)">☀️ Açık Moda Geç</button>
-    </div>
     <div class="brand-identity">
       <div class="brand-crest" title="Mîzân ve Mushaf Kurumsal Mührü">
         <svg width="32" height="32" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1941,7 +1937,6 @@ a.fn-backref:hover {{
   <header class="topbar">
     <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
       <button id="sidebar-toggle" type="button" onclick="toggleSidebar()" title="Menüyü Gizle / Göster (Ctrl + B veya [)" aria-label="Menüyü Gizle / Göster"><span id="sidebarToggleLabel">◀ Menüyü Gizle</span></button>
-      <button id="themeBtnTop" type="button" class="QuickControlBtn" onclick="toggleTheme()" title="Arayüz Modunu Değiştir (Açık / Koyu Mod)">☀️ Açık Moda Geç</button>
       <div class="stats-bar" id="statsBar">
         <div class="stat-pill">📚 Külliyat: <strong>{len(reports)} Rapor</strong></div>
         <div class="stat-pill">🕌 Klasik Tahkik (İSNAD 2): <strong>{total_classical} Nakil</strong></div>
@@ -1956,7 +1951,7 @@ a.fn-backref:hover {{
       <a id="fullBookPdfBtn" class="btn btn-gold" href="pdf/Quran_Vision_Kulliyat_v6.2.1.pdf" download="Quran_Vision_Kulliyat_v6.2.1.pdf">📚 Tüm Külliyat PDF ({len(reports)} Rapor)</a>
       <button id="printBtn" class="btn" onclick="printCurrentReport()">🖨️ Yazdır</button>
       <button id="langToggleTopBtn" class="btn" onclick="setLanguage(currentLang === 'tr' ? 'en' : 'tr')">🌐 EN / TR</button>
-      <button id="themeBtn" class="btn btn-gold" onclick="toggleTheme()">☀️ Açık Moda Geç</button>
+      <button id="themeBtn" class="btn btn-gold" onclick="toggleTheme()">☀️ Açık Mod</button>
     </div>
   </header>
 
@@ -3303,13 +3298,12 @@ function setTab(tabName, btn) {{
 function updateThemeButtonsUI() {{
   const isDark = document.documentElement.getAttribute('data-theme') !== 'light';
   const isEn = currentLang === 'en';
-  const label = isEn
-    ? (isDark ? '☀️ Light Mode' : '🌙 Dark Mode')
-    : (isDark ? '☀️ Açık Moda Geç' : '🌙 Koyu Moda Geç');
-  ['themeBtn', 'themeBtnTop', 'themeBtnSidebar'].forEach(id => {{
-    const el = document.getElementById(id);
-    if (el) el.innerHTML = label;
-  }});
+  const el = document.getElementById('themeBtn');
+  if (el) {{
+    el.innerHTML = isEn
+      ? (isDark ? '☀️ Light Mode' : '🌙 Dark Mode')
+      : (isDark ? '☀️ Açık Mod' : '🌙 Koyu Mod');
+  }}
 }}
 
 function toggleTheme() {{
@@ -3325,14 +3319,10 @@ function updateSidebarToggleUI() {{
   const isEn = currentLang === 'en';
   const lbl = document.getElementById('sidebarToggleLabel');
   const btn = document.getElementById('sidebar-toggle');
-  const sideBtn = document.getElementById('sidebarHideBtn');
   if (lbl) {{
     lbl.textContent = isEn
       ? (isCollapsed ? '▶ Show Menu' : '◀ Hide Menu')
       : (isCollapsed ? '▶ Menüyü Göster' : '◀ Menüyü Gizle');
-  }}
-  if (sideBtn) {{
-    sideBtn.textContent = isEn ? '◀ Hide Menu' : '◀ Menüyü Gizle';
   }}
   if (btn) {{
     btn.setAttribute('aria-expanded', String(!isCollapsed));
