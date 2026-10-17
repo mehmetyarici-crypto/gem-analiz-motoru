@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="tr" data-theme="dark">
+<html lang="tr" data-theme="light">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -89,39 +89,51 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
+:root {
+  --primary: #264e41;
+  --primary-alt: #2d5a4c;
+  --accent: #eaf1ed;
+  --accent-alt: #f0f5f2;
+  --paper-bg: #fbfcfb;
+  --paper-surface: #f8faf9;
+}
 :root[data-theme="dark"] {
-  --bg-main: #091310;
-  --bg-sidebar: #0d1b17;
-  --bg-card: #122620;
-  --bg-card-hover: #18332b;
-  --bg-surface: #0f201b;
-  --border: #214338;
-  --text-primary: #ecf5f1;
-  --text-secondary: #a3c2b6;
-  --text-muted: #6c9183;
-  --accent-gold: #d4af37;
-  --accent-gold-soft: rgba(212, 175, 55, 0.14);
-  --accent-emerald: #10b981;
-  --accent-emerald-soft: rgba(16, 185, 129, 0.15);
-  --danger: #ef4444;
-  --shadow: 0 10px 30px rgba(0,0,0,0.45);
+  --primary: #4e8f77;
+  --accent: rgba(78, 143, 119, 0.15);
+  --bg-main: #0c1613;
+  --bg-sidebar: #101e1a;
+  --bg-card: #142621;
+  --bg-card-hover: #1a302a;
+  --bg-surface: #11201c;
+  --border: #233d35;
+  --text-primary: #e6efeb;
+  --text-secondary: #9db8ae;
+  --text-muted: #6c8c80;
+  --accent-gold: #c6a343;
+  --accent-gold-soft: rgba(198, 163, 67, 0.14);
+  --accent-emerald: #4e8f77;
+  --accent-emerald-soft: rgba(78, 143, 119, 0.15);
+  --danger: #dc4c4c;
+  --shadow: 0 10px 28px rgba(0,0,0,0.40);
 }
 :root[data-theme="light"] {
-  --bg-main: #f6f8f7;
-  --bg-sidebar: #ffffff;
-  --bg-card: #ffffff;
-  --bg-card-hover: #f0f5f3;
-  --bg-surface: #eef3f1;
-  --border: #d5e2dc;
-  --text-primary: #10241d;
-  --text-secondary: #37574c;
-  --text-muted: #648277;
-  --accent-gold: #9a740a;
-  --accent-gold-soft: rgba(154, 116, 10, 0.10);
-  --accent-emerald: #059669;
-  --accent-emerald-soft: rgba(5, 150, 105, 0.12);
-  --danger: #dc2626;
-  --shadow: 0 6px 20px rgba(16,36,29,0.07);
+  --primary: #264e41;
+  --accent: #eaf1ed;
+  --bg-main: #fbfcfb;
+  --bg-sidebar: #f8faf9;
+  --bg-card: #fbfcfb;
+  --bg-card-hover: #eaf1ed;
+  --bg-surface: #f0f5f2;
+  --border: #d4e0da;
+  --text-primary: #172b24;
+  --text-secondary: #38544a;
+  --text-muted: #627d73;
+  --accent-gold: #87660d;
+  --accent-gold-soft: rgba(135, 102, 13, 0.10);
+  --accent-emerald: #264e41;
+  --accent-emerald-soft: #eaf1ed;
+  --danger: #b91c1c;
+  --shadow: 0 6px 20px rgba(23,43,36,0.06);
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body {
@@ -133,8 +145,8 @@ body {
   overflow: hidden;
   line-height: 1.65;
 }
-/* Sidebar */
-.sidebar {
+/* Sidebar & Collapsible Reader Mode */
+#sidebar, .sidebar {
   width: 365px;
   min-width: 365px;
   background: var(--bg-sidebar);
@@ -142,11 +154,53 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  transition: transform 0.3s ease, margin 0.3s ease, width 0.3s ease, min-width 0.3s ease, opacity 0.25s ease;
+  will-change: transform, width;
+  z-index: 20;
+}
+body.sidebar-collapsed #sidebar,
+body.sidebar-collapsed .sidebar {
+  transform: translateX(-100%);
+  width: 0 !important;
+  min-width: 0 !important;
+  margin-left: 0;
+  border-right: none;
+  opacity: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+.main {
+  transition: transform 0.3s ease, margin 0.3s ease, width 0.3s ease;
+}
+body.sidebar-collapsed .content-scroll > * {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: max-width 0.3s ease, margin 0.3s ease;
+}
+#sidebar-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg-surface);
+  color: var(--text-primary);
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+#sidebar-toggle:hover {
+  border-color: var(--accent-emerald);
+  background: var(--accent-emerald-soft);
+  color: var(--accent-emerald);
 }
 .brand {
   padding: 22px 22px 18px;
-  border-bottom: 1px solid rgba(212, 175, 55, 0.28);
-  background: linear-gradient(145deg, rgba(16,185,129,0.12) 0%, rgba(212,175,55,0.14) 55%, rgba(9,19,16,0.4) 100%);
+  border-bottom: 1px solid rgba(198, 163, 67, 0.26);
+  background: linear-gradient(145deg, rgba(38,78,65,0.14) 0%, rgba(198,163,67,0.12) 55%, rgba(12,22,19,0.22) 100%);
   position: relative;
 }
 .brand-top-row {
@@ -792,7 +846,7 @@ a.fn-backref:hover {
 </head>
 <body>
 
-<aside class="sidebar">
+<aside id="sidebar" class="sidebar">
   <div class="brand">
     <div class="brand-top-row">
       <div class="brand-badge" id="brandBadge">🏛️ QURAN VISION ENSTİTÜSÜ • v6.2.1</div>
@@ -805,7 +859,7 @@ a.fn-backref:hover {
       <div class="brand-crest" title="Mîzân ve Mushaf Kurumsal Mührü">
         <svg width="32" height="32" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M18 3L21.5 9.5L29 10.5L23.5 15.5L25 23L18 19.5L11 23L12.5 15.5L7 10.5L14.5 9.5L18 3Z" stroke="#D4AF37" stroke-width="1.4" fill="rgba(212,175,55,0.12)"/>
-          <path d="M8 26C11 24.5 15 24.5 18 26.5C21 24.5 25 24.5 28 26V32C25 30.5 21 30.5 18 32.5C15 30.5 11 30.5 8 32V26Z" stroke="#10B981" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M8 26C11 24.5 15 24.5 18 26.5C21 24.5 25 24.5 28 26V32C25 30.5 21 30.5 18 32.5C15 30.5 11 30.5 8 32V26Z" stroke="#264e41" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
           <line x1="18" y1="6" x2="18" y2="32" stroke="#D4AF37" stroke-width="1.6"/>
           <line x1="11" y1="14" x2="25" y2="14" stroke="#D4AF37" stroke-width="1.6" stroke-linecap="round"/>
         </svg>
@@ -829,12 +883,15 @@ a.fn-backref:hover {
 
 <main class="main">
   <header class="topbar">
-    <div class="stats-bar" id="statsBar">
-      <div class="stat-pill">📚 Külliyat: <strong>15 Rapor</strong></div>
-      <div class="stat-pill">🕌 Klasik Tahkik (İSNAD 2): <strong>77 Nakil</strong></div>
-      <div class="stat-pill">🌐 Ampirik Veri (DOI/URL): <strong>46 Kurum</strong></div>
-      <a class="stat-pill" href="https://doi.org/10.5281/zenodo.23391192" target="_blank" rel="noopener" style="text-decoration:none; border-color:var(--accent-gold);">🏛️ CERN/Zenodo DOI: <strong>10.5281/zenodo.23391192</strong></a>
-      <a class="stat-pill" href="https://orcid.org/0009-0003-0356-8582" target="_blank" rel="noopener" style="text-decoration:none; border-color:var(--accent-emerald);">🆔 ORCID: <strong>0009-0003-0356-8582</strong></a>
+    <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
+      <button id="sidebar-toggle" onclick="toggleSidebar()" title="Menüyü Aç/Kapat (Ctrl + B veya [)" aria-label="Menüyü Aç/Kapat">☰ <span id="sidebarToggleLabel">Okuma Modu</span></button>
+      <div class="stats-bar" id="statsBar">
+        <div class="stat-pill">📚 Külliyat: <strong>15 Rapor</strong></div>
+        <div class="stat-pill">🕌 Klasik Tahkik (İSNAD 2): <strong>77 Nakil</strong></div>
+        <div class="stat-pill">🌐 Ampirik Veri (DOI/URL): <strong>46 Kurum</strong></div>
+        <a class="stat-pill" href="https://doi.org/10.5281/zenodo.23391192" target="_blank" rel="noopener" style="text-decoration:none; border-color:var(--accent-gold);">🏛️ CERN/Zenodo DOI: <strong>10.5281/zenodo.23391192</strong></a>
+        <a class="stat-pill" href="https://orcid.org/0009-0003-0356-8582" target="_blank" rel="noopener" style="text-decoration:none; border-color:var(--accent-emerald);">🆔 ORCID: <strong>0009-0003-0356-8582</strong></a>
+      </div>
     </div>
     <div class="top-actions">
       <button id="topFeedbackBtn" class="btn btn-gold" onclick="openFeedbackTab()">💬 Akademik Katkı & Şerh Yaz</button>
@@ -1091,6 +1148,7 @@ function setLanguage(lang) {
   document.getElementById('tabBtn-synthesis').innerHTML = isEn ? '🕸️ 5. Corpus Synthesis & Scholar Matrix' : '🕸️ 5. Külliyat Sentez & Müfessir Matrisi';
   document.getElementById('tabBtn-feedback').innerHTML = isEn ? '💬 6. Academic Peer-Review & Feedback' : '💬 6. Akademik Şerh & Katkı';
 
+  updateSidebarToggleUI();
   renderSidebar(searchInput ? searchInput.value : '');
   selectReport(currentIndex);
 }
@@ -2187,12 +2245,69 @@ function setTab(tabName, btn) {
 
 function toggleTheme() {
   const root = document.documentElement;
-  root.setAttribute('data-theme', root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+  const nextTheme = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+  root.setAttribute('data-theme', nextTheme);
+  try { localStorage.setItem('qv_theme_v621', nextTheme); } catch (e) {}
 }
+
+function updateSidebarToggleUI() {
+  const isCollapsed = document.body.classList.contains('sidebar-collapsed');
+  const isEn = currentLang === 'en';
+  const lbl = document.getElementById('sidebarToggleLabel');
+  const btn = document.getElementById('sidebar-toggle');
+  if (lbl) {
+    lbl.textContent = isEn
+      ? (isCollapsed ? 'Show Menu' : 'Reader Mode')
+      : (isCollapsed ? 'Menüyü Aç' : 'Okuma Modu');
+  }
+  if (btn) {
+    btn.setAttribute('aria-expanded', String(!isCollapsed));
+    btn.title = isEn
+      ? 'Toggle Sidebar / Reader Mode (Ctrl + B or [)'
+      : 'Menüyü Aç / Kapat — Okuma Modu (Ctrl + B veya [)';
+  }
+}
+
+function toggleSidebar(forceState) {
+  const shouldCollapse = typeof forceState === 'boolean'
+    ? forceState
+    : !document.body.classList.contains('sidebar-collapsed');
+  document.body.classList.toggle('sidebar-collapsed', shouldCollapse);
+  try { localStorage.setItem('qv_sidebar_collapsed', shouldCollapse ? '1' : '0'); } catch (e) {}
+  updateSidebarToggleUI();
+}
+
+// Restore saved theme & sidebar state from localStorage
+(function restoreUserPreferences() {
+  try {
+    const savedTheme = localStorage.getItem('qv_theme_v621');
+    if (savedTheme === 'dark' || savedTheme === 'light') {
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    }
+    const savedSidebar = localStorage.getItem('qv_sidebar_collapsed');
+    if (savedSidebar === '1') {
+      document.body.classList.add('sidebar-collapsed');
+    }
+  } catch (e) {}
+})();
+
+// Keyboard shortcuts: Ctrl + B or '[' to toggle collapsible sidebar reader mode
+document.addEventListener('keydown', (e) => {
+  const tag = (e.target && e.target.tagName) ? e.target.tagName.toUpperCase() : '';
+  const isInput = tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT' || (e.target && e.target.isContentEditable);
+  if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'b') {
+    e.preventDefault();
+    toggleSidebar();
+  } else if (!isInput && !e.ctrlKey && !e.metaKey && !e.altKey && e.key === '[') {
+    e.preventDefault();
+    toggleSidebar();
+  }
+});
 
 document.getElementById('searchInput').addEventListener('input', (e) => renderSidebar(e.target.value));
 
 setLanguage(currentLang);
+updateSidebarToggleUI();
 
 // Deep-link URL query parameters (?report=QV-2026-014&tab=fulltext&scroll=z5)
 (function handleUrlParams() {
