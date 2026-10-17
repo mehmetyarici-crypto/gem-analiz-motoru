@@ -922,11 +922,6 @@ a.fn-backref:hover {
       <a id="downloadPdfBtn" class="btn btn-primary" href="pdf/QV-2026-001.pdf" download="QV-2026-001.pdf">📥 Raporu PDF İndir</a>
       <a id="fullBookPdfBtn" class="btn btn-gold" href="pdf/Quran_Vision_Kulliyat_v6.2.1.pdf" download="Quran_Vision_Kulliyat_v6.2.1.pdf">📚 Tüm Külliyat PDF (15 Rapor)</a>
       <button id="printBtn" class="btn" onclick="printCurrentReport()">🖨️ Yazdır</button>
-      <div class="font-size-controls" title="Okuma Puntosunu Küçült / Sıfırla / Büyüt">
-        <button type="button" class="font-btn" onclick="changeFontSize(-0.1)" title="Yazıyı Küçült (A−)" aria-label="Yazıyı Küçült">A−</button>
-        <button type="button" id="fontScaleLabel" class="font-btn font-scale-badge" onclick="resetFontSize()" title="Varsayılan Boyuta Sıfırla (%100)">%100</button>
-        <button type="button" class="font-btn" onclick="changeFontSize(0.1)" title="Yazıyı Büyüt (A+)" aria-label="Yazıyı Büyüt">A+</button>
-      </div>
       <button id="langToggleTopBtn" class="btn" onclick="setLanguage(currentLang === 'tr' ? 'en' : 'tr')">🌐 EN / TR</button>
       <button id="themeBtn" class="btn btn-gold" onclick="toggleTheme()">☀️ Açık Mod</button>
     </div>
@@ -935,13 +930,18 @@ a.fn-backref:hover {
   <section class="content-scroll">
     <div class="hero-card" id="heroCard"></div>
 
-    <div class="tabs">
+    <div class="tabs" style="align-items:center;">
       <button id="tabBtn-dashboard" class="tab-btn active" onclick="setTab('dashboard', this)">📊 1. Stratejik Kokpit & Aporia</button>
       <button id="tabBtn-sources" class="tab-btn" onclick="setTab('sources', this)">🏛️ 2. İSNAD 2 Klasik & Modern Kaynakça</button>
       <button id="tabBtn-fulltext" class="tab-btn" onclick="setTab('fulltext', this)">📖 3. Tam Akademik Metin (26 Adım)</button>
       <button id="tabBtn-pedagogy" class="tab-btn" onclick="setTab('pedagogy', this)">🎓 4. Pedagojik Ders & Zümre Kiti (TYMM)</button>
       <button id="tabBtn-synthesis" class="tab-btn" onclick="setTab('synthesis', this)">🕸️ 5. Külliyat Sentez & Müfessir Matrisi</button>
       <button id="tabBtn-feedback" class="tab-btn" onclick="setTab('feedback', this)">💬 6. Akademik Şerh & Katkı</button>
+      <div class="font-size-controls" style="margin-left:auto; border-color:var(--accent-gold);" title="Okuma Puntosunu Küçült / Sıfırla / Büyüt">
+        <button type="button" class="font-btn" onclick="changeFontSize(-0.1)" title="Yazıyı Küçült (A−)" aria-label="Yazıyı Küçült">🔍 A−</button>
+        <button type="button" id="fontScaleLabel" class="font-btn font-scale-badge font-scale-sync" onclick="resetFontSize()" title="Varsayılan Boyuta Sıfırla (%100)">%100</button>
+        <button type="button" class="font-btn" onclick="changeFontSize(0.1)" title="Yazıyı Büyüt (A+)" aria-label="Yazıyı Büyüt">A+ ➕</button>
+      </div>
     </div>
 
     <div id="tab-dashboard"></div>
@@ -960,6 +960,7 @@ const TOTAL_MODERN = 46;
 let currentIndex = 0;
 let currentTab = 'dashboard';
 let currentLang = localStorage.getItem('qv_lang_v621') || 'tr';
+let currentFontScale = 1.0;
 
 const EN_REPORTS_META = {
   "QV-2026-001": {
@@ -1377,17 +1378,24 @@ function selectReport(idx) {
   if (!renderedFullMd.includes('id="z5-peer-review-card"')) {
     renderedFullMd += formatZ5YamlJs(`rapor_id: "${r.case_id}"\nsure_ayet: "${getReportSurah(r)} ${r.verse}"\ntarih: "2026-10-15"`);
   }
+  const pctNow = Math.round(currentFontScale * 100);
+  const pctDisp = isEn ? `${pctNow}%` : `%${pctNow}`;
   const fulltextToolbar = `
-    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; padding:12px 16px; margin-bottom:18px; border-radius:10px; background:var(--bg-surface); border:1px solid var(--border);">
+    <div style="position:sticky; top:-28px; z-index:15; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; padding:12px 16px; margin-bottom:18px; border-radius:10px; background:var(--bg-surface); border:1.5px solid var(--accent-gold); box-shadow:var(--shadow);">
       <div style="font-size:13px; color:var(--text-secondary);">
-        📖 <strong>${r.case_id} • ${getReportSurah(r)} ${r.verse}</strong> — ${isEn ? '26-Step Full Academic Text & Z-5 Peer-Review Protocol' : '26 Adımlı Tam Akademik Metin & Z-5 Hakem Değerlendirme Formu'}
+        📖 <strong>${r.case_id} • ${getReportSurah(r)} ${r.verse}</strong> — ${isEn ? '26-Step Full Academic Text' : '26 Adımlı Tam Akademik Metin'}
       </div>
-      <div style="display:flex; gap:8px; flex-wrap:wrap;">
+      <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
+        <div class="font-size-controls" style="border-color:var(--accent-gold);" title="${isEn ? 'Decrease / Reset / Increase Reading Font Size' : 'Okuma Puntosunu Küçült / Sıfırla / Büyüt'}">
+          <button type="button" class="font-btn" onclick="changeFontSize(-0.1)" title="${isEn ? 'Decrease Font Size (A−)' : 'Yazıyı Küçült (A−)'}">🔍 A−</button>
+          <button type="button" class="font-btn font-scale-badge font-scale-sync" onclick="resetFontSize()" title="${isEn ? 'Reset to 100%' : 'Varsayılan Boyuta Sıfırla (%100)'}">${pctDisp}</button>
+          <button type="button" class="font-btn" onclick="changeFontSize(0.1)" title="${isEn ? 'Increase Font Size (A+)' : 'Yazıyı Büyüt (A+)'}">A+ ➕</button>
+        </div>
         <button class="btn" style="padding:6px 12px; font-size:12px;" onclick="document.getElementById('z5-peer-review-card')?.scrollIntoView({behavior:'smooth', block:'center'})">
-          🔽 ${isEn ? 'Jump to Z-5 Peer-Review Table' : 'Z-5 Hakem Değerlendirme Tablosuna İn'}
+          🔽 ${isEn ? 'Z-5 Peer-Review Table' : 'Z-5 Hakem Tablosu'}
         </button>
         <button class="btn btn-gold" style="padding:6px 12px; font-size:12px;" onclick="openFeedbackTab()">
-          ✍️ ${isEn ? 'Submit Peer Review / Commentary for This Report' : 'Bu Rapor İçin Hakem Şerhi / Değerlendirme Gönder'}
+          ✍️ ${isEn ? 'Submit Commentary' : 'Şerh Gönder'}
         </button>
       </div>
     </div>
@@ -2272,16 +2280,14 @@ function setTab(tabName, btn) {
   document.getElementById('tab-feedback').style.display = tabName === 'feedback' ? 'block' : 'none';
 }
 
-let currentFontScale = 1.0;
-
 function applyFontScale(scale) {
   currentFontScale = Math.min(1.6, Math.max(0.8, Math.round(scale * 100) / 100));
   document.documentElement.style.setProperty('--font-scale', String(currentFontScale));
-  const lbl = document.getElementById('fontScaleLabel');
-  if (lbl) {
-    const pct = Math.round(currentFontScale * 100);
-    lbl.textContent = currentLang === 'en' ? `${pct}%` : `%${pct}`;
-  }
+  const pct = Math.round(currentFontScale * 100);
+  const disp = currentLang === 'en' ? `${pct}%` : `%${pct}`;
+  document.querySelectorAll('.font-scale-sync').forEach(el => {
+    el.textContent = disp;
+  });
   try { localStorage.setItem('qv_font_scale_v621', String(currentFontScale)); } catch (e) {}
 }
 
