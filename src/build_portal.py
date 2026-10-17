@@ -1060,7 +1060,7 @@ def build_html(reports):
     total_modern = sum(len(r["modern_sources"]) for r in reports)
 
     html = f"""<!DOCTYPE html>
-<html lang="tr" data-theme="light">
+<html lang="tr" data-theme="dark">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -1150,51 +1150,41 @@ def build_html(reports):
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-:root {{
-  --primary: #264e41;
-  --primary-alt: #2d5a4c;
-  --accent: #eaf1ed;
-  --accent-alt: #f0f5f2;
-  --paper-bg: #fbfcfb;
-  --paper-surface: #f8faf9;
-}}
 :root[data-theme="dark"] {{
-  --primary: #4e8f77;
-  --accent: rgba(78, 143, 119, 0.15);
-  --bg-main: #0c1613;
-  --bg-sidebar: #101e1a;
-  --bg-card: #142621;
-  --bg-card-hover: #1a302a;
-  --bg-surface: #11201c;
-  --border: #233d35;
-  --text-primary: #e6efeb;
-  --text-secondary: #9db8ae;
-  --text-muted: #6c8c80;
-  --accent-gold: #c6a343;
-  --accent-gold-soft: rgba(198, 163, 67, 0.14);
-  --accent-emerald: #4e8f77;
-  --accent-emerald-soft: rgba(78, 143, 119, 0.15);
-  --danger: #dc4c4c;
+  --bg-main: #11221c;
+  --bg-sidebar: #0d1a15;
+  --bg-card: #182e26;
+  --bg-card-hover: #1f3a30;
+  --bg-surface: #142720;
+  --border: #25473b;
+  --text-main: #e2ece7;
+  --text-primary: #e2ece7;
+  --text-secondary: #92aba0;
+  --text-muted: #92aba0;
+  --accent-gold: #cfa93e;
+  --accent-gold-soft: rgba(207, 169, 62, 0.14);
+  --accent-emerald: #529e82;
+  --accent-emerald-soft: rgba(82, 158, 130, 0.15);
+  --danger: #ef4444;
   --shadow: 0 10px 28px rgba(0,0,0,0.40);
 }}
 :root[data-theme="light"] {{
-  --primary: #264e41;
-  --accent: #eaf1ed;
-  --bg-main: #fbfcfb;
-  --bg-sidebar: #f8faf9;
-  --bg-card: #fbfcfb;
-  --bg-card-hover: #eaf1ed;
-  --bg-surface: #f0f5f2;
-  --border: #d4e0da;
-  --text-primary: #172b24;
-  --text-secondary: #38544a;
-  --text-muted: #627d73;
-  --accent-gold: #87660d;
-  --accent-gold-soft: rgba(135, 102, 13, 0.10);
-  --accent-emerald: #264e41;
-  --accent-emerald-soft: #eaf1ed;
-  --danger: #b91c1c;
-  --shadow: 0 6px 20px rgba(23,43,36,0.06);
+  --bg-main: #f6f8f7;
+  --bg-sidebar: #ffffff;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f0f5f3;
+  --bg-surface: #eef3f1;
+  --border: #d5e2dc;
+  --text-main: #10241d;
+  --text-primary: #10241d;
+  --text-secondary: #37574c;
+  --text-muted: #648277;
+  --accent-gold: #9a740a;
+  --accent-gold-soft: rgba(154, 116, 10, 0.10);
+  --accent-emerald: #059669;
+  --accent-emerald-soft: rgba(5, 150, 105, 0.12);
+  --danger: #dc2626;
+  --shadow: 0 6px 20px rgba(16,36,29,0.07);
 }}
 * {{ box-sizing: border-box; margin: 0; padding: 0; }}
 body {{
@@ -1215,53 +1205,56 @@ body {{
   display: flex;
   flex-direction: column;
   height: 100vh;
-  transition: transform 0.3s ease, margin 0.3s ease, width 0.3s ease, min-width 0.3s ease, opacity 0.25s ease;
-  will-change: transform, width;
+  transition: margin-left 0.3s ease, width 0.3s ease, min-width 0.3s ease, opacity 0.25s ease;
   z-index: 20;
 }}
 body.sidebar-collapsed #sidebar,
 body.sidebar-collapsed .sidebar {{
-  transform: translateX(-100%);
+  margin-left: -320px !important;
   width: 0 !important;
   min-width: 0 !important;
-  margin-left: 0;
-  border-right: none;
-  opacity: 0;
-  pointer-events: none;
-  overflow: hidden;
+  max-width: 0 !important;
+  flex: 0 0 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  visibility: hidden !important;
+  overflow: hidden !important;
 }}
 .main {{
-  transition: transform 0.3s ease, margin 0.3s ease, width 0.3s ease;
+  transition: margin-left 0.3s ease, width 0.3s ease, padding 0.3s ease;
 }}
-body.sidebar-collapsed .content-scroll > * {{
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-  transition: max-width 0.3s ease, margin 0.3s ease;
+body.sidebar-collapsed .main {{
+  margin-left: 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  padding-left: 24px !important;
+  padding-right: 24px !important;
 }}
 #sidebar-toggle {{
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 7px 12px;
+  padding: 7px 13px;
   border-radius: 8px;
   border: 1px solid var(--border);
   background: var(--bg-surface);
   color: var(--text-primary);
   font-size: 12.5px;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
   transition: all 0.2s ease;
 }}
 #sidebar-toggle:hover {{
-  border-color: var(--accent-emerald);
-  background: var(--accent-emerald-soft);
-  color: var(--accent-emerald);
+  border-color: var(--accent-gold);
+  background: var(--accent-gold-soft);
+  color: var(--accent-gold);
 }}
 .brand {{
   padding: 22px 22px 18px;
-  border-bottom: 1px solid rgba(198, 163, 67, 0.26);
-  background: linear-gradient(145deg, rgba(38,78,65,0.14) 0%, rgba(198,163,67,0.12) 55%, rgba(12,22,19,0.22) 100%);
+  border-bottom: 1px solid rgba(207, 169, 62, 0.26);
+  background: linear-gradient(145deg, rgba(82,158,130,0.10) 0%, rgba(207,169,62,0.12) 55%, rgba(13,26,21,0.35) 100%);
   position: relative;
 }}
 .brand-top-row {{
@@ -1945,7 +1938,7 @@ a.fn-backref:hover {{
 <main class="main">
   <header class="topbar">
     <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
-      <button id="sidebar-toggle" onclick="toggleSidebar()" title="Menüyü Aç/Kapat (Ctrl + B veya [)" aria-label="Menüyü Aç/Kapat">☰ <span id="sidebarToggleLabel">Okuma Modu</span></button>
+      <button id="sidebar-toggle" type="button" onclick="toggleSidebar()" title="Menüyü Gizle / Göster (Ctrl + B veya [)" aria-label="Menüyü Gizle / Göster"><span id="sidebarToggleLabel">◀ Menüyü Gizle</span></button>
       <div class="stats-bar" id="statsBar">
         <div class="stat-pill">📚 Külliyat: <strong>{len(reports)} Rapor</strong></div>
         <div class="stat-pill">🕌 Klasik Tahkik (İSNAD 2): <strong>{total_classical} Nakil</strong></div>
@@ -3318,23 +3311,20 @@ function updateSidebarToggleUI() {{
   const btn = document.getElementById('sidebar-toggle');
   if (lbl) {{
     lbl.textContent = isEn
-      ? (isCollapsed ? 'Show Menu' : 'Reader Mode')
-      : (isCollapsed ? 'Menüyü Aç' : 'Okuma Modu');
+      ? (isCollapsed ? '▶ Show Menu' : '◀ Hide Menu')
+      : (isCollapsed ? '▶ Menüyü Göster' : '◀ Menüyü Gizle');
   }}
   if (btn) {{
     btn.setAttribute('aria-expanded', String(!isCollapsed));
     btn.title = isEn
-      ? 'Toggle Sidebar / Reader Mode (Ctrl + B or [)'
-      : 'Menüyü Aç / Kapat — Okuma Modu (Ctrl + B veya [)';
+      ? 'Hide / Show Sidebar Menu (Ctrl + B or [)'
+      : 'Menüyü Gizle / Göster (Ctrl + B veya [)';
   }}
 }}
 
-function toggleSidebar(forceState) {{
-  const shouldCollapse = typeof forceState === 'boolean'
-    ? forceState
-    : !document.body.classList.contains('sidebar-collapsed');
-  document.body.classList.toggle('sidebar-collapsed', shouldCollapse);
-  try {{ localStorage.setItem('qv_sidebar_collapsed', shouldCollapse ? '1' : '0'); }} catch (e) {{}}
+function toggleSidebar() {{
+  const isCollapsed = document.body.classList.toggle("sidebar-collapsed");
+  try {{ localStorage.setItem('qv_sidebar_collapsed', isCollapsed ? '1' : '0'); }} catch (e) {{}}
   updateSidebarToggleUI();
 }}
 
