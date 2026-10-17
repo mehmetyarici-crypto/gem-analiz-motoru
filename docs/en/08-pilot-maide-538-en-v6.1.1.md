@@ -184,8 +184,9 @@ peer_review:
 - **Strategic Foresight Window:** `2026–2036 (10-Year Policy & Institutional Horizon)`
 - **Verified Classical Knowledge Base (*ISNAD 2nd Edition*):** Zemahşerî, Mahmûd b. Ömer (*el-Keşşâf 'an Hakâ'ikı Gavâmizi't-Tenzîl*); İbn Fâris, Ahmed b. Fâris (*Mu'cemü Makâyîsi'l-Lüğa*); İbn Manzûr, Muhammed b. Mükerrem (*Lisânü'l-Arab*); Cessâs, Ahmed b. Ali er-Râzî (*Ahkâmü'l-Kur'ân*); Şâtıbî, İbrâhîm b. Mûsâ (*el-Muvâfakât*).
 - **Verified Empirical Datasets (*APA 7 / DOI*):** Transparency International (2024); World Bank Group (2024).
-- **Principal Author & Project Founder:** **Mehmet Yarıcı** (`ORCID: 0009-0003-0356-8582` — Ministry of National Education [MEB], Rize, Türkiye).
+- **Principal Author & Project Founder:** **Mehmet Yarıcı** (`ORCID: 0009-0003-0356-8582` — Uludağ University Faculty of Theology (1989) • Republic of Türkiye Ministry of National Education [MEB], Bahçelievler Dede Korkut Anatolian High School, Istanbul, Türkiye).
 - **External Peer Reviewer (V11):** **Mehmet Emin Koç** (`ORCID: 0000-0002-1025-5643` — Azerbaijan National Academy of Sciences [ANAS / AMEA], Institute of Philosophy and Sociology).
+- **Permanent CERN / Zenodo DOI:** `10.5281/zenodo.23391192` (Concept DOI) | `10.5281/zenodo.23410818` (v6.2.1 Version DOI)
 
 ---
 
@@ -452,6 +453,25 @@ peer_review:
   - **`K2` (Evidentiary Guaranteeism & Anti-Corruption Symmetry — `th-01` & `2:188`):** Enforcing the `0% shubhah` evidentiary standard while prosecuting large-scale public embezzlement (*ghulul*), bribery (`2:188`), and corporate fraud with full asset forfeiture.
   - **`K3` (Al-Ma'idah `5:39` Restorative Justice & Vocational Rehabilitation — `th-03`):** Replacing stigmatizing prison cycles for first-time non-violent offenders with restitution, skill training, and criminal-record expungement upon reform (`wa-aslaha`).
 - **Decision Tree Logic:** `IF Subsistence_Necessity OR Evidentiary_Shubhah_Present (th-01/th-02) THEN Suspend_Maximal_Penalty & Activate_Social_Support (K1)` → `ELSE IF White_Collar_Embezzlement_or_Predatory_Theft THEN Enforce_Full_Asset_Recovery & Deterrent_Sanction (K2)` → `IF Offender_Repents_and_Makes_Restitution (5:39) THEN Activate_Vocational_Reintegration (K3)`.
+```
+[Property Offense / Allegation Reported] ---> [Step 1: Is Subsistence Necessity or Doubt (Shubhah) Present?]
+                                                              |
+                                +-----------------------------+-----------------------------+
+                                |                                                           |
+                              [YES]                                                       [NO]
+                                |                                          (Strict Hirz, Nisab & Intent Verified)
+          [K1: Statutory Penalty Suspended — Social Aid]                                    |
+            (Caliph 'Umar's 'Am al-Ramadah Precedent)                      [K2: Graduated Adjudication & Restitution]
+                                                                                            |
+                                                                            [Repentance, Reform & Restitution (5:39)?]
+                                                                                            |
+                                                                            +---------------+---------------+
+                                                                            |                               |
+                                                                          [YES]                           [NO]
+                                                                            |                               |
+                                                               [K3: Vocational Reintegration]  [Deterrent Penal Sanction]
+                                                                     (Al-Ma'idah 5:39)             (Al-Ma'idah 5:38)
+```
 
 ---
 

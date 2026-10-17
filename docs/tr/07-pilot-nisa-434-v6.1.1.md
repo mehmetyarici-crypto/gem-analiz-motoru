@@ -191,7 +191,7 @@ peer_review:
 - **Konu Başlığı:** Aile İçi Yönetişim, Kavamiyyet Sorumluluğu ve Nüşûz Krizinde Tedricî Tedbirler Doktrini
 - **Proje Kurucusu & Başyazar:** Mehmet Yarıcı (Uludağ Üniversitesi İlahiyat Fakültesi, 1989 • T.C. MEB, İstanbul Bahçelievler Dede Korkut Anadolu Lisesi — ORCID: `0009-0003-0356-8582`)
 - **Akademik Danışman & Dış Hakem:** Mehmet Emin Koç (Azerbaycan Milli İlimler Akademisi Felsefe ve Sosyoloji Enstitüsü — ORCID: `0000-0002-1025-5643`)
-- **Kalıcı CERN / Zenodo DOI:** `10.5281/zenodo.23391192` (Kavram DOI) | `10.5281/zenodo.23391193` (v6.2.1 Sürüm DOI)
+- **Kalıcı CERN / Zenodo DOI:** `10.5281/zenodo.23391192` (Kavram DOI) | `10.5281/zenodo.23410818` (v6.2.1 Sürüm DOI)
 - **Tarih:** 2026-10-14
 - **Sürüm:** v6.2.1 (Akademik Doğrulama Standartlı)
 - **Katman:** 3 (26 Adımlı Tam Analiz Motoru + Z-1..Z-5 Zorunlu Ekler)
@@ -413,9 +413,8 @@ Nisâ Sûresi 4:32–35 pasajında önce kadınların ve erkeklerin kendi kazan�
 - **Erken Uyarı Sinyalleri (N1–N4):** Sözlü hakaret ve iletişimsizlik süresi $> 3$ hafta olduğunda K2 devreye girer.
 - **Bayes Güncelleme Alanı (`Senaryo S1 — İstişarî Kıvâm ve Hakemli Sulh`):**
   - **Önsel Olasılık (Prior $P(S_1)$):** `0.36` (%36.0 — UN Women & Adalet Bakanlığı 2024 Aile Mahkemeleri Veritabanı başlangıç olasılığı).
-  - **Koşullu Olabilirlik $P(E|S_1) = 0.82$ & Yanlış Pozitif $P(E|
-eg S_1) = 0.19$:** Sıfır fiziksel şiddet (`gayr-ı müberrih`), kademeli iletişim etiği ve Nisâ `4:35` çift taraflı hakem (`hakemân`) mekanizması devreye alındığında aile bütünlüğünün korunma olasılığı.
-  - **Sonsal Olasılık (Posterior $P(S_1|E)$):** $P(S_1|E) = \frac{0.36 	imes 0.82}{(0.36 	imes 0.82) + (0.64 	imes 0.19)} = 0.708 \approx 0.71$ (%70.8 — **+34.8 puanlık** uzlaşı artışı).
+  - **Koşullu Olabilirlik $P(E|S_1) = 0.82$ & Yanlış Pozitif $P(E|\neg S_1) = 0.19$:** Sıfır fiziksel şiddet (`gayr-ı müberrih`), kademeli iletişim etiği ve Nisâ `4:35` çift taraflı hakem (`hakemân`) mekanizması devreye alındığında aile bütünlüğünün korunma olasılığı.
+  - **Sonsal Olasılık (Posterior $P(S_1|E)$):** $P(S_1|E) = \frac{0.36 \times 0.82}{(0.36 \times 0.82) + (0.64 \times 0.19)} = 0.708 \approx 0.71$ (%70.8 — **+34.8 puanlık** uzlaşı artışı).
   - *Kapsam Notu:* Bayes güncellemesi YALNIZCA ölçülebilir ampirik göstergelerde çalışır; normatif inançlara sayısal olasılık verilemez (Bölüm 9 yasağı).
 
 ---
@@ -431,6 +430,27 @@ eg S_1) = 0.19$:** Sıfır fiziksel şiddet (`gayr-ı müberrih`), kademeli ilet
 - **Karar Kolu 3 (K3) — Yasal Koruma, Uzaklaştırma ve Şiddet Önleme Hattı:**
   - **Aktör:** Adalet Bakanlığı, Emniyet Genel Müdürlüğü, ŞÖNİM.
   - **Eşik:** [TAHMİNÎ EŞİK] Koruma kararlarında sıfır can kaybı, ihlal oranı $\le \%3$.
+
+- **Karar Ağacı Mantığı:**
+```
+[Aile İçi Kriz / Geçimsizlik Başladı] ---> [Fiziksel veya Psikolojik Şiddet / Zulüm Riski Var mı?]
+                                                               |
+                                 +-----------------------------+-----------------------------+
+                                 |                                                           |
+                              [EVET]                                                      [HAYIR]
+                                 |                                                           |
+            [K3: Derhal Yasal Koruma ve Şiddet Önleme]                     [K1: 1. Adım: Nasihat ve Aile Danışmanlığı]
+               (Sedd-i Zerâi & Sıfır Şiddet İlkesi)                        (Teğâbün / Düşünme ve Soğuma Süresi)
+                                                                                             |
+                                                                                 [Uzlaşma Sağlandı mı?]
+                                                                                             |
+                                                                             +---------------+---------------+
+                                                                             |                               |
+                                                                          [EVET]                          [HAYIR]
+                                                                             |                               |
+                                                                  [Maruf ile Aile İhyası]     [K2: İki Taraflı Hakem Kurulu]
+                                                                                                (Nisâ 4:35 Islah / İhsanla Ayrılık)
+```
 
 ---
 

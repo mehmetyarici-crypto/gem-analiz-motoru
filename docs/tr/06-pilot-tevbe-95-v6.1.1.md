@@ -191,7 +191,7 @@ peer_review:
 - **Konu Başlığı:** Ahit İhlali, Caydırıcılık ve Uluslararası Hukukta Meşru Savunma Mimarisi
 - **Proje Kurucusu & Başyazar:** Mehmet Yarıcı (Uludağ Üniversitesi İlahiyat Fakültesi, 1989 • T.C. MEB, İstanbul Bahçelievler Dede Korkut Anadolu Lisesi — ORCID: `0009-0003-0356-8582`)
 - **Akademik Danışman & Dış Hakem:** Mehmet Emin Koç (Azerbaycan Milli İlimler Akademisi Felsefe ve Sosyoloji Enstitüsü — ORCID: `0000-0002-1025-5643`)
-- **Kalıcı CERN / Zenodo DOI:** `10.5281/zenodo.23391192` (Kavram DOI) | `10.5281/zenodo.23391193` (v6.2.1 Sürüm DOI)
+- **Kalıcı CERN / Zenodo DOI:** `10.5281/zenodo.23391192` (Kavram DOI) | `10.5281/zenodo.23410818` (v6.2.1 Sürüm DOI)
 - **Tarih:** 2026-10-15
 - **Sürüm:** v6.2.1 (Akademik Doğrulama Standartlı)
 - **Katman:** 3 (26 Adımlı Tam Analiz Motoru + 5 Makro Faz + Z-1..Z-5 Zorunlu Ekler)
@@ -420,9 +420,8 @@ Tevbe Sûresi 9:1–15 pasajı bir bütün olarak okunduğunda, 5. âyetin hemen
   - `EU-04`: Propaganda dilinin düşmanlaştırıcı hale gelmesi.
 - **Bayes Güncelleme Alanı (`Senaryo S1 — Caydırıcılık Destekli Ahit Barışı`):**
   - **Önsel Olasılık (Prior $P(S_1)$):** `0.42` (%42.0 — UCDP / PRIO 2024 Çatışma Nüksü Veritabanı başlangıç olasılığı).
-  - **Koşullu Olabilirlik $P(E|S_1) = 0.85$ & Yanlış Pozitif $P(E|
-eg S_1) = 0.18$:** 120 günlük diplomatik mühlet (`th-01`), orantılı sınır tahkimatı (`marsad`) ve sivil eman koridoru (`9:6`) birlikte işletildiğinde ateşkes istikrarının korunma olasılığı.
-  - **Sonsal Olasılık (Posterior $P(S_1|E)$):** $P(S_1|E) = \frac{0.42 	imes 0.85}{(0.42 	imes 0.85) + (0.58 	imes 0.18)} = 0.774 \approx 0.77$ (%77.4 — **+35.4 puanlık** istikrar artışı).
+  - **Koşullu Olabilirlik $P(E|S_1) = 0.85$ & Yanlış Pozitif $P(E|\neg S_1) = 0.18$:** 120 günlük diplomatik mühlet (`th-01`), orantılı sınır tahkimatı (`marsad`) ve sivil eman koridoru (`9:6`) birlikte işletildiğinde ateşkes istikrarının korunma olasılığı.
+  - **Sonsal Olasılık (Posterior $P(S_1|E)$):** $P(S_1|E) = \frac{0.42 \times 0.85}{(0.42 \times 0.85) + (0.58 \times 0.18)} = 0.774 \approx 0.77$ (%77.4 — **+35.4 puanlık** istikrar artışı).
   - *Kapsam Notu:* Bayes güncellemesi YALNIZCA ölçülebilir güvenlik göstergelerinde çalışır; teolojik ve ahlaki normlara sayısal olasılık verilemez (Bölüm 9 yasağı).
 
 ---
@@ -444,6 +443,27 @@ eg S_1) = 0.18$:** 120 günlük diplomatik mühlet (`th-01`), orantılı sınır
   - **Araç:** Güvenli geçiş koridoru ve sığınma hakkı (Tevbe 9:6).
   - **CLD Kaldıraç Noktası:** Düşmanlığın kalıcı tasfiyesi.
   - **Eşik:** [TAHMİNÎ EŞİK] Eman verilenlerin güvenli tahliyesi $\ge \%99$, nüks $\le \%5$.
+
+- **Karar Ağacı Mantığı:**
+```
+[Uluslararası Ahit / Antlaşma Süreci] ---> [1. Adım: Karşı Taraf Ahde Vefa Gösteriyor mu? (9:4)]
+                                                               |
+                                 +-----------------------------+-----------------------------+
+                                 |                                                           |
+                              [EVET]                                                      [HAYIR]
+                                 |                                               (Sistematik İhlal: Nakz-ı Ahit)
+                  [Tam Ahde Vefa ve Barışın İdamesi]                                         |
+                  (Süre Sonuna Kadar Dokunulmazlık)                          [K1: 120 Günlük Diplomatik Ültimatom]
+                                                                                             |
+                                                                             [Saldırganlıktan Rücu / Eman Talebi?]
+                                                                                             |
+                                                                             +---------------+---------------+
+                                                                             |                               |
+                                                                          [EVET]                          [HAYIR]
+                                                                             |                               |
+                                                                [K3: Eman ve Güvenli Tahliye]   [K2: Orantılı Meşru Müdafaa]
+                                                                        (Tevbe 9:6)                (Sivil Dokunulmazlığı)
+```
 
 ---
 

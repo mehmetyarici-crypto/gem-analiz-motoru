@@ -202,8 +202,9 @@ peer_review:
 - **Strategic Foresight Window:** `2026–2036 (10-Year Policy & Institutional Horizon)`
 - **Verified Classical Knowledge Base (*ISNAD 2nd Edition*):** Zemahşerî, Cârullah Ebü'l-Kâsım Mahmûd b. Ömer (*el-Keşşâf 'an Hakâ'ikı Gavâmizi't-Tenzîl*); Râgıb el-İsfahânî, Ebü'l-Kâsım Hüseyn b. Muhammed (*el-Müfredât fî Garîbi'l-Kur'ân*); İbn Fâris, Ebü'l-Hüseyn Ahmed b. Fâris b. Zekeriyyâ (*Mu'cemü Makâyîsi'l-Lüğa*); İbn Manzûr, Muhammed b. Mükerrem (*Lisânü'l-Arab*); Taberî, Ebû Ca'fer Muhammed b. Cerîr (*Câmi'u'l-Beyân 'an Te'vîli Âyi'l-Kur'ân*).
 - **Verified Empirical Datasets (*APA 7 / DOI*):** World Justice Project (WJP) (2025); Organisation for Economic Co-operation and Development (OECD) (2025); United Nations Development Programme (UNDP) (2025); Türkiye İstatistik Kurumu (TÜİK) (2025).
-- **Principal Author & Project Founder:** **Mehmet Yarıcı** (`ORCID: 0009-0003-0356-8582` — Ministry of National Education [MEB], Rize, Türkiye).
+- **Principal Author & Project Founder:** **Mehmet Yarıcı** (`ORCID: 0009-0003-0356-8582` — Uludağ University Faculty of Theology (1989) • Republic of Türkiye Ministry of National Education [MEB], Bahçelievler Dede Korkut Anatolian High School, Istanbul, Türkiye).
 - **External Peer Reviewer (V11):** **Mehmet Emin Koç** (`ORCID: 0000-0002-1025-5643` — Azerbaijan National Academy of Sciences [ANAS / AMEA], Institute of Philosophy and Sociology).
+- **Permanent CERN / Zenodo DOI:** `10.5281/zenodo.23391192` (Concept DOI) | `10.5281/zenodo.23410818` (v6.2.1 Version DOI)
 
 ---
 
@@ -474,6 +475,17 @@ peer_review:
   - **`K2` (`Al-Ihsan` Public Service Excellence & Restorative Welfare Standard — `th-02`):** Embedding `ihsan` (going beyond minimal bureaucratic compliance to dignified, compassionate care) in healthcare, education, and restorative justice.
   - **`K3` (`Ita'i Dhi'l-Qurba` Family Care & Community Solidarity Ecosystem):** Providing tax incentives, caregiver support, and community `waqf` networks that enable families to care for elderly parents, relatives, and neighbors without institutional abandonment.
 - **Decision Tree Logic:** `IF Public_Authority_or_Judicial_Action THEN Enforce_Strict_Symmetrical_'Adl & Block_Baghy (K1)` → `Supplement_Legal_Baseline_with_Compassionate_Ihsan_Service (K2)` → `Strengthen_Private_Family_and_Kinship_Care_Networks (K3)`.
+```
+[Public Policy or Institutional Action] ---> [Step 1: Does It Satisfy Strict Justice (Al-'Adl)?]
+                                                              |
+                                +-----------------------------+-----------------------------+
+                                |                                                           |
+                               [NO]                                                       [YES]
+                                |                                                           |
+           [Oppression / Baghy — Strictly Prohibited!]                      [Step 2: Does It Add Moral Excellence (Ihsan)?]
+                     (An-Nahl 16:90 Breach)                                                 |
+                                                                            [Justice ('Adl) + Excellence (Ihsan) = Flourishing]
+```
 
 ---
 

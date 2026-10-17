@@ -206,8 +206,9 @@ peer_review:
 - **Strategic Foresight Window:** `2026–2036 (10-Year Policy & Institutional Horizon)`
 - **Verified Classical Knowledge Base (*ISNAD 2nd Edition*):** İbn Fâris, Ebü'l-Hüseyn Ahmed b. Fâris (*Mu'cemü Makâyîsi'l-Lüğa*); Râgıb el-İsfahânî, Ebü'l-Kâsım Hüseyn b. Muhammed (*el-Müfredât fî Garîbi'l-Kur'ân*); Ebû Ca'fer Muhammed b. Cerîr et-Taberî (*Câmi'u'l-Beyân 'an Te'vîli Âyi'l-Kur'ân*); Fahreddîn er-Râzî, Muhammed b. Ömer (*Mefâtîhu'l-Gayb (et-Tefsîru'l-Kebîr)*); Ebû Abdillâh Muhammed b. Ahmed el-Kurtubî (*el-Câmi' li-Ahkâmi'l-Kur'ân*); Muhammed et-Tâhir İbn Âşûr (*et-Tahrîr ve't-Tenvîr*).
 - **Verified Empirical Datasets (*APA 7 / DOI*):** United Nations Office on Drugs and Crime (UNODC) (2025); World Health Organization (WHO) (2025); Institute for Economics & Peace (IEP) (2025); Uppsala Conflict Data Program (UCDP) (2025).
-- **Principal Author & Project Founder:** **Mehmet Yarıcı** (`ORCID: 0009-0003-0356-8582` — Ministry of National Education [MEB], Rize, Türkiye).
+- **Principal Author & Project Founder:** **Mehmet Yarıcı** (`ORCID: 0009-0003-0356-8582` — Uludağ University Faculty of Theology (1989) • Republic of Türkiye Ministry of National Education [MEB], Bahçelievler Dede Korkut Anatolian High School, Istanbul, Türkiye).
 - **External Peer Reviewer (V11):** **Mehmet Emin Koç** (`ORCID: 0000-0002-1025-5643` — Azerbaijan National Academy of Sciences [ANAS / AMEA], Institute of Philosophy and Sociology).
+- **Permanent CERN / Zenodo DOI:** `10.5281/zenodo.23391192` (Concept DOI) | `10.5281/zenodo.23410818` (v6.2.1 Version DOI)
 
 ---
 
@@ -483,6 +484,17 @@ peer_review:
   - **`K2` (`Wa-Man Ahyaha` Universal Emergency Medicine, Bioethics & Organ/Blood Donation Network — `th-02 / th-03`):** Expanding universal health coverage (`WHO UHC >= 85`), rapid emergency trauma care (`>= 92%` golden-hour reach), and ethical organ/stem-cell donation validated by contemporary *fiqh* academies under `man ahyaha`.
   - **`K3` (Structural & Occupational `Ihya'` Audit — Seismic & Workplace Safety):** Treating negligent building-code violations and preventable workplace fatalities (`ILO`) as grave breaches of `Hifz al-Nafs` subject to strict criminal and fiduciary liability.
 - **Decision Tree Logic:** `IF Threat_to_Human_Life_Detected (Violence, Medical_Emergency, or Structural_Hazard) THEN Mobilize_Immediate_Ihya_Protocol (K1/K2/K3)` → `Audit_Building_and_Workplace_Safety_Zero_Tolerance (K3)` → `Expand_Universal_Life_Saving_Healthcare_and_Rescue (K2)`.
+```
+[Public Policy / Security / Bioethics Action] ---> [Step 1: Does It Endanger Innocent Human Life?]
+                                                              |
+                                +-----------------------------+-----------------------------+
+                                |                                                           |
+                              [YES]                                                       [NO]
+                                |                                                           |
+         [Absolute Prohibition — Crime Against Humanity]                    [Step 2: Does It Actively Save & Sustain Life (Ihya')?]
+                     (Al-Ma'idah 5:32 Breach)                                               |
+                                                                            [Ihya' = Virtue of Saving All Humankind]
+```
 
 ---
 

@@ -184,8 +184,9 @@ peer_review:
 - **Strategic Foresight Window:** `2026–2036 (10-Year Policy & Institutional Horizon)`
 - **Verified Classical Knowledge Base (*ISNAD 2nd Edition*):** Zemahşerî, Mahmûd b. Ömer (*el-Keşşâf 'an Hakâ'ikı Gavâmizi't-Tenzîl*); Râgıb el-İsfahânî, Hüseyin b. Muhammed (*el-Müfredât fî Garîbi'l-Kur'ân*); İbn Fâris, Ahmed b. Fâris (*Mu'cemü Makâyîsi'l-Lüğa*); İbn Manzûr, Muhammed b. Mükerrem (*Lisânü'l-Arab*); Râzî, Fahreddîn (*Mefâtîhu'l-Gayb (et-Tefsîrü'l-Kebîr)*).
 - **Verified Empirical Datasets (*APA 7 / DOI*):** Organization for Economic Co-operation and Development (OECD) (2024); World Bank Group (2024).
-- **Principal Author & Project Founder:** **Mehmet Yarıcı** (`ORCID: 0009-0003-0356-8582` — Ministry of National Education [MEB], Rize, Türkiye).
+- **Principal Author & Project Founder:** **Mehmet Yarıcı** (`ORCID: 0009-0003-0356-8582` — Uludağ University Faculty of Theology (1989) • Republic of Türkiye Ministry of National Education [MEB], Bahçelievler Dede Korkut Anatolian High School, Istanbul, Türkiye).
 - **External Peer Reviewer (V11):** **Mehmet Emin Koç** (`ORCID: 0000-0002-1025-5643` — Azerbaijan National Academy of Sciences [ANAS / AMEA], Institute of Philosophy and Sociology).
+- **Permanent CERN / Zenodo DOI:** `10.5281/zenodo.23391192` (Concept DOI) | `10.5281/zenodo.23410818` (v6.2.1 Version DOI)
 
 ---
 
@@ -451,6 +452,23 @@ peer_review:
   - **`K2` (Binding Multi-Stakeholder Consultation Protocol — `wa-shawirhum fi'l-amr`, `th-01`):** Requiring documented technical and public consultation (`>= 75%` stakeholder inclusion) before enacting major regulatory, educational, or fiscal policies.
   - **`K3` (Time-Bounded Executive Resolution & Transparency — `fa-idha 'azamta`, `th-03`):** Setting clear deliberation deadlines followed by decisive, accountable implementation and public rationale disclosure.
 - **Decision Tree Logic:** `IF Crisis_or_Major_Policy_Decision THEN Ensure_Psychological_Safety (K1) & Convene_Diverse_Shura_Council (K2)` → `IF Deliberation_Complete THEN Issue_Reasoned_Executive_Resolution ('Azm / K3)` → `Monitor_Talent_Retention_and_Trust (th-02 / th-03)`.
+```
+[Strategic Crisis or Major Policy Decision] ---> [Step 1: Are Gentle Conduct (Lin) & Consultation (Shura) Active?]
+                                                              |
+                                +-----------------------------+-----------------------------+
+                                |                                                           |
+                               [NO]                                                       [YES]
+               (Autocratic Coercion & Harshness: Fazz)                                      |
+                                |                                           [K1 & K2: Multi-Stakeholder Shura Convened]
+         [Social Fragmentation Risk — Return to Shura]                                      |
+                    (Ali 'Imran 3:159 Warning)                              [Step 2: Is Deliberation Window Complete?]
+                                                                                            |
+                                                                            +---------------+---------------+
+                                                                            |                               |
+                                                                          [YES]                           [NO]
+                                                                            |                               |
+                                                               [K3: Decisive Execution ('Azm)] [Gather Additional Evidence]
+```
 
 ---
 

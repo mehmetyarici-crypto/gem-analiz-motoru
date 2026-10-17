@@ -464,7 +464,7 @@ def build_single_report_print_html(r: dict, idx: int, fn_prefix: str = "") -> st
     <article class="pdf-report">
       <div class="pdf-header-banner">
         <div class="pdf-meta-line">
-          <span>KUR’ÂN VİZYONU ENSTİTÜSÜ v6.2.1 • DOI: <a href="https://doi.org/10.5281/zenodo.23391192" target="_blank" rel="noopener" class="doi-link">10.5281/zenodo.23391192</a> • ORCID: <a href="https://orcid.org/0009-0003-0356-8582" target="_blank" rel="noopener" class="orcid-link">0009-0003-0356-8582</a></span>
+          <span>KUR’ÂN VİZYONU ENSTİTÜSÜ v6.2.1 • DOI: <a href="https://doi.org/10.5281/zenodo.23410818" target="_blank" rel="noopener" class="doi-link">10.5281/zenodo.23410818</a> • ORCID: <a href="https://orcid.org/0009-0003-0356-8582" target="_blank" rel="noopener" class="orcid-link">0009-0003-0356-8582</a></span>
           <span>VAKA KODU: <strong>{html_lib.escape(r['case_id'])}</strong></span>
         </div>
         <h1 class="pdf-main-title">{idx}. {html_lib.escape(r['surah'])} Sûresi {html_lib.escape(r['verse'])} — {html_lib.escape(r['topic'])}</h1>
@@ -812,7 +812,7 @@ def build_single_report_print_html_en(r: dict, idx: int, fn_prefix: str = "") ->
     <article class="pdf-report">
       <div class="pdf-header-banner">
         <div class="pdf-meta-line">
-          <span>QURAN VISION INSTITUTE v6.2.1 • DOI: <a href="https://doi.org/10.5281/zenodo.23391192" target="_blank" rel="noopener" class="doi-link">10.5281/zenodo.23391192</a> • ORCID: <a href="https://orcid.org/0009-0003-0356-8582" target="_blank" rel="noopener" class="orcid-link">0009-0003-0356-8582</a></span>
+          <span>QURAN VISION INSTITUTE v6.2.1 • DOI: <a href="https://doi.org/10.5281/zenodo.23410818" target="_blank" rel="noopener" class="doi-link">10.5281/zenodo.23410818</a> • ORCID: <a href="https://orcid.org/0009-0003-0356-8582" target="_blank" rel="noopener" class="orcid-link">0009-0003-0356-8582</a></span>
           <span>CASE ID: <strong>{html_lib.escape(r['case_id'])}</strong></span>
         </div>
         <h1 class="pdf-main-title">{idx}. Surah {html_lib.escape(r.get('surah_en', r['surah']))} {html_lib.escape(r['verse'])} — {html_lib.escape(r.get('topic_en', r['topic']))}</h1>
@@ -855,7 +855,7 @@ def stamp_pdf_metadata(pdf_path: Path, title: str, subject: str):
     author_str = "Mehmet Yarıcı (ORCID: 0009-0003-0356-8582)"
     keywords_str = (
         "Quran Vision Corpus v6.2.1; Strategic Tafsir; Maqasid al-Shariah; ISNAD 2; "
-        "Bayesian Policy Simulation; DOI:10.5281/zenodo.23391192; "
+        "Bayesian Policy Simulation; DOI:10.5281/zenodo.23410818; Concept-DOI:10.5281/zenodo.23391192; "
         "Principal Author: Mehmet Yarıcı (ORCID: 0009-0003-0356-8582); "
         "Academic Advisor & Peer-Reviewer: Mehmet Emin Koç (ORCID: 0000-0002-1025-5643)"
     )
@@ -903,7 +903,7 @@ def generate_all_pdfs(reports: list):
         out_pdf = PDF_DIR / r["pdf_filename"]
         tr_title = f"{r['case_id']} — {r['surah']} {r['verse']}: {r['topic']} | Kur'an Vizyonu Külliyatı v6.2.1"
         tr_subj = (
-            f"Kur'an Vizyonu Külliyatı v6.2.1 ({r['case_id']}) • DOI: 10.5281/zenodo.23391192 • "
+            f"Kur'an Vizyonu Külliyatı v6.2.1 ({r['case_id']}) • DOI: 10.5281/zenodo.23410818 (Concept: 10.5281/zenodo.23391192) • "
             "Proje Kurucusu & Başyazar (Eser Sahibi): Mehmet Yarıcı (ORCID: 0009-0003-0356-8582) • "
             "Akademik Danışman & Dış Hakem: Mehmet Emin Koç (ORCID: 0000-0002-1025-5643)"
         )
@@ -932,7 +932,7 @@ def generate_all_pdfs(reports: list):
         out_pdf_en = PDF_DIR / r["pdf_filename_en"]
         en_title = f"{r['case_id']} — Surah {r.get('surah_en', r['surah'])} {r['verse']}: {r.get('topic_en', r['topic'])} | Quran Vision Corpus v6.2.1"
         en_subj = (
-            f"Quran Vision Corpus v6.2.1 ({r['case_id']}) • DOI: 10.5281/zenodo.23391192 • "
+            f"Quran Vision Corpus v6.2.1 ({r['case_id']}) • DOI: 10.5281/zenodo.23410818 (Concept: 10.5281/zenodo.23391192) • "
             "Founder & Principal Author (Corpus Owner): Mehmet Yarıcı (ORCID: 0009-0003-0356-8582) • "
             "Academic Advisor & External Peer-Reviewer: Mehmet Emin Koç (ORCID: 0000-0002-1025-5643)"
         )
@@ -958,7 +958,7 @@ def generate_all_pdfs(reports: list):
     cover_html = f"""
     <div style="page-break-after: always; padding: 48px 28px; text-align: center; border: 3px double #0f5132; border-radius: 12px; margin-top: 24px;">
       <div style="font-size: 11.5pt; font-weight: 700; color: #856404; letter-spacing: 1.4px; margin-bottom: 14px;">
-        QURAN VISION (v6.2.1) • DOI: <a href="https://doi.org/10.5281/zenodo.23391192" target="_blank" rel="noopener" class="doi-link">10.5281/zenodo.23391192</a> • İSNAD 2 + VERİ BİLİMİ AKADEMİK STANDARDI
+        QURAN VISION (v6.2.1) • DOI: <a href="https://doi.org/10.5281/zenodo.23410818" target="_blank" rel="noopener" class="doi-link">10.5281/zenodo.23410818</a> • İSNAD 2 + VERİ BİLİMİ AKADEMİK STANDARDI
       </div>
       <h1 style="font-size: 24pt; color: #091310; font-weight: 800; line-height: 1.25; margin-bottom: 14px;">
         Kur'an Vizyonu (Quran Vision)<br>Stratejik Tefsir, Makâsıd ve Medeniyet Öngörü Külliyatı
@@ -977,7 +977,7 @@ def generate_all_pdfs(reports: list):
         {''.join(f'<div style="margin-bottom:3px;"><b>{i}. {r["case_id"]}</b> — {r["surah"]} {r["verse"]}: {r["topic"]}</div>' for i, r in enumerate(reports, 1))}
       </div>
       <div style="font-size: 8.5pt; color: #6b7280; margin-top: 18px;">
-        Linter Doğrulaması: 0 BLOCK (Kesici Hata) &nbsp;|&nbsp; Kriptografik Bütünlük: Harici .sha256 Manifest &nbsp;|&nbsp; CERN/Zenodo DOI: <a href="https://doi.org/10.5281/zenodo.23391192" target="_blank" rel="noopener" class="doi-link">10.5281/zenodo.23391192</a>
+        Linter Doğrulaması: 0 BLOCK (Kesici Hata) &nbsp;|&nbsp; Kriptografik Bütünlük: Harici .sha256 Manifest &nbsp;|&nbsp; CERN/Zenodo DOI: <a href="https://doi.org/10.5281/zenodo.23410818" target="_blank" rel="noopener" class="doi-link">10.5281/zenodo.23410818</a>
       </div>
     </div>
     """
@@ -998,7 +998,7 @@ def generate_all_pdfs(reports: list):
         stamp_pdf_metadata(
             book_pdf_path,
             f"Kur'an Vizyonu (Quran Vision) Stratejik Tefsir, Makâsıd ve Medeniyet Öngörü Külliyatı v6.2.1 (QV-2026-001 – {last_code})",
-            "Kur'an Vizyonu Külliyatı v6.2.1 • DOI: 10.5281/zenodo.23391192 • Proje Kurucusu & Başyazar (Eser Sahibi): Mehmet Yarıcı (ORCID: 0009-0003-0356-8582) • Akademik Danışman & Dış Hakem: Mehmet Emin Koç (ORCID: 0000-0002-1025-5643)",
+            "Kur'an Vizyonu Külliyatı v6.2.1 • DOI: 10.5281/zenodo.23410818 (Concept: 10.5281/zenodo.23391192) • Proje Kurucusu & Başyazar (Eser Sahibi): Mehmet Yarıcı (ORCID: 0009-0003-0356-8582) • Akademik Danışman & Dış Hakem: Mehmet Emin Koç (ORCID: 0000-0002-1025-5643)",
         )
         shutil.copy2(book_pdf_path, DESKTOP_PDF_DIR / "Quran_Vision_Kulliyat_v6.2.1.pdf")
         shutil.copy2(book_pdf_path, parent_pdf_dir / "Quran_Vision_Kulliyat_v6.2.1.pdf")
@@ -1007,7 +1007,7 @@ def generate_all_pdfs(reports: list):
     cover_en_html = f"""
     <div style="page-break-after: always; padding: 48px 28px; text-align: center; border: 3px double #0f5132; border-radius: 12px; margin-top: 24px;">
       <div style="font-size: 11.5pt; font-weight: 700; color: #856404; letter-spacing: 1.4px; margin-bottom: 14px;">
-        QURAN VISION INSTITUTE (v6.2.1) • DOI: <a href="https://doi.org/10.5281/zenodo.23391192" target="_blank" rel="noopener" class="doi-link">10.5281/zenodo.23391192</a> • ISNAD 2 + EMPIRICAL DATA SCIENCE STANDARD
+        QURAN VISION INSTITUTE (v6.2.1) • DOI: <a href="https://doi.org/10.5281/zenodo.23410818" target="_blank" rel="noopener" class="doi-link">10.5281/zenodo.23410818</a> • ISNAD 2 + EMPIRICAL DATA SCIENCE STANDARD
       </div>
       <h1 style="font-size: 24pt; color: #091310; font-weight: 800; line-height: 1.25; margin-bottom: 14px;">
         QURAN VISION CORPUS<br>Strategic Tafsir, Maqasid &amp; Civilization Foresight
@@ -1026,7 +1026,7 @@ def generate_all_pdfs(reports: list):
         {''.join(f'<div style="margin-bottom:3px;"><b>{i}. {r["case_id"]}</b> — Surah {r.get("surah_en", r["surah"])} {r["verse"]}: {r.get("topic_en", r["topic"])}</div>' for i, r in enumerate(reports, 1))}
       </div>
       <div style="font-size: 8.5pt; color: #6b7280; margin-top: 18px;">
-        Linter Verification: 0 BLOCK Errors &nbsp;|&nbsp; Cryptographic Integrity: External .sha256 Manifest &nbsp;|&nbsp; CERN/Zenodo DOI: <a href="https://doi.org/10.5281/zenodo.23391192" target="_blank" rel="noopener" class="doi-link">10.5281/zenodo.23391192</a>
+        Linter Verification: 0 BLOCK Errors &nbsp;|&nbsp; Cryptographic Integrity: External .sha256 Manifest &nbsp;|&nbsp; CERN/Zenodo DOI: <a href="https://doi.org/10.5281/zenodo.23410818" target="_blank" rel="noopener" class="doi-link">10.5281/zenodo.23410818</a>
       </div>
     </div>
     """
@@ -1047,7 +1047,7 @@ def generate_all_pdfs(reports: list):
         stamp_pdf_metadata(
             book_en_pdf_path,
             f"Quran Vision Corpus: Strategic Tafsir, Maqasid & Civilization Foresight v6.2.1 (QV-2026-001 – {last_code})",
-            "Quran Vision Corpus v6.2.1 • DOI: 10.5281/zenodo.23391192 • Founder & Principal Author (Corpus Owner): Mehmet Yarıcı (ORCID: 0009-0003-0356-8582) • Academic Advisor & External Peer-Reviewer: Mehmet Emin Koç (ORCID: 0000-0002-1025-5643)",
+            "Quran Vision Corpus v6.2.1 • DOI: 10.5281/zenodo.23410818 (Concept: 10.5281/zenodo.23391192) • Founder & Principal Author (Corpus Owner): Mehmet Yarıcı (ORCID: 0009-0003-0356-8582) • Academic Advisor & External Peer-Reviewer: Mehmet Emin Koç (ORCID: 0000-0002-1025-5643)",
         )
         shutil.copy2(book_en_pdf_path, DESKTOP_PDF_DIR / "Quran_Vision_Corpus_EN_v6.2.1.pdf")
         shutil.copy2(book_en_pdf_path, parent_pdf_dir / "Quran_Vision_Corpus_EN_v6.2.1.pdf")
@@ -1091,7 +1091,7 @@ def build_html(reports):
 <meta name="citation_author_orcid" content="0009-0003-0356-8582">
 <meta name="citation_publication_date" content="2026/10/15">
 <meta name="citation_publisher" content="Zenodo / Quran Vision Institute">
-<meta name="citation_doi" content="10.5281/zenodo.23391192">
+<meta name="citation_doi" content="10.5281/zenodo.23410818">
 <meta name="citation_pdf_url" content="https://mehmetyarici-crypto.github.io/quran-vision/pdf/Quran_Vision_Corpus_EN_v6.2.1.pdf">
 <meta name="citation_fulltext_html_url" content="https://mehmetyarici-crypto.github.io/quran-vision/">
 
@@ -1102,7 +1102,7 @@ def build_html(reports):
   "@type": "Dataset",
   "name": "Quran Vision Corpus (Kur'ân Vizyonu Külliyatı) v6.2.1",
   "alternateName": "26-Step Evidence-Based Strategic Tafsir, Maqasid & Civilization Foresight Corpus",
-  "identifier": "https://doi.org/10.5281/zenodo.23391192",
+  "identifier": "https://doi.org/10.5281/zenodo.23410818",
   "description": "Bilingual (Turkish/English) academic corpus of {len(reports)} foundational Quranic verse monographs integrating {total_classical} primary Arabic classical tafsir citations (ISNAD 2) with {total_modern} contemporary empirical datasets (APA 7 / DOI) and 2026-2036 Bayesian policy simulations.",
   "version": "6.2.1",
   "url": "https://mehmetyarici-crypto.github.io/quran-vision/",
@@ -1974,7 +1974,7 @@ a.fn-backref:hover {{
         <div class="stat-pill">📚 Külliyat: <strong>{len(reports)} Rapor</strong></div>
         <div class="stat-pill">🕌 Klasik Tahkik (İSNAD 2): <strong>{total_classical} Nakil</strong></div>
         <div class="stat-pill">🌐 Ampirik Veri (DOI/URL): <strong>{total_modern} Kurum</strong></div>
-        <a class="stat-pill" href="https://doi.org/10.5281/zenodo.23391192" target="_blank" rel="noopener" style="text-decoration:none; border-color:var(--accent-gold);">🏛️ CERN/Zenodo DOI: <strong>10.5281/zenodo.23391192</strong></a>
+        <a class="stat-pill" href="https://doi.org/10.5281/zenodo.23410818" target="_blank" rel="noopener" style="text-decoration:none; border-color:var(--accent-gold);" title="v6.2.1 DOI: 10.5281/zenodo.23410818 | Concept DOI: 10.5281/zenodo.23391192">🏛️ CERN/Zenodo DOI: <strong>10.5281/zenodo.23410818</strong></a>
         <a class="stat-pill" href="https://orcid.org/0009-0003-0356-8582" target="_blank" rel="noopener" style="text-decoration:none; border-color:var(--accent-emerald);">🆔 ORCID: <strong>0009-0003-0356-8582</strong></a>
       </div>
     </div>
@@ -2210,13 +2210,13 @@ function setLanguage(lang) {{
       <div class="stat-pill">📚 Corpus: <strong>${{REPORTS.length}} Reports</strong></div>
       <div class="stat-pill">🕌 Classical Citations (ISNAD 2): <strong>${{TOTAL_CLASSICAL}} Primary Texts</strong></div>
       <div class="stat-pill">🌐 Empirical Data (DOI/URL): <strong>${{TOTAL_MODERN}} Institutions</strong></div>
-      <a class="stat-pill" href="https://doi.org/10.5281/zenodo.23391192" target="_blank" rel="noopener" style="text-decoration:none; border-color:var(--accent-gold);">🏛️ CERN/Zenodo DOI: <strong>10.5281/zenodo.23391192</strong></a>
+      <a class="stat-pill" href="https://doi.org/10.5281/zenodo.23410818" target="_blank" rel="noopener" style="text-decoration:none; border-color:var(--accent-gold);" title="v6.2.1 DOI: 10.5281/zenodo.23410818 | Concept DOI: 10.5281/zenodo.23391192">🏛️ CERN/Zenodo DOI: <strong>10.5281/zenodo.23410818</strong></a>
       <a class="stat-pill" href="https://orcid.org/0009-0003-0356-8582" target="_blank" rel="noopener" style="text-decoration:none; border-color:var(--accent-emerald);">🆔 ORCID: <strong>0009-0003-0356-8582</strong></a>
     ` : `
       <div class="stat-pill">📚 Külliyat: <strong>${{REPORTS.length}} Rapor</strong></div>
       <div class="stat-pill">🕌 Klasik Tahkik (İSNAD 2): <strong>${{TOTAL_CLASSICAL}} Nakil</strong></div>
       <div class="stat-pill">🌐 Ampirik Veri (DOI/URL): <strong>${{TOTAL_MODERN}} Kurum</strong></div>
-      <a class="stat-pill" href="https://doi.org/10.5281/zenodo.23391192" target="_blank" rel="noopener" style="text-decoration:none; border-color:var(--accent-gold);">🏛️ CERN/Zenodo DOI: <strong>10.5281/zenodo.23391192</strong></a>
+      <a class="stat-pill" href="https://doi.org/10.5281/zenodo.23410818" target="_blank" rel="noopener" style="text-decoration:none; border-color:var(--accent-gold);" title="v6.2.1 DOI: 10.5281/zenodo.23410818 | Concept DOI: 10.5281/zenodo.23391192">🏛️ CERN/Zenodo DOI: <strong>10.5281/zenodo.23410818</strong></a>
       <a class="stat-pill" href="https://orcid.org/0009-0003-0356-8582" target="_blank" rel="noopener" style="text-decoration:none; border-color:var(--accent-emerald);">🆔 ORCID: <strong>0009-0003-0356-8582</strong></a>
     `;
   }}
@@ -2312,7 +2312,7 @@ function selectReport(idx) {{
         <div>🏛️ <strong>${{isEn ? 'Academic Advisor & External Peer-Reviewer:' : 'Akademik Danışman & Dış Hakem:'}} Mehmet Emin Koç</strong> — <span style="color:var(--text-secondary);">${{isEn ? 'Azerbaijan National Academy of Sciences (ANAS), Institute of Philosophy and Sociology' : 'Azerbaycan Milli İlimler Akademisi (AMEA), Felsefe ve Sosyoloji Enstitüsü'}}</span> &nbsp;<a href="https://orcid.org/0000-0002-1025-5643" target="_blank" rel="noopener" style="color:var(--accent-emerald); font-family:'JetBrains Mono',monospace; font-size:11.5px; text-decoration:none;">[ORCID: 0000-0002-1025-5643]</a></div>
       </div>
     </div>
-    <div class="sha-bar">🔒 <strong>${{isEn ? 'External Cryptographic Manifest (SHA-256):' : 'Harici Kriptografik Manifest (SHA-256):'}}</strong> ${{isEn ? (r.sha256_en || r.sha256) : r.sha256}} &nbsp;|&nbsp; 📄 <code>${{activeMdPath}}</code> &nbsp;|&nbsp; 🏛️ <strong>DOI:</strong> <a href="https://doi.org/10.5281/zenodo.23391192" target="_blank" rel="noopener" style="color:var(--accent-gold);">10.5281/zenodo.23391192</a></div>
+    <div class="sha-bar">🔒 <strong>${{isEn ? 'External Cryptographic Manifest (SHA-256):' : 'Harici Kriptografik Manifest (SHA-256):'}}</strong> ${{isEn ? (r.sha256_en || r.sha256) : r.sha256}} &nbsp;|&nbsp; 📄 <code>${{activeMdPath}}</code> &nbsp;|&nbsp; 🏛️ <strong>DOI (v6.2.1):</strong> <a href="https://doi.org/10.5281/zenodo.23410818" target="_blank" rel="noopener" style="color:var(--accent-gold);">10.5281/zenodo.23410818</a> <span style="opacity:0.8;">(Concept: <a href="https://doi.org/10.5281/zenodo.23391192" target="_blank" rel="noopener" style="color:var(--accent-emerald);">10.5281/zenodo.23391192</a>)</span></div>
   `;
 
   // Tab 1: Dashboard

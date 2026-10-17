@@ -206,8 +206,9 @@ peer_review:
 - **Strategic Foresight Window:** `2026–2036 (10-Year Policy & Institutional Horizon)`
 - **Verified Classical Knowledge Base (*ISNAD 2nd Edition*):** İbn Fâris, Ebü'l-Hüseyn Ahmed b. Fâris (*Mu'cemü Makâyîsi'l-Lüğa*); Râgıb el-İsfahânî, Ebü'l-Kâsım Hüseyn b. Muhammed (*el-Müfredât fî Garîbi'l-Kur'ân*); İbn Manzûr, Muhammed b. Mükerrem (*Lisânü'l-Arab*); Ebû Ca'fer Muhammed b. Cerîr et-Taberî (*Câmi'u'l-Beyân 'an Te'vîli Âyi'l-Kur'ân*); Zemahşerî, Cârullah Ebü'l-Kâsım Mahmûd b. Ömer (*el-Keşşâf 'an Hakâ'ikı Gavâmizi't-Tenzîl*); Muhammed et-Tâhir İbn Âşûr (*et-Tahrîr ve't-Tenvîr*).
 - **Verified Empirical Datasets (*APA 7 / DOI*):** World Justice Project (WJP) (2025); United Nations Development Programme (UNDP) (2025); UNESCO (2024); World Bank Group (2025).
-- **Principal Author & Project Founder:** **Mehmet Yarıcı** (`ORCID: 0009-0003-0356-8582` — Ministry of National Education [MEB], Rize, Türkiye).
+- **Principal Author & Project Founder:** **Mehmet Yarıcı** (`ORCID: 0009-0003-0356-8582` — Uludağ University Faculty of Theology (1989) • Republic of Türkiye Ministry of National Education [MEB], Bahçelievler Dede Korkut Anatolian High School, Istanbul, Türkiye).
 - **External Peer Reviewer (V11):** **Mehmet Emin Koç** (`ORCID: 0000-0002-1025-5643` — Azerbaijan National Academy of Sciences [ANAS / AMEA], Institute of Philosophy and Sociology).
+- **Permanent CERN / Zenodo DOI:** `10.5281/zenodo.23391192` (Concept DOI) | `10.5281/zenodo.23410818` (v6.2.1 Version DOI)
 
 ---
 
@@ -483,6 +484,17 @@ peer_review:
   - **`K2` (Universal Non-Discrimination & Equal Dignity Charter — `th-01`):** Enforcing `WJP Factor 4.1` equal treatment across all public services, housing, and employment (`>= 0.85`).
   - **`K3` (`Li-Ta'arafu` Intercultural Diplomacy, Civic Integration & Curriculum — `th-02`):** Establishing municipal and academic `ta'aruf` platforms, international student exchanges, and anti-racism pedagogy.
 - **Decision Tree Logic:** `IF Public_Right_or_Opportunity THEN Enforce_Ontological_Equality & Identity_Blind_Evaluation (K1/K2)` → `IF Tribal_or_Racial_Bias_Detected THEN Annul_Decision & Apply_Anti_Discrimination_Sanction` → `Promote_Reciprocal_Cultural_Ta'aruf (K3)`.
+```
+[Identity, Citizenship & Merit Policy] ---> [Step 1: Does It Uphold Ontological Human Equality?]
+                                                              |
+                                +-----------------------------+-----------------------------+
+                                |                                                           |
+                               [NO]                                                       [YES]
+                                |                                                           |
+          [Tribalism / Racism / Nepotism Blocked!]                          [Step 2: Does It Foster Mutual Discovery (Ta'aruf)?]
+                   (Al-Hujurat 49:13 Breach)                                                |
+                                                                            [Ta'aruf + Taqwa Merit = Civilizational Peace]
+```
 
 ---
 

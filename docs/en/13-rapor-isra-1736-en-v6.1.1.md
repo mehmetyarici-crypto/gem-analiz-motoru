@@ -192,8 +192,9 @@ peer_review:
 - **Strategic Foresight Window:** `2026–2036 (10-Year Policy & Institutional Horizon)`
 - **Verified Classical Knowledge Base (*ISNAD 2nd Edition*):** Zemahşerî, Mahmûd b. Ömer (*el-Keşşâf 'an Hakâ'ikı Gavâmizi't-Tenzîl*); Râgıb el-İsfahânî, Hüseyin b. Muhammed (*el-Müfredât fî Garîbi'l-Kur'ân*); İbn Fâris, Ahmed b. Fâris (*Mu'cemü Makâyîsi'l-Lüğa*); İbn Manzûr, Muhammed b. Mükerrem (*Lisânü'l-Arab*); Râzî, Fahreddîn (*Mefâtîhu'l-Gayb (et-Tefsîrü'l-Kebîr)*).
 - **Verified Empirical Datasets (*APA 7 / DOI*):** International Fact-Checking Network (IFCN) - Poynter Institute (2024); World Bank Group (2024); UNESCO (2024).
-- **Principal Author & Project Founder:** **Mehmet Yarıcı** (`ORCID: 0009-0003-0356-8582` — Ministry of National Education [MEB], Rize, Türkiye).
+- **Principal Author & Project Founder:** **Mehmet Yarıcı** (`ORCID: 0009-0003-0356-8582` — Uludağ University Faculty of Theology (1989) • Republic of Türkiye Ministry of National Education [MEB], Bahçelievler Dede Korkut Anatolian High School, Istanbul, Türkiye).
 - **External Peer Reviewer (V11):** **Mehmet Emin Koç** (`ORCID: 0000-0002-1025-5643` — Azerbaijan National Academy of Sciences [ANAS / AMEA], Institute of Philosophy and Sociology).
+- **Permanent CERN / Zenodo DOI:** `10.5281/zenodo.23391192` (Concept DOI) | `10.5281/zenodo.23410818` (v6.2.1 Version DOI)
 
 ---
 
@@ -462,6 +463,23 @@ peer_review:
   - **`K2` (Algorithmic `Tabayyun` Friction & Judicial Evidentiary Audit):** Introducing verification prompts before forwarding viral unverified claims (`24:15`) and enforcing strict evidentiary chain-of-custody in courts.
   - **`K3` (National `17:36` Epistemic & Media Literacy Curriculum — `th-02 / th-03`):** Training students and citizens in the triadic audit (`Sam'` = source credibility, `Basar` = empirical verification, `Fu'ad` = logical consistency).
 - **Decision Tree Logic:** `IF Claim_Lacks_Verified_Evidence (Ma laysa laka bihi 'ilm) THEN Halt_Amplification & Trigger_Tabayyun_Check (K2)` → `Verify_Cryptographic_Isnad (K1) & Cross_Source_Proof (K3)` → `ONLY IF Verified ('Ilm) THEN Authorize_Publication_or_Judgment`.
+```
+[Information / News / Claim Received] ---> [Step 1: Is It Backed by Verified Evidence (Burhan / 'Ilm)?]
+                                                              |
+                                +-----------------------------+-----------------------------+
+                                |                                                           |
+                               [NO]                                                       [YES]
+                  (Unverified Rumor /Zann / Deepfake)                                       |
+                                |                                           [K1: Epistemic & Algorithmic Verification]
+           [Immediate Halt — Do NotPursue or Share!]                                       |
+                 (Al-Isra 17:36 & Hujurat 49:6)                             [Step 2: Does Disclosure Serve Public Good?]
+                                                                                            |
+                                                                            +---------------+---------------+
+                                                                            |                               |
+                                                                          [YES]                           [NO]
+                                                                            |                               |
+                                                               [Responsible Public Release]    [Protect Privacy & Dignity]
+```
 
 ---
 

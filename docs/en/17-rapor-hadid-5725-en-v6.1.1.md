@@ -202,8 +202,9 @@ peer_review:
 - **Strategic Foresight Window:** `2026–2036 (10-Year Policy & Institutional Horizon)`
 - **Verified Classical Knowledge Base (*ISNAD 2nd Edition*):** Zemahşerî, Cârullah Ebü'l-Kâsım Mahmûd b. Ömer (*el-Keşşâf 'an Hakâ'ikı Gavâmizi't-Tenzîl*); Râgıb el-İsfahânî, Ebü'l-Kâsım Hüseyn b. Muhammed (*el-Müfredât fî Garîbi'l-Kur'ân*); İbn Fâris, Ebü'l-Hüseyn Ahmed b. Fâris b. Zekeriyyâ (*Mu'cemü Makâyîsi'l-Lüğa*); İbn Manzûr, Muhammed b. Mükerrem (*Lisânü'l-Arab*); Fahreddîn er-Râzî, Muhammed b. Ömer (*Mefâtîhu'l-Gayb (et-Tefsîrü'l-Kebîr)*).
 - **Verified Empirical Datasets (*APA 7 / DOI*):** Stockholm International Peace Research Institute (SIPRI) (2025); World Justice Project (WJP) (2025); United Nations Industrial Development Organization (UNIDO) (2025); Türkiye İstatistik Kurumu (TÜİK) (2025).
-- **Principal Author & Project Founder:** **Mehmet Yarıcı** (`ORCID: 0009-0003-0356-8582` — Ministry of National Education [MEB], Rize, Türkiye).
+- **Principal Author & Project Founder:** **Mehmet Yarıcı** (`ORCID: 0009-0003-0356-8582` — Uludağ University Faculty of Theology (1989) • Republic of Türkiye Ministry of National Education [MEB], Bahçelievler Dede Korkut Anatolian High School, Istanbul, Türkiye).
 - **External Peer Reviewer (V11):** **Mehmet Emin Koç** (`ORCID: 0000-0002-1025-5643` — Azerbaijan National Academy of Sciences [ANAS / AMEA], Institute of Philosophy and Sociology).
+- **Permanent CERN / Zenodo DOI:** `10.5281/zenodo.23391192` (Concept DOI) | `10.5281/zenodo.23410818` (v6.2.1 Version DOI)
 
 ---
 
@@ -473,6 +474,18 @@ peer_review:
   - **`K2` (`Manafi'u li'n-Nas` Civilian Science, Metallurgy & Deep-Tech Ecosystem — `th-03`):** Directing `>= 70%` of national R&D and advanced manufacturing toward civilian healthcare, clean infrastructure, agriculture, and public welfare.
   - **`K3` (`Ba'sun Shadid` Proportional Deterrence & Strategic Autonomy — `th-02`):** Achieving `>= 75%` indigenous technological self-reliance in critical defense and cyber-security strictly under defensive international law (`At-Tawbah 9:4–6`, `Al-Baqarah 2:190`).
 - **Decision Tree Logic:** `IF Strategic_or_Technological_Program (Hadid) THEN Audit_Against_Constitutional_Law (Kitab) & Equity_Scale (Mizan / K1)` → `Ensure_Civilian_Public_Benefit >= 70% (Manafi'u li'n-Nas / K2)` → `Maintain_Proportional_Defensive_Deterrence (Ba'sun Shadid / K3)`.
+```
+[Strategic Technology / Force Deployment] ---> [Step 1: Is It Approved by Law (Kitab) & Justice Metrics (Mizan)?]
+                                                              |
+                                +-----------------------------+-----------------------------+
+                                |                                                           |
+                              [YES]                                                       [NO]
+                                |                                                           |
+       [Serves Deterrence (Ba's Shadid) & Public Benefit?]                   [Unlawful Power / Oppression Risk!]
+                   (Manafi'u li'n-Nas)                                       (Mizan Violation — Operation Halted)
+                                |
+       [Executed Under Al-Hadid 57:25 Triadic Balance]
+```
 
 ---
 

@@ -182,7 +182,7 @@ peer_review:
 - **Konu Başlığı:** İnanç ve Vicdan Özgürlüğü, İkrâh Yasağı ve Çoğulcu Toplum Mimarisi (Lâ İkrâhe fi'd-Dîn Doktrini)
 - **Proje Kurucusu & Başyazar:** Mehmet Yarıcı (Uludağ Üniversitesi İlahiyat Fakültesi, 1989 • T.C. MEB, İstanbul Bahçelievler Dede Korkut Anadolu Lisesi — ORCID: `0009-0003-0356-8582`)
 - **Akademik Danışman & Dış Hakem:** Mehmet Emin Koç (Azerbaycan Milli İlimler Akademisi Felsefe ve Sosyoloji Enstitüsü — ORCID: `0000-0002-1025-5643`)
-- **Kalıcı CERN / Zenodo DOI:** `10.5281/zenodo.23391192` (Kavram DOI) | `10.5281/zenodo.23391193` (v6.2.1 Sürüm DOI)
+- **Kalıcı CERN / Zenodo DOI:** `10.5281/zenodo.23391192` (Kavram DOI) | `10.5281/zenodo.23410818` (v6.2.1 Sürüm DOI)
 - **Tarih:** 2026-10-15
 - **Sürüm:** v6.2.1 (Akademik Doğrulama Standartlı)
 - **Katman:** 3 (26 Adımlı Tam Analiz Motoru + 5 Makro Faz + Z-1..Z-5 Zorunlu Ekler)
@@ -414,9 +414,8 @@ Bakara 2:256, Kur'ân'ın tevhid zirvesi olan **Âyetü'l-Kürsî (2:255)**'nin 
   - `EU-04`: Okullarda zorunlu tek tip dinî pratik dayatması.
 - **Bayes Güncelleme Alanı (`Senaryo S1 — Anayasal İnanç Özgürlüğü ve Çoğulcu Toplumsal Barış`):**
   - **Önsel Olasılık (Prior $P(S_1)$):** `0.38` (%38.0 — Pew Research Orta Doğu Din Kısıtlamaları Endeksi başlangıç olasılığı).
-  - **Koşullu Olabilirlik $P(E|S_1) = 0.86$ & Yanlış Pozitif $P(E|
-eg S_1) = 0.15$:** `Lâ ikrâhe fi'd-dîn` ilkesinin anayasal din ve vicdan hürriyeti güvencesiyle korunduğu sistemlerde mezhebî/dinî gerilimlerin barışçıl çözülme olasılığı.
-  - **Sonsal Olasılık (Posterior $P(S_1|E)$):** $P(S_1|E) = \frac{0.38 	imes 0.86}{(0.38 	imes 0.86) + (0.62 	imes 0.15)} = 0.779 \approx 0.78$ (%77.9 — **+39.9 puanlık** toplumsal uyum artışı).
+  - **Koşullu Olabilirlik $P(E|S_1) = 0.86$ & Yanlış Pozitif $P(E|\neg S_1) = 0.15$:** `Lâ ikrâhe fi'd-dîn` ilkesinin anayasal din ve vicdan hürriyeti güvencesiyle korunduğu sistemlerde mezhebî/dinî gerilimlerin barışçıl çözülme olasılığı.
+  - **Sonsal Olasılık (Posterior $P(S_1|E)$):** $P(S_1|E) = \frac{0.38 \times 0.86}{(0.38 \times 0.86) + (0.62 \times 0.15)} = 0.779 \approx 0.78$ (%77.9 — **+39.9 puanlık** toplumsal uyum artışı).
   - *Kapsam Notu:* Bayes güncellemesi YALNIZCA ölçülebilir kamusal göstergelerde çalışır; normatif inançlara sayısal olasılık verilemez.
 
 ---
@@ -438,6 +437,26 @@ eg S_1) = 0.15$:** `Lâ ikrâhe fi'd-dîn` ilkesinin anayasal din ve vicdan hür
   - **Araç:** İnanç ihlalleri hızlı müdahale masası.
   - **CLD Kaldıraç Noktası:** Azınlık hakları güvencesi.
   - **Eşik:** [TAHMİNÎ EŞİK] Şikâyet inceleme süresi $\le 15$ gün.
+
+- **Karar Ağacı Mantığı:**
+```
+[Din ve Vicdan Alanında Kamu Politikası] ---> [1. Adım: İnanç veya İbadette Zorlama (İkrah) Var mı?]
+                                                               |
+                                 +-----------------------------+-----------------------------+
+                                 |                                                           |
+                              [EVET]                                                      [HAYIR]
+                                 |                                                           |
+         [K1: Anayasal İptal ve K3: Ombudsman Müdahalesi]                  [K2: Çoğulcu Eğitim ve Hikmetle Tebliğ]
+          (Lâ İkrâhe fi'd-Dîn — Nifak Döngüsünü Önleme)                       (Rüşd ve Gayy'ın Aklen Ayrışması)
+                                                                                             |
+                                                                             [İnanç Grupları Arası Gerilim Var mı?]
+                                                                                             |
+                                                                             +---------------+---------------+
+                                                                             |                               |
+                                                                          [EVET]                          [HAYIR]
+                                                                             |                               |
+                                                               [K3: İnanç Hakları Arabuluculuğu]  [Samimi İman ve Toplumsal Barış]
+```
 
 ---
 

@@ -184,8 +184,9 @@ peer_review:
 - **Strategic Foresight Window:** `2026–2036 (10-Year Policy & Institutional Horizon)`
 - **Verified Classical Knowledge Base (*ISNAD 2nd Edition*):** Zemahşerî, Mahmûd b. Ömer (*el-Keşşâf 'an Hakâ'ikı Gavâmizi't-Tenzîl*); Râgıb el-İsfahânî, Hüseyin b. Muhammed (*el-Müfredât fî Garîbi'l-Kur'ân*); İbn Fâris, Ahmed b. Fâris (*Mu'cemü Makâyîsi'l-Lüğa*); İbn Manzûr, Muhammed b. Mükerrem (*Lisânü'l-Arab*); Taberî, Muhammed b. Cerîr (*Câmi'u'l-Beyân 'an Te'vîli Âyi'l-Kur'ân*).
 - **Verified Empirical Datasets (*APA 7 / DOI*):** Pew Research Center (2024); Freedom House (2024).
-- **Principal Author & Project Founder:** **Mehmet Yarıcı** (`ORCID: 0009-0003-0356-8582` — Ministry of National Education [MEB], Rize, Türkiye).
+- **Principal Author & Project Founder:** **Mehmet Yarıcı** (`ORCID: 0009-0003-0356-8582` — Uludağ University Faculty of Theology (1989) • Republic of Türkiye Ministry of National Education [MEB], Bahçelievler Dede Korkut Anatolian High School, Istanbul, Türkiye).
 - **External Peer Reviewer (V11):** **Mehmet Emin Koç** (`ORCID: 0000-0002-1025-5643` — Azerbaijan National Academy of Sciences [ANAS / AMEA], Institute of Philosophy and Sociology).
+- **Permanent CERN / Zenodo DOI:** `10.5281/zenodo.23391192` (Concept DOI) | `10.5281/zenodo.23410818` (v6.2.1 Version DOI)
 
 ---
 
@@ -454,6 +455,25 @@ peer_review:
   - **`K2` (`Al-Hajj 22:40` Protection of Houses of Worship & Anti-Sectarian Shield — `th-02`):** Legal and security protection for all mosques, churches, synagogues, and houses of worship alongside strict prosecution of sectarian hate crimes (`SHI <= 2.0`).
   - **`K3` (Rational & Inquiry-Based Religious Pedagogy — `th-03`):** Reforming religious education from rote compulsion to evidence-based intellectual persuasion (`tabayyana al-rushd`) and ethical example.
 - **Decision Tree Logic:** `IF State_Coercion_or_Exclusion_Detected (GRI > 2.5) THEN Trigger_Constitutional_Review (K1)` → `ELSE IF Sectarian_Hostility_Rises (SHI > 2.0) THEN Activate_22_40_Protection_Protocol & Interfaith_Mediation (K2)` → `Maintain_Inquiry_Based_Pedagogy (K3)`.
+```
+[Public Policy on Religion & Conscience] ---> [Step 1: Does Policy Involve Compulsion (Ikrah) in Faith?]
+                                                              |
+                                +-----------------------------+-----------------------------+
+                                |                                                           |
+                              [YES]                                                       [NO]
+                                |                                                           |
+         [K1: Constitutional Annulment & Ombudsman Shield]                 [K2: Pluralistic Civic & Inquiry Pedagogy]
+          (La Ikraha fi'd-Din — Preventing Hypocrisy/Nifaq)                  (Clear Rational Distinction: Tabayyana'r-Rushd)
+                                                                                            |
+                                                                            [Inter-Communal / Sectarian Tension?]
+                                                                                            |
+                                                                            +---------------+---------------+
+                                                                            |                               |
+                                                                          [YES]                           [NO]
+                                                                            |                               |
+                                                               [K2: Interfaith Protection]     [Sincere Faith & Civic Peace]
+                                                                   (Al-Hajj 22:40 Shield)
+```
 
 ---
 

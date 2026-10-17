@@ -192,8 +192,9 @@ peer_review:
 - **Strategic Foresight Window:** `2026–2036 (10-Year Policy & Institutional Horizon)`
 - **Verified Classical Knowledge Base (*ISNAD 2nd Edition*):** Zemahşerî, Mahmûd b. Ömer (*el-Keşşâf 'an Hakâ'ikı Gavâmizi't-Tenzîl*); Râgıb el-İsfahânî, Hüseyin b. Muhammed (*el-Müfredât fî Garîbi'l-Kur'ân*); İbn Fâris, Ahmed b. Fâris (*Mu'cemü Makâyîsi'l-Lüğa*); İbn Manzûr, Muhammed b. Mükerrem (*Lisânü'l-Arab*); Râzî, Fahreddîn (*Mefâtîhu'l-Gayb (et-Tefsîrü'l-Kebîr)*).
 - **Verified Empirical Datasets (*APA 7 / DOI*):** UNESCO Institute for Statistics (2024); World Bank Group (2024); Türkiye İstatistik Kurumu (TÜİK) (2024).
-- **Principal Author & Project Founder:** **Mehmet Yarıcı** (`ORCID: 0009-0003-0356-8582` — Ministry of National Education [MEB], Rize, Türkiye).
+- **Principal Author & Project Founder:** **Mehmet Yarıcı** (`ORCID: 0009-0003-0356-8582` — Uludağ University Faculty of Theology (1989) • Republic of Türkiye Ministry of National Education [MEB], Bahçelievler Dede Korkut Anatolian High School, Istanbul, Türkiye).
 - **External Peer Reviewer (V11):** **Mehmet Emin Koç** (`ORCID: 0000-0002-1025-5643` — Azerbaijan National Academy of Sciences [ANAS / AMEA], Institute of Philosophy and Sociology).
+- **Permanent CERN / Zenodo DOI:** `10.5281/zenodo.23391192` (Concept DOI) | `10.5281/zenodo.23410818` (v6.2.1 Version DOI)
 
 ---
 
@@ -459,6 +460,23 @@ peer_review:
   - **`K2` (Cultural & Linguistic Heritage Preservation Charter — `th-01`):** Supporting academic research departments, cultural archives, and elective educational resources that preserve linguistic diversity alongside proficiency in the common official language.
   - **`K3` (Equitable Regional Investment & Intercultural `Ta'aruf` Programs — `th-03`):** Eliminating socio-economic disparities across regions and implementing student exchange and civic `ta'aruf` initiatives.
 - **Decision Tree Logic:** `IF Ethnic_or_Linguistic_Discrimination_Detected THEN Enforce_Anti_Racism_Sanctions (K1)` → `Protect_Cultural_Heritage_as_Divine_Ayah (K2)` → `Invest_in_Regional_Equity_and_Civic_Ta'aruf (K3)`.
+```
+[Cultural, Linguistic & Demographic Policy] ---> [Step 1: Does Policy Respect Diversity of Languages & Colors?]
+                                                              |
+                                +-----------------------------+-----------------------------+
+                                |                                                           |
+                               [NO]                                                       [YES]
+               (Forced Assimilation / Racial Hierarchy)                                     |
+                                |                                           [K1: Constitutional Anti-Discrimination]
+         [Ontological Violation — Annul Coercive Rule]                                      |
+                   (Ar-Rum 30:22 Sign Violation)                            [Step 2: Are Mother-Tongue & Civic Unity Balanced?]
+                                                                                            |
+                                                                            +---------------+---------------+
+                                                                            |                               |
+                                                                          [YES]                           [NO]
+                                                                            |                               |
+                                                               [Pluralistic Civilizational Peace] [K2 & K3: Bilingual & Cultural Support]
+```
 
 ---
 

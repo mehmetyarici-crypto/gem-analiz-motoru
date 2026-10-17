@@ -192,8 +192,9 @@ peer_review:
 - **Strategic Foresight Window:** `2026–2036 (10-Year Policy & Institutional Horizon)`
 - **Verified Classical Knowledge Base (*ISNAD 2nd Edition*):** Zemahşerî, Mahmûd b. Ömer (*el-Keşşâf 'an Hakâ'ikı Gavâmizi't-Tenzîl*); Râgıb el-İsfahânî, Hüseyin b. Muhammed (*el-Müfredât fî Garîbi'l-Kur'ân*); İbn Fâris, Ahmed b. Fâris (*Mu'cemü Makâyîsi'l-Lüğa*); İbn Manzûr, Muhammed b. Mükerrem (*Lisânü'l-Arab*); Ebû Bekr el-Cessâs, Ahmed b. Ali (*Ahkâmü'l-Kur'ân*).
 - **Verified Empirical Datasets (*APA 7 / DOI*):** Uppsala University (Uppsala Conflict Data Program - UCDP) (2024); World Bank Group (2024); Türkiye İstatistik Kurumu (TÜİK) (2024).
-- **Principal Author & Project Founder:** **Mehmet Yarıcı** (`ORCID: 0009-0003-0356-8582` — Ministry of National Education [MEB], Rize, Türkiye).
+- **Principal Author & Project Founder:** **Mehmet Yarıcı** (`ORCID: 0009-0003-0356-8582` — Uludağ University Faculty of Theology (1989) • Republic of Türkiye Ministry of National Education [MEB], Bahçelievler Dede Korkut Anatolian High School, Istanbul, Türkiye).
 - **External Peer Reviewer (V11):** **Mehmet Emin Koç** (`ORCID: 0000-0002-1025-5643` — Azerbaijan National Academy of Sciences [ANAS / AMEA], Institute of Philosophy and Sociology).
+- **Permanent CERN / Zenodo DOI:** `10.5281/zenodo.23391192` (Concept DOI) | `10.5281/zenodo.23410818` (v6.2.1 Version DOI)
 
 ---
 
@@ -462,6 +463,24 @@ peer_review:
   - **`K2` (Proportional Collective Deterrence against Spoilers — `hatta tafi'a`):** Enforcing collective sanctions and strictly bounded peacekeeping rules of engagement (no targeting of non-combatants, no execution of prisoners, no confiscation of property) against any faction that rejects arbitration.
   - **`K3` (Post-Conflict Equity & Restorative Justice Charter — `bi'l-'adli wa-aqsitu`, `th-02 / th-03`):** Guaranteeing non-vindictive power-sharing, restitution, and civic reintegration (`49:10`) once hostilities cease.
 - **Decision Tree Logic:** `IF Conflict_Emerges THEN Deploy_Rapid_Neutral_Mediation (K1)` → `IF Both_Parties_Accept THEN Execute_Equitable_Settlement (K3)` → `ELSE IF Faction_Commits_Baghy THEN Enforce_Bounded_Collective_Deterrence (K2, hatta tafi'a)` → `Once_Hostility_Ceases THEN Return_to_Just_Islah (K3)`.
+```
+[Conflict Emerges] ---> [Step 1: Rapid Neutral Mediation & Reconciliation (Islah)]
+                                        |
+                        +---------------+---------------+
+                        |                               |
+               [Both Parties Agree]            [One Party Commits Aggression: Baghy]
+                        |                               |
+              [Equitable Settlement]           [K2: Collective Deterrence Force]
+                 (Qist & 'Adl)                                  |
+                                                [Has Aggressor Returned to Law?]
+                                                        (Hatta Tafi'a)
+                                                                |
+                                                        +-------+-------+
+                                                        |               |
+                                                      [YES]           [NO]
+                                                        |               |
+                                               [K3: Just Peace]  [Proportional Containment]
+```
 
 ---
 

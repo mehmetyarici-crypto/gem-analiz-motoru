@@ -192,8 +192,9 @@ peer_review:
 - **Strategic Foresight Window:** `2026–2036 (10-Year Policy & Institutional Horizon)`
 - **Verified Classical Knowledge Base (*ISNAD 2nd Edition*):** Zemahşerî, Mahmûd b. Ömer (*el-Keşşâf 'an Hakâ'ikı Gavâmizi't-Tenzîl*); Râgıb el-İsfahânî, Hüseyin b. Muhammed (*el-Müfredât fî Garîbi'l-Kur'ân*); İbn Fâris, Ahmed b. Fâris (*Mu'cemü Makâyîsi'l-Lüğa*); İbn Manzûr, Muhammed b. Mükerrem (*Lisânü'l-Arab*); Ebû Bekr el-Cessâs, Ahmed b. Ali (*Ahkâmü'l-Kur'ân*).
 - **Verified Empirical Datasets (*APA 7 / DOI*):** World Bank Group (2024); Türkiye İstatistik Kurumu (TÜİK) (2024); World Inequality Lab (2024).
-- **Principal Author & Project Founder:** **Mehmet Yarıcı** (`ORCID: 0009-0003-0356-8582` — Ministry of National Education [MEB], Rize, Türkiye).
+- **Principal Author & Project Founder:** **Mehmet Yarıcı** (`ORCID: 0009-0003-0356-8582` — Uludağ University Faculty of Theology (1989) • Republic of Türkiye Ministry of National Education [MEB], Bahçelievler Dede Korkut Anatolian High School, Istanbul, Türkiye).
 - **External Peer Reviewer (V11):** **Mehmet Emin Koç** (`ORCID: 0000-0002-1025-5643` — Azerbaijan National Academy of Sciences [ANAS / AMEA], Institute of Philosophy and Sociology).
+- **Permanent CERN / Zenodo DOI:** `10.5281/zenodo.23391192` (Concept DOI) | `10.5281/zenodo.23410818` (v6.2.1 Version DOI)
 
 ---
 
@@ -461,6 +462,23 @@ peer_review:
   - **`K2` (Anti-Monopoly [`Ihtikar`] & Real-Economy Financing Reform — `th-03`):** Enforcing strict competition law against cartels and expanding profit-and-loss sharing (*mudarabah / musharakah*) so `>= 70%` of credit flows to productive SMEs and employment.
   - **`K3` (Institutional `Zakah` & `Waqf` Productive Endowment Network):** Transforming social aid from passive consumption handouts into capital-endowing micro-enterprises (*tamlik*) and educational `waqfs`.
 - **Decision Tree Logic:** `IF Gini > 0.35 OR Top1_Wealth > 25% (th-01/th-02) THEN Trigger_Anti_Dulah_Fiscal_Rebalancing (K1)` → `Enforce_Anti_Cartel_Competition_Law (K2)` → `Channel_Zakah_and_Waqf_into_Productive_Ownership (K3)`.
+```
+[Macroeconomic Distribution & Fiscal Policy] ---> [Step 1: Is Wealth Monopolized Among the Rich (Dulah)?]
+                                                              |
+                                +-----------------------------+-----------------------------+
+                                |                                                           |
+                              [YES]                                                       [NO]
+                 (Gini > 0.35 or Top 1% > 25%)                                              |
+                                |                                           [Balanced Productive Circulation Active]
+         [K1: Anti-Monopoly & Progressive Zakat/Waqf]                                       |
+               (Al-Hashr 59:7 Circulation Rule)                             [Step 2: Are Vulnerable Groups Protected?]
+                                                                                            |
+                                                                            +---------------+---------------+
+                                                                            |                               |
+                                                                          [YES]                           [NO]
+                                                                            |                               |
+                                                               [Inclusive Economic Prosperity] [K2 & K3: Targeted Social Transfer]
+```
 
 ---
 

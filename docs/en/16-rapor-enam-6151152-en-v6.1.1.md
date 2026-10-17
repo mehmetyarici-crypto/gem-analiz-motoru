@@ -200,8 +200,9 @@ peer_review:
 - **Strategic Foresight Window:** `2026–2036 (10-Year Policy & Institutional Horizon)`
 - **Verified Classical Knowledge Base (*ISNAD 2nd Edition*):** Zemahşerî, Mahmûd b. Ömer (*el-Keşşâf 'an Hakâ'ikı Gavâmizi't-Tenzîl*); Râgıb el-İsfahânî, Hüseyin b. Muhammed (*el-Müfredât fî Garîbi'l-Kur'ân*); İbn Fâris, Ahmed b. Fâris (*Mu'cemü Makâyîsi'l-Lüğa*); İbn Manzûr, Muhammed b. Mükerrem (*Lisânü'l-Arab*); Ebû Bekr el-Cessâs, Ahmed b. Ali (*Ahkâmü'l-Kur'ân*).
 - **Verified Empirical Datasets (*APA 7 / DOI*):** World Justice Project (WJP) (2025); World Bank Group (2025); International Organization of Legal Metrology (OIML) & ISO (2024); Türkiye İstatistik Kurumu (TÜİK) (2025).
-- **Principal Author & Project Founder:** **Mehmet Yarıcı** (`ORCID: 0009-0003-0356-8582` — Ministry of National Education [MEB], Rize, Türkiye).
+- **Principal Author & Project Founder:** **Mehmet Yarıcı** (`ORCID: 0009-0003-0356-8582` — Uludağ University Faculty of Theology (1989) • Republic of Türkiye Ministry of National Education [MEB], Bahçelievler Dede Korkut Anatolian High School, Istanbul, Türkiye).
 - **External Peer Reviewer (V11):** **Mehmet Emin Koç** (`ORCID: 0000-0002-1025-5643` — Azerbaijan National Academy of Sciences [ANAS / AMEA], Institute of Philosophy and Sociology).
+- **Permanent CERN / Zenodo DOI:** `10.5281/zenodo.23391192` (Concept DOI) | `10.5281/zenodo.23410818` (v6.2.1 Version DOI)
 
 ---
 
@@ -473,6 +474,22 @@ peer_review:
   - **`K2` (`Al-Kayl wa'l-Mizan` Metrological, Food-Safety & Consumer Integrity System — `th-02`):** Enforcing `OIML/ISO` calibration, real-time supply-chain transparency against adulteration, and fair tolerance thresholds (`illa wus'aha`).
   - **`K3` (`Wa-Law Kana Dha Qurba` Judicial & Administrative Recusal Protocol — `th-03`):** Mandatory automated conflict-of-interest screening requiring any judge, prosecutor, or public board member to recuse themselves whenever a first- to third-degree relative or close associate is involved (`>= 95%` isolation).
 - **Decision Tree Logic:** `IF Vulnerable_Child_or_Orphan_Asset THEN Activate_Fiduciary_Optimum_Audit (K1)` → `IF Market_Transaction THEN Verify_OIML_Metrological_Equity (K2)` → `IF Kinship_or_Conflict_of_Interest_Present (Dha Qurba) THEN Enforce_Mandatory_Recusal_and_Impartial_Adjudication (K3)`.
+```
+[Economic, Social or Judicial Transaction] ---> [Step 1: Does Act Violate Sanctity of Life, Orphan Rights or Fair Measure?]
+                                                              |
+                                +-----------------------------+-----------------------------+
+                                |                                                           |
+                              [YES]                                                       [NO]
+                                |                                                           |
+         [K1 & K2: Fiduciary & Market Integrity Enforcement]                [Step 2: Does Testimony Involve Kinship Bias?]
+               (Al-An'am 6:151-152 Universal Charter)                         (Wa idha qultum fa'dilu wa law kana dha qurba)
+                                                                                            |
+                                                                            +---------------+---------------+
+                                                                            |                               |
+                                                                          [YES]                           [NO]
+                                                                            |                               |
+                                                               [K3: Conflict-of-Interest Recusal] [Universal Moral Integrity]
+```
 
 ---
 

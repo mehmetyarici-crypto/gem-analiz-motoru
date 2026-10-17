@@ -184,8 +184,9 @@ peer_review:
 - **Strategic Foresight Window:** `2026–2036 (10-Year Policy & Institutional Horizon)`
 - **Verified Classical Knowledge Base (*ISNAD 2nd Edition*):** Zemahşerî, Mahmûd b. Ömer (*el-Keşşâf 'an Hakâ'ikı Gavâmizi't-Tenzîl*); Râgıb el-İsfahânî, Hüseyin b. Muhammed (*el-Müfredât fî Garîbi'l-Kur'ân*); İbn Fâris, Ahmed b. Fâris (*Mu'cemü Makâyîsi'l-Lüğa*); İbn Manzûr, Muhammed b. Mükerrem (*Lisânü'l-Arab*); İbn Teymiyye, Takıyyüddîn Ahmed (*es-Siyâsetü'ş-Şer'iyye fî Islâhi'r-Râ'î ve'r-Ra'iyye*).
 - **Verified Empirical Datasets (*APA 7 / DOI*):** World Bank Group (2024); World Justice Project (WJP) (2024).
-- **Principal Author & Project Founder:** **Mehmet Yarıcı** (`ORCID: 0009-0003-0356-8582` — Ministry of National Education [MEB], Rize, Türkiye).
+- **Principal Author & Project Founder:** **Mehmet Yarıcı** (`ORCID: 0009-0003-0356-8582` — Uludağ University Faculty of Theology (1989) • Republic of Türkiye Ministry of National Education [MEB], Bahçelievler Dede Korkut Anatolian High School, Istanbul, Türkiye).
 - **External Peer Reviewer (V11):** **Mehmet Emin Koç** (`ORCID: 0000-0002-1025-5643` — Azerbaijan National Academy of Sciences [ANAS / AMEA], Institute of Philosophy and Sociology).
+- **Permanent CERN / Zenodo DOI:** `10.5281/zenodo.23391192` (Concept DOI) | `10.5281/zenodo.23410818` (v6.2.1 Version DOI)
 
 ---
 
@@ -453,6 +454,23 @@ peer_review:
   - **`K2` (Constitutional Insulation of Judicial Impartiality — `th-02`):** Guaranteeing non-partisan judicial appointments, security of tenure, and randomized case assignment (`hukm bayna'n-nas bi'l-'adl`).
   - **`K3` (Open-Data Fiduciary Audit & Anti-Nepotism Registry — `th-03`):** Real-time public disclosure of public procurement bids, asset declarations, and conflict-of-interest checks.
 - **Decision Tree Logic:** `IF Public_Appointment_or_Procurement THEN Verify_Objective_Competence_Score (K1) & Conflict_of_Interest_Audit (K3)` → `IF Nepotism_or_Score_Manipulation_Detected (> th-01) THEN Annul_Appointment & Trigger_Fiduciary_Sanction` → `Enforce_Impartial_Judicial_Review (K2)`.
+```
+[Public Appointment or Judicial Process] ---> [Step 1: Is Public Trust (Amanah) Assigned by Objective Merit?]
+                                                              |
+                                +-----------------------------+-----------------------------+
+                                |                                                           |
+                               [NO]                                                       [YES]
+                  (Nepotism / Patronage Detected)                                           |
+                                |                                           [K1: Transparent Merit-Based Appointment]
+           [K3: Fiduciary Audit & Annulment of Act]                                         |
+             (An-Nisa 4:58 Breach — Anti-Khiyanah)                          [Step 2: Is Adjudication Impartial ('Adl)?]
+                                                                                            |
+                                                                            +---------------+---------------+
+                                                                            |                               |
+                                                                          [YES]                           [NO]
+                                                                            |                               |
+                                                               [K2: Independent Judiciary]     [Appellate Review & Restitution]
+```
 
 ---
 

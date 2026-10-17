@@ -193,8 +193,9 @@ peer_review:
 - **Strategic Foresight Window:** `2026–2036 (10-Year Policy & Institutional Horizon)`
 - **Verified Classical Knowledge Base (*ISNAD 2nd Edition*):** Zemahşerî, Mahmûd b. Ömer (*el-Keşşâf 'an Hakâ'ikı Gavâmizi't-Tenzîl*); İbn Fâris, Ahmed b. Fâris (*Mu'cemü Makâyîsi'l-Lüğa*); İbn Manzûr, Muhammed b. Mükerrem (*Lisânü'l-Arab*); Cessâs, Ahmed b. Ali er-Râzî (*Ahkâmü'l-Kur'ân*); Şâtıbî, İbrâhîm b. Mûsâ (*el-Muvâfakât*).
 - **Verified Empirical Datasets (*APA 7 / DOI*):** United Nations Entity for Gender Equality and the Empowerment of Women (UN Women) (2024); World Health Organization (WHO) (2024); United Nations Development Programme (UNDP) (2024).
-- **Principal Author & Project Founder:** **Mehmet Yarıcı** (`ORCID: 0009-0003-0356-8582` — Ministry of National Education [MEB], Rize, Türkiye).
+- **Principal Author & Project Founder:** **Mehmet Yarıcı** (`ORCID: 0009-0003-0356-8582` — Uludağ University Faculty of Theology (1989) • Republic of Türkiye Ministry of National Education [MEB], Bahçelievler Dede Korkut Anatolian High School, Istanbul, Türkiye).
 - **External Peer Reviewer (V11):** **Mehmet Emin Koç** (`ORCID: 0000-0002-1025-5643` — Azerbaijan National Academy of Sciences [ANAS / AMEA], Institute of Philosophy and Sociology).
+- **Permanent CERN / Zenodo DOI:** `10.5281/zenodo.23391192` (Concept DOI) | `10.5281/zenodo.23410818` (v6.2.1 Version DOI)
 
 ---
 
@@ -468,6 +469,25 @@ peer_review:
   - **`K2` (Institutionalized `4:35` Bilateral Family Mediation — `th-02 / th-03`):** Establishing certified family arbitration panels (*hakam* + clinical psychologists + legal mediators) triggered when non-violent marital discord exceeds 3 weeks.
   - **`K3` (Pre-Marital *Qiwamah* & *Ma'ruf* Literacy Program):** Mandatory pre-marital curriculum teaching that *qiwamah* is financial/moral stewardship and mutual consultation (`tashawur`), not domination.
 - **Decision Tree Logic:** `IF Physical_or_Psychological_Violence_Detected (th-01) THEN Immediate_State_Protection_Injunction & Criminal_Sanction (K1)` → `ELSE IF Non_Violent_Discord > 3_Weeks (th-02) THEN Phased_Counseling (4:34) & Bilateral_Hakam_Mediation (4:35 / K2)` → `IF Reconciliation_Fails THEN Dignified_Equitable_Separation (Tasrihun bi-Ihsan, 2:229)`.
+```
+[Intra-Family Crisis / Marital Discord] ---> [Is Physical or Psychological Violence / Abuse Present?]
+                                                              |
+                                +-----------------------------+-----------------------------+
+                                |                                                           |
+                              [YES]                                                       [NO]
+                                |                                                           |
+           [K1: Immediate State Protection & Sanction]                    [Step 1: Counseling & Reflective Space]
+             (Sadd al-Dhara'i & Zero-Violence Shield)                       (Dialogue, Wa'z & Cooling-Off Period)
+                                                                                            |
+                                                                                [Reconciliation Achieved?]
+                                                                                            |
+                                                                            +---------------+---------------+
+                                                                            |                               |
+                                                                          [YES]                           [NO]
+                                                                            |                               |
+                                                                 [Restored Harmony (Ma'ruf)]   [K2: Bilateral Family Arbitration]
+                                                                                               (An-Nisa 4:35 Islah / Equitable Parting)
+```
 
 ---
 

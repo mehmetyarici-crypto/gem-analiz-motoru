@@ -193,8 +193,9 @@ peer_review:
 - **Strategic Foresight Window:** `2026–2036 (10-Year Policy & Institutional Horizon)`
 - **Verified Classical Knowledge Base (*ISNAD 2nd Edition*):** Zemahşerî, Mahmûd b. Ömer (*el-Keşşâf 'an Hakâ'ikı Gavâmizi't-Tenzîl*); İbn Fâris, Ahmed b. Fâris (*Mu'cemü Makâyîsi'l-Lüğa*); İbn Manzûr, Muhammed b. Mükerrem (*Lisânü'l-Arab*); Cessâs, Ahmed b. Ali er-Râzî (*Ahkâmü'l-Kur'ân*); Şâtıbî, İbrâhîm b. Mûsâ (*el-Muvâfakât*).
 - **Verified Empirical Datasets (*APA 7 / DOI*):** Uppsala University (Uppsala Conflict Data Program - UCDP) (2024); Institute for Economics and Peace (IEP) (2024); World Bank Group (2024).
-- **Principal Author & Project Founder:** **Mehmet Yarıcı** (`ORCID: 0009-0003-0356-8582` — Ministry of National Education [MEB], Rize, Türkiye).
+- **Principal Author & Project Founder:** **Mehmet Yarıcı** (`ORCID: 0009-0003-0356-8582` — Uludağ University Faculty of Theology (1989) • Republic of Türkiye Ministry of National Education [MEB], Bahçelievler Dede Korkut Anatolian High School, Istanbul, Türkiye).
 - **External Peer Reviewer (V11):** **Mehmet Emin Koç** (`ORCID: 0000-0002-1025-5643` — Azerbaijan National Academy of Sciences [ANAS / AMEA], Institute of Philosophy and Sociology).
+- **Permanent CERN / Zenodo DOI:** `10.5281/zenodo.23391192` (Concept DOI) | `10.5281/zenodo.23410818` (v6.2.1 Version DOI)
 
 ---
 
@@ -468,6 +469,25 @@ peer_review:
   - **`K2` (Graduated Containment & Perimeter Defense — `9:5`):** Prioritizing targeted sanctions, border checkpoints (`marsad`), and non-lethal containment (`uhsuruhum`) over full-scale kinetic war when violations exceed `th-02`.
   - **`K3` (Humanitarian Asylum & Safe-Passage Corridor — `9:6`):** Statutory guarantee of safe conduct (*aman/ijarah*) and escorted civilian evacuation for all non-combatants and defectors.
 - **Decision Tree Logic:** `IF Treaty_Honored (9:4) THEN Full_Peace_Reciprocity` → `ELSE IF Breach > th-02 THEN Activate_120_Day_Ultimatum (K1) & Perimeter_Containment (K2)` → `IF Cessation_of_Hostility OR Asylum_Request (9:6) THEN Immediate_DeEscalation & Safe_Passage (K3)`.
+```
+[International Treaty / Covenant Process] ---> [Step 1: Does Counterparty Honor the Covenant? (9:4)]
+                                                              |
+                                +-----------------------------+-----------------------------+
+                                |                                                           |
+                              [YES]                                                       [NO]
+                                |                                            (Systemic Breach: Nakth al-'Ahd)
+                 [Full Peace & Treaty Immunity]                                             |
+                 (Inviolable Until Full Term)                                [K1: 120-Day Diplomatic Ultimatum]
+                                                                                            |
+                                                                            [Cessation of Hostility / Asylum Request?]
+                                                                                            |
+                                                                            +---------------+---------------+
+                                                                            |                               |
+                                                                          [YES]                           [NO]
+                                                                            |                               |
+                                                               [K3: Safe Passage & Asylum]     [K2: Proportional Self-Defense]
+                                                                     (At-Tawbah 9:6)              (Zero Civilian Harm)
+```
 
 ---
 

@@ -182,7 +182,7 @@ peer_review:
 - **Konu Başlığı:** Emanet, Liyakat, Yargı Bağımsızlığı ve Evrensel Adalet Mimarisi (Kamu Yönetişimi Doktrini)
 - **Proje Kurucusu & Başyazar:** Mehmet Yarıcı (Uludağ Üniversitesi İlahiyat Fakültesi, 1989 • T.C. MEB, İstanbul Bahçelievler Dede Korkut Anadolu Lisesi — ORCID: `0009-0003-0356-8582`)
 - **Akademik Danışman & Dış Hakem:** Mehmet Emin Koç (Azerbaycan Milli İlimler Akademisi Felsefe ve Sosyoloji Enstitüsü — ORCID: `0000-0002-1025-5643`)
-- **Kalıcı CERN / Zenodo DOI:** `10.5281/zenodo.23391192` (Kavram DOI) | `10.5281/zenodo.23391193` (v6.2.1 Sürüm DOI)
+- **Kalıcı CERN / Zenodo DOI:** `10.5281/zenodo.23391192` (Kavram DOI) | `10.5281/zenodo.23410818` (v6.2.1 Sürüm DOI)
 - **Tarih:** 2026-10-15
 - **Sürüm:** v6.2.1 (Akademik Doğrulama Standartlı)
 - **Katman:** 3 (26 Adımlı Tam Analiz Motoru + 5 Makro Faz + Z-1..Z-5 Zorunlu Ekler)
@@ -410,9 +410,8 @@ Nisâ 4:58, Mekke fethi günü Hz. Peygamber'in Kâbe anahtarını Kureyş'in il
   - `EU-04`: Liyakatli uzmanların kamu kurumlarından istifa ederek beyin göçüne katılması.
 - **Bayes Güncelleme Alanı (`Senaryo S1 — Kurumsal Emanet, Liyakat ve Yargı Tarafsızlığı`):**
   - **Önsel Olasılık (Prior $P(S_1)$):** `0.35` (%35.0 — Dünya Bankası Doğu Avrupa ve Orta Doğu Bürokratik Çürüme Veritabanı başlangıç olasılığı).
-  - **Koşullu Olabilirlik $P(E|S_1) = 0.85$ & Yanlış Pozitif $P(E|
-eg S_1) = 0.14$:** Nesnel liyakat sınavları (`edâü'l-emânât ilâ ehlihâ`) ve bağımsız adli denetim (`hükmü bi'l-'adl`) uygulandığında kurumsal güvenin yükselme olasılığı.
-  - **Sonsal Olasılık (Posterior $P(S_1|E)$):** $P(S_1|E) = \frac{0.35 	imes 0.85}{(0.35 	imes 0.85) + (0.65 	imes 0.14)} = 0.766 \approx 0.77$ (%76.6 — **+41.6 puanlık** kurumsal etkinlik artışı).
+  - **Koşullu Olabilirlik $P(E|S_1) = 0.85$ & Yanlış Pozitif $P(E|\neg S_1) = 0.14$:** Nesnel liyakat sınavları (`edâü'l-emânât ilâ ehlihâ`) ve bağımsız adli denetim (`hükmü bi'l-'adl`) uygulandığında kurumsal güvenin yükselme olasılığı.
+  - **Sonsal Olasılık (Posterior $P(S_1|E)$):** $P(S_1|E) = \frac{0.35 \times 0.85}{(0.35 \times 0.85) + (0.65 \times 0.14)} = 0.766 \approx 0.77$ (%76.6 — **+41.6 puanlık** kurumsal etkinlik artışı).
   - *Kapsam Notu:* Bayes güncellemesi YALNIZCA ölçülebilir kamusal göstergelerde çalışır.
 
 ---
@@ -434,6 +433,25 @@ eg S_1) = 0.14$:** Nesnel liyakat sınavları (`edâü'l-emânât ilâ ehlihâ`)
   - **Araç:** Anonim kayırmacılık ihbar portalı ve zorunlu liyakat denetim raporu.
   - **CLD Kaldıraç Noktası:** Şeffaflık ve hesap verebilirlik.
   - **Eşik:** [TAHMİNÎ EŞİK] Şikâyet çözülme oranı $\ge \%95$.
+
+- **Karar Ağacı Mantığı:**
+```
+[Kamu Ataması veya Yargısal Karar Süreci] ---> [1. Adım: Emanet Objektif Ehliyet Sahibine mi Verildi?]
+                                                               |
+                                 +-----------------------------+-----------------------------+
+                                 |                                                           |
+                              [HAYIR]                                                     [EVET]
+                 (Kayırmacılık / Nepotizm Tespiti)                                           |
+                                 |                                           [K1: Şeffaf Liyakat Puanıyla Atama]
+           [K3: Bağımsız Liyakat Denetimi ve İptal]                                          |
+             (Nisâ 4:58 İhlali — Hıyanet Yasağı)                             [2. Adım: Hükümde Tam Adalet Sağlandı mı?]
+                                                                                             |
+                                                                             +---------------+---------------+
+                                                                             |                               |
+                                                                          [EVET]                          [HAYIR]
+                                                                             |                               |
+                                                               [K2: Bağımsız Yargı ve Güven]     [Üst Yargı Denetimi ve Tazmin]
+```
 
 ---
 

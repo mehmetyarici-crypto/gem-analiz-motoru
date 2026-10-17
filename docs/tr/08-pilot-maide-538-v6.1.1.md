@@ -182,7 +182,7 @@ peer_review:
 - **Konu Başlığı:** Hırsızlık Suçu (Sirkat), Hırz ve Nisap Şartları, Zaruret Hali ve Sosyal Güvenlik Mimarisi
 - **Proje Kurucusu & Başyazar:** Mehmet Yarıcı (Uludağ Üniversitesi İlahiyat Fakültesi, 1989 • T.C. MEB, İstanbul Bahçelievler Dede Korkut Anadolu Lisesi — ORCID: `0009-0003-0356-8582`)
 - **Akademik Danışman & Dış Hakem:** Mehmet Emin Koç (Azerbaycan Milli İlimler Akademisi Felsefe ve Sosyoloji Enstitüsü — ORCID: `0000-0002-1025-5643`)
-- **Kalıcı CERN / Zenodo DOI:** `10.5281/zenodo.23391192` (Kavram DOI) | `10.5281/zenodo.23391193` (v6.2.1 Sürüm DOI)
+- **Kalıcı CERN / Zenodo DOI:** `10.5281/zenodo.23391192` (Kavram DOI) | `10.5281/zenodo.23410818` (v6.2.1 Sürüm DOI)
 - **Tarih:** 2026-10-14
 - **Sürüm:** v6.2.1 (Akademik Doğrulama Standartlı)
 - **Katman:** 3 (26 Adımlı Tam Analiz Motoru + Z-1..Z-5 Zorunlu Ekler)
@@ -397,9 +397,8 @@ Mâide Sûresi 5:38'in hemen ardından gelen **5:39 âyeti** (*"Kim bu zulmünde
 - **Erken Uyarı Sinyalleri (N1–N4):** Organize hırsızlık ve rüşvet yıllık artışı $> \%20$ olduğunda K2 devreye girer.
 - **Bayes Güncelleme Alanı (`Senaryo S1 — Sosyal Adalet + Şüphede İndirim + Caydırıcı Mülkiyet Güvencesi`):**
   - **Önsel Olasılık (Prior $P(S_1)$):** `0.38` (%38.0 — Dünya Bankası & Adalet Bakanlığı 2024 Adli Sicil İstatistikleri başlangıç olasılığı).
-  - **Koşullu Olabilirlik $P(E|S_1) = 0.86$ & Yanlış Pozitif $P(E|
-eg S_1) = 0.17$:** Zarûret/açlık istisnası (Hz. Ömer içtihadı), şüphe ilkesi (*der'ü'l-hudûd bi'ş-şübühât*) ve `5:39` tevbe/ıslah koridoru birlikte uygulandığında mülkiyet güvenliği ve düşük tekerrür olasılığı.
-  - **Sonsal Olasılık (Posterior $P(S_1|E)$):** $P(S_1|E) = \frac{0.38 	imes 0.86}{(0.38 	imes 0.86) + (0.62 	imes 0.17)} = 0.754 \approx 0.75$ (%75.4 — **+37.4 puanlık** kurumsal güven artışı).
+  - **Koşullu Olabilirlik $P(E|S_1) = 0.86$ & Yanlış Pozitif $P(E|\neg S_1) = 0.17$:** Zarûret/açlık istisnası (Hz. Ömer içtihadı), şüphe ilkesi (*der'ü'l-hudûd bi'ş-şübühât*) ve `5:39` tevbe/ıslah koridoru birlikte uygulandığında mülkiyet güvenliği ve düşük tekerrür olasılığı.
+  - **Sonsal Olasılık (Posterior $P(S_1|E)$):** $P(S_1|E) = \frac{0.38 \times 0.86}{(0.38 \times 0.86) + (0.62 \times 0.17)} = 0.754 \approx 0.75$ (%75.4 — **+37.4 puanlık** kurumsal güven artışı).
   - *Kapsam Notu:* Bayes güncellemesi YALNIZCA ölçülebilir iktisadi ve adli göstergelerde çalışır; normatif inançlara sayısal katsayı verilemez (Bölüm 9 yasağı).
 
 ---
@@ -415,6 +414,27 @@ eg S_1) = 0.17$:** Zarûret/açlık istisnası (Hz. Ömer içtihadı), şüphe i
 - **Karar Kolu 3 (K3) — Rehabilitasyon, Tövbe ve Topluma Kazandırma (5:39):**
   - **Aktör:** Denetimli Serbestlik Müdürlüğü ve İŞKUR.
   - **Eşik:** [TAHMİNÎ EŞİK] Rehabilitasyonu tamamlayanlarda istihdam $\ge \%70$, nüks $\le \%5$.
+
+- **Karar Ağacı Mantığı:**
+```
+[Mülkiyet İhlali / Suç İhbarı] ---> [1. Adım: Zaruret, Açlık veya Şüphe (Remâde Kuralı) Var mı?]
+                                                               |
+                                 +-----------------------------+-----------------------------+
+                                 |                                                           |
+                              [EVET]                                                      [HAYIR]
+                                 |                                           (Tam Hırz, Nisap ve Kasıt Sabit)
+          [K1: Had Cezası Düşer — Sosyal Yardım Devrede]                                     |
+             (Hz. Ömer İçtihadı & Der'ü'l-Hudûd)                             [K2: Kademeli Yargılama ve Tazmin]
+                                                                                             |
+                                                                             [Tövbe, Islah ve Zararı Tazmin Var mı?]
+                                                                                             |
+                                                                             +---------------+---------------+
+                                                                             |                               |
+                                                                          [EVET]                          [HAYIR]
+                                                                             |                               |
+                                                               [K3: Rehabilitasyon ve İstihdam]  [Caydırıcı Yasal Müeyyide]
+                                                                        (Mâide 5:39)                  (Mâide 5:38)
+```
 
 ---
 

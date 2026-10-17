@@ -4,7 +4,7 @@
 ### **26-Step Evidence-Based Strategic Tafsir, Maqasid & Civilization Foresight Corpus (TR / EN)**
 #### *26 Adımlı Kanıta Dayalı Stratejik Tefsir, Makâsıd ve Medeniyet Öngörü Külliyatı*
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23391192.svg)](https://doi.org/10.5281/zenodo.23391192)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23410818.svg)](https://doi.org/10.5281/zenodo.23410818)
 [![ORCID Yarıcı](https://img.shields.io/badge/ORCID_(M._Yar%C4%B1c%C4%B1)-0009--0003--0356--8582-A6CE39?style=for-the-badge&logo=orcid&logoColor=white)](https://orcid.org/0009-0003-0356-8582)
 [![ORCID Koç](https://img.shields.io/badge/ORCID_(M._E._Ko%C3%A7)-0000--0002--1025--5643-A6CE39?style=for-the-badge&logo=orcid&logoColor=white)](https://orcid.org/0000-0002-1025-5643)
 [![Version](https://img.shields.io/badge/Corpus_Version-v6.2.1-D4AF37?style=for-the-badge)](https://mehmetyarici-crypto.github.io/quran-vision/)
@@ -15,7 +15,7 @@
 
 <br>
 
-### 🏛️ **OFFICIAL CERN / ZENODO DOI:** **[`https://doi.org/10.5281/zenodo.23391192`](https://doi.org/10.5281/zenodo.23391192)**
+### 🏛️ **OFFICIAL CERN / ZENODO DOI:** **[`https://doi.org/10.5281/zenodo.23410818`](https://doi.org/10.5281/zenodo.23410818)** *(Concept DOI: [`10.5281/zenodo.23391192`](https://doi.org/10.5281/zenodo.23391192))*
 ### 🎓 **ACADEMIC OWNERSHIP, AUTHORSHIP & ADVISORY BOARD / ESER SAHİPLİĞİ, BAŞYAZAR VE DANIŞMA KÜNYESİ**
 - 👑 **Proje Kurucusu & Başyazar (*Founder, Copyright Owner & Principal Author*):** **Mehmet Yarıcı** — *Uludağ Üniversitesi İlahiyat Fakültesi (1989) • T.C. Millî Eğitim Bakanlığı, İstanbul Bahçelievler Dede Korkut Anadolu Lisesi* • **ORCID:** [`0009-0003-0356-8582`](https://orcid.org/0009-0003-0356-8582)
 - 🏛️ **Akademik Danışman & Dış Hakem (*Academic Advisor & External Peer-Reviewer*):** **Mehmet Emin Koç** — *Azerbaycan Milli İlimler Akademisi (AMEA / Azerbaijan National Academy of Sciences), Felsefe ve Sosyoloji Enstitüsü* • **ORCID:** [`0000-0002-1025-5643`](https://orcid.org/0000-0002-1025-5643)
@@ -112,7 +112,7 @@ python src/build_portal.py --force-pdf
 You can click the **"Cite this repository"** button in the top-right sidebar of GitHub, or use the APA 7 / BibTeX records below:
 
 **APA 7th Edition:**
-> Yarıcı, M. (2026). *Quran Vision Corpus (Kur'ân Vizyonu Külliyatı): 26-Step Evidence-Based Strategic Tafsir, Maqasid & Civilization Foresight Corpus (v6.2.1)* [Data set & Monograph Series]. Zenodo / Quran Vision Institute. https://doi.org/10.5281/zenodo.23391192
+> Yarıcı, M. (2026). *Quran Vision Corpus (Kur'ân Vizyonu Külliyatı): 26-Step Evidence-Based Strategic Tafsir, Maqasid & Civilization Foresight Corpus (v6.2.1)* [Data set & Monograph Series]. Zenodo / Quran Vision Institute. https://doi.org/10.5281/zenodo.23410818
 
 **BibTeX:**
 ```bibtex
@@ -122,8 +122,8 @@ You can click the **"Cite this repository"** button in the top-right sidebar of 
   version   = {6.2.1},
   year      = {2026},
   publisher = {Zenodo / Quran Vision Institute},
-  doi       = {10.5281/zenodo.23391192},
-  url       = {https://doi.org/10.5281/zenodo.23391192}
+  doi       = {10.5281/zenodo.23410818},
+  url       = {https://doi.org/10.5281/zenodo.23410818}
 }
 ```
 

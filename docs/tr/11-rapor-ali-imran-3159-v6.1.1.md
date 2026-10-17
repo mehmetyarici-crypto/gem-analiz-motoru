@@ -182,7 +182,7 @@ peer_review:
 - **Konu Başlığı:** Kriz Dönemlerinde İstişare (Şûrâ), Katılımcı Karar Alma ve Merhamet Temelli Liderlik Mimarisi
 - **Proje Kurucusu & Başyazar:** Mehmet Yarıcı (Uludağ Üniversitesi İlahiyat Fakültesi, 1989 • T.C. MEB, İstanbul Bahçelievler Dede Korkut Anadolu Lisesi — ORCID: `0009-0003-0356-8582`)
 - **Akademik Danışman & Dış Hakem:** Mehmet Emin Koç (Azerbaycan Milli İlimler Akademisi Felsefe ve Sosyoloji Enstitüsü — ORCID: `0000-0002-1025-5643`)
-- **Kalıcı CERN / Zenodo DOI:** `10.5281/zenodo.23391192` (Kavram DOI) | `10.5281/zenodo.23391193` (v6.2.1 Sürüm DOI)
+- **Kalıcı CERN / Zenodo DOI:** `10.5281/zenodo.23391192` (Kavram DOI) | `10.5281/zenodo.23410818` (v6.2.1 Sürüm DOI)
 - **Tarih:** 2026-10-15
 - **Sürüm:** v6.2.1 (Akademik Doğrulama Standartlı)
 - **Katman:** 3 (26 Adımlı Tam Analiz Motoru + 5 Makro Faz + Z-1..Z-5 Zorunlu Ekler)
@@ -414,9 +414,8 @@ peer_review:
   - `EU-04`: Karar alma sürelerinin uzayarak karar felcine dönüşmesi.
 - **Bayes Güncelleme Alanı (`Senaryo S1 — Katılımcı Şûrâ, Şefkatli Liderlik ve Kararlılık`):**
   - **Önsel Olasılık (Prior $P(S_1)$):** `0.40` (%40.0 — OECD Yönetişim Krizleri Veritabanı başlangıç olasılığı).
-  - **Koşullu Olabilirlik $P(E|S_1) = 0.84$ & Yanlış Pozitif $P(E|
-eg S_1) = 0.16$:** Kriz sonrasında psikolojik güven (`lin` / `afv`), bağlayıcı uzman istişaresi (`şâvirhüm fi'l-emr`) ve kararlı icra (`azm`) birleştirildiğinde kurumsal toparlanma olasılığı.
-  - **Sonsal Olasılık (Posterior $P(S_1|E)$):** $P(S_1|E) = \frac{0.40 	imes 0.84}{(0.40 	imes 0.84) + (0.60 	imes 0.16)} = 0.778 \approx 0.78$ (%77.8 — **+37.8 puanlık** kurumsal dayanıklılık artışı).
+  - **Koşullu Olabilirlik $P(E|S_1) = 0.84$ & Yanlış Pozitif $P(E|\neg S_1) = 0.16$:** Kriz sonrasında psikolojik güven (`lin` / `afv`), bağlayıcı uzman istişaresi (`şâvirhüm fi'l-emr`) ve kararlı icra (`azm`) birleştirildiğinde kurumsal toparlanma olasılığı.
+  - **Sonsal Olasılık (Posterior $P(S_1|E)$):** $P(S_1|E) = \frac{0.40 \times 0.84}{(0.40 \times 0.84) + (0.60 \times 0.16)} = 0.778 \approx 0.78$ (%77.8 — **+37.8 puanlık** kurumsal dayanıklılık artışı).
   - *Kapsam Notu:* Bayes güncellemesi YALNIZCA ölçülebilir kamusal göstergelerde çalışır.
 
 ---
@@ -438,6 +437,25 @@ eg S_1) = 0.16$:** Kriz sonrasında psikolojik güven (`lin` / `afv`), bağlayı
   - **Araç:** İstişare süresi tamamlandıktan sonra tereddütsüz uygulama takvimi.
   - **CLD Kaldıraç Noktası:** Uygulama etkinliğini sağlama.
   - **Eşik:** [TAHMİNÎ EŞİK] Karar felci gecikme oranı $\le \%15$.
+
+- **Karar Ağacı Mantığı:**
+```
+[Stratejik Kriz veya Kamu Kararı] ---> [1. Adım: Rıfk İklimi ve Çoklu İstişare (Şûrâ) İşletildi mi?]
+                                                               |
+                                 +-----------------------------+-----------------------------+
+                                 |                                                           |
+                              [HAYIR]                                                     [EVET]
+                (Otokratik Dayatma ve Sertlik: Faz/Galîz)                                    |
+                                 |                                           [K1: Uzman ve Paydaş İstişaresi Tamam]
+         [Sosyal Dağılma Riski — K1 İstişareye Zorunlu Dönüş]                                |
+                     (Âl-i İmrân 3:159 Uyarısı)                              [2. Adım: Müzakere Süresi Tamamlandı mı?]
+                                                                                             |
+                                                                             +---------------+---------------+
+                                                                             |                               |
+                                                                          [EVET]                          [HAYIR]
+                                                                             |                               |
+                                                               [K3: Azim, İcra ve K2: Şeffaf Rapor]  [Ek Uzman Verisi Toplama]
+```
 
 ---
 
