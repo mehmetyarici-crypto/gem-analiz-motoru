@@ -125,7 +125,7 @@ peer_review:
 - **Âyet:** {{SURE_ADI}} {{SURE_NO}}:{{AYET_NO}}
 - **Konu Başlığı:** {{KONU_BASLIGI}}
 - **Tarih:** {{TARIH}}
-- **Sürüm:** v6.1.1
+- **Sürüm:** v6.2.1
 - **Katman:** 3 (26 Adım + 5 Makro Faz + Z-1..Z-5)
 - **H6 Durumu:** Evet
 - **Dil:** Türkçe (TR)
@@ -367,7 +367,7 @@ Bu âyetin analitik şablonun sınırlarını aşan özgün aporiası, teolojik 
 
 ### Z-4 · STANDART VE DÜRÜST SINIR İFADESİ [V10 ZORUNLU]
 > **METODOLOJİK VE EPİSTEMİK SINIR BEYANI:**
-> Bu rapor; Kur'an Temelli Gelecek Vizyonu (Quran Vision v6.1.1) mimarisi çerçevesinde üretilmiş analitik ve hermenötik bir modellemedir. Dini bir fetva, kesin kazi bir hüküm veya ilahi muradın eksiksiz ve yegâne tefsiri niteliği taşımaz. Raporda yer alan simülasyonlar, göstergeler ve politika kolları; analistin benimsediği usûl ekolünün ve ampirik varsayımların bir türevidir. Bu metin, kod tabanlı biçimsel iç tutarlılık denetiminden (gem_lint.py) geçmiş olup, bağımsız dış akademik hakem heyeti (peer-review) tarafından tescil edilmedikçe bilimsel kesinlik iddiası barındırmaz.
+> Bu rapor; Kur'an Temelli Gelecek Vizyonu (Quran Vision v6.2.1) mimarisi çerçevesinde üretilmiş analitik ve hermenötik bir modellemedir. Dini bir fetva, kesin kazi bir hüküm veya ilahi muradın eksiksiz ve yegâne tefsiri niteliği taşımaz. Raporda yer alan simülasyonlar, göstergeler ve politika kolları; analistin benimsediği usûl ekolünün ve ampirik varsayımların bir türevidir. Bu metin, kod tabanlı biçimsel iç tutarlılık denetiminden (gem_lint.py) geçmiş olup, bağımsız dış akademik hakem heyeti (peer-review) tarafından tescil edilmedikçe bilimsel kesinlik iddiası barındırmaz.
 
 ---
 
@@ -397,4 +397,4 @@ Bu âyetin analitik şablonun sınırlarını aşan özgün aporiası, teolojik 
 - **ORCID No:** —
 - **Değerlendirme Tarihi:** —
 - **Hakem Kararı:** `HENÜZ ATANMADI (ÖN SÜRÜM / PRE-RELEASE)`
-- **Hakem Değerlendirme Notu:** Rapor v6.1.1 biçimsel standartlarına göre hazırlanmış ön sürüm niteliğindedir. Bağımsız dış akademik hakem incelemesine açıktır.
+- **Hakem Değerlendirme Notu:** Rapor v6.2.1 biçimsel standartlarına göre hazırlanmış ön sürüm niteliğindedir. Bağımsız dış akademik hakem incelemesine açıktır.

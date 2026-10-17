@@ -13,7 +13,7 @@ identifiers:
     value: "10.5281/zenodo.23391192"
     description: "CERN / Zenodo Permanent Concept DOI (All Versions)"
   - type: doi
-    value: "10.5281/zenodo.23391193"
+    value: "10.5281/zenodo.23410818"
     description: "CERN / Zenodo Version v6.2.1 DOI"
 authors:
   - family-names: "Yarıcı"

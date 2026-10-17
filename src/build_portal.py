@@ -17,6 +17,8 @@ import subprocess
 import sys
 from pathlib import Path
 import yaml
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "archive" / "scripts"))
 from en_corpus_data import EN_CORPUS, build_english_report_body
 
 if sys.stdout and hasattr(sys.stdout, "reconfigure"):

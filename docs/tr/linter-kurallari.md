@@ -1,4 +1,4 @@
-# GEM Linter (v6.1.1) — Kural ve Denetim Rehberi
+# GEM Linter (v6.2.1) — Kural ve Denetim Rehberi
 
 Bu belge, `src/gem_lint.py` tarafından uygulanan biçimsel denetim kurallarını, hata seviyelerini, muafiyetleri ve linter'ın sınırlarını açıklar.
 

@@ -1,6 +1,6 @@
 # GEM Akademik Hakem Değerlendirme Rehberi ve İnceleme Rubriği
 
-Bu belge; Kur'an Temelli Gelecek Vizyonu (GEM v6.1.1) mimarisi çerçevesinde hazırlanan Katman 3 raporlarını inceleyecek bağımsız ilahiyat, tefsir, fıkıh ve kamu politikası akademisyenleri için standart değerlendirme protokolünü ve puanlama rubriğini düzenler.
+Bu belge; Kur'an Temelli Gelecek Vizyonu (GEM v6.2.1) mimarisi çerçevesinde hazırlanan Katman 3 raporlarını inceleyecek bağımsız ilahiyat, tefsir, fıkıh ve kamu politikası akademisyenleri için standart değerlendirme protokolünü ve puanlama rubriğini düzenler.
 
 ---
 
@@ -65,7 +65,7 @@ Hakemler, raporu aşağıdaki 5 ana boyut ve alt kriterler üzerinden değerlend
 - **İncelenen Rapor Sürümü ve SHA-256 Hash'i:** [64 Haneli Hash]
 - **Hakem Kararı:** `KABUL (ACCEPT - EXTERNALLY-REVIEWED)`
 - **Hakem Değerlendirme Raporu Özeti:**
-  > "Bu çalışma; GEM v6.1.1 metodolojisi çerçevesinde incelenmiş olup, klasik tefsir nakillerinin tahkiki matbu nüshalarla karşılaştırılmıştır. [NAKİL] ve [YORUM] ayrımı titizlikle korunmuş; Z-2 Görüş İhtilafı Cetveli'nde klasik ve çağdaş ekoller dengeli biçimde temsil edilmiştir. Âyetin normatif ilkesi ile ampirik politika hipotezleri Hume Giyotini kuralına uygun olarak ayrılmıştır. Rapor, bağımsız akademik usûl standartlarını karşılamaktadır."
+  > "Bu çalışma; GEM v6.2.1 metodolojisi çerçevesinde incelenmiş olup, klasik tefsir nakillerinin tahkiki matbu nüshalarla karşılaştırılmıştır. [NAKİL] ve [YORUM] ayrımı titizlikle korunmuş; Z-2 Görüş İhtilafı Cetveli'nde klasik ve çağdaş ekoller dengeli biçimde temsil edilmiştir. Âyetin normatif ilkesi ile ampirik politika hipotezleri Hume Giyotini kuralına uygun olarak ayrılmıştır. Rapor, bağımsız akademik usûl standartlarını karşılamaktadır."
 - **Kriptografik İmza (İsteğe Bağlı):** GPG Key Fingerprint / Git Signed Commit
 ```
 
