@@ -144,25 +144,22 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  transition: margin-left 0.3s ease, width 0.3s ease, min-width 0.3s ease, opacity 0.25s ease;
+  transition: width 0.25s ease, min-width 0.25s ease, opacity 0.2s ease;
   z-index: 20;
 }
 body.sidebar-collapsed #sidebar,
 body.sidebar-collapsed .sidebar {
-  margin-left: -320px !important;
+  display: none !important;
   width: 0 !important;
   min-width: 0 !important;
   max-width: 0 !important;
-  flex: 0 0 0 !important;
-  padding: 0 !important;
-  border: none !important;
   opacity: 0 !important;
   pointer-events: none !important;
   visibility: hidden !important;
   overflow: hidden !important;
 }
 .main {
-  transition: margin-left 0.3s ease, width 0.3s ease, padding 0.3s ease;
+  transition: width 0.25s ease, padding 0.25s ease;
 }
 body.sidebar-collapsed .main {
   margin-left: 0 !important;
@@ -171,24 +168,24 @@ body.sidebar-collapsed .main {
   padding-left: 24px !important;
   padding-right: 24px !important;
 }
-#sidebar-toggle {
+#sidebar-toggle, .QuickControlBtn {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 7px 13px;
+  padding: 8px 14px;
   border-radius: 8px;
-  border: 1px solid var(--border);
-  background: var(--bg-surface);
-  color: var(--text-primary);
-  font-size: 12.5px;
+  border: 1.5px solid var(--accent-gold);
+  background: var(--accent-gold-soft);
+  color: var(--accent-gold);
+  font-size: 13px;
   font-weight: 700;
   cursor: pointer;
   transition: all 0.2s ease;
+  white-space: nowrap;
 }
-#sidebar-toggle:hover {
-  border-color: var(--accent-gold);
-  background: var(--accent-gold-soft);
-  color: var(--accent-gold);
+#sidebar-toggle:hover, .QuickControlBtn:hover {
+  background: var(--accent-gold);
+  color: #091310;
 }
 .brand {
   padding: 22px 22px 18px;
@@ -200,7 +197,8 @@ body.sidebar-collapsed .main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
+  flex-wrap: wrap;
   margin-bottom: 12px;
 }
 .brand-badge {
@@ -848,6 +846,10 @@ a.fn-backref:hover {
         <button id="langBtnEn" class="lang-btn" onclick="setLanguage('en')">🇬🇧 EN</button>
       </div>
     </div>
+    <div style="display:flex; gap:8px; margin-bottom:12px; flex-wrap:wrap;">
+      <button id="sidebarHideBtn" type="button" class="QuickControlBtn" style="flex:1; justify-content:center; padding:6px 10px; font-size:12px;" onclick="toggleSidebar()" title="Sol Menüyü Gizle (Ctrl + B)">◀ Menüyü Gizle</button>
+      <button id="themeBtnSidebar" type="button" class="QuickControlBtn" style="flex:1; justify-content:center; padding:6px 10px; font-size:12px;" onclick="toggleTheme()" title="Arayüz Modunu Değiştir (Açık / Koyu Mod)">☀️ Açık Moda Geç</button>
+    </div>
     <div class="brand-identity">
       <div class="brand-crest" title="Mîzân ve Mushaf Kurumsal Mührü">
         <svg width="32" height="32" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -878,6 +880,7 @@ a.fn-backref:hover {
   <header class="topbar">
     <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
       <button id="sidebar-toggle" type="button" onclick="toggleSidebar()" title="Menüyü Gizle / Göster (Ctrl + B veya [)" aria-label="Menüyü Gizle / Göster"><span id="sidebarToggleLabel">◀ Menüyü Gizle</span></button>
+      <button id="themeBtnTop" type="button" class="QuickControlBtn" onclick="toggleTheme()" title="Arayüz Modunu Değiştir (Açık / Koyu Mod)">☀️ Açık Moda Geç</button>
       <div class="stats-bar" id="statsBar">
         <div class="stat-pill">📚 Külliyat: <strong>15 Rapor</strong></div>
         <div class="stat-pill">🕌 Klasik Tahkik (İSNAD 2): <strong>77 Nakil</strong></div>
@@ -892,7 +895,7 @@ a.fn-backref:hover {
       <a id="fullBookPdfBtn" class="btn btn-gold" href="pdf/Quran_Vision_Kulliyat_v6.2.1.pdf" download="Quran_Vision_Kulliyat_v6.2.1.pdf">📚 Tüm Külliyat PDF (15 Rapor)</a>
       <button id="printBtn" class="btn" onclick="printCurrentReport()">🖨️ Yazdır</button>
       <button id="langToggleTopBtn" class="btn" onclick="setLanguage(currentLang === 'tr' ? 'en' : 'tr')">🌐 EN / TR</button>
-      <button id="themeBtn" class="btn" onclick="toggleTheme()">🌗 Tema</button>
+      <button id="themeBtn" class="btn btn-gold" onclick="toggleTheme()">☀️ Açık Moda Geç</button>
     </div>
   </header>
 
@@ -1132,7 +1135,6 @@ function setLanguage(lang) {
   }
   document.getElementById('printBtn').innerHTML = isEn ? '🖨️ Print' : '🖨️ Yazdır';
   document.getElementById('langToggleTopBtn').innerHTML = isEn ? '🌐 Dil: EN ➔ TR' : '🌐 Lang: TR ➔ EN';
-  document.getElementById('themeBtn').innerHTML = isEn ? '🌗 Theme' : '🌗 Tema';
 
   document.getElementById('tabBtn-dashboard').innerHTML = isEn ? '📊 1. Strategic Dashboard & Aporia' : '📊 1. Stratejik Kokpit & Aporia';
   document.getElementById('tabBtn-sources').innerHTML = isEn ? '🏛️ 2. ISNAD 2 Classical & Empirical Sources' : '🏛️ 2. İSNAD 2 Klasik & Modern Kaynakça';
@@ -1142,6 +1144,7 @@ function setLanguage(lang) {
   document.getElementById('tabBtn-feedback').innerHTML = isEn ? '💬 6. Academic Peer-Review & Feedback' : '💬 6. Akademik Şerh & Katkı';
 
   updateSidebarToggleUI();
+  updateThemeButtonsUI();
   renderSidebar(searchInput ? searchInput.value : '');
   selectReport(currentIndex);
 }
@@ -2236,11 +2239,24 @@ function setTab(tabName, btn) {
   document.getElementById('tab-feedback').style.display = tabName === 'feedback' ? 'block' : 'none';
 }
 
+function updateThemeButtonsUI() {
+  const isDark = document.documentElement.getAttribute('data-theme') !== 'light';
+  const isEn = currentLang === 'en';
+  const label = isEn
+    ? (isDark ? '☀️ Light Mode' : '🌙 Dark Mode')
+    : (isDark ? '☀️ Açık Moda Geç' : '🌙 Koyu Moda Geç');
+  ['themeBtn', 'themeBtnTop', 'themeBtnSidebar'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.innerHTML = label;
+  });
+}
+
 function toggleTheme() {
   const root = document.documentElement;
   const nextTheme = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
   root.setAttribute('data-theme', nextTheme);
   try { localStorage.setItem('qv_theme_v621', nextTheme); } catch (e) {}
+  updateThemeButtonsUI();
 }
 
 function updateSidebarToggleUI() {
@@ -2248,10 +2264,14 @@ function updateSidebarToggleUI() {
   const isEn = currentLang === 'en';
   const lbl = document.getElementById('sidebarToggleLabel');
   const btn = document.getElementById('sidebar-toggle');
+  const sideBtn = document.getElementById('sidebarHideBtn');
   if (lbl) {
     lbl.textContent = isEn
       ? (isCollapsed ? '▶ Show Menu' : '◀ Hide Menu')
       : (isCollapsed ? '▶ Menüyü Göster' : '◀ Menüyü Gizle');
+  }
+  if (sideBtn) {
+    sideBtn.textContent = isEn ? '◀ Hide Menu' : '◀ Menüyü Gizle';
   }
   if (btn) {
     btn.setAttribute('aria-expanded', String(!isCollapsed));
@@ -2298,6 +2318,7 @@ document.getElementById('searchInput').addEventListener('input', (e) => renderSi
 
 setLanguage(currentLang);
 updateSidebarToggleUI();
+updateThemeButtonsUI();
 
 // Deep-link URL query parameters (?report=QV-2026-014&tab=fulltext&scroll=z5)
 (function handleUrlParams() {
